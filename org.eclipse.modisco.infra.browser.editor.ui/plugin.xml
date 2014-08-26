@@ -14,6 +14,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
     Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
+    Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -105,6 +106,34 @@
                   </with>
                </visibleWhen>
             </command>
+            <command
+                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
+                  label="%HideEmptyReferences"
+                  style="toggle">
+               <visibleWhen
+                     checkEnabled="true">
+                  <with
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
+                  </with>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
+                  label="%HideDerivedReferences"
+                  style="toggle">
+               <visibleWhen
+                     checkEnabled="true">
+                  <with
+                        variable="activeEditor">
+                     <instanceof
+                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                     </instanceof>
+                  </with>
+               </visibleWhen>
+            </command>
          </toolbar>
       </menuContribution>
       <menuContribution
@@ -113,6 +142,16 @@
          <command
                commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
                label="%ShowLinksLabel"
+               style="toggle">
+         </command>
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
+               label="%HideEmptyReferences"
+               style="toggle">
+         </command>
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
+               label="%HideDerivedReferences"
                style="toggle">
          </command>
       </menuContribution>
@@ -143,6 +182,24 @@
             name="%ShowLinksLabel">
          <state
                class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LinksCountState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideEmptyReferencesHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
+            name="%HideEmptyReferences">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideEmptyReferencesToggleState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideDerivedReferencesHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
+            name="%HideDerivedReferences">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideDerivedReferencesToggleState"
                id="org.eclipse.ui.commands.toggleState">
          </state>
       </command>
