@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2014 Mia-Software.
+ * Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
+ *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -39,6 +40,7 @@ import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditor;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceEditorInput;
 import org.eclipse.swt.widgets.Composite;
@@ -50,7 +52,7 @@ import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
-		IFacetManagerProvider, ICustomizationManagerProvider {
+		IFacetManagerProvider, ICustomizationManagerProvider, ITreeEditor {
 
 	private static final String EDITOR_ID = Activator.getDefault().getBundle()
 			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
@@ -89,6 +91,10 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			final ResourceEditorInput resourceEI = (ResourceEditorInput) input;
 			this.resource = resourceEI.getResource();
 			this.resourceSet = this.resource.getResourceSet();
+		}
+		if (this.resourceSet == null) {
+			this.resourceSet = new ResourceSetImpl();
+			this.resourceSet.getResources().add(this.resource);
 		}
 		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
 		final CommandStack commandStack = new BasicCommandStack();

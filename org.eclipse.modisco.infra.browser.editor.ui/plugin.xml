@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <!--
- Copyright (c) 2014 Mia-Software.
+ Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
  All rights reserved. This program and the accompanying materials
  are made available under the terms of the Eclipse Public License v1.0
  which accompanies this distribution, and is available at
@@ -13,6 +13,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
     Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
+    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -31,6 +32,12 @@
       <resourceViewer
             class="org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceBrowserOpener">
       </resourceViewer>
+      <eObjectViewer
+            class="org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceBrowserOpener">
+      </eObjectViewer>
+      <ePackageViewer
+            class="org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceBrowserOpener">
+      </ePackageViewer>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
