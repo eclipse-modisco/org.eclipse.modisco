@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2014 Mia-Software.
+ * Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,8 +8,12 @@
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
+ *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
@@ -19,6 +23,7 @@ import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -39,8 +44,10 @@ import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditor;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceEditorInput;
+import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceSetEditorInput;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IEditorInput;
@@ -50,7 +57,7 @@ import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
-		IFacetManagerProvider, ICustomizationManagerProvider {
+		IFacetManagerProvider, ICustomizationManagerProvider, ITreeEditor {
 
 	private static final String EDITOR_ID = Activator.getDefault().getBundle()
 			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
@@ -89,6 +96,13 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			final ResourceEditorInput resourceEI = (ResourceEditorInput) input;
 			this.resource = resourceEI.getResource();
 			this.resourceSet = this.resource.getResourceSet();
+		} else if (input instanceof ResourceSetEditorInput) {
+			final ResourceSetEditorInput resourceSetEI = (ResourceSetEditorInput) input;
+			this.resourceSet = resourceSetEI.getResourceSet();
+		}
+		if (this.resourceSet == null) {
+			this.resourceSet = new ResourceSetImpl();
+			this.resourceSet.getResources().add(this.resource);
 		}
 		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
 		final CommandStack commandStack = new BasicCommandStack();
@@ -130,7 +144,17 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 				.createCustomizedTreeContentProvider(this.customManager);
 		this.tree.setContentProvider(contentProvider);
 		this.tree.setLabelProvider(labelProvider);
-		this.tree.setInput(this.resource.getContents());
+		
+		final List<EObject> contents = new ArrayList<EObject>();
+		if (this.resource == null) {
+			for (Resource res : this.resourceSet.getResources()) {
+				contents.addAll(res.getContents());
+			}
+		} else {
+			contents.addAll(this.resource.getContents());
+		}
+		this.tree.setInput(contents);
+		
 		getSite().setSelectionProvider(this.tree);
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
