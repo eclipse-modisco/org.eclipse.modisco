@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
+<!--
+ * Copyright (c) 2011, 2015 Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Grégoire Dupé (Mia-Software) - Bug 464300 - To be able to discover XML models from a folder/project
+ *    Nicolas Bros (Mia-Software) - initial API and implementation
+-->
 <plugin>
    <extension point="org.eclipse.modisco.infra.discovery.ui.discoverer">
       <discoverer
@@ -7,4 +18,17 @@
             icon="icons/xml_tag.gif"
             label="%discoverer.label"/>
    </extension>
+   <extension point="org.eclipse.modisco.infra.discovery.ui.discoverer">
+      <discoverer
+            discovererID="org.eclipse.modisco.xml.discoverer.container"
+            icon="icons/xml_tag.gif"
+            label="%discoverer.label"/>
+   </extension>
+   <extension point="org.eclipse.modisco.infra.discovery.ui.discoverer">
+      <discoverer
+            discovererID="org.eclipse.modisco.xml.discoverer.javaelement"
+            icon="icons/xml_tag.gif"
+            label="%discoverer.label"/>
+   </extension>
+   
 </plugin>

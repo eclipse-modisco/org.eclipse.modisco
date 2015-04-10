@@ -1,5 +1,5 @@
 /*********************************************************************************
- * Copyright (c) 2011 Mia-Software.
+ * Copyright (c) 2011, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,89 +8,71 @@
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - adapted to new discovery framework
+ *    Grégoire Dupé (Mia-Software) - Bug 464300 - To be able to discover XML models from a folder/project
  ********************************************************************************/
 package org.eclipse.modisco.xml.discoverer;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.gmt.modisco.xml.internal.resource.GenericXMLHandler;
-import org.eclipse.gmt.modisco.xml.resource.GenericXMLResourceFactoryImpl;
 import org.eclipse.gmt.modisco.xml.resource.GenericXMLResourceImpl;
-import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.Messages;
-import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
-import org.eclipse.modisco.xml.discoverer.internal.XmlActivator;
+import org.eclipse.modisco.xml.discoverer.internal.AbstractXMLModelDiscoverer;
+import org.eclipse.modisco.xml.discoverer.internal.Utils;
 
 /**
  * Discover generic XML model action.
  */
-public class XMLModelDiscoverer extends AbstractModelDiscoverer<IFile> {
+public class XMLModelDiscoverer extends AbstractXMLModelDiscoverer<IFile> {
 
 	public static final String ID = "org.eclipse.modisco.xml.discoverer"; //$NON-NLS-1$
 
-	private static final Resource.Factory XML_RESOURCE_FACTORY = new GenericXMLResourceFactoryImpl();
-
-	private boolean ignoreWhitespace = false;
-
-	@Parameter(name = "IGNORE_WHITESPACE", description = "Whether to ignore whitespace in text portions.")
+	@Override
 	public void setIgnoreWhitespace(final boolean ignoreWhitespace) {
-		this.ignoreWhitespace = ignoreWhitespace;
+		/* gdupe> This method is useless (from a Java point of view) but it 
+		 * avoid API break warnings */
+		super.setIgnoreWhitespace(ignoreWhitespace);
 	}
 
-	protected boolean isIgnoreWhitespace() {
-		return this.ignoreWhitespace;
+	/**
+	 * @since 0.13
+	 */
+	@Override
+	public boolean isIgnoreWhitespace() {
+		/* gdupe> This method is useless (from a Java point of view) but it 
+		 * avoid API break warnings */
+		return super.isIgnoreWhitespace();
 	}
 
-	private boolean lightweightModel = false;
-
-	@Parameter(name = "LIGHTWEIGHT", description = "Minimize the memory use of the obtained model by ignoring comments and text portions consisting only of indentation or line delimiters.")
+	@Override
 	public void setLightweightModel(final boolean lightweightModel) {
-		this.lightweightModel = lightweightModel;
+		/* gdupe> This method is useless (from a Java point of view) but it 
+		 * avoid API break warnings */
+		super.setLightweightModel(lightweightModel);
 	}
 
-	protected boolean isLightweightModel() {
-		return this.lightweightModel;
+	/**
+	 * @since 0.13
+	 */
+	@Override
+	public boolean isLightweightModel() {
+		/* gdupe> This method is useless (from a Java point of view) but it 
+		 * avoid API break warnings */
+		return super.isLightweightModel();
 	}
-
+	
 	public boolean isApplicableTo(final IFile file) {
-		if (file.exists() && file.isSynchronized(IResource.DEPTH_ZERO)) {
-			try {
-				IContentType xmlContentType = Platform.getContentTypeManager().getContentType(
-						"org.eclipse.core.runtime.xml"); //$NON-NLS-1$
-				if (file.getContentDescription() != null) {
-					IContentType candidateType = file.getContentDescription().getContentType();
-					if (candidateType != null) {
-						return candidateType.isKindOf(xmlContentType);
-					}
-				}
-				// without content information, propose XML discovery
-				return true;
-			} catch (CoreException e) {
-				IStatus warning = new Status(IStatus.WARNING, XmlActivator.PLUGIN_ID,
-						"Could not test xml nature for file " //$NON-NLS-1$
-								+ file.toString(), e);
-				XmlActivator.getDefault().getLog().log(warning);
-			}
-		}
-		return false;
+		return Utils.isXmlFile(file);
 	}
 
 	/**
@@ -106,14 +88,12 @@ public class XMLModelDiscoverer extends AbstractModelDiscoverer<IFile> {
 	 */
 	public void discoverElement(final File file, final IProgressMonitor monitor)
 			throws DiscoveryException {
-
 		setDefaultTargetURI(URI.createFileURI(file.getPath().concat(
 				XMLDiscoveryConstants.XML_MODEL_FILE_SUFFIX)));
-
 		checkParameterValues();
-
 		final URI sourceURI = URI.createFileURI(file.getPath().toString());
-		discoverResource(sourceURI);
+		Utils.discoverResource(sourceURI, isIgnoreWhitespace(), 
+				isLightweightModel());
 
 		monitor.setTaskName(Messages.AbstractModelDiscoverer_savingModel);
 		if (isTargetSerializationChosen()) {
@@ -128,29 +108,21 @@ public class XMLModelDiscoverer extends AbstractModelDiscoverer<IFile> {
 	@Override
 	protected void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
 			throws DiscoveryException {
-		setDefaultTargetURI(URI.createPlatformResourceURI(
-				source.getFullPath().removeFileExtension().toString()
-						.concat(XMLDiscoveryConstants.XML_MODEL_FILE_SUFFIX), true));
-		final String absolutePath = source.getFullPath().toString();
+		final IPath fullPath = source.getFullPath();
+		final IPath pathWitoutFileExt = fullPath.removeFileExtension();
+		final String pathWithoutExt = pathWitoutFileExt.toString();
+		final String pathName = pathWithoutExt.concat(
+				XMLDiscoveryConstants.XML_MODEL_FILE_SUFFIX);
+		final URI createPlatformURI = URI.createPlatformResourceURI(
+				pathName, true);
+		setDefaultTargetURI(createPlatformURI);
+		final String absolutePath = fullPath.toString();
 		final URI sourceURI = URI.createPlatformResourceURI(absolutePath, true);
-		discoverResource(sourceURI);
+		final Resource resource = Utils.discoverResource(sourceURI, 
+				isIgnoreWhitespace(), isLightweightModel());
+		setTargetModel(resource);
 	}
 
-	private void discoverResource(final URI sourceURI) throws DiscoveryException {
-		try {
-			Resource resource = XMLModelDiscoverer.XML_RESOURCE_FACTORY.createResource(sourceURI);
-			Map<String, Object> parameters = new HashMap<String, Object>();
-			parameters.put(GenericXMLHandler.OPTION_IGNORE_WHITESPACE,
-					Boolean.valueOf(isIgnoreWhitespace()));
-			parameters.put(GenericXMLHandler.OPTION_LIGHTWEIGHT_MODEL,
-					Boolean.valueOf(isLightweightModel()));
-			resource.load(parameters);
-			setTargetModel(resource);
-		} catch (IOException e) {
-			throw new DiscoveryException(
-					"An error occurred during model discovery from: " + sourceURI.toString(), e); //$NON-NLS-1$
-		}
-	}
 
 	/**
 	 * Overridden to save as XMI with {@link XMIResource}, instead of as XML with
@@ -158,8 +130,8 @@ public class XMLModelDiscoverer extends AbstractModelDiscoverer<IFile> {
 	 */
 	@Override
 	protected void saveTargetModel() throws IOException {
-		Resource xmlResource = getTargetModel();
-		Resource xmiResource = new XMIResourceImpl();
+		final Resource xmlResource = getTargetModel();
+		final Resource xmiResource = new XMIResourceImpl();
 		xmiResource.getContents().addAll(xmlResource.getContents());
 		getResourceSet().getResources().add(xmiResource);
 		setTargetModel(xmiResource);
