@@ -32,7 +32,9 @@ import org.eclipse.modisco.xml.discoverer.internal.Utils;
 
 /**
  * Discover generic XML model action.
+ * @deprecated Replaced by org.eclipse.modisco.xml.discoverer.IXmlDiscoveryService.discover(File, boolean, boolean, IProgressMonitor);
  */
+@Deprecated
 public class XMLModelDiscoverer extends AbstractXMLModelDiscoverer<IFile> {
 
 	public static final String ID = "org.eclipse.modisco.xml.discoverer"; //$NON-NLS-1$
