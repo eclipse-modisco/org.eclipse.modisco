@@ -19,6 +19,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 
@@ -53,6 +54,7 @@ public class XMLModelDiscovererFromJavaElement extends AbstractXMLModelDiscovere
 			wsResource.accept(vistor);
 			vistor.check();
 		} catch (CoreException e) {
+			Logger.logError(e, XmlActivator.getDefault());
 			throw new DiscoveryException(e);
 		}
 	}

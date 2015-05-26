@@ -58,7 +58,6 @@ public class WorkspaceVisitor implements IResourceVisitor {
 					final EList<EObject> roots = emfResource.getContents();
 					this.globalResource.getContents().addAll(roots);
 				}
-				this.globalResource.save(Collections.EMPTY_MAP);
 			} catch (Exception e) {
 				final Bundle bundle = XmlActivator.getDefault().getBundle();
 				final String bundleName = bundle.getSymbolicName();
@@ -66,7 +65,7 @@ public class WorkspaceVisitor implements IResourceVisitor {
 				final String message = String.format(
 						"Error append when trying to parse %s.", //$NON-NLS-1$
 						location.toOSString());
-				final Status status = new Status(IStatus.ERROR, bundleName, message);
+				final Status status = new Status(IStatus.ERROR, bundleName, message, e);
 				this.errors.add(status);
 			}
 		} else if (fsResource instanceof IFolder) {
