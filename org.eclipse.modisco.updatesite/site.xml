@@ -45,6 +45,9 @@
    <feature url="features/org.eclipse.modisco.infra.browser.feature_0.13.1.qualifier.jar" id="org.eclipse.modisco.infra.browser.feature" version="0.13.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
+   <feature url="features/org.eclipse.modisco.tests.feature_0.13.1.qualifier.jar" id="org.eclipse.modisco.tests.feature" version="0.13.1.qualifier">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
    <category-def name="org.eclipse.modisco.updatesite.infrastructure" label="Infrastrucutre"/>
    <category-def name="org.eclipse.modisco.updatesite.technologies" label="Technologies"/>
    <category-def name="org.eclipse.modisco.updatesite.cdo" label="CDO Adapters"/>
