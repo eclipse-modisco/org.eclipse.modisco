@@ -40,6 +40,7 @@ import org.eclipse.swtbot.swt.finder.widgets.SWTBotTree;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -48,6 +49,7 @@ import org.junit.runners.Parameterized.Parameters;
 /**
  * Tests about metaclasses and the metaclass pane.
  */
+@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=359257
 @SuppressWarnings("restriction")
 @RunWith(Parameterized.class)
 public class TestMetaclasses {
