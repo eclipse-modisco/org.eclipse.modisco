@@ -17,6 +17,10 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class QueryReturnTypeFilter extends ViewerFilter {
 
 	private final List<Class<?>> expectedReturnTypes;

@@ -19,6 +19,10 @@ import org.eclipse.emf.validation.IValidationContext;
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.FacetSet;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class NonEmptyName extends AbstractModelConstraint {
 
 	@Override

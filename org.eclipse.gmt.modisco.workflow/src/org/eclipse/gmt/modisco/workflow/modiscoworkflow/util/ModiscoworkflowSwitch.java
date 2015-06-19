@@ -37,7 +37,8 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.Workflow;
  * 
  * @see org.eclipse.gmt.modisco.workflow.modiscoworkflow.ModiscoworkflowPackage
  * @generated
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @SuppressWarnings("all")
 public class ModiscoworkflowSwitch<T> {

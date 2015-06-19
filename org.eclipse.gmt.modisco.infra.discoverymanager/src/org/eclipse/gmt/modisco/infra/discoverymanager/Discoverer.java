@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.resource.Resource;
  * component that injects information into a model to represent physical
  * elements (a source file is considered as a physical element).
  * 
- * @deprecated use org.eclipse.modisco.infra.discovery.core framework
+ * @deprecated use org.eclipse.modisco.infra.discovery.core framework, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=343840
  */
 @Deprecated
 public interface Discoverer {

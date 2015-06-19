@@ -43,7 +43,9 @@ import org.eclipse.gmt.modisco.infra.facet.FacetSet;
  * </p>
  *
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetSetImpl extends EPackageImpl implements FacetSet {
 	/**
 	 * The cached value of the '{@link #getExtendedPackage() <em>Extended Package</em>}' reference.

@@ -14,6 +14,10 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IPath;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class BundleClassPathException extends ModelQueryException {
 
 	private static final long serialVersionUID = 8664502897169666916L;

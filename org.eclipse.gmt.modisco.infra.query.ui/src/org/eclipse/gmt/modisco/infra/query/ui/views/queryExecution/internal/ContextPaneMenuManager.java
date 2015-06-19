@@ -24,6 +24,10 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 @SuppressWarnings("synthetic-access")
 public class ContextPaneMenuManager extends MenuManager implements IMenuListener {
 

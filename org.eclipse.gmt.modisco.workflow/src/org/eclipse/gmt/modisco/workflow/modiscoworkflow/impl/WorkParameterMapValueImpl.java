@@ -35,7 +35,8 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.WorkParameterValue;
  * </p>
  * 
  * @generated
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public class WorkParameterMapValueImpl extends EObjectImpl implements WorkParameterMapValue {

@@ -26,7 +26,9 @@ import org.eclipse.osgi.util.NLS;
 /**
  * The singleton registry of {@link QueryResultDisplayer}s, which initializes
  * the registry by reading extensions when first accessed.
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class QueryResultDisplayersRegistry extends AbstractRegistry {
 
 	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.query.ui"; //$NON-NLS-1$

@@ -42,7 +42,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getFacet()
  * @model
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface Facet extends EClass {
 	/**
 	 * Returns the value of the '<em><b>Condition Query</b></em>' reference.

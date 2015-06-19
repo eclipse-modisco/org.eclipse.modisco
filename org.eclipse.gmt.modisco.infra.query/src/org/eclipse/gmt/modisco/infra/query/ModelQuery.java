@@ -46,7 +46,9 @@ import org.eclipse.emf.ecore.EObject;
  * @see org.eclipse.gmt.modisco.infra.query.QueryPackage#getModelQuery()
  * @model abstract="true"
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface ModelQuery extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

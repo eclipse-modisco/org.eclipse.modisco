@@ -94,6 +94,10 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IWorkbenchActionConstants;
 import org.eclipse.ui.part.ViewPart;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 @SuppressWarnings("synthetic-access")
 public class QueryExecutionView extends ViewPart {
 

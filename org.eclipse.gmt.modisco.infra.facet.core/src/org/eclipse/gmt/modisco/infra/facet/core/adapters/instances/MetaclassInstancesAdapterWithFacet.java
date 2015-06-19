@@ -45,7 +45,9 @@ import org.eclipse.gmt.modisco.infra.query.core.exception.ProjectDisabledExcepti
  * MetaclassInstancesAdapterFactoryWithFacet.getInstance().setFacetContext(facetContext);<br>
  * MetaclassInstances instances = (MetaclassInstances) MetaclassInstancesAdapterFactoryWithFacet.getInstance().adapt(resource, MetaclassInstances.class);
  * </code>
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class MetaclassInstancesAdapterWithFacet extends MetaclassInstancesAdapter implements
 		FacetContextListener {
 

@@ -23,8 +23,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * @see org.eclipse.gmt.modisco.workflow.modiscoworkflow.ModiscoworkflowPackage#getDirection()
  * @model
  * @generated
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
+@Deprecated
 public enum Direction implements Enumerator {
 	/**
 	 * The '<em><b>In</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->

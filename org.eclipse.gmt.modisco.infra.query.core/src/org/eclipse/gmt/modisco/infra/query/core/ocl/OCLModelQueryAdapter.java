@@ -32,6 +32,10 @@ import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
 import org.eclipse.ocl.expressions.OCLExpression;
 import org.eclipse.ocl.helper.OCLHelper;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class OCLModelQueryAdapter extends AbstractModelQuery {
 
 	private OCLExpression<EClassifier> query;

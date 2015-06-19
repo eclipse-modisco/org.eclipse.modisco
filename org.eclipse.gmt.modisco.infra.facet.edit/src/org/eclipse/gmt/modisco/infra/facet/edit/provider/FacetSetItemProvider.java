@@ -43,7 +43,9 @@ import org.eclipse.gmt.modisco.infra.facet.FacetSet;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetSetItemProvider
 	extends EPackageItemProvider
 	implements

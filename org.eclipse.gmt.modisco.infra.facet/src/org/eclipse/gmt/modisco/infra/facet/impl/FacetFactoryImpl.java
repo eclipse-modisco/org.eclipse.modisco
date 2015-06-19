@@ -26,7 +26,9 @@ import org.eclipse.gmt.modisco.infra.facet.*;
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetFactoryImpl extends EFactoryImpl implements FacetFactory {
 	/**
 	 * Creates the default factory implementation.

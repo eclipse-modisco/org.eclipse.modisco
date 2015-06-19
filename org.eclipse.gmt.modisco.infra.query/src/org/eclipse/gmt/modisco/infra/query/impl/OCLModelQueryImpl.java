@@ -15,11 +15,8 @@
 package org.eclipse.gmt.modisco.infra.query.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.gmt.modisco.infra.query.OCLModelQuery;
 import org.eclipse.gmt.modisco.infra.query.QueryPackage;
 
@@ -35,7 +32,9 @@ import org.eclipse.gmt.modisco.infra.query.QueryPackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class OCLModelQueryImpl extends ModelQueryImpl implements OCLModelQuery {
 	/**
 	 * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.

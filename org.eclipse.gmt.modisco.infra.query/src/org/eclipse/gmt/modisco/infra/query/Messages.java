@@ -14,8 +14,9 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author gdupe
- *
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public final class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.query.messages"; //$NON-NLS-1$
 	public static String ReturnTypeValidation_0;

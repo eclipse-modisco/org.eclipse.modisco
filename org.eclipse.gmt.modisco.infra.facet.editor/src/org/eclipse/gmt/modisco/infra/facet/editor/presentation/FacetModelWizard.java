@@ -70,7 +70,9 @@ import org.eclipse.ui.part.ISetSelectionTarget;
  * --> <!-- end-user-doc -->
  * 
  * @generated NOT
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files. <!-- begin-user-doc --> <!--

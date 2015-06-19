@@ -15,7 +15,6 @@
 package org.eclipse.gmt.modisco.infra.facet;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 
 /**
@@ -33,7 +32,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getFacetStructuralFeature()
  * @model abstract="true"
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetStructuralFeature extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value Query</b></em>' reference.

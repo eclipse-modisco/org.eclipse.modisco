@@ -33,7 +33,8 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.ModiscoworkflowPackage;
  * Entry point of the 'GenerateDiscoverer' generation module.
  * 
  * @generated NOT
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public class GenerateDiscoverer extends AbstractAcceleoGenerator {

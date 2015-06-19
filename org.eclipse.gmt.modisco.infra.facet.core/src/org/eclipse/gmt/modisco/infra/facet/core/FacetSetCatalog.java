@@ -32,6 +32,10 @@ import org.eclipse.gmt.modisco.infra.facet.core.internal.Activator;
 import org.eclipse.gmt.modisco.infra.facet.validation.EValidatorAdapter;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalogChangeListener {
 
 	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.facet.registration"; //$NON-NLS-1$

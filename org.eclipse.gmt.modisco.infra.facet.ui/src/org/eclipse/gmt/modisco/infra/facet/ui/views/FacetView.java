@@ -43,7 +43,9 @@ import org.eclipse.ui.ide.IDE;
 /**
  * An Eclipse view that displays a list of available MoDisco facet sets.
  * Clicking on a facet set opens it in the facet set editor.
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetView extends AbstractTreeView implements ModiscoCatalogChangeListener {
 
 	private static final String NAME_COLUMN = "FacetView_NameColumn"; //$NON-NLS-1$

@@ -23,7 +23,11 @@ import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.core.extensions.RefreshStrategy;
 import org.eclipse.gmt.modisco.infra.facet.core.internal.Activator;
 
-/** Registry for the "facetRefreshStrategy" extension point */
+/**
+ * Registry for the "facetRefreshStrategy" extension point
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class RefreshStrategiesRegistry extends AbstractRegistry {
 
 	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.facet.core"; //$NON-NLS-1$

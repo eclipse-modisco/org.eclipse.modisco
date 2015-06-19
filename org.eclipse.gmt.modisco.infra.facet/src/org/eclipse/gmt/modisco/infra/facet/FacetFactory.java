@@ -23,7 +23,9 @@ import org.eclipse.emf.ecore.EFactory;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.

@@ -18,7 +18,6 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmt.modisco.infra.query.runtime.*;
 
 /**
@@ -33,7 +32,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.*;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class RuntimeSwitch<T> {
 	/**
 	 * The cached model package

@@ -36,7 +36,8 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.Workflow;
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
  * 
  * @generated
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public class ModiscoworkflowFactoryImpl extends EFactoryImpl implements ModiscoworkflowFactory {

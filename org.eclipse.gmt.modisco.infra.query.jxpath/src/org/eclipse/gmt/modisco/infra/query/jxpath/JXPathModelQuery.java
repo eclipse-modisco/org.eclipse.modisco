@@ -36,7 +36,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * @see org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage#getJXPathModelQuery()
  * @model
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface JXPathModelQuery extends ModelQuery {
 	/**
 	 * Returns the value of the '<em><b>Query</b></em>' attribute.

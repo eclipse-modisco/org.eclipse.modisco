@@ -33,6 +33,10 @@ import org.eclipse.gmt.modisco.infra.query.core.internal.Activator;
 import org.eclipse.gmt.modisco.infra.query.core.internal.validation.EValidatorAdapter;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 
 	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.query.registration"; //$NON-NLS-1$

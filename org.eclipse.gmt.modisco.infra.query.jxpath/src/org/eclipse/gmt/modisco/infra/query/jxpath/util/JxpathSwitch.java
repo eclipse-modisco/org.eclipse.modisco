@@ -19,8 +19,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.gmt.modisco.infra.query.jxpath.*;
-import org.eclipse.gmt.modisco.infra.query.jxpath.JXPathModelQuery;
-import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +32,9 @@ import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class JxpathSwitch<T> {
 	/**
 	 * The cached model package

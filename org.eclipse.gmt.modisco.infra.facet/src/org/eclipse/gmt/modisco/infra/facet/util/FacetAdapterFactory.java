@@ -36,7 +36,9 @@ import org.eclipse.gmt.modisco.infra.facet.*;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.

@@ -39,7 +39,9 @@ import org.eclipse.gmt.modisco.infra.facet.FacetReference;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetReferenceItemProvider
 	extends EReferenceItemProvider
 	implements

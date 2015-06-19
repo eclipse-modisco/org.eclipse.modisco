@@ -15,7 +15,11 @@ import java.io.File;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
 
-/** The number of lines in this InventoryItem */
+/**
+ * The number of lines in this InventoryItem
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class NumberOfLines extends AbstractRecursiveCount implements
 		IJavaModelQuery<EObject, Integer> {
 	@Override

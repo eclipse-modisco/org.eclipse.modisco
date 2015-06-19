@@ -13,7 +13,11 @@ package org.eclipse.gmt.modisco.infra.facet.examples.kdm;
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
 
-/** The activator class controls the plug-in life cycle */
+/**
+ * The activator class controls the plug-in life cycle
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class Activator extends Plugin {
 
 	// The plug-in ID

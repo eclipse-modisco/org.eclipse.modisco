@@ -16,6 +16,10 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDisc
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.MoDiscoCatalogBuilder;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class FacetBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "facetSet"; //$NON-NLS-1$

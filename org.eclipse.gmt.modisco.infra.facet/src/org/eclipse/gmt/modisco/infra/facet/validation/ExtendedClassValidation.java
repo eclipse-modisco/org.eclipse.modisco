@@ -25,6 +25,11 @@ import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.FacetSet;
 import org.eclipse.gmt.modisco.infra.facet.plugin.FacetPlugin;
 
+/**
+ * 
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class ExtendedClassValidation extends AbstractModelConstraint {
 
 	@Override

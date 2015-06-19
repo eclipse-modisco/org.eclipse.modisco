@@ -15,9 +15,7 @@
 package org.eclipse.gmt.modisco.infra.query.runtime;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.resource.Resource;
 
 /**
@@ -36,7 +34,9 @@ import org.eclipse.emf.ecore.resource.Resource;
  * @see org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage#getModelQueryContext()
  * @model
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface ModelQueryContext extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Selected Model Elements</b></em>' reference list.

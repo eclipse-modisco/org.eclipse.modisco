@@ -34,8 +34,9 @@ import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 /**
  * @author Gregoire DUPE
- * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class LoadMetaModelResourceAction extends LoadResourceAction {
 
 	public LoadMetaModelResourceAction() {

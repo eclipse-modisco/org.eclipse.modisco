@@ -33,7 +33,9 @@ import org.eclipse.emf.ecore.EcorePackage;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetFactory
  * @model kind="package"
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetPackage extends EPackage {
 	/**
 	 * The package name.

@@ -17,7 +17,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryResult;
 /**
  * Implemented by a view or editor that wants to be used to display the results
  * of a model query.
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface QueryResultDisplayer {
 	void displayQueryResult(final List<ModelQueryResult> result);
 }

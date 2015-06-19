@@ -19,7 +19,8 @@ import org.eclipse.debug.core.ILaunchConfiguration;
  * API to launch the workflow
  * 
  * @author Nicolas Payneau
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public interface WorkflowExecution {

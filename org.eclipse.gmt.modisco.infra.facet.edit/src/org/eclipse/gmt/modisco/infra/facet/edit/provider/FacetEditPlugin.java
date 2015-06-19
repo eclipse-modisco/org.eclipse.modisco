@@ -15,11 +15,8 @@
 package org.eclipse.gmt.modisco.infra.facet.edit.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-
 import org.eclipse.gmt.modisco.infra.query.edit.provider.QueryEditPlugin;
 
 /**
@@ -27,7 +24,9 @@ import org.eclipse.gmt.modisco.infra.query.edit.provider.QueryEditPlugin;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public final class FacetEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.

@@ -12,6 +12,10 @@ package org.eclipse.gmt.modisco.infra.facet.core;
 
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public interface FacetContextListener {
 	void facetAdded(Facet facet);
 

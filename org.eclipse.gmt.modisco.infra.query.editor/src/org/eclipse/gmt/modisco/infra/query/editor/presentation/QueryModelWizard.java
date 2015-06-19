@@ -65,7 +65,9 @@ import org.eclipse.ui.part.ISetSelectionTarget;
  * --> <!-- end-user-doc -->
  * 
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class QueryModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files. <!-- begin-user-doc --> <!--

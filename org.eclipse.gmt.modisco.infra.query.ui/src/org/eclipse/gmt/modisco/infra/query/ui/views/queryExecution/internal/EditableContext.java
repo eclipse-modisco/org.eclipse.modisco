@@ -12,7 +12,11 @@ package org.eclipse.gmt.modisco.infra.query.ui.views.queryExecution.internal;
 
 import org.eclipse.emf.ecore.EObject;
 
-/** An interface that supports editing the query context */
+/**
+ * An interface that supports editing the query context
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public interface EditableContext {
 	void add(EObject eObject);
 

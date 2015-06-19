@@ -51,7 +51,9 @@ import org.eclipse.ui.PartInitException;
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetActionBarContributor extends
 		EditingDomainActionBarContributor implements ISelectionChangedListener {
 	/**

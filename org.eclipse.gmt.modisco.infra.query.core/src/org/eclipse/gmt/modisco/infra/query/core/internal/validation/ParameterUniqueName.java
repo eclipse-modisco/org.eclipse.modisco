@@ -19,6 +19,10 @@ import org.eclipse.emf.validation.IValidationContext;
 import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.gmt.modisco.infra.query.ModelQueryParameter;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class ParameterUniqueName extends AbstractModelConstraint {
 
 	@Override

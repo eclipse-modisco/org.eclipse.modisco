@@ -41,7 +41,9 @@ import org.eclipse.ui.ide.IDE;
 /**
  * An Eclipse view that displays a list of available MoDisco query sets.
  * Clicking on a query set opens it in the query set editor.
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class ModelQueryView extends AbstractTreeView implements ModiscoCatalogChangeListener {
 
 	private static final String NAME_COLUMN = "ModelQueryView_NameColumn"; //$NON-NLS-1$

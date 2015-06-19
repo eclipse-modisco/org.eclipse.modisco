@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.EAttribute;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getFacetAttribute()
  * @model
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetAttribute extends EAttribute, FacetStructuralFeature {
 } // FacetAttribute

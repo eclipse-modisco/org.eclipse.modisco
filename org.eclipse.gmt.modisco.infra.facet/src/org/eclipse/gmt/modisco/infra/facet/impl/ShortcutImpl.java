@@ -40,7 +40,9 @@ import org.eclipse.gmt.modisco.infra.facet.Shortcut;
  * </p>
  *
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class ShortcutImpl extends EReferenceImpl implements Shortcut {
 	/**
 	 * The cached value of the '{@link #getPath() <em>Path</em>}' reference list.

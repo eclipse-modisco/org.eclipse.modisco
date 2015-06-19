@@ -15,6 +15,10 @@ import java.util.Collection;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public interface IQuerySetProvider {
 	Collection<ModelQuerySet> getQuerySets(Collection<? extends EObject> context);
 }

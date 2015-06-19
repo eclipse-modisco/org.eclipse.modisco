@@ -16,11 +16,8 @@ package org.eclipse.gmt.modisco.infra.query.jxpath.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.gmt.modisco.infra.query.QueryPackage;
-
 import org.eclipse.gmt.modisco.infra.query.jxpath.JXPathModelQuery;
 import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathFactory;
 import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
@@ -30,7 +27,9 @@ import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class JxpathPackageImpl extends EPackageImpl implements JxpathPackage {
 	/**
 	 * <!-- begin-user-doc -->

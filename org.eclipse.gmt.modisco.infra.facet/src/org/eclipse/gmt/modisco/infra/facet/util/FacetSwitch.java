@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
-
 import org.eclipse.gmt.modisco.infra.facet.*;
 
 /**
@@ -41,7 +40,9 @@ import org.eclipse.gmt.modisco.infra.facet.*;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetSwitch<T> {
 	/**
 	 * The cached model package

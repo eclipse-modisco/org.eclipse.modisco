@@ -43,7 +43,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
  * 
  * @author Gregoire DUPE (Mia-Software)
  * 
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public abstract class AbstractModelQuery {
 
 	private final ModelQuery modelQuery;

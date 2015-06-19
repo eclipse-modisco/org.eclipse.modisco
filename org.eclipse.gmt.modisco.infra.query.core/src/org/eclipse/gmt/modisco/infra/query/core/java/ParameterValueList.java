@@ -21,7 +21,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
 /**
  * List of query parameters, with two method for name direct value / param access. 
  *
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class ParameterValueList extends ArrayList<ModelQueryParameterValue> {
 
 	/** SERIAL ID */

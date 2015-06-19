@@ -12,7 +12,10 @@ package org.eclipse.gmt.modisco.workflow;
 
 import org.eclipse.osgi.util.NLS;
 
-/** @deprecated */
+/**
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
+ */
 @Deprecated
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.workflow.messages"; //$NON-NLS-1$

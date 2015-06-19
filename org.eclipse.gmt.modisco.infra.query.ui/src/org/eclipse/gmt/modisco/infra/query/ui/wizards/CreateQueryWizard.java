@@ -36,6 +36,10 @@ import org.eclipse.gmt.modisco.infra.query.ui.Activator;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class CreateQueryWizard extends Wizard {
 
 	/**

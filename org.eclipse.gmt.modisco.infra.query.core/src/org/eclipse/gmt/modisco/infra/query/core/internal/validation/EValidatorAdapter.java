@@ -29,7 +29,9 @@ import org.eclipse.emf.validation.service.ModelValidationService;
  * This class has been written using the "Tutorial: EMF Validation Adapter"
  * documentation ({@link
  * /org.eclipse.emf.validation.doc/tutorials/validationAdapterTutorial.html})
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class EValidatorAdapter extends EObjectValidator {
 
 	private final IBatchValidator batchValidator;

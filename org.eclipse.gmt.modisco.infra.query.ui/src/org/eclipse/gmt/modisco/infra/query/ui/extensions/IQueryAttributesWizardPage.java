@@ -14,6 +14,10 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
 import org.eclipse.jface.wizard.IWizardPage;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public interface IQueryAttributesWizardPage extends IWizardPage {
 
 	/**

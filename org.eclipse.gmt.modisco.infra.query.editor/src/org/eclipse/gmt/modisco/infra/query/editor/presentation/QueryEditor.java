@@ -166,7 +166,9 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
  * end-user-doc -->
  * 
  * @generated NOT
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class QueryEditor extends MultiPageEditorPart implements IEditingDomainProvider,
 		ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker, IShowInSource,
 		IShowInTargetList {

@@ -31,6 +31,10 @@ import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.gmt.modisco.infra.query.core.internal.Activator;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class JavaValidationQueryBuilder implements IModiscoBuilder {
 
 	public JavaValidationQueryBuilder() {

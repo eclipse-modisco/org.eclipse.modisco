@@ -60,6 +60,10 @@ import org.eclipse.pde.core.plugin.PluginRegistry;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleException;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class JavaModelQueryFactory implements IModelQueryFactory {
 
 	private static final long DELAY = 1000;

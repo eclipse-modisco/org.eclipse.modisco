@@ -18,7 +18,9 @@ import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
 /**
  * The number of lines containing something else than whitespace in this
  * InventoryItem.
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class NonEmptyLines extends AbstractRecursiveCount implements
 		IJavaModelQuery<EObject, Integer> {
 	@Override

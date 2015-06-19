@@ -33,7 +33,9 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.gmt.modisco.infra.query.QueryFactory
  * @model kind="package"
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface QueryPackage extends EPackage {
 	/**
 	 * The package name.

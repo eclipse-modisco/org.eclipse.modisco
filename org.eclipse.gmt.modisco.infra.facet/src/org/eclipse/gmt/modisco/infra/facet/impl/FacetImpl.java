@@ -37,7 +37,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * </p>
  *
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetImpl extends EClassImpl implements Facet {
 	/**
 	 * The cached value of the '{@link #getConditionQuery() <em>Condition Query</em>}' reference.

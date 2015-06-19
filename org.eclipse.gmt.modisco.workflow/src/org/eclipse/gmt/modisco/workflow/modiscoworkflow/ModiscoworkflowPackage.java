@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.gmt.modisco.workflow.modiscoworkflow.ModiscoworkflowFactory
  * @model kind="package"
  * @generated
- * @deprecated
+ * @deprecated replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public interface ModiscoworkflowPackage extends EPackage {

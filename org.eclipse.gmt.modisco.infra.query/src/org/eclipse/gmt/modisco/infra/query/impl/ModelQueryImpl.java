@@ -53,7 +53,9 @@ import org.eclipse.gmt.modisco.infra.query.QueryPackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public abstract class ModelQueryImpl extends EObjectImpl implements ModelQuery {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.

@@ -17,10 +17,13 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.IStructuredSelection;
-
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.ui.wizards.NewTypeWizardPage;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class NewClassWizardPage extends NewTypeWizardPage {
 
 	private static final String PAGE_NAME = "NewClassWizardPage"; //$NON-NLS-1$

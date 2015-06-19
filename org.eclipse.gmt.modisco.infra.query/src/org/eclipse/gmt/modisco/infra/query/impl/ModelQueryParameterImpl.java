@@ -15,14 +15,11 @@
 package org.eclipse.gmt.modisco.infra.query.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmt.modisco.infra.query.ModelQueryParameter;
 import org.eclipse.gmt.modisco.infra.query.QueryPackage;
 
@@ -41,7 +38,9 @@ import org.eclipse.gmt.modisco.infra.query.QueryPackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class ModelQueryParameterImpl extends EObjectImpl implements ModelQueryParameter {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.

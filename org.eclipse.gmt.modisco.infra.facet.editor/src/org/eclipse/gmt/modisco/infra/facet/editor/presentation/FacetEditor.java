@@ -165,7 +165,9 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
  * end-user-doc -->
  * 
  * @generated NOT
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetEditor extends MultiPageEditorPart implements IEditingDomainProvider,
 		ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 

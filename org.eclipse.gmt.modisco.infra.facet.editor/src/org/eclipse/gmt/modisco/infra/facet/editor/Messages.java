@@ -12,6 +12,10 @@ package org.eclipse.gmt.modisco.infra.facet.editor;
 
 import org.eclipse.osgi.util.NLS;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.facet.editor.messages"; //$NON-NLS-1$
 	public static String FacetEditor_Edition;

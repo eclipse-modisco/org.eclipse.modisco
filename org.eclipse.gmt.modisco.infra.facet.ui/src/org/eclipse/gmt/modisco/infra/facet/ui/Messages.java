@@ -15,8 +15,9 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author gdupe
- * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public final class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.facet.ui.messages"; //$NON-NLS-1$
 	public static String FacetView_0;

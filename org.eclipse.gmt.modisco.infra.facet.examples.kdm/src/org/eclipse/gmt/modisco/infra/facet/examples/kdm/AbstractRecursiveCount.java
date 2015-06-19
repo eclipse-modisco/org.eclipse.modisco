@@ -20,7 +20,10 @@ import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
 import org.eclipse.gmt.modisco.omg.kdm.source.AbstractInventoryElement;
 import org.eclipse.gmt.modisco.omg.kdm.source.InventoryContainer;
 import org.eclipse.gmt.modisco.omg.kdm.source.InventoryItem;
-
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public abstract class AbstractRecursiveCount implements IJavaModelQuery<EObject, Integer> {
 	public Integer evaluate(final EObject context, final ParameterValueList parameterValues)
 			throws ModelQueryExecutionException {

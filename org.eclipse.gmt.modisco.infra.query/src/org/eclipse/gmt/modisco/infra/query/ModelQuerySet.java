@@ -41,7 +41,9 @@ import org.eclipse.emf.ecore.EPackage;
  * @see org.eclipse.gmt.modisco.infra.query.QueryPackage#getModelQuerySet()
  * @model
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface ModelQuerySet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Associated Metamodels</b></em>' reference list.

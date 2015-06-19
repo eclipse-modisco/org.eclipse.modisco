@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getFacetReference()
  * @model
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetReference extends EReference, FacetStructuralFeature {
 } // FacetReference

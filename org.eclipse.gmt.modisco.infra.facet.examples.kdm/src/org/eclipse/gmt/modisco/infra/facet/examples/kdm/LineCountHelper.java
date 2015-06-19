@@ -21,6 +21,10 @@ import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 
 import com.ibm.icu.lang.UCharacter;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public final class LineCountHelper {
 	private static final int BUFFER_SIZE = 1024;
 	private static LineCountHelper instance;

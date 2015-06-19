@@ -15,14 +15,11 @@
 package org.eclipse.gmt.modisco.infra.query.runtime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryResult;
 import org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage;
 
@@ -40,7 +37,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class ModelQueryResultImpl extends EObjectImpl implements ModelQueryResult {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.

@@ -16,6 +16,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public interface RefreshStrategy {
 	/**
 	 * This method must compute and return the list of elements for which a

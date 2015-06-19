@@ -33,7 +33,9 @@ import org.eclipse.emf.ecore.EPackage;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getFacetSet()
  * @model
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface FacetSet extends EPackage {
 	/**
 	 * Returns the value of the '<em><b>Extended Package</b></em>' reference.

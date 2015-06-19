@@ -38,7 +38,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
  * querySet's name facet's name in the FacetSet are directly their corresponding
  * name in the QuerySet
  * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public final class QueryToFacetSet {
 
 	private static String nsUri = "http://www.eclipse.org/FacetSet/"; //$NON-NLS-1$

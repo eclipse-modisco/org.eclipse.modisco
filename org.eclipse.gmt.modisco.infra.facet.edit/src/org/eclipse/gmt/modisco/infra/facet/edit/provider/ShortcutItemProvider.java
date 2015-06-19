@@ -20,14 +20,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcoreFactory;
-
 import org.eclipse.emf.ecore.provider.EReferenceItemProvider;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -36,7 +32,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.gmt.modisco.infra.facet.FacetFactory;
 import org.eclipse.gmt.modisco.infra.facet.FacetPackage;
 import org.eclipse.gmt.modisco.infra.facet.Shortcut;
@@ -46,7 +41,9 @@ import org.eclipse.gmt.modisco.infra.facet.Shortcut;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class ShortcutItemProvider
 	extends EReferenceItemProvider
 	implements

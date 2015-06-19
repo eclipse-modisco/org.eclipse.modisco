@@ -10,6 +10,10 @@
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.query.ui.exceptions;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class ResourceURIExpectedException extends Exception {
 
 	private static final long serialVersionUID = 6891585699949077305L;

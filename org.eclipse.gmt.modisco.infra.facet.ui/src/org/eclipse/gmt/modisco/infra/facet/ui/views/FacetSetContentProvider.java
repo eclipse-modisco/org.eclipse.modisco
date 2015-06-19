@@ -20,8 +20,9 @@ import org.eclipse.jface.viewers.Viewer;
 
 /**
  * @author gdupe
- * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetSetContentProvider implements ITreeContentProvider {
 
 	private EClass depth;

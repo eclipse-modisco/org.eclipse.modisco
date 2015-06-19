@@ -36,7 +36,9 @@ import org.eclipse.ui.dialogs.PatternFilter;
 /**
  * A control that displays a tree of queries in their query sets, with a filter
  * text field.
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class QueryFilteredTree extends FilteredTree {
 
 	/**

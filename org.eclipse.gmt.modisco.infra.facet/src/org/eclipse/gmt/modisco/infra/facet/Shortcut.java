@@ -15,7 +15,6 @@
 package org.eclipse.gmt.modisco.infra.facet;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EReference;
 
 /**
@@ -34,7 +33,9 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.gmt.modisco.infra.facet.FacetPackage#getShortcut()
  * @model
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public interface Shortcut extends EReference {
 	/**
 	 * Returns the value of the '<em><b>Path</b></em>' reference list.

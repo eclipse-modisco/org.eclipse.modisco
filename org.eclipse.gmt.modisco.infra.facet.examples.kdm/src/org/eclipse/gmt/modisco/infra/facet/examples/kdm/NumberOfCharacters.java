@@ -15,7 +15,11 @@ import java.io.File;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
 
-/** Number of characters in the underlying file. */
+/**
+ * Number of characters in the underlying file.
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class NumberOfCharacters extends AbstractRecursiveCount implements
 		IJavaModelQuery<EObject, Integer> {
 	@Override

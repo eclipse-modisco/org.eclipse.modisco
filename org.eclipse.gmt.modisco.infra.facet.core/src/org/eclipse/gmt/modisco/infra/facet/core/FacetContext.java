@@ -48,8 +48,9 @@ import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryException;
 
 /**
  * @author Gregoire DUPE
- * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetContext {
 
 	private final Set<Facet> appliedFacets = new HashSet<Facet>();

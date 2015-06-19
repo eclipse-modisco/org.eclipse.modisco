@@ -16,6 +16,10 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDisc
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.MoDiscoCatalogBuilder;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class QueryBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "querySet"; //$NON-NLS-1$

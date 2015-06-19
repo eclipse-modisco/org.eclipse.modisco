@@ -17,6 +17,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstances;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetContext;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public final class MetaclassInstancesAdapterFactoryWithFacet extends AdapterFactoryImpl {
 	private static final MetaclassInstancesAdapterFactoryWithFacet INSTANCE = new MetaclassInstancesAdapterFactoryWithFacet();
 

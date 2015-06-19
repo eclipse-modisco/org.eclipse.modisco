@@ -15,8 +15,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 /**
  * @author Gregoire DUPE (Mia-Software)
- * 
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class ImageProvider {
 	private static final String MODEL_QUERY_SET = "icons/facetSet.png"; //$NON-NLS-1$
 	private static final String MODEL_QUERY = "icons/facet.png"; //$NON-NLS-1$

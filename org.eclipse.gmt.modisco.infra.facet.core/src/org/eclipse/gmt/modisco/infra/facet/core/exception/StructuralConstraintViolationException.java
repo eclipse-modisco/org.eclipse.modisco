@@ -12,7 +12,9 @@ package org.eclipse.gmt.modisco.infra.facet.core.exception;
 
 /**
  * @author Gregoire DUPE (Mia-Software) {@inheritDoc}
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class StructuralConstraintViolationException extends ModiscoFacetException {
 
 	/**

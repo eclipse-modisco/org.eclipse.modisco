@@ -19,7 +19,8 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.WorkParameter;
  * API to define the driver core
  * 
  * @author Nicolas Payneau
- * @deprecated no Driver needed anymore
+ * @deprecated no Driver needed anymore, replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
  */
 @Deprecated
 public interface Driver {

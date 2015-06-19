@@ -26,7 +26,9 @@ import org.eclipse.swt.dnd.DropTargetListener;
  * Implements a {@link DropTargetListener} that accepts {@link EObject}s
  * transferred locally (i.e. through {@link LocalTransfer}), and calls the given
  * {@link DropAction} with the dropped {@link EObject}s.
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class DropAdapter implements DropTargetListener {
 
 	private final DropAction dropAction;

@@ -30,7 +30,9 @@ package org.eclipse.gmt.modisco.infra.query;
  * @see org.eclipse.gmt.modisco.infra.query.QueryPackage#getOCLModelQuery()
  * @model
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface OCLModelQuery extends ModelQuery {
 	/**
 	 * Returns the value of the '<em><b>Query</b></em>' attribute.

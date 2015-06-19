@@ -14,6 +14,10 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.gmt.modisco.infra.common.core.internal.protocol.IModiscoProtocolExtension;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
 
+/**
+ * @deprecated Replaced by EMF Facet
+ */
+@Deprecated
 public class FacetProtocolExtension implements IModiscoProtocolExtension {
 
 	/*

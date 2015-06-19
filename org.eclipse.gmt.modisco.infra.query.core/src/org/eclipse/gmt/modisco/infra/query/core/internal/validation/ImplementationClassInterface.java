@@ -47,6 +47,10 @@ import org.eclipse.jdt.core.Signature;
 import org.eclipse.osgi.util.NLS;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class ImplementationClassInterface extends AbstractModelConstraint {
 
 	private class UnresolvedType extends Exception {

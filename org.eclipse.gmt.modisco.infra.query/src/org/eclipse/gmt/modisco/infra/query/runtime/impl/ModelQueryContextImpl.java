@@ -17,17 +17,12 @@ package org.eclipse.gmt.modisco.infra.query.runtime.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryContext;
 import org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage;
 
@@ -44,7 +39,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class ModelQueryContextImpl extends EObjectImpl implements ModelQueryContext {
 	/**
 	 * The cached value of the '{@link #getSelectedModelElements() <em>Selected Model Elements</em>}' reference list.

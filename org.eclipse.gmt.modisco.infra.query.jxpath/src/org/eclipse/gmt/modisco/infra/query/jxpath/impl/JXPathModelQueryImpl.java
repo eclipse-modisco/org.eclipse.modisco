@@ -14,9 +14,7 @@
 package org.eclipse.gmt.modisco.infra.query.jxpath.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 
@@ -36,7 +34,9 @@ import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
  * </p>
  *
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class JXPathModelQueryImpl extends ModelQueryImpl implements JXPathModelQuery {
 	/**
 	 * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.

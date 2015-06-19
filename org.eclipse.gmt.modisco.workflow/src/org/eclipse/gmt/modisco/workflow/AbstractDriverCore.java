@@ -27,7 +27,10 @@ import org.eclipse.gmt.modisco.workflow.modiscoworkflow.WorkParameterStringValue
 import org.eclipse.gmt.modisco.workflow.modiscoworkflow.impl.ModiscoworkflowFactoryImpl;
 import org.eclipse.gmt.modisco.workflow.modiscoworkflow.impl.WorkParameterEntryValueImpl;
 
-/** @deprecated no Driver needed anymore */
+/**
+ * @deprecated no Driver needed anymore, replaced by org.eclipse.modisco.workflow, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337942
+ */
 @Deprecated
 public abstract class AbstractDriverCore implements Driver {
 

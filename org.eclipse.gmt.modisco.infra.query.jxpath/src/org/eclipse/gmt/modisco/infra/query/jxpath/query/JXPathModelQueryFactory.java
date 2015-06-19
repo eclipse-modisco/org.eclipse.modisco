@@ -21,6 +21,10 @@ import org.eclipse.gmt.modisco.infra.query.jxpath.JXPathModelQuery;
 import org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class JXPathModelQueryFactory implements IModelQueryFactory {
 
 	public AbstractModelQuery create(final ModelQuery modelQuery,

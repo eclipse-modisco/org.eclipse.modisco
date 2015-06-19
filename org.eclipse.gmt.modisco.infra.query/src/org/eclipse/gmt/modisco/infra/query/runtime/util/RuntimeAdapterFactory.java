@@ -16,11 +16,8 @@ package org.eclipse.gmt.modisco.infra.query.runtime.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmt.modisco.infra.query.runtime.*;
 
 /**
@@ -30,7 +27,9 @@ import org.eclipse.gmt.modisco.infra.query.runtime.*;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class RuntimeAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.

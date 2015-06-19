@@ -10,6 +10,10 @@
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.query.core.exception;
 
+/**
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class ExecutionEnvironmentException extends ModelQueryException {
 
 	private static final long serialVersionUID = -1902759878640028259L;

@@ -15,7 +15,9 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetPlugin extends Plugin {
 
 	// The plug-in ID

@@ -12,6 +12,10 @@ package org.eclipse.gmt.modisco.infra.query.core.internal;
 
 import org.eclipse.osgi.util.NLS;
 
+/*
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
+ */
+@Deprecated
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.query.core.internal.messages"; //$NON-NLS-1$
 	public static String ImplementationClassInterface_logErrorsJobName;

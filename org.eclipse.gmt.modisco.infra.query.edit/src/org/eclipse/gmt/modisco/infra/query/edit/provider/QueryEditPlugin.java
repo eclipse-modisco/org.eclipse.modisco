@@ -23,7 +23,9 @@ import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public final class QueryEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.

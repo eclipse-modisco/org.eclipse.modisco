@@ -53,7 +53,9 @@ import org.eclipse.ui.actions.ContributionItemFactory;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated NOT
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public class QueryActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {

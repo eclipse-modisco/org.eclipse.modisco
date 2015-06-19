@@ -33,7 +33,9 @@ import org.eclipse.emf.ecore.EObject;
  * @see org.eclipse.gmt.modisco.infra.query.runtime.RuntimePackage#getModelQueryResult()
  * @model
  * @generated
+ * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
+@Deprecated
 public interface ModelQueryResult extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.

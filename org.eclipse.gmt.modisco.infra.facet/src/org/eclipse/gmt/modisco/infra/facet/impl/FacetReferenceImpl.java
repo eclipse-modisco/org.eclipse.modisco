@@ -15,10 +15,8 @@
 package org.eclipse.gmt.modisco.infra.facet.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EReferenceImpl;
 
@@ -40,7 +38,9 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * </p>
  *
  * @generated
+ * @deprecated Replaced by EMF Facet
  */
+@Deprecated
 public class FacetReferenceImpl extends EReferenceImpl implements FacetReference {
 	/**
 	 * The cached value of the '{@link #getValueQuery() <em>Value Query</em>}' reference.
