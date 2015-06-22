@@ -23,7 +23,10 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * naming extension. It provides the
  * {@link AbstractNameProvider#getDefaultName(EObject) getDefaultName} method,
  * which finds a default name (which can be empty) for any model element.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public abstract class AbstractNameProvider implements NameProvider {
 
 	/**

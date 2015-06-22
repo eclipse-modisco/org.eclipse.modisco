@@ -37,7 +37,10 @@ import org.eclipse.swt.graphics.Image;
  * reading extensions when first accessed. It can provide names for model
  * elements, using {@link IconProvider}s provided through the naming extension
  * point.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class IconProvidersRegistry extends AbstractRegistry {
 
 	private static final String METACLASS_ELEMENT = "metaclass"; //$NON-NLS-1$

@@ -34,7 +34,12 @@ import org.eclipse.gmt.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 
-/** Utility functions related to EMF */
+/**
+ * Utility functions related to EMF
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class EMFUtil {
 
 	/**

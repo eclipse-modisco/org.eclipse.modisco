@@ -17,7 +17,10 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.builder.MoDiscoCatalog
 /**
  * A builder that feeds and updates the {@link CustomizationsCatalog} with the
  * customization files it finds
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class CustomizationsBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "uiCustom"; //$NON-NLS-1$

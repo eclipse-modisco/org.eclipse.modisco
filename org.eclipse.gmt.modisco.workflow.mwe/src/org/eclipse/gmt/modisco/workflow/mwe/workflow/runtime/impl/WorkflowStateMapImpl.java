@@ -15,21 +15,15 @@ package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowComponent;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState;
 
 /**
@@ -45,6 +39,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowStateMapImpl extends EObjectImpl implements BasicEMap.Entry<WorkflowComponent,WorkflowState> {

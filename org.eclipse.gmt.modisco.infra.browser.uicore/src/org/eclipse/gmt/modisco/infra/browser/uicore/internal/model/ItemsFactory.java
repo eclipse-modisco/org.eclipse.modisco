@@ -17,7 +17,10 @@ import org.eclipse.gmt.modisco.infra.browser.uicore.internal.AppearanceConfigura
 /**
  * A factory that creates tree items. This allows extending these elements by
  * extending the factory and returning extended versions of the elements.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class ItemsFactory {
 	public ModelElementItem createModelElementItem(final EObject eObject,
 			final ITreeElement treeParent, final AppearanceConfiguration appearanceConfiguration) {

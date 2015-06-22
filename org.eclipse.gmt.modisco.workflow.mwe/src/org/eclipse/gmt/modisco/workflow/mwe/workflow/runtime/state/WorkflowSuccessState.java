@@ -23,6 +23,8 @@ package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.StatePackage#getWorkflowSuccessState()
  * @model
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface WorkflowSuccessState extends WorkflowDoneState {

@@ -31,7 +31,10 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getDerivedFeatureValue()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface DerivedFeatureValue extends FeatureValue {
 	/**
 	 * Returns the value of the '<em><b>Value Calculator</b></em>' reference.

@@ -12,7 +12,12 @@ package org.eclipse.gmt.modisco.infra.browser.uicore;
 
 import java.util.EventListener;
 
-/** A listener for change notifications */
+/**
+ * A listener for change notifications
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public interface ChangeListener extends EventListener {
 	void changed();
 }

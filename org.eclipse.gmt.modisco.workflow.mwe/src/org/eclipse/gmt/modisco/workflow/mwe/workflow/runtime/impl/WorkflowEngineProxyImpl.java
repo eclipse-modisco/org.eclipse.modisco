@@ -14,12 +14,9 @@
 package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowEngine;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowEngineProxy;
@@ -36,6 +33,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowEngineProxy
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowEngineProxyImpl extends WorkflowEngineImpl implements WorkflowEngineProxy {

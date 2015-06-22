@@ -57,7 +57,9 @@ import org.eclipse.gmt.modisco.java.emf.JavaFactory;
  * This class implements the meta-class {@code ASTNode} but is <b>not</b> modeled in the Java meta-model.
  * It is a trick to ease the usage of this class in the {@code JDTVisitor}.
  * </p>
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class PendingElement implements ASTNode {

@@ -32,7 +32,9 @@ import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
 /**
  * The aim of this class is to bind method with the method overriden of a super
  * class if any
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public final class MethodRedefinitionManager {

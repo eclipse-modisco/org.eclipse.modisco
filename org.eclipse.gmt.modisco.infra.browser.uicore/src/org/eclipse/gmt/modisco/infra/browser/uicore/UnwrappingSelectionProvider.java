@@ -43,9 +43,10 @@ import org.eclipse.jface.viewers.StructuredSelection;
  * getSite().registerContextMenu(MENU_ID, contextMenu, new UnwrappingSelectionProvider(treeViewer));
  * </pre>
  * 
- * 
- * 
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class UnwrappingSelectionProvider extends
 		org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider {
 

@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.EPackage;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.StateFactory
  * @model kind="package"
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface StatePackage extends EPackage {
@@ -289,7 +291,10 @@ public interface StatePackage extends EPackage {
 	 * </ul>
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+	 *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
 	 */
+	@Deprecated
 	interface Literals {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.impl.WorkflowStateImpl <em>Workflow State</em>}' class.

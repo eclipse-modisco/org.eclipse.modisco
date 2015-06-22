@@ -12,7 +12,12 @@
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.model;
 
-/** An exception thrown when the user cancels an operation */
+/**
+ * An exception thrown when the user cancels an operation
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class OperationCanceledException extends RuntimeException {
 	private static final long serialVersionUID = -7431558914173714537L;
 }

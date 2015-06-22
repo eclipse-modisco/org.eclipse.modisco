@@ -14,7 +14,6 @@
 package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.StatePackage;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowIdleState;
 
@@ -26,6 +25,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowIdleS
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowIdleStateImpl extends WorkflowStateImpl implements WorkflowIdleState {

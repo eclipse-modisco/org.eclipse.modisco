@@ -21,7 +21,11 @@ import org.eclipse.gmt.modisco.java.Messages;
 import org.eclipse.gmt.modisco.java.internal.core.AtlLaunchHelper;
 import org.eclipse.gmt.modisco.java.internal.core.AtlLaunchHelper.ModelInfo;
 import org.eclipse.m2m.atl.common.ATLLogger;
-/** @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part) */
+/**
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
 @Deprecated
 public class TranslateJavaModelToKdm {
 

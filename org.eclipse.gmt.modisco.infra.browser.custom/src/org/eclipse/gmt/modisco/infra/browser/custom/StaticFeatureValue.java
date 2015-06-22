@@ -29,7 +29,10 @@ package org.eclipse.gmt.modisco.infra.browser.custom;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getStaticFeatureValue()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface StaticFeatureValue extends FeatureValue {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire DUPE (Mia-Software)
  *    Nicolas Bros (Mia-Software)
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.modisco.infra.query.tests;
 
@@ -66,6 +67,8 @@ public class UnitTests {
 
 	private static final String FILE_EXT = ".querySet"; //$NON-NLS-1$
 
+	private static final int NB_MARKERS_Q_FILE = 6;
+
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
 	private final Utils utils = new Utils(Activator.getDefault());
@@ -89,7 +92,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result = executeJavaQuery(name);
 		Assert.assertTrue(((String) result.get(0).getValue()) == "Test001"); //$NON-NLS-1$
@@ -100,7 +103,7 @@ public class UnitTests {
 						projectToCreate,
 						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", Activator.getDefault().getBundle()); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile,NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result2 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result2.get(0).getValue()) == "Test002"); //$NON-NLS-1$
@@ -128,7 +131,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet mqs = catalog.getModelQuerySet(name);
@@ -237,7 +240,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		AbstractModelQuery modelQueryInst = null;
 		Assert.assertTrue("Query catalog must not be empty.", //$NON-NLS-1$
@@ -260,7 +263,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		List<ModelQueryResult> result3 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$
 		ModelQueryContext context2 = RuntimeFactory.eINSTANCE.createModelQueryContext();
@@ -343,7 +346,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet modelQuerySet = catalog.getModelQuerySet(name);
@@ -548,7 +551,7 @@ public class UnitTests {
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		ModelQuerySet mqs = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 

@@ -35,6 +35,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowEngine;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage#getWorkflow()
  * @model
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface Workflow extends EObject {

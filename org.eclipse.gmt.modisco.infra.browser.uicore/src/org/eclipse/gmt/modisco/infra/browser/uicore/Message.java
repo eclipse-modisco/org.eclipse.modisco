@@ -23,7 +23,10 @@ import org.eclipse.swt.widgets.Display;
 /**
  * A message that appears instead of model elements, for example when the list is empty or the input
  * is <code>null</code>.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class Message implements ITreeElement {
 	private final String message;
 

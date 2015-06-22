@@ -13,6 +13,11 @@ package org.eclipse.gmt.modisco.infra.browser.custom.core;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.gmt.modisco.infra.common.core.internal.protocol.IModiscoProtocolExtension;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class CustomizationProtocolExt implements IModiscoProtocolExtension {
 
 	public String getSchemeSpecificPart() {

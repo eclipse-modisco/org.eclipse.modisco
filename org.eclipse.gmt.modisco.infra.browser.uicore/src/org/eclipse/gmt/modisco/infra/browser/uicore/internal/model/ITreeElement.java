@@ -18,7 +18,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** The base interface implemented by all elements that appear in the browser */
+/**
+ * The base interface implemented by all elements that appear in the browser
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public interface ITreeElement {
 	String getText();
 

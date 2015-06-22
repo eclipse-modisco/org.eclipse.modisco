@@ -24,7 +24,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** A virtual attribute used to display the URI of an {@link EObject} */
+/**
+ * A virtual attribute used to display the URI of an {@link EObject}
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class URIAttribute implements ITreeElement {
 
 	/**

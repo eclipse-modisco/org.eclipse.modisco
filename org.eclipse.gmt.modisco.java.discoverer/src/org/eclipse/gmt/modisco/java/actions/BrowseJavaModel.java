@@ -45,7 +45,9 @@ import org.eclipse.ui.ide.IDE;
 
 /**
  * @author Gabriel Barbier
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class BrowseJavaModel extends AbstractDiscovererImpl {

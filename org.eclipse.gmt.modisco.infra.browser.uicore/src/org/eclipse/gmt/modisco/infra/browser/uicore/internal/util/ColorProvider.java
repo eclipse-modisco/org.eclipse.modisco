@@ -20,7 +20,10 @@ import org.eclipse.swt.widgets.Display;
 /**
  * Returns SWT {@link Color}s used in the model browser, and caches them to optimize system
  * resources usage.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public final class ColorProvider {
 
 	private static ColorProvider instance;

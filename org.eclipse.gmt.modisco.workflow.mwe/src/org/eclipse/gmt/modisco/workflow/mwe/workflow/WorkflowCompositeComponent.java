@@ -41,6 +41,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage#getWorkflowCompositeComponent()
  * @model
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface WorkflowCompositeComponent extends WorkflowComponent {

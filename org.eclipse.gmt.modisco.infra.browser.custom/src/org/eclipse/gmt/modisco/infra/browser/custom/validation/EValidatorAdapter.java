@@ -28,7 +28,10 @@ import org.eclipse.emf.validation.service.ModelValidationService;
 /**
  * An adapter that plugs the EMF Model Validation Service API into the
  * {@link org.eclipse.emf.ecore.EValidator} API.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class EValidatorAdapter extends EObjectValidator {
 
 	/**

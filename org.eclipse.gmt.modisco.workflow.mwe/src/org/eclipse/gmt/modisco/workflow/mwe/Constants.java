@@ -10,6 +10,10 @@
  */
 package org.eclipse.gmt.modisco.workflow.mwe;
 
+/**
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
+*/
 @Deprecated
 public final class Constants {
 

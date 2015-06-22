@@ -19,6 +19,11 @@ import org.eclipse.gmt.modisco.infra.browser.custom.FeatureValue;
 import org.eclipse.gmt.modisco.infra.browser.custom.FeatureValueCase;
 import org.eclipse.swt.graphics.RGB;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public final class UicustomUtil {
 
 	private static final int MAX_COLOR_INTENSITY = 255;

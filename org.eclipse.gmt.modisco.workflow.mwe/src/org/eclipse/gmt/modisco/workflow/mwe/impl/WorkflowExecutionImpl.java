@@ -25,6 +25,10 @@ import org.eclipse.gmt.modisco.workflow.WorkflowModel;
 import org.eclipse.gmt.modisco.workflow.modiscoworkflow.Element;
 import org.eclipse.gmt.modisco.workflow.mwe.Activator;
 
+/**
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
+ */
 @Deprecated
 public class WorkflowExecutionImpl implements WorkflowExecution {
 

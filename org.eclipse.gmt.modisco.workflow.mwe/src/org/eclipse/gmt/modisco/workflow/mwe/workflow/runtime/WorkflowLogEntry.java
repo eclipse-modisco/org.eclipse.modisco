@@ -32,6 +32,8 @@ import org.eclipse.emf.ecore.EObject;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage#getWorkflowLogEntry()
  * @model
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface WorkflowLogEntry extends EObject {

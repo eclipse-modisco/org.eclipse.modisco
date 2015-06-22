@@ -25,7 +25,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** A link to the EMF container of an element ({@link EObject#eContainer()}) */
+/**
+ * A link to the EMF container of an element ({@link EObject#eContainer()})
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class ContainerLink implements ITreeElement {
 
 	/** The model element that appears as the parent of the link in the tree */

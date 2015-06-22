@@ -15,11 +15,8 @@ package org.eclipse.gmt.modisco.workflow.mwe.workflow.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.*;
 
 /**
@@ -29,6 +26,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.*;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowAdapterFactory extends AdapterFactoryImpl {

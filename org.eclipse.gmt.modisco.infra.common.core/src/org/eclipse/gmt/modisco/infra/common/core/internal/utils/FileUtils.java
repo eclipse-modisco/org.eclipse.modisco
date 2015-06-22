@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2008, 2011 Mia-Software.
+ * Copyright (c) 2008, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query 
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.utils;
 
@@ -166,9 +167,14 @@ public final class FileUtils {
 	}
 
 	public static void checkNoMarkerOn(final IFile file) throws CoreException {
+		checkNoMoreMarkerOn(file, 0);
+	}
+
+	public static void checkNoMoreMarkerOn(final IFile file, final int nbMarkers)
+			throws CoreException {
 		IMarker[] markers = null;
 		markers = file.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
-		if (markers.length != 0) {
+		if (markers.length > nbMarkers) {
 			MultiStatus multiStatus = new MultiStatus(CommonModiscoActivator.PLUGIN_ID, 0,
 					"Markers found on: " //$NON-NLS-1$
 							+ file, new Exception());

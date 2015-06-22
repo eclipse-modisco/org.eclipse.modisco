@@ -40,7 +40,10 @@ import org.eclipse.swt.widgets.Display;
  * <li>access to the {@link CustomizationEngine}, used to customize the appearance of model elements
  * both statically and dynamically
  * </ul>
- * */
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class AppearanceConfiguration {
 
 	public enum MetaclassesSortMode {

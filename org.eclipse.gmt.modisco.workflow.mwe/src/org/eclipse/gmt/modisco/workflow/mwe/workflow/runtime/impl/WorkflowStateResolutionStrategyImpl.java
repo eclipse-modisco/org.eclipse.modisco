@@ -14,15 +14,11 @@
 package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowCompositeComponent;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowContext;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowStateResolutionStrategy;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState;
 
 /**
@@ -33,6 +29,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowStateResolutionStrategyImpl extends EObjectImpl implements WorkflowStateResolutionStrategy {

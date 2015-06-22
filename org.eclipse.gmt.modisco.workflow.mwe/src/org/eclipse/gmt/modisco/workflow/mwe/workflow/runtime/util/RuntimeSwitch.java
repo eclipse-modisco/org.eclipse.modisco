@@ -18,13 +18,10 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.IWorkflowVisitor;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowComponent;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowParameter;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.*;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState;
 
 /**
@@ -39,6 +36,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class RuntimeSwitch<T> {

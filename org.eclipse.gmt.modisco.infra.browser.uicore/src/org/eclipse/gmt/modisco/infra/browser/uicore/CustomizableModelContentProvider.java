@@ -26,7 +26,12 @@ import org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ModelElementI
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-/** A tree content provider used to display a model customized with a MoDico customization. */
+/**
+ * A tree content provider used to display a model customized with a MoDico customization.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class CustomizableModelContentProvider implements ITreeContentProvider {
 
 	private final AppearanceConfiguration appearanceConfiguration;

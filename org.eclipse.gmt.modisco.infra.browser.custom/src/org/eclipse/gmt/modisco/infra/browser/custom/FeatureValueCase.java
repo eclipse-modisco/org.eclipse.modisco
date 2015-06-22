@@ -33,7 +33,10 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getFeatureValueCase()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface FeatureValueCase extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' reference.

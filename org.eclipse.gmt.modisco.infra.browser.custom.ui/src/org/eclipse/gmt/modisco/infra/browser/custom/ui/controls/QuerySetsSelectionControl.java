@@ -35,7 +35,12 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
-/** A control to select which query sets must be imported. */
+/**
+ * A control to select which query sets must be imported.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class QuerySetsSelectionControl extends Composite {
 
 	private static final String COMBO_ALL = Messages.QuerySetsSelectionControl_allExistingQuerySets;

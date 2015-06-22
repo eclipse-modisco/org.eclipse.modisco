@@ -27,7 +27,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getCustomizableFeatures()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 @SuppressWarnings("all")
 public enum CustomizableFeatures implements Enumerator {
 	/**

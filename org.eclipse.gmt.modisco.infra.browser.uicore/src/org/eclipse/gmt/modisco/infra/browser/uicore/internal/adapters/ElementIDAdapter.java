@@ -14,7 +14,10 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 
 /**
  * Associates a unique integer with each model element (lazily, when the adapter is created)
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class ElementIDAdapter extends AdapterImpl implements ElementID {
 
 	private static long lastID = 0;

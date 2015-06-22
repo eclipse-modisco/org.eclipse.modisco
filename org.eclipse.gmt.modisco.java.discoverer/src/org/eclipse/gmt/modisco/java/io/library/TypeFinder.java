@@ -23,7 +23,9 @@ import org.eclipse.jdt.core.JavaModelException;
 /**
  * Class which act as a cache to faster the resolution of a {@link IType} from a
  * dot based qualified name in the context of a Java project.
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class TypeFinder {

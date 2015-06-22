@@ -19,7 +19,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** A label provider used to display a model customized with a MoDico customization. */
+/**
+ * A label provider used to display a model customized with a MoDico customization.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class CustomizableModelLabelProvider extends LabelProvider implements IColorProvider,
 		IFontProvider {
 	

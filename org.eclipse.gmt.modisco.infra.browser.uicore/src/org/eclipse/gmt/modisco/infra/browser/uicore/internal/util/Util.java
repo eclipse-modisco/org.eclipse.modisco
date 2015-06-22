@@ -13,7 +13,12 @@ package org.eclipse.gmt.modisco.infra.browser.uicore.internal.util;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.Path;
 
-/** General utility functions */
+/**
+ * General utility functions
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public final class Util {
 
 	private Util() {

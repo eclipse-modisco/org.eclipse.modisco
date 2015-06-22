@@ -14,11 +14,8 @@
 package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-
 import org.eclipse.emf.ecore.xmi.XMLResource;
 
 /**
@@ -27,6 +24,8 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.util.RuntimeResourceImpl
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class RuntimeResourceFactoryImpl extends ResourceFactoryImpl {

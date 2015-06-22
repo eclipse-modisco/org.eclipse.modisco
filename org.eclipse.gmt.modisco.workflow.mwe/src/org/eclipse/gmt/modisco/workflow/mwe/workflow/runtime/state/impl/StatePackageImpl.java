@@ -16,21 +16,13 @@ package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.impl.WorkflowPackageImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.orchestration.OrchestrationPackage;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.orchestration.impl.OrchestrationPackageImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.impl.RuntimePackageImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.StateFactory;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.StatePackage;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowDoneState;
@@ -46,6 +38,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowSucce
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class StatePackageImpl extends EPackageImpl implements StatePackage {

@@ -14,12 +14,9 @@
 package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowLogEntry;
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowLogEntryType;
@@ -38,6 +35,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowLogEntryTyp
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowLogEntryImpl extends EObjectImpl implements WorkflowLogEntry {

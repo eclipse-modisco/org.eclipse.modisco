@@ -13,6 +13,11 @@ package org.eclipse.gmt.modisco.infra.browser.uicore.internal;
 
 import org.eclipse.osgi.util.NLS;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public final class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.browser.uicore.internal.messages"; //$NON-NLS-1$
 

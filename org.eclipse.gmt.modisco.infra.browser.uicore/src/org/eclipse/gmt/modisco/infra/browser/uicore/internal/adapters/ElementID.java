@@ -10,7 +10,12 @@
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.adapters;
 
-/** Used to associate an id to an element */
+/**
+ * Used to associate an id to an element
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public interface ElementID {
 	long getID();
 }

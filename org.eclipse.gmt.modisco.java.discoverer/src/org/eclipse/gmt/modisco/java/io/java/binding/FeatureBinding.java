@@ -18,7 +18,9 @@ package org.eclipse.gmt.modisco.java.io.java.binding;
 
 /**
  * <code>Binding</code> representing a featured Java entity.
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public abstract class FeatureBinding extends Binding {

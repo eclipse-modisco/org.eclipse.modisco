@@ -17,7 +17,10 @@ import org.eclipse.swt.graphics.Image;
  * Represents an overlay icon positioned over the man icon of an element in a tree widget. The icon
  * can have a different position depending on the value of the given {@link OverlayIconPosition}
  * instance.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class OverlayIconImageInfo {
 	private final OverlayIconPosition iconPosition;
 	private final Image image;

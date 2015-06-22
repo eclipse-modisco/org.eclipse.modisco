@@ -19,7 +19,10 @@ import org.eclipse.swt.graphics.Image;
  * The interface that must be implemented in order to use the "icons" extension.
  * Implementors may choose to use the {@link FilteredIconProvider} interface
  * instead if they want to add a filter.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface IconProvider {
 
 	/**

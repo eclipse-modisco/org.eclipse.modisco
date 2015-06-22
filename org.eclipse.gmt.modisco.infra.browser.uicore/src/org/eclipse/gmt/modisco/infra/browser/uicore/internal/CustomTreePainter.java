@@ -49,7 +49,10 @@ import org.eclipse.swt.widgets.TreeItem;
  * <li>Displays "stickers" for Facets on the right of model elements that carry one or more facet(s)
  * for which an icon has been provided through a customization (uiCustom file)
  * </ul>
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class CustomTreePainter {
 
 	private static final int MAX_ALPHA = 255;

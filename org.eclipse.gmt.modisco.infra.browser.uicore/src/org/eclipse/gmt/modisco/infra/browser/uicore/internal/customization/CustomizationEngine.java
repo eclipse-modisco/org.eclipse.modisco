@@ -85,7 +85,10 @@ import org.eclipse.swt.widgets.Display;
  * access, and the "apply to sub-instances" option on metaclasses
  * <li>images, colors and fonts are decoded once and then kept in cache
  * </ul>
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class CustomizationEngine {
 
 	private final Map<EClass, EngineElementView> engineTypeViews = new HashMap<EClass, EngineElementView>();

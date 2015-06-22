@@ -55,7 +55,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** Represents a model element ({@link EObject}). Uses reflection on the Ecore metamodel. */
+/**
+ * Represents a model element ({@link EObject}). Uses reflection on the Ecore metamodel.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class ModelElementItem implements ITreeElement, IAdaptable {
 
 	/** The configuration of the way elements are displayed */

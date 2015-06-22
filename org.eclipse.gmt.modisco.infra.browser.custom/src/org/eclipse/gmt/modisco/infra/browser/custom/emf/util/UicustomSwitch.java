@@ -32,7 +32,10 @@ import org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 @SuppressWarnings("all")
 public class UicustomSwitch<T> {
 	/**

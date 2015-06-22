@@ -32,7 +32,12 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.widgets.Display;
 
-/** Utility methods to evaluate MoDisco queries. */
+/**
+ * Utility methods to evaluate MoDisco queries.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public final class QueryUtil {
 
 	private static final int MESSAGE_DELAY = 100;

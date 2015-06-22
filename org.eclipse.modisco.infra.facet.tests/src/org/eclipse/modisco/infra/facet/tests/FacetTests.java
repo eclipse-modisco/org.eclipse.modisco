@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009-2010 Mia-Software.
+ * Copyright (c) 2009, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire DUPE (Mia-Software)
  *    Nicolas Bros (Mia-Software)
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.modisco.infra.facet.tests;
 
@@ -76,6 +77,7 @@ import org.osgi.framework.Bundle;
  */
 @SuppressWarnings({ "nls" })
 public class FacetTests {
+	private static final int NB_MARKER_GETSUBCLASSES = 6;
 	public static final String FILE_EXT = ".facetSet";
 	public static final String QUERY_EXT = ".querySet";
 
@@ -110,7 +112,7 @@ public class FacetTests {
 				"/src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java",
 				Activator.getDefault().getBundle());
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKER_GETSUBCLASSES);
 		FileUtils.checkNoMarkerOn(queryFile);
 		FileUtils.checkNoMarkerOn(facetFile);
 		FacetSet facetSet = FacetSetCatalog.getSingleton().getFacetSet(name);

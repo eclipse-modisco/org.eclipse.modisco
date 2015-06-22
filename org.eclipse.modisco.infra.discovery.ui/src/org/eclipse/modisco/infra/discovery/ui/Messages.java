@@ -12,6 +12,10 @@ package org.eclipse.modisco.infra.discovery.ui;
 
 import org.eclipse.osgi.util.NLS;
 
+/**
+ * @deprecated Will become internal cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470609
+ */
+@Deprecated
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.discovery.ui.messages"; //$NON-NLS-1$
 	public static String ContributionItemForMoDiscoMenu_discoverersMenuLabel;

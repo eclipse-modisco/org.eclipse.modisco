@@ -41,7 +41,10 @@ import org.eclipse.ui.PlatformUI;
  * An item which is displayed as a range when splitting big element lists into smaller ones.
  * <p>
  * This is done so as to avoid locking the GUI for too long when the tree is built
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class BigListItem implements ITreeElement {
 
 	/**

@@ -16,7 +16,9 @@ import org.osgi.framework.BundleContext;
 /**
  * 
  * @author Gregoire DUPE (Mia-Software)
+ * @deprecated Will become internal cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470609
  */
+@Deprecated
 public class Activator extends Plugin {
 
 	private static Activator plugin;

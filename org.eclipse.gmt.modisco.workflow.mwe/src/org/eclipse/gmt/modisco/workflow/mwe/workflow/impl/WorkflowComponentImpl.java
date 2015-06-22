@@ -48,7 +48,10 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.WorkflowState
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
+@Deprecated
 public abstract class WorkflowComponentImpl extends EObjectImpl implements WorkflowComponent {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.

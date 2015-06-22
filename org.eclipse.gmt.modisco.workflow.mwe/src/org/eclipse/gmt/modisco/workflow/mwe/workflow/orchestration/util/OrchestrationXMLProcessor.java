@@ -28,6 +28,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.orchestration.Orchestration
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class OrchestrationXMLProcessor extends XMLProcessor {

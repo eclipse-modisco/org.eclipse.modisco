@@ -16,11 +16,8 @@ package org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.*;
 
 /**
@@ -28,6 +25,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.state.*;
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class StateFactoryImpl extends EFactoryImpl implements StateFactory {

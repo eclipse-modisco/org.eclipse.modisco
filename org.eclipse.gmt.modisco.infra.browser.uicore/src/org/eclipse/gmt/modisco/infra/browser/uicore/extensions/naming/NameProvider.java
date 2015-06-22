@@ -19,7 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  * Implementors may choose to use the {@link FilteredNameProvider} interface
  * instead if they want to add a filter, or the {@link AbstractNameProvider}
  * class, which implements default naming rules.
- * */
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public interface NameProvider {
 
 	/**

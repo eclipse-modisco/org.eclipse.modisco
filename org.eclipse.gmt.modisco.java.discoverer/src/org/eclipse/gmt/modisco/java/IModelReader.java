@@ -17,7 +17,7 @@ import org.eclipse.gmt.modisco.java.io.java.binding.BindingManager;
  * The interface for readers which build Java models.
  * <p>
  * A model reader reads a source (a Java project for example) and fill a given
- * {@link Model} object. 
+ * {@link Model} object.
  * </p>
  * <p>
  * Concrete model readers should indicate which source type they can handle.
@@ -34,7 +34,9 @@ import org.eclipse.gmt.modisco.java.io.java.binding.BindingManager;
  * Clients shouldn't make modifications on the resulting {@code Model}.
  * </p>
  * 
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public interface IModelReader {

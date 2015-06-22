@@ -48,7 +48,10 @@ import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
  * <code>org.eclipse.gmt.modisco.infra.browser.custom.registration</code>. It is
  * updated by the {@link CustomizationsBuilder}, which is responsible for adding
  * and removing customization files in response to changes in the Workspace.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 
 	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.browser.custom.core.registration"; //$NON-NLS-1$

@@ -34,7 +34,10 @@ import org.eclipse.emf.common.util.EList;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getTypeView()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface TypeView extends CustomView {
 	/**
 	 * Returns the value of the '<em><b>Metaclass Name</b></em>' attribute.

@@ -13,7 +13,11 @@ package org.eclipse.gmt.modisco.java;
 
 import org.eclipse.osgi.util.NLS;
 
-/** @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part) */
+/**
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
 @Deprecated
 public final class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.java.messages"; //$NON-NLS-1$

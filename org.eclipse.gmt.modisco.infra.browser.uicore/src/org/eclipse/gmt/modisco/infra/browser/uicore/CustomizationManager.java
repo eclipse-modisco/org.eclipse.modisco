@@ -32,7 +32,10 @@ import org.eclipse.swt.widgets.Tree;
  * <p>
  * Note that you must call {@link CustomizationManager#installCustomPainter(Tree)
  * installCustomPainter} for all customizations to be displayed properly.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class CustomizationManager {
 	private final AppearanceConfiguration appearanceConfiguration;
 

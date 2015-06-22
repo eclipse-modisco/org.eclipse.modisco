@@ -35,7 +35,12 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 
-/** A link (representing an {@link EReference}) between two model elements in the tree. */
+/**
+ * A link (representing an {@link EReference}) between two model elements in the tree.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class LinkItem implements ITreeElement, IAdaptable {
 
 	/** The reference corresponding to the link */

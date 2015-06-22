@@ -17,7 +17,10 @@ import org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ModelElementI
 /**
  * An Eclipse adapter factory used to adapt a {@link ModelElementItem} to the {@link EObject} it
  * represents.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class AdapterFactory implements IAdapterFactory {
 
 	@SuppressWarnings("unchecked")

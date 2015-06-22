@@ -15,6 +15,11 @@ package org.eclipse.modisco.jee.actions;
 
 import org.eclipse.osgi.util.NLS;
 
+/**
+ * @deprecated Will be removed,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470701
+ */
+@Deprecated
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.modisco.jee.actions.messages"; //$NON-NLS-1$
 	public static String DeployementDescriptorDiscoverer_0;

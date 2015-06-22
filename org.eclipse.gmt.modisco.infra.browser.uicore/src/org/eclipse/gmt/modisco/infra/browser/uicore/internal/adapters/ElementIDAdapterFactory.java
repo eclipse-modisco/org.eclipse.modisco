@@ -19,7 +19,10 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * An EMF adapter factory used to instantiate {@link ElementIDAdapter}, that is used to associate an
  * id to an {@link EObject}.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public final class ElementIDAdapterFactory extends AdapterFactoryImpl {
 
 	private static final AdapterFactory INSTANCE = new ElementIDAdapterFactory();

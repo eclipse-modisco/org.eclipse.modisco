@@ -33,7 +33,10 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomFactory
  * @model kind="package"
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 @SuppressWarnings("all")
 public interface UicustomPackage extends EPackage {
 	/**

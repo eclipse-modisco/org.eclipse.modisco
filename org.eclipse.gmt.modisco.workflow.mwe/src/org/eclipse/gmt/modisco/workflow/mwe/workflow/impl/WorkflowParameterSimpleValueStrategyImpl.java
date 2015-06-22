@@ -26,6 +26,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowParameterSimpleValu
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowParameterSimpleValueStrategyImpl extends WorkflowParameterValueStrategyImpl implements WorkflowParameterSimpleValueStrategy {

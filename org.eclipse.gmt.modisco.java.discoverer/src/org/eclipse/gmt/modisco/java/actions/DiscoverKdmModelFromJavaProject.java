@@ -32,7 +32,11 @@ import org.eclipse.gmt.modisco.java.JavaActivator;
 import org.eclipse.gmt.modisco.java.Messages;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-/** @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)*/
+/**
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
 @Deprecated
 public class DiscoverKdmModelFromJavaProject extends DefaultDiscoverer {
 

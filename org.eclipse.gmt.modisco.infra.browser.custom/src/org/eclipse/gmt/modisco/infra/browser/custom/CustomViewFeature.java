@@ -34,7 +34,10 @@ import org.eclipse.emf.ecore.EObject;
  * @see org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage#getCustomViewFeature()
  * @model
  * @generated
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public interface CustomViewFeature extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Customized Feature</b></em>' attribute.

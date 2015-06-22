@@ -27,6 +27,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowPackage#getDirection()
  * @model
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public enum Direction implements Enumerator {

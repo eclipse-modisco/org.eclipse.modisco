@@ -33,6 +33,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.WorkflowComponent;
  * @see org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.RuntimePackage#getWorkflowRunner()
  * @model superTypes="org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowRunnable"
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public interface WorkflowRunner extends EObject, Runnable {

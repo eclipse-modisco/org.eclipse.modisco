@@ -48,6 +48,8 @@ import org.eclipse.gmt.modisco.workflow.mwe.workflow.runtime.WorkflowContext;
  * </p>
  *
  * @generated
+ * @deprecated replaced by org.eclipse.modisco.workflow.mwe, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=337969
  */
 @Deprecated
 public class WorkflowParameterImpl extends EObjectImpl implements WorkflowParameter {

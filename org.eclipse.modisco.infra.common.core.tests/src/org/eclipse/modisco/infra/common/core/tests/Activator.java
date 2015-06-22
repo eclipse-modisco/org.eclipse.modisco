@@ -13,6 +13,10 @@ package org.eclipse.modisco.infra.common.core.tests;
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
 
+/**
+ * @deprecated Will become internal cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470609
+ */
+@Deprecated
 public class Activator extends Plugin {
 
 	private static Activator plugin;

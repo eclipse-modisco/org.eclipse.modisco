@@ -34,7 +34,10 @@ import org.eclipse.swt.graphics.Image;
 
 /**
  * An item for displaying attributes ({@link EAttribute}) of a model element as elements in the tree.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class AttributeItem implements ITreeElement, IAdaptable {
 
 	/** The attribute */

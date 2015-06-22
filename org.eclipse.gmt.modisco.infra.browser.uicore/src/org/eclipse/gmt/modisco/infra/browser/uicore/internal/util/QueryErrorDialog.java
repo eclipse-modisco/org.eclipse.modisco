@@ -25,7 +25,10 @@ import org.eclipse.swt.widgets.Shell;
 /**
  * A dialog used to display query errors, that contains a checkbox to let the user prevent the
  * dialog from displaying again during the current session.
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
+@Deprecated
 public class QueryErrorDialog extends MessageDialog {
 
 	private Button cbDontShowAnymore;

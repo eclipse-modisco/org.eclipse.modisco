@@ -29,7 +29,9 @@ import org.eclipse.jdt.core.dom.WildcardType;
  * A Factory which creates MoDisco {@link Binding}s from JDT nodes.
  * 
  * @see org.eclipse.jdt.core.dom.ASTNode
- * @deprecated the whole plug-in is replaced by "org.eclipse.modisco.java.discoverer" (without the "gmt" part)
+ * @deprecated the whole plug-in is replaced by
+ *             "org.eclipse.modisco.java.discoverer" (without the "gmt" part),
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public interface IBindingFactory {

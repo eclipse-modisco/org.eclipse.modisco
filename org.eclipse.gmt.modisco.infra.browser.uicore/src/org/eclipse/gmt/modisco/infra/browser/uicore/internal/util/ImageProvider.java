@@ -21,7 +21,12 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.graphics.Image;
 
-/** A singleton image provider, which caches image descriptors */
+/**
+ * A singleton image provider, which caches image descriptors
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public final class ImageProvider {
 
 	private ImageProvider() {
