@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_c27b3497",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/src/org/eclipse/modisco/infra/browser/editor/ui/internal/editor/TreeEditorOpener.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-24T11:18:00Z",
+      "side": 1,
+      "message": "We cannot move eObjects to another resource because this can have side effect to other tools (using the resourceSet).",
+      "range": {
+        "startLine": 69,
+        "startChar": 2,
+        "endLine": 73,
+        "endChar": 3
+      },
+      "revId": "d25d19de61be4595c5005223a3eee811d68613b1",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
