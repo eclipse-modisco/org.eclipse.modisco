@@ -52,7 +52,8 @@ import org.eclipse.modisco.infra.discovery.benchmark.MultiProjectBenchmark;
 import com.ibm.icu.text.SimpleDateFormat;
 
 /**
- * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component
+ * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public abstract class AbstractRunBenchmark implements Discoverer {

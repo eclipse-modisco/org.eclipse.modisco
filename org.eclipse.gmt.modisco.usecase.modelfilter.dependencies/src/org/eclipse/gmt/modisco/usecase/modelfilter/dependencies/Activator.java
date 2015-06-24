@@ -16,6 +16,10 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
+/**
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470806
+ */
 public class Activator extends AbstractUIPlugin {
 	// The plug-in ID
 	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.usecase.modelfilter.methodcalls"; //$NON-NLS-1$

@@ -18,6 +18,11 @@ import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.navigator.resources.ProjectExplorer;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class MoDiscoContentProvider extends CustomizableModelContentProvider {
 
 	public MoDiscoContentProvider() {

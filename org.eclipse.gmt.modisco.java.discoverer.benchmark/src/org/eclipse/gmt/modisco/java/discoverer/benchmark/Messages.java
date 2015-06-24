@@ -17,7 +17,8 @@ import org.eclipse.osgi.util.NLS;
  * @author gdupe
  * 
  * 
- * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component
+ * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class Messages extends NLS {

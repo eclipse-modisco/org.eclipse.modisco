@@ -20,7 +20,8 @@ import org.eclipse.gmt.modisco.java.discoverer.benchmark.emfstat.Statistics;
 import org.eclipse.jdt.core.IJavaProject;
 
 /**
- * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component
+ * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class RunBenchmarkIncVsClassical extends AbstractRunBenchmark {

@@ -103,7 +103,7 @@ public class UnitTests {
 						projectToCreate,
 						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", Activator.getDefault().getBundle()); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMoreMarkerOn(javaFile,NB_MARKERS_Q_FILE);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result2 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result2.get(0).getValue()) == "Test002"); //$NON-NLS-1$
@@ -113,7 +113,7 @@ public class UnitTests {
 						projectToCreate,
 						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", Activator.getDefault().getBundle()); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(javaFile);
+		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		FileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result3 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$

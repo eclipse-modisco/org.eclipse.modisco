@@ -13,6 +13,11 @@ package org.eclipse.gmt.modisco.infra.browser.extensions.listeners;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.action.IStatusLineManager;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public interface DoubleClickListener {
 
 	public abstract void synchronizeEObject(EObject eObjet, IStatusLineManager statusLineManager);

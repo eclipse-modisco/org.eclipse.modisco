@@ -40,7 +40,8 @@ import org.eclipse.m2m.atl.core.service.CoreService;
  * @author Gabriel Barbier
  * 
  * 
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470806
  */
 @Deprecated
 public class BidirectionalUmlConverter {

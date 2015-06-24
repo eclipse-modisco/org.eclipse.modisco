@@ -19,6 +19,11 @@ import org.eclipse.ui.navigator.ICommonMenuConstants;
 import org.eclipse.ui.navigator.ICommonViewerSite;
 import org.eclipse.ui.navigator.ICommonViewerWorkbenchSite;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class OpenProvider extends CommonActionProvider {
 
 	private OpenAction openAction;

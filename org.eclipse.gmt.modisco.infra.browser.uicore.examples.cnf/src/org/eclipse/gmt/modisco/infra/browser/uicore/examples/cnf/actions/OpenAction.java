@@ -27,6 +27,11 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.ide.IDE;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class OpenAction extends Action {
 
 	private final IWorkbenchPage page;

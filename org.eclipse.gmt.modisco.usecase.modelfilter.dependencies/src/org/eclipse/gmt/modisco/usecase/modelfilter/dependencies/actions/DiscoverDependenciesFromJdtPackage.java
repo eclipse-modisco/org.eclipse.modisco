@@ -38,7 +38,8 @@ import org.eclipse.gmt.modisco.java.Package;
  * @author Gabriel Barbier
  * 
  * 
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470806
  */
 @Deprecated
 public class DiscoverDependenciesFromJdtPackage extends AbstractDiscovererImpl implements

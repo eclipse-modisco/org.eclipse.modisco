@@ -30,6 +30,11 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.navigator.ILinkHelper;
 
+/**
+ * @deprecated Will be replaced by EMF Facet,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
+ */
+@Deprecated
 public class LinkHelper implements ILinkHelper {
 
 	public IStructuredSelection findSelection(final IEditorInput anInput) {

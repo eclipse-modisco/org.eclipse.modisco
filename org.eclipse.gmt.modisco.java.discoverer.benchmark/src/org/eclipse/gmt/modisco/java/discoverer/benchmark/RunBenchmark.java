@@ -36,7 +36,8 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.benchmark.MultiProjectBenchmark;
 
 /**
- * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component
+ * @deprecated use org.eclipse.modisco.java.discoverer.benchmark component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
 @Deprecated
 public class RunBenchmark extends AbstractRunBenchmark {
