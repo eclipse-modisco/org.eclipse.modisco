@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_229b18f9",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/src/org/eclipse/modisco/infra/browser/editor/ui/internal/editor/TreeEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-24T13:46:25Z",
+      "side": 1,
+      "message": "The assignment isn\u0027t necessary. It must be removed and eventually replaced by a throw of java.lang.IllegalArgumentException.",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 3
+      },
+      "revId": "686dededd0046794d19ef7c8d131403805613d70",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
