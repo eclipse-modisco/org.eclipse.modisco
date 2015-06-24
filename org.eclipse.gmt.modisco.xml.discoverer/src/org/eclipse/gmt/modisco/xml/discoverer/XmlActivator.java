@@ -16,7 +16,10 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * replaced by org.eclipse.modisco.xml.discoverer.XMLModelDiscoverer,
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
  */
+@Deprecated
 public class XmlActivator extends Plugin {
 
 	// The plug-in ID

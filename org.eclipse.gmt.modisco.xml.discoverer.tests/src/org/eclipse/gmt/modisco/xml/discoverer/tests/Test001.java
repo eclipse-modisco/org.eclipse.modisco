@@ -44,8 +44,9 @@ import org.junit.Test;
 
 /**
  * Basic test of discovering a XML model and testing root, element, comments
- * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
  */
+@Deprecated
 public class Test001 {
 
 	private static final String TEST1_XML = "Test001.xml"; //$NON-NLS-1$

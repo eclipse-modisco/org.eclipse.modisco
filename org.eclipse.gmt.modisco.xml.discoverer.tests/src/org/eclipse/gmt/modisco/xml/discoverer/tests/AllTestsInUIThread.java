@@ -15,6 +15,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
+ */
+@Deprecated
 @RunWith(Suite.class)
 @SuiteClasses({ Test001.class, Test002.class })
 public class AllTestsInUIThread {

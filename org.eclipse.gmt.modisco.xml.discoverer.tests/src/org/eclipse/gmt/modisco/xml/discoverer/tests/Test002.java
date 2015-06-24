@@ -44,8 +44,9 @@ import org.junit.Test;
 
 /**
  * Basic test of discovering a XML model and testing root, attributes
- * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
  */
+@Deprecated
 public class Test002 {
 	private static final int MAGIC_NUMBER = 3;
 	private static final String TEST2_XML = "Test002.xml"; //$NON-NLS-1$

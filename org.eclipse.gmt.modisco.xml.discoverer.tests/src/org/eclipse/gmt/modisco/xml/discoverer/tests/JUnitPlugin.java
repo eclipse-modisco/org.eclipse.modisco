@@ -19,7 +19,9 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
  */
+@Deprecated
 public class JUnitPlugin extends Plugin {
 
 	// The plug-in ID

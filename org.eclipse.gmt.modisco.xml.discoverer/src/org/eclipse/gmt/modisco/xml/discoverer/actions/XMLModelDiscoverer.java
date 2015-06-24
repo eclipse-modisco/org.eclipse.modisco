@@ -37,7 +37,8 @@ import org.eclipse.modisco.infra.discovery.ui.Activator;
 /**
  * Discover generic XML model action.
  * 
- * @deprecated use {@link XMLModelDiscoverer2} instead
+ * @deprecated replaced by org.eclipse.modisco.xml.discoverer.XMLModelDiscoverer,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470885
  */
 @Deprecated
 public class XMLModelDiscoverer implements Discoverer {
