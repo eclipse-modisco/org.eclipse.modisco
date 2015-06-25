@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_7c05c0c9",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/OSGI-INF/l10n/bundle.properties",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-25T12:39:42Z",
+      "side": 1,
+      "message": "The copyright date has to be updated.",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 32
+      },
+      "revId": "021a8815419ab4b2beb62aa33c4238f306a19a33",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
