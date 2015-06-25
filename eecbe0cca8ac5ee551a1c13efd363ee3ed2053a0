@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_a8ea4713",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.core/src/org/eclipse/modisco/infra/browser/ecore/core/internal/hidederviedreferences/IsVisibleQuery.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-25T07:58:30Z",
+      "side": 1,
+      "message": "\"\"\"\nboolean superValue \u003d ??????;\nresult \u003d result \u0026\u0026 superValue;\n\"\"\"\nwould be more readable.",
+      "range": {
+        "startLine": 54,
+        "startChar": 11,
+        "endLine": 54,
+        "endChar": 13
+      },
+      "revId": "eecbe0cca8ac5ee551a1c13efd363ee3ed2053a0",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_48b76340",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.core/src/org/eclipse/modisco/infra/browser/ecore/core/internal/hidederviedreferences/IsVisibleQuery.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-25T07:58:30Z",
+      "side": 1,
+      "message": "I think that you could merge the both catches.",
+      "range": {
+        "startLine": 56,
+        "startChar": 4,
+        "endLine": 59,
+        "endChar": 46
+      },
+      "revId": "eecbe0cca8ac5ee551a1c13efd363ee3ed2053a0",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
