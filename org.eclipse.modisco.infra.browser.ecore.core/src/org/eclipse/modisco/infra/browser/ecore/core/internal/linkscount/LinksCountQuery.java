@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2014 Soft-Maint.
+ * Copyright (c) 2014, 2015 Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,14 +7,10 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 442017 - A customization counting elements by reference
+ *    Thomas Cicognani (Soft-Maint) - Bug 471000 - Reactivate the customization which counts elements by reference
  */
 package org.eclipse.modisco.infra.browser.ecore.core.internal.linkscount;
 
-
-public class LinksCountQuery {
-	//FIXME
-}
-/*
 import java.util.Collection;
 
 import org.eclipse.emf.ecore.EObject;
@@ -43,7 +39,7 @@ public class LinksCountQuery implements IJavaQuery3<EObject, String> {
 			}
 			return facetManager.getSuperValueOf(feature, source,
 					parameterValues, String.class) + size;
-		} catch (FacetManagerException e) {
+		} catch (Exception e) {
 			throw new DerivedTypedElementException(e);
 		}
 	}
@@ -67,4 +63,4 @@ public class LinksCountQuery implements IJavaQuery3<EObject, String> {
 		return size;
 	}
 }
-*/
+
