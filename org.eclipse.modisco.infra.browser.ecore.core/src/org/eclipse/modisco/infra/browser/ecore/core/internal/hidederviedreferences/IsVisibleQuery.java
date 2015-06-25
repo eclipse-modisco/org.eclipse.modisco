@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 470903 - The custom HideDerivedReferences doesn't use the super method
+ *    Thomas Cicognani (Soft-Maint) - Bug 470988 - Imports cleaning in IsVisibleQuery class
  */
 package org.eclipse.modisco.infra.browser.ecore.core.internal.hidederviedreferences;
 
@@ -15,8 +16,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
 import org.eclipse.emf.facet.efacet.core.exception.DerivedTypedElementException;
-import org.eclipse.emf.facet.efacet.core.exception.FacetManagerException;
-import org.eclipse.emf.facet.efacet.core.exception.SuperInvokeException;
 import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElement;
 import org.eclipse.emf.facet.query.java.core.IJavaQuery3;
 import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
