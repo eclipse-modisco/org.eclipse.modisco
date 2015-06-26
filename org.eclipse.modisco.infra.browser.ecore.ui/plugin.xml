@@ -13,7 +13,7 @@ Contributors:
 <plugin>
    <extension point="org.eclipse.ui.views">
       <view
-         class="org.eclipse.modisco.infra.browser.view.ecore.ui.internal.view.EcoreExplorerView"
+         class="org.eclipse.modisco.infra.browser.ecore.ui.internal.view.EcoreExplorerView"
          icon="icons/MoDiscoModelIcon.gif"
          id="org.eclipse.modisco.infra.browser.ecore.ui.view1"
          name="%EcoreExplorer"
