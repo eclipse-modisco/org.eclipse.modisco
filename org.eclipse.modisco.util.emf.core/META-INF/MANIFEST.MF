@@ -10,4 +10,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.facet.util.core;bundle-version="1.0.1"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.modisco.util.emf.core.internal.allinstances
+Export-Package: org.eclipse.modisco.util.emf.core.allinstances,
+ org.eclipse.modisco.util.emf.core.internal.allinstances;x-internal:=true

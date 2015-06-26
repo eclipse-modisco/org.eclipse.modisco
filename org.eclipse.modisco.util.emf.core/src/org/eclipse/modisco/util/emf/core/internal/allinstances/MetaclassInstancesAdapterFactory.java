@@ -21,7 +21,7 @@ public final class MetaclassInstancesAdapterFactory extends AdapterFactoryImpl {
 	private static final AdapterFactory INSTANCE = new MetaclassInstancesAdapterFactory();
 
 	private MetaclassInstancesAdapterFactory() {
-		// singleton
+		super();
 	}
 
 	public static AdapterFactory getInstance() {
