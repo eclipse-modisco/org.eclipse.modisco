@@ -8,7 +8,7 @@
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
  */
-package org.eclipse.modisco.infra.browser.view.ecore.ui.internal;
+package org.eclipse.modisco.infra.browser.ecore.ui.internal;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;

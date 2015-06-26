@@ -1,14 +1,15 @@
 /** 
- * Copyright (c) 2015 Mia-Software
+ * Copyright (c) 2015 Mia-Software, and Soft-Maint
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View 
+ *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
  */
-package org.eclipse.modisco.infra.browser.view.ecore.ui.internal.view;
+package org.eclipse.modisco.infra.browser.ecore.ui.internal.view;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -44,6 +45,22 @@ public final class Utils {
 
 	public static EPackage getEPackage(final EObject eObject) {
 		EPackage result;
+		final EObject resolvedEObject = getResolvedEObject(eObject);
+		final EClass eClass = resolvedEObject.eClass();
+		result = eClass.getEPackage();
+		return result;
+	}
+
+	public static EObject getResolvedEObject(final Object object) {
+		EObject result = null;
+		if (object instanceof EObject) {
+			final EObject eObject = (EObject) object;
+			result = getResolvedEObject(eObject);
+		}
+		return result;
+	}
+	
+	public static EObject getResolvedEObject(final EObject eObject) {
 		EObject resolvedEObject = eObject;
 		if (eObject instanceof EObjectTreeElement) {
 			final EObjectTreeElement treeElt = (EObjectTreeElement) eObject;
@@ -57,8 +74,6 @@ public final class Utils {
 			final EObjectTreeElement eContainer = (EObjectTreeElement) sfTreeElt.eContainer();
 			resolvedEObject = eContainer.getEObject();
 		}
-		final EClass eClass = resolvedEObject.eClass();
-		result = eClass.getEPackage();
-		return result;
+		return resolvedEObject;
 	}
 }
