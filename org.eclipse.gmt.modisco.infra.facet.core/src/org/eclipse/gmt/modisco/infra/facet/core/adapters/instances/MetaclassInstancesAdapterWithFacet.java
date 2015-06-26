@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010, 2011 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *     Nicolas Bros (Mia-Software) - initial API and implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.facet.core.adapters.instances;
 
@@ -22,7 +23,6 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstancesAdapter;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetContext;
@@ -32,6 +32,7 @@ import org.eclipse.gmt.modisco.infra.facet.core.internal.Activator;
 import org.eclipse.gmt.modisco.infra.facet.core.internal.extensions.RefreshStrategiesRegistry;
 import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryException;
 import org.eclipse.gmt.modisco.infra.query.core.exception.ProjectDisabledException;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstancesAdapter;
 
 /**
  * An adapter that acts as a cache for lists of instances by EClass (extending

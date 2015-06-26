@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011 Mia-Software.
+ * Copyright (c) 2011, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *     Fabien Giquel (Mia-Software)
+ *     Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
 package org.eclipse.modisco.infra.common.core.tests;
 
@@ -19,8 +20,8 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstances;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstancesAdapterFactory;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstances;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstancesAdapterFactory;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.TemplateSignature;
 import org.eclipse.uml2.uml.UMLFactory;

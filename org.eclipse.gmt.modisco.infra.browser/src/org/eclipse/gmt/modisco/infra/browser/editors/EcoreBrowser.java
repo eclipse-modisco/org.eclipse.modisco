@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2008, 2011 Mia-Software.
+ * Copyright (c) 2008, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -10,7 +10,8 @@
  *    Nicolas Payneau (Mia-Software) - Enable editability
  *    Nicolas Guyomar (Mia-Software) - Code Synchronization
  *    Nicolas Guyomar (Mia_software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
- *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput 
+ *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput
+ *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in 
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.editors;
 
@@ -129,7 +130,6 @@ import org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.LinkItem;
 import org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.gmt.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.gmt.modisco.infra.browser.uicore.internal.util.ImageProvider;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstances;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.infra.common.ui.internal.controls.FormStyleSashForm;
@@ -166,6 +166,7 @@ import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstances;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.dnd.DND;

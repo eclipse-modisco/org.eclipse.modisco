@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009, 2011 Mia-Software.
+ * Copyright (c) 2009, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire DUPE (Mia-Software)
  *    Nicolas Bros (Mia-Software)
+ *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.facet.core;
 
@@ -29,7 +30,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstances;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.FacetAttribute;
@@ -45,6 +45,7 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.gmt.modisco.infra.query.core.AbstractModelQuery;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryException;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstances;
 
 /**
  * @author Gregoire DUPE

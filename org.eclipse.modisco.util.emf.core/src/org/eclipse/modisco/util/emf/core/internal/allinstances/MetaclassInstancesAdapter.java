@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010, 2011 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,8 +12,9 @@
  *     Nicolas Bros (Mia-Software) - Bug 327633 - [Model Browser] avoid blocking the UI
  *     Fabien Giquel (Mia-Software) - Bug 336903 - [Model Browser] : metaclasses cache issue with some model update events
  *     Nicolas Bros (Mia-Software) -  Bug 339930 - Anticipate UI freeze : MoDisco project & externalize Strings
+ *     Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
-package org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances;
+package org.eclipse.modisco.util.emf.core.internal.allinstances;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -35,8 +36,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
-import org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.emf.facet.util.core.Logger;
+import org.eclipse.modisco.util.emf.core.internal.Activator;
 
 /**
  * An adapter that acts as a cache for lists of instances by EClass. It works by
@@ -99,8 +100,8 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 		List<EClass> eClasses = getEClasses(element);
 		for (EClass eClass : eClasses) {
 			if (eClass == null) {
-				MoDiscoLogger.logWarning(
-						"Element has null eClass: " + element, CommonModiscoActivator.getDefault()); //$NON-NLS-1$
+				Logger.logWarning(
+						"Element has null eClass: " + element, Activator.getDefault()); //$NON-NLS-1$
 				continue;
 			}
 

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010, 2011 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,8 +8,9 @@
  * Contributors:
  *     Nicolas Bros (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software) - Bug 339930 - Anticipate UI freeze : MoDisco project & externalize Strings
+ *     Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
-package org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances;
+package org.eclipse.modisco.util.emf.core.internal.allinstances;
 
 import java.util.Collection;
 

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2008, 2011 Mia-Software.
+ * Copyright (c) 2008, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -8,6 +8,7 @@
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - Bug 341252 - [Model Browser] instances in composed models not displayed
+ *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.core;
@@ -26,13 +27,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gmt.modisco.infra.browser.editors.BrowserConfiguration;
 import org.eclipse.gmt.modisco.infra.browser.uicore.internal.util.EMFUtil;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.MetaclassInstances;
-import org.eclipse.gmt.modisco.infra.common.core.internal.adapters.instances.ModelChangeListener;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.gmt.modisco.infra.facet.Facet;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetContext;
 import org.eclipse.gmt.modisco.infra.facet.core.FacetContextListener;
 import org.eclipse.gmt.modisco.infra.facet.core.adapters.instances.MetaclassInstancesAdapterFactoryWithFacet;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstances;
+import org.eclipse.modisco.util.emf.core.internal.allinstances.ModelChangeListener;
 
 /**
  * A list of metaclasses from the model, each metaclass having an associated
