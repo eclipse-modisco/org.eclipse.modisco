@@ -10,6 +10,7 @@ http://www.eclipse.org/legal/epl-v10.html
 Contributors:
    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
    Thomas Cicognani (Soft-Maint) - Bug 442041 - A customization hiding empty references
+   Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
 -->
 <plugin>
    <extension point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
@@ -22,6 +23,9 @@ Contributors:
       </modeldeclaration>
       <modeldeclaration
             file="custom/hideEmptyReferences.custom">
+      </modeldeclaration>
+      <modeldeclaration
+            file="custom/instancesEClass.custom">
       </modeldeclaration>
    </extension>
 </plugin>
