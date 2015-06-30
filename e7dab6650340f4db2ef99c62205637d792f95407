@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_6e0b3dde",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 0,
+      "message": "You didn\u0027t declared your contribution.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 3
+      },
+      "revId": "e7dab6650340f4db2ef99c62205637d792f95407",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}

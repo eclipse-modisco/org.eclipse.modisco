@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_eee44d9e",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/exported/IEcoreExplorerWidget.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "Should be replaced by \"implements ICustomizationManagerProvider, IFacetManagerProvider\" in the implementation of this interface.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_ce16b109",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/view/EcoreExplorerView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "Should be replaced an adaptation to \"this.widget\".",
+      "range": {
+        "startLine": 42,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 55
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_cef5117b",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/view/EcoreExplorerView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "I assume that \u0027removePageLsitener\u0027 was expected.",
+      "range": {
+        "startLine": 139,
+        "startChar": 10,
+        "endLine": 139,
+        "endChar": 13
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_2eaf7569",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/widget/EcoreExplorerWidget.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "This listener looks to be useless.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 27
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_6e67bdc5",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/widget/EcoreExplorerWidgetComposite.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "We also need to listen to the \"instance part\" selection. To be able to enable an extensible menu on it. For example, to be able to call the action \u0027View in a table\u0027.",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 136,
+        "endChar": 2
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_8e430915",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/widget/EcoreInstancesExplorerComposite.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "This listener isn\u0027t removed when the composite is disposed.",
+      "range": {
+        "startLine": 87,
+        "startChar": 20,
+        "endLine": 87,
+        "endChar": 54
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_aec7e50d",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/widget/EcoreMetaExplorerComposite.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-06-30T14:29:20Z",
+      "side": 1,
+      "message": "This listener isn\u0027t removed when the widget is disposed.",
+      "range": {
+        "startLine": 77,
+        "startChar": 2,
+        "endLine": 81,
+        "endChar": 5
+      },
+      "revId": "d285435175a14ddeebd514676640f21481edb74e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
