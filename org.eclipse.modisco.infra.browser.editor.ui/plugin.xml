@@ -15,6 +15,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
     Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
+    Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -138,6 +139,15 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
+            locationURI="menu:org.eclipse.modisco.util.emffacet.menu.ui.loadFacet">
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclassfacet"
+               label="Show EClass subclasses"
+               style="toggle">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
             locationURI="menu:org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization">
          <command
                commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
@@ -152,6 +162,11 @@
          <command
                commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
                label="%HideDerivedReferences"
+               style="toggle">
+         </command>
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclasscustom"
+               label="Show EClass subclasses from an EClass"
                style="toggle">
          </command>
       </menuContribution>
@@ -200,6 +215,24 @@
             name="%HideDerivedReferences">
          <state
                class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideDerivedReferencesToggleState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassFacetHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclassfacet"
+            name="Show EClass subclasses">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassFacetToggleState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassCustomHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclasscustom"
+            name="Show EClass subclasses from an EClass">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassCustomToggleState"
                id="org.eclipse.ui.commands.toggleState">
          </state>
       </command>
