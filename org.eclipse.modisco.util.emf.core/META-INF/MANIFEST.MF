@@ -11,4 +11,5 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.util.emf.core.allinstances,
- org.eclipse.modisco.util.emf.core.internal.allinstances;x-internal:=true
+ org.eclipse.modisco.util.emf.core.internal.allinstances;x-internal:=true,
+ org.eclipse.modisco.util.emf.core.subclasses
