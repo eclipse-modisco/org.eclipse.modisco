@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?eclipse version="3.4"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<!--
 Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
 
 All rights reserved. This program and the accompanying materials
@@ -11,21 +13,16 @@ Contributors:
    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
    Thomas Cicognani (Soft-Maint) - Bug 442041 - A customization hiding empty references
    Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
+   Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
 -->
 <plugin>
    <extension point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
       <modeldeclaration file="custom/hideDerivedReferences.custom"/>
-      <modeldeclaration
-            file="custom/ePackageContainsEClass.custom">
-      </modeldeclaration>
-      <modeldeclaration
-            file="custom/linksCount.custom">
-      </modeldeclaration>
-      <modeldeclaration
-            file="custom/hideEmptyReferences.custom">
-      </modeldeclaration>
-      <modeldeclaration
-            file="custom/instancesEClass.custom">
-      </modeldeclaration>
+      <modeldeclaration file="custom/ePackageContainsEClass.custom"/>
+      <modeldeclaration file="custom/linksCount.custom"/>
+      <modeldeclaration file="custom/hideEmptyReferences.custom"/>
+      <modeldeclaration file="custom/instancesEClass.custom"/>
+      <modeldeclaration file="custom/hierarchicalEClass.custom"/>
+      <modeldeclaration  file="facet/hierarchicalEClass.efacet" />
    </extension>
 </plugin>
