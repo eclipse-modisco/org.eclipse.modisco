@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_dfbdb900",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.core/custom/instancesEClass.custom",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-01T07:21:09Z",
+      "side": 1,
+      "message": "Please, could you add a copyright header in this file ?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 38
+      },
+      "revId": "a620b9a0b8cfc9f539293f769f7286c5f54e052b",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
