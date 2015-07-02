@@ -33,6 +33,12 @@ import org.eclipse.gmt.modisco.java.actions.DefaultDiscoverer;
 import org.eclipse.gmt.modisco.java.generation.Activator;
 import org.eclipse.gmt.modisco.java.generation.files.GenerateJava;
 
+/**
+ * @deprecated This class implements a deprecated interface. It must re-written
+ *             using the new discoverer framework. cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=470896
+ */
+@Deprecated
 public class GenerateJavaModel extends AbstractDiscovererImpl {
 
 	private final DiscoveryParameter generationTargetFolder;

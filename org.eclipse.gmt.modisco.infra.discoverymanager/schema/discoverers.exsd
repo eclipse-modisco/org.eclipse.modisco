@@ -3,10 +3,10 @@
 <schema targetNamespace="org.eclipse.gmt.modisco.discoverers" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.discoverers" id="discoverer" name="Add a discoverer"/>
+         <meta.schema plugin="org.eclipse.gmt.modisco.discoverers" id="discoverer" name="Add a discoverer (Deprecated)"/>
       </appinfo>
       <documentation>
-         To add discoverer in MoDisco framework.
+         To add discoverer in MoDisco framework. (Deprecated)
       </documentation>
    </annotation>
 
