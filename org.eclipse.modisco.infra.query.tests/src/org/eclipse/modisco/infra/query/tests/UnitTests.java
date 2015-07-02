@@ -60,9 +60,11 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
 import org.eclipse.modisco.infra.query.tests.samples.Bug303036Test003Query;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 @SuppressWarnings("nls")
+@Ignore // cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468269
 public class UnitTests {
 
 	private static final String FILE_EXT = ".querySet"; //$NON-NLS-1$

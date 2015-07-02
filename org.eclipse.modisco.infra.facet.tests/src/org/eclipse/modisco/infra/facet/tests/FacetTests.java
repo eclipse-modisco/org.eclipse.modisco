@@ -68,6 +68,7 @@ import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.modisco.infra.query.tests.Utils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -76,6 +77,7 @@ import org.osgi.framework.Bundle;
  *
  */
 @SuppressWarnings({ "nls" })
+@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468339
 public class FacetTests {
 	private static final int NB_MARKER_GETSUBCLASSES = 6;
 	public static final String FILE_EXT = ".facetSet";
