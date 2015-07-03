@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_787db622",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/plugin.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T14:53:29Z",
+      "side": 1,
+      "message": "Please, remove the \"dead code\".",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 33
+      },
+      "revId": "ecb9664b3a8a0b361fb6c92a77a5a5ae36ebb01f",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_d84f8a0f",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/plugin.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T14:53:29Z",
+      "side": 1,
+      "message": "Please, remove the \"dead code\".",
+      "range": {
+        "startLine": 44,
+        "startChar": 1,
+        "endLine": 49,
+        "endChar": 34
+      },
+      "revId": "ecb9664b3a8a0b361fb6c92a77a5a5ae36ebb01f",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_b840beee",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/sync/generated/SynchronizedEcoreExplorerWidget.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T14:53:29Z",
+      "side": 1,
+      "message": "We are used to put the suppress warning comment after the suppress warning. May be a wrong choice, but we expect to implement (in a not so far future) a quality analyzer able to detect this pattern.",
+      "range": {
+        "startLine": 24,
+        "startChar": 1,
+        "endLine": 26,
+        "endChar": 4
+      },
+      "revId": "ecb9664b3a8a0b361fb6c92a77a5a5ae36ebb01f",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_783e5691",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/view/EcoreExplorerView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T14:53:29Z",
+      "side": 1,
+      "message": "I assume you didn\u0027t expect to commit that :-D",
+      "range": {
+        "startLine": 117,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 3
+      },
+      "revId": "ecb9664b3a8a0b361fb6c92a77a5a5ae36ebb01f",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_f81fe619",
+        "filename": "org.eclipse.modisco.infra.browser.ecore.ui/src/org/eclipse/modisco/infra/browser/ecore/ui/internal/widget/EcoreExplorerWidget.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T14:53:29Z",
+      "side": 1,
+      "message": "It would be better to use the following syntax :\n@SuppressWarnings(\"PMD.AvoidInstantiatingObjectsInLoops\")\n/*\n * @SuppressWarnings(\"PMD.AvoidInstantiatingObjectsInLoops\"): tci\u003e\n * We have to create a new adapter for each package\n */\nfinal EcoreExplorerAdapter adapter \u003d new EcoreExplorerAdapter(this);",
+      "range": {
+        "startLine": 92,
+        "startChar": 4,
+        "endLine": 94,
+        "endChar": 6
+      },
+      "revId": "ecb9664b3a8a0b361fb6c92a77a5a5ae36ebb01f",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
