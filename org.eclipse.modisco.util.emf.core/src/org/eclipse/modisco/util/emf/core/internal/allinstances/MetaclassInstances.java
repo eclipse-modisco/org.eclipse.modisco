@@ -30,8 +30,11 @@ public interface MetaclassInstances {
 	 */
 	Collection<EObject> getInstances(EClass eClass, boolean includingSubclasses);
 
-	/** Clears the cache and recomputes its contents */
+	/** Clears the cache */
 	void clearCache();
+
+	/** Clears the cache and recomputes its contents */
+	void clearAndUpdateCache();
 
 	/** Add a listener to be notified when the model changes */
 	void addListener(ModelChangeListener listener);

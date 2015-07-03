@@ -36,7 +36,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.facet.util.core.Logger;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.modisco.util.emf.core.internal.Activator;
 
 /**
@@ -56,6 +59,9 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 	private Map<EClass, Set<EObject>> instancesByEClass;
 	/** All the model elements of the metaclass or one of its sub-types */
 	private Map<EClass, Set<EObject>> instancesByType;
+	
+	/** Indicates if cache has been cleared and must be computed at next access */
+	private boolean cacheInvalidated;
 
 	/** model change listeners */
 	private final List<ModelChangeListener> listeners = new ArrayList<ModelChangeListener>();
@@ -68,20 +74,62 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 		// this is to allow sub-classes to do initialization in their
 		// constructor before calling clearCache()
 		if (clearCache) {
-			clearCache();
+			clearAndUpdateCache();
 		}
 	}
-
-	public synchronized void clearCache() {
-		this.instancesByEClass = new HashMap<EClass, Set<EObject>>();
-		this.instancesByType = new HashMap<EClass, Set<EObject>>();
-
-		TreeIterator<EObject> allContents = this.resource.getAllContents();
+	
+	public void clearAndUpdateCache() {
+		synchronized (this) {
+			this.instancesByEClass = new HashMap<EClass, Set<EObject>>();
+			this.instancesByType = new HashMap<EClass, Set<EObject>>();
+	
+			final TransactionalEditingDomain transactDomain = getTransactionalEditingDomain(this.resource);
+	
+			if (transactDomain == null) {
+				// Standard case
+				computeCache();
+			} else {
+				try {
+					// prevent from concurrent model access in external tool
+					transactDomain.runExclusive(new Runnable() {
+						public void run() {
+							computeCache();
+						}
+					});
+				} catch (InterruptedException e) {
+					// task was interrupted, trying without exclusive access
+					computeCache();
+				}
+			}
+			
+			this.cacheInvalidated = false;
+		}
+	}
+	
+	public void clearCache() {
+		synchronized (this) {
+			this.instancesByEClass = new HashMap<EClass, Set<EObject>>();
+			this.instancesByType = new HashMap<EClass, Set<EObject>>();
+			
+			this.cacheInvalidated = true;
+		}
+	}
+	
+	private void validateCache() {
+		if (this.cacheInvalidated) {
+			clearAndUpdateCache();
+		}
+		this.cacheInvalidated = false;
+	}
+	
+	protected void computeCache() {
+		final TreeIterator<EObject> allContents = this.resource.getAllContents();
 		while (allContents.hasNext()) {
-			EObject eObject = allContents.next();
+			final EObject eObject = allContents.next();
 			addModelElement(eObject, false);
 		}
 	}
+
 
 	/**
 	 * Add a new element to the set of elements corresponding to its metaclass.
@@ -431,6 +479,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 
 	public synchronized Collection<EObject> getInstances(final EClass eClass,
 			final boolean includingSubclasses) {
+		validateCache();
 		final Set<EObject> set;
 		if (includingSubclasses) {
 			set = this.instancesByType.get(eClass);
@@ -473,5 +522,19 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 		for (ModelChangeListener listener : this.listeners) {
 			listener.modelChanged(msg);
 		}
+	}
+	
+	private static TransactionalEditingDomain getTransactionalEditingDomain(
+			final Resource aResource) {
+		TransactionalEditingDomain transactDomain = null;
+		if (aResource != null
+				&& aResource.getResourceSet() instanceof IEditingDomainProvider) {
+			EditingDomain editDomain = ((IEditingDomainProvider) aResource
+					.getResourceSet()).getEditingDomain();
+			if (editDomain instanceof TransactionalEditingDomain) {
+				transactDomain = (TransactionalEditingDomain) editDomain;
+			}
+		}
+		return transactDomain;
 	}
 }
