@@ -24,8 +24,5 @@ Contributors:
       <modeldeclaration
             file="custom/hideEmptyReferences.custom">
       </modeldeclaration>
-      <modeldeclaration
-            file="custom/instancesEClass.custom">
-      </modeldeclaration>
    </extension>
 </plugin>
