@@ -10,6 +10,7 @@ http://www.eclipse.org/legal/epl-v10.html
 Contributors:
    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+   Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
 -->
 <plugin>
    <extension point="org.eclipse.ui.views">
@@ -49,5 +50,11 @@ Contributors:
                   </visibleWhen-->
             </command>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
+      <modeldeclaration
+            file="custom/instancesEClass.custom">
+      </modeldeclaration>
    </extension>
 </plugin>

@@ -8,20 +8,18 @@
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
  */
-package org.eclipse.modisco.infra.browser.ecore.core.internal.instanceseclass;
+package org.eclipse.modisco.infra.browser.ecore.ui.internal.custom;
 
-import java.util.List;
+import java.util.Set;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
 import org.eclipse.emf.facet.efacet.core.exception.DerivedTypedElementException;
 import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElement;
 import org.eclipse.emf.facet.query.java.core.IJavaQuery3;
 import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
-import org.eclipse.modisco.util.emf.core.allinstances.AllInstancesUtils;
+import org.eclipse.modisco.infra.browser.ecore.ui.internal.widget.InternalUtils;
 
 /**
  * Add the number of instances of an EClass at the end of the name
@@ -36,16 +34,10 @@ public class InstancesEClassQuery implements IJavaQuery3<EObject, String> {
 			String instancesNbStr = ""; //$NON-NLS-1$
 			if (source instanceof EClass) {
 				final EClass eClass = (EClass) source;
-
-				int instancesNb = 0;
-				final ResourceSet resourceSet = facetManager.getResourceSet();
-				for (Resource resource : resourceSet.getResources()) {
-					final List<EObject> allInstances = AllInstancesUtils
-							.allInstances(eClass, resource, true);
-					instancesNb += allInstances.size();
-				}
+				final Set<EObject> allInstances = InternalUtils
+						.getAllInstancesFor(eClass);
 				instancesNbStr = String.format(" (%d)", //$NON-NLS-1$
-						Integer.valueOf(instancesNb));
+						Integer.valueOf(allInstances.size()));
 			}
 			return facetManager.getSuperValueOf(feature, source,
 					parameterValues, String.class) + instancesNbStr;
