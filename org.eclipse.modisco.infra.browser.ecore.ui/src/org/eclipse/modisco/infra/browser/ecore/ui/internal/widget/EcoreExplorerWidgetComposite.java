@@ -10,6 +10,7 @@
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.widget;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -18,7 +19,6 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
@@ -30,7 +30,6 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.modisco.infra.browser.ecore.ui.internal.view.Utils;
-import org.eclipse.modisco.util.emf.core.allinstances.AllInstancesUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.graphics.Point;
@@ -42,13 +41,16 @@ import org.eclipse.swt.widgets.Listener;
 public class EcoreExplorerWidgetComposite extends Composite implements
 		ISelectionProvider, ICustomizationManagerProvider,
 		IFacetManagerProvider {
+	
+	interface IEClassSelectionListener {
+		void onEClassSelected(Set<EClass> eClasses);
+	}
 
 	private ISelection lastSelection = null;
-	
 	private final SashForm sashForm;
 	private final EcoreMetaExplorerComposite metaComposite;
 	private final EcoreInstancesExplorerComposite instComposite;
-	private final Set<Resource> currentResources = new HashSet<Resource>();
+	private final List<IEClassSelectionListener> listeners = new ArrayList<IEClassSelectionListener>();
 
 	public EcoreExplorerWidgetComposite(final Composite parent,
 			final MenuManager menuManager) {
@@ -101,22 +103,18 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 	}
 
 	protected final void updateAllInstances(final ISelection metaSelection) {
-		final Set<EObject> allInstances = new HashSet<EObject>();
+		final Set<EClass> allEClasses = new HashSet<EClass>();
 		if (metaSelection instanceof IStructuredSelection) {
 			final IStructuredSelection structSelection = (IStructuredSelection) metaSelection;
 			for (Object selectedObj : structSelection.toArray()) {
 				final EObject eObject = Utils.getResolvedEObject(selectedObj);
 				if (eObject instanceof EClass) {
 					final EClass eClass = (EClass) eObject;
-					for (Resource resource : this.currentResources) {
-						final List<EObject> instances = AllInstancesUtils
-								.allInstances(eClass, resource, false);
-						allInstances.addAll(instances);
-					}
+					allEClasses.add(eClass);
 				}
 			}
 		}
-		this.instComposite.changeInput(allInstances);
+		notifyEClassSelected(allEClasses);
 	}
 
 	protected void updateSashOrientation() {
@@ -128,14 +126,7 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 		}
 	}
 
-	public void changeInput(final Collection<EObject> eObjects) {
-		final Set<EPackage> ePackages = new HashSet<EPackage>();
-		for (EObject eObject : eObjects) {
-			final Resource eResource = eObject.eResource();
-			this.currentResources.add(eResource);
-			final EPackage ePackage = Utils.getEPackage(eObject);
-			ePackages.add(ePackage);
-		}
+	public void changeInput(final Collection<EPackage> ePackages) {
 		this.instComposite.clearInput();
 		this.metaComposite.changeInput(ePackages);
 	}
@@ -169,4 +160,19 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 		this.instComposite.setSelection(selection);
 	}
 
+	public void addEClassSelectionListener(final IEClassSelectionListener listener) {
+		this.listeners.add(listener);
+	}
+	
+	private void notifyEClassSelected(final Set<EClass> eClasses) {
+		for (IEClassSelectionListener listener : this.listeners) {
+			listener.onEClassSelected(eClasses);
+		}
+	}
+	
+	public void displayInstances(final Set<EObject> eObjects) {
+		this.instComposite.changeInput(eObjects);
+		
+	}
+	
 }

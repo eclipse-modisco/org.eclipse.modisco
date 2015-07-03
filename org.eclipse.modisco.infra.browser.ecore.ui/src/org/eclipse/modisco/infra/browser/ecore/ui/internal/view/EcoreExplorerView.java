@@ -114,6 +114,9 @@ public class EcoreExplorerView extends ViewPart implements
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
 		/* @SuppressWarnings("rawtypes"): gdupe> Imposed by the super class */
 		Object result;
+		if ("interface org.eclipse.emf.facet.widgets.table.ui.internal.exported.ITableWidgetProvider".equals(adapter.toString())) {
+			System.out.println();
+		}
 		if (adapter.isInstance(this)) {
 			result = this;
 		} else {

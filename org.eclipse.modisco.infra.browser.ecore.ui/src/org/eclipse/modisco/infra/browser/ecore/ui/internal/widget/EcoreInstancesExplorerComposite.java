@@ -105,7 +105,7 @@ public class EcoreInstancesExplorerComposite extends Composite implements
 	}
 
 	public void clearInput() {
-		if (this.currentfacetMgr != null) {
+		if (this.currentfacetMgr != null && !this.tree.getTree().isDisposed()) {
 			this.currentfacetMgr.removeListener(this.facetMgrListener);
 			this.tree.setInput(null);
 		}

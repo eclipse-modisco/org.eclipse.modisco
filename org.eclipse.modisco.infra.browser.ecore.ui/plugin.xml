@@ -29,24 +29,24 @@ Contributors:
                id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
                label="Load/Unload customizations"
                style="push">
-                 <visibleWhen checkEnabled="false">
+                 <!--visibleWhen checkEnabled="false">
                     <with variable="activePart">
                       <adapt type="org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider">
                       </adapt>
                     </with>
-                 </visibleWhen>
+                 </visibleWhen-->
             </command>
             <command
                commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
                id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
                label="Load/Unload facets"
                style="push">
-                  <visibleWhen checkEnabled="false">
+                  <!--visibleWhen checkEnabled="false">
                      <with variable="activePart">
                         <adapt type="org.eclipse.emf.facet.efacet.core.IFacetManagerProvider">
                         </adapt>
                      </with>
-                  </visibleWhen>
+                  </visibleWhen-->
             </command>
       </menuContribution>
    </extension>

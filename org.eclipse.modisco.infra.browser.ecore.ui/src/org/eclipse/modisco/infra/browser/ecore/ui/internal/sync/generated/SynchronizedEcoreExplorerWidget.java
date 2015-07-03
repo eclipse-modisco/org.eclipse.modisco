@@ -21,8 +21,10 @@ public class SynchronizedEcoreExplorerWidget extends SynchronizedObject<org.ecli
 	public SynchronizedEcoreExplorerWidget(final org.eclipse.modisco.infra.browser.ecore.ui.internal.exported.IEcoreExplorerWidget object, final Display display) {
 		super(object, display);
 	}
+	/*
+	 * @SuppressWarnings("rawtypes") Because of the implementation
+	 */
 	public final java.lang.Object getAdapter(@SuppressWarnings("rawtypes") final java.lang.Class parm0) {
-		// @SuppressWarnings("rawtypes") Raw Type because of implementation
 		return safeSyncExec(new AbstractExceptionFreeRunnable<java.lang.Object>() {
 			@Override
 			public java.lang.Object safeRun() {
@@ -36,6 +38,15 @@ public class SynchronizedEcoreExplorerWidget extends SynchronizedObject<org.ecli
 			@Override
 			public void voidSafeRun() {
 				SynchronizedEcoreExplorerWidget.this.getSynchronizedObject().changeInput(parm0);
+			}
+		});
+	}
+	
+	public final java.util.Set<org.eclipse.emf.ecore.EObject> getInstancesOf(final org.eclipse.emf.ecore.EClass parm0) {
+		return safeSyncExec(new AbstractExceptionFreeRunnable<java.util.Set<org.eclipse.emf.ecore.EObject>>() {
+			@Override
+			public java.util.Set<org.eclipse.emf.ecore.EObject> safeRun() {
+				return SynchronizedEcoreExplorerWidget.this.getSynchronizedObject().getInstancesOf(parm0);
 			}
 		});
 	}

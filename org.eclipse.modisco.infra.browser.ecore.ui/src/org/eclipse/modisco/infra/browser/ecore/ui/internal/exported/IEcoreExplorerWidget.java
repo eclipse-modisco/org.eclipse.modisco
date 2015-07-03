@@ -11,12 +11,16 @@
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.exported;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 public interface IEcoreExplorerWidget extends IAdaptable {
 
 	void changeInput(Collection<EObject> eObjects);
+	
+	Set<EObject> getInstancesOf(EClass eClass);
 
 }
