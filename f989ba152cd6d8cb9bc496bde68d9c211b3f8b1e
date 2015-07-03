@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_f8b36600",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T13:23:46Z",
+      "side": 1,
+      "message": "Must be externalized.",
+      "range": {
+        "startLine": 145,
+        "startChar": 22,
+        "endLine": 145,
+        "endChar": 44
+      },
+      "revId": "f989ba152cd6d8cb9bc496bde68d9c211b3f8b1e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_589efa6f",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T13:23:46Z",
+      "side": 1,
+      "message": "Must be externalized.",
+      "range": {
+        "startLine": 169,
+        "startChar": 22,
+        "endLine": 169,
+        "endChar": 59
+      },
+      "revId": "f989ba152cd6d8cb9bc496bde68d9c211b3f8b1e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_38996e85",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-03T13:23:46Z",
+      "side": 1,
+      "message": "Must be externalized.",
+      "range": {
+        "startLine": 224,
+        "startChar": 18,
+        "endLine": 224,
+        "endChar": 40
+      },
+      "revId": "f989ba152cd6d8cb9bc496bde68d9c211b3f8b1e",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
