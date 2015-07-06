@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_1aff4528",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/OSGI-INF/l10n/bundle.properties",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-06T09:45:53Z",
+      "side": 1,
+      "message": "Your contribution declaration is missing.",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "aaf0eb54e0e6d03292899102401da9e62bcb6f99",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
