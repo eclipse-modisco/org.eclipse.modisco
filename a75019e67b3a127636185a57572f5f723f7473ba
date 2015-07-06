@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f6139c_5a270d66",
+        "filename": "org.eclipse.modisco.util.emf.core/src/org/eclipse/modisco/util/emf/core/internal/allinstances/MetaclassInstances.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-06T10:13:28Z",
+      "side": 1,
+      "message": "The contribution declaration is missing.",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 15
+      },
+      "revId": "a75019e67b3a127636185a57572f5f723f7473ba",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_9a4fb510",
+        "filename": "org.eclipse.modisco.util.emf.core/src/org/eclipse/modisco/util/emf/core/internal/allinstances/MetaclassInstances.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-06T10:13:28Z",
+      "side": 1,
+      "message": "Would it be possible to replace the method \u0027clearAndUpdate\u0027 by a listening of the resource set to smartly update the cache ?",
+      "range": {
+        "startLine": 37,
+        "startChar": 6,
+        "endLine": 37,
+        "endChar": 25
+      },
+      "revId": "a75019e67b3a127636185a57572f5f723f7473ba",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_3a220155",
+        "filename": "org.eclipse.modisco.util.emf.core/src/org/eclipse/modisco/util/emf/core/internal/allinstances/MetaclassInstancesAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-06T10:13:28Z",
+      "side": 1,
+      "message": "The contribution declaration is missing.",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 15
+      },
+      "revId": "a75019e67b3a127636185a57572f5f723f7473ba",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87f6139c_1a7c6529",
+        "filename": "org.eclipse.modisco.util.emf.core/src/org/eclipse/modisco/util/emf/core/internal/allinstances/MetaclassInstancesAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-07-06T10:13:28Z",
+      "side": 1,
+      "message": "I think that this error must be logged (warning status). This would help to understand possible bugs caused by the unsafe call.",
+      "range": {
+        "startLine": 99,
+        "startChar": 38,
+        "endLine": 102,
+        "endChar": 4
+      },
+      "revId": "a75019e67b3a127636185a57572f5f723f7473ba",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
