@@ -16,6 +16,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
     Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
+    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -169,6 +170,11 @@
                label="%showEClassSubclassesFromEClass"
                style="toggle">
          </command>
+         <command
+               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.nbinstanceseclassbyresource"
+               label="%nbInstancesEClassByResource"
+               style="toggle">
+         </command>
       </menuContribution>
       <menuContribution
             allPopups="true"
@@ -233,6 +239,15 @@
             name="%showEClassSubclassesFromEClass">
          <state
                class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassCustomToggleState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.NbInstancesEClassByResourceHandler"
+            id="org.eclipse.modisco.infra.browser.editor.ui.command.nbinstanceseclassbyresource"
+            name="%nbInstancesEClassByResource">
+         <state
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.NbInstancesEClassByResourceToggleState"
                id="org.eclipse.ui.commands.toggleState">
          </state>
       </command>
