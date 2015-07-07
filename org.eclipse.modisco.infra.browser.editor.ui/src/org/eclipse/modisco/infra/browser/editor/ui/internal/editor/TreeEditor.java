@@ -10,6 +10,7 @@
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
+ *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -33,13 +34,13 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
-import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
+import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
 import org.eclipse.emf.facet.custom.ui.IResolvingCustomizedLabelProviderFactory;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
 import org.eclipse.emf.facet.efacet.core.IFacetManagerFactory;
 import org.eclipse.emf.facet.efacet.core.IFacetManagerListener;
-import org.eclipse.emf.facet.efacet.core.IFacetManagerProvider;
+import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
@@ -58,7 +59,7 @@ import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
-		IFacetManagerProvider, ICustomizationManagerProvider, ITreeEditor {
+		IFacetManagerProvider2, ICustomizationManagerProvider2, ITreeEditor {
 
 	private static final String EDITOR_ID = Activator.getDefault().getBundle()
 			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
@@ -69,6 +70,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	private ICustomizationManager customManager;
 	private TreeViewer tree;
 	private IFacetManagerListener facetMgrListener;
+	private List<IFacetSetShortcut> facetSetShortcuts;
+	private List<ICustomShortcut> customShortcuts;
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
@@ -119,6 +122,9 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		final CommandStack commandStack = new BasicCommandStack();
 		this.editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
 				commandStack, this.resourceSet);
+		
+		this.facetSetShortcuts = TreeEditorShortcutUtils.getFacetSetShortcuts(this.resourceSet);
+		this.customShortcuts = TreeEditorShortcutUtils.getCustomShortcuts(this.resourceSet);
 	}
 	
 	
@@ -214,8 +220,16 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		return this.customManager;
 	}
 
+	public List<ICustomShortcut> getCustomShortcuts() {
+		return this.customShortcuts;
+	}
+	
 	public IFacetManager getFacetManager() {
 		return this.facetManager;
+	}
+	
+	public List<IFacetSetShortcut> getFacetSetShortcuts() {
+		return this.facetSetShortcuts;
 	}
 	
 	@Override
@@ -227,4 +241,5 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	public ILabelProvider getViewerLabelProvider() {
 		return (ILabelProvider) this.tree.getLabelProvider();
 	}
+
 }
