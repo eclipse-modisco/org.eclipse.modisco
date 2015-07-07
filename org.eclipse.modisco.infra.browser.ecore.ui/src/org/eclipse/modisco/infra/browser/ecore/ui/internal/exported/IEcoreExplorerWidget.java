@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2015 Soft-Maint
+ * Copyright (c) 2015 Soft-Maint, and Mia-Software
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.exported;
 
@@ -17,6 +18,10 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
+/**
+ * @noextend
+ * @noimplement
+ */
 public interface IEcoreExplorerWidget extends IAdaptable {
 
 	void changeInput(Collection<EObject> eObjects);
