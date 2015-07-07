@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2015 Soft-Maint
+ * Copyright (c) 2015 Soft-Maint, and Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,11 +7,13 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
+ *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.widget;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,10 +21,11 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
-import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
+import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
-import org.eclipse.emf.facet.efacet.core.IFacetManagerProvider;
+import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -39,8 +42,8 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 public class EcoreExplorerWidgetComposite extends Composite implements
-		ISelectionProvider, ICustomizationManagerProvider,
-		IFacetManagerProvider {
+		ISelectionProvider, ICustomizationManagerProvider2,
+		IFacetManagerProvider2 {
 	
 	interface IEClassSelectionListener {
 		void onEClassSelected(Set<EClass> eClasses);
@@ -51,6 +54,8 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 	private final EcoreMetaExplorerComposite metaComposite;
 	private final EcoreInstancesExplorerComposite instComposite;
 	private final List<IEClassSelectionListener> listeners = new ArrayList<IEClassSelectionListener>();
+	private final List<ICustomShortcut> customShortcuts;
+	private final List<IFacetSetShortcut> facetSetShortcuts;
 
 	public EcoreExplorerWidgetComposite(final Composite parent,
 			final MenuManager menuManager) {
@@ -88,6 +93,14 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 				updateSashOrientation();
 			}
 		});
+		
+		final ResourceSet customRS = getCustomizationManager().getResourceSet();
+		this.customShortcuts = EcoreExplorerShortcutUtils
+				.getCustomShortcuts(customRS);
+
+		final ResourceSet facetSetRS = getFacetManager().getResourceSet();
+		this.facetSetShortcuts = EcoreExplorerShortcutUtils
+				.getFacetSetShortcuts(facetSetRS);
 	}
 	
 	protected ISelection getMetaSelection() {
@@ -138,6 +151,14 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 	public IFacetManager getFacetManager() {
 		return this.metaComposite.getFacetManager();
 	}
+	
+	public List<IFacetSetShortcut> getFacetSetShortcuts() {
+		return Collections.unmodifiableList(this.facetSetShortcuts);
+	}
+
+	public List<ICustomShortcut> getCustomShortcuts() {
+		return Collections.unmodifiableList(this.customShortcuts);
+	}
 
 	public void addSelectionChangedListener(
 			final ISelectionChangedListener listener) {
@@ -174,5 +195,5 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 		this.instComposite.changeInput(eObjects);
 		
 	}
-	
+
 }

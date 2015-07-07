@@ -12,13 +12,11 @@ Contributors:
    Thomas Cicognani (Soft-Maint) - Bug 442041 - A customization hiding empty references
    Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
    Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
+   Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
 -->
 <plugin>
    <extension point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
-      <modeldeclaration file="custom/hideDerivedReferences.custom"/>
       <modeldeclaration file="custom/ePackageContainsEClass.custom"/>
-      <modeldeclaration file="custom/linksCount.custom"/>
-      <modeldeclaration file="custom/hideEmptyReferences.custom"/>
       <modeldeclaration file="custom/hierarchicalEClass.custom"/>
       <modeldeclaration  file="facet/hierarchicalEClass.efacet" />
    </extension>

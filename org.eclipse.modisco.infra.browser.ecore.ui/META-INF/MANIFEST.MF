@@ -10,7 +10,10 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.6.0",
  org.eclipse.emf.edit.ui;bundle-version="2.6.0",
  org.eclipse.emf.facet.query.java.core;bundle-version="1.0.0",
  org.eclipse.emf.facet.util.ui;bundle-version="1.0.0",
- org.eclipse.modisco.util.emf.core;bundle-version="1.0.0"
+ org.eclipse.modisco.util.emf.core;bundle-version="1.0.0",
+ org.eclipse.emf.facet.efacet.ui;bundle-version="1.1.0",
+ org.eclipse.core.expressions;bundle-version="3.4.200",
+ org.eclipse.emf.facet.util.swt;bundle-version="1.0.1"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Version: 1.0.0.qualifier

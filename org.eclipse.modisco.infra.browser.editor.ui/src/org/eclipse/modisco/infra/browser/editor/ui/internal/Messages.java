@@ -8,6 +8,7 @@
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
+ *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal;
 
@@ -17,6 +18,9 @@ public class Messages extends NLS {
 	private static final String BUNDLE_NAME = Messages.class.getPackage().getName() + ".messages"; //$NON-NLS-1$
 	
 	public static String ResourceBrowserOpener_MoDiscoDefaultTreeBrowser;
+	public static String TreeEditorShortcutUtils_CustomHideDerivedReferences;
+	public static String TreeEditorShortcutUtils_CustomHideEmptyReferences;
+	public static String TreeEditorShortcutUtils_CustomShowLinksCount;
 	
 	static {
 		// initialize resource bundle
