@@ -53,7 +53,8 @@ import org.eclipse.modisco.manifest.discoverer.ManifestModelDiscoverer;
 import org.eclipse.modisco.properties.discoverer.PropertiesModelDiscoverer;
 
 /**
- * @deprecated use {@link DiscoverEclipsePluginFromJavaProject2}
+ * @deprecated use {@link DiscoverEclipsePluginFromJavaProject2}, cf
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=472760
  */
 @Deprecated
 public class DiscoverEclipsePluginFromJavaProject implements Discoverer {
