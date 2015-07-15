@@ -48,7 +48,6 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.infra.discovery.core.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.infra.discovery.ui.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.xml.discoverer.tests.AllTestsInUIThread.class,
-		org.eclipse.gmt.modisco.xml.discoverer.tests.AllTestsInUIThread.class,
 //		org.eclipse.modisco.utils.chart.birt.core.tests.AllTestsInUIThread.class,
 		BundleTest.class
 	})

@@ -34,7 +34,6 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.ui.internal.actions;x-inter
  org.eclipse.gmt.modisco.infra.common.ui.internal.editorInputs;
   x-friends:="org.eclipse.gmt.modisco.infra.browser,
    org.eclipse.gmt.modisco.infra.common.ui,
-   org.eclipse.gmt.modisco.xml.discoverer,
    org.eclipse.modisco.jee,
    org.eclipse.modisco.infra.discovery.ui",
  org.eclipse.gmt.modisco.infra.common.ui.internal.preferences;x-internal:=true,
