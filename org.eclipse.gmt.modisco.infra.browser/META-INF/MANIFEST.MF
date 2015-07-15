@@ -37,7 +37,11 @@ Require-Bundle: org.eclipse.ui.ide;visibility:=reexport,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.0",
  org.eclipse.emf.facet.util.emf.ui;bundle-version="0.1.0",
  org.eclipse.emf.facet.util.emf.core;bundle-version="0.1.0",
+<<<<<<< HEAD   (275a65 Bug 471096 - MetaclassInstance features have to be moved to )
  org.eclipse.modisco.util.emf.core;bundle-version="1.0.0"
+=======
+ org.eclipse.emf.facet.util.core;bundle-version="1.0.0"
+>>>>>>> BRANCH (c7ee2f Merge "Bug 472203 - NullPointerException in ResourceEditorIn)
 Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

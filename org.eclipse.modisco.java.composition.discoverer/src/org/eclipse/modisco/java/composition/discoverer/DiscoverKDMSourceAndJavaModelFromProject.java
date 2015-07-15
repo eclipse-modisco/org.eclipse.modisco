@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011 Mia-Software.
+ * Copyright (c) 2011, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,10 +7,13 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
+ *    Grégoire Dupé (Mia-Software) - Bug 472194 - DiscoveryException in AbstractDiscoverer.discoverElement (70)
  *******************************************************************************/
 package org.eclipse.modisco.java.composition.discoverer;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.discovery.core.annotations.ParameterInitialValue;
 import org.eclipse.modisco.java.discoverer.AbstractDiscoverJavaModelFromProject;
@@ -30,7 +33,17 @@ public class DiscoverKDMSourceAndJavaModelFromProject extends
 		AbstractDiscoverKDMSourceAndJavaModel<IProject> {
 
 	public boolean isApplicableTo(final IProject source) {
-		return source.isAccessible();
+		boolean isJavaProject = false;
+		try {
+			isJavaProject = source.hasNature(JavaCore.NATURE_ID);
+		} catch (CoreException e) {
+			final String messages = String.format(
+					"Something wrong happend when testing the nature of %s. We assum that this project is not a JDT (Java) project.", //$NON-NLS-1$
+					source.getName()
+				);
+			Logger.logError(e, messages, Activator.getDefault());
+		}
+		return source.isAccessible() && isJavaProject;
 	}
 
 	@Override

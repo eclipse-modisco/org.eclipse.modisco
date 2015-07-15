@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 472203 - NullPointerException in ResourceEditorInput.getName (41)
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.actions;
 
@@ -66,7 +67,7 @@ public class OpenAction extends Action {
 				Object firstElement = sSelection.getFirstElement();
 				EObject eObject = (EObject) Platform.getAdapterManager().getAdapter(firstElement,
 						EObject.class);
-				if (eObject != null) {
+				if (eObject != null && eObject.eResource() != null) {
 					this.target = eObject;
 					return true;
 				}

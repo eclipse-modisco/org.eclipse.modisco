@@ -11,7 +11,11 @@
  *    Nicolas Guyomar (Mia-Software) - Code Synchronization
  *    Nicolas Guyomar (Mia_software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
  *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput
+<<<<<<< HEAD   (275a65 Bug 471096 - MetaclassInstance features have to be moved to )
  *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in 
+=======
+ *    Gregoire Dupe (Mia-Software) - Bug 472182 - Missing debug information in EcoreBrowser.handleChangedResources(2636)
+>>>>>>> BRANCH (c7ee2f Merge "Bug 472203 - NullPointerException in ResourceEditorIn)
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.editors;
 
@@ -97,6 +101,7 @@ import org.eclipse.emf.edit.ui.provider.PropertySource;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
+import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.gmt.modisco.infra.browser.Messages;
 import org.eclipse.gmt.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.gmt.modisco.infra.browser.actions.LoadFacetsAction;
@@ -2636,9 +2641,19 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 					try {
 						resource.load(Collections.EMPTY_MAP);
 					} catch (IOException e) {
-						MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+						final URI uri = resource.getURI();
+						final String uristr = uri.toString();
+						final String logMsg = String.format(
+								"The MoDisco browser failed to reload the resource %s.", //$NON-NLS-1$
+								uristr);
+						Logger.logError(
+								e, logMsg , MoDiscoBrowserPlugin.getPlugin());
+						final String userMsg = String.format(
+								"%s, cf. %s", //$NON-NLS-1$
+								Messages.EcoreBrowser_errorLoadingResource,
+								uristr);
 						DialogUtils.openErrorDialog(getSite().getShell(), e,
-								Messages.EcoreBrowser_errorLoadingResource);
+								userMsg);
 						if (!this.resourceToDiagnosticMap.containsKey(resource)) {
 							this.resourceToDiagnosticMap.put(resource,
 									analyzeResourceProblems(resource, e));
