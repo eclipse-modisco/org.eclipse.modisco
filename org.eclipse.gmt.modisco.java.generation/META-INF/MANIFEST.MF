@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface.text,
  org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.9.0",
  org.eclipse.core.resources,
- org.eclipse.gmt.modisco.java.discoverer;bundle-version="0.8.0"
+ org.eclipse.modisco.java.discoverer
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.java.generation.files

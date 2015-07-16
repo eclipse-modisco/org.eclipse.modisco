@@ -12,7 +12,6 @@ Export-Package: org.eclipse.gmt.modisco.infra.browser;x-internal:=true,
  org.eclipse.gmt.modisco.infra.browser.dialogs;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor",
  org.eclipse.gmt.modisco.infra.browser.editors;
   x-friends:="org.eclipse.papyrus.adaptor.modisco,
-   org.eclipse.gmt.modisco.java.discoverer,
    org.eclipse.gmt.modisco.infra.browser.tests,
    org.eclipse.modisco.infra.browser.nattable,
    org.eclipse.modisco.infra.browser.tests",

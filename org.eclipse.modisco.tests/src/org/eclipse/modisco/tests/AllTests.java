@@ -23,13 +23,10 @@ import org.junit.runners.Suite.SuiteClasses;
 		org.eclipse.modisco.infra.browser.custom.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.infra.common.core.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.discoverer.tests.AllTestsInUIThread.class,
-		org.eclipse.gmt.modisco.java.discoverer.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.queries.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.discoverer.benchmark.tests.AllTestsInUIThread.class,
-		org.eclipse.gmt.modisco.java.discoverer.benchmark.tests.AllTestsInUIThread.class,
 //  see Bug 363302 - Disabled junit test java.discoverer.cdo.tests
 		org.eclipse.modisco.java.discoverer.cdo.tests.AllTestsInUIThread.class,
-//		org.eclipse.gmt.modisco.java.discoverer.cdo.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.browser.customization.test.AllTestsInUIThread.class,
 		org.eclipse.modisco.java.generation.tests.AllTestsInUIThread.class,

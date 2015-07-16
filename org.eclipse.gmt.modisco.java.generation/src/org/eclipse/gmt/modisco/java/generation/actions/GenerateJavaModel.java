@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 Mia-Software.
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 470728 - [Deprecated] org.eclipse.gmt.modisco.java.discoverer.*
  */
 package org.eclipse.gmt.modisco.java.generation.actions;
 
@@ -29,9 +30,9 @@ import org.eclipse.gmt.modisco.infra.discoverymanager.AbstractDiscovererImpl;
 import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameter;
 import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameterDirectionKind;
 import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameterImpl;
-import org.eclipse.gmt.modisco.java.actions.DefaultDiscoverer;
 import org.eclipse.gmt.modisco.java.generation.Activator;
 import org.eclipse.gmt.modisco.java.generation.files.GenerateJava;
+import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
 
 /**
  * @deprecated This class implements a deprecated interface. It must re-written
@@ -61,7 +62,7 @@ public class GenerateJavaModel extends AbstractDiscovererImpl {
 			IFile iFile = (IFile) source;
 			String extension = iFile.getFileExtension();
 			result = (extension != null)
-					&& (extension.equals(DefaultDiscoverer.JAVA_FILE_EXTENSION));
+					&& (extension.equals(JavaDiscoveryConstants.JAVA_MODEL_FILE_SUFFIX));
 		}
 		return result;
 	}

@@ -15,8 +15,7 @@ oem.java.discoverer.benchmark.emfstat is exposed to oem.java.composition.discove
 oem.java.discoverer.benchmark is exposed to oem.java.composition.discoverer.benchmark which subclasses benchmark discoverer
 
 org.eclipse.modisco.java.discoverer.benchmark;
-	x-friends:="org.eclipse.modisco.java.composition.discoverer.benchmark,
-	org.eclipse.gmt.modisco.java.discoverer.tests" 
+	x-friends:="org.eclipse.modisco.java.composition.discoverer.benchmark" 
 for reuse benchmarking in composition and testing
 
 org.eclipse.modisco.java.discoverer.benchmark.emf.client;

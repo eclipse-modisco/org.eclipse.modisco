@@ -18,9 +18,7 @@ Export-Package:
  org.eclipse.gmt.modisco.java.emf.impl;x-internal:=true,
  org.eclipse.gmt.modisco.java.emf.util;x-internal:=true,
  org.eclipse.gmt.modisco.java.internal.util;
-  x-friends:="org.eclipse.gmt.modisco.java.discoverer.tests,
-   org.eclipse.gmt.modisco.java.discoverer,
-   org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk,
+  x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk,
    org.eclipse.gmt.modisco.java.queries,
    org.eclipse.modisco.java.composition.discoverer,
    org.eclipse.modisco.java.discoverer,
