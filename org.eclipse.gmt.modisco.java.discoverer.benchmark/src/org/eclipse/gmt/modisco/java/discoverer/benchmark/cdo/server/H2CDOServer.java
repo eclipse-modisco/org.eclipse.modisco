@@ -31,6 +31,11 @@ import org.eclipse.gmt.modisco.infra.common.cdo.server.AbstractCDOServer;
 import org.eclipse.net4j.db.IDBAdapter;
 import org.eclipse.net4j.db.h2.H2Adapter;
 
+/**
+ * @deprecated Will be removed,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
+@Deprecated
 public class H2CDOServer extends AbstractCDOServer {
 
 	@Override

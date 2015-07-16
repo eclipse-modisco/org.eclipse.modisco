@@ -29,6 +29,11 @@ import org.eclipse.gmt.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.gmt.modisco.java.discoverer.benchmark.Report;
 import org.eclipse.gmt.modisco.java.discoverer.benchmark.emfstat.Statistics;
 
+/**
+ * @deprecated Will be removed,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
+@Deprecated
 public class GenerateReportAction implements Discoverer {
 
 	@Deprecated

@@ -28,7 +28,10 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
  * Entry point of the 'HtmlReport' generation module.
  *
  * @generated
+ * @deprecated Will be removed,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
  */
+@Deprecated
 public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * The name of the module.

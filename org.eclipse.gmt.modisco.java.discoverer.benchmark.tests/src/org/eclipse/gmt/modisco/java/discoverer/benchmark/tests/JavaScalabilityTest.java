@@ -41,6 +41,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated Will be removed,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=470728
+ */
+@Deprecated
 public class JavaScalabilityTest {
 
 	private static final int EXPECTED_MEM_INCR_MAXIMUM = 70;
