@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.eclipse.gmt.modisco.usecase.modelfilter.methodcalls.model.methodcalls.MethodcallsPackage
  * @generated
  * 
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470806
  */
 @Deprecated
 public interface MethodcallsFactory extends EFactory {
