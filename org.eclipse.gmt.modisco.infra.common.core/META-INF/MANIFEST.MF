@@ -1010,7 +1010,6 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.common.tests,
    org.eclipse.gmt.modisco.java.browser.customization.tests,
    org.eclipse.gmt.modisco.kdm.uml2converter.tests,
-   org.eclipse.gmt.modisco.usecase.modelfilter.tests,
    org.eclipse.modisco.xml.discoverer.tests,
    org.eclipse.modisco.infra.discovery,
    org.eclipse.modisco.java.discoverer,
