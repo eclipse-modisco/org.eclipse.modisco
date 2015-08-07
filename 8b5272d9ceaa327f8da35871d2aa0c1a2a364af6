@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2721e7e2_025665d7",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/src/org/eclipse/modisco/java/discoverer/tests/AllTestsInUIThread.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You have to update the modification range.",
+      "range": {
+        "startLine": 2,
+        "startChar": 23,
+        "endLine": 2,
+        "endChar": 27
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_624ac12e",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/src/org/eclipse/modisco/java/discoverer/tests/Bug351590ClassCastWithAnnotationMemberTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You have to give the bug id and label.",
+      "range": {
+        "startLine": 9,
+        "startChar": 22,
+        "endLine": 9,
+        "endChar": 52
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_4247bd23",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/workspace/bug351590/.classpath",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "Please, add a copyright header.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 38
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_a244b91e",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/workspace/bug351590/.project",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "Please, add a copyright header.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 38
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_8241b50e",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/workspace/bug351590/src/MyClass.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You have to give the bug id ans label.",
+      "range": {
+        "startLine": 9,
+        "startChar": 22,
+        "endLine": 9,
+        "endChar": 52
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_e2c191fc",
+        "filename": "org.eclipse.modisco.java.discoverer.tests/workspace/bug351590/src/mypkg/MyAnnotation.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You have to give the bug id and label.",
+      "range": {
+        "startLine": 9,
+        "startChar": 22,
+        "endLine": 9,
+        "endChar": 52
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_42d21dca",
+        "filename": "org.eclipse.modisco.java.discoverer/src/org/eclipse/modisco/java/discoverer/internal/io/java/binding/PendingElement.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You have to update the modification range.",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2721e7e2_02d145c6",
+        "filename": "org.eclipse.modisco.java.discoverer/src/org/eclipse/modisco/java/discoverer/internal/io/java/binding/PendingElement.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-08-07T13:26:58Z",
+      "side": 1,
+      "message": "You don\u0027t have the same indentation than the previous lines.",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 15,
+        "endChar": 5
+      },
+      "revId": "8b5272d9ceaa327f8da35871d2aa0c1a2a364af6",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
