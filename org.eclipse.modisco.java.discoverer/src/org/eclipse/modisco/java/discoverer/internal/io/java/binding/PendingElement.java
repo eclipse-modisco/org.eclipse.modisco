@@ -12,6 +12,7 @@
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Erwan Breton (Sodifrance) - initial API and implementation
  *    Romain Dervaux (Mia-Software) - initial API and implementation
+ *	  Fabien Giquel (Mia-Software) - Bug 351590 - [Java] ClassCastException while discovering Apache math commons
  *******************************************************************************/
 package org.eclipse.modisco.java.discoverer.internal.io.java.binding;
 
@@ -31,17 +32,20 @@ import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.java.ASTNode;
 import org.eclipse.gmt.modisco.java.AbstractMethodInvocation;
 import org.eclipse.gmt.modisco.java.AnnotationMemberValuePair;
+import org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration;
 import org.eclipse.gmt.modisco.java.BreakStatement;
 import org.eclipse.gmt.modisco.java.ClassFile;
 import org.eclipse.gmt.modisco.java.Comment;
 import org.eclipse.gmt.modisco.java.CompilationUnit;
 import org.eclipse.gmt.modisco.java.ContinueStatement;
+import org.eclipse.gmt.modisco.java.MethodInvocation;
 import org.eclipse.gmt.modisco.java.MethodRef;
 import org.eclipse.gmt.modisco.java.NamedElement;
 import org.eclipse.gmt.modisco.java.SingleVariableAccess;
 import org.eclipse.gmt.modisco.java.TypeAccess;
 import org.eclipse.gmt.modisco.java.UnresolvedItem;
 import org.eclipse.gmt.modisco.java.emf.JavaFactory;
+import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
 /**
@@ -162,10 +166,31 @@ public class PendingElement implements ASTNode {
 	public void affectTarget(final ASTNode target) {
 
 		if (this.clientNode != null) {
-			EStructuralFeature feature = this.clientNode.eClass().getEStructuralFeature(
+			final EStructuralFeature feature = this.clientNode.eClass().getEStructuralFeature(
 					this.linkName);
 
-			affectTarget0(feature, target);
+			if (target instanceof AnnotationTypeMemberDeclaration && this.clientNode instanceof MethodInvocation) {
+				// Bug workaround process
+				affectTargetAnnotationTypeMember(target, feature);
+			} else {
+				// Normal process
+				affectTarget0(feature, target);
+			}
+		}
+	}
+
+	private void affectTargetAnnotationTypeMember(final ASTNode target,
+			final EStructuralFeature feature) {
+		// Bugzilla 351590 : metamodel evolution needed, a MethodInvocation cannot reference one AnnotationTypeMemberDeclaration
+		// Temporary workaround : affect unresolvedMethod with name matching the AnnotationTypeMemberDeclaration
+		if (target.getOriginalCompilationUnit() != null
+				&& target.getOriginalCompilationUnit().getPackage() != null
+				&& target.getOriginalCompilationUnit().getPackage().getModel() != null) { 
+			final NamedElement method = affectUnresolvedTarget();
+			target.getOriginalCompilationUnit().getPackage().getModel().getUnresolvedItems().add((UnresolvedItem) method);
+			method.setName(JavaUtil.getQualifiedName(target));
+			method.setProxy(true);
+			affectTarget0(feature, method);
 		}
 	}
 
