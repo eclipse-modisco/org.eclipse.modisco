@@ -17,7 +17,8 @@ import org.osgi.framework.BundleContext;
 /**
  * The activator class controls the plug-in life cycle
  * 
- * @deprecated the whole plug-in is replaced by org.eclipse.modisco.kdm.source.discoverer
+ * @deprecated the whole plug-in is replaced by org.eclipse.modisco.kdm.source.discoverer,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474727
  */
 @Deprecated
 public class Activator extends AbstractUIPlugin {

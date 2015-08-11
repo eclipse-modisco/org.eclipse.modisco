@@ -47,6 +47,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474718
+ */
 @Deprecated
 public class TestMemoryUsage {
 

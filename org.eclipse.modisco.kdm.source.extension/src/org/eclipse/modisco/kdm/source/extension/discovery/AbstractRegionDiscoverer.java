@@ -27,7 +27,8 @@ import org.eclipse.gmt.modisco.infra.discoverymanager.Discoverer;
  * 
  * See also {@link org.eclipse.modisco.kdm.source.extension.discovery.SourceVisitListener}
  * 
- * @deprecated use AbstractRegionDiscoverer2 with the new discovery framework
+ * @deprecated use AbstractRegionDiscoverer2 with the new discovery framework, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474730
  */
 @Deprecated
 public abstract class AbstractRegionDiscoverer implements Discoverer {

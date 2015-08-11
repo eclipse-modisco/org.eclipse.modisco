@@ -70,7 +70,8 @@ import org.eclipse.modisco.kdm.source.extension.discovery.SourceVisitListener;
  * See Help contents or http://wiki.eclipse.org/MoDisco/Components/Java/Composition
  *
  * @deprecated use {@link DiscoverKDMSourceAndJavaModelFromProject} or
- *             {@link DiscoverKDMSourceAndJavaModelFromJavaProject}
+ *             {@link DiscoverKDMSourceAndJavaModelFromJavaProject},
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474718
  *
  */
 @Deprecated
