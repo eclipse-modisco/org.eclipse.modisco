@@ -9,13 +9,6 @@
       </discoverer>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererBenchmarkDiscoverer"
-            name="Discoverer Benchmark Discoverer">
-      </discoverer>
-   </extension>
-   <extension
          point="org.eclipse.emf.facet.util.emf.core.serialization">
       <serializer
             class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IProjectSetSerializer">
