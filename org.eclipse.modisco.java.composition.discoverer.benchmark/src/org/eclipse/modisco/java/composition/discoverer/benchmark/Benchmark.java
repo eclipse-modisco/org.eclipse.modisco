@@ -36,6 +36,7 @@ import org.eclipse.modisco.java.composition.discoverer.benchmark.actions.Discove
 
 /**
  * This class provides a way to monitor a Java Composition Discovery.
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474718
  */
 @Deprecated
 public class Benchmark implements Discoverer {

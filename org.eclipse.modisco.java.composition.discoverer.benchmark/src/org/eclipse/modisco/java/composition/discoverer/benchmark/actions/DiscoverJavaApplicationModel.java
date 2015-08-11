@@ -30,7 +30,8 @@ import org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaM
  * This class extends the DiscoverKDMSourceAndJavaModel to instrument it with benchmark
  * capabilities. Memory used during the discovery and saving steps are reported in an html file
  * 
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474718
  */
 @Deprecated
 public class DiscoverJavaApplicationModel extends DiscoverKDMSourceAndJavaModel {

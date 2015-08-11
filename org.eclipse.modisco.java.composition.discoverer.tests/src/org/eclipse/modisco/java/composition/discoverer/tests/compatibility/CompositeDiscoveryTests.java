@@ -34,7 +34,7 @@ import org.junit.Test;
 
 /**
  * @author GBarbier
- * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474718
  */
 @Deprecated
 public class CompositeDiscoveryTests {
