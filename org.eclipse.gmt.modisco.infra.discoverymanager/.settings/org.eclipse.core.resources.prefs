@@ -1,7 +1,0 @@
-#Mon Oct 04 10:41:12 CEST 2010
-eclipse.preferences.version=1
-encoding//src/org/eclipse/gmt/modisco/discoverersmanager/messages.properties=ISO-8859-1
-encoding//src/org/eclipse/gmt/modisco/discoverersmanager/ui/actions/messages.properties=ISO-8859-1
-encoding//src/org/eclipse/gmt/modisco/discoverersmanager/ui/launch/messages.properties=ISO-8859-1
-encoding//src/org/eclipse/gmt/modisco/discoverersmanager/ui/launch/parametersdisplay/messages.properties=ISO-8859-1
-encoding/<project>=UTF-8
