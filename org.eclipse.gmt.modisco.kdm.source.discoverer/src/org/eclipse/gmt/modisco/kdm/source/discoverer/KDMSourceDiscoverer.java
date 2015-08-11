@@ -34,7 +34,8 @@ import org.eclipse.jdt.core.IJavaProject;
  * Some services for building a basic file system representation, based on Source sub package from
  * KDM metamodel.
  * 
- * @deprecated the whole plug-in is replaced by org.eclipse.modisco.kdm.source.discoverer
+ * @deprecated the whole plug-in is replaced by org.eclipse.modisco.kdm.source.discoverer, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474727
  */
 @Deprecated
 public class KDMSourceDiscoverer {

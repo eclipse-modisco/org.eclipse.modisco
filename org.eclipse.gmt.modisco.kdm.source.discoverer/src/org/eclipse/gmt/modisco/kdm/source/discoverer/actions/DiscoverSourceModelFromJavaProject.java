@@ -44,7 +44,8 @@ import org.eclipse.ui.ide.IDE;
 /**
  * @author Gabriel Barbier
  * @deprecated Use instead DiscoverSourceModelFromJavaElement or DiscoverSourceModelFromResource in
- *             plug-in org.eclipse.modisco.kdm.source.discoverer.
+ *             plug-in org.eclipse.modisco.kdm.source.discoverer,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474727
  */
 @Deprecated
 public class DiscoverSourceModelFromJavaProject implements Discoverer {

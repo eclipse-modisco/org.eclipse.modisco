@@ -48,7 +48,8 @@ import org.eclipse.ui.part.FileEditorInput;
  * 
  * See Help Contents or http://wiki.eclipse.org/MoDisco/Components/KDMSourceExtension
  * 
- * @deprecated use AbstractComposedKDMSourceDiscoverer2 instead with the new discovery framework
+ * @deprecated use AbstractComposedKDMSourceDiscoverer2 instead with the new discovery framework,
+ *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474729
  * 
  */
 @Deprecated
