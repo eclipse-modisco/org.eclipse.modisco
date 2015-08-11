@@ -38,7 +38,8 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.m2m.atl.core.ATLCoreException;
 
 /**
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *  cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474680
  */
 @Deprecated
 public class ModelplexKnowledgeDiscoveryFramework implements KnowledgeDiscoveryInterface {
