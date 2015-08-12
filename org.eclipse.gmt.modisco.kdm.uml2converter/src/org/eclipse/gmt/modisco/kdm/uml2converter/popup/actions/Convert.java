@@ -45,6 +45,10 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.ide.IDE;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474827
+ */
+@Deprecated
 public class Convert implements IObjectActionDelegate {
 
 	private final Logger logger = Logger.getLogger(ATLLogger.LOGGER_ID);
