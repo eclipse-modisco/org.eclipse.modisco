@@ -1,0 +1,7 @@
+Verified+1: Hudson CI
+Code-Review+2: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-by: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-at: Thu, 13 Aug 2015 05:45:27 -0400
+Reviewed-on: https://git.eclipse.org/r/53687
+Project: modisco/org.eclipse.modisco
+Branch: refs/heads/rmDeprecated
