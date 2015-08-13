@@ -37,7 +37,8 @@ import org.eclipse.m2m.atl.engine.vm.AtlModelHandler;
  * @author gbarbier
  * 
  * 
- * @deprecated use matching org.eclipse.modisco.x.y.z component
+ * @deprecated use matching org.eclipse.modisco.x.y.z component,
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474827
  */
 @Deprecated
 public class AtlLaunchHelper {
