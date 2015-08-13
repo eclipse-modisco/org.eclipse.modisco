@@ -39,6 +39,10 @@ import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.gmt.modisco.kdm.uml2converter.Messages;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474827
+ */
+@Deprecated
 public class ConvertWithTraces implements IObjectActionDelegate {
 
 	private final Logger logger = Logger.getLogger(ATLLogger.LOGGER_ID);

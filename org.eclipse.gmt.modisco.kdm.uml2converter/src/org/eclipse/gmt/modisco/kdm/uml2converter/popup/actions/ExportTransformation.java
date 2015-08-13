@@ -26,6 +26,10 @@ import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.dialogs.SaveAsDialog;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474827
+ */
+@Deprecated
 public class ExportTransformation implements IObjectActionDelegate {
 
 	private IProject containingProject;
