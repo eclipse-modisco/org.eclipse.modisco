@@ -49,6 +49,9 @@ import org.eclipse.modisco.jee.jsp.discoverer.tests.Activator;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474894
+ */
 @Deprecated
 public class TestJsp {
 

@@ -56,7 +56,8 @@ import org.xml.sax.SAXException;
  * 
  * A default implementation for discovering JEE configuration file
  * 
- * @deprecated replaced by {@link AbstractDeploymentDescriptorDiscoverer}
+ * @deprecated replaced by {@link AbstractDeploymentDescriptorDiscoverer}, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474883
  */
 @Deprecated
 public abstract class DeploymentDescriptorDiscoverer implements Discoverer {

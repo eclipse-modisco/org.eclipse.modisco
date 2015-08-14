@@ -42,8 +42,9 @@ import org.junit.Test;
 
 /**
  * Test of discovering a WEB.XML model 2.3
- * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474893
  */
+@Deprecated
 public class TestWebXml23 {
 
 	private static final String RESOURCES_TEST_XML = "/resources/TestWebXml23.xml"; //$NON-NLS-1$	

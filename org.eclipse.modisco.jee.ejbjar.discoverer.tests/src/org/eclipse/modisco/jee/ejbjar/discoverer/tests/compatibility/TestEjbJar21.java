@@ -37,6 +37,9 @@ import org.eclipse.modisco.jee.ejbjar.discoverer.tests.JUnitPlugin;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474891
+ */
 @Deprecated
 public class TestEjbJar21 {
 

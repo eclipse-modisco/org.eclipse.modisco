@@ -31,7 +31,8 @@ import org.eclipse.gmt.modisco.omg.kdm.kdm.Attribute;
 import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmFactory;
 
 /**
- * @deprecated use {@link PropertiesModelDiscoverer2}
+ * @deprecated use {@link PropertiesModelDiscoverer2}, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474900
  */
 @Deprecated
 public class PropertiesModelDiscoverer implements Discoverer {

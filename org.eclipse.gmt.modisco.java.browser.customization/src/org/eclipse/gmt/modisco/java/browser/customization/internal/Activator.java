@@ -13,6 +13,10 @@ package org.eclipse.gmt.modisco.java.browser.customization.internal;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474970
+ */
+@Deprecated
 public class Activator extends AbstractUIPlugin {
 
 	private static Activator plugin;

@@ -19,6 +19,10 @@ import org.eclipse.core.runtime.Plugin;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.gmt.modisco.infra.common.ui.internal.wizards.AbstractExampleWizard;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474970
+ */
+@Deprecated
 public class ExampleWizard extends AbstractExampleWizard {
 	@Override
 	protected Plugin getActivator() {

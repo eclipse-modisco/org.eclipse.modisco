@@ -33,7 +33,10 @@ import org.eclipse.modisco.manifest.Version;
 import org.eclipse.osgi.util.ManifestElement;
 import org.osgi.framework.BundleException;
 
-/** @deprecated use {@link ManifestModelDiscoverer2} */
+/**
+ * @deprecated use {@link ManifestModelDiscoverer2}, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474898
+ */
 @Deprecated
 public class ManifestModelDiscoverer implements Discoverer {
 

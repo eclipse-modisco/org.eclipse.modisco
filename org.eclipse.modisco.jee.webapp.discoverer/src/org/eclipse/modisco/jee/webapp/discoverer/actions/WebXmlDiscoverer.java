@@ -33,7 +33,8 @@ import org.eclipse.modisco.jee.webapp.discoverer.WebXmlDiscoverer2;
 /**
  * Discover web.xml generic model action.
  * 
- * @deprecated use {@link WebXmlDiscoverer2} instead
+ * @deprecated use {@link WebXmlDiscoverer2} instead, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474893
  */
 @Deprecated
 public class WebXmlDiscoverer extends DeploymentDescriptorDiscoverer {

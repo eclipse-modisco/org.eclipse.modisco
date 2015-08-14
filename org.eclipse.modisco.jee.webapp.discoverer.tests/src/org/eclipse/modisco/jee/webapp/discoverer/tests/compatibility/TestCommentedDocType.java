@@ -34,8 +34,9 @@ import org.junit.Test;
 /**
  * Test of discovering a WEB.XML model 2.4 The specified file does not contain a
  * declaration of xsd, only the version
- * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474893
  */
+@Deprecated
 public class TestCommentedDocType {
 
 	private static final String RESOURCES_TEST1_XML = "/resources/TestCommentedDocType.xml"; //$NON-NLS-1$

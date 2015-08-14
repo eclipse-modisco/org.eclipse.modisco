@@ -19,7 +19,8 @@ import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameterDirectio
 import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameterImpl;
 
 /**
- * @deprecated use matching org.eclipse.modisco.jee.jsp.discoverer classes
+ * @deprecated use matching org.eclipse.modisco.jee.jsp.discoverer classes, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474894
  */
 @Deprecated
 public abstract class DefaultDiscoverer implements Discoverer {

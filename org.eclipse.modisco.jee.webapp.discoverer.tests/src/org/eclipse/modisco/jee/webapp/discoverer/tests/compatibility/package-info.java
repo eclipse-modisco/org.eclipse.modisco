@@ -9,5 +9,10 @@
  *    Nicolas Bros (Mia-Software)
  *******************************************************************************/
 
-/** This package contains tests for the old discovery framework, kept for compatibility reasons */
+/**
+ * This package contains tests for the old discovery framework, kept for
+ * compatibility reasons
+ * 
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474893
+ */
 package org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility;

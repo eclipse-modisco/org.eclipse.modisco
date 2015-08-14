@@ -14,7 +14,10 @@ package org.eclipse.modisco.jee.webapp.discoverer.tests.compatibility;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
-
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474893
+ */
+@Deprecated
 @RunWith(Suite.class)
 @SuiteClasses({
 	TestCommentedDocType.class,

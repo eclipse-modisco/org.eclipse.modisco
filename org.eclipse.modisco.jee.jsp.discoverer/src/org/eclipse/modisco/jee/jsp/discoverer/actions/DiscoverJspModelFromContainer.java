@@ -37,7 +37,7 @@ import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
 
 /**
  * @deprecated use {@link DiscoverJspModelFromResource} or {@link DiscoverJspModelFromJavaElement}
- *             instead
+ *             instead, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474894
  */
 @Deprecated
 public class DiscoverJspModelFromContainer extends DefaultDiscoverer {

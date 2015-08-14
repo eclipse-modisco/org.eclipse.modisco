@@ -59,7 +59,8 @@ import org.eclipse.ui.part.FileEditorInput;
  * The proposed class facilitates the creation of new Deployement Descriptor discoverer on a
  * container.
  * 
- * @deprecated replaced by {@link AbstractProjectDeploymentDescriptorDiscoverer}
+ * @deprecated replaced by {@link AbstractProjectDeploymentDescriptorDiscoverer}, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474883
  * 
  */
 @Deprecated
