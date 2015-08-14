@@ -16,6 +16,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
     Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
+    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -93,82 +94,7 @@
                   </with>
                </visibleWhen>
             </command>
-            <command
-                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
-                  label="%ShowLinksLabel"
-                  style="toggle">
-               <visibleWhen
-                     checkEnabled="true">
-                  <with
-                        variable="activeEditor">
-                     <instanceof
-                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
-                     </instanceof>
-                  </with>
-               </visibleWhen>
-            </command>
-            <command
-                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
-                  label="%HideEmptyReferences"
-                  style="toggle">
-               <visibleWhen
-                     checkEnabled="true">
-                  <with
-                        variable="activeEditor">
-                     <instanceof
-                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
-                     </instanceof>
-                  </with>
-               </visibleWhen>
-            </command>
-            <command
-                  commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
-                  label="%HideDerivedReferences"
-                  style="toggle">
-               <visibleWhen
-                     checkEnabled="true">
-                  <with
-                        variable="activeEditor">
-                     <instanceof
-                           value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
-                     </instanceof>
-                  </with>
-               </visibleWhen>
-            </command>
          </toolbar>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="menu:org.eclipse.modisco.util.emffacet.menu.ui.loadFacet">
-         <command
-               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclassfacet"
-               label="%showEClassSubclasses"
-               style="toggle">
-         </command>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="menu:org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization">
-         <command
-               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
-               label="%ShowLinksLabel"
-               style="toggle">
-         </command>
-         <command
-               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
-               label="%HideEmptyReferences"
-               style="toggle">
-         </command>
-         <command
-               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
-               label="%HideDerivedReferences"
-               style="toggle">
-         </command>
-         <command
-               commandId="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclasscustom"
-               label="%showEClassSubclassesFromEClass"
-               style="toggle">
-         </command>
       </menuContribution>
       <menuContribution
             allPopups="true"
@@ -188,54 +114,22 @@
             </visibleWhen>
          </command>
       </menuContribution>
-   </extension>
-   <extension
-         point="org.eclipse.ui.commands">
-      <command
-            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LinksCountHandler"
-            id="org.eclipse.modisco.infra.browser.editor.ui.command.linkscount"
-            name="%ShowLinksLabel">
-         <state
-               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LinksCountState"
-               id="org.eclipse.ui.commands.toggleState">
-         </state>
-      </command>
-      <command
-            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideEmptyReferencesHandler"
-            id="org.eclipse.modisco.infra.browser.editor.ui.command.hideemptyreferences"
-            name="%HideEmptyReferences">
-         <state
-               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideEmptyReferencesToggleState"
-               id="org.eclipse.ui.commands.toggleState">
-         </state>
-      </command>
-      <command
-            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideDerivedReferencesHandler"
-            id="org.eclipse.modisco.infra.browser.editor.ui.command.hidederivedreferences"
-            name="%HideDerivedReferences">
-         <state
-               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HideDerivedReferencesToggleState"
-               id="org.eclipse.ui.commands.toggleState">
-         </state>
-      </command>
-      <command
-            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassFacetHandler"
-            id="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclassfacet"
-            name="%showEClassSubclasses">
-         <state
-               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassFacetToggleState"
-               id="org.eclipse.ui.commands.toggleState">
-         </state>
-      </command>
-      <command
-            defaultHandler="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassCustomHandler"
-            id="org.eclipse.modisco.infra.browser.editor.ui.command.hierarchicaleclasscustom"
-            name="%showEClassSubclassesFromEClass">
-         <state
-               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.HierarchicalEClassCustomToggleState"
-               id="org.eclipse.ui.commands.toggleState">
-         </state>
-      </command>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LoadCustomShortcutsMenu"
+               id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization.dynamic">
+         </dynamic>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.util.emffacet.menu.ui.loadFacet">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.LoadFacetSetShortcutsMenu"
+               id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet.dynamic">
+         </dynamic>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">

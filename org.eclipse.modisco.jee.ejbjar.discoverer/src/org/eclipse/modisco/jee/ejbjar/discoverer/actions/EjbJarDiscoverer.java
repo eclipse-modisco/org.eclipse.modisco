@@ -33,7 +33,8 @@ import org.eclipse.modisco.jee.ejbjar.discoverer.EjbJarDiscoverer2;
 /**
  * Discover ejbjar.xml generic model action.
  * 
- * @deprecated use {@link EjbJarDiscoverer2} instead
+ * @deprecated use {@link EjbJarDiscoverer2} instead, cf.
+ *             https://bugs.eclipse.org/bugs/show_bug.cgi?id=474891
  */
 @Deprecated
 public class EjbJarDiscoverer extends DeploymentDescriptorDiscoverer {

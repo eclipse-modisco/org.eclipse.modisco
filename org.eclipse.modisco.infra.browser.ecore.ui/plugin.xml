@@ -12,6 +12,7 @@ Contributors:
    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
    Thomas Cicognani (Soft-Maint) - Bug 471447 - [New Browser] Add a customization counting instances by EClass
    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
+   Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
 -->
 <plugin>
    <extension point="org.eclipse.ui.views">
@@ -28,16 +29,32 @@ Contributors:
          locationURI="toolbar:org.eclipse.modisco.infra.browser.ecore.ui.view1">
             <command
                commandId="org.eclipse.emf.facet.ui.loadCustomization"
-               id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization"
                label="Load/Unload customizations"
-               style="push">
+               style="pulldown">
             </command>
             <command
                commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
-               id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet"
                label="Load/Unload facets"
-               style="push">
+               style="pulldown">
             </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.ecore.ui.internal.handler.LoadCustomShortcutsMenu"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization.dynamic">
+         </dynamic>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet">
+         <dynamic
+               class="org.eclipse.modisco.infra.browser.ecore.ui.internal.handler.LoadFacetSetShortcutsMenu"
+               id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet.dynamic">
+         </dynamic>
       </menuContribution>
    </extension>
    <extension

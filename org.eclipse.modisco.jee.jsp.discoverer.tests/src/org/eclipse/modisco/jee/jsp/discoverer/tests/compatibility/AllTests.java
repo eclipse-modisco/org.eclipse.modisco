@@ -17,6 +17,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474894
+ */
+@Deprecated
 @SuppressWarnings("deprecation")
 @RunWith(Suite.class)
 @SuiteClasses({TestJsp.class, TestJSPStdAction.class, TestMemory.class, TestHtml.class })
