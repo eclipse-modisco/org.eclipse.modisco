@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
+ *    Grégoire Dupé (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -23,7 +24,9 @@ import org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.Customization;
 import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2.ICustomShortcut;
 import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
 import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2.IFacetSetShortcut;
+import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Messages;
 
 public final class TreeEditorShortcutUtils {
@@ -35,26 +38,26 @@ public final class TreeEditorShortcutUtils {
 	public static List<ICustomShortcut> getCustomShortcuts(
 			final ResourceSet resourceSet) {
 		final List<ICustomShortcut> shortcuts = new ArrayList<ICustomShortcut>();
-
-		shortcuts
-				.add(createCustomShortcut(
-						resourceSet,
-						"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideDerivedReferences.custom", //$NON-NLS-1$
-						Messages.TreeEditorShortcutUtils_CustomHideDerivedReferences));
-
-		shortcuts
-				.add(createCustomShortcut(
-						resourceSet,
-						"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideEmptyReferences.custom", //$NON-NLS-1$
-						Messages.TreeEditorShortcutUtils_CustomHideEmptyReferences));
-
-		shortcuts
-				.add(createCustomShortcut(
-						resourceSet,
-						"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/linksCount.custom", //$NON-NLS-1$
-						Messages.TreeEditorShortcutUtils_CustomShowLinksCount));
-
+		addShortcut(resourceSet, shortcuts,
+				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideDerivedReferences.custom", //$NON-NLS-1$
+				Messages.TreeEditorShortcutUtils_CustomHideDerivedReferences);
+		addShortcut(resourceSet, shortcuts,
+				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideEmptyReferences.custom", //$NON-NLS-1$
+				Messages.TreeEditorShortcutUtils_CustomHideEmptyReferences);
+		addShortcut(resourceSet, shortcuts,
+				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/linksCount.custom", //$NON-NLS-1$
+				Messages.TreeEditorShortcutUtils_CustomShowLinksCount);
 		return shortcuts;
+	}
+
+	private static void addShortcut(final ResourceSet resourceSet, 
+			final List<ICustomShortcut> shortcuts, final String uri,
+			final String menuItemLabel) {
+		try {
+			shortcuts.add(createCustomShortcut(resourceSet, uri, menuItemLabel));
+		} catch (Exception e) {
+			Logger.logError(e, Activator.getDefault());
+		}
 	}
 
 	public static List<IFacetSetShortcut> getFacetSetShortcuts(

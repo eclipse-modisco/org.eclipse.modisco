@@ -30,6 +30,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=343840
+ */
+@Deprecated
 public class BooleanCellEditorTestDialog extends Dialog {
 
 	protected BooleanCellEditorTestDialog(final Shell parentShell) {
