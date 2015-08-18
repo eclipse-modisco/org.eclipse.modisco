@@ -13,6 +13,10 @@ package org.eclipse.modisco.infra.discovery.tests;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=343840
+ */
+@Deprecated
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;

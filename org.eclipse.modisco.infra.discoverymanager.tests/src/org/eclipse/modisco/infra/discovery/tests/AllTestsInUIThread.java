@@ -14,6 +14,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=343840
+ */
+@Deprecated
 @RunWith(Suite.class)
 @SuiteClasses({ BooleanCellEditorTest.class })
 public class AllTestsInUIThread {

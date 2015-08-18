@@ -18,6 +18,10 @@ import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.junit.Ignore;
 import org.junit.Test;
 
+/**
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=343840
+ */
+@Deprecated
 public class BooleanCellEditorTest {
 
 	private static SWTWorkbenchBot bot = new SWTWorkbenchBot();
