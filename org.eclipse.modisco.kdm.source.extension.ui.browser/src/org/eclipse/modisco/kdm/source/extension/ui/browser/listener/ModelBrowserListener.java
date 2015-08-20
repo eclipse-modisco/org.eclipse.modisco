@@ -23,7 +23,9 @@ import org.eclipse.modisco.kdm.source.extension.ui.utils.BrowseCodeUtils;
  * This class only map the event "doubleClick" in the browser in order to call
  * the openEObjectContainerFile method without adding a dependency between
  * MoDisco Browser and kdm.source.extension
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=475243
  */
+@Deprecated
 public class ModelBrowserListener implements DoubleClickListener {
 
 	public void synchronizeEObject(final EObject eObject,
