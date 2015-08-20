@@ -19,7 +19,9 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * @deprecated cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=475243
  */
+@Deprecated
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
