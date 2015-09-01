@@ -10,6 +10,7 @@
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
+ *    Jonathan Pepin (Soft-Maint) - Bug 476286 - Resolve selection on TreeEditor for facet object
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -34,6 +35,7 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerProvider;
+import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
 import org.eclipse.emf.facet.custom.ui.IResolvingCustomizedLabelProviderFactory;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
@@ -43,7 +45,10 @@ import org.eclipse.emf.facet.efacet.core.IFacetManagerProvider;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditor;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
@@ -58,7 +63,8 @@ import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
-		IFacetManagerProvider, ICustomizationManagerProvider, ITreeEditor {
+		IFacetManagerProvider, ICustomizationManagerProvider, ITreeEditor,
+		ISelectionProvider, ISelectionChangedListener {
 
 	private static final String EDITOR_ID = Activator.getDefault().getBundle()
 			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
@@ -69,6 +75,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	private ICustomizationManager customManager;
 	private TreeViewer tree;
 	private IFacetManagerListener facetMgrListener;
+	private final List<ISelectionChangedListener> selectionListnrs = new ArrayList<ISelectionChangedListener>();
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
@@ -202,8 +209,6 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		Object result = null;
 		if (adapter.isInstance(this)) {
 			result = this;
-		} else if (adapter == ISelectionProvider.class) {
-			result = this.tree;
 		} else {
 			result = super.getAdapter(adapter);
 		}
@@ -226,5 +231,27 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 
 	public ILabelProvider getViewerLabelProvider() {
 		return (ILabelProvider) this.tree.getLabelProvider();
+	}
+
+	public void addSelectionChangedListener(final ISelectionChangedListener listener) {
+		this.selectionListnrs.add(listener);
+	}
+
+	public ISelection getSelection() {
+		final ISelection treeSelection = this.tree.getSelection();
+		return CustomizedContentProviderUtils.resolveSelection(treeSelection);
+	}
+
+	public void removeSelectionChangedListener(
+			final ISelectionChangedListener listener) {
+		this.selectionListnrs.remove(listener);
+	}
+
+	public void setSelection(final ISelection selection) {
+		this.tree.setSelection(selection);
+	}
+
+	public void selectionChanged(final SelectionChangedEvent event) {
+		this.tree.setSelection(event.getSelection());
 	}
 }
