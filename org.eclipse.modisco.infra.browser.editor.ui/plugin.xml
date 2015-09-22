@@ -52,9 +52,11 @@
                label="%modiscoBrowserToolbarLabel">
             <command
                   commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+                  icon="icons/load-facet-greyed70.gif"
                   id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
                   label="%LoadUnloadFacets"
-                  style="pulldown">
+                  style="pulldown"
+                  tooltip="Load/Unload FacetSets">
                <visibleWhen
                      checkEnabled="true">
                   <with
@@ -81,9 +83,11 @@
             </command>
             <command
                   commandId="org.eclipse.emf.facet.ui.loadCustomization"
+                  icon="icons/load-custo-greyed70.gif"
                   id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
                   label="%LoadUnloadCustoms"
-                  style="pulldown">
+                  style="pulldown"
+                  tooltip="Load/Unload Customizations">
                <visibleWhen
                      checkEnabled="true">
                   <with
@@ -95,6 +99,25 @@
                </visibleWhen>
             </command>
          </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.workbench.file?after=additions">
+         <command
+               commandId="org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource"
+               icon="icons/open-facet-serializ.gif"
+               label="Open Facet Serialization Instance Model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                     variable="activeEditor">
+                  <instanceof
+                        value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                  </instanceof>
+               </with>
+            </visibleWhen>
+         </command>
       </menuContribution>
       <menuContribution
             allPopups="true"
