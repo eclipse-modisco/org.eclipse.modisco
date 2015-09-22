@@ -11,6 +11,7 @@
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
+ *    Jonathan Pepin (Soft-Maint) - Bug 476286 - Resolve selection on TreeEditor for facet object
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -34,6 +35,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
+import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
 import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
 import org.eclipse.emf.facet.custom.ui.IResolvingCustomizedLabelProviderFactory;
@@ -44,7 +46,11 @@ import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditor;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
@@ -59,7 +65,8 @@ import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
-		IFacetManagerProvider2, ICustomizationManagerProvider2, ITreeEditor {
+		IFacetManagerProvider2, ICustomizationManagerProvider2, ITreeEditor,
+		ISelectionProvider, ISelectionChangedListener {
 
 	private static final String EDITOR_ID = Activator.getDefault().getBundle()
 			.getSymbolicName() + ".TreeEditor"; //$NON-NLS-1$
@@ -72,6 +79,9 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	private IFacetManagerListener facetMgrListener;
 	private List<IFacetSetShortcut> facetSetShortcuts;
 	private List<ICustomShortcut> customShortcuts;
+	private final List<ISelectionChangedListener> selectionListnrs =
+			new ArrayList<ISelectionChangedListener>();
+	private ISelection selection = StructuredSelection.EMPTY;
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
@@ -171,8 +181,12 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			contents.addAll(this.resource.getContents());
 		}
 		this.tree.setInput(contents);
-		
-		getSite().setSelectionProvider(this.tree);
+		this.tree.addSelectionChangedListener(new ISelectionChangedListener() {
+			public void selectionChanged(final SelectionChangedEvent event) {
+				setSelection(event.getSelection());
+			}
+		});
+		getSite().setSelectionProvider(this);
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
 				TreeEditor.this.refresh();
@@ -240,6 +254,33 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 
 	public ILabelProvider getViewerLabelProvider() {
 		return (ILabelProvider) this.tree.getLabelProvider();
+	}
+
+	public ISelection getSelection() {
+		return this.selection;
+	}
+
+	public void setSelection(final ISelection selection) {
+		this.selection = CustomizedContentProviderUtils.resolveSelection(selection);
+		final SelectionChangedEvent event = new SelectionChangedEvent(
+				this, this.selection);
+		for (ISelectionChangedListener selectionListener : this.selectionListnrs) {
+			selectionListener.selectionChanged(event);
+		}
+	}
+
+	public void addSelectionChangedListener(
+			final ISelectionChangedListener listener) {
+		this.selectionListnrs.add(listener);
+	}
+
+	public void removeSelectionChangedListener(
+			final ISelectionChangedListener listener) {
+		this.selectionListnrs.remove(listener);
+	}
+
+	public void selectionChanged(final SelectionChangedEvent event) {
+		this.tree.setSelection(event.getSelection());
 	}
 
 }
