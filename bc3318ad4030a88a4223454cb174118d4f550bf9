@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0724e3f1_29890404",
+        "filename": "org.eclipse.modisco.infra.browser.editor.ui/plugin.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2015-09-25T08:56:10Z",
+      "side": 1,
+      "message": "Please, declare your contribution in the following list.",
+      "range": {
+        "startLine": 10,
+        "startChar": 1,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "bc3318ad4030a88a4223454cb174118d4f550bf9",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
