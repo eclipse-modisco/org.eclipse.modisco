@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.gmt.modisco.java.nousages.cdo.impl,
+Export-Package: org.eclipse.gmt.modisco.java.nousages.cdo.impl;x-internal:=true,
  org.eclipse.gmt.modisco.java.nousages.cdo.meta,
- org.eclipse.gmt.modisco.java.nousages.cdo.util
+ org.eclipse.gmt.modisco.java.nousages.cdo.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.cdo;visibility:=reexport,

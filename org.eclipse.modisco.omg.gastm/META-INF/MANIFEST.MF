@@ -8,8 +8,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.modisco.omg.gastm,
- org.eclipse.modisco.omg.gastm.impl,
- org.eclipse.modisco.omg.gastm.util
+ org.eclipse.modisco.omg.gastm.impl;x-internal:=true,
+ org.eclipse.modisco.omg.gastm.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport

@@ -8,8 +8,8 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.modisco.eclipseplugin,
- org.eclipse.modisco.eclipseplugin.impl,
- org.eclipse.modisco.eclipseplugin.util
+ org.eclipse.modisco.eclipseplugin.impl;x-internal:=true,
+ org.eclipse.modisco.eclipseplugin.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.gmt.modisco.java;visibility:=reexport,

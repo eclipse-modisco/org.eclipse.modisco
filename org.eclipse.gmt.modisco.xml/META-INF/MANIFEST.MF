@@ -14,8 +14,8 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.xml,
  org.eclipse.gmt.modisco.xml.emf,
- org.eclipse.gmt.modisco.xml.emf.impl,
- org.eclipse.gmt.modisco.xml.emf.util,
+ org.eclipse.gmt.modisco.xml.emf.impl;x-internal:=true,
+ org.eclipse.gmt.modisco.xml.emf.util;x-internal:=true,
  org.eclipse.gmt.modisco.xml.internal.resource;x-friends:="org.eclipse.gmt.modisco.xml.discoverer,org.eclipse.modisco.xml.discoverer",
  org.eclipse.gmt.modisco.xml.resource
 Bundle-Activator: org.eclipse.gmt.modisco.xml.plugin.XmlActivator

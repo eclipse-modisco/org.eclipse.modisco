@@ -13,12 +13,17 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.jee.ejbjar.EjbJar11,
+ org.eclipse.modisco.jee.ejbjar.EjbJar11.impl;x-internal:=true,
  org.eclipse.modisco.jee.ejbjar.EjbJar11.util;x-friends:="org.eclipse.modisco.jee.ejbjar.discoverer",
  org.eclipse.modisco.jee.ejbjar.EjbJar20,
+ org.eclipse.modisco.jee.ejbjar.EjbJar20.impl;x-internal:=true,
  org.eclipse.modisco.jee.ejbjar.EjbJar20.util;x-friends:="org.eclipse.modisco.jee.ejbjar.discoverer",
  org.eclipse.modisco.jee.ejbjar.EjbJar21,
+ org.eclipse.modisco.jee.ejbjar.EjbJar21.impl;x-internal:=true,
  org.eclipse.modisco.jee.ejbjar.EjbJar21.util;x-friends:="org.eclipse.modisco.jee.ejbjar.discoverer",
  org.eclipse.modisco.jee.ejbjar.EjbJar30,
+ org.eclipse.modisco.jee.ejbjar.EjbJar30.impl;x-internal:=true,
  org.eclipse.modisco.jee.ejbjar.EjbJar30.util;x-friends:="org.eclipse.modisco.jee.ejbjar.discoverer",
  org.eclipse.modisco.jee.ejbjar.EjbJar31,
+ org.eclipse.modisco.jee.ejbjar.EjbJar31.impl;x-internal:=true,
  org.eclipse.modisco.jee.ejbjar.EjbJar31.util;x-friends:="org.eclipse.modisco.jee.ejbjar.discoverer"

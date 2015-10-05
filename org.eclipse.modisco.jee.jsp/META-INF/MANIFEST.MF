@@ -7,7 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.modisco.jee.jsp
+Export-Package: org.eclipse.modisco.jee.jsp,
+ org.eclipse.modisco.jee.jsp.impl;x-internal:=true,
+ org.eclipse.modisco.jee.jsp.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.resources;bundle-version="3.6.0",

@@ -12,13 +12,18 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.jee.webapp.webapp22,
+ org.eclipse.modisco.jee.webapp.webapp22.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp22.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer",
  org.eclipse.modisco.jee.webapp.webapp23,
+ org.eclipse.modisco.jee.webapp.webapp23.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp23.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer",
  org.eclipse.modisco.jee.webapp.webapp24,
+ org.eclipse.modisco.jee.webapp.webapp24.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp24.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer",
  org.eclipse.modisco.jee.webapp.webapp25,
+ org.eclipse.modisco.jee.webapp.webapp25.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp25.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer",
  org.eclipse.modisco.jee.webapp.webapp30,
+ org.eclipse.modisco.jee.webapp.webapp30.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp30.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer"
 Bundle-Vendor: %Bundle-Vendor

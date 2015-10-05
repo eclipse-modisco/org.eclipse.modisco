@@ -11,4 +11,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.utils.chart.metamodel.internal.chart,
+ org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl;x-internal:=true,
  org.eclipse.modisco.utils.chart.metamodel.internal.chart.util;x-friends:="org.eclipse.modisco.utils.chart.edit"

@@ -13,6 +13,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.gmt.modisco.java;bundle-version="0.7.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.gmt.modisco.java.cdo.impl,
+Export-Package: org.eclipse.gmt.modisco.java.cdo.impl;x-internal:=true,
  org.eclipse.gmt.modisco.java.cdo.meta,
- org.eclipse.gmt.modisco.java.cdo.util
+ org.eclipse.gmt.modisco.java.cdo.util;x-internal:=true
