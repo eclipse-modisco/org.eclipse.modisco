@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2010 Mia-Software.
+Copyright (c) 2010, 2015 Mia-Software.
 All rights reserved. This program and the accompanying materials
 are made available under the terms of the Eclipse Public License v1.0
 which accompanies this distribution, and is available at
@@ -8,28 +8,30 @@ http://www.eclipse.org/legal/epl-v10.html
 
 Contributors:
     Fabien GIQUEL (Mia-Software) - initial API and implementation
+    Grégoire Dupé (Mia-Software) - Bug 479420 - Moving the API policy wiki page to git.
 -->
 <toc label="MoDisco Documentation">
-   <topic label="MoDisco User Guide">
-	   <topic label="Infrastructure">
-	      <anchor id="infrastructure.main"/>
-	      <anchor id="infrastructure.omg"/>
-	   </topic>
-	   <topic label="Technologies">
-	      <anchor id="technologies.anchor"/>
-	   </topic>
-	   <topic label="Usecases">
-	      <anchor id="usecases.anchor"/>
-	   </topic>
-	   <topic href="javadoc/index.html" label="API Reference"/>
-	   <topic href="mediawiki/new_and_noteworthy.html" label="New and Noteworthy"/>
-   </topic>
-   <topic label="Simultaneous Release Tracker Required Documents">
+	<topic label="MoDisco User Guide">
+		<topic label="Infrastructure">
+			<anchor id="infrastructure.main"/>
+			<anchor id="infrastructure.omg"/>
+		</topic>
+		<topic label="Technologies">
+			<anchor id="technologies.anchor"/>
+		</topic>
+		<topic label="Usecases">
+			<anchor id="usecases.anchor"/>
+		</topic>
+		<topic href="javadoc/index.html" label="API Reference"/>
+		<topic href="mediawiki/new_and_noteworthy.html" label="New and Noteworthy"/>
+	</topic>
+	<topic label="Simultaneous Release Tracker Required Documents">
+		<topic href="mediawiki/API_policy.html" label="API Policy"/>
 		<anchor id="api.report"/>
 		<anchor id="test.report"/>
 		<anchor id="metric.report"/>
-   </topic>
-   <topic label="Architecture documentation">
+	</topic>
+	<topic label="Architecture documentation">
 		<anchor id="archi"/>
-   </topic>
+	</topic>
 </toc>
