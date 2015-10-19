@@ -1,24 +1,22 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest.util;
 
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.manifest.Bundle;
-import org.eclipse.modisco.manifest.ImportedPackage;
-import org.eclipse.modisco.manifest.ManifestPackage;
-import org.eclipse.modisco.manifest.RequiredBundle;
-import org.eclipse.modisco.manifest.Version;
+
+import org.eclipse.modisco.manifest.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -118,6 +116,12 @@ public class ManifestSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ManifestPackage.EXPORTED_PACKAGE: {
+				ExportedPackage exportedPackage = (ExportedPackage)theEObject;
+				T result = caseExportedPackage(exportedPackage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -179,6 +183,21 @@ public class ManifestSwitch<T> {
 	 * @generated
 	 */
 	public T caseVersion(Version object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Exported Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Exported Package</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExportedPackage(ExportedPackage object) {
 		return null;
 	}
 

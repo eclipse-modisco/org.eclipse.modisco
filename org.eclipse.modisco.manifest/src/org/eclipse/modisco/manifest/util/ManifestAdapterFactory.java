@@ -1,24 +1,24 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.manifest.Bundle;
-import org.eclipse.modisco.manifest.ImportedPackage;
-import org.eclipse.modisco.manifest.ManifestPackage;
-import org.eclipse.modisco.manifest.RequiredBundle;
-import org.eclipse.modisco.manifest.Version;
+
+import org.eclipse.modisco.manifest.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,6 @@ import org.eclipse.modisco.manifest.Version;
  * @see org.eclipse.modisco.manifest.ManifestPackage
  * @generated
  */
-@SuppressWarnings("all")
 public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
@@ -45,8 +44,8 @@ public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public ManifestAdapterFactory() {
-		if (ManifestAdapterFactory.modelPackage == null) {
-			ManifestAdapterFactory.modelPackage = ManifestPackage.eINSTANCE;
+		if (modelPackage == null) {
+			modelPackage = ManifestPackage.eINSTANCE;
 		}
 	}
 
@@ -59,12 +58,12 @@ public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(final Object object) {
-		if (object == ManifestAdapterFactory.modelPackage) {
+	public boolean isFactoryForType(Object object) {
+		if (object == modelPackage) {
 			return true;
 		}
 		if (object instanceof EObject) {
-			return ((EObject)object).eClass().getEPackage() == ManifestAdapterFactory.modelPackage;
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -78,23 +77,27 @@ public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	protected ManifestSwitch<Adapter> modelSwitch =
 		new ManifestSwitch<Adapter>() {
 			@Override
-			public Adapter caseBundle(final Bundle object) {
+			public Adapter caseBundle(Bundle object) {
 				return createBundleAdapter();
 			}
 			@Override
-			public Adapter caseRequiredBundle(final RequiredBundle object) {
+			public Adapter caseRequiredBundle(RequiredBundle object) {
 				return createRequiredBundleAdapter();
 			}
 			@Override
-			public Adapter caseImportedPackage(final ImportedPackage object) {
+			public Adapter caseImportedPackage(ImportedPackage object) {
 				return createImportedPackageAdapter();
 			}
 			@Override
-			public Adapter caseVersion(final Version object) {
+			public Adapter caseVersion(Version object) {
 				return createVersionAdapter();
 			}
 			@Override
-			public Adapter defaultCase(final EObject object) {
+			public Adapter caseExportedPackage(ExportedPackage object) {
+				return createExportedPackageAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
 		};
@@ -108,8 +111,8 @@ public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(final Notifier target) {
-		return this.modelSwitch.doSwitch((EObject)target);
+	public Adapter createAdapter(Notifier target) {
+		return modelSwitch.doSwitch((EObject)target);
 	}
 
 
@@ -166,6 +169,20 @@ public class ManifestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVersionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.manifest.ExportedPackage <em>Exported Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.manifest.ExportedPackage
+	 * @generated
+	 */
+	public Adapter createExportedPackageAdapter() {
 		return null;
 	}
 

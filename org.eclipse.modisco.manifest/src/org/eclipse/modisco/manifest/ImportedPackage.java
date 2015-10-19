@@ -1,13 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.manifest.ImportedPackage#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.ImportedPackage#getVersion <em>Version</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.manifest.ManifestPackage#getImportedPackage()
  * @model
@@ -60,7 +61,7 @@ public interface ImportedPackage extends EObject {
 	 * Returns the value of the '<em><b>Version</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Version</em>' reference isn't clear,
+	 * If the meaning of the '<em>Version</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

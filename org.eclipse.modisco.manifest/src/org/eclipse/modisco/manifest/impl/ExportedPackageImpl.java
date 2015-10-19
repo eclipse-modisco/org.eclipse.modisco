@@ -11,34 +11,39 @@
  */
 package org.eclipse.modisco.manifest.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.modisco.manifest.ImportedPackage;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.eclipse.modisco.manifest.Bundle;
+import org.eclipse.modisco.manifest.ExportedPackage;
 import org.eclipse.modisco.manifest.ManifestPackage;
-import org.eclipse.modisco.manifest.Version;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Imported Package</b></em>'.
+ * An implementation of the model object '<em><b>Exported Package</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.modisco.manifest.impl.ImportedPackageImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.modisco.manifest.impl.ImportedPackageImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link org.eclipse.modisco.manifest.impl.ExportedPackageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.manifest.impl.ExportedPackageImpl#getXFriends <em>XFriends</em>}</li>
+ *   <li>{@link org.eclipse.modisco.manifest.impl.ExportedPackageImpl#isXInternal <em>XInternal</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage {
+public class ExportedPackageImpl extends EObjectImpl implements ExportedPackage {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -60,21 +65,41 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVersion() <em>Version</em>}' containment reference.
+	 * The cached value of the '{@link #getXFriends() <em>XFriends</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVersion()
+	 * @see #getXFriends()
 	 * @generated
 	 * @ordered
 	 */
-	protected Version version;
+	protected EList<Bundle> xFriends;
+
+	/**
+	 * The default value of the '{@link #isXInternal() <em>XInternal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isXInternal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean XINTERNAL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isXInternal() <em>XInternal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isXInternal()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean xInternal = XINTERNAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ImportedPackageImpl() {
+	protected ExportedPackageImpl() {
 		super();
 	}
 
@@ -85,7 +110,7 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ManifestPackage.Literals.IMPORTED_PACKAGE;
+		return ManifestPackage.Literals.EXPORTED_PACKAGE;
 	}
 
 	/**
@@ -106,7 +131,7 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ManifestPackage.IMPORTED_PACKAGE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ManifestPackage.EXPORTED_PACKAGE__NAME, oldName, name));
 	}
 
 	/**
@@ -114,23 +139,11 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Version getVersion() {
-		return version;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetVersion(Version newVersion, NotificationChain msgs) {
-		Version oldVersion = version;
-		version = newVersion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ManifestPackage.IMPORTED_PACKAGE__VERSION, oldVersion, newVersion);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Bundle> getXFriends() {
+		if (xFriends == null) {
+			xFriends = new EObjectResolvingEList<Bundle>(Bundle.class, this, ManifestPackage.EXPORTED_PACKAGE__XFRIENDS);
 		}
-		return msgs;
+		return xFriends;
 	}
 
 	/**
@@ -138,18 +151,8 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(Version newVersion) {
-		if (newVersion != version) {
-			NotificationChain msgs = null;
-			if (version != null)
-				msgs = ((InternalEObject)version).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ManifestPackage.IMPORTED_PACKAGE__VERSION, null, msgs);
-			if (newVersion != null)
-				msgs = ((InternalEObject)newVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ManifestPackage.IMPORTED_PACKAGE__VERSION, null, msgs);
-			msgs = basicSetVersion(newVersion, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ManifestPackage.IMPORTED_PACKAGE__VERSION, newVersion, newVersion));
+	public boolean isXInternal() {
+		return xInternal;
 	}
 
 	/**
@@ -157,13 +160,11 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ManifestPackage.IMPORTED_PACKAGE__VERSION:
-				return basicSetVersion(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setXInternal(boolean newXInternal) {
+		boolean oldXInternal = xInternal;
+		xInternal = newXInternal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ManifestPackage.EXPORTED_PACKAGE__XINTERNAL, oldXInternal, xInternal));
 	}
 
 	/**
@@ -174,10 +175,12 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ManifestPackage.IMPORTED_PACKAGE__NAME:
+			case ManifestPackage.EXPORTED_PACKAGE__NAME:
 				return getName();
-			case ManifestPackage.IMPORTED_PACKAGE__VERSION:
-				return getVersion();
+			case ManifestPackage.EXPORTED_PACKAGE__XFRIENDS:
+				return getXFriends();
+			case ManifestPackage.EXPORTED_PACKAGE__XINTERNAL:
+				return isXInternal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,14 +190,19 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ManifestPackage.IMPORTED_PACKAGE__NAME:
+			case ManifestPackage.EXPORTED_PACKAGE__NAME:
 				setName((String)newValue);
 				return;
-			case ManifestPackage.IMPORTED_PACKAGE__VERSION:
-				setVersion((Version)newValue);
+			case ManifestPackage.EXPORTED_PACKAGE__XFRIENDS:
+				getXFriends().clear();
+				getXFriends().addAll((Collection<? extends Bundle>)newValue);
+				return;
+			case ManifestPackage.EXPORTED_PACKAGE__XINTERNAL:
+				setXInternal((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -208,11 +216,14 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ManifestPackage.IMPORTED_PACKAGE__NAME:
+			case ManifestPackage.EXPORTED_PACKAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ManifestPackage.IMPORTED_PACKAGE__VERSION:
-				setVersion((Version)null);
+			case ManifestPackage.EXPORTED_PACKAGE__XFRIENDS:
+				getXFriends().clear();
+				return;
+			case ManifestPackage.EXPORTED_PACKAGE__XINTERNAL:
+				setXInternal(XINTERNAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -226,10 +237,12 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ManifestPackage.IMPORTED_PACKAGE__NAME:
+			case ManifestPackage.EXPORTED_PACKAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ManifestPackage.IMPORTED_PACKAGE__VERSION:
-				return version != null;
+			case ManifestPackage.EXPORTED_PACKAGE__XFRIENDS:
+				return xFriends != null && !xFriends.isEmpty();
+			case ManifestPackage.EXPORTED_PACKAGE__XINTERNAL:
+				return xInternal != XINTERNAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -246,8 +259,10 @@ public class ImportedPackageImpl extends EObjectImpl implements ImportedPackage 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", xInternal: ");
+		result.append(xInternal);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ImportedPackageImpl
+} //ExportedPackageImpl
