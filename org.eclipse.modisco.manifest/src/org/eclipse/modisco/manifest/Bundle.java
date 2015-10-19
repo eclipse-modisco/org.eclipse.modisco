@@ -1,16 +1,18 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -20,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.manifest.Bundle#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Bundle#isSingleton <em>Singleton</em>}</li>
@@ -31,8 +34,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.manifest.Bundle#getVendor <em>Vendor</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Bundle#getRequiredBundles <em>Required Bundles</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Bundle#getImportedPackages <em>Imported Packages</em>}</li>
+ *   <li>{@link org.eclipse.modisco.manifest.Bundle#getExportPackages <em>Export Packages</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.manifest.ManifestPackage#getBundle()
  * @model
@@ -268,7 +271,7 @@ public interface Bundle extends EObject {
 	 * The list contents are of type {@link org.eclipse.modisco.manifest.ImportedPackage}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Imported Packages</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Imported Packages</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -278,5 +281,21 @@ public interface Bundle extends EObject {
 	 * @generated
 	 */
 	EList<ImportedPackage> getImportedPackages();
+
+	/**
+	 * Returns the value of the '<em><b>Export Packages</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.manifest.ExportedPackage}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Export Packages</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Export Packages</em>' reference list.
+	 * @see org.eclipse.modisco.manifest.ManifestPackage#getBundle_ExportPackages()
+	 * @model
+	 * @generated
+	 */
+	EList<ExportedPackage> getExportPackages();
 
 } // Bundle

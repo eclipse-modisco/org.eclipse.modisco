@@ -1,26 +1,25 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.modisco.manifest.Bundle;
-import org.eclipse.modisco.manifest.ImportedPackage;
-import org.eclipse.modisco.manifest.ManifestFactory;
-import org.eclipse.modisco.manifest.ManifestPackage;
-import org.eclipse.modisco.manifest.RequiredBundle;
-import org.eclipse.modisco.manifest.Version;
+
+import org.eclipse.modisco.manifest.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +36,7 @@ public class ManifestFactoryImpl extends EFactoryImpl implements ManifestFactory
 	 */
 	public static ManifestFactory init() {
 		try {
-			ManifestFactory theManifestFactory = (ManifestFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/manifest"); 
+			ManifestFactory theManifestFactory = (ManifestFactory)EPackage.Registry.INSTANCE.getEFactory(ManifestPackage.eNS_URI);
 			if (theManifestFactory != null) {
 				return theManifestFactory;
 			}
@@ -70,6 +69,7 @@ public class ManifestFactoryImpl extends EFactoryImpl implements ManifestFactory
 			case ManifestPackage.REQUIRED_BUNDLE: return createRequiredBundle();
 			case ManifestPackage.IMPORTED_PACKAGE: return createImportedPackage();
 			case ManifestPackage.VERSION: return createVersion();
+			case ManifestPackage.EXPORTED_PACKAGE: return createExportedPackage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -113,6 +113,16 @@ public class ManifestFactoryImpl extends EFactoryImpl implements ManifestFactory
 	public Version createVersion() {
 		VersionImpl version = new VersionImpl();
 		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExportedPackage createExportedPackage() {
+		ExportedPackageImpl exportedPackage = new ExportedPackageImpl();
+		return exportedPackage;
 	}
 
 	/**

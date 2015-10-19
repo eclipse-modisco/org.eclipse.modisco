@@ -1,27 +1,35 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest.impl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.modisco.manifest.Bundle;
+import org.eclipse.modisco.manifest.ExportedPackage;
 import org.eclipse.modisco.manifest.ImportedPackage;
 import org.eclipse.modisco.manifest.ManifestPackage;
 import org.eclipse.modisco.manifest.RequiredBundle;
@@ -32,6 +40,7 @@ import org.eclipse.modisco.manifest.RequiredBundle;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#isSingleton <em>Singleton</em>}</li>
@@ -43,8 +52,8 @@ import org.eclipse.modisco.manifest.RequiredBundle;
  *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#getVendor <em>Vendor</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#getRequiredBundles <em>Required Bundles</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#getImportedPackages <em>Imported Packages</em>}</li>
+ *   <li>{@link org.eclipse.modisco.manifest.impl.BundleImpl#getExportPackages <em>Export Packages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -228,6 +237,16 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 	 * @ordered
 	 */
 	protected EList<ImportedPackage> importedPackages;
+
+	/**
+	 * The cached value of the '{@link #getExportPackages() <em>Export Packages</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExportPackages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExportedPackage> exportPackages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -445,6 +464,18 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ExportedPackage> getExportPackages() {
+		if (exportPackages == null) {
+			exportPackages = new EObjectResolvingEList<ExportedPackage>(ExportedPackage.class, this, ManifestPackage.BUNDLE__EXPORT_PACKAGES);
+		}
+		return exportPackages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -484,6 +515,8 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 				return getRequiredBundles();
 			case ManifestPackage.BUNDLE__IMPORTED_PACKAGES:
 				return getImportedPackages();
+			case ManifestPackage.BUNDLE__EXPORT_PACKAGES:
+				return getExportPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -529,6 +562,10 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 				getImportedPackages().clear();
 				getImportedPackages().addAll((Collection<? extends ImportedPackage>)newValue);
 				return;
+			case ManifestPackage.BUNDLE__EXPORT_PACKAGES:
+				getExportPackages().clear();
+				getExportPackages().addAll((Collection<? extends ExportedPackage>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -571,6 +608,9 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 			case ManifestPackage.BUNDLE__IMPORTED_PACKAGES:
 				getImportedPackages().clear();
 				return;
+			case ManifestPackage.BUNDLE__EXPORT_PACKAGES:
+				getExportPackages().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -603,6 +643,8 @@ public class BundleImpl extends EObjectImpl implements Bundle {
 				return requiredBundles != null && !requiredBundles.isEmpty();
 			case ManifestPackage.BUNDLE__IMPORTED_PACKAGES:
 				return importedPackages != null && !importedPackages.isEmpty();
+			case ManifestPackage.BUNDLE__EXPORT_PACKAGES:
+				return exportPackages != null && !exportPackages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

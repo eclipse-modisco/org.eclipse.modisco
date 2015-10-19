@@ -1,13 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -37,7 +38,7 @@ public interface ManifestPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "manifest"; //$NON-NLS-1$
+	String eNAME = "manifest";
 
 	/**
 	 * The package namespace URI.
@@ -45,7 +46,7 @@ public interface ManifestPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/MoDisco/manifest"; //$NON-NLS-1$
+	String eNS_URI = "http://www.eclipse.org/MoDisco/manifest";
 
 	/**
 	 * The package namespace name.
@@ -53,7 +54,7 @@ public interface ManifestPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "manifest"; //$NON-NLS-1$
+	String eNS_PREFIX = "manifest";
 
 	/**
 	 * The singleton instance of the package.
@@ -164,14 +165,22 @@ public interface ManifestPackage extends EPackage {
 	int BUNDLE__IMPORTED_PACKAGES = 9;
 
 	/**
+	 * The feature id for the '<em><b>Export Packages</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUNDLE__EXPORT_PACKAGES = 10;
+
+	/**
 	 * The number of structural features of the '<em>Bundle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUNDLE_FEATURE_COUNT = 10;
-
+	int BUNDLE_FEATURE_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.manifest.impl.RequiredBundleImpl <em>Required Bundle</em>}' class.
@@ -209,7 +218,6 @@ public interface ManifestPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIRED_BUNDLE_FEATURE_COUNT = 2;
-
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.manifest.impl.ImportedPackageImpl <em>Imported Package</em>}' class.
@@ -302,6 +310,52 @@ public interface ManifestPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERSION_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.manifest.impl.ExportedPackageImpl <em>Exported Package</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.manifest.impl.ExportedPackageImpl
+	 * @see org.eclipse.modisco.manifest.impl.ManifestPackageImpl#getExportedPackage()
+	 * @generated
+	 */
+	int EXPORTED_PACKAGE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPORTED_PACKAGE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>XFriends</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPORTED_PACKAGE__XFRIENDS = 1;
+
+	/**
+	 * The feature id for the '<em><b>XInternal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPORTED_PACKAGE__XINTERNAL = 2;
+
+	/**
+	 * The number of structural features of the '<em>Exported Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPORTED_PACKAGE_FEATURE_COUNT = 3;
 
 
 	/**
@@ -425,6 +479,17 @@ public interface ManifestPackage extends EPackage {
 	EReference getBundle_ImportedPackages();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.manifest.Bundle#getExportPackages <em>Export Packages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Export Packages</em>'.
+	 * @see org.eclipse.modisco.manifest.Bundle#getExportPackages()
+	 * @see #getBundle()
+	 * @generated
+	 */
+	EReference getBundle_ExportPackages();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.manifest.RequiredBundle <em>Required Bundle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,6 +608,49 @@ public interface ManifestPackage extends EPackage {
 	EAttribute getVersion_MaximumIsInclusive();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.manifest.ExportedPackage <em>Exported Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exported Package</em>'.
+	 * @see org.eclipse.modisco.manifest.ExportedPackage
+	 * @generated
+	 */
+	EClass getExportedPackage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.manifest.ExportedPackage#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.modisco.manifest.ExportedPackage#getName()
+	 * @see #getExportedPackage()
+	 * @generated
+	 */
+	EAttribute getExportedPackage_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.manifest.ExportedPackage#getXFriends <em>XFriends</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>XFriends</em>'.
+	 * @see org.eclipse.modisco.manifest.ExportedPackage#getXFriends()
+	 * @see #getExportedPackage()
+	 * @generated
+	 */
+	EReference getExportedPackage_XFriends();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.manifest.ExportedPackage#isXInternal <em>XInternal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>XInternal</em>'.
+	 * @see org.eclipse.modisco.manifest.ExportedPackage#isXInternal()
+	 * @see #getExportedPackage()
+	 * @generated
+	 */
+	EAttribute getExportedPackage_XInternal();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -655,6 +763,14 @@ public interface ManifestPackage extends EPackage {
 		EReference BUNDLE__IMPORTED_PACKAGES = eINSTANCE.getBundle_ImportedPackages();
 
 		/**
+		 * The meta object literal for the '<em><b>Export Packages</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUNDLE__EXPORT_PACKAGES = eINSTANCE.getBundle_ExportPackages();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.modisco.manifest.impl.RequiredBundleImpl <em>Required Bundle</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -747,6 +863,40 @@ public interface ManifestPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VERSION__MAXIMUM_IS_INCLUSIVE = eINSTANCE.getVersion_MaximumIsInclusive();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.modisco.manifest.impl.ExportedPackageImpl <em>Exported Package</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.modisco.manifest.impl.ExportedPackageImpl
+		 * @see org.eclipse.modisco.manifest.impl.ManifestPackageImpl#getExportedPackage()
+		 * @generated
+		 */
+		EClass EXPORTED_PACKAGE = eINSTANCE.getExportedPackage();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPORTED_PACKAGE__NAME = eINSTANCE.getExportedPackage_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>XFriends</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPORTED_PACKAGE__XFRIENDS = eINSTANCE.getExportedPackage_XFriends();
+
+		/**
+		 * The meta object literal for the '<em><b>XInternal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPORTED_PACKAGE__XINTERNAL = eINSTANCE.getExportedPackage_XInternal();
 
 	}
 

@@ -1,13 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest;
 
 import org.eclipse.emf.ecore.EFactory;
@@ -64,6 +65,15 @@ public interface ManifestFactory extends EFactory {
 	 * @generated
 	 */
 	Version createVersion();
+
+	/**
+	 * Returns a new object of class '<em>Exported Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exported Package</em>'.
+	 * @generated
+	 */
+	ExportedPackage createExportedPackage();
 
 	/**
 	 * Returns the package supported by this factory.

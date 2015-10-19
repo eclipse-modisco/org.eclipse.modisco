@@ -1,13 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.manifest.Version#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Version#isMinimumIsInclusive <em>Minimum Is Inclusive</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Version#getMaximum <em>Maximum</em>}</li>
  *   <li>{@link org.eclipse.modisco.manifest.Version#isMaximumIsInclusive <em>Maximum Is Inclusive</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.manifest.ManifestPackage#getVersion()
  * @model

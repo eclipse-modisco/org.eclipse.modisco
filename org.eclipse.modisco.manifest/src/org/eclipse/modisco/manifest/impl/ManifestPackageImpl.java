@@ -1,21 +1,25 @@
-/*******************************************************************************
- * Copyright (c) 2010 Mia-Software.
+/**
+ * Copyright (c) 2010, 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
- *    Frederic Madiot (Mia-Software) - initial API and implementation
- *******************************************************************************/
+ *     Frederic Madiot (Mia-Software) - metamodel design and initial implementation
+ *     Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ */
 package org.eclipse.modisco.manifest.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.modisco.manifest.Bundle;
+import org.eclipse.modisco.manifest.ExportedPackage;
 import org.eclipse.modisco.manifest.ImportedPackage;
 import org.eclipse.modisco.manifest.ManifestFactory;
 import org.eclipse.modisco.manifest.ManifestPackage;
@@ -56,6 +60,13 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 	 * @generated
 	 */
 	private EClass versionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exportedPackageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -222,6 +233,15 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBundle_ExportPackages() {
+		return (EReference)bundleEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRequiredBundle() {
 		return requiredBundleEClass;
 	}
@@ -321,6 +341,42 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getExportedPackage() {
+		return exportedPackageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExportedPackage_Name() {
+		return (EAttribute)exportedPackageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExportedPackage_XFriends() {
+		return (EReference)exportedPackageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExportedPackage_XInternal() {
+		return (EAttribute)exportedPackageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ManifestFactory getManifestFactory() {
 		return (ManifestFactory)getEFactoryInstance();
 	}
@@ -355,6 +411,7 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 		createEAttribute(bundleEClass, BUNDLE__VENDOR);
 		createEReference(bundleEClass, BUNDLE__REQUIRED_BUNDLES);
 		createEReference(bundleEClass, BUNDLE__IMPORTED_PACKAGES);
+		createEReference(bundleEClass, BUNDLE__EXPORT_PACKAGES);
 
 		requiredBundleEClass = createEClass(REQUIRED_BUNDLE);
 		createEAttribute(requiredBundleEClass, REQUIRED_BUNDLE__SYMBOLIC_NAME);
@@ -369,6 +426,11 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 		createEAttribute(versionEClass, VERSION__MINIMUM_IS_INCLUSIVE);
 		createEAttribute(versionEClass, VERSION__MAXIMUM);
 		createEAttribute(versionEClass, VERSION__MAXIMUM_IS_INCLUSIVE);
+
+		exportedPackageEClass = createEClass(EXPORTED_PACKAGE);
+		createEAttribute(exportedPackageEClass, EXPORTED_PACKAGE__NAME);
+		createEReference(exportedPackageEClass, EXPORTED_PACKAGE__XFRIENDS);
+		createEAttribute(exportedPackageEClass, EXPORTED_PACKAGE__XINTERNAL);
 	}
 
 	/**
@@ -412,6 +474,7 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 		initEAttribute(getBundle_Vendor(), ecorePackage.getEString(), "vendor", null, 0, 1, Bundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBundle_RequiredBundles(), this.getRequiredBundle(), null, "requiredBundles", null, 0, -1, Bundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBundle_ImportedPackages(), this.getImportedPackage(), null, "importedPackages", null, 0, -1, Bundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBundle_ExportPackages(), this.getExportedPackage(), null, "exportPackages", null, 0, -1, Bundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredBundleEClass, RequiredBundle.class, "RequiredBundle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRequiredBundle_SymbolicName(), ecorePackage.getEString(), "symbolicName", null, 0, 1, RequiredBundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -426,6 +489,11 @@ public class ManifestPackageImpl extends EPackageImpl implements ManifestPackage
 		initEAttribute(getVersion_MinimumIsInclusive(), ecorePackage.getEBoolean(), "minimumIsInclusive", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVersion_Maximum(), ecorePackage.getEString(), "maximum", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVersion_MaximumIsInclusive(), ecorePackage.getEBoolean(), "maximumIsInclusive", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(exportedPackageEClass, ExportedPackage.class, "ExportedPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExportedPackage_Name(), ecorePackage.getEString(), "name", null, 1, 1, ExportedPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExportedPackage_XFriends(), this.getBundle(), null, "xFriends", null, 0, -1, ExportedPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExportedPackage_XInternal(), ecorePackage.getEBoolean(), "xInternal", null, 1, 1, ExportedPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
