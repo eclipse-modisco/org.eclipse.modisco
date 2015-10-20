@@ -8,6 +8,7 @@
    
     Contributors:
        Gabriel Barbier (Mia-Software) - initial API and implementation
+       Grégoire Dupé (Mia-Software) - Bug 480189 - org.eclipse.modisco.{manifest,eclipseplugin,properties}* should be added in the updatesite
  -->
 <feature
       id="org.eclipse.modisco.java.feature"
@@ -138,5 +139,40 @@ http://www.eclipse.org/legal/epl-v10.html
          download-size="0"
          install-size="0"
          version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.modisco.manifest"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.modisco.manifest.discoverer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.modisco.manifest.discoverer.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.modisco.properties.discoverer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.modisco.properties.discoverer.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
