@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011 Mia-Software.
+ * Copyright (c) 2011, 2015 Mia-Software, and INRIA.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -7,7 +7,8 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Guillaume Doux (INRIA) -  refactoring and move to a separate plug-in
+ *    Guillaume Doux (INRIA) - refactoring and move to a separate plug-in
+ *    Grégoire Dupé (Mia-Software) - Bug 482715 - NumberFormatException in SystemInfo.computeInfo (180)
  *******************************************************************************/
 package org.eclipse.modisco.utils.core.internal.exported;
 
@@ -26,6 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.eclipse.emf.facet.util.core.Logger;
+import org.eclipse.modisco.utils.core.internal.Activator;
 
 /**
  * Class providing information about the system that are not provided internally by JAVA
@@ -177,7 +181,11 @@ public final class SystemInfo {
 			List<String> infos = getInfos("Capacity", result); //$NON-NLS-1$
 			long mem = 0;
 			for (String info : infos) {
-				mem += Long.parseLong(info);
+				try {
+					mem += Long.parseLong(info);
+				} catch (NumberFormatException e) {
+					Logger.logWarning(e, Activator.getDefault());
+				}
 			}
 			this.memory = "" + mem; //$NON-NLS-1$
 		} else {
