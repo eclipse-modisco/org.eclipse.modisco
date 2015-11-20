@@ -9,6 +9,19 @@
       </discoverer>
    </extension>
    <extension
+         id="benchmark"
+         name="benchmark"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
          point="org.eclipse.gmt.modisco.discoverers">
       <discoverer
             class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererBenchmarkDiscoverer"

@@ -8,7 +8,7 @@
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
  * 
  ******************************************************************************/ /]
-[module HtmlReport('http://www.eclipse.org/modisco/infra/discovery/0.1.incubation/benchmark','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch')/]
+[module HtmlReport('http://www.eclipse.org/modisco/infra/discovery/benchmark/0.11.incubation/internal/benchmark','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch')/]
 
 [query public maxExecutionTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxExecutionTime(java.util.Collection)', Sequence{iterations})/]
 [query public maxSaveTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxSaveTime(java.util.Collection)', Sequence{iterations})/]

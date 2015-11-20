@@ -36,7 +36,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/org/eclipse/modisco/infra/discovery/benchmark/reporting/HtmlReport";
+    public static final String MODULE_FILE_NAME = "/org/eclipse/modisco/infra/discovery/benchmark/core/internal/reporting/HtmlReport";
     
     /**
      * The name of the templates that are to be generated.
@@ -130,6 +130,13 @@ public class HtmlReport extends AbstractAcceleoGenerator {
                 List<String> arguments = new ArrayList<String>();
                 
                 /*
+                 * If you want to change the content of this method, do NOT forget to change the "@generated"
+                 * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+                 * of the Acceleo module with the main template that has caused the creation of this class will
+                 * revert your modifications.
+                 */
+
+                /*
                  * Add in this list all the arguments used by the starting point of the generation
                  * If your main template is called on an element of your model and a String, you can
                  * add in "arguments" this "String" attribute.
@@ -139,14 +146,12 @@ public class HtmlReport extends AbstractAcceleoGenerator {
                 
                 /*
                  * Add the properties from the launch arguments.
-                 * If you want to programmatically add new arguments, add them in "propertiesFiles"
+                 * If you want to programmatically add new properties, add them in "propertiesFiles"
                  * You can add the absolute path of a properties files, or even a project relative path.
                  * If you want to add another "protocol" for your properties files, please override 
                  * "getPropertiesLoaderService(AcceleoService)" in order to return a new property loader.
-                 * The basic properties loader will look for properties in the current project if the path
-                 * of the properties file is like this "packagea.packageb.packagec.default" for a properties
-                 * file named default.properties, or if the path is an absolute path. With a new property
-                 * loader you could for example, look for properties files in a bundle.
+                 * The behavior of the properties loader service is explained in the Acceleo documentation
+                 * (Help -> Help Contents).
                  */
                  
                 for (int i = 2; i < args.length; i++) {
@@ -182,6 +187,11 @@ public class HtmlReport extends AbstractAcceleoGenerator {
          */
 
         //org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(model);
+
+        /*
+         * If you want to check for potential errors in your models before the launch of the generation, you
+         * use the code below.
+         */
 
         //if (model != null && model.eResource() != null) {
         //    List<org.eclipse.emf.ecore.resource.Resource.Diagnostic> errors = model.eResource().getErrors();
@@ -261,13 +271,38 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     @Override
     public List<String> getProperties() {
         /*
+         * If you want to change the content of this method, do NOT forget to change the "@generated"
+         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+         * of the Acceleo module with the main template that has caused the creation of this class will
+         * revert your modifications.
+         */
+
+        /*
          * TODO if your generation module requires access to properties files, add their qualified path to the list here.
-         * Properties files are expected to be in source folders, and the path here to be the qualified path as if referring
-         * to a Java class. For example, if you have a file named "messages.properties" in package "org.eclipse.acceleo.sample",
-         * the path that needs be added to this list is "org.eclipse.acceleo.sample.messages". If you want to change the content
-         * of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
-         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation of 
-         * this class will revert your modifications.
+         * 
+         * Properties files can be located in an Eclipse plug-in or in the file system (all Acceleo projects are Eclipse
+         * plug-in). In order to use properties files located in an Eclipse plugin, you need to add the path of the properties
+         * files to the "propertiesFiles" list:
+         * 
+         * final String prefix = "platform:/plugin/";
+         * final String pluginName = "org.eclipse.acceleo.module.sample";
+         * final String packagePath = "/org/eclipse/acceleo/module/sample/properties/";
+         * final String fileName = "default.properties";
+         * propertiesFiles.add(prefix + pluginName + packagePath + fileName);
+         * 
+         * With this mechanism, you can load properties files from your plugin or from another plugin.
+         * 
+         * You may want to load properties files from the file system, for that you need to add the absolute path of the file:
+         * 
+         * propertiesFiles.add("C:\Users\MyName\MyFile.properties");
+         * 
+         * If you want to let your users add properties files located in the same folder as the model:
+         *
+         * if (EMFPlugin.IS_ECLIPSE_RUNNING && model != null && model.eResource() != null) { 
+         *     propertiesFiles.addAll(AcceleoEngineUtils.getPropertiesFilesNearModel(model.eResource()));
+         * }
+         * 
+         * To learn more about Properties Files, have a look at the Acceleo documentation (Help -> Help Contents).
          */
         return propertiesFiles;
     }
@@ -280,6 +315,9 @@ public class HtmlReport extends AbstractAcceleoGenerator {
      * @generated
      * @since 3.1
      */
+    /*
+    @Override
+    */
     public void addPropertiesFile(String propertiesFile) {
         this.propertiesFiles.add(propertiesFile);
     }
@@ -305,35 +343,37 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        //gdupe> The method isInWorkspace() does not exists in Helios. This avoid
-        // to be install MoDisco on an Helios. The code generator is not used in a
-        // workspace context : we do not need explicit load of the meta-models
-        // That why I've commented the following lines.
+        
         /*
-        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.class)) {
-            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE);
-        }
-        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.class)) {
-            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE);
-        }
-        */
+         * If you want to change the content of this method, do NOT forget to change the "@generated"
+         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+         * of the Acceleo module with the main template that has caused the creation of this class will
+         * revert your modifications.
+         */
+        
         /*
-         * TODO If you need additional package registrations, you can register them here. The following line
-         * (in comment) is an example of the package registration for UML. If you want to change the content
-         * of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to
-         * "@generated NOT". Without this new tag, any compilation of the Acceleo module with the main template
-         * that has caused the creation of this class will revert your modifications. You can use the method
-         * "isInWorkspace(Class c)" to check if the package that you are about to register is in the workspace.
-         * To register a package properly, please follow the following conventions:
+         * If you need additional package registrations, you can register them here. The following line
+         * (in comment) is an example of the package registration for UML.
          * 
+         * You can use the method  "isInWorkspace(Class c)" to check if the package that you are about to
+         * register is in the workspace.
+         * 
+         * To register a package properly, please follow the following conventions:
+         *
+         * If the package is located in another plug-in, already installed in Eclipse. The following content should
+         * have been generated at the beginning of this method. Do not register the package using this mechanism if
+         * the metamodel is located in the workspace.
+         *  
          * if (!isInWorkspace(UMLPackage.class)) {
          *     // The normal package registration if your metamodel is in a plugin.
          *     resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
-         * } else {
-         *     // The package registration that will be used if the metamodel is not deployed in a plugin.
-         *     // This should be used if your metamodel is in your workspace and if you are using binary resource serialization.
-         *     resourceSet.getPackageRegistry().put("/myproject/myfolder/mysubfolder/MyUMLMetamodel.ecore", UMLPackage.eINSTANCE);
          * }
+         * 
+         * If the package is located in another project in your workspace, the plugin containing the package has not
+         * been register by EMF and Acceleo should register it automatically. If you want to use the generator in
+         * stand alone, the regular registration (seen a couple lines before) is needed.
+         * 
+         * To learn more about Package Registration, have a look at the Acceleo documentation (Help -> Help Contents).
          */
     }
 
@@ -348,11 +388,19 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     public void registerResourceFactories(ResourceSet resourceSet) {
         super.registerResourceFactories(resourceSet);
         /*
+         * If you want to change the content of this method, do NOT forget to change the "@generated"
+         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+         * of the Acceleo module with the main template that has caused the creation of this class will
+         * revert your modifications.
+         */
+        
+        /*
          * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML. If you want to change the content
-         * of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
-         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation
-         * of this class will revert your modifications. 
+         * (in comment) is an example of the resource factory registration for UML.
+         *
+         * If you want to use the generator in stand alone, the resource factory registration will be required.
+         *  
+         * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
          */ 
         
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
