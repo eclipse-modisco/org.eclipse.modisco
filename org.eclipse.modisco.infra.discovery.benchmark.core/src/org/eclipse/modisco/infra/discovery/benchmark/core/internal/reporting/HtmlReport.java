@@ -7,8 +7,13 @@
  * 
  * Contributors:
  *     Obeo - initial API and implementation
+<<<<<<< HEAD   (b284dc Bug 482715 - NumberFormatException in SystemInfo.computeInfo)
  *     Guillaume Doux (INRIA)
  *     Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+=======
+ *     Guillaume Doux - INRIA
+ *     Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
+>>>>>>> BRANCH (65f5da Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting;
 
@@ -344,6 +349,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+<<<<<<< HEAD   (b284dc Bug 482715 - NumberFormatException in SystemInfo.computeInfo)
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
@@ -351,8 +357,26 @@ public class HtmlReport extends AbstractAcceleoGenerator {
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
+=======
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE);
+        }
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE);
+        }
+>>>>>>> BRANCH (65f5da Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
         
         /*
+<<<<<<< HEAD   (b284dc Bug 482715 - NumberFormatException in SystemInfo.computeInfo)
+=======
+         * If you want to change the content of this method, do NOT forget to change the "@generated"
+         * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
+         * of the Acceleo module with the main template that has caused the creation of this class will
+         * revert your modifications.
+         */
+        
+        /*
+>>>>>>> BRANCH (65f5da Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
          * If you need additional package registrations, you can register them here. The following line
          * (in comment) is an example of the package registration for UML.
          * 

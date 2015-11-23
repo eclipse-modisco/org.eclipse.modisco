@@ -9,6 +9,10 @@
  * Contributors:
  *    Guillaume Doux (INRIA) - Initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+<<<<<<< HEAD   (b284dc Bug 482715 - NumberFormatException in SystemInfo.computeInfo)
+=======
+ *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
+>>>>>>> BRANCH (65f5da Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -202,28 +206,31 @@ implements IDiscovererBenchmarkDiscoverer {
 					if (IEventNotifier.class.isInstance(discoverer)) {
 						((IEventNotifier) discoverer).addListener(this.recorder);
 					}
-
 					progressMonitor.subTask("Project discovery: iteration " + String.valueOf(getIterations()));
 					this.recorder.start();
-
 					try {
 						if (discoverer.isApplicableTo(project)) {
 							IProgressMonitor subProgressMonitor = new SubProgressMonitor(progressMonitor, EIGHT);
 							discoverer.discoverElement(project, subProgressMonitor);
 						} else {
-							MoDiscoLogger.logWarning("Discoverer " + discovererId + " is not applicable on project " + project.getName(),
-									org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
+							final String message = String.format(
+									"Discoverer '%s' is not applicable on project '%s'", //$NON-NLS-1$
+									discovererId,
+									project.getName()
+									);
+							MoDiscoLogger.logWarning(
+									message, Activator.getDefault());
 						}
-					} catch (DiscoveryException e) {
+					} catch (Exception e) {
 						failure = true;
 						discoveryErrors.append(e.getStackTrace().toString());
+						final String message = String.format(
+								"Benchmark of discoverer '%s' fails on project '%s'", //$NON-NLS-1$
+								discovererId,
+								project.getName()
+								);
 						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
-					} catch (ClassCastException e) {
-						failure = true;
-						discoveryErrors.append(e.getStackTrace().toString());
-						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+								message, Activator.getDefault());
 					}
 					this.recorder.stop();
 					this.events.addAll(this.recorder.getEvents());
@@ -237,9 +244,7 @@ implements IDiscovererBenchmarkDiscoverer {
 						discoveryIteration.setDiscoveryErrors(discoveryErrors.toString());
 					}
 					disco.getIterations().add(discoveryIteration);
-
 				}
-
 				postDiscoveryDiscoInit(disco, discoverer);
 				if (this.isTargetSerializationChosen()) {
 					try {

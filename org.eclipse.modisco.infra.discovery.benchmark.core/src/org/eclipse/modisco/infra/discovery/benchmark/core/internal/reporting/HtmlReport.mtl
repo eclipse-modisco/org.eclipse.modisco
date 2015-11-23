@@ -8,13 +8,17 @@
  * Contributors:
  *    Guillaume Doux (INRIA) - Initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
+<<<<<<< HEAD   (b284dc Bug 482715 - NumberFormatException in SystemInfo.computeInfo)
+=======
+ *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
+>>>>>>> BRANCH (65f5da Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
  ******************************************************************************/ /]
 [module HtmlReport('http://www.eclipse.org/modisco/infra/discovery/benchmark/0.11.incubation/internal/benchmark','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch')/]
 
-[query public maxExecutionTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxExecutionTime(java.util.Collection)', Sequence{iterations})/]
-[query public maxSaveTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxSaveTime(java.util.Collection)', Sequence{iterations})/]
-[query public sizeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'sizeWithUnit(java.lang.Double)', Sequence{value})/]
-[query public timeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'timeWithUnit(java.lang.Double)', Sequence{value})/]
+[query public maxExecutionTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'maxExecutionTime(java.util.Collection)', Sequence{iterations})/]
+[query public maxSaveTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'maxSaveTime(java.util.Collection)', Sequence{iterations})/]
+[query public sizeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'sizeWithUnit(java.lang.Double)', Sequence{value})/]
+[query public timeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'timeWithUnit(java.lang.Double)', Sequence{value})/]
 
 [template public HtmlReport(b : Benchmark)]
 	
