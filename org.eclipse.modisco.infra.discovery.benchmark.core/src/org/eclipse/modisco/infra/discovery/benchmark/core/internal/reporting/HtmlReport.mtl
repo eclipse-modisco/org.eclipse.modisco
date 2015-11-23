@@ -5,15 +5,16 @@
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  * 
- * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ * Contributors:
+ *    Guillaume Doux (INRIA) - Initial API and implementation
+ *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
  ******************************************************************************/ /]
-[module HtmlReport('http://www.eclipse.org/modisco/infra/discovery/0.1.incubation/benchmark','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch')/]
+[module HtmlReport('http://www.eclipse.org/modisco/infra/discovery/benchmark/0.11.incubation/internal/benchmark','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/catalog','http://www.eclipse.org/MoDisco/Discovery/0.1.incubation/discovery/launch')/]
 
-[query public maxExecutionTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxExecutionTime(java.util.Collection)', Sequence{iterations})/]
-[query public maxSaveTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'maxSaveTime(java.util.Collection)', Sequence{iterations})/]
-[query public sizeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'sizeWithUnit(java.lang.Double)', Sequence{value})/]
-[query public timeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.reporting.internal.ReportingUtilities', 'timeWithUnit(java.lang.Double)', Sequence{value})/]
+[query public maxExecutionTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'maxExecutionTime(java.util.Collection)', Sequence{iterations})/]
+[query public maxSaveTime (iterations : Set(DiscoveryIteration)) : Real = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'maxSaveTime(java.util.Collection)', Sequence{iterations})/]
+[query public sizeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'sizeWithUnit(java.lang.Double)', Sequence{value})/]
+[query public timeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.ReportingUtilities', 'timeWithUnit(java.lang.Double)', Sequence{value})/]
 
 [template public HtmlReport(b : Benchmark)]
 	
