@@ -104,7 +104,7 @@ public class Application implements IApplication {
 			discoverer.setGenerateHtmlReport(false);
 		}
 		discoverer.discoverBenchmark(projectSet, new NullProgressMonitor());
-		System.out.println(discoverer.getTargetURI().toString());
+		DebugUtils.debug(discoverer.getTargetURI().toString());
 		return null;
 	}
 

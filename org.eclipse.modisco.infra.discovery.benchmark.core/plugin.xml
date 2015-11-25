@@ -32,6 +32,19 @@
       </application>
    </extension>
    <extension
+         id="xmiToHtml"
+         name="xmiToHtml"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.XmiToHtmlApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
          point="org.eclipse.gmt.modisco.discoverers">
       <discoverer
             class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererBenchmarkDiscoverer"
