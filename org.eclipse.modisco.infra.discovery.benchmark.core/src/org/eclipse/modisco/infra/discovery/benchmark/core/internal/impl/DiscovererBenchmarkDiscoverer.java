@@ -40,8 +40,6 @@ import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EPackage.Registry;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -58,7 +56,6 @@ import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.Htm
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.BenchmarkChartGeneration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
-import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkPackage;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.DiscoveryIteration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.EndEvent;
@@ -340,19 +337,7 @@ implements IDiscovererBenchmarkDiscoverer {
 		}
 		final ArrayList<Object> arguments = new ArrayList<Object>();
 		//Generation of the HTML report
-		try {
-			HtmlReport report = new HtmlReport(benchmark, file, arguments);
-			report.doGenerate(null);
-		} catch (Exception e) {
-			MoDiscoLogger.logWarning(e,
-					"Acceleo exception", //$NON-NLS-1$
-					Activator.getDefault());
-		}
-		//Generation of the charts
-		final BenchmarkChartGeneration chartGenerator = 
-				new BenchmarkChartGeneration(file, this.measureMemoryUse);
-		chartGenerator.generateAll(benchmark);
-
+		ReportUtils.generateReport(benchmark, file, arguments, this.measureMemoryUse);
 		if (iFile != null) {
 			final IContainer location = iFile.getParent();
 			location.refreshLocal(IResource.DEPTH_INFINITE, progressMonitor);

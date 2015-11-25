@@ -23,6 +23,10 @@ public class Messages extends NLS {
 	public static String Application_RecordMemoryUse;
 	public static String Application_XMI_Output;
 
+	public static String XmiToHtmlApplication_MeasureMemoryUse;
+	public static String XmiToHtmlApplication_Target_Folder_Path;
+	public static String XmiToHtmlApplication_XMI_file_path;
+
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
