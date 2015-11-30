@@ -44,6 +44,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
@@ -52,8 +53,6 @@ import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscover
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventNotifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.HtmlReport;
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.BenchmarkChartGeneration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
@@ -83,32 +82,21 @@ import org.eclipse.modisco.utils.core.internal.exported.SystemInfo;
  *
  */
 public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProjectSet>
-implements IDiscovererBenchmarkDiscoverer {
+		implements IDiscovererBenchmarkDiscoverer {
 
 	/**
 	 * Private integer constants
 	 */
 	private static final int ZERO = 0;
-	
 	private static final int TWO = 2;
-	
 	private static final int SIX = 6;
-
 	private static final int EIGHT = 8;
-
 	private static final int TEN = 10;
-
-	
 	private static final String SAVE_OPERATION = "SaveOperation";
-
 	private static final int INTERVAL = 1000;
-
 	private static final int MSINSEC = 1000;
-
 	private static final String CODE_EXTENSION = "java";
-
 	public static final String ID = "org.eclipse.modisco.infra.discovery.benchmark.core.api.benchmarkdiscoverer";
-
 	private static final long BYTEPERMB = 1024 * 1024;
 
 	private IDiscovererID discovererID;
@@ -117,11 +105,9 @@ implements IDiscovererBenchmarkDiscoverer {
 	private int memoryPollingInterval;
 	private boolean generateHtmlReport;
 	private URI htmlReportLocation;
-
 	private EventAndMemoryRecorder recorder;
 	private List<MemoryMeasurement> memoryMeasurements;
 	private List<Event> events;
-
 	private ResourceSet rSet;
 
 
@@ -142,7 +128,6 @@ implements IDiscovererBenchmarkDiscoverer {
 	 */
 	private IDiscovererList discoverers;
 
-
 	protected IDiscovererList getDiscoverers() {
 		return this.discoverers;
 	}
@@ -156,7 +141,6 @@ implements IDiscovererBenchmarkDiscoverer {
 		this.discoverers = discos;
 	}
 
-
 	/**
 	 * Method launching the discovery process on all the discoverers X all the projects
 	 * @param projects the set of projects to discover
@@ -167,61 +151,64 @@ implements IDiscovererBenchmarkDiscoverer {
 	public Resource discoverBenchmark(final IProjectSet projects, final IProgressMonitor progressMonitor) throws DiscoveryException {
 		progressMonitor.beginTask("Benchmark Discovery", TEN);
 		progressMonitor.subTask("Benchmark initialization");
-		Benchmark benchmark;
-		benchmark = benchmarkInit();
+		final Benchmark benchmark = benchmarkInit();
 		progressMonitor.worked(TWO);
-		this.recorder =  new EventAndMemoryRecorder(this.measureMemoryUse, this.memoryPollingInterval);
-
+		this.recorder =  new EventAndMemoryRecorder(this.measureMemoryUse, 
+				this.memoryPollingInterval);
 		for (IProject project : projects.sortBySize().getProjects()) {
-			progressMonitor.subTask("project initialization");
-			Project proj = createBenchmarkProjectAndFiles(project);
-			benchmark.getProjects().add(proj);
-
-			for (Discovery discoTemp : this.discoverers) {
+			progressMonitor.subTask("Project initialization");
+			final Project projectDesc = createBenchmarkProjectAndFiles(project);
+			benchmark.getProjects().add(projectDesc);
+			for (Discovery discovery : this.discoverers) {
 				progressMonitor.subTask("Discovery initialization");
-				Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
-				String discovererId = discoTemp.getDiscovererId();
-				AbstractModelDiscoverer<IProject> discoverer = (AbstractModelDiscoverer<IProject>) IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
+				final Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
+				final String discovererId = discovery.getDiscovererId();
+				final AbstractModelDiscoverer<IProject> discoverer = 
+						(AbstractModelDiscoverer<IProject>) 
+						IDiscoveryManager.INSTANCE.createDiscovererImpl(discovererId);
 				benchmark.getDiscoveries().add(disco);
-				preDiscoveryDiscoInit(proj, disco, discoTemp, (AbstractModelDiscoverer<IProject>) discoverer, discovererId);
+				preDiscoveryDiscoInit(projectDesc, disco, discovery, discoverer, 
+						discovererId);
 				setLaunchParameter(disco, discoverer);
-				String serializationLocation;
+				final URI resultSerializationLoc;
 				if (discoverer.getTargetURI() != null) {
-					serializationLocation = discoverer.getTargetURI().trimFileExtension().toString();
+					resultSerializationLoc = getSerializationLoc(discoverer);
 				} else {
-					serializationLocation = this.getTargetURI().trimFileExtension().toString();
+					resultSerializationLoc = getSerializationLoc(this);
 				}
 				for (int i = 1; i <= this.iterations;  i++) {
-					URI resultSerializationLocation =  URI.createURI(serializationLocation);
-					discoverer.setTargetURI(resultSerializationLocation.appendSegment(disco.getDiscovererId() + "_" + proj.getName() + "_iteration_" + String.valueOf(i) + ".xmi"));
+					final String suffix = String.format("%s_%s_i%s.xmi", //$NON-NLS-1$
+							disco.getDiscovererId(),
+							project.getName(),
+							String.valueOf(i));
+					final URI uri = resultSerializationLoc.appendSegment(suffix);
+					discoverer.setTargetURI(uri);
 					boolean failure = false;
-					StringBuilder discoveryErrors = new StringBuilder();
+					final StringBuilder discoveryErrors = new StringBuilder();
 					this.recorder.reset();
 					if (IEventNotifier.class.isInstance(discoverer)) {
 						((IEventNotifier) discoverer).addListener(this.recorder);
 					}
-
 					progressMonitor.subTask("Project discovery: iteration " + String.valueOf(getIterations()));
 					this.recorder.start();
-
 					try {
 						if (discoverer.isApplicableTo(project)) {
-							IProgressMonitor subProgressMonitor = new SubProgressMonitor(progressMonitor, EIGHT);
+							final IProgressMonitor subProgressMonitor =
+									new SubProgressMonitor(progressMonitor, EIGHT);
 							discoverer.discoverElement(project, subProgressMonitor);
 						} else {
-							MoDiscoLogger.logWarning("Discoverer " + discovererId + " is not applicable on project " + project.getName(),
-									org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
+							final String message = String.format(
+									"Discoverer '%s' is not applicable on project '%s'.", //$NON-NLS-1$
+									discovererId, project.getName());
+							Logger.logError(message, Activator.getDefault());
 						}
-					} catch (DiscoveryException e) {
+					} catch (Exception e) {
 						failure = true;
 						discoveryErrors.append(e.getStackTrace().toString());
-						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
-					} catch (ClassCastException e) {
-						failure = true;
-						discoveryErrors.append(e.getStackTrace().toString());
-						MoDiscoLogger.logError(e,
-								"Benchmark of discoverer " + discovererId + " fails on project" + project.getName(), org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+						final String message = String.format(
+								"Benchmark of discoverer %s fails on project%s", //$NON-NLS-1$
+								discovererId, project.getName());
+						Logger.logError(e, message, Activator.getDefault());
 					}
 					this.recorder.stop();
 					this.events.addAll(this.recorder.getEvents());
@@ -230,52 +217,56 @@ implements IDiscovererBenchmarkDiscoverer {
 					if (IEventNotifier.class.isInstance(discoverer)) {
 						((IEventNotifier) discoverer).removeListener(this.recorder);
 					}
-					DiscoveryIteration discoveryIteration = createDiscoveryIteration(this.recorder);
+					final DiscoveryIteration discoveryIteration =
+							createDiscoveryIteration(this.recorder);
 					if (failure) {
-						discoveryIteration.setDiscoveryErrors(discoveryErrors.toString());
+						discoveryIteration.setDiscoveryErrors(
+								discoveryErrors.toString());
 					}
 					disco.getIterations().add(discoveryIteration);
-
 				}
-
 				postDiscoveryDiscoInit(disco, discoverer);
 				if (this.isTargetSerializationChosen()) {
 					try {
 						saveTargetModel(benchmark);
 					} catch (IOException e) {
-						MoDiscoLogger.logError(e,
-								"Intermediate model save fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+						Logger.logError(e, "Failed to save the benchmark model.", //$NON-NLS-1$ 
+								Activator.getDefault());
 					}
 				}
 			}
 		}
 		benchmark.setJvmMaxHeapInMiB(computeMaxMemoryUsage());
 		try {
+			//1*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
+			final int work = getIterations() 
+					* projects.getProjects().size() 
+					* this.discoverers.getDiscoverers().size();
 			if (this.isTargetSerializationChosen()) {
-				progressMonitor.subTask("Save benchmark model");
+				progressMonitor.subTask("Saving benchmark model");
 				saveTargetModel(benchmark);
-				progressMonitor.worked(getIterations() * projects.getProjects().size() * this.discoverers.getDiscoverers().size()); //1*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
+				progressMonitor.worked(work); 
 			}
 			if (isGenerateHtmlReport()) {
-				progressMonitor.subTask("Generate benchmark report");
-				IProgressMonitor subProgressM = new SubProgressMonitor(progressMonitor, SIX);
+				progressMonitor.subTask("Generating benchmark report");
+				final IProgressMonitor subProgressM =
+						new SubProgressMonitor(progressMonitor, SIX);
 				generateHtmlReport(subProgressM, benchmark);
-				progressMonitor.worked(2 * getIterations() * projects.getProjects().size() * this.discoverers.getDiscoverers().size()); //2*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
+				 //2*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
+				final int work2 = 2 * work;
+				progressMonitor.worked(work2);
 			}
-		} catch (IOException e) {
-			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
-		} catch (CoreException e) {
-			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e,
-					"Report generation fail", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
 		}
-
-
 		progressMonitor.done();
 		return benchmark.eResource();
+	}
+
+	private static URI getSerializationLoc(
+			final AbstractModelDiscoverer<?> discoverer) {
+		final URI targetURI = discoverer.getTargetURI();
+		return targetURI.trimFileExtension();
 	}
 
 	/**
@@ -351,20 +342,23 @@ implements IDiscovererBenchmarkDiscoverer {
 	 */
 	private void setLaunchParameter(final Discovery disco, 
 			final AbstractModelDiscoverer<IProject> discoverer) {
-		if (disco.getDiscovererLaunchConfiguration() != null) {
-			for (ParameterValue pv : disco.getDiscovererLaunchConfiguration().getParameterValues()) {
-				DiscovererParameter parameter = pv.getParameter();
-				Object value = pv.getValue();
+		final LaunchConfiguration launchConfig = 
+				disco.getDiscovererLaunchConfiguration();
+		if (launchConfig != null) {
+			for (ParameterValue pv : launchConfig.getParameterValues()) {
+				final DiscovererParameter parameter = pv.getParameter();
+				final Object value = pv.getValue();
 				if (value != null) {
 					try {
 						if (parameter.getSetter() == null) {
-							parameter.setSetter(findSetter(discoverer.getClass(), parameter.getId()));
+							final Method setter = findSetter(
+									discoverer.getClass(), parameter.getId());
+							parameter.setSetter(setter);
 						}
 						this.setValue(parameter, discoverer, value);
 					} catch (DiscoveryException e) {
-						MoDiscoLogger.logWarning(e, e.getMessage(), Activator.getDefault());
+						Logger.logWarning(e, Activator.getDefault());
 					}
-
 				}
 			}
 		}
@@ -377,7 +371,8 @@ implements IDiscovererBenchmarkDiscoverer {
 	 * @param id
 	 * @return the setter
 	 */
-	private Method findSetter(final Class<? extends AbstractModelDiscoverer> clazz,
+	private static Method findSetter(
+			final Class<? extends AbstractModelDiscoverer> clazz,
 			final String id) {
 		for (Method method : clazz.getMethods()) {
 			if (method.isAnnotationPresent(Parameter.class)) {
@@ -394,21 +389,16 @@ implements IDiscovererBenchmarkDiscoverer {
 
 
 	/**
-	 * method to set the values of parameters: extracted from DiscoveryManager (org.eclipse.modisco.infra.discovery.core.internal)
+	 * method to set the values of parameters: extracted from DiscoveryManager
+	 * (org.eclipse.modisco.infra.discovery.core.internal)
+	 * 
 	 * @param parameter
 	 * @param discoverer
 	 * @param parameterValue
 	 * @throws DiscoveryException
 	 */
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#setValue
-	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter,
-	 * org.eclipse.modisco.infra.discovery.core.IDiscoverer, java.lang.Object)
-	 */
-	private void setValue(final DiscovererParameter parameter, final IDiscoverer<?> discoverer,
+	private static void setValue(final DiscovererParameter parameter, 
+			final IDiscoverer<?> discoverer,
 			final Object parameterValue) throws DiscoveryException {
 		try {
 			if (parameter.getField() != null
@@ -418,21 +408,28 @@ implements IDiscovererBenchmarkDiscoverer {
 					&& Modifier.isPublic(parameter.getSetter().getModifiers())) {
 				parameter.getSetter().invoke(discoverer, parameterValue);
 			} else {
-				throw new DiscoveryException(discoverer.getClass()
-						+ " discoverer does not implement public write access to the parameter " //$NON-NLS-1$
-						+ parameter.getId());
+				final String message = String.format(
+						"The discoverer '%s' does not implement public write access to the parameter '%s'", //$NON-NLS-1$
+						discoverer.getClass(),
+						parameter.getId());
+				throw new DiscoveryException(message);
 			}
 		} catch (IllegalArgumentException e) {
-			throw new DiscoveryException("Illegal parameter value for " //$NON-NLS-1$
-					+ parameter.getId() + " : " + parameterValue, e); //$NON-NLS-1$
+			onInvokeException(parameter, parameterValue, e);
 		} catch (IllegalAccessException e) {
-			throw new DiscoveryException("Illegal parameter value for " //$NON-NLS-1$
-					+ parameter.getId() + " : " + parameterValue, e); //$NON-NLS-1$
+			onInvokeException(parameter, parameterValue, e);
 		} catch (InvocationTargetException e) {
-			throw new DiscoveryException("Illegal parameter value for " //$NON-NLS-1$
-					+ parameter.getId() + " : " + parameterValue, e); //$NON-NLS-1$
+			onInvokeException(parameter, parameterValue, e);
 		}
+	}
 
+	private static void onInvokeException(final DiscovererParameter parameter, 
+			final Object parameterValue, final Exception e) 
+					throws DiscoveryException {
+		final String message = String.format(
+				"Illegal parameter value for '%s' : %s", //$NON-NLS-1$
+				parameter.getId(), parameterValue);
+		throw new DiscoveryException(message, e);
 	}
 
 	/**
@@ -442,11 +439,11 @@ implements IDiscovererBenchmarkDiscoverer {
 	 */
 	private void saveTargetModel(final Benchmark benchmark) throws IOException {
 		if ((this.getTargetURI() == null) && (this.getTargetModel() == null)) {
-			MoDiscoLogger.logWarning("The parameter TARGET_URI should not be empty", Activator.getDefault());
+			Logger.logWarning("The parameter TARGET_URI should not be empty", //$NON-NLS-1$
+					Activator.getDefault());
 			return;
 		}		
 		if (benchmark.eResource() == null) {
-
 			Resource res = null;
 			if (getTargetModel() == null) {
 				res = this.rSet.createResource(getTargetURI());
@@ -464,11 +461,9 @@ implements IDiscovererBenchmarkDiscoverer {
 					}
 				}
 			}
-//			res.getContents().addAll(eventsList);
 			res.getContents().addAll(eventTypeList);
 			this.setTargetModel(res);
 		}
-
 		this.saveTargetModel();
 	}
 
@@ -490,9 +485,8 @@ implements IDiscovererBenchmarkDiscoverer {
 	 * Initialize the benchmark model element with system information
 	 * @return the model element
 	 */
-	private Benchmark benchmarkInit() {
-
-		Benchmark benchmark = BenchmarkFactory.eINSTANCE.createBenchmark();
+	private static Benchmark benchmarkInit() {
+		final Benchmark benchmark = BenchmarkFactory.eINSTANCE.createBenchmark();
 		try {
 			SystemInfo sysInfo = SystemInfo.getInstance();
 			benchmark.setJvmMaxHeapInMiB(Runtime.getRuntime().maxMemory() / BYTEPERMB);
@@ -505,63 +499,80 @@ implements IDiscovererBenchmarkDiscoverer {
 			benchmark.setOsVersion(sysInfo.getOsVersion());
 			benchmark.setOsArchitecture(sysInfo.getArch());
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e,
-					"Could not get system information for benchmark", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e,
+					"Could not get system information for benchmark", //$NON-NLS-1$
+					Activator.getDefault());
 		}
 		return benchmark;
 	}
 
 	/**
-	 * Initialize the discovery model element before launchin the associated discoverer
-	 * @param proj the model element for project that will be discovered
-	 * @param disco the model element to initialize
-	 * @param discoT the model element representing the information concerning the discovery in the launch configuration
-	 * @param discoverer the real discoverer {@link AbstractModelDiscoverer}
-	 * @param discovererId the discoverer id
+	 * Initialize the discovery model element before launching the associated
+	 * discoverer
+	 * 
+	 * @param projectDesc
+	 *            the model element for project that will be discovered
+	 * @param disco
+	 *            the model element to initialize
+	 * @param discovery
+	 *            the model element representing the information concerning the
+	 *            discovery in the launch configuration
+	 * @param discoverer
+	 *            the real discoverer {@link AbstractModelDiscoverer}
+	 * @param discovererId
+	 *            the discoverer id
 	 */
-	private void preDiscoveryDiscoInit(final Project proj, final Discovery disco, final Discovery discoT, final AbstractModelDiscoverer<IProject> discoverer, final String discovererId) {
-		disco.setProject(proj);
+	private static void preDiscoveryDiscoInit(final Project projectDesc,
+			final Discovery disco, final Discovery discovery, 
+			final AbstractModelDiscoverer<IProject> discoverer,
+			final String discovererId) {
+		disco.setProject(projectDesc);
 		disco.setName(discoverer.toString());
 		disco.setDiscovererClassName(discoverer.getClass().getName());
 		disco.setDiscovererId(discovererId);
-		DiscovererDescription dd = CatalogFactory.eINSTANCE.createDiscovererDescription();		
-		if (discoT.getDiscovererLaunchConfiguration() != null) {
-			LaunchConfiguration lc = LaunchFactory.eINSTANCE.createLaunchConfiguration();
-			lc.setSource(proj.getName());
-			lc.setDiscoverer(dd);
-			lc.setOpenModelAfterDiscovery(discoT.getDiscovererLaunchConfiguration().isOpenModelAfterDiscovery());
-			for (ParameterValue pv : discoT.getDiscovererLaunchConfiguration().getParameterValues()) {
-				ParameterValue newPv = LaunchFactory.eINSTANCE.createParameterValue();
-				newPv.setValue(pv.getValue());
-
-				DiscovererParameter param = CatalogFactory.eINSTANCE.createDiscovererParameter();
-				param.setDescription(pv.getParameter().getDescription());
-				param.setDirection(pv.getParameter().getDirection());
-				param.setDiscoverer(dd);
-				param.setField(pv.getParameter().getField());
-				param.setGetter(pv.getParameter().getGetter());
-				param.setId(pv.getParameter().getId());
-				param.setInitializer(pv.getParameter().getInitializer());
-				param.setRequiredInput(pv.getParameter().isRequiredInput());
-				param.setSetter(pv.getParameter().getSetter());
-				param.setType(pv.getParameter().getType());
-
-				newPv.setParameter(param);
-				lc.getParameterValues().add(newPv);
+		final DiscovererDescription discoDesc = 
+				CatalogFactory.eINSTANCE.createDiscovererDescription();		
+		final LaunchConfiguration discoLaunchConfig = 
+				discovery.getDiscovererLaunchConfiguration();
+		if (discoLaunchConfig != null) {
+			final LaunchConfiguration launchConfig = 
+					LaunchFactory.eINSTANCE.createLaunchConfiguration();
+			launchConfig.setSource(projectDesc.getName());
+			launchConfig.setDiscoverer(discoDesc);
+			launchConfig.setOpenModelAfterDiscovery(
+					discoLaunchConfig.isOpenModelAfterDiscovery());
+			for (ParameterValue paramValue : discoLaunchConfig.getParameterValues()) {
+				final ParameterValue newParamValue = 
+						LaunchFactory.eINSTANCE.createParameterValue();
+				newParamValue.setValue(paramValue.getValue());
+				final DiscovererParameter param = 
+						CatalogFactory.eINSTANCE.createDiscovererParameter();
+				param.setDescription(paramValue.getParameter().getDescription());
+				param.setDirection(paramValue.getParameter().getDirection());
+				param.setDiscoverer(discoDesc);
+				param.setField(paramValue.getParameter().getField());
+				param.setGetter(paramValue.getParameter().getGetter());
+				param.setId(paramValue.getParameter().getId());
+				param.setInitializer(paramValue.getParameter().getInitializer());
+				param.setRequiredInput(paramValue.getParameter().isRequiredInput());
+				param.setSetter(paramValue.getParameter().getSetter());
+				param.setType(paramValue.getParameter().getType());
+				newParamValue.setParameter(param);
+				launchConfig.getParameterValues().add(newParamValue);
 			}
-			disco.setDiscovererLaunchConfiguration(lc);
+			disco.setDiscovererLaunchConfiguration(launchConfig);
 		}
-		if (discoT.getCopyOfDiscovererDescription() == null) {
-			dd.setId(disco.getDiscovererId());
-			dd.setSourceType(proj.getClass());
-			dd.setImplementationType(discoverer.getClass());
+		if (discovery.getCopyOfDiscovererDescription() == null) {
+			discoDesc.setId(disco.getDiscovererId());
+			discoDesc.setSourceType(projectDesc.getClass());
+			discoDesc.setImplementationType(discoverer.getClass());
 		} else {
-			dd.setId(discoT.getCopyOfDiscovererDescription().getId());
-			dd.setImplementationBundle(discoT.getCopyOfDiscovererDescription().getImplementationBundle());
-			dd.setImplementationType(discoT.getCopyOfDiscovererDescription().getImplementationType());
-			dd.setSourceType(discoT.getCopyOfDiscovererDescription().getSourceType());
+			discoDesc.setId(discovery.getCopyOfDiscovererDescription().getId());
+			discoDesc.setImplementationBundle(discovery.getCopyOfDiscovererDescription().getImplementationBundle());
+			discoDesc.setImplementationType(discovery.getCopyOfDiscovererDescription().getImplementationType());
+			discoDesc.setSourceType(discovery.getCopyOfDiscovererDescription().getSourceType());
 		}
-		disco.setCopyOfDiscovererDescription(dd);
+		disco.setCopyOfDiscovererDescription(discoDesc);
 	}
 
 	/**
