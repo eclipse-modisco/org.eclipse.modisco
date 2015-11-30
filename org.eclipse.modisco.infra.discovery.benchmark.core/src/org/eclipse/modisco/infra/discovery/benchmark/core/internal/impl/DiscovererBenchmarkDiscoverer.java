@@ -1,16 +1,15 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA, and Mia-Software.
- *
+ * 
  * All rights reserved. This program and the
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- *
+ * 
  * Contributors:
  *    Guillaume Doux (INRIA) - Initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
  *    Grégoire Dupé (Mia-Software) - Bug 482857 - Discoverer Benchmark Report : wrong namespaces
- *    Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -23,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.filesystem.EFS;
 import org.eclipse.core.filesystem.IFileStore;
@@ -42,13 +42,14 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.Resource.Factory.Registry;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.facet.util.core.Logger;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererBenchmarkDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscovererID;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventNotifier;
@@ -85,19 +86,11 @@ import org.eclipse.modisco.utils.core.internal.exported.SystemInfo;
 public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProjectSet>
 		implements IDiscovererBenchmarkDiscoverer {
 
-	/**
-	 * Private integer constants
-	 */
-	private static final int ZERO = 0;
-	private static final int TWO = 2;
-	private static final int SIX = 6;
-	private static final int EIGHT = 8;
-	private static final int TEN = 10;
-	private static final String SAVE_OPERATION = "SaveOperation";
+	private static final String SAVE_OPERATION = "SaveOperation"; //$NON-NLS-1$
 	private static final int INTERVAL = 1000;
 	private static final int MSINSEC = 1000;
-	private static final String CODE_EXTENSION = "java";
-	public static final String ID = "org.eclipse.modisco.infra.discovery.benchmark.core.api.benchmarkdiscoverer";
+	private static final String CODE_EXTENSION = "java"; //$NON-NLS-1$
+	public static final String ID = "org.eclipse.modisco.infra.discovery.benchmark.core.api.benchmarkdiscoverer"; //$NON-NLS-1$
 	private static final long BYTEPERMB = 1024 * 1024;
 
 	private IDiscovererID discovererID;
@@ -119,8 +112,11 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		this.memoryMeasurements = new LinkedList<MemoryMeasurement>();
 		this.events = new LinkedList<Event>();
 		this.rSet = new ResourceSetImpl();
-		this.rSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", 
-				new XMIResourceFactoryImpl());
+		final Registry resourceFactoryRegistry = 
+				this.rSet.getResourceFactoryRegistry();
+		final Map<String, Object> extensionToFactoryMap = 
+				resourceFactoryRegistry.getExtensionToFactoryMap();
+		extensionToFactoryMap.put("xmi", new XMIResourceFactoryImpl()); //$NON-NLS-1$
 		this.iterations = 1;
 	}
 
@@ -150,18 +146,19 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @throws DiscoveryException
 	 */
 	public Resource discoverBenchmark(final IProjectSet projects, final IProgressMonitor progressMonitor) throws DiscoveryException {
-		progressMonitor.beginTask("Benchmark Discovery", TEN);
-		progressMonitor.subTask("Benchmark initialization");
+		final int nbDiscoToDo = getIterations() * projects.getProjects().size() 
+				* this.discoverers.getDiscoverers().size();
+		progressMonitor.beginTask(Messages.DiscovererBenchmarkDiscoverer_BenchmarkTaskName, nbDiscoToDo);
+		progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask);
 		final Benchmark benchmark = benchmarkInit();
-		progressMonitor.worked(TWO);
 		this.recorder =  new EventAndMemoryRecorder(this.measureMemoryUse, 
 				this.memoryPollingInterval);
 		for (IProject project : projects.sortBySize().getProjects()) {
-			progressMonitor.subTask("Project initialization");
+			progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_ProjectInitializationSubTask);
 			final Project projectDesc = createBenchmarkProjectAndFiles(project);
 			benchmark.getProjects().add(projectDesc);
 			for (Discovery discovery : this.discoverers) {
-				progressMonitor.subTask("Discovery initialization");
+				progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask);
 				final Discovery disco = BenchmarkFactory.eINSTANCE.createDiscovery();
 				final String discovererId = discovery.getDiscovererId();
 				final AbstractModelDiscoverer<IProject> discoverer = 
@@ -178,6 +175,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					resultSerializationLoc = getSerializationLoc(this);
 				}
 				for (int i = 1; i <= this.iterations;  i++) {
+					progressMonitor.subTask(Messages.DiscovererBenchmarkDiscoverer_ProjectDiscoveryIterationSubTask + String.valueOf(getIterations()));
 					final String suffix = String.format("%s_%s_i%s.xmi", //$NON-NLS-1$
 							disco.getDiscovererId(),
 							project.getName(),
@@ -190,12 +188,11 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					if (IEventNotifier.class.isInstance(discoverer)) {
 						((IEventNotifier) discoverer).addListener(this.recorder);
 					}
-					progressMonitor.subTask("Project discovery: iteration " + String.valueOf(getIterations()));
 					this.recorder.start();
 					try {
 						if (discoverer.isApplicableTo(project)) {
 							final IProgressMonitor subProgressMonitor =
-									new SubProgressMonitor(progressMonitor, EIGHT);
+									new SubProgressMonitor(progressMonitor, 0);
 							discoverer.discoverElement(project, subProgressMonitor);
 						} else {
 							final String message = String.format(
@@ -225,43 +222,42 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 								discoveryErrors.toString());
 					}
 					disco.getIterations().add(discoveryIteration);
+					save(benchmark, progressMonitor);
+					progressMonitor.worked(1);
 				}
 				postDiscoveryDiscoInit(disco, discoverer);
-				if (this.isTargetSerializationChosen()) {
-					try {
-						saveTargetModel(benchmark);
-					} catch (IOException e) {
-						Logger.logError(e, "Failed to save the benchmark model.", //$NON-NLS-1$ 
-								Activator.getDefault());
-					}
-				}
 			}
 		}
 		benchmark.setJvmMaxHeapInMiB(computeMaxMemoryUsage());
-		try {
-			//1*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
-			final int work = getIterations() 
-					* projects.getProjects().size() 
-					* this.discoverers.getDiscoverers().size();
-			if (this.isTargetSerializationChosen()) {
-				progressMonitor.subTask("Saving benchmark model");
-				saveTargetModel(benchmark);
-				progressMonitor.worked(work); 
-			}
-			if (isGenerateHtmlReport()) {
-				progressMonitor.subTask("Generating benchmark report");
+		save(benchmark, progressMonitor);
+		progressMonitor.worked(nbDiscoToDo); 
+		if (isGenerateHtmlReport()) {
+			try {
+				progressMonitor.subTask(
+						Messages.DiscovererBenchmarkDiscoverer_GeneratingBenchmarkReportSubTask);
 				final IProgressMonitor subProgressM =
-						new SubProgressMonitor(progressMonitor, SIX);
+						new SubProgressMonitor(progressMonitor, 0);
 				generateHtmlReport(subProgressM, benchmark);
-				 //2*iteration*discoveries*projects for disco init on 20*iteration*discoveries*projects
-				final int work2 = 2 * work;
-				progressMonitor.worked(work2);
+			} catch (Exception e) {
+				Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
 			}
-		} catch (Exception e) {
-			Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
 		}
 		progressMonitor.done();
 		return benchmark.eResource();
+	}
+
+	private void save(final Benchmark benchmark,
+			final IProgressMonitor progressMonitor) {
+		if (this.isTargetSerializationChosen()) {
+			try {
+				progressMonitor.subTask(
+						Messages.DiscovererBenchmarkDiscoverer_SavingBenchmarkDataSubTask);
+				saveTargetModel(benchmark);
+			} catch (IOException e) {
+				Logger.logError(e, "Failed to save the benchmark model.", //$NON-NLS-1$ 
+						Activator.getDefault());
+			}
+		}
 	}
 
 	private static URI getSerializationLoc(
@@ -283,7 +279,9 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 				size++;
 			}
 		} else {
-			MoDiscoLogger.logWarning("Unable to compute the number of element of an unexisting model: "+targetModel.getURI().toString(), Activator.getDefault());
+			Logger.logWarning(
+					"Unable to compute the number of element of an unexisting model", //$NON-NLS-1$
+					Activator.getDefault());
 		}
 		return size;
 	}
@@ -304,7 +302,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			targetURI = this.getTargetURI();
 		}
 		if (targetURI == null) {
-			MoDiscoLogger.logWarning(
+			Logger.logWarning(
 					"The HTML_REPORT_LOCATION or the TARGET_URI parameter should not be null", //$NON-NLS-1$
 					Activator.getDefault());
 			return;
@@ -609,21 +607,19 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			disco.setSaveTimeAverageInSeconds(totalSaveTime / this.iterations);
 			disco.setExecutionTimeStandardDeviation(maxDisco - minDisco);
 			disco.setSaveTimeStandardDeviation(maxSave - minSave);
-
 			disco.setNumberOfModelElements(computeSize(discoverer.getTargetModel()));
-
 			IFileStore fileStore;
+			final URI targetURI = discoverer.getTargetURI();
 			try {
-				URI targetURI = discoverer.getTargetURI();
-				String locationString = "file://" + ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() + targetURI.toString();
+				String locationString = "file://" + ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() + targetURI.toString(); //$NON-NLS-1$
 				java.net.URI uri = java.net.URI.create(locationString);
 				fileStore = EFS.getStore(uri);
 				disco.setXmiSizeInBytes(fileStore.fetchInfo().getLength());
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e,
-						"Could not get output model size.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+				final String message = String.format(
+						"Could not get output model size.", targetURI); //$NON-NLS-1$
+				Logger.logError(e, message, Activator.getDefault());
 			}
-
 		}
 	}
 
@@ -657,7 +653,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @return the project model element {@link Project}
 	 */
 	private Project createBenchmarkProjectAndFiles(final IProject project) {
-		Project proj = BenchmarkFactory.eINSTANCE.createProject();
+		final Project proj = BenchmarkFactory.eINSTANCE.createProject();
 		proj.setName(project.getName());
 		try {
 			for (IResource res : project.members()) {
@@ -688,8 +684,11 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 				proj.setTotalLines(totalLineSize);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e,
-					"Could not get members of project", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
+			final String message = String.format(
+					"Could not get members of the project '%s'.", //$NON-NLS-1$
+					project.getName());
+			Logger.logError(e,
+					message, Activator.getDefault());
 		}
 		return proj;
 	}
@@ -753,23 +752,25 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @param res the file to compute the number of lines
 	 * @return the number of line if source file 0 otherwise
 	 */
-	private long getLineNumber(final IResource res) {
+	private static long getLineNumber(final IResource res) {
 		int lines = 0;
 		if (res == null) {
-			MoDiscoLogger.logWarning("Unable to compute the number of lines of an unexisting file", Activator.getDefault());
+			Logger.logWarning(
+					"Unable to compute the number of lines of an unexisting file", //$NON-NLS-1$
+					Activator.getDefault());
 		} else {
-			if (res.getFileExtension() != null) {
-				if (res.getFileExtension().endsWith(CODE_EXTENSION)) {
-					try {
-						java.io.File f = new java.io.File(ResourcesPlugin.getWorkspace().getRoot().getLocation().toString() + res.getFullPath().toString());
-						BufferedReader br = new BufferedReader(new FileReader(f));
-						for (lines = 0; br.readLine() != null; lines++);
-						br.close();
-					} catch (IOException e) {
-						MoDiscoLogger.logWarning(e, "unable to count the number of lines of " + res.getName(), Activator.getDefault()); 
-					} catch (NullPointerException e) {
-						MoDiscoLogger.logWarning(e, "unable to count the number of lines of " + res.getName(), Activator.getDefault());
-					}
+			if (res.getFileExtension() != null 
+					&& res.getFileExtension().endsWith(CODE_EXTENSION)) {
+				try {
+					final java.io.File f = res.getLocation().toFile();
+					final BufferedReader br = new BufferedReader(new FileReader(f));
+					for (lines = 0; br.readLine() != null; lines++);
+					br.close();
+				} catch (Exception e) {
+					final String message = String.format(
+							"Counting the number of lines is '%s' failed ",  //$NON-NLS-1$
+							res.getName());
+					Logger.logWarning(e, message, Activator.getDefault());
 				}
 			}
 		}
@@ -827,7 +828,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	public void setMeasureMemoryUse(final boolean measure) {
 		this.measureMemoryUse = measure;
 		if (this.measureMemoryUse) { //putting a default value in case of bad initialization
-			if (this.memoryPollingInterval == ZERO) {
+			if (this.memoryPollingInterval == 0) {
 				this.memoryPollingInterval = INTERVAL;
 			}
 		}

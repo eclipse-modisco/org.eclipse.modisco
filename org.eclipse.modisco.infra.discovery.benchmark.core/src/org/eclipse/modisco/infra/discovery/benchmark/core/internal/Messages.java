@@ -23,8 +23,14 @@ public class Messages extends NLS {
 	public static String Application_no_of_iteration;
 	public static String Application_RecordMemoryUse;
 	public static String Application_XMI_Output;
+	public static String DiscovererBenchmarkDiscoverer_BenchmarkInitializationSubTask;
+	public static String DiscovererBenchmarkDiscoverer_BenchmarkTaskName;
+	public static String DiscovererBenchmarkDiscoverer_DiscoveryInitializationSubTask;
+	public static String DiscovererBenchmarkDiscoverer_GeneratingBenchmarkReportSubTask;
+	public static String DiscovererBenchmarkDiscoverer_ProjectDiscoveryIterationSubTask;
+	public static String DiscovererBenchmarkDiscoverer_ProjectInitializationSubTask;
+	public static String DiscovererBenchmarkDiscoverer_SavingBenchmarkDataSubTask;
 	public static String MemoryMeasurementJob_MemoryMeasureEveryMs;
-
 	public static String XmiToHtmlApplication_MeasureMemoryUse;
 	public static String XmiToHtmlApplication_Target_Folder_Path;
 	public static String XmiToHtmlApplication_XMI_file_path;
