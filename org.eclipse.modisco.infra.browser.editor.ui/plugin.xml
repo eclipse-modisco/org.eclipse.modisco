@@ -18,6 +18,7 @@
     Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
     Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
     Grégoire Dupé (Mia-Software) - Bug 507622 - [New Browser] The copy handler hides handlers of other parts
+    Jonathan Pepin (Soft-Maint) - Bug 478075 - Load Facet Serialization from TreeEditor
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -55,7 +56,8 @@
                   commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
                   id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
                   label="%LoadUnloadFacets"
-                  style="pulldown">
+                  style="pulldown"
+                  tooltip="%LoadUnloadFacets">
                <visibleWhen
                      checkEnabled="true">
                   <with
@@ -84,7 +86,8 @@
                   commandId="org.eclipse.emf.facet.ui.loadCustomization"
                   id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
                   label="%LoadUnloadCustoms"
-                  style="pulldown">
+                  style="pulldown"
+                  tooltip="%LoadUnloadCustoms">
                <visibleWhen
                      checkEnabled="true">
                   <with
@@ -96,6 +99,27 @@
                </visibleWhen>
             </command>
          </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.workbench.file?after=additions">
+         <command
+               commandId="org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource"
+               icon="icons/open-facet-serializ.gif"
+               id="org.eclipse.modisco.util.emffacet.ui.loadSerialization"
+               label="%openFacetSerialization"
+               style="push"
+               tooltip="%openFacetSerialization">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                     variable="activeEditor">
+                  <instanceof
+                        value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                  </instanceof>
+               </with>
+            </visibleWhen>
+         </command>
       </menuContribution>
       <menuContribution
             allPopups="true"
