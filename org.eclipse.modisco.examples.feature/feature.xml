@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.examples.feature"
       label="MoDisco Examples (Incubation)"
-      version="0.13.1.qualifier"
+      version="0.13.2.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.examples"
       license-feature="org.eclipse.license"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="0.13.1" useFeatures="true" includeLaunchers="true">
+<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="0.13.2" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>

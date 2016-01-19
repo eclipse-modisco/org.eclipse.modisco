@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %Bundle-Vendor
 Bundle-SymbolicName: org.eclipse.modisco.java.discoverer;singleton:=true
-Bundle-Version: 0.13.1.qualifier
+Bundle-Version: 0.13.2.qualifier
 Bundle-Name: %Bundle-Name
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Require-Bundle: org.eclipse.gmt.modisco.infra.common.core,

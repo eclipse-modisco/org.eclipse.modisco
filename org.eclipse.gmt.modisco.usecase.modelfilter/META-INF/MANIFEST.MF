@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.gmt.modisco.usecase.modelfilter;singleton:=true
-Bundle-Version: 0.13.1.qualifier
+Bundle-Version: 0.13.2.qualifier
 Bundle-Activator: org.eclipse.gmt.modisco.usecases.modelfilter.ModelFilterActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.jdt.core,

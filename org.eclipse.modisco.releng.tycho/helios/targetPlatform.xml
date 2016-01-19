@@ -16,6 +16,6 @@ Contributors:
             <groupId>org.eclipse.mdt</groupId>
             <artifactId>org.eclipse.modisco.archi.tech.targetplatform</artifactId>
             <classifier>org.eclipse.modisco.archi.tech.targetplatform</classifier>
-            <version>0.13.1</version>
+            <version>0.13.2</version>
          </artifact>
 </target>

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.java.discoverer.benchmark;singleton:=true
-Bundle-Version: 0.13.1.qualifier
+Bundle-Version: 0.13.2.qualifier
 Bundle-Activator: org.eclipse.gmt.modisco.java.discoverer.benchmark.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
