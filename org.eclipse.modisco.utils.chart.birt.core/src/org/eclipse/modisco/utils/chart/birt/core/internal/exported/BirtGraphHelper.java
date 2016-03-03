@@ -34,6 +34,7 @@ import org.eclipse.birt.chart.model.attribute.impl.ColorDefinitionImpl;
 import org.eclipse.birt.chart.model.attribute.impl.LineAttributesImpl;
 import org.eclipse.birt.chart.model.attribute.impl.NumberFormatSpecifierImpl;
 import org.eclipse.birt.chart.model.component.Axis;
+import org.eclipse.birt.chart.model.component.Scale;
 import org.eclipse.birt.chart.model.component.Series;
 import org.eclipse.birt.chart.model.component.impl.SeriesImpl;
 import org.eclipse.birt.chart.model.data.NumberDataSet;
@@ -108,38 +109,38 @@ public final class BirtGraphHelper {
 	 * @param fileName+".png" name of the png file (without extension)
 	 * @throws ChartException, Exception
 	 */
-	public void createBirtGraph(final Chart birtChart,
-			final File targetFolder, final String fileName) throws Exception {
-		ChartWithAxes chart = ChartWithAxesImpl.create();
-		if (birtChart.getAxes().size() == 2) {
-			chart.setDimension(ChartDimension.TWO_DIMENSIONAL_LITERAL);
-		} else {
-			throw new GraphHelperException("the chart should have only 2 dimensions");
+	public void createBirtGraph(final Chart birtChart, final File targetFolder,
+			final String fileName) throws Exception {
+		final ChartWithAxes chart = ChartWithAxesImpl.create();
+		if (birtChart.getAxes().size() != 2) {
+			throw new GraphHelperException("The chart should have only two dimensions."); //$NON-NLS-1$
 		}
+		chart.setDimension(ChartDimension.TWO_DIMENSIONAL_LITERAL);
 		chart.setUnitSpacing(BirtGraphHelper.UNIT_SPACING);
 		chart.getPlot().setBackground(ColorDefinitionImpl.WHITE());
 		chart.getPlot().getClientArea().setBackground(ColorDefinitionImpl.WHITE());
 		chart.getLegend().setItemType(LegendItemType.SERIES_LITERAL);
 		chart.getLegend().setVisible(true);
 		chart.getLegend().setAnchor(Anchor.NORTH_EAST_LITERAL);
+		chart.getTitle().getLabel().getCaption().setValue(birtChart.getTitle());
 
-		chart.getTitle().getLabel().getCaption()
-		.setValue(birtChart.getTitle());
-
-		final Axe abs = birtChart.getAxes().get(0);
 		final Axe ord = birtChart.getAxes().get(1);
 
 		final Axis xAxis = chart.getPrimaryBaseAxes()[0];
 		xAxis.setType(AxisType.LINEAR_LITERAL);
 		xAxis.setFormatSpecifier(NumberFormatSpecifierImpl.create());
-
-		xAxis.getTitle().getCaption().setValue(abs.getLegend() + " (" + abs.getUnit() + ")"); //$NON-NLS-1$
+		final Axe abs = birtChart.getAxes().get(0);
+		final String xCaption = String.format("%s (%s)", //$NON-NLS-1$
+				abs.getLegend(), abs.getUnit());
+		xAxis.getTitle().getCaption().setValue(xCaption);
 		xAxis.getTitle().setVisible(true);
-
+		xAxis.setCategoryAxis(false);
+		final Scale scale = xAxis.getScale();
+		xAxis.setScale(scale);
 		final List<Point> dataPoints = new ArrayList<Point>();
 
 		final SeriesDefinition ySeriesDefinition = SeriesDefinitionImpl.create();
-		
+
 		final Comparator<Point> comparator = new Comparator<Point>() {
 			public int compare(final Point point1, final Point point2) {
 				if (point1.x == point2.x) {
@@ -167,14 +168,9 @@ public final class BirtGraphHelper {
 				final Point birtPoint = new Point(xCoord, yCoord);
 				dataPoints.add(birtPoint);
 			}
-
 			// sort on X axis
-			
 			Collections.sort(dataPoints, comparator);
-
-
 			final ColorDefinition serieColor = getColorForSerie(birtChart.getSeries().indexOf(serie));
-
 
 			final LineSeries lineSeries = (LineSeries) LineSeriesImpl.create();
 			lineSeries.setSeriesIdentifier(serie.getName());
@@ -203,25 +199,23 @@ public final class BirtGraphHelper {
 			final NumberDataSet linearRegDataSet = NumberDataSetImpl.create(regressionYAxisValues);
 			linearRegSeries.setDataSet(linearRegDataSet);
 			linearRegSeries.getMarkers().clear();
-
 			// line attributes
 			final LineAttributes lineAttr2 = LineAttributesImpl.create(ColorDefinitionImpl.BLACK(),
 					LineStyle.DASHED_LITERAL, 1);
 			lineAttr2.setVisible(true);
 			lineAttr2.setColor(serieColor);
 			linearRegSeries.setLineAttributes(lineAttr2);
-	
+
 			ySeriesDefinition.getSeries().add(lineSeries);
 			ySeriesDefinition.getSeries().add(linearRegSeries);
-			
 		}
-		
+		//Creating x axis labels
 		final ArrayList<Double> xAxisValues = new ArrayList<Double>();
 		for (Point dataPoint : dataPoints) {
 				xAxisValues.add(dataPoint.x);
 		}
 		final NumberDataSet xAxisDataSet = NumberDataSetImpl.create(xAxisValues);
-		
+
 		final Series xAxisSeries = SeriesImpl.create();
 		xAxisSeries.setDataSet(xAxisDataSet);
 		final SeriesDefinition xSeriesDefinition = SeriesDefinitionImpl.create();
@@ -232,11 +226,15 @@ public final class BirtGraphHelper {
 		yAxis.setType(AxisType.LINEAR_LITERAL);
 		yAxis.setFormatSpecifier(NumberFormatSpecifierImpl.create());
 		yAxis.getTitle().setVisible(true);
-
-		yAxis.getTitle().getCaption().setValue(ord.getLegend() + " (" + ord.getUnit() + ")"); //$NON-NLS-1$
+		final String yCaption = String.format("%s (%s)", //$NON-NLS-1$
+				ord.getLegend(), ord.getUnit());
+		yAxis.getTitle().getCaption().setValue(yCaption);
 		yAxis.getSeriesDefinitions().add(ySeriesDefinition);
-	
-		//Chart rendering
+		chartRendering(targetFolder, fileName, chart);
+	}
+
+	private static void chartRendering(final File targetFolder, final String fileName,
+			final ChartWithAxes chart) throws ChartException {
 		final PluginSettings pSettings = PluginSettings.instance();
 		final IDeviceRenderer render = pSettings.getDevice("dv.PNG"); //$NON-NLS-1$
 		render.setProperty(IDeviceRenderer.FILE_IDENTIFIER, new File(targetFolder,
