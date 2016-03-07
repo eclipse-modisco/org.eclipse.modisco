@@ -28,7 +28,7 @@
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/facet/updates/integration/1.0.1/I201508190910/"/>
+<repository location="http://archive.eclipse.org/facet/updates/release/1.0.2/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
