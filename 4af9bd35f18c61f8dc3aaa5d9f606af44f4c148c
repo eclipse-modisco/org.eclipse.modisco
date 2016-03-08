@@ -1,0 +1,7 @@
+Verified+1: Hudson CI
+Code-Review+2: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-by: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-at: Tue, 08 Mar 2016 10:35:18 -0500
+Reviewed-on: https://git.eclipse.org/r/67960
+Project: modisco/org.eclipse.modisco
+Branch: refs/heads/maintenance-0.13
