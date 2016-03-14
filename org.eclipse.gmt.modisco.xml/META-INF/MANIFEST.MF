@@ -14,8 +14,14 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.xml,
  org.eclipse.gmt.modisco.xml.emf,
+<<<<<<< HEAD   (047f82 Bug 488952 - [Benchmark] The x axis isn't linear)
  org.eclipse.gmt.modisco.xml.emf.impl;x-internal:=true,
  org.eclipse.gmt.modisco.xml.emf.util;x-internal:=true,
  org.eclipse.gmt.modisco.xml.internal.resource;x-friends:="org.eclipse.gmt.modisco.xml.discoverer,org.eclipse.modisco.xml.discoverer",
+=======
+ org.eclipse.gmt.modisco.xml.emf.impl,
+ org.eclipse.gmt.modisco.xml.emf.util,
+ org.eclipse.gmt.modisco.xml.internal.resource;x-friends:="org.eclipse.modisco.xml.discoverer",
+>>>>>>> BRANCH (e12ca0 Bug 475243 - [Deprecated] org.eclipse.modisco.kdm.source.ext)
  org.eclipse.gmt.modisco.xml.resource
 Bundle-Activator: org.eclipse.gmt.modisco.xml.plugin.XmlActivator

@@ -7,17 +7,11 @@ Bundle-Activator: org.eclipse.modisco.jee.ejbjar.discoverer.EjbJarActivator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.modisco.jee.ejbjar;bundle-version="0.6.0",
- org.eclipse.core.resources;bundle-version="3.6.0",
- org.eclipse.ui.ide;bundle-version="3.6.0",
- org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.8.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
  org.eclipse.modisco.jee;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery;bundle-version="0.9.0",
- org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0",
- org.eclipse.modisco.infra.discovery.ui;bundle-version="0.9.0",
- org.eclipse.emf.facet.util.emf.core;bundle-version="0.1.0"
+ org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.modisco.jee.ejbjar.discoverer,
- org.eclipse.modisco.jee.ejbjar.discoverer.actions
+Export-Package: org.eclipse.modisco.jee.ejbjar.discoverer
 Bundle-Vendor: %Bundle-Vendor

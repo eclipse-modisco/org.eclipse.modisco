@@ -16,14 +16,6 @@ Contributors:
 -->
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.jee.webapp.discoverer.actions.WebXmlDiscoverer"
-            icon="icons/Web_Xml_Browser.gif"
-            name="%discoverer.name">
-      </discoverer>
-   </extension>
-   <extension
          point="org.eclipse.modisco.infra.discovery.core.discoverer">
       <discoverer
             class="org.eclipse.modisco.jee.webapp.discoverer.WebXmlDiscoverer2"

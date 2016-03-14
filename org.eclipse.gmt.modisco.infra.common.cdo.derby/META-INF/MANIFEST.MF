@@ -21,8 +21,6 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.infra.common.cdo.derby;
-  x-friends:="org.eclipse.gmt.modisco.java.discoverer.benchmark,
-   org.eclipse.gmt.modisco.java.discoverer.cdo.tests,
-   org.eclipse.modisco.java.discoverer.benchmark,
+  x-friends:="org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.cdo,
    org.eclipse.modisco.java.discoverer.cdo.tests"

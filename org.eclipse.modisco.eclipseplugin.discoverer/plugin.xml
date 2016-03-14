@@ -15,14 +15,6 @@
 
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.eclipseplugin.discoverer.DiscoverEclipsePluginFromJavaProject"
-            icon="icon/plugin.gif"
-            name="%discoverer.name">
-      </discoverer>
-   </extension>
-   <extension
          point="org.eclipse.modisco.infra.discovery.core.discoverer">
       <discoverer
             class="org.eclipse.modisco.eclipseplugin.discoverer.DiscoverEclipsePluginFromJavaProject2"

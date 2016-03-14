@@ -19,8 +19,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	org.eclipse.modisco.infra.browser.tests.TestMetaclasses.class,
 	org.eclipse.modisco.infra.browser.tests.TestOpenModel.class,
 	org.eclipse.modisco.infra.browser.tests.TestSearch.class,
-	org.eclipse.modisco.infra.browser.tests.TestURIDialog.class,
-	org.eclipse.modisco.infra.discovery.tests.BooleanCellEditorTest.class
+	org.eclipse.modisco.infra.browser.tests.TestURIDialog.class
 })
 public class AllUITests {
 	// JUnit 4 test suite

@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-  <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaModel"
-            icon="icons/DiscovererJavaComposite.png"
-            name="%discoverer.name">
-      </discoverer>
-  </extension>
-  
   <extension point="org.eclipse.modisco.infra.discovery.core.discoverer">
      <discoverer
            class="org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaModelFromJavaProject"

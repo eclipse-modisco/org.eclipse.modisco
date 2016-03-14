@@ -8,17 +8,17 @@
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
+ *    Grégoire Dupé (Mia-Software) - Bug 470806 - [Deprecated] org.eclipse.gmt.modisco.usecase.modelfilter
  */
 
 package org.eclipse.modisco.usecase.modelfilter.tests;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
@@ -27,15 +27,16 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.gmt.modisco.infra.discoverymanager.DiscoveryParameter;
-import org.eclipse.gmt.modisco.usecases.modelfilter.actions.DiscoverUmlModelWithRealTypesFromJavaProject;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.common.tests.TestModelUtils;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+import org.eclipse.modisco.usecase.modelfilter.DiscoverUmlModelWithRealTypesFromJavaProject;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 /**
  * @author Gabriel Barbier
@@ -43,21 +44,21 @@ import org.junit.Test;
  */
 public class SimpleBlackBoxDiscovery {
 	// To be able to export reference model after a change in java discovery
-	private final boolean export = false;
+	private static final boolean EXPORT = false;
 
-	private final String rootSourcesPath = "/workspace/"; //$NON-NLS-1$
-	private final String referencesFolderPath = "/references/"; //$NON-NLS-1$
-	private final String umlModelExtension = ".uml"; //$NON-NLS-1$
-	private final String projectName = "RealTypesExample"; //$NON-NLS-1$
+	private static final String ROOT_SOURCES_PATH = "/workspace/"; //$NON-NLS-1$
+	private static final String REF_FOLDER_PATH = "/references/"; //$NON-NLS-1$
+	private static final String UML_MODEL_EXT = ".uml"; //$NON-NLS-1$
+	private static final String PROJECT_NAME = "RealTypesExample"; //$NON-NLS-1$
 
-	private JavaProjectFactory javaProjectFactory;
+	private JavaProjectFactory javaPrjFactory;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		this.javaProjectFactory = new JavaProjectFactory(this.projectName);
+		this.javaPrjFactory = new JavaProjectFactory(PROJECT_NAME);
 	}
 
 	/**
@@ -65,37 +66,37 @@ public class SimpleBlackBoxDiscovery {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		if (this.javaProjectFactory != null) {
-			this.javaProjectFactory.dispose();
+		if (this.javaPrjFactory != null) {
+			this.javaPrjFactory.dispose();
 		}
 	}
 
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474705
 	@Test
 	public void testUmlModelDiscoveryFromJavaProject() throws CoreException,
-			IOException {
-		Assert.assertNotNull(this.javaProjectFactory);
-		IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
+			IOException, DiscoveryException {
+		Assert.assertNotNull(this.javaPrjFactory);
+		final IJavaProject javaProject = this.javaPrjFactory.getJavaProject();
 		Assert.assertNotNull(javaProject);
-
-		String sourceFolderPath = this.rootSourcesPath + this.projectName
+		final String sourceFolderPath = ROOT_SOURCES_PATH + PROJECT_NAME
 				+ "/src"; //$NON-NLS-1$
-		URL src = Activator.getDefault().getBundle()
+		final URL src = Activator.getDefault().getBundle()
 				.getEntry(sourceFolderPath);
 		Assert.assertNotNull(src);
-		this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
-
-		DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
+		this.javaPrjFactory.populateSourceFolder(sourceFolderPath);
+		final DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
 		Assert.assertNotNull(discoverer);
-		Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
-		parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
-		discoverer.discoverElement(javaProject, parameters);
-		Resource output = (Resource) parameters.get(discoverer
-				.getTargetModelParameter());
+		discoverer.discoverElement(javaProject, new NullProgressMonitor());
+		final Resource output = discoverer.getTargetModel();
 		Assert.assertNotNull(output);
-
-		if (this.export) {
-			output.setURI(URI
-					.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$
+		if (EXPORT) {
+			final Bundle bundle = Activator.getDefault().getBundle();
+			final String uriStr = String.format(
+					"platform:/meta/%s/referenceModel%s", //$NON-NLS-1$
+					bundle.getSymbolicName(),
+					UML_MODEL_EXT);
+			final URI uri = URI.createURI(uriStr);
+			output.setURI(uri);
 			output.save(null);
 		}
 	}
@@ -103,27 +104,22 @@ public class SimpleBlackBoxDiscovery {
 	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468346
 	@Test
 	public void testUmlModelFromJavaProjectWithReferenceModel()
-			throws CoreException, IOException, InterruptedException {
-		Assert.assertNotNull(this.javaProjectFactory);
-		IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
+			throws CoreException, IOException, InterruptedException, 
+			DiscoveryException {
+		Assert.assertNotNull(this.javaPrjFactory);
+		final IJavaProject javaProject = this.javaPrjFactory.getJavaProject();
 		Assert.assertNotNull(javaProject);
-
-		String sourceFolderPath = this.rootSourcesPath + this.projectName
+		final String sourceFolderPath = ROOT_SOURCES_PATH + PROJECT_NAME
 				+ "/src"; //$NON-NLS-1$
-		URL src = Activator.getDefault().getBundle()
+		final URL src = Activator.getDefault().getBundle()
 				.getEntry(sourceFolderPath);
 		Assert.assertNotNull(src);
-		this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
-
-		DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
+		this.javaPrjFactory.populateSourceFolder(sourceFolderPath);
+		final DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
 		Assert.assertNotNull(discoverer);
-		Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
-		parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
-		discoverer.discoverElement(javaProject, parameters);
-		Resource output = (Resource) parameters.get(discoverer
-				.getTargetModelParameter());
+		discoverer.discoverElement(javaProject, new NullProgressMonitor());
+		final Resource output = discoverer.getTargetModel();
 		Assert.assertNotNull(output);
-
 		/*
 		 * Because everything looks great, well we have to test model
 		 * content. In details we will compare current resource with a
@@ -133,58 +129,48 @@ public class SimpleBlackBoxDiscovery {
 		 * discovered java code, the compilation units elements could not be
 		 * the same !!!!
 		 */
-		String referencePath = "/" + Activator.PLUGIN_ID + this.referencesFolderPath + this.projectName //$NON-NLS-1$ 
-				+ "RealTypes" + this.umlModelExtension; //$NON-NLS-1$
-		URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
+		final String referencePath = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$ 
+				+ "RealTypes" + UML_MODEL_EXT; //$NON-NLS-1$
+		final URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
 		Assert.assertNotNull(referenceUri);
-		Resource referenceModel = ModelUtils.loadModel(referenceUri);
+		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
-		boolean result = TestModelUtils.compareModels(output,
+		final boolean result = TestModelUtils.compareModels(output,
 				referenceModel, true);
 		Assert.assertTrue(
 				"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
 	}
 
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474705
 	@Test
-	public void testValidationOfUmlModelDiscoveryFromJavaProject() {
-		Assert.assertNotNull(this.javaProjectFactory);
-
-		try {
-
-			IJavaProject javaProject = this.javaProjectFactory.getJavaProject();
-			Assert.assertNotNull(javaProject);
-
-			String sourceFolderPath = this.rootSourcesPath + this.projectName
-					+ "/src"; //$NON-NLS-1$
-			URL src = Activator.getDefault().getBundle()
-					.getEntry(sourceFolderPath);
-			Assert.assertNotNull(src);
-			this.javaProjectFactory.populateSourceFolder(sourceFolderPath);
-
-			DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
-			Assert.assertNotNull(discoverer);
-			Map<DiscoveryParameter, Object> parameters = new HashMap<DiscoveryParameter, Object>();
-			parameters.put(discoverer.getSilentModeParameter(), Boolean.TRUE);
-			discoverer.discoverElement(javaProject, parameters);
-			Resource outputModel = (Resource) parameters.get(discoverer
-					.getTargetModelParameter());
-			Assert.assertNotNull(outputModel);
-
-			Diagnostician diagnostician = new Diagnostician();
-			BasicDiagnostic diagnosticChain = new BasicDiagnostic();
-			for (EObject eObject : outputModel.getContents()) {
-				boolean result = diagnostician.validate(eObject,
-						(DiagnosticChain) null);
-				if (result == false) {
-					Assert.assertNotNull(diagnosticChain);
-					List<Diagnostic> diagnostics = diagnosticChain
-							.getChildren();
-					Assert.assertNotNull(diagnostics);
-					Assert.assertEquals(0, diagnostics.size());
-				}
+	public void testValidationOfUmlModelDiscoveryFromJavaProject() 
+			throws DiscoveryException, CoreException {
+		Assert.assertNotNull(this.javaPrjFactory);
+		final IJavaProject javaProject = this.javaPrjFactory.getJavaProject();
+		Assert.assertNotNull(javaProject);
+		final String sourceFolderPath = ROOT_SOURCES_PATH + PROJECT_NAME
+				+ "/src"; //$NON-NLS-1$
+		final Bundle bundle = Activator.getDefault().getBundle();
+		final URL src = bundle.getEntry(sourceFolderPath);
+		Assert.assertNotNull(src);
+		this.javaPrjFactory.populateSourceFolder(sourceFolderPath);
+		final DiscoverUmlModelWithRealTypesFromJavaProject discoverer = new DiscoverUmlModelWithRealTypesFromJavaProject();
+		Assert.assertNotNull(discoverer);
+		discoverer.discoverElement(javaProject, new NullProgressMonitor());
+		final Resource output = discoverer.getTargetModel();
+		Assert.assertNotNull(output);
+		final Diagnostician diagnostician = new Diagnostician();
+		final BasicDiagnostic diagnosticChain = new BasicDiagnostic();
+		for (EObject eObject : output.getContents()) {
+			final boolean result = diagnostician.validate(eObject,
+					(DiagnosticChain) null);
+			if (!result) {
+				Assert.assertNotNull(diagnosticChain);
+				final List<Diagnostic> diagnostics = diagnosticChain
+						.getChildren();
+				Assert.assertNotNull(diagnostics);
+				Assert.assertEquals(0, diagnostics.size());
 			}
-		} catch (Exception e) {
-			Assert.fail(e.getMessage());
 		}
 	}
 }

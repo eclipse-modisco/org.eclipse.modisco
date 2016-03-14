@@ -12,9 +12,6 @@
 
 	org.eclipse.gmt.modisco.infra.common.cdo.server
   x-friends:="org.eclipse.gmt.modisco.infra.common.cdo.derby,
-   org.eclipse.gmt.modisco.java.discoverer.benchmark,
-   org.eclipse.gmt.modisco.java.discoverer.cdo,
-   org.eclipse.gmt.modisco.java.discoverer.cdo.tests,
    org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.cdo,
    org.eclipse.modisco.java.discoverer.cdo.tests"

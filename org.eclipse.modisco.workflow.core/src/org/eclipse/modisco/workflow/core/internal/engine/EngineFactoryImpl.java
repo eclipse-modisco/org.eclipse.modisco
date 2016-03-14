@@ -29,15 +29,7 @@ public class EngineFactoryImpl implements EngineFactory {
 
 	private Map<String, WorkflowExecution> workflowEngines;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * org.eclipse.gmt.modisco.workflow.internal.engine.EngineFactory#getEngine
-	 * (java.lang.String)
-	 */
 	public WorkflowExecution getEngine(final String engineId) {
-		// return this.getWorkflowEngines().get(engineId);
 		return new WorkflowExecutionImpl();
 	}
 

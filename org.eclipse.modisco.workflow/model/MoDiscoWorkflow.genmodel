@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009, 2011 Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Nicolas Payneau (Mia-Software) - initial API and implementation&#xD;&#xA;   Nicolas Bros (Mia-Software) - Bug 337402 - [Discovery Workflow] refactoring"
     modelDirectory="/org.eclipse.modisco.workflow/src" editDirectory="/org.eclipse.modisco.workflow.edit/src"
-    editorDirectory="/org.eclipse.modisco.workflow.editor/src" modelPluginID="org.eclipse.gmt.modisco.workflow"
+    editorDirectory="/org.eclipse.modisco.workflow.editor/src" modelPluginID="org.eclipse.modisco.workflow"
     modelName="MoDiscoWorkflow" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipse.modisco.workflow.edit"
     editorPluginID="org.eclipse.modisco.workflow.editor" runtimeVersion="2.6" language="">

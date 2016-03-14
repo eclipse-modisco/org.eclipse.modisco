@@ -35,28 +35,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.gmt.modisco.usecase.modelfilter"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.gmt.modisco.infra.prefuse"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.gmt.modisco.usecase.modelfilter.methodcalls"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.gmt.modisco.usecase.modelfilter.dependencies"
          download-size="0"
          install-size="0"
          version="0.0.0"

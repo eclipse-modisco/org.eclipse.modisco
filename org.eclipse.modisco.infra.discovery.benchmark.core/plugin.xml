@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (047f82 Bug 488952 - [Benchmark] The x axis isn't linear)
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <!--
@@ -63,3 +64,26 @@
    </extension>
 
 </plugin>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.modisco.infra.discovery.core.discoverer">
+      <discoverer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl.DiscovererBenchmarkDiscoverer"
+            id="org.eclipse.modisco.infra.discovery.benchmark.api.benchmarkdiscoverer">
+      </discoverer>
+   </extension>
+   <extension
+         point="org.eclipse.emf.facet.util.emf.core.serialization">
+      <serializer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IProjectSetSerializer">
+      </serializer>
+      <serializer
+            class="org.eclipse.modisco.infra.discovery.benchmark.core.internal.DiscovererListSerializer">
+      </serializer>
+   </extension>
+
+</plugin>
+>>>>>>> BRANCH (e12ca0 Bug 475243 - [Deprecated] org.eclipse.modisco.kdm.source.ext)

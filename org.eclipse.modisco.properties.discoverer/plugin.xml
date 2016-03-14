@@ -12,13 +12,6 @@
 
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.properties.discoverer.PropertiesModelDiscoverer"
-            name="%discoverer.name">
-      </discoverer>
-   </extension>
-   <extension
          point="org.eclipse.modisco.infra.discovery.core.discoverer">
       <discoverer
             class="org.eclipse.modisco.properties.discoverer.PropertiesModelDiscoverer2"

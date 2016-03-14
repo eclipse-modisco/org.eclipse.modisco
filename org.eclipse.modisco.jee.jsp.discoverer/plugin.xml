@@ -13,25 +13,6 @@ Contributors:
 -->
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.discoverers">
-      <discoverer
-            class="org.eclipse.modisco.jee.jsp.discoverer.actions.DiscoverJspModelFromProject"
-            icon="icons/JSP_Browser.gif"
-            name="%discoverer.name1">
-      </discoverer>
-      <discoverer
-            class="org.eclipse.modisco.jee.jsp.discoverer.actions.DiscoverJspModelFromFile"
-            icon="icons/JSP_Browser.gif"
-            name="%discoverer.name2">
-      </discoverer>
-      <discoverer
-            class="org.eclipse.modisco.jee.jsp.discoverer.actions.DiscoverJspModelFromContainer"
-            icon="icons/JSP_Browser.gif"
-            name="%discoverer.name3">
-      </discoverer>
-   </extension>
-
-   <extension
          point="org.eclipse.modisco.infra.discovery.core.discoverer">
       <discoverer
             class="org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource"
@@ -42,5 +23,4 @@ Contributors:
             id="org.eclipse.modisco.jee.jsp.discoverer.javaElement">
       </discoverer>
    </extension>  
-   
 </plugin>

@@ -7,8 +7,6 @@ Bundle-Activator: org.eclipse.modisco.jee.ejbjar.discoverer.tests.JUnitPlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit;bundle-version="4.8.1",
- org.eclipse.emf.ecore;bundle-version="2.6.0",
- org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.8.0",
  org.eclipse.modisco.jee.ejbjar;bundle-version="0.6.0",
  org.eclipse.modisco.jee;bundle-version="0.9.0",
  org.eclipse.modisco.jee.ejbjar.discoverer;bundle-version="0.9.0",
