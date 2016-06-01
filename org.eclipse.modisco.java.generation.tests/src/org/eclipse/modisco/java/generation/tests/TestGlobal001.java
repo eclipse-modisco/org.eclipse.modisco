@@ -18,6 +18,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
+import org.junit.Ignore;
 import org.osgi.framework.Bundle;
 
 public class TestGlobal001 extends DiffGeneratedJavaTest {
@@ -57,6 +58,7 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	 * @throws IOException
 	 * @throws CoreException
 	 */
+	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
 	public final void test001() throws URISyntaxException, CoreException,
 			IOException {
 		File sourceJavaModel = getInputModelFile();
