@@ -2,19 +2,23 @@
 <?eclipse version="3.0"?>
 
 <!--
- <copyright>
- </copyright>
-
- $Id$
--->
+    Copyright (c) 2016 Mia-Software.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        Fabien Giquel (Mia-Software) - Bug 498420 - [Chart] EPackage java class in plugin.xml does not match real java impl class
+ -->
 
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://www.eclipse.org/modisco/utils/chart/0.1/chart"
-            class="org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage"
-            genModel="model/birtChart.genmodel"/>
+            uri="http://www.eclipse.org/modisco/utils/chart/0.11.incubation/internal/chart"
+            class="org.eclipse.modisco.utils.chart.metamodel.internal.chart.ChartPackage"
+            genModel="model/chart.genmodel"/>
    </extension>
 
 </plugin>
