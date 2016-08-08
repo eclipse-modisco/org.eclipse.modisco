@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.all.feature"
       label="MoDisco&apos;s quality analysis reports"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
