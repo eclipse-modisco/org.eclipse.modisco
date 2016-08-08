@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.6.0",
  org.eclipse.emf.facet.util.swt;bundle-version="1.0.1"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-Activator: org.eclipse.modisco.infra.browser.ecore.ui.internal.Activator

@@ -13,7 +13,7 @@
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="MoDisco Infrastructure (Incubation)"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core"
       license-feature="org.eclipse.license"
