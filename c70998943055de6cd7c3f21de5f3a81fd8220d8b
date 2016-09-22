@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "07b223f6_41707dfc",
+        "filename": "org.eclipse.modisco.utils.chart.metamodel/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2016-09-22T10:04:31Z",
+      "side": 1,
+      "message": "The copyright should looks like.\n\nCopyright (c) 2012, 2016 INRIA, and Mia-Software.\n\ncf. https://eclipse.org/legal/copyrightandlicensenotice.php",
+      "range": {
+        "startLine": 5,
+        "startChar": 3,
+        "endLine": 5,
+        "endChar": 21
+      },
+      "revId": "c70998943055de6cd7c3f21de5f3a81fd8220d8b",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07b223f6_819ff5af",
+        "filename": "org.eclipse.modisco.utils.chart.metamodel/plugin.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 29211
+      },
+      "writtenOn": "2016-09-22T10:04:31Z",
+      "side": 1,
+      "message": "Please, do not mix tab and spaces.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 2
+      },
+      "revId": "c70998943055de6cd7c3f21de5f3a81fd8220d8b",
+      "serverId": "97ee7c02-f12f-4043-b43e-dea463d88b31",
+      "unresolved": false
+    }
+  ]
+}
