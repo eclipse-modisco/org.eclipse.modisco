@@ -13,6 +13,7 @@
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  *    Grégoire Dupé (Mia-Software) - Bug 507310 - [New Browser] The selection should contains unwrapped EObjects
  *    Grégoire Dupé (Mia-Software) - Bug 506466 - [New Browser] doSave has to implemented
+ *    Grégoire Dupé (Mia-Software) - Bug 506318 - [New Browser] Drag and drop support
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -207,7 +208,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		final IContentProvider contentProvider = ICustomizedContentProviderFactory.DEFAULT
 				.createCustomizedTreeContentProvider(this.customManager, new IContentListener() {
 					public void onUpdate(final Object object) {
-						syncRefresh(object);
+						TreeEditor.this.syncRefresh(object);
 					}
 				});
 		this.tree.setContentProvider(contentProvider);
@@ -244,6 +245,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 
 	protected void internalRefresh(final Object object) {
 		this.tree.refresh(object);
+		TreeEditorDragAndDropUtils.addDragAndDropSupport(this.tree,
+				this.editingDomain);
 	}
 
 	protected void refresh() {
