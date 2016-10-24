@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2014, 2016 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
@@ -12,19 +12,21 @@
  *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  *    Grégoire Dupé (Mia-Software) - Bug 507310 - [New Browser] The selection should contains unwrapped EObjects
+ *    Grégoire Dupé (Mia-Software) - Bug 506466 - [New Browser] doSave has to implemented
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.EventObject;
 import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.command.BasicCommandStack;
-import org.eclipse.emf.common.command.CommandStack;
-import org.eclipse.emf.common.notify.AdapterFactory;
-import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -33,15 +35,19 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
 import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
+import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory.IContentListener;
 import org.eclipse.emf.facet.custom.ui.IResolvingCustomizedLabelProviderFactory;
 import org.eclipse.emf.facet.efacet.core.IFacetManager;
 import org.eclipse.emf.facet.efacet.core.IFacetManagerFactory;
 import org.eclipse.emf.facet.efacet.core.IFacetManagerListener;
 import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2;
+import org.eclipse.emf.facet.util.ui.internal.exported.dialog.IOkDialog;
+import org.eclipse.emf.facet.util.ui.internal.exported.dialog.IOkDialogFactory;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILabelProvider;
@@ -52,8 +58,11 @@ import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceEditorInput;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceSetEditorInput;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.EditorPart;
@@ -77,7 +86,24 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
-		// TODO Auto-generated method stub
+		doSave();
+	}
+
+	public IOkDialog doSave() {
+		IOkDialog result = null;
+		try {
+			this.resource.save(Collections.EMPTY_MAP);
+		} catch (final IOException e) {
+			final URI uri = this.resource.getURI();
+			final String message = String.format("Failed to save %s", uri); //$NON-NLS-1$
+			result = IOkDialogFactory.DEFAULT.openErrorDialog(
+					this.getSite().getShell(),	e, message);
+		}
+		final BasicCommandStack commandStack =
+				(BasicCommandStack) this.editingDomain.getCommandStack();
+		commandStack.saveIsDone();
+		firePropertyChange(IEditorPart.PROP_DIRTY);
+		return result;
 	}
 
 	@Override
@@ -120,16 +146,24 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			 */
 			this.resourceSet = new ResourceSetImpl();
 		}
-		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
-		final CommandStack commandStack = new BasicCommandStack();
-		this.editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
-				commandStack, this.resourceSet);
-		
+		this.editingDomain = initEditingDomain();
 		this.facetSetShortcuts = TreeEditorShortcutUtils.getFacetSetShortcuts(this.resourceSet);
 		this.customShortcuts = TreeEditorShortcutUtils.getCustomShortcuts(this.resourceSet);
 	}
-	
-	
+
+	private final EditingDomain initEditingDomain() {
+		final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		final BasicCommandStack commandStack = new BasicCommandStack();
+		commandStack.addCommandStackListener(new CommandStackListener() {
+			public void commandStackChanged(final EventObject event) {
+				onCommandStackChanged();
+			}
+		});
+		return new AdapterFactoryEditingDomain(adapterFactory,
+				commandStack, this.resourceSet);
+	}
+
 	private void createPopupMenu() {
 		final MenuManager menuMgr = new MenuManager("#PopupMenu"); //$NON-NLS-1$
 		menuMgr.setRemoveAllWhenShown(true);
@@ -138,16 +172,27 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		getSite().registerContextMenu(menuMgr, this.tree);
 	}
 
+	protected final void onCommandStackChanged() {
+		firePropertyChange(IEditorPart.PROP_DIRTY);
+	}
+
 	@Override
 	public boolean isDirty() {
-		// TODO Auto-generated method stub
-		return false;
+		final BasicCommandStack basicCommandStack =
+				(BasicCommandStack) this.editingDomain.getCommandStack();
+		final boolean saveNeeded = basicCommandStack.isSaveNeeded();
+		return this.isReadWriteResource() && saveNeeded;
+	}
+
+	private boolean isReadWriteResource() {
+		final URI uri = this.resource.getURI();
+		final String uriStr = uri.toString();
+		return uriStr.matches("(platform:/resource/.*)|(file:/)"); //$NON-NLS-1$
 	}
 
 	@Override
 	public boolean isSaveAsAllowed() {
-		// TODO Auto-generated method stub
-		return false;
+		return isDirty();
 	}
 
 	@Override
@@ -160,13 +205,16 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		final ILabelProvider labelProvider = IResolvingCustomizedLabelProviderFactory.DEFAULT
 				.createCustomizedLabelProvider(this.customManager);
 		final IContentProvider contentProvider = ICustomizedContentProviderFactory.DEFAULT
-				.createCustomizedTreeContentProvider(this.customManager);
+				.createCustomizedTreeContentProvider(this.customManager, new IContentListener() {
+					public void onUpdate(final Object object) {
+						syncRefresh(object);
+					}
+				});
 		this.tree.setContentProvider(contentProvider);
 		this.tree.setLabelProvider(labelProvider);
-		
 		final List<EObject> contents = new ArrayList<EObject>();
 		if (this.resource == null) {
-			for (Resource res : this.resourceSet.getResources()) {
+			for (final Resource res : this.resourceSet.getResources()) {
 				contents.addAll(res.getContents());
 			}
 		} else {
@@ -182,6 +230,20 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		};
 		createPopupMenu();
 		this.facetManager.addListener(this.facetMgrListener);
+	}
+
+	protected void syncRefresh(final Object object) {
+		final Shell shell = this.getSite().getShell();
+		final Display display = shell.getDisplay();
+		display.asyncExec(new Runnable() {
+			public void run() {
+				internalRefresh(object);
+			}
+		});
+	}
+
+	protected void internalRefresh(final Object object) {
+		this.tree.refresh(object);
 	}
 
 	protected void refresh() {
@@ -203,7 +265,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	public EditingDomain getEditingDomain() {
 		return this.editingDomain;
 	}
-	
+
 	@Override
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
 		/* @SuppressWarnings("rawtypes"): gdupe> Imposed by the super class */
@@ -225,15 +287,15 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	public List<ICustomShortcut> getCustomShortcuts() {
 		return this.customShortcuts;
 	}
-	
+
 	public IFacetManager getFacetManager() {
 		return this.facetManager;
 	}
-	
+
 	public List<IFacetSetShortcut> getFacetSetShortcuts() {
 		return this.facetSetShortcuts;
 	}
-	
+
 	@Override
 	public void dispose() {
 		this.facetManager.removeListener(this.facetMgrListener);
