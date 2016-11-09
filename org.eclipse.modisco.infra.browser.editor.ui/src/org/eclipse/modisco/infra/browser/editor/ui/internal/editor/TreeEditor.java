@@ -1,5 +1,5 @@
 /** 
- * Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
+ * Copyright (c) 2014, 2016 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -11,6 +11,7 @@
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  *    Grégoire Dupé (Mia-Software) - Bug 442800 - API to open new MoDisco Browser
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
+ *    Grégoire Dupé (Mia-Software) - Bug 507310 - [New Browser] The selection should contains unwrapped EObjects
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -72,6 +73,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	private IFacetManagerListener facetMgrListener;
 	private List<IFacetSetShortcut> facetSetShortcuts;
 	private List<ICustomShortcut> customShortcuts;
+	private ISelectionProvider selectionProvider;
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
@@ -171,8 +173,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			contents.addAll(this.resource.getContents());
 		}
 		this.tree.setInput(contents);
-		
-		getSite().setSelectionProvider(this.tree);
+		this.selectionProvider = new TreeEditorSelectionProvider(this.tree);
+		getSite().setSelectionProvider(this.selectionProvider);
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
 				TreeEditor.this.refresh();
@@ -209,7 +211,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		if (adapter.isInstance(this)) {
 			result = this;
 		} else if (adapter == ISelectionProvider.class) {
-			result = this.tree;
+			result = this.selectionProvider;
 		} else {
 			result = super.getAdapter(adapter);
 		}
