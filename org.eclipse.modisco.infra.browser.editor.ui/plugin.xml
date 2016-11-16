@@ -137,18 +137,23 @@
             class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.CopyHandler"
             commandId="org.eclipse.ui.edit.copy">
          <activeWhen>
-            <with
-                  variable="selection">
-               <iterate
-                     ifEmpty="false"
-                     operator="and">
-                  <instanceof
-                        value="org.eclipse.emf.ecore.EObject">
-                  </instanceof>
-               </iterate>
-            </with>
+            <and>
+                <with variable="selection">
+                   <iterate
+                         ifEmpty="false"
+                         operator="and">
+                      <instanceof
+                            value="org.eclipse.emf.ecore.EObject">
+                      </instanceof>
+                   </iterate>
+                </with>
+                <with variable="activePart">
+                   <instanceof
+                       value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                   </instanceof>
+                </with>
+            </and>
          </activeWhen>
       </handler>
    </extension>
-
 </plugin>
