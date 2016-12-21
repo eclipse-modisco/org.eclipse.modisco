@@ -2,7 +2,11 @@
 <feature
       id="org.eclipse.modisco.utils.chart.feature"
       label="MoDisco Chart Utilities (Incubation)"
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
       version="1.0.0.qualifier"
+=======
+      version="0.13.2.qualifier"
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">

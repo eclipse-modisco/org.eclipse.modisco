@@ -14,4 +14,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.gmt.modisco.infra.facet.core,
  com.ibm.icu;bundle-version="4.2.1"
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)

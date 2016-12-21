@@ -1,0 +1,19 @@
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
+=======
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.infra.discoverymanager.tests
+Bundle-Version: 0.13.2.qualifier
+Bundle-Activator: org.eclipse.modisco.infra.discovery.tests.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.jface;bundle-version="3.6.0",
+ org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.9.0",
+ org.junit;bundle-version="4.8.1",
+ org.eclipse.swtbot.eclipse.finder;bundle-version="2.0.4",
+ org.eclipse.swtbot.swt.finder;bundle-version="2.0.4"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: org.eclipse.modisco.infra.discovery.tests;x-friends:="org.eclipse.modisco.tests"
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)

@@ -1,0 +1,29 @@
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
+=======
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.gmt.modisco.kdm.uml2converter;singleton:=true
+Bundle-Version: 0.13.2.qualifier
+Bundle-Activator: org.eclipse.gmt.modisco.kdm.uml2converter.KdmToUml2Activator
+Bundle-Vendor: %providerName
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.gmt.modisco.infra.common.core;visibility:=reexport,
+ org.eclipse.gmt.modisco.omg.kdm,
+ org.eclipse.gmt.modisco.infra.discoverymanager,
+ org.eclipse.m2m.atl.common;bundle-version="3.0.0";visibility:=reexport,
+ org.eclipse.m2m.atl.drivers.emf4atl;bundle-version="3.0.0",
+ org.eclipse.m2m.atl.core.ui.vm;bundle-version="3.0.0",
+ org.eclipse.uml2.codegen.ecore.ui;bundle-version="1.5.0",
+ org.eclipse.uml2.uml.ecore.importer;bundle-version="2.3.0",
+ org.eclipse.uml2.uml.editor;bundle-version="3.0.0",
+ org.eclipse.m2m.atl.engine;bundle-version="3.0.0",
+ org.eclipse.m2m.atl.drivers.uml24atl;bundle-version="3.1.0"
+Export-Package: org.eclipse.gmt.modisco.kdm.uml2converter,
+ org.eclipse.gmt.modisco.kdm.uml2converter.actions,
+ org.eclipse.gmt.modisco.kdm.uml2converter.impl
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)

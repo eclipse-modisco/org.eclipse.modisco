@@ -36,7 +36,11 @@ public class BundleTest {
 
 	@Test
 	public void version() {
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
 		testManifestProperty("Bundle-Version", "1\\.0\\.0\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+=======
+		testManifestProperty("Bundle-Version", "0\\.13\\.2\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 	}
 
 	@Test

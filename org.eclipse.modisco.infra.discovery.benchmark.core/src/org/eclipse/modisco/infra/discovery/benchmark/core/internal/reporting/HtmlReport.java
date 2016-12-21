@@ -345,6 +345,22 @@ public class HtmlReport extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
+=======
+        //gdupe> The method isInWorkspace() does not exists in Helios. This avoid
+        // to be install MoDisco on an Helios. The code generator is not used in a
+        // workspace context : we do not need explicit load of the meta-models
+        // That why I've commented the following lines.
+        /*
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE);
+        }
+        if (!isInWorkspace(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE);
+        }
+        */
+        
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation

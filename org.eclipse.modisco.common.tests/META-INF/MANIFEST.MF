@@ -3,7 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-Vendor: %Bundle-Vendor
 Bundle-SymbolicName: org.eclipse.modisco.common.tests;singleton:=true
+<<<<<<< HEAD   (652fd7 Removing useless parameter in the build script.)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Bundle-Activator: org.eclipse.modisco.common.tests.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
