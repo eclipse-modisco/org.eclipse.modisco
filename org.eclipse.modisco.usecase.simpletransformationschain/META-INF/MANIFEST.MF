@@ -1,7 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.usecase.simpletransformationschain;singleton:=true
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Bundle-Activator: org.eclipse.modisco.usecase.simpletransformationschain.internal.Activator
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.jdt.core,

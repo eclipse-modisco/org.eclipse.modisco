@@ -2,7 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.java.discoverer.cdo
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Bundle-Activator: org.eclipse.modisco.java.discoverer.cdo.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui;bundle-version="3.5.0",

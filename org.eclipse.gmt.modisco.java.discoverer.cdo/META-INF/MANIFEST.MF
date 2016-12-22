@@ -1,0 +1,29 @@
+<<<<<<< HEAD   (a952c6 Build configuration fix)
+=======
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.gmt.modisco.java.discoverer.cdo
+Bundle-Version: 0.13.2.qualifier
+Bundle-Activator: org.eclipse.gmt.modisco.java.discoverer.cdo.Activator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.5.1",
+ org.eclipse.gmt.modisco.java.discoverer;bundle-version="0.7.0",
+ org.eclipse.ui;bundle-version="3.5.0",
+ org.eclipse.core.resources;bundle-version="3.5.0",
+ org.eclipse.jdt.core;bundle-version="3.5.0",
+ org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
+ org.eclipse.net4j.tcp;bundle-version="2.0.0",
+ org.eclipse.emf.cdo.server.db;bundle-version="2.0.0",
+ org.eclipse.gmt.modisco.java.cdo;bundle-version="0.7.0",
+ org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0",
+ org.eclipse.core.runtime;bundle-version="3.5.0",
+ org.eclipse.emf.cdo.server.net4j;bundle-version="3.0.0",
+ org.apache.derby;bundle-version="10.1.2",
+ org.eclipse.emf.cdo.net4j;bundle-version="3.0.0",
+ org.eclipse.gmt.modisco.infra.common.cdo;bundle-version="0.8.0",
+ org.eclipse.modisco.kdm.source.extension;bundle-version="0.9.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.gmt.modisco.java.discoverer.cdo;x-friends:="org.eclipse.gmt.modisco.java.discoverer.benchmark,org.eclipse.gmt.modisco.java.discoverer.cdo.tests"
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)

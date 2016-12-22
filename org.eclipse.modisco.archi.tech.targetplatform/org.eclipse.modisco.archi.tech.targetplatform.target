@@ -26,10 +26,17 @@
 <unit id="org.eclipse.epp.package.modeling.feature.feature.group" version="1.3.0.20100617-0520"/>
 <repository location="http://download.eclipse.org/technology/epp/packages/helios/"/>
 </location>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="1.0.2.201601181335"/>
 <unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="1.0.2.201601181335"/>
 <repository location="http://download.eclipse.org/facet/updates/release/"/>
+=======
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.0.0"/>
+<repository location="http://archive.eclipse.org/facet/updates/release/1.0.2/"/>
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>

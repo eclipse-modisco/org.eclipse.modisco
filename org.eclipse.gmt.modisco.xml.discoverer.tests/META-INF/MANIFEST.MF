@@ -1,0 +1,21 @@
+<<<<<<< HEAD   (a952c6 Build configuration fix)
+=======
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.gmt.modisco.xml.discoverer.tests
+Bundle-Version: 0.13.2.qualifier
+Bundle-Activator: org.eclipse.gmt.modisco.xml.discoverer.tests.JUnitPlugin
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;bundle-version="2.5.0",
+ org.eclipse.gmt.modisco.xml.discoverer,
+ org.eclipse.gmt.modisco.infra.discoverymanager;bundle-version="0.6.0",
+ org.eclipse.core.resources;bundle-version="3.5.0",
+ org.eclipse.gmt.modisco.xml,
+ org.junit;bundle-version="4.7.0",
+ org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.gmt.modisco.xml.discoverer.tests
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)

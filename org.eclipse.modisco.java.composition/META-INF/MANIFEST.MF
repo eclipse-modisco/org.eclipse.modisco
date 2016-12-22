@@ -11,7 +11,11 @@ Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
  fra.query.core;bundle-version="0.9.0"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ClassPath: .
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.java.composition;singleton:=true

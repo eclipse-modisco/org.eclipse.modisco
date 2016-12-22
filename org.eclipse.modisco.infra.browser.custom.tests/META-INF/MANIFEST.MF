@@ -3,7 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-Vendor: %Bundle-Vendor
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser.custom.tests;singleton:=true
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 Bundle-Version: 1.0.0.qualifier
+=======
+Bundle-Version: 0.13.2.qualifier
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Require-Bundle: org.junit;bundle-version="4.7.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0",
  org.eclipse.core.resources;bundle-version="3.5.1",

@@ -1,48 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.examples.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.examples.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.examples.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.examples.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.infra.cdo.derby.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.infra.cdo.derby.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.infra.cdo.derby.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.infra.cdo.derby.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.cdo"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.infra.omg.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.infra.omg.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.infra.omg.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.infra.omg.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.infrastructure.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.infrastructure.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.infrastructure.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.infrastructure.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.java.cdo.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.java.cdo.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.java.cdo.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.java.cdo.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.cdo"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.java.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.java.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.java.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.java.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.jee.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.jee.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.jee.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.jee.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.sdk.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.sdk.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.main"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.usecase.simpletransformationschain.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.usecase.simpletransformationschain.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.xml.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.xml.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.xml.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.xml.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.infra.discovery.benchmark.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.infra.discovery.benchmark.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.all.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.all.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.all.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.all.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.thirdparties_1.0.0.qualifier.jar" id="org.eclipse.modisco.thirdparties" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.thirdparties_0.13.2.qualifier.jar" id="org.eclipse.modisco.thirdparties" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
    <feature url="features/org.eclipse.modisco.infra.browser.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.infra.browser.feature" version="1.0.0.qualifier">
+=======
+   <feature url="features/org.eclipse.modisco.infra.browser.feature_0.13.2.qualifier.jar" id="org.eclipse.modisco.infra.browser.feature" version="0.13.2.qualifier">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
    <feature url="features/org.eclipse.modisco.eclipse.feature_1.0.0.qualifier.jar" id="org.eclipse.modisco.eclipse.feature" version="1.0.0.qualifier">

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 <product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="1.0.0" useFeatures="true" includeLaunchers="true">
+=======
+<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="0.13.2" useFeatures="true" includeLaunchers="true">
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 
    <configIni use="default">
    </configIni>

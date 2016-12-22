@@ -22,7 +22,11 @@
 				<dependency>
 					<groupId>org.eclipse.mdt</groupId>
 					<artifactId>org.eclipse.modisco.tests</artifactId>
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 					<version>1.0.0-SNAPSHOT</version>
+=======
+					<version>0.13.2-SNAPSHOT</version>
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 					<type>eclipse-test-plugin</type>
 				</dependency>
 			</dependencies>

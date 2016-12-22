@@ -13,7 +13,11 @@
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="MoDisco Infrastructure (Incubation)"
+<<<<<<< HEAD   (a952c6 Build configuration fix)
       version="1.0.0.qualifier"
+=======
+      version="0.13.2.qualifier"
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.infra.common.core"
       license-feature="org.eclipse.license"

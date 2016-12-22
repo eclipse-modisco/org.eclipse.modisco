@@ -2,6 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MoDisco API Report (Incubation)
 Bundle-SymbolicName: org.eclipse.modisco.doc.api.report;singleton:=true
+<<<<<<< HEAD   (a952c6 Build configuration fix)
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Eclipse Modeling Project
+=======
+Bundle-Version: 0.13.2.qualifier
+Bundle-Vendor: Eclipse Modling Project
+>>>>>>> BRANCH (2774ec Bug 482857 - Discoverer Benchmark Report : wrong namespaces)
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
