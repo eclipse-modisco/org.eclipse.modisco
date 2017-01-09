@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014, 2016 Mia-Software, and Soft-Maint.
+ * Copyright (c) 2014, 2017 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -14,6 +14,7 @@
  *    Grégoire Dupé (Mia-Software) - Bug 507310 - [New Browser] The selection should contains unwrapped EObjects
  *    Grégoire Dupé (Mia-Software) - Bug 506466 - [New Browser] doSave has to implemented
  *    Grégoire Dupé (Mia-Software) - Bug 506318 - [New Browser] Drag and drop support
+ *    Jonathan Pepin (Soft-Maint) - Bug 519213 - Enable Properties View on Editor to show informations on selected model element
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -39,6 +40,7 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.facet.custom.core.ICustomizationManager;
 import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
+import org.eclipse.emf.facet.custom.edit.ui.IEditingDomainPropertySheetPageFactory;
 import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory;
 import org.eclipse.emf.facet.custom.ui.ICustomizedContentProviderFactory.IContentListener;
@@ -68,6 +70,7 @@ import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.EditorPart;
 import org.eclipse.ui.part.FileEditorInput;
+import org.eclipse.ui.views.properties.IPropertySheetPage;
 
 public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		IFacetManagerProvider2, ICustomizationManagerProvider2, ITreeEditor {
@@ -84,6 +87,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	private List<IFacetSetShortcut> facetSetShortcuts;
 	private List<ICustomShortcut> customShortcuts;
 	private ISelectionProvider selectionProvider;
+	private IPropertySheetPage propertySheetPage;
 
 	@Override
 	public void doSave(final IProgressMonitor monitor) {
@@ -269,6 +273,14 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		return this.editingDomain;
 	}
 
+	public IPropertySheetPage getOrCreatePropertySheetPage() {
+		if (this.propertySheetPage == null) {
+			this.propertySheetPage = IEditingDomainPropertySheetPageFactory.
+					DEFAULT.createPropertySheetPage(this);
+		}
+		return this.propertySheetPage;
+	}
+
 	@Override
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
 		/* @SuppressWarnings("rawtypes"): gdupe> Imposed by the super class */
@@ -277,6 +289,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			result = this;
 		} else if (adapter == ISelectionProvider.class) {
 			result = this.selectionProvider;
+		} else if (adapter.equals(IPropertySheetPage.class)) {
+			result = getOrCreatePropertySheetPage();
 		} else {
 			result = super.getAdapter(adapter);
 		}
