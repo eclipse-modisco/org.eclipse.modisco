@@ -351,13 +351,18 @@ public class HtmlReport extends AbstractAcceleoGenerator {
          * of the Acceleo module with the main template that has caused the creation of this class will
          * revert your modifications.
          */
+//gdupe> The method isInWorkspace() does not exists in Helios. This avoid
+// to be install MoDisco on an Helios. The code generator is not used in a
+// workspace context : we do not need explicit load of the meta-models
+// That why I've commented the following lines.
+/*
         if (!isInWorkspace(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.catalog.CatalogPackage.eINSTANCE);
         }
         if (!isInWorkspace(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE.getNsURI(), org.eclipse.modisco.infra.discovery.launch.LaunchPackage.eINSTANCE);
         }
-        
+*/
         /*
          * If you need additional package registrations, you can register them here. The following line
          * (in comment) is an example of the package registration for UML.
