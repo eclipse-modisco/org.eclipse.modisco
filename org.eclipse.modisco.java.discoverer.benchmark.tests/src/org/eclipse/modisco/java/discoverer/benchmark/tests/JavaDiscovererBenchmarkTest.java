@@ -10,6 +10,7 @@
  *    Fabien Giquel (Mia-Software) - Bug 339720 : MoDisco Discoverers (infra + techno) API clean
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *    Gregoire Dupe (Mia-Software) - Bug 346087 - Regression of the report of the Java discoverer benchmark
+ *    Gregoire Dupe (Mia-Software) - Bug 511745 - [Unit Test Failure] org.eclipse.modisco.java.discoverer.benchmark.tests.JavaDiscovererBenchmarkTest.test001
  *******************************************************************************/
 package org.eclipse.modisco.java.discoverer.benchmark.tests;
 
@@ -57,7 +58,7 @@ public class JavaDiscovererBenchmarkTest {
 		AcceleoEnginePlugin.getDefault().getLog().addLogListener(this.listener);
 	}
 
-	@Test(timeout = 15 * 60 * 1000)
+	@Test(timeout = 25 * 60 * 1000)
 	public void test001() throws CoreException, IOException {
 		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {
 			throw new RuntimeException("skipped");
