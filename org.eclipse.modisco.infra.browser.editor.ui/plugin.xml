@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <!--
+<<<<<<< HEAD   (65a973 Remove of the tag '(Incubation)' from the bundle names and d)
  Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
+=======
+ Copyright (c) 2014, 2016 Mia-Software, and Soft-Maint.
+>>>>>>> BRANCH (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
  All rights reserved. This program and the accompanying materials
  are made available under the terms of the Eclipse Public License v1.0
  which accompanies this distribution, and is available at
  http://www.eclipse.org/legal/epl-v10.html
  
  Contributors:
-    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
+    Grégoire Dupé (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
     Thomas Cicognani (Soft-Maint) - Bug 442019 - Toolbar actions disappear when focus is not on the browser
     Thomas Cicognani (Soft-Maint) - Bug 442257 - New toolbar actions to (des)activate customizations
     Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
+<<<<<<< HEAD   (65a973 Remove of the tag '(Incubation)' from the bundle names and d)
     Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
     Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
     Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
     Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
     Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
+=======
+    Thomas Cicognani (Soft-Maint) - Bug 442714 - New toolbar action to show/hide eContainer link
+    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
+    Thomas Cicognani (Soft-Maint) - Bug 470962 - Add shortcuts to activate customs
+    Thomas Cicognani (Soft-Maint) - Bug 471597 - [New Browser] Add a customization to display subclasses from an EClass
+    Thomas Cicognani (Soft-Maint) - Bug 472041 - [New Browser] Add a customization counting instances by EClass in the same Resource
+    Grégoire Dupé (Mia-Software) - Bug 507622 - [New Browser] The copy handler hides handlers of other parts
+>>>>>>> BRANCH (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 -->
 <plugin>
    <extension point="org.eclipse.ui.editors">
@@ -137,18 +150,23 @@
             class="org.eclipse.modisco.infra.browser.editor.ui.internal.handlers.CopyHandler"
             commandId="org.eclipse.ui.edit.copy">
          <activeWhen>
-            <with
-                  variable="selection">
-               <iterate
-                     ifEmpty="false"
-                     operator="and">
-                  <instanceof
-                        value="org.eclipse.emf.ecore.EObject">
-                  </instanceof>
-               </iterate>
-            </with>
+            <and>
+                <with variable="selection">
+                   <iterate
+                         ifEmpty="false"
+                         operator="and">
+                      <instanceof
+                            value="org.eclipse.emf.ecore.EObject">
+                      </instanceof>
+                   </iterate>
+                </with>
+                <with variable="activePart">
+                   <instanceof
+                       value="org.eclipse.modisco.infra.browser.editor.ui.internal.editor.TreeEditor">
+                   </instanceof>
+                </with>
+            </and>
          </activeWhen>
       </handler>
    </extension>
-
 </plugin>
