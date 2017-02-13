@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MoDisco Test Report (Incubation)
+Bundle-Name: MoDisco Test Report
 Bundle-SymbolicName: org.eclipse.modisco.doc.test.report;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Eclipse Modeling Project

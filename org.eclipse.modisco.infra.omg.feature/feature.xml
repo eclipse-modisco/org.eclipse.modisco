@@ -11,7 +11,7 @@
  -->
 <feature
       id="org.eclipse.modisco.infra.omg.feature"
-      label="MoDisco OMG meta-models implementations and tools (Incubation)"
+      label="MoDisco OMG meta-models implementations and tools"
       version="1.0.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"

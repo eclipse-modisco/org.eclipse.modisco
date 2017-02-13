@@ -12,7 +12,7 @@
  -->
 <feature
       id="org.eclipse.modisco.sdk.feature"
-      label="MoDisco SDK (Incubation)"
+      label="MoDisco SDK"
       version="1.0.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
