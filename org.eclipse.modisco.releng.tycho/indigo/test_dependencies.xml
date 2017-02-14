@@ -14,27 +14,22 @@ Contributors:
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.eclipse.feature.group</artifactId>
-		<version>${swtbot-version}</version>
 	</dependency>
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.ide.feature.group</artifactId>
-		<version>${swtbot-version}</version>
 	</dependency>
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.eclipse.test.junit4.feature.group</artifactId>
-		<version>${swtbot-version}</version>
 	</dependency>
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.forms.feature.group</artifactId>
-		<version>${swtbot-version}</version>
 	</dependency>
 	<dependency>
 		<type>p2-installable-unit</type>
 		<artifactId>org.eclipse.swtbot.feature.group</artifactId>
-		<version>${swtbot-version}</version>
 	</dependency>
 	<!-- Currently tested feature -->
 	<dependency>
