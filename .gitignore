@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 /*source.feature
 /**/__target__/
 /*/bin/
@@ -19,4 +20,22 @@
 /*.updatesite/poma.xml
 /pom.xml*
 /pom_after_configure.xml
+=======
+/**/__target__/
+/*/bin/
+/*/pom.xml
+/*/pom.xml.*
+/*/pom.xml.configure-quality-poms.bak
+/*.doc/mediawiki/*.html
+/*.doc/mediawiki/*.xml
+/*.doc/toc.html
+/*.doc.archi/mediawiki/*.html
+/*.doc.archi/mediawiki/*.xml
+/*.tests/screenshots/
+/*.eclipsepackage/pom_updated_modules.xml
+/*.targetplatform/pom.tmp.xml
+/*.updatesite/category.xml
+/*.updatesite/pom_after_updatesite.xml
+/*.updatesite/poma.xml
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 

@@ -22,7 +22,11 @@
 				<dependency>
 					<groupId>org.eclipse.mdt</groupId>
 					<artifactId>org.eclipse.modisco.tests</artifactId>
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 					<version>0.13.2-SNAPSHOT</version>
+=======
+					<version>0.12.2-SNAPSHOT</version>
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 					<type>eclipse-test-plugin</type>
 				</dependency>
 			</dependencies>

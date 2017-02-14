@@ -8,7 +8,11 @@
 # Contributors:
 #    Grégoire Dupé - initial implementation
 
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 RT_VERSION=Mars_maintenance
+=======
+RT_VERSION=Luna_maintenance
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 
 echo $DISPLAY
 echo $PATH

@@ -1,7 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.usecase.simpletransformationschain;singleton:=true
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 Bundle-Version: 0.13.2.qualifier
+=======
+Bundle-Version: 0.12.2.qualifier
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 Bundle-Activator: org.eclipse.modisco.usecase.simpletransformationschain.internal.Activator
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.jdt.core,

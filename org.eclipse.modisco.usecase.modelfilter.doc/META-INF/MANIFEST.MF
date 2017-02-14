@@ -2,7 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.usecase.modelfilter.doc;singleton:=true
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 Bundle-Version: 0.13.2.qualifier
+=======
+Bundle-Version: 0.12.2.qualifier
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

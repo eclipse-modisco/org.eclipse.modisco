@@ -4,8 +4,11 @@
 	<comment></comment>
 	<projects>
 	</projects>
+<<<<<<< HEAD   (a3639a Bug 507622 - [New Browser] The copy handler hides handlers o)
 	<buildSpec>
 	</buildSpec>
 	<natures>
 	</natures>
+=======
+>>>>>>> BRANCH (96a465 The new version of the releng dosen't support the use of var)
 </projectDescription>
