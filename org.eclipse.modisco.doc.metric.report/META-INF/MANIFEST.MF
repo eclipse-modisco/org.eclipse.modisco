@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MoDisco Metrics Report (Incubation)
+Bundle-Name: MoDisco Metrics Report
 Bundle-SymbolicName: org.eclipse.modisco.doc.metric.report;singleton:=true
 Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: Eclipse Modeling Project

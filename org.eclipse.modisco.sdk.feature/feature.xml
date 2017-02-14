@@ -12,8 +12,13 @@
  -->
 <feature
       id="org.eclipse.modisco.sdk.feature"
+<<<<<<< HEAD   (acf407 Bug 507310 - [New Browser] The selection should contains unw)
       label="MoDisco SDK (Incubation)"
       version="1.1.0.qualifier"
+=======
+      label="MoDisco SDK"
+      version="1.0.0.qualifier"
+>>>>>>> BRANCH (98a5a4 Merge branch 'maintenance-0.13' into maintenance-1.0)
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">

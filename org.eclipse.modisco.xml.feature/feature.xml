@@ -11,8 +11,13 @@
  -->
 <feature
       id="org.eclipse.modisco.xml.feature"
+<<<<<<< HEAD   (acf407 Bug 507310 - [New Browser] The selection should contains unw)
       label="MoDisco Xml Feature (Incubation)"
       version="1.1.0.qualifier"
+=======
+      label="MoDisco Xml Feature"
+      version="1.0.0.qualifier"
+>>>>>>> BRANCH (98a5a4 Merge branch 'maintenance-0.13' into maintenance-1.0)
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.xml"
       license-feature="org.eclipse.license"

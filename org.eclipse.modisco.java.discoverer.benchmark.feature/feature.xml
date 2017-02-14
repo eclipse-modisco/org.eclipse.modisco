@@ -11,8 +11,13 @@ Contributors:
 -->
 <feature
       id="org.eclipse.modisco.java.discoverer.benchmark.feature"
+<<<<<<< HEAD   (acf407 Bug 507310 - [New Browser] The selection should contains unw)
       label="MoDisco Java Discoverer Benchmark feature (Incubation)"
       version="1.1.0.qualifier"
+=======
+      label="MoDisco Java Discoverer Benchmark feature"
+      version="1.0.0.qualifier"
+>>>>>>> BRANCH (98a5a4 Merge branch 'maintenance-0.13' into maintenance-1.0)
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.java.discoverer.benchmark"
       license-feature="org.eclipse.license"

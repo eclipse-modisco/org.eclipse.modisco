@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MoDisco Browser Ecore Core (Incubation)
+Bundle-Name: MoDisco Browser Ecore Core
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser.ecore.core;singleton:=true
 Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.browser.ecore.core.internal.Activator

@@ -11,8 +11,13 @@
  -->
 <feature
       id="org.eclipse.modisco.jee.feature"
+<<<<<<< HEAD   (acf407 Bug 507310 - [New Browser] The selection should contains unw)
       label="MoDisco JEE feature (Incubation)"
       version="1.1.0.qualifier"
+=======
+      label="MoDisco JEE feature"
+      version="1.0.0.qualifier"
+>>>>>>> BRANCH (98a5a4 Merge branch 'maintenance-0.13' into maintenance-1.0)
       provider-name="%providerName"
       plugin="org.eclipse.modisco.jee"
       license-feature="org.eclipse.license"

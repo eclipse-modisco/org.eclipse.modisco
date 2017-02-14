@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.eclipse.modisco.infra.discovery.benchmark.feature"
+<<<<<<< HEAD   (acf407 Bug 507310 - [New Browser] The selection should contains unw)
       label="MoDisco Infrastructure Discovery Benchmark (Incubation)"
       version="1.1.0.qualifier"
+=======
+      label="MoDisco Infrastructure Discovery Benchmark"
+      version="1.0.0.qualifier"
+>>>>>>> BRANCH (98a5a4 Merge branch 'maintenance-0.13' into maintenance-1.0)
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">

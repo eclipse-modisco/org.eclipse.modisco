@@ -26,7 +26,7 @@ public class BundleTest {
 
 	@Test
 	public void name() {
-		testManifestProperty("Bundle-Name", "MoDisco .*?\\(Incubation\\)( Source){0,1}+"); //$NON-NLS-1$ //$NON-NLS-2$
+		testManifestProperty("Bundle-Name", "MoDisco .*?( Source){0,1}+"); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
 	@Test
