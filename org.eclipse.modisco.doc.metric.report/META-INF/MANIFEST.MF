@@ -2,6 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MoDisco Metrics Report
 Bundle-SymbolicName: org.eclipse.modisco.doc.metric.report;singleton:=true
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 Bundle-Version: 1.1.0.qualifier
+=======
+Bundle-Version: 1.0.1.qualifier
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 Bundle-Vendor: Eclipse Modeling Project
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

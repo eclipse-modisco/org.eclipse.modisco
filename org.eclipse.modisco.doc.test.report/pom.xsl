@@ -22,7 +22,11 @@
 				<dependency>
 					<groupId>org.eclipse.mdt</groupId>
 					<artifactId>org.eclipse.modisco.tests</artifactId>
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 					<version>1.1.0-SNAPSHOT</version>
+=======
+					<version>1.0.1-SNAPSHOT</version>
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 					<type>eclipse-test-plugin</type>
 				</dependency>
 			</dependencies>

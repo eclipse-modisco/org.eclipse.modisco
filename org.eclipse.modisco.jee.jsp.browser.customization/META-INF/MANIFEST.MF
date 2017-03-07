@@ -6,7 +6,11 @@ Require-Bundle: org.eclipse.gmt.modisco.infra.query.core,
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 Bundle-Version: 1.1.0.qualifier
+=======
+Bundle-Version: 1.0.1.qualifier
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.jee.jsp.browser.customization

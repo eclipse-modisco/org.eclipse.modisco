@@ -2,7 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui;singleton:=true
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 Bundle-Version: 1.1.0.qualifier
+=======
+Bundle-Version: 1.0.1.qualifier
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 Bundle-Activator: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,

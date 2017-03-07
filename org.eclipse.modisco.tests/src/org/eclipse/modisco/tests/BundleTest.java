@@ -36,7 +36,11 @@ public class BundleTest {
 
 	@Test
 	public void version() {
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 		testManifestProperty("Bundle-Version", "1\\.1\\.0\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+=======
+		testManifestProperty("Bundle-Version", "1\\.0\\.1\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 	}
 
 	@Test

@@ -13,7 +13,12 @@
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="MoDisco Infrastructure"
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
       version="1.1.0.qualifier"
+=======
+      version="1.0.1.qualifier"
+      provider-name="%providerName"
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
       plugin="org.eclipse.gmt.modisco.infra.common.core"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">

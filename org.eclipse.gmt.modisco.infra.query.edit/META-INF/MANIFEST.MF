@@ -2,7 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.query.edit;singleton:=true
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 Bundle-Version: 1.1.0.qualifier
+=======
+Bundle-Version: 1.0.1.qualifier
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.gmt.modisco.infra.query.edit.provider.QueryEditPlugin$Implementation
 Bundle-Vendor: %providerName

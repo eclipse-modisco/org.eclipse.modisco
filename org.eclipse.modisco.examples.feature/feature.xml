@@ -12,7 +12,11 @@
 <feature
       id="org.eclipse.modisco.examples.feature"
       label="MoDisco Examples"
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
       version="1.1.0.qualifier"
+=======
+      version="1.0.1.qualifier"
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
       provider-name="%providerName"
       plugin="org.eclipse.gmt.modisco.examples"
       license-feature="org.eclipse.license"

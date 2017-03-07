@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
+<<<<<<< HEAD   (b90d9a Merge branch 'maintenance-1.0')
 <product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="1.1.0" useFeatures="true" includeLaunchers="true">
+=======
+<product name="MoDisco API Use Report Package" uid="org.eclipse.modisco.doc.api.report.eclipsepackage" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="1.0.1" useFeatures="true" includeLaunchers="true">
+>>>>>>> BRANCH (cfa83a Switching to version 1.0.1)
 
    <configIni use="default">
    </configIni>
