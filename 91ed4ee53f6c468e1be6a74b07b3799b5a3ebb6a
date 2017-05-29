@@ -1,0 +1,8 @@
+Verified+1: Hudson CI
+Code-Review+1: Ed Merks <ed.merks@gmail.com>
+Code-Review+2: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-by: Gregoire Dupe <gdupe@mia-software.com>
+Submitted-at: Mon, 29 May 2017 10:10:45 -0400
+Reviewed-on: https://git.eclipse.org/r/98128
+Project: modisco/org.eclipse.modisco
+Branch: refs/heads/master
