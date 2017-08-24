@@ -8,7 +8,7 @@
 # Contributors:
 #    Grégoire Dupé - initial implementation
 
-RT_VERSION=master
+RT_VERSION=Oxygen_update
 
 echo $DISPLAY
 echo $PATH
