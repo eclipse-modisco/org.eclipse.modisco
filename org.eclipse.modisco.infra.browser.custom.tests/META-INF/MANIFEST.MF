@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-Vendor: %Bundle-Vendor
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser.custom.tests;singleton:=true
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 1.1.1.qualifier
 Require-Bundle: org.junit;bundle-version="4.7.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0",
  org.eclipse.core.resources;bundle-version="3.5.1",

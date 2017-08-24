@@ -6,7 +6,7 @@ Require-Bundle: org.eclipse.gmt.modisco.infra.query.core,
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 1.1.1.qualifier
 Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.jee.jsp.browser.customization
