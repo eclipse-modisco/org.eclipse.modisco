@@ -36,7 +36,7 @@ public class BundleTest {
 
 	@Test
 	public void version() {
-		testManifestProperty("Bundle-Version", "1\\.1\\.0\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+		testManifestProperty("Bundle-Version", "1\\.1\\.1\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
 	@Test

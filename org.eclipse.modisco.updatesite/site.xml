@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.modisco.examples.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.examples.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.examples.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.examples.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.infra.cdo.derby.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.infra.cdo.derby.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.infra.cdo.derby.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.infra.cdo.derby.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.cdo"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.infra.omg.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.infra.omg.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.infra.omg.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.infra.omg.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.infrastructure.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.infrastructure.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.infrastructure.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.infrastructure.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.java.cdo.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.java.cdo.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.java.cdo.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.java.cdo.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.cdo"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.java.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.java.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.java.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.java.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.jee.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.jee.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.jee.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.jee.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.sdk.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.sdk.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.sdk.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.main"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.usecase.modelfilter.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.usecase.modelfilter.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.usecase.simpletransformationschain.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.usecase.simpletransformationschain.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.xml.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.xml.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.xml.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.xml.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.infra.discovery.benchmark.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.infra.discovery.benchmark.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.all.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.all.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.all.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.all.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.thirdparties_1.1.0.qualifier.jar" id="org.eclipse.modisco.thirdparties" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.thirdparties_1.1.1.qualifier.jar" id="org.eclipse.modisco.thirdparties" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.infra.browser.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.infra.browser.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.infra.browser.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.infra.browser.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.infrastructure"/>
    </feature>
-   <feature url="features/org.eclipse.modisco.eclipse.feature_1.1.0.qualifier.jar" id="org.eclipse.modisco.eclipse.feature" version="1.1.0.qualifier">
+   <feature url="features/org.eclipse.modisco.eclipse.feature_1.1.1.qualifier.jar" id="org.eclipse.modisco.eclipse.feature" version="1.1.1.qualifier">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
    <category-def name="org.eclipse.modisco.updatesite.infrastructure" label="Infrastrucutre"/>
