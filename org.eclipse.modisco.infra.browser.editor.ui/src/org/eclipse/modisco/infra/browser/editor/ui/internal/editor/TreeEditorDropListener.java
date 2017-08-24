@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
-import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.dnd.DropTargetEvent;
 import org.eclipse.swt.dnd.DropTargetListener;
 import org.eclipse.swt.widgets.TreeItem;
@@ -54,8 +54,8 @@ public class TreeEditorDropListener implements DropTargetListener {
 
 	public void drop(final DropTargetEvent event) {
 		Object value = null;
-		if (event.data instanceof StructuredSelection) {
-			final StructuredSelection structSelection = (StructuredSelection) event.data;
+		if (event.data instanceof IStructuredSelection) {
+			final IStructuredSelection structSelection = (IStructuredSelection) event.data;
 			if (structSelection.size() == 1) {
 				value = structSelection.getFirstElement();
 			} else {
