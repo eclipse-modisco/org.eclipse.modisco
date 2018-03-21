@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="18">
+<?pde version="3.8"?><target name="org.eclipse.modisco.archi.tech.targetplatform" sequenceNumber="20">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.m2m.atl.feature.group" version="3.1.0.v201006150240"/>
@@ -27,7 +27,7 @@
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.facet.sdk.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.emf.facet.util.tests.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/facet/updates/release/1.2.0/"/>
+<repository location="http://archive.eclipse.org/facet/updates/release/1.2.0/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.forms.feature.group" version="2.0.5.20111003_1754-3676ac8-dev-e36"/>
