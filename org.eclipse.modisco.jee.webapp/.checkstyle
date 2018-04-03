@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fileset-config file-format-version="1.2.0" simple-config="true" sync-formatter="false">
-  <local-check-config name="MoDisco" location="/org.eclipse.emf.facet.archi.tech.rules/checkstyle/EmfFacet.checkstyle" type="project" description="">
+  <local-check-config name="MoDisco" location="/org.eclipse.emf.facet.archi.tech.rules/checkstyle/EmfFacet-6.2.checkstyle" type="project" description="">
     <additional-data name="protect-config-file" value="false"/>
   </local-check-config>
   <fileset name="all" enabled="true" check-config-name="MoDisco" local="true">
     <file-match-pattern match-pattern="." include-pattern="true"/>
   </fileset>
   <filter name="FilesFromPackage" enabled="true">
-    <filter-data value="src/org/eclipse/gmt/modisco/jee/webapp/webapp22"/>
-    <filter-data value="src/org/eclipse/gmt/modisco/jee/webapp/webapp23"/>
-    <filter-data value="src/org/eclipse/gmt/modisco/jee/webapp/webapp24"/>
-    <filter-data value="src/org/eclipse/gmt/modisco/jee/webapp/webapp25"/>
-    <filter-data value="src/org/eclipse/gmt/modisco/jee/webapp/webapp30"/>
-    <filter-data value="src/org/eclipse/modisco/jee/webapp/webapp22"/>
-    <filter-data value="src/org/eclipse/modisco/jee/webapp/webapp23"/>
-    <filter-data value="src/org/eclipse/modisco/jee/webapp/webapp24"/>
-    <filter-data value="src/org/eclipse/modisco/jee/webapp/webapp25"/>
-    <filter-data value="src/org/eclipse/modisco/jee/webapp/webapp30"/>
+    <filter-data value="src-gen/org/eclipse/gmt/modisco/jee/webapp/webapp22"/>
+    <filter-data value="src-gen/org/eclipse/gmt/modisco/jee/webapp/webapp23"/>
+    <filter-data value="src-gen/org/eclipse/gmt/modisco/jee/webapp/webapp24"/>
+    <filter-data value="src-gen/org/eclipse/gmt/modisco/jee/webapp/webapp25"/>
+    <filter-data value="src-gen/org/eclipse/gmt/modisco/jee/webapp/webapp30"/>
+    <filter-data value="src-gen/org/eclipse/modisco/jee/webapp/webapp22"/>
+    <filter-data value="src-gen/org/eclipse/modisco/jee/webapp/webapp23"/>
+    <filter-data value="src-gen/org/eclipse/modisco/jee/webapp/webapp24"/>
+    <filter-data value="src-gen/org/eclipse/modisco/jee/webapp/webapp25"/>
+    <filter-data value="src-gen/org/eclipse/modisco/jee/webapp/webapp30"/>
   </filter>
 </fileset-config>
