@@ -37,7 +37,7 @@ import org.eclipse.m2m.atl.engine.vm.nativelib.ASMModel;
 
 /**
  * @author gbarbier
- * 
+ *
  */
 public class AtlLaunchHelper {
 

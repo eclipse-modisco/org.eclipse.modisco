@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query 
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.utils;
 
@@ -112,7 +112,7 @@ public final class FileUtils {
 
 	/**
 	 * Returns the workspace file in which the resource is defined.
-	 * 
+	 *
 	 * @param resource
 	 *            the resource, with a "platform:/resource/" URI
 	 */

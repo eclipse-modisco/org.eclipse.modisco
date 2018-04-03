@@ -30,7 +30,7 @@ import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.FileEditorInput;
 
 public final class ModelUtils {
-	
+
 	private ModelUtils() {
 		//
 	}
@@ -38,7 +38,7 @@ public final class ModelUtils {
 	/**
 	 * A utility service for opening a model in the MoDisco model editor, if
 	 * present, or otherwise in another appropriate editor.
-	 * 
+	 *
 	 * @param source
 	 *            a {@link Resource} instance
 	 */
@@ -53,7 +53,7 @@ public final class ModelUtils {
 
 	/**
 	 * A utility service for opening a model in the MoDisco model editor.
-	 * 
+	 *
 	 * @param model
 	 *            a {@link Resource} instance
 	 */
@@ -78,7 +78,7 @@ public final class ModelUtils {
 	 * A utility service to schedule the opening of a model in the MoDisco model
 	 * editor, if present, or otherwise in another appropriate editor. This
 	 * service reuses {@link #openEditor(IFile)}.
-	 * 
+	 *
 	 * @param source
 	 *            a {@link Resource} instance
 	 * @param job
@@ -99,7 +99,7 @@ public final class ModelUtils {
 	/**
 	 * A utility service to schedule the opening of a model in the MoDisco model
 	 * editor. This service reuses {@link #openEditor(Resource)}.
-	 * 
+	 *
 	 * @param source
 	 *            a {@link Resource} instance
 	 * @param job

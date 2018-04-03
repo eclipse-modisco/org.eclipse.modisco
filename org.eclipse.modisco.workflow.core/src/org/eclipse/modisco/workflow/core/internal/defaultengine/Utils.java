@@ -28,7 +28,7 @@ public final class Utils {
 	/**
 	 * Allows to find the good INSTANCE of LaunchConfiguration corresponding at
 	 * name
-	 * 
+	 *
 	 * @param configName
 	 *            Name of LaunchConfiguration
 	 * @return An INSTANCE of launchConfiguration corresponding at name

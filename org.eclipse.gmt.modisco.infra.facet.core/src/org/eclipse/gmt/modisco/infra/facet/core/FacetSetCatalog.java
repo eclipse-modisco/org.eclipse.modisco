@@ -100,7 +100,7 @@ public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalo
 	/**
 	 * This method returns the facet set of the resource having for name the
 	 * "name" parameter value.
-	 * 
+	 *
 	 * @param name
 	 *            the name of a resource contained in the catalog
 	 * @return return a facet set
@@ -112,7 +112,7 @@ public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalo
 	/**
 	 * Get the set of default {@link FacetSet}s that apply to the given
 	 * {@link EPackage}.
-	 * 
+	 *
 	 * @param ePackage
 	 *            the package for which matching {@link FacetSet}s will be
 	 *            returned
@@ -133,7 +133,7 @@ public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalo
 	/**
 	 * This methods returns the facet sets of all the resources contained in the
 	 * catalog.
-	 * 
+	 *
 	 * @return returns all the facet sets
 	 */
 	public Collection<FacetSet> getAllFacetSets() {
@@ -179,7 +179,7 @@ public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalo
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreCatalog
 	 * #getActivator()

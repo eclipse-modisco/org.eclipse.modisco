@@ -25,5 +25,5 @@ public class NodeColorAction extends ColorAction {
         add("ingroup('_search_')", ColorLib.rgb(255,190,190)); //$NON-NLS-1$
         add("ingroup('_focus_')", ColorLib.rgb(198,229,229)); //$NON-NLS-1$
     }
-            
+
 }

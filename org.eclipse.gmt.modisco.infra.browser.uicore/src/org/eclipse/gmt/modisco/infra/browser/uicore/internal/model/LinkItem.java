@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.model;
@@ -59,7 +59,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Instantiate a new LinkItem.
-	 * 
+	 *
 	 * @param parent
 	 *            the model element that owns the link
 	 * @param reference
@@ -105,7 +105,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Get a text describing the given reference
-	 * 
+	 *
 	 * @param reference
 	 *            the reference to describe
 	 * @param showMultiplicity

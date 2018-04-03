@@ -32,7 +32,7 @@ public final class Messages extends NLS {
 	public static String ProjectUtils_0;
 	public static String ProjectUtils_1;
 	public static String ProjectUtils_2;
-	
+
 	public static String ValidationJob_creatingValidationMarkersJobName;
 	public static String ValidationJob_validationJobName;
 

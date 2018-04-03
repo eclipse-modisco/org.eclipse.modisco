@@ -1,7 +1,7 @@
 /*******************************************************************************
  * Copyright (c) 2011, 2015 Mia-Software and INRIA.
- * All rights reserved. This program and the accompanying materials are made 
- * available under the terms of the Eclipse Public License v1.0 which 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v1.0 which
  * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
@@ -22,7 +22,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
 public final class ReportingUtilities {
 
 	private ReportingUtilities() { }
-	
+
 	public static double maxExecutionTime(final Collection<DiscoveryIteration> iterations) {
 		double maxExecutionTime = 0.0;
 		for (DiscoveryIteration iteration : iterations) {
@@ -39,7 +39,7 @@ public final class ReportingUtilities {
 		}
 		return maxSaveTime;
 	}
-	
+
 	public static String sizeWithUnit(final Double value) {
 		final double unitChange = 1024.0;
 
@@ -55,7 +55,7 @@ public final class ReportingUtilities {
 		}
 		return (int) result + " " + unitName(unit); //$NON-NLS-1$
 	}
-	
+
 	// these constants are only here to make checkstyle happy
 	private static final int UNIT_0 = 0;
 	private static final int UNIT_1 = 1;

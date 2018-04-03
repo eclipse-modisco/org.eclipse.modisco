@@ -17,7 +17,7 @@ import org.eclipse.debug.ui.ILaunchConfigurationDialog;
 import org.eclipse.debug.ui.ILaunchConfigurationTab;
 
 /**
- * 
+ *
  * @author Nicolas Payneau
  */
 public class MoDiscoWorkflowTabGroup extends AbstractLaunchConfigurationTabGroup {
@@ -26,7 +26,7 @@ public class MoDiscoWorkflowTabGroup extends AbstractLaunchConfigurationTabGroup
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTabGroup#createTabs(org.eclipse
 	 * .debug.ui.ILaunchConfigurationDialog, java.lang.String)

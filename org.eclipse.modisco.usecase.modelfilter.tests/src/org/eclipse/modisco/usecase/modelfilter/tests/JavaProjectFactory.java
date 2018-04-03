@@ -35,7 +35,7 @@ import org.eclipse.jdt.launching.JavaRuntime;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class JavaProjectFactory {
 

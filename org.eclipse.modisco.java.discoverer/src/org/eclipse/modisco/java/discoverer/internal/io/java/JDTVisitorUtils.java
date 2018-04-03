@@ -71,7 +71,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * Resolves the JDT <code>name</code> and sorts the targeted
 	 * <code>element</code> in the local or global <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the declared Java entity.
 	 * @param name
@@ -97,7 +97,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * Resolves and sorts the pending reference in the local or the global
 	 * <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the <code>PendingElement</code> associated with this reference
 	 * @param name
@@ -124,7 +124,7 @@ public final class JDTVisitorUtils {
 	 * Resolves this JDT PrimitiveType <code>type</code> and creates the
 	 * corresponding MoDisco {@link PrimitiveType} object (or returns a similar
 	 * PrimitiveType if any).
-	 * 
+	 *
 	 * @param type
 	 *            the JDT PrimitiveType node.
 	 * @param visitor
@@ -145,7 +145,7 @@ public final class JDTVisitorUtils {
 			primitiveType.setName(id.toString());
 			visitor.getJdtModel().getOrphanTypes().add(primitiveType);
 			visitor.getGlobalBindings().addTarget(id, primitiveType);
-			MoDiscoLogger.logError("primitiveType == null", JavaActivator.getDefault()); //$NON-NLS-1$ 
+			MoDiscoLogger.logError("primitiveType == null", JavaActivator.getDefault()); //$NON-NLS-1$
 
 		}
 		return primitiveType;
@@ -155,7 +155,7 @@ public final class JDTVisitorUtils {
 	 * Resolves this JDT ParameterizedType <code>type</code> and creates the
 	 * corresponding MoDisco {@link ParameterizedType} object (or returns a
 	 * similar ParameterizedType if any).
-	 * 
+	 *
 	 * @param type
 	 *            the JDT ParameterizedType node.
 	 * @param visitor
@@ -197,7 +197,7 @@ public final class JDTVisitorUtils {
 	 * Resolves this JDT WildCardType <code>type</code> and creates the
 	 * corresponding MoDisco {@link WildCardType} object (or returns a similar
 	 * WildCardType if any).
-	 * 
+	 *
 	 * @param type
 	 *            the JDT WildCardType node.
 	 * @param visitor
@@ -227,7 +227,7 @@ public final class JDTVisitorUtils {
 	 * Resolves this JDT ArrayType <code>type</code> and creates the
 	 * corresponding MoDisco {@link ArrayType} object (or returns a similar
 	 * ArrayType if any).
-	 * 
+	 *
 	 * @param type
 	 *            the JDT ArrayType node.
 	 * @param visitor
@@ -257,7 +257,7 @@ public final class JDTVisitorUtils {
 	 * Manages the reference to a constructor. If the targeted constructor has
 	 * already been visited, the reference is resolved. Otherwise, the pending
 	 * reference is added to the global <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the <code>PendingElement</code> associated with this reference
 	 * @param constructorCall
@@ -283,7 +283,7 @@ public final class JDTVisitorUtils {
 	 * Manages the reference to a constructor. If the targeted constructor has
 	 * already been visited, the reference is resolved. Otherwise, the pending
 	 * reference is added to the global <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the <code>PendingElement</code> associated with this reference
 	 * @param constructorCall
@@ -310,7 +310,7 @@ public final class JDTVisitorUtils {
 	 * constructor has already been visited, the reference is resolved.
 	 * Otherwise, the pending reference is added to the global
 	 * <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the <code>PendingElement</code> associated with this reference
 	 * @param constructorCall
@@ -335,7 +335,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * First creation of the Java primitives types which are placed as targets
 	 * in the global <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF <code>factory</code>
 	 * @param model
@@ -420,7 +420,7 @@ public final class JDTVisitorUtils {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param oldClientNode
 	 * @param newClientNode
 	 * @param oldClientLinkName
@@ -444,7 +444,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * Complete <code>PendingElement</code> instances with client node and
 	 * client link name.
-	 * 
+	 *
 	 * @param clientNode
 	 * @param modiscoNode
 	 * @param clientLinkName
@@ -466,7 +466,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * For unresolved items, <code>TypeAccess</code> may not have been yet
 	 * created (no kind of binding)
-	 * 
+	 *
 	 * @param node
 	 *            a type access (<code>PendingElement</code> or resolved
 	 *            <code>TypeAccess</code>)
@@ -502,7 +502,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * For unresolved items, <code>SingleVariableAccess</code> may not have been
 	 * yet created (no kind of binding)
-	 * 
+	 *
 	 * @param node
 	 *            a variable access (<code>PendingElement</code> or resolved
 	 *            <code>SingleVariableAccess</code>)
@@ -535,7 +535,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * For unresolved items as qualifiers, <code>UnresolvedItemAccess</code> may
 	 * not have been yet created
-	 * 
+	 *
 	 * @param node
 	 *            an expression (<code>PendingElement</code> or resolved
 	 *            <code>Expression</code>)
@@ -555,7 +555,7 @@ public final class JDTVisitorUtils {
 	/**
 	 * For unresolved items as qualifiers, <code>UnresolvedItemAccess</code> may
 	 * not have been yet created
-	 * 
+	 *
 	 * @param node
 	 *            an expression or PackageAccess (<code>PendingElement</code> or
 	 *            resolved <code>Expression</code> or resolved

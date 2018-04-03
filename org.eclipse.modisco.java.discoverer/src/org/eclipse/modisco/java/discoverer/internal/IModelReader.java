@@ -42,7 +42,7 @@ public interface IModelReader {
 	 * This is a convenience method for
 	 * {@link #readModel(Object, Model, BindingManager, IProgressMonitor)} with
 	 * a private blank {@code BindingManager}.
-	 * 
+	 *
 	 * @see #readModel(Object, Model, BindingManager, IProgressMonitor)
 	 * @param source
 	 *            the source element to analyse
@@ -60,7 +60,7 @@ public interface IModelReader {
 	 * Readers implementing this method should throw an
 	 * {@link IllegalArgumentException} if source is not analysable.
 	 * </p>
-	 * 
+	 *
 	 * @param source
 	 *            the source to analyse
 	 * @param model
@@ -86,7 +86,7 @@ public interface IModelReader {
 	 * <p>
 	 * Clients shouldn't make modifications on the resulting {@code Model}.
 	 * </p>
-	 * 
+	 *
 	 * @param monitor
 	 *            a monitor to report progress
 	 */

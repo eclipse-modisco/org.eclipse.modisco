@@ -14,7 +14,7 @@ import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
  * @deprecated Will become internal cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470609
  */
@@ -22,7 +22,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends Plugin {
 
 	private static Activator plugin;
-	
+
 	@Override
 	public void start(final BundleContext context) throws Exception {
 		super.start(context);

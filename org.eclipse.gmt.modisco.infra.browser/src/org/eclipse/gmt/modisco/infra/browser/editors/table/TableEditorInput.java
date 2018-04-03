@@ -42,7 +42,7 @@ public class TableEditorInput implements IEditorInput {
 
 	/**
 	 * Create an input for all the given elements
-	 * 
+	 *
 	 * @param browserConfiguration
 	 *            the main browser's configuration
 	 * @param tableElements
@@ -81,13 +81,13 @@ public class TableEditorInput implements IEditorInput {
 		for (final EClass eClass : this.metaclasses) {
 			features.addAll(eClass.getEAllStructuralFeatures());
 		}
-		
+
 		this.fFeatures = new ArrayList<EStructuralFeature>(features);
 	}
 
 	/**
 	 * Create an input for all elements of the given class
-	 * 
+	 *
 	 * @param browserConfiguration
 	 *            the main editor configuration
 	 * @param eClass
@@ -113,7 +113,7 @@ public class TableEditorInput implements IEditorInput {
 	public List<TableElement> getElements() {
 		return this.elements;
 	}
-	
+
 	public List<EStructuralFeature> getFeatures() {
 		return this.fFeatures;
 	}

@@ -8,7 +8,7 @@
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Nicolas Guyomar (Mia-Software) - Code Synchronisation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.util;
@@ -89,7 +89,7 @@ public final class ImageProvider {
 	private Image queryIcon = null;
 	private Image uiCustomIcon = null;
 	private Image uriIcon = null;
-	
+
 	private Image shortcutIcon = null;
 
 	private static final String LINK_ICON_PATH = "/icons/full/ctool16/link.gif"; //$NON-NLS-1$
@@ -138,10 +138,10 @@ public final class ImageProvider {
 	private static final String COLLAPSE_ALL_ICON_PATH = "/icons/full/ctool16/collapseall.gif"; //$NON-NLS-1$
 	private static final String SHORTCUT_ICON_PATH = "/icons/shortcut.png"; //$NON-NLS-1$
 	private static final String SYNCHRONIZE_CODE_SOURCE = "/icons/full/ctool16/synchronizeSourceCode.gif"; //$NON-NLS-1$
-	
+
 	/**
 	 * Create an image descriptor from a resource
-	 * 
+	 *
 	 * @param resourcePath
 	 *            the path of the resource (in the bundle)
 	 * @return the image descriptor
@@ -273,7 +273,7 @@ public final class ImageProvider {
 	public ImageDescriptor getShowDerivedLinksImageDescriptor() {
 		return createImageDescriptor(ImageProvider.SHOW_DERIVED_LINKS_ICON_PATH);
 	}
-	
+
 	/** Return the icon representing synchronizeSourceCode action */
 	public ImageDescriptor getSynchronizeSourceCodeDescriptor() {
 		return createImageDescriptor(ImageProvider.SYNCHRONIZE_CODE_SOURCE);
@@ -605,7 +605,7 @@ public final class ImageProvider {
 	public ImageDescriptor getCollapseAllDescriptor() {
 		return createImageDescriptor(ImageProvider.COLLAPSE_ALL_ICON_PATH);
 	}
-	
+
 	public Image getShortcutIcon() {
 		if (this.shortcutIcon == null) {
 			this.shortcutIcon = createImageDescriptor(ImageProvider.SHORTCUT_ICON_PATH).createImage();

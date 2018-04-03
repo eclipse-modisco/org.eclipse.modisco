@@ -4,9 +4,9 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
 package org.eclipse.modisco.jee.queries.annotations.ejb;
@@ -24,7 +24,7 @@ public class IsResources implements IJavaModelQuery<ClassDeclaration, Boolean> {
 	public Boolean evaluate(final ClassDeclaration context,
 			final ParameterValueList parameterValues)
 			throws ModelQueryExecutionException {
-		
+
 		return EvaluateAnnotation.evaluate(context,
 				IsResources.ANNOTATION_NAME);
 	}

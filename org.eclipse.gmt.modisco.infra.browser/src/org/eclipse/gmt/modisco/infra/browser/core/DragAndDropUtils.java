@@ -27,7 +27,7 @@ public final class DragAndDropUtils {
 	/**
 	 * For each element in the given collection, look for its equivalent (based
 	 * on the element's URI) in the given {@link ResourceSet}.
-	 * 
+	 *
 	 * @param collection
 	 *            the input elements
 	 * @param resourceSet

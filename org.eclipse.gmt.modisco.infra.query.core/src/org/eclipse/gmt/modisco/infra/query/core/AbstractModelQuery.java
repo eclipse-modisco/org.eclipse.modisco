@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software)
@@ -33,16 +33,16 @@ import org.eclipse.gmt.modisco.infra.query.runtime.RuntimeFactory;
 /**
  * To get a sub class instance of this class, the {@link ModelQuerySetCatalog}
  * must be used.
- * 
+ *
  * <pre>
  * ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
  * ModelQuerySet modelQuerySet = catalog.getModelQuerySet(&quot;modisco.infra.query.tests.01&quot;);
  * ModelQuery modelQuery = modelQuerySet.getQuery(&quot;test001&quot;);
  * AbstractModelQuery modelQueryInst = catalog.getModelQueryImpl(modelQuery);
  * </pre>
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
- * 
+ *
  * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
 @Deprecated
@@ -53,7 +53,7 @@ public abstract class AbstractModelQuery {
 
 	/**
 	 * AbstractModelQuery constructor
-	 * 
+	 *
 	 * @param modelQuery
 	 *            the model query description (model element)
 	 */
@@ -64,7 +64,7 @@ public abstract class AbstractModelQuery {
 	/**
 	 * This method returns the model query element passed as parameter to the
 	 * constructor
-	 * 
+	 *
 	 * @return The model query element passed as parameter to the constructor
 	 */
 	public final ModelQuery getModelQuery() {
@@ -74,10 +74,10 @@ public abstract class AbstractModelQuery {
 	/**
 	 * This method is used to evaluate the query on a set of models and model
 	 * elements described by the context parameter.
-	 * 
+	 *
 	 * The query is evaluated on each contextually referred model element and on
 	 * each element of a contextually referred model.
-	 * 
+	 *
 	 * @param context
 	 *            The query evaluation context described by a ModelQueryContext
 	 *            instance.
@@ -112,7 +112,7 @@ public abstract class AbstractModelQuery {
 	 * {@link AbstractModelQuery#evaluate(ModelQueryContext, List)} is called).
 	 * <p>
 	 * A subclass will receive in order:<br>
-	 * 
+	 *
 	 * <pre>
 	 * startEvaluate()
 	 * basicEvaluate(context1, parameters)
@@ -121,9 +121,9 @@ public abstract class AbstractModelQuery {
 	 * basicEvaluate(contextn, parameters)
 	 * endEvaluate()
 	 * </pre>
-	 * 
+	 *
 	 * </p>
-	 * 
+	 *
 	 * @see {@link AbstractModelQuery#endEvaluate()}
 	 */
 	protected void startEvaluate() {
@@ -133,7 +133,7 @@ public abstract class AbstractModelQuery {
 	/**
 	 * Called when ending the evaluation of a query on one or several context
 	 * elements.
-	 * 
+	 *
 	 * @see {@link AbstractModelQuery#startEvaluate()}
 	 */
 	protected void endEvaluate() {
@@ -143,7 +143,7 @@ public abstract class AbstractModelQuery {
 	/**
 	 * This method is used to evaluate the query on one model element. The
 	 * method is only usable for queries which do not have any parameters.
-	 * 
+	 *
 	 * @param context
 	 *            The query evaluation context
 	 * @return A ModelQueryResult instance
@@ -162,7 +162,7 @@ public abstract class AbstractModelQuery {
 	/**
 	 * This method is used to evaluate the query on one model element. The
 	 * method is usable for queries which have parameters.
-	 * 
+	 *
 	 * @param context
 	 *            The query evaluation context
 	 * @param parameterValues
@@ -224,7 +224,7 @@ public abstract class AbstractModelQuery {
 	/**
 	 * This method must be overridden by each sub class to implement query
 	 * evaluation.
-	 * 
+	 *
 	 * @param context
 	 *            The query evaluation context
 	 * @param parameterValues
@@ -239,7 +239,7 @@ public abstract class AbstractModelQuery {
 	 * This method is equivalent to {@link AbstractModelQuery#evaluate(EObject)}
 	 * but rather than return the errors into a ModelQueryResult instance, it
 	 * throws an exception.
-	 * 
+	 *
 	 * @param context
 	 *            The query evaluation context
 	 * @return The query result.

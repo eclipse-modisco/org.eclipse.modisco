@@ -66,7 +66,7 @@ import com.ibm.icu.lang.UCharacter;
 
 /**
  * @author Gregoire DUPE (Mia-Software), Fabien Giquel (Mia-Software)
- * 
+ *
  */
 public final class ProjectUtils {
 
@@ -403,7 +403,7 @@ public final class ProjectUtils {
 
 	/**
 	 * Create MoDisco project
-	 * 
+	 *
 	 * @param project
 	 * @param monitor
 	 * @throws CoreException

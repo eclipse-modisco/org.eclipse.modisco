@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  */
@@ -22,7 +22,7 @@ public class QueryProtocolExtension implements IModiscoProtocolExtension {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.gmt.modisco.infra.common.core.IModiscoResourceFactoryExt#
 	 * getSchemeSpecificPart()
 	 */
@@ -32,7 +32,7 @@ public class QueryProtocolExtension implements IModiscoProtocolExtension {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.gmt.modisco.infra.common.core.internal.IModiscoResourceFactoryExt
 	 * #getURI (java.lang.String)

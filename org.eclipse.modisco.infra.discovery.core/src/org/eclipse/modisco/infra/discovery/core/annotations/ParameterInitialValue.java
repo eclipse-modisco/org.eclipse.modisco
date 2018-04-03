@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    Nicolas Bros (Mia-Software) - Bug 338702 - [Discovery] specify initial value for Parameters 
+ *    Nicolas Bros (Mia-Software) - Bug 338702 - [Discovery] specify initial value for Parameters
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core.annotations;
 

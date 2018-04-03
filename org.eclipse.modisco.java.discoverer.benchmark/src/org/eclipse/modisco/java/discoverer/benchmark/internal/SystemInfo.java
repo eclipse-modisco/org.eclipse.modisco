@@ -94,7 +94,7 @@ public final class SystemInfo {
 		this.nProcessors = bean.getAvailableProcessors();
 
 		this.procName = ""; //$NON-NLS-1$
-		this.procDescription = ""; //$NON-NLS-1$ 
+		this.procDescription = ""; //$NON-NLS-1$
 		this.procCacheSize = ""; //$NON-NLS-1$
 		this.memory = ""; //$NON-NLS-1$
 
@@ -175,7 +175,7 @@ public final class SystemInfo {
 	}
 
 	private static List<String> getInfos(final String name, final String result) {
-		Pattern patternName = Pattern.compile(name + "\\s*:\\s*(.*)"); //$NON-NLS-1$ 
+		Pattern patternName = Pattern.compile(name + "\\s*:\\s*(.*)"); //$NON-NLS-1$
 		Matcher matcher = patternName.matcher(result);
 		List<String> infos = new ArrayList<String>();
 		while (matcher.find()) {

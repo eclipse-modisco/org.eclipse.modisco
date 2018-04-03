@@ -19,7 +19,7 @@ import org.eclipse.gmt.modisco.java.Type;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class HasUsedTypes implements IJavaModelQuery<Type, Boolean> {
 

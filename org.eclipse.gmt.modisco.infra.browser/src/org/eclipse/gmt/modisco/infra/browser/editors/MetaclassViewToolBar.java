@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -71,7 +71,7 @@ public class MetaclassViewToolBar {
 				}
 			}
 		};
-		// no selection event is sent when clicking on Windows 
+		// no selection event is sent when clicking on Windows
 		if (Platform.getOS().equals(Platform.OS_WIN32)) {
 			// listen on the toolbar so that the menu can appear on MouseDown
 			this.toolBar.addListener(SWT.MouseDown, listener);

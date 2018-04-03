@@ -32,20 +32,20 @@ import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 
 /**
  * Entry point of the 'HtmlReport2' generation module.
- * 
+ *
  * @generated
  */
 public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * The name of the module.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String MODULE_FILE_NAME = "/org/eclipse/modisco/java/discoverer/benchmark/template/html/htmlReport2"; //$NON-NLS-1$
 
 	/**
 	 * The name of the templates that are to be generated.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String[] TEMPLATE_NAMES = { "htmlReport" }; //$NON-NLS-1$
@@ -53,7 +53,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * The list of properties files from the launch parameters (Launch
 	 * configuration).
-	 * 
+	 *
 	 * @generated
 	 */
 	private List<String> propertiesFiles = new ArrayList<String>();
@@ -69,7 +69,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	 * retrieval of {@link #getProperties()} and
 	 * {@link #getGenerationListeners()}.
 	 * </p>
-	 * 
+	 *
 	 * @generated
 	 */
 	public HtmlReport2() {
@@ -79,7 +79,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param modelURI
 	 *            URI where the model on which this generator will be used is
 	 *            located.
@@ -103,7 +103,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param model
 	 *            We'll iterate over the content of this element to find Objects
 	 *            matching the first parameter of the template we need to call.
@@ -126,7 +126,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 
 	/**
 	 * This can be used to launch the generation from a standalone application.
-	 * 
+	 *
 	 * @param args
 	 *            Arguments of the generation.
 	 * @generated NOT
@@ -168,7 +168,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 				 * properties files in a bundle.
 				 */
             	//Bug 382359 - Compatibility with Helios
-            	//gdupe> The properties are not used in the generation removing 
+            	//gdupe> The properties are not used in the generation removing
                 // the following lines allow to build against Helios.
                 /*
 				for (int i = 2; i < args.length; i++) {
@@ -184,7 +184,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 
 	/**
 	 * Launches the generation described by this instance.
-	 * 
+	 *
 	 * @param monitor
 	 *            This will be used to display progress information to the user.
 	 * @throws IOException
@@ -229,7 +229,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * If this generator needs to listen to text generation events, listeners
 	 * can be returned from here.
-	 * 
+	 *
 	 * @return List of listeners that are to be notified when text is generated
 	 *         through this launch.
 	 * @generated
@@ -268,7 +268,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	 * <p>
 	 * All three of these default strategies support merging through JMerge.
 	 * </p>
-	 * 
+	 *
 	 * @return The generation strategy that is to be used for generations
 	 *         launched through this launcher.
 	 * @generated
@@ -282,7 +282,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	 * This will be called in order to find and load the module that will be
 	 * launched through this launcher. We expect this name not to contain file
 	 * extension, and the module to be located beside the launcher.
-	 * 
+	 *
 	 * @return The name of the module that is to be launched.
 	 * @generated
 	 */
@@ -304,7 +304,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	 * that needs be returned by a call to {@link #getProperties()} is
 	 * "org.eclipse.acceleo.sample.messages".
 	 * </p>
-	 * 
+	 *
 	 * @return The list of properties file we need to add to the generation
 	 *         context.
 	 * @see java.util.ResourceBundle#getBundle(String)
@@ -318,9 +318,9 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
          * to a Java class. For example, if you have a file named "messages.properties" in package "org.eclipse.acceleo.sample",
          * the path that needs be added to this list is "/org/eclipse/acceleo/sample/messages.properties". If you want to change the
          * contentof this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
-         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation of 
+         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation of
          * this class will revert your modifications.
-         * 
+         *
          * To learn more about Properties Files, have a look at the Acceleo Launcher documentation (Help -> Help Contents).
          */
         return propertiesFiles;
@@ -328,7 +328,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 
 	/**
 	 * Adds a properties file in the list of properties files.
-	 * 
+	 *
 	 * @param propertiesFile
 	 *            The properties file to add.
 	 * @generated
@@ -347,7 +347,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * This will be used to get the list of templates that are to be launched by
 	 * this launcher.
-	 * 
+	 *
 	 * @return The list of templates to call on the module
 	 *         {@link #getModuleName()}.
 	 * @generated
@@ -360,7 +360,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's package registry with all
 	 * needed EPackages.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated
@@ -368,7 +368,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	@Override
 	public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        
+
         /*
          * TODO If you need additional package registrations, you can register them here. The following line
          * (in comment) is an example of the package registration for UML. If you want to change the content
@@ -377,7 +377,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
          * that has caused the creation of this class will revert your modifications. You can use the method
          * "isInWorkspace(Class c)" to check if the package that you are about to register is in the workspace.
          * To register a package properly, please follow the following conventions:
-         * 
+         *
          * if (!isInWorkspace(UMLPackage.class)) {
          *     // The normal package registration if your metamodel is in a plugin.
          *     resourceSet.getPackageRegistry().put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
@@ -386,7 +386,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
          *     // This should be used if your metamodel is in your workspace and if you are using binary resource serialization.
          *     resourceSet.getPackageRegistry().put("/myproject/myfolder/mysubfolder/MyUMLMetamodel.ecore", UMLPackage.eINSTANCE);
          * }
-         * 
+         *
          * To learn more about Package Registration, have a look at the Acceleo Launcher documentation (Help -> Help Contents).
          */
     }
@@ -394,7 +394,7 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's resource factory registry
 	 * with all needed factories.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated
@@ -408,10 +408,10 @@ public class HtmlReport2 extends AbstractAcceleoGenerator {
          * of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
          * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation
          * of this class will revert your modifications.
-         * 
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo Launcher documentation (Help -> Help Contents). 
-         */ 
-        
+         *
+         * To learn more about the registration of Resource Factories, have a look at the Acceleo Launcher documentation (Help -> Help Contents).
+         */
+
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
 

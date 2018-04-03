@@ -31,7 +31,7 @@ public class MoDiscoProject implements IProjectNature {
 	/**
 	 * The nature of MoDisco projects
 	 */
-	public static final String NATURE_ID = "org.eclipse.gmt.modisco.common.ProjectNature"; //$NON-NLS-1$ 
+	public static final String NATURE_ID = "org.eclipse.gmt.modisco.common.ProjectNature"; //$NON-NLS-1$
 
 	/**
 	 * @see org.eclipse.core.resources.IProjectNature#configure()

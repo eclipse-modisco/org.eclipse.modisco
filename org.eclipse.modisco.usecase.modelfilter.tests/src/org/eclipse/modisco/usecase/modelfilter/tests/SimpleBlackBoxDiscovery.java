@@ -40,7 +40,7 @@ import org.osgi.framework.Bundle;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class SimpleBlackBoxDiscovery {
 	// To be able to export reference model after a change in java discovery
@@ -104,7 +104,7 @@ public class SimpleBlackBoxDiscovery {
 	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468346
 	@Test
 	public void testUmlModelFromJavaProjectWithReferenceModel()
-			throws CoreException, IOException, InterruptedException, 
+			throws CoreException, IOException, InterruptedException,
 			DiscoveryException {
 		Assert.assertNotNull(this.javaPrjFactory);
 		final IJavaProject javaProject = this.javaPrjFactory.getJavaProject();
@@ -124,12 +124,12 @@ public class SimpleBlackBoxDiscovery {
 		 * Because everything looks great, well we have to test model
 		 * content. In details we will compare current resource with a
 		 * reference (checked manually)
-		 * 
+		 *
 		 * Warning, because the java model store the "filepath" of
 		 * discovered java code, the compilation units elements could not be
 		 * the same !!!!
 		 */
-		final String referencePath = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$ 
+		final String referencePath = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$
 				+ "RealTypes" + UML_MODEL_EXT; //$NON-NLS-1$
 		final URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
 		Assert.assertNotNull(referenceUri);
@@ -143,7 +143,7 @@ public class SimpleBlackBoxDiscovery {
 
 	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474705
 	@Test
-	public void testValidationOfUmlModelDiscoveryFromJavaProject() 
+	public void testValidationOfUmlModelDiscoveryFromJavaProject()
 			throws DiscoveryException, CoreException {
 		Assert.assertNotNull(this.javaPrjFactory);
 		final IJavaProject javaProject = this.javaPrjFactory.getJavaProject();

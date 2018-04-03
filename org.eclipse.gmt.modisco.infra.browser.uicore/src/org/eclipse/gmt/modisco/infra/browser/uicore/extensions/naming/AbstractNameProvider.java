@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.extensions.naming;
@@ -31,7 +31,7 @@ public abstract class AbstractNameProvider implements NameProvider {
 
 	/**
 	 * Find a default name for the given {@link EObject}.
-	 * 
+	 *
 	 * @return a name based on a 'name' attribute or a string attribute, or an
 	 *         empty string if none was found
 	 */
@@ -49,7 +49,7 @@ public abstract class AbstractNameProvider implements NameProvider {
 	/**
 	 * Find a feature which can be used as a name for instances of the given
 	 * {@link EClass}.
-	 * 
+	 *
 	 * @return a feature corresponding to a 'name' attribute or a string
 	 *         attribute, or <code>null</code> if none was found
 	 */

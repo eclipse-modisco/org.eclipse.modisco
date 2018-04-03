@@ -578,7 +578,7 @@ public class TableEditor extends EditorPart implements ISelectionProvider, IMenu
 	/**
 	 * Find and return the element that should be opened when the given column
 	 * is clicked
-	 * 
+	 *
 	 * @param tableElement
 	 */
 	public static EObject findElementToOpenInModelBrowser(final int column,
@@ -907,7 +907,7 @@ public class TableEditor extends EditorPart implements ISelectionProvider, IMenu
 
 	/**
 	 * Find the column with the given {@link ColumnDescription}
-	 * 
+	 *
 	 * @return the column
 	 */
 	private TableColumn findColumn(final ColumnDescription columnDescription) {

@@ -32,7 +32,7 @@ public class WizardToSelectLaunchers extends Wizard {
 
 	/**
 	 * Class constructor
-	 * 
+	 *
 	 * @param controllerWorkflow
 	 *            The controller managing the workflow
 	 */
@@ -43,7 +43,7 @@ public class WizardToSelectLaunchers extends Wizard {
 
 	/**
 	 * {@inheritDoc}
-	 * 
+	 *
 	 * @see org.eclipse.jface.wizard.Wizard#addPages()
 	 */
 	@Override
@@ -54,7 +54,7 @@ public class WizardToSelectLaunchers extends Wizard {
 
 	/**
 	 * {@inheritDoc}
-	 * 
+	 *
 	 * @see org.eclipse.jface.wizard.Wizard#performFinish()
 	 */
 	@Override

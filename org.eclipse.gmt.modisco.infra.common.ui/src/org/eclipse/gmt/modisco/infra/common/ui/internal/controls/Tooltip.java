@@ -145,7 +145,7 @@ public abstract class Tooltip {
 	/**
 	 * Overload this method to position the tooltip where you want. By default
 	 * it is below the cursor.
-	 * 
+	 *
 	 * @param item
 	 *            the item that was hovered to show the tooltip
 	 * @param pt

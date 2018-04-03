@@ -89,7 +89,7 @@ public class DiscoverJavaApplicationModel2 extends DiscoverKDMSourceAndJavaModel
 					DiscoverJavaModelFromJavaProjectEMFStat.XMX,
 					Runtime.getRuntime().maxMemory()
 							/ DiscoverJavaModelFromJavaProjectEMFStat.MEGA_BYTES
-							/ DiscoverJavaModelFromJavaProjectEMFStat.MEGA_BYTES + "MB"); //$NON-NLS-1$		
+							/ DiscoverJavaModelFromJavaProjectEMFStat.MEGA_BYTES + "MB"); //$NON-NLS-1$
 
 			getStatistics().getProperties().put(DiscoverJavaModelFromJavaProjectEMFStat.MM_VARIANT,
 					"Java Composite"); //$NON-NLS-1$

@@ -30,18 +30,18 @@ import org.eclipse.gmt.modisco.java.VariableDeclaration;
  */
 public class GetFilteredPotentialTypes implements
 		IJavaModelQuery<VariableDeclaration, EList<Type>> {
-	
+
 	public EList<Type> getFilteredPotentialTypes(final VariableDeclaration source) {
 		EList<VariableDeclaration> parents = new BasicEList<VariableDeclaration>();
-		EList<Type> result = this.getBasicFilteredPotentialTypes(source, parents);	
+		EList<Type> result = this.getBasicFilteredPotentialTypes(source, parents);
 		return result;
 	}
-	
+
 	private final EList<Type> getBasicFilteredPotentialTypes(final VariableDeclaration source, final EList<VariableDeclaration> parents) {
 		EList<Type> result = new BasicEList<Type>();
 		if (!parents.contains(source)) {
 			parents.add(source);
-		
+
 			Expression initializer = source.getInitializer();
 			if ((initializer != null) && (initializer instanceof ClassInstanceCreation)) {
 				ClassInstanceCreation classInstanceCreation = (ClassInstanceCreation) initializer;
@@ -64,7 +64,7 @@ public class GetFilteredPotentialTypes implements
 				} else if (expression instanceof SingleVariableAccess) {
 					/*
 					 * potential infinite recursion
-					 * 
+					 *
 					 * Object tmp;
 					 * Object src = tmp;
 					 * ...

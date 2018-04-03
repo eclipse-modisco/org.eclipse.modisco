@@ -25,7 +25,7 @@ import org.eclipse.jdt.core.dom.IBinding;
  * (fully qualified name for global entities (types, methods, ...) and number
  * for local variables).
  * </p>
- * 
+ *
  * @see IBinding
  */
 public class Binding {
@@ -48,7 +48,7 @@ public class Binding {
 	/**
 	 * Returns an unique identifier for the Java entity represented by this
 	 * binding.
-	 * 
+	 *
 	 * @return an unique identifier (fully qualified name for global entities
 	 *         (types, methods, ...) and number for local variables)
 	 */
@@ -60,7 +60,7 @@ public class Binding {
 	/**
 	 * Indicate if this binding represents an unresolved Java entity. An
 	 * unresolved binding only knows the name of the Java entity.
-	 * 
+	 *
 	 * @return {@code true} if this binding is unresolved, {@code false}
 	 *         otherwise
 	 */

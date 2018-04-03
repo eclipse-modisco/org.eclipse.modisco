@@ -17,7 +17,7 @@ public interface WorkflowModelListener {
 
 	/**
 	 * Added a component to the Workflow
-	 * 
+	 *
 	 * @param element
 	 *            Element which represents the component
 	 */
@@ -26,7 +26,7 @@ public interface WorkflowModelListener {
 	/**
 	 * A component was inserted in the Workflow. Called when moving an element
 	 * up or down in the workflow
-	 * 
+	 *
 	 * @param index
 	 *            Component index
 	 * @param element
@@ -36,7 +36,7 @@ public interface WorkflowModelListener {
 
 	/**
 	 * Deleted a component at the specified index
-	 * 
+	 *
 	 * @param index
 	 *            Component index
 	 */

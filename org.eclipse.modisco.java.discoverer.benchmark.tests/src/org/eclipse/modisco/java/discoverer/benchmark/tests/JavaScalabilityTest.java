@@ -52,11 +52,11 @@ public class JavaScalabilityTest {
 	@Before
 	public void initResource() throws CoreException, IOException,
 			InterruptedException {
-		
-		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) { 
-		    throw new RuntimeException("skipped"); 
-		} 
-		
+
+		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {
+		    throw new RuntimeException("skipped");
+		}
+
 		if (this.sourceCodeProject == null) {
 
 			IProject newSourceProject = ResourcesPlugin.getWorkspace()
@@ -84,17 +84,17 @@ public class JavaScalabilityTest {
 
 	/**
 	 * A basic memory usage test, for standard and incremental Java discoverer
-	 * 
+	 *
 	 * @throws CoreException
 	 * @throws IOException
 	 */
 	@Test(timeout=30*60*1000)
 	public void testMemoryUsed() throws CoreException, IOException {
-		
-		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) { 
-		    throw new RuntimeException("skipped"); 
+
+		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {
+		    throw new RuntimeException("skipped");
 		}
-		
+
 		Assert.assertTrue(JavaScalabilityTest.PROJECT_NAME
 				+ " project has not been initialized for benchmark.", //$NON-NLS-1$
 				this.sourceCodeProject.exists());

@@ -27,7 +27,7 @@ import org.eclipse.swt.graphics.Image;
 @Deprecated
 public class CustomizableModelLabelProvider extends LabelProvider implements IColorProvider,
 		IFontProvider {
-	
+
 	/* Will likely be useful in the future */
 	@SuppressWarnings("unused")
 	private final CustomizationManager customizationManager;
@@ -35,7 +35,7 @@ public class CustomizableModelLabelProvider extends LabelProvider implements ICo
 	public CustomizableModelLabelProvider(final CustomizationManager customizationManager) {
 		this.customizationManager = customizationManager;
 	}
-	
+
 	@Override
 	public String getText(final Object element) {
 		final String prefix;
@@ -54,7 +54,7 @@ public class CustomizableModelLabelProvider extends LabelProvider implements ICo
 		return prefix + element.toString();
 
 	}
-	
+
 	@Override
 	public Image getImage(final Object element) {
 		if (element instanceof ITreeElement) {

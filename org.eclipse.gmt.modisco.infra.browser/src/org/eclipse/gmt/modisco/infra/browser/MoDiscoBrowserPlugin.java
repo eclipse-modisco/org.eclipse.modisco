@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser;
@@ -40,7 +40,7 @@ public final class MoDiscoBrowserPlugin extends EMFPlugin {
 
 	/**
 	 * Returns the singleton instance of the Eclipse plugin.
-	 * 
+	 *
 	 * @return the singleton instance.
 	 */
 	@Override
@@ -50,7 +50,7 @@ public final class MoDiscoBrowserPlugin extends EMFPlugin {
 
 	/**
 	 * Returns the singleton instance of the Eclipse plugin.
-	 * 
+	 *
 	 * @return the singleton instance.
 	 */
 	public static Implementation getPlugin() {
@@ -71,7 +71,7 @@ public final class MoDiscoBrowserPlugin extends EMFPlugin {
 	/**
 	 * Returns an image descriptor for the image file at the given plug-in
 	 * relative path
-	 * 
+	 *
 	 * @param path
 	 *            the path
 	 * @return the image descriptor

@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2014 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  */
@@ -22,7 +22,7 @@ import org.eclipse.emf.facet.query.java.core.IJavaQuery2;
 import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
 
 public class ChildrenQuery implements IJavaQuery2<EPackage, List<EStructuralFeature>> {
-	public List<EStructuralFeature> evaluate(final EPackage context, 
+	public List<EStructuralFeature> evaluate(final EPackage context,
 			final IParameterValueList2 parameterValues,
 			final IFacetManager facetManager)
 			throws DerivedTypedElementException {

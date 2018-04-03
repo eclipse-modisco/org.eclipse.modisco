@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 /**
  * Modisco Protocol Exception
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
- * 
+ *
  */
 public class ModiscoProtocolException extends IOException implements Resource.Diagnostic {
 
@@ -26,7 +26,7 @@ public class ModiscoProtocolException extends IOException implements Resource.Di
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.IOException#IOException()
 	 */
 	public ModiscoProtocolException() {
@@ -35,7 +35,7 @@ public class ModiscoProtocolException extends IOException implements Resource.Di
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.IOException#IOException(String)
 	 */
 	public ModiscoProtocolException(final String message) {
@@ -59,7 +59,7 @@ public class ModiscoProtocolException extends IOException implements Resource.Di
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.emf.ecore.resource.Resource.Diagnostic#getColumn()
 	 */
 	public int getColumn() {
@@ -68,7 +68,7 @@ public class ModiscoProtocolException extends IOException implements Resource.Di
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.emf.ecore.resource.Resource.Diagnostic#getLine()
 	 */
 	public int getLine() {
@@ -77,7 +77,7 @@ public class ModiscoProtocolException extends IOException implements Resource.Di
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.emf.ecore.resource.Resource.Diagnostic#getLocation()
 	 */
 	public String getLocation() {

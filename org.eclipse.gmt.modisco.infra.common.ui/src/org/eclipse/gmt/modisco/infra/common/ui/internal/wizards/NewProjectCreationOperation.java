@@ -30,7 +30,7 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
  * This operation creates a new project with MoDisco, Java and Plugin natures.
  * It initializes the Classpath and plugin configuration files with default
  * values.
- * 
+ *
  */
 public class NewProjectCreationOperation extends WorkspaceModifyOperation {
 	private IPath projectLocation = null;

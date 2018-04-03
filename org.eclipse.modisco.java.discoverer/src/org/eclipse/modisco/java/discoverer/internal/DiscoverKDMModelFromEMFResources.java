@@ -33,7 +33,7 @@ import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 
 /**
  * Discover a KDM model from a project with the java nature.
- * 
+ *
  * @since 0.12
  */
 public class DiscoverKDMModelFromEMFResources extends

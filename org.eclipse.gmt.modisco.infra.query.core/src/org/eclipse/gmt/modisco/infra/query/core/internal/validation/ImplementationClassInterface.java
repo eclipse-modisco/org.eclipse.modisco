@@ -280,7 +280,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 	/**
 	 * Check that each possible context of the query is a sub-type of the
 	 * context type defined in the Java implementation class.
-	 * 
+	 *
 	 * @param contextType
 	 *            the context defined on the implementation class
 	 * @param queryImplType
@@ -343,7 +343,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 	/**
 	 * Returns whether the given type matches the expected type, or one of its
 	 * sub-types.
-	 * 
+	 *
 	 * @param type
 	 *            the type to validate
 	 * @param expectedType

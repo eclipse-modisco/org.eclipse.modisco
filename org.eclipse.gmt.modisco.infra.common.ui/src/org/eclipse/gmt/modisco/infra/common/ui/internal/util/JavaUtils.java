@@ -48,7 +48,7 @@ public final class JavaUtils {
 
 	/**
 	 * Open a dialog to let the user choose a type.
-	 * 
+	 *
 	 * @param javaProject
 	 *            a project in which types are found (may be <code>null</code>,
 	 *            in which case only <code>additionalBundlesInSearchPath</code>

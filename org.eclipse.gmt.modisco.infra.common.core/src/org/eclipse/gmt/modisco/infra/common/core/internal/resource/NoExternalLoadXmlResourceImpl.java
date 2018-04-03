@@ -27,7 +27,7 @@ import org.xml.sax.SAXNotRecognizedException;
  * An extension of XMLResourceImpl EMF class in order to open files referencing
  * DTD. The aim is to avoid issues occuring when the XML parser tries to check
  * the DTD online if Internet connection is not available.
- * 
+ *
  */
 public class NoExternalLoadXmlResourceImpl extends XMLResourceImpl {
 

@@ -7,7 +7,7 @@
  *
  * Contributors:
  *     Nicolas Bros (Mia-Software) - initial API and implementation
- *     Fabien Giquel (Mia-Software) - 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework 
+ *     Fabien Giquel (Mia-Software) - 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *******************************************************************************/
 package org.eclipse.modisco.kdm.source.discoverer;
 

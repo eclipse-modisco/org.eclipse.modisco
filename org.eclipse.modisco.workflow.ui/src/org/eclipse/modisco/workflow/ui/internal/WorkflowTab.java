@@ -68,7 +68,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#createControl(org.eclipse
 	 * .swt.widgets.Composite)
@@ -194,7 +194,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#setDefaults(org.eclipse.
 	 * debug.core.ILaunchConfigurationWorkingCopy)
@@ -205,7 +205,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#initializeFrom(org.eclipse
 	 * .debug.core.ILaunchConfiguration)
@@ -238,7 +238,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#performApply(org.eclipse
 	 * .debug.core.ILaunchConfigurationWorkingCopy)
@@ -249,7 +249,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#getName()
 	 */
 	public String getName() {
@@ -281,7 +281,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.debug.ui.AbstractLaunchConfigurationTab#getImage()
 	 */
 	@Override
@@ -291,7 +291,7 @@ public class WorkflowTab extends AbstractLaunchConfigurationTab implements Workf
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.AbstractLaunchConfigurationTab#isValid(org.eclipse
 	 * .debug.core.ILaunchConfiguration)

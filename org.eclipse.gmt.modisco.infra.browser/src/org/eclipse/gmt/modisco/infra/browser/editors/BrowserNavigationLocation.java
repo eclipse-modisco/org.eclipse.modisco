@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -46,7 +46,7 @@ public class BrowserNavigationLocation extends NavigationLocation {
 	/**
 	 * Create a navigation location with the selected metaclass and selected
 	 * element(s).
-	 * 
+	 *
 	 * @param editorPart
 	 *            the editor
 	 * @param selectedMetaclass
@@ -100,7 +100,7 @@ public class BrowserNavigationLocation extends NavigationLocation {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.INavigationLocation#mergeInto(org.eclipse.ui.
 	 * INavigationLocation)
 	 */
@@ -133,7 +133,7 @@ public class BrowserNavigationLocation extends NavigationLocation {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.INavigationLocation#restoreLocation()
 	 */
 	public void restoreLocation() {

@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.ui.util;
 
@@ -50,7 +50,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ListSelectionDialog;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 
-/** 
+/**
  * class implementing the cell editor for selecting the list of discoverers to bench
  * @author Guillaume Doux
  *
@@ -223,16 +223,16 @@ public class DiscovererListComposite extends AbstractCellEditorComposite<IDiscov
 								pvalue.setParameter(parameter);
 								pvalue.setValue(parameterValues[i]);
 								configuration.getParameterValues().add(pvalue);
-							}		
+							}
 						}
 						disco.setDiscovererLaunchConfiguration(configuration);
-					}			
+					}
 					selectedDiscoverers.add(disco);
 				}
 				setValue(selectedDiscoverers);
 				fireCommit();
 			}
-		}	
+		}
 	}
 
 

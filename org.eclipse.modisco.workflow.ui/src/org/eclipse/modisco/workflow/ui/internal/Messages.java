@@ -15,7 +15,7 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author gdupe
- * 
+ *
  */
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.modisco.workflow.ui.internal.messages"; //$NON-NLS-1$

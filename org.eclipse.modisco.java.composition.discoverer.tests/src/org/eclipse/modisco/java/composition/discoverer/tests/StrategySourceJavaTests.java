@@ -102,7 +102,7 @@ public class StrategySourceJavaTests {
 		 * To be able to test correctly this bug, we need to reload all
 		 * resources in the same resource set, because it is not the case
 		 * actually ... might be a bug.
-		 * 
+		 *
 		 * In java model, we will test every instances of ASTNode which are not
 		 * proxies, to check corresponding source region.
 		 */

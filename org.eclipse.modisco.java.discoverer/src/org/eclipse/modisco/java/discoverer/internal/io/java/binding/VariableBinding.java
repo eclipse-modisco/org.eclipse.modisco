@@ -20,7 +20,7 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 
 /**
  * {@code Binding} representing a local variable.
- * 
+ *
  * @see IVariableBinding
  */
 public class VariableBinding extends Binding {

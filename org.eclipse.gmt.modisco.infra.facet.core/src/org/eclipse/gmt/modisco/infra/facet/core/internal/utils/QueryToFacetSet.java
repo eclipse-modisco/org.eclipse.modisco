@@ -6,9 +6,9 @@ package org.eclipse.gmt.modisco.infra.facet.core.internal.utils;
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
 
@@ -33,11 +33,11 @@ import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
  * This Class perform a model transformation from a QuerySet File to a FaceSet
  * one Query concerned are those whithout paremeters which return type is
  * EBoolean
- * 
+ *
  * NsUri is generated using the static field nsUri concatenated with the
  * querySet's name facet's name in the FacetSet are directly their corresponding
  * name in the QuerySet
- * 
+ *
  * @deprecated Replaced by EMF Facet
  */
 @Deprecated
@@ -81,7 +81,7 @@ public final class QueryToFacetSet {
 	/**
 	 * This method visits all the contained ModelQuerySet (usually one) and
 	 * creates a FacetSet before visiting every contained Facet
-	 * 
+	 *
 	 * @param facetSet
 	 *            the targeted facetSet
 	 * @param resourceQuery
@@ -109,7 +109,7 @@ public final class QueryToFacetSet {
 
 	/**
 	 * This Method buils a Facet based on the information contained in the query
-	 * 
+	 *
 	 * @param query
 	 *            the visited query used to build a new facet
 	 * @param facetSet
@@ -128,7 +128,7 @@ public final class QueryToFacetSet {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param sourceURI
 	 *            the URI where the is to be saved
 	 * @param resource

@@ -1,10 +1,10 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA and Mia-Software.
  * All rights reserved. This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License v1.0 which 
+ * available under the terms of the Eclipse Public License v1.0 which
  * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Guillaume Doux - INRIA - Initial API and implementation
  *     Grégoire Dupé (Mia-Software) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
@@ -54,7 +54,7 @@ public class BenchmarkChartGeneration {
 		this.location = location;
 		this.measureMemory = measureMemory;
 		this.factory = ChartFactory.eINSTANCE;
-		this.helper = BirtGraphHelper.getInstance();		
+		this.helper = BirtGraphHelper.getInstance();
 	}
 
 	public void generateAll(final Benchmark b) throws Exception {
@@ -72,7 +72,7 @@ public class BenchmarkChartGeneration {
 				createDiscoveryTimeAsProjectSizeAveraged(b, d);
 				testedDiscoverers.add(d.getDiscovererId());
 			}
-		}			
+		}
 	}
 
 	private void createDiscoveryTimeAsProjectSizeAveraged(final Benchmark b, final Discovery d) throws Exception {
@@ -272,7 +272,7 @@ public class BenchmarkChartGeneration {
 		memory.setLegend(Messages.BenchmarkChartGeneration_UsedMem);
 		chart.getAxes().add(time);
 		chart.getAxes().add(memory);
-		
+
 		for (Event mm : di.getMemoryMeasurements()) {
 			if (mm instanceof MemoryMeasurement) {
 				MemoryMeasurement mem = (MemoryMeasurement) mm;

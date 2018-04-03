@@ -6,11 +6,11 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *       Nicolas Guyomar (Mia-Software) - initial API and implementation
- * 
+ *
  */
 package org.eclipse.modisco.jee.jsp.discoverer.parser;
 
@@ -150,7 +150,7 @@ public class JSPParser extends Parser {
 
 	/**
 	 * Generic method which link a child to his parent
-	 * 
+	 *
 	 * @param parentPage
 	 *            The page itself
 	 * @param parentTag
@@ -181,7 +181,7 @@ public class JSPParser extends Parser {
 	 * This method recreates the tree hierarchy of the file Given the name of a closing tag, it look
 	 * in the list of all the encountered tags to find the opening one. Every tag between those two
 	 * is considered to be a son of the opening one
-	 * 
+	 *
 	 * @param closeTagName
 	 *            the name of the closing tag encountered
 	 */
@@ -229,7 +229,7 @@ public class JSPParser extends Parser {
 	 * This method concatenate every token contained within the beginning of the tag and the token
 	 * matching the given token ID It is very usefull to retriveve content for JSP Scriplet for
 	 * instance
-	 * 
+	 *
 	 * @param tokenID
 	 *            the ID of the closing token in the token list
 	 * @param tag
@@ -976,7 +976,7 @@ public class JSPParser extends Parser {
 
 				match(input, 66, FOLLOW_66_in_endtag553);
 
-				String endTagName = id1.getText() + (id2 != null ? ":" + id2.getText() : ""); //$NON-NLS-1$     
+				String endTagName = id1.getText() + (id2 != null ? ":" + id2.getText() : ""); //$NON-NLS-1$
 				resolveChild(endTagName);
 
 			}
@@ -1050,7 +1050,7 @@ public class JSPParser extends Parser {
 					id1 = (Token) input.LT(1);
 					match(input, ID, FOLLOW_ID_in_tag628);
 
-					isJavascript = id1.getText().equalsIgnoreCase("script");//$NON-NLS-1$      
+					isJavascript = id1.getText().equalsIgnoreCase("script");//$NON-NLS-1$
 					if (isJavascript) {
 						tag = this.factory.createJavaScript();
 						String tmp = id1.getText();
@@ -1065,9 +1065,9 @@ public class JSPParser extends Parser {
 							if (input.LT(1).getText() != null && input.LT(2).getText() != null
 									&& input.LT(3).getText() != null) {
 								// End of script tag
-								if (input.LT(1).getText().equalsIgnoreCase("</")//$NON-NLS-1$ 
-										&& input.LT(2).getText().equalsIgnoreCase("script")//$NON-NLS-1$  
-										&& input.LT(3).getText().equalsIgnoreCase(">")) //$NON-NLS-1$  
+								if (input.LT(1).getText().equalsIgnoreCase("</")//$NON-NLS-1$
+										&& input.LT(2).getText().equalsIgnoreCase("script")//$NON-NLS-1$
+										&& input.LT(3).getText().equalsIgnoreCase(">")) //$NON-NLS-1$
 								{
 									// We need to consume the 3 next token for '</' 'script' '>'
 									input.consume();
@@ -1076,7 +1076,7 @@ public class JSPParser extends Parser {
 									break loop1;
 								}
 								// end of the tag script element
-								else if (input.LT(1).getText().equalsIgnoreCase(">") && tagHeader)//$NON-NLS-1$  
+								else if (input.LT(1).getText().equalsIgnoreCase(">") && tagHeader)//$NON-NLS-1$
 								{
 									// We need to retrieve the content of the tag, eg : attributes
 									tag.setName(text);
@@ -2934,7 +2934,7 @@ public class JSPParser extends Parser {
 			// '</jsp:forward>'
 			{
 
-				tag = createJSPStdAction(parent, "jsp:forward");//$NON-NLS-1$ 
+				tag = createJSPStdAction(parent, "jsp:forward");//$NON-NLS-1$
 
 				match(input, JSPOPENFWD, FOLLOW_JSPOPENFWD_in_jsp_forward2409);
 				// C:\\Documents and
@@ -3224,7 +3224,7 @@ public class JSPParser extends Parser {
 			// '<jsp:fallback>' '</jsp:fallback>'
 			{
 
-				tag = createJSPStdAction(parent, "jsp:fallback");//$NON-NLS-1$         
+				tag = createJSPStdAction(parent, "jsp:fallback");//$NON-NLS-1$
 
 				match(input, JSPOPENFALL, FOLLOW_JSPOPENFALL_in_jsp_fallback2564);
 				getTagContent(JSPCLOSEFALL, tag);
@@ -3261,7 +3261,7 @@ public class JSPParser extends Parser {
 			// '<jsp:getProperty' ( attribute[tag] | comment[tag] | WS )* '/>'
 			{
 
-				tag = createJSPStdAction(parent, "jsp:getProperty");//$NON-NLS-1$ 
+				tag = createJSPStdAction(parent, "jsp:getProperty");//$NON-NLS-1$
 
 				match(input, JSPGET, FOLLOW_JSPGET_in_jsp_getProperty2628);
 				// C:\\Documents and
@@ -4111,7 +4111,7 @@ public class JSPParser extends Parser {
 			// jsp_element[tag] | comment[tag] | WS )* '</jsp:attribute>' ) )
 			{
 
-				tag = createJSPStdAction(parent, "jsp:attribute");//$NON-NLS-1$       
+				tag = createJSPStdAction(parent, "jsp:attribute");//$NON-NLS-1$
 
 				// C:\\Documents and
 				// Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:904:5:
@@ -4335,13 +4335,13 @@ public class JSPParser extends Parser {
 			// '<jsp:text>' '</jsp:text>'
 			{
 
-				tag = createJSPStdAction(parent, "jsp:text");//$NON-NLS-1$   
+				tag = createJSPStdAction(parent, "jsp:text");//$NON-NLS-1$
 
 				match(input, JSPOPENTEXT, FOLLOW_JSPOPENTEXT_in_jsp_text3269);
 				getTagContent(JSPCLOSETEXT, tag);
 				match(input, JSPCLOSETEXT, FOLLOW_JSPCLOSETEXT_in_jsp_text3273);
 
-				tag.setName("jsp:text"); //$NON-NLS-1$   
+				tag.setName("jsp:text"); //$NON-NLS-1$
 
 			}
 
@@ -4689,7 +4689,7 @@ public class JSPParser extends Parser {
 					}
 					}
 
-					content += space + input.get(input.mark()).getText(); //$NON-NLS-1$                        
+					content += space + input.get(input.mark()).getText(); //$NON-NLS-1$
 					matchAny(input);
 
 				} while (true);

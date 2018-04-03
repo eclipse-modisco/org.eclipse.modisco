@@ -30,7 +30,7 @@ import org.eclipse.gmt.modisco.java.UnresolvedMethodDeclaration;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class GetSubMethods
 		implements

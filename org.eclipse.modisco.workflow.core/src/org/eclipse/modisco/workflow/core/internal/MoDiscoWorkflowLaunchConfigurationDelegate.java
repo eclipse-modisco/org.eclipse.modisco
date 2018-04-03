@@ -23,14 +23,14 @@ import org.eclipse.modisco.workflow.core.internal.engine.EngineFactory;
 /**
  * This class defines the delegate to launch a configuration of MoDiscoWorkflow
  * type.
- * 
+ *
  * @author Nicolas Payneau
  */
 public class MoDiscoWorkflowLaunchConfigurationDelegate implements ILaunchConfigurationDelegate {
 
 	/**
 	 * To launch a MoDiscoWorkflow configuration
-	 * 
+	 *
 	 * @param configuration
 	 *            The configuration of MoDiscoWorkflow
 	 * @param mode

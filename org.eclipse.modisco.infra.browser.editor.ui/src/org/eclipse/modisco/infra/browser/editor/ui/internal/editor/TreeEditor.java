@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 358914 - [Move to EMF Facet][Browser] Switch to EMF Facet
  *    Thomas Cicognani (Soft-Maint) - Bug 442718 - Implement copy action in the new MoDisco Browser
@@ -122,12 +122,12 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		final CommandStack commandStack = new BasicCommandStack();
 		this.editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
 				commandStack, this.resourceSet);
-		
+
 		this.facetSetShortcuts = TreeEditorShortcutUtils.getFacetSetShortcuts(this.resourceSet);
 		this.customShortcuts = TreeEditorShortcutUtils.getCustomShortcuts(this.resourceSet);
 	}
-	
-	
+
+
 	private void createPopupMenu() {
 		final MenuManager menuMgr = new MenuManager("#PopupMenu"); //$NON-NLS-1$
 		menuMgr.setRemoveAllWhenShown(true);
@@ -161,7 +161,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 				.createCustomizedTreeContentProvider(this.customManager);
 		this.tree.setContentProvider(contentProvider);
 		this.tree.setLabelProvider(labelProvider);
-		
+
 		final List<EObject> contents = new ArrayList<EObject>();
 		if (this.resource == null) {
 			for (Resource res : this.resourceSet.getResources()) {
@@ -171,7 +171,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			contents.addAll(this.resource.getContents());
 		}
 		this.tree.setInput(contents);
-		
+
 		getSite().setSelectionProvider(this.tree);
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
@@ -201,7 +201,7 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	public EditingDomain getEditingDomain() {
 		return this.editingDomain;
 	}
-	
+
 	@Override
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
 		/* @SuppressWarnings("rawtypes"): gdupe> Imposed by the super class */
@@ -223,15 +223,15 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 	public List<ICustomShortcut> getCustomShortcuts() {
 		return this.customShortcuts;
 	}
-	
+
 	public IFacetManager getFacetManager() {
 		return this.facetManager;
 	}
-	
+
 	public List<IFacetSetShortcut> getFacetSetShortcuts() {
 		return this.facetSetShortcuts;
 	}
-	
+
 	@Override
 	public void dispose() {
 		this.facetManager.removeListener(this.facetMgrListener);

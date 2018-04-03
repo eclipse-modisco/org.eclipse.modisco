@@ -4,8 +4,8 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
- * 
+ *
+ *
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.utils;
 
@@ -46,7 +46,7 @@ import org.eclipse.emf.edit.provider.IItemLabelProvider;
 
 /**
  * Utility class for models.
- * 
+ *
  */
 public final class ModelUtils {
 	private static ResourceSet resourceSet = new ResourceSetImpl();
@@ -64,7 +64,7 @@ public final class ModelUtils {
 	/**
 	 * Loads a model from a {@link java.io.File File} in a given
 	 * {@link ResourceSet}.
-	 * 
+	 *
 	 * @param file
 	 *            where the model is stored.
 	 * @return The model loaded from the URI.
@@ -78,7 +78,7 @@ public final class ModelUtils {
 
 	/**
 	 * Loads a model from a {@link URI}.
-	 * 
+	 *
 	 * @param modelURI
 	 *            the URI of the model.
 	 * @return The model loaded from the URI.
@@ -121,7 +121,7 @@ public final class ModelUtils {
 
 	/**
 	 * Metamodel register : allows to open/compare specific models.
-	 * 
+	 *
 	 * @param metamodelURI
 	 *            the metamodel URI
 	 * @throws IOException
@@ -169,7 +169,7 @@ public final class ModelUtils {
 
 	/**
 	 * Serializes the given EObjet as a String.
-	 * 
+	 *
 	 * @param root
 	 *            Root of the objects to be serialized.
 	 * @return The given EObjet serialized as a String.
@@ -191,7 +191,7 @@ public final class ModelUtils {
 	/**
 	 * Returns a name for the given model element from the EMF global registry,
 	 * or use a default name taken from a String attribute.
-	 * 
+	 *
 	 * @return a name for the given element
 	 */
 	public static String getName(final EObject eObject) {
@@ -285,7 +285,7 @@ public final class ModelUtils {
 	/**
 	 * Compute the resources referenced directly or indirectly from a given
 	 * resource
-	 * 
+	 *
 	 * @param resource
 	 * @param allReferencedResources
 	 *            parameter inout which is completed with the referenced
@@ -372,7 +372,7 @@ public final class ModelUtils {
 	 * Computes the packages referenced, directly or indirectly, from the given
 	 * EPackage. "referenced" term covers here inheritance, references composite
 	 * or not.
-	 * 
+	 *
 	 * @param aPackage
 	 * @return
 	 */

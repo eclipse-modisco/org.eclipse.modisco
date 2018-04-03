@@ -38,7 +38,7 @@ import prefuse.visual.VisualItem;
 
 
 public class RadialGraphViewUtils {
-	
+
     public static JPanel demo(String datafile, final String label) {
         Graph g = null;
         try {
@@ -49,12 +49,12 @@ public class RadialGraphViewUtils {
         }
         return demo(g, label);
     }
-    
-    public static JPanel demo(Graph g, final String label) {        
+
+    public static JPanel demo(Graph g, final String label) {
         // create a new radial tree view
         final RadialGraphView gview = new RadialGraphView(g, label);
         Visualization vis = gview.getVisualization();
-        
+
         // create a search panel for the tree map
         SearchQueryBinding sq = new SearchQueryBinding(
              (Table)vis.getGroup(RadialGraphViewConstants.treeNodes), label,
@@ -63,13 +63,13 @@ public class RadialGraphViewUtils {
         search.setShowResultCount(true);
         search.setBorder(BorderFactory.createEmptyBorder(5,5,4,0));
         search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11)); //$NON-NLS-1$
-        
+
         final JFastLabel title = new JFastLabel("                 "); //$NON-NLS-1$
         title.setPreferredSize(new Dimension(350, 20));
         title.setVerticalAlignment(SwingConstants.BOTTOM);
         title.setBorder(BorderFactory.createEmptyBorder(3,0,0,0));
         title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16)); //$NON-NLS-1$
-        
+
         gview.addControlListener(new ControlAdapter() {
             public void itemEntered(VisualItem item, MouseEvent e) {
                 if ( item.canGetString(label) )
@@ -79,22 +79,22 @@ public class RadialGraphViewUtils {
                 title.setText(null);
             }
         });
-        
+
         Box box = new Box(BoxLayout.X_AXIS);
         box.add(Box.createHorizontalStrut(10));
         box.add(title);
         box.add(Box.createHorizontalGlue());
         box.add(search);
         box.add(Box.createHorizontalStrut(3));
-        
+
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(gview, BorderLayout.CENTER);
         panel.add(box, BorderLayout.SOUTH);
-        
+
         Color BACKGROUND = Color.WHITE;
         Color FOREGROUND = Color.DARK_GRAY;
         UILib.setColor(panel, BACKGROUND, FOREGROUND);
-        
+
         return panel;
     }
 

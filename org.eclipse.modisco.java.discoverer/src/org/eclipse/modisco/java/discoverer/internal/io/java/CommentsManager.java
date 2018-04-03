@@ -71,7 +71,7 @@ public final class CommentsManager {
 		unLocatedComments.addAll(moDiscoCuNode.getComments());
 		/*
 		 * To manage the comments inside a class declaration:
-		 * 
+		 *
 		 * As all comments inside are generated at the end of the class
 		 * declaration, because we don't store where it comes from (line
 		 * position). So we should try to attach these comments to a better
@@ -114,7 +114,7 @@ public final class CommentsManager {
 
 	/**
 	 * Linking comments to Nodes using jdt location informations
-	 * 
+	 *
 	 * @param visitor
 	 * @param cuJdtNode
 	 * @param moDiscoCuNode
@@ -135,10 +135,10 @@ public final class CommentsManager {
 					 * 11, for a method definition, start index will be 4 and
 					 * end will be 6. Ordering will consider first the node
 					 * whose starting index is the highest.
-					 * 
+					 *
 					 * But what if a node has only a trailing comment ? first
 					 * leading comment index = -1 !
-					 * 
+					 *
 					 * Here is a summary of all cases available:
 					 * <table border="1">
 					 * <tr>
@@ -164,21 +164,21 @@ public final class CommentsManager {
 					 * </tr>
 					 * </tr>
 					 * </table>
-					 * 
+					 *
 					 * Note: for each case, we cannot gather the information of
 					 * having, or not, comments inside the element (specific to
 					 * elements which have a block ?)
 					 * <ul>
 					 * <li>case A: We have no comments before and after the
 					 * element
-					 * 
+					 *
 					 * <li>case B: We have comments before the element
-					 * 
+					 *
 					 * <li>case C: We have comments before and after the element
-					 * 
+					 *
 					 * <li>case D: We have comments after the element
 					 * </ul>
-					 * 
+					 *
 					 * Warning: a bug has been potentially found ! The start
 					 * position of a node corresponds to the extended start
 					 * position (including comments and whitespace)) but only
@@ -200,7 +200,7 @@ public final class CommentsManager {
 					 * <li>Comments inside are comments in the node that are not
 					 * before or after.
 					 * </ul>
-					 * 
+					 *
 					 */
 					public int compare(final Integer o1, final Integer o2) {
 						return -o1.compareTo(o2);
@@ -209,11 +209,11 @@ public final class CommentsManager {
 		for (org.eclipse.jdt.core.dom.ASTNode node : visitor.getBijectiveMap().getKeys()) {
 			/*
 			 * we have to decide if the element has comment
-			 * 
+			 *
 			 * 1. firstLeadingCommentIndex != -1
-			 * 
+			 *
 			 * 2. lastTrailingCommentIndex != -1
-			 * 
+			 *
 			 * 3. start position of a comment in the list is included in the
 			 * range of start position and end position of the element. This
 			 * algorithm may lead to add some elements that have no comments ...
@@ -418,7 +418,7 @@ public final class CommentsManager {
 	 * a block, with at least one blank line before next node and one blank line
 	 * after last node - comments in a block, at the end and with at least one
 	 * blank line after last node. Use another algorithm to link them.
-	 * 
+	 *
 	 * @param comment
 	 * @param visitor
 	 */

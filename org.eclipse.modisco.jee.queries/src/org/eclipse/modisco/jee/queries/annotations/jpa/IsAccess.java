@@ -4,9 +4,9 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
 package org.eclipse.modisco.jee.queries.annotations.jpa;
@@ -28,14 +28,14 @@ public class IsAccess implements IJavaModelQuery<BodyDeclaration, Boolean> {
 
 		return EvaluateAnnotation.evaluate(context,
 				IsAccess.ANNOTATION_NAME);
-		
+
 //        if (EvaluateAnnotation.evaluateAnnotation(context,
 //				parameterValues, IsAccess.ANNOTATION_NAME).equals(Boolean.TRUE)) {
 //        	return Boolean.TRUE;
-//        } 
+//        }
 //       return false;
        // return new ResolveInheritance().evaluateAnnotation(context, parameterValues, IsAccess.ANNOTATION_CLASS_EQUIVALENCE);
-        
+
 	}
 
 }

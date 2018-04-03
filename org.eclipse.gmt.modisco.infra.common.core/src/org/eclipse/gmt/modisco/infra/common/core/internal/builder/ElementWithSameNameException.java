@@ -8,7 +8,7 @@
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  *******************************************************************************/
- 
+
 package org.eclipse.gmt.modisco.infra.common.core.internal.builder;
 
 public class ElementWithSameNameException extends OpenResourceException {

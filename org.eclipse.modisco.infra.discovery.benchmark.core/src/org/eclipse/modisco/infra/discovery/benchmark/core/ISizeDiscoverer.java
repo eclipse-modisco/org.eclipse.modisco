@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Grégoire Dupé (Mia-Sftware) - Bug 483400 - [Benchmark] The input size should be computable by the discoverer
- *******************************************************************************/ 
+ *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core;
 
 import org.eclipse.core.resources.IProject;

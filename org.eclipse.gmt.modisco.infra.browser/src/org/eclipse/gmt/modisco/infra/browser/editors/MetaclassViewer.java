@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -610,7 +610,7 @@ public class MetaclassViewer implements ISelectionProvider {
 
 	/**
 	 * Group the given metaclasses by packages.
-	 * 
+	 *
 	 * @return a list of packages containing metaclasses or other packages
 	 *         recursively
 	 */
@@ -646,7 +646,7 @@ public class MetaclassViewer implements ISelectionProvider {
 	/**
 	 * A recursive function that creates a hierarchy of packages containing
 	 * metaclasses
-	 * 
+	 *
 	 * @param instancesForMetaclass
 	 *            the metaclass to add to a package
 	 * @param path
@@ -729,7 +729,7 @@ public class MetaclassViewer implements ISelectionProvider {
 	/**
 	 * Replace proxy {@link InstancesForMetaclass} objects by their underlying
 	 * Ecore {@link EClass} in the given selection
-	 * 
+	 *
 	 * @return the unwrapped version of the selection
 	 */
 	public static ISelection unwrapSelection(final ISelection selection) {

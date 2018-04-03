@@ -4,9 +4,9 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
 package org.eclipse.modisco.jee.queries.annotations.ejb;
@@ -29,13 +29,13 @@ public class IsApplicationException implements
 	public Boolean evaluate(final ClassDeclaration context,
 			final ParameterValueList parameterValues)
 			throws ModelQueryExecutionException {
-		
+
 		if (EvaluateAnnotation.evaluate(context,
 				IsApplicationException.ANNOTATION_NAME)
 				.equals(Boolean.TRUE)) {
 			return Boolean.TRUE;
 		}
-		
+
 		IsApplicationException.ANNOTATION_CLASS_NAME.add("EJBException"); //$NON-NLS-1$
 		IsApplicationException.ANNOTATION_CLASS_NAME.add("EJBCreateException"); //$NON-NLS-1$
 		IsApplicationException.ANNOTATION_CLASS_NAME.add("RemoveException"); //$NON-NLS-1$

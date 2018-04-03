@@ -6,11 +6,11 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *       Nicolas Guyomar (Mia-Software) - initial API and implementation
- * 
+ *
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
   import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
@@ -107,7 +107,7 @@ public class JSPLexer extends Lexer {
             this.filePath = path;
         }
 
-    public JSPLexer() {;} 
+    public JSPLexer() {;}
     public JSPLexer(CharStream input) {
         super(input);
     }
@@ -120,7 +120,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:39:7: ( '>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:39:7: '>'
             {
-            match('>'); 
+            match('>');
 
             }
 
@@ -138,7 +138,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:40:7: ( '<' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:40:7: '<'
             {
-            match('<'); 
+            match('<');
 
             }
 
@@ -156,7 +156,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:41:7: ( '</jsp:element>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:41:7: '</jsp:element>'
             {
-            match("</jsp:element>"); 
+            match("</jsp:element>");
 
 
             }
@@ -175,7 +175,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:42:7: ( ';' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:42:7: ';'
             {
-            match(';'); 
+            match(';');
 
             }
 
@@ -193,7 +193,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:5: ( '<![CDATA[' ( options {greedy=false; } : . )* ']]>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:5: '<![CDATA[' ( options {greedy=false; } : . )* ']]>'
             {
-            match("<![CDATA["); 
+            match("<![CDATA[");
 
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:17: ( options {greedy=false; } : . )*
             loop1:
@@ -231,7 +231,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:44: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -241,7 +241,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("]]>"); 
+            match("]]>");
 
 
             }
@@ -260,12 +260,12 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:5: ( '<!--' ( options {greedy=false; } : . ) ( . )* '-->' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:5: '<!--' ( options {greedy=false; } : . ) ( . )* '-->'
             {
-            match("<!--"); 
+            match("<!--");
 
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:12: ( options {greedy=false; } : . )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:39: .
             {
-            matchAny(); 
+            matchAny();
 
             }
 
@@ -305,7 +305,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:41: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -315,7 +315,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("-->"); 
+            match("-->");
 
 
             }
@@ -334,12 +334,12 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:5: ( '<%--' ( options {greedy=false; } : . ) ( . )* '--%>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:5: '<%--' ( options {greedy=false; } : . ) ( . )* '--%>'
             {
-            match("<%--"); 
+            match("<%--");
 
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:12: ( options {greedy=false; } : . )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:39: .
             {
-            matchAny(); 
+            matchAny();
 
             }
 
@@ -388,7 +388,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:41: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -398,7 +398,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("--%>"); 
+            match("--%>");
 
 
             }
@@ -417,7 +417,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:3: ( '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:3: '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>'
             {
-            match("<?"); 
+            match("<?");
 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
                 input.consume();
@@ -476,7 +476,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:62: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -486,7 +486,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("?>"); 
+            match("?>");
 
 
             }
@@ -505,7 +505,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:7: ( '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:7: '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>'
             {
-            match("<!"); 
+            match("<!");
 
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
@@ -595,7 +595,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:101: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -605,7 +605,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match('>'); 
+            match('>');
 
             }
 
@@ -622,7 +622,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:25: ( '[' ( options {greedy=false; } : . )* ']' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:25: '[' ( options {greedy=false; } : . )* ']'
             {
-            match('['); 
+            match('[');
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:29: ( options {greedy=false; } : . )*
             loop6:
             do {
@@ -641,7 +641,7 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:56: .
             	    {
-            	    matchAny(); 
+            	    matchAny();
 
             	    }
             	    break;
@@ -651,7 +651,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match(']'); 
+            match(']');
 
             }
 
@@ -720,49 +720,49 @@ public class JSPLexer extends Lexer {
             	case 1 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:36: LETTER
             	    {
-            	    mLETTER(); 
+            	    mLETTER();
 
             	    }
             	    break;
             	case 2 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:45: IDDigit
             	    {
-            	    mIDDigit(); 
+            	    mIDDigit();
 
             	    }
             	    break;
             	case 3 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:55: '.'
             	    {
-            	    match('.'); 
+            	    match('.');
 
             	    }
             	    break;
             	case 4 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:61: '-'
             	    {
-            	    match('-'); 
+            	    match('-');
 
             	    }
             	    break;
             	case 5 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:67: '_'
             	    {
-            	    match('_'); 
+            	    match('_');
 
             	    }
             	    break;
             	case 6 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:74: '@'
             	    {
-            	    match('@'); 
+            	    match('@');
 
             	    }
             	    break;
             	case 7 :
             	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:80: '°'
             	    {
-            	    match("°"); 
+            	    match("°");
 
 
             	    }
@@ -814,7 +814,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1248:5: ( '\\u0030' .. '\\u0039' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1248:5: '\\u0030' .. '\\u0039'
             {
-            matchRange('0','9'); 
+            matchRange('0','9');
 
             }
 
@@ -1059,91 +1059,91 @@ public class JSPLexer extends Lexer {
                 case 1 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1254:5: '\\u00A0' .. '\\u00FF'
                     {
-                    matchRange('\u00A0','\u00FF'); 
+                    matchRange('\u00A0','\u00FF');
 
                     }
                     break;
                 case 2 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1255:6: '{'
                     {
-                    match('{'); 
+                    match('{');
 
                     }
                     break;
                 case 3 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1256:6: '}'
                     {
-                    match('}'); 
+                    match('}');
 
                     }
                     break;
                 case 4 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1257:6: '|'
                     {
-                    match('|'); 
+                    match('|');
 
                     }
                     break;
                 case 5 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1258:6: '!'
                     {
-                    match('!'); 
+                    match('!');
 
                     }
                     break;
                 case 6 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1259:6: '#'
                     {
-                    match('#'); 
+                    match('#');
 
                     }
                     break;
                 case 7 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1260:6: '$'
                     {
-                    match('$'); 
+                    match('$');
 
                     }
                     break;
                 case 8 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1261:6: '&'
                     {
-                    match('&'); 
+                    match('&');
 
                     }
                     break;
                 case 9 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1262:6: '('
                     {
-                    match('('); 
+                    match('(');
 
                     }
                     break;
                 case 10 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1263:6: ')'
                     {
-                    match(')'); 
+                    match(')');
 
                     }
                     break;
                 case 11 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1264:6: '*'
                     {
-                    match('*'); 
+                    match('*');
 
                     }
                     break;
                 case 12 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1265:6: '+'
                     {
-                    match('+'); 
+                    match('+');
 
                     }
                     break;
                 case 13 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1266:6: ','
                     {
-                    match(','); 
+                    match(',');
 
                     }
                     break;
@@ -1165,7 +1165,7 @@ public class JSPLexer extends Lexer {
                     	case 1 :
                     	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1267:6: '-'
                     	    {
-                    	    match('-'); 
+                    	    match('-');
 
                     	    }
                     	    break;
@@ -1181,77 +1181,77 @@ public class JSPLexer extends Lexer {
                 case 15 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1268:6: '.'
                     {
-                    match('.'); 
+                    match('.');
 
                     }
                     break;
                 case 16 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1269:6: '\\/'
                     {
-                    match('/'); 
+                    match('/');
 
                     }
                     break;
                 case 17 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1270:6: ';'
                     {
-                    match(';'); 
+                    match(';');
 
                     }
                     break;
                 case 18 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1271:6: '?'
                     {
-                    match('?'); 
+                    match('?');
 
                     }
                     break;
                 case 19 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1272:6: '['
                     {
-                    match('['); 
+                    match('[');
 
                     }
                     break;
                 case 20 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1273:6: ']'
                     {
-                    match(']'); 
+                    match(']');
 
                     }
                     break;
                 case 21 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1274:6: '`'
                     {
-                    match('`'); 
+                    match('`');
 
                     }
                     break;
                 case 22 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1275:6: '%'
                     {
-                    match('%'); 
+                    match('%');
 
                     }
                     break;
                 case 23 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1276:6: '@'
                     {
-                    match('@'); 
+                    match('@');
 
                     }
                     break;
                 case 24 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1277:6: '\\\\'
                     {
-                    match('\\'); 
+                    match('\\');
 
                     }
                     break;
                 case 25 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1278:6: '//'
                     {
-                    match("//"); 
+                    match("//");
 
 
                     }
@@ -1259,7 +1259,7 @@ public class JSPLexer extends Lexer {
                 case 26 :
                     // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1279:6: '^'
                     {
-                    match('^'); 
+                    match('^');
 
                     }
                     break;
@@ -1279,7 +1279,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1282:10: ( '\\'' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1282:10: '\\''
             {
-            match('\''); 
+            match('\'');
 
             }
 
@@ -1297,7 +1297,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1283:10: ( '\"' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1283:10: '\"'
             {
-            match('\"'); 
+            match('\"');
 
             }
 
@@ -1315,7 +1315,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1284:10: ( ':' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1284:10: ':'
             {
-            match(':'); 
+            match(':');
 
             }
 
@@ -1333,7 +1333,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1285:10: ( '=' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1285:10: '='
             {
-            match('='); 
+            match('=');
 
             }
 
@@ -1500,7 +1500,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:21: ( '\\u0030' .. '\\u0039' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:22: '\\u0030' .. '\\u0039'
             {
-            matchRange('0','9'); 
+            matchRange('0','9');
 
             }
 
@@ -1555,7 +1555,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1311:15: ( '</' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1311:15: '</'
             {
-            match("</"); 
+            match("</");
 
 
             }
@@ -1574,7 +1574,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1314:15: ( '<%' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1314:15: '<%'
             {
-            match("<%"); 
+            match("<%");
 
 
             }
@@ -1593,7 +1593,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1315:15: ( '%>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1315:15: '%>'
             {
-            match("%>"); 
+            match("%>");
 
 
             }
@@ -1612,7 +1612,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1316:15: ( '<%=' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1316:15: '<%='
             {
-            match("<%="); 
+            match("<%=");
 
 
             }
@@ -1631,7 +1631,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1317:15: ( '<%!' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1317:15: '<%!'
             {
-            match("<%!"); 
+            match("<%!");
 
 
             }
@@ -1650,7 +1650,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1318:15: ( '<%@' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1318:15: '<%@'
             {
-            match("<%@"); 
+            match("<%@");
 
 
             }
@@ -1669,7 +1669,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1319:15: ( '/>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1319:15: '/>'
             {
-            match("/>"); 
+            match("/>");
 
 
             }
@@ -1688,7 +1688,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1322:15: ( '<jsp:useBean' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1322:15: '<jsp:useBean'
             {
-            match("<jsp:useBean"); 
+            match("<jsp:useBean");
 
 
             }
@@ -1707,7 +1707,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1323:15: ( '<jsp:setProperty' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1323:15: '<jsp:setProperty'
             {
-            match("<jsp:setProperty"); 
+            match("<jsp:setProperty");
 
 
             }
@@ -1726,7 +1726,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1324:15: ( '<jsp:getProperty' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1324:15: '<jsp:getProperty'
             {
-            match("<jsp:getProperty"); 
+            match("<jsp:getProperty");
 
 
             }
@@ -1745,7 +1745,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1325:15: ( '<jsp:include' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1325:15: '<jsp:include'
             {
-            match("<jsp:include"); 
+            match("<jsp:include");
 
 
             }
@@ -1764,7 +1764,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1326:15: ( '</jsp:include>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1326:15: '</jsp:include>'
             {
-            match("</jsp:include>"); 
+            match("</jsp:include>");
 
 
             }
@@ -1783,7 +1783,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1327:15: ( '<jsp:forward' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1327:15: '<jsp:forward'
             {
-            match("<jsp:forward"); 
+            match("<jsp:forward");
 
 
             }
@@ -1802,7 +1802,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1328:15: ( '</jsp:forward>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1328:15: '</jsp:forward>'
             {
-            match("</jsp:forward>"); 
+            match("</jsp:forward>");
 
 
             }
@@ -1821,7 +1821,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1329:15: ( '<jsp:plugin' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1329:15: '<jsp:plugin'
             {
-            match("<jsp:plugin"); 
+            match("<jsp:plugin");
 
 
             }
@@ -1840,7 +1840,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1330:15: ( '</jsp:plugin>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1330:15: '</jsp:plugin>'
             {
-            match("</jsp:plugin>"); 
+            match("</jsp:plugin>");
 
 
             }
@@ -1859,7 +1859,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1331:15: ( '<jsp:fallback>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1331:15: '<jsp:fallback>'
             {
-            match("<jsp:fallback>"); 
+            match("<jsp:fallback>");
 
 
             }
@@ -1878,7 +1878,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1332:15: ( '</jsp:fallback>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1332:15: '</jsp:fallback>'
             {
-            match("</jsp:fallback>"); 
+            match("</jsp:fallback>");
 
 
             }
@@ -1897,7 +1897,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1333:15: ( '<jsp:param' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1333:15: '<jsp:param'
             {
-            match("<jsp:param"); 
+            match("<jsp:param");
 
 
             }
@@ -1916,7 +1916,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1334:15: ( '<jsp:params>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1334:15: '<jsp:params>'
             {
-            match("<jsp:params>"); 
+            match("<jsp:params>");
 
 
             }
@@ -1935,7 +1935,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1335:15: ( '</jsp:params>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1335:15: '</jsp:params>'
             {
-            match("</jsp:params>"); 
+            match("</jsp:params>");
 
 
             }
@@ -1954,7 +1954,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1336:15: ( '<jsp:root' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1336:15: '<jsp:root'
             {
-            match("<jsp:root"); 
+            match("<jsp:root");
 
 
             }
@@ -1973,7 +1973,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1337:15: ( '</jsp:root>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1337:15: '</jsp:root>'
             {
-            match("</jsp:root>"); 
+            match("</jsp:root>");
 
 
             }
@@ -1992,7 +1992,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1338:15: ( '<jsp:text>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1338:15: '<jsp:text>'
             {
-            match("<jsp:text>"); 
+            match("<jsp:text>");
 
 
             }
@@ -2011,7 +2011,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1339:15: ( '</jsp:text>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1339:15: '</jsp:text>'
             {
-            match("</jsp:text>"); 
+            match("</jsp:text>");
 
 
             }
@@ -2030,7 +2030,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1340:15: ( '</jsp:attribute>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1340:15: '</jsp:attribute>'
             {
-            match("</jsp:attribute>"); 
+            match("</jsp:attribute>");
 
 
             }
@@ -2049,7 +2049,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1341:15: ( '<jsp:attribute' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1341:15: '<jsp:attribute'
             {
-            match("<jsp:attribute"); 
+            match("<jsp:attribute");
 
 
             }
@@ -2068,7 +2068,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1342:15: ( '<jsp:body>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1342:15: '<jsp:body>'
             {
-            match("<jsp:body>"); 
+            match("<jsp:body>");
 
 
             }
@@ -2087,7 +2087,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1343:15: ( '</jsp:body>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1343:15: '</jsp:body>'
             {
-            match("</jsp:body>"); 
+            match("</jsp:body>");
 
 
             }
@@ -2106,7 +2106,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1344:16: ( '<jsp:invoke' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1344:16: '<jsp:invoke'
             {
-            match("<jsp:invoke"); 
+            match("<jsp:invoke");
 
 
             }
@@ -2125,7 +2125,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1345:16: ( '<jsp:doBody' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1345:16: '<jsp:doBody'
             {
-            match("<jsp:doBody"); 
+            match("<jsp:doBody");
 
 
             }
@@ -2144,7 +2144,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1346:16: ( '<jsp:output' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1346:16: '<jsp:output'
             {
-            match("<jsp:output"); 
+            match("<jsp:output");
 
 
             }
@@ -2163,7 +2163,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1347:16: ( '<jsp:element' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1347:16: '<jsp:element'
             {
-            match("<jsp:element"); 
+            match("<jsp:element");
 
 
             }
@@ -2182,7 +2182,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1351:15: ( '<jsp:scriptlet>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1351:15: '<jsp:scriptlet>'
             {
-            match("<jsp:scriptlet>"); 
+            match("<jsp:scriptlet>");
 
 
             }
@@ -2201,7 +2201,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1352:17: ( '</jsp:scriptlet>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1352:17: '</jsp:scriptlet>'
             {
-            match("</jsp:scriptlet>"); 
+            match("</jsp:scriptlet>");
 
 
             }
@@ -2220,7 +2220,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1353:15: ( '<jsp:expression>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1353:15: '<jsp:expression>'
             {
-            match("<jsp:expression>"); 
+            match("<jsp:expression>");
 
 
             }
@@ -2239,7 +2239,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1354:15: ( '</jsp:expression>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1354:15: '</jsp:expression>'
             {
-            match("</jsp:expression>"); 
+            match("</jsp:expression>");
 
 
             }
@@ -2258,7 +2258,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1355:15: ( '<jsp:declaration>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1355:15: '<jsp:declaration>'
             {
-            match("<jsp:declaration>"); 
+            match("<jsp:declaration>");
 
 
             }
@@ -2277,7 +2277,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1356:15: ( '</jsp:declaration>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1356:15: '</jsp:declaration>'
             {
-            match("</jsp:declaration>"); 
+            match("</jsp:declaration>");
 
 
             }
@@ -2296,7 +2296,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1357:15: ( '<jsp:directive.' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1357:15: '<jsp:directive.'
             {
-            match("<jsp:directive."); 
+            match("<jsp:directive.");
 
 
             }
@@ -2315,7 +2315,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1360:15: ( '<%--' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1360:15: '<%--'
             {
-            match("<%--"); 
+            match("<%--");
 
 
             }
@@ -2334,7 +2334,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1361:15: ( '--%>' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1361:15: '--%>'
             {
-            match("--%>"); 
+            match("--%>");
 
 
             }
@@ -2353,7 +2353,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1362:15: ( '<!--' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1362:15: '<!--'
             {
-            match("<!--"); 
+            match("<!--");
 
 
             }
@@ -2372,7 +2372,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1363:15: ( '-->' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1363:15: '-->'
             {
-            match("-->"); 
+            match("-->");
 
 
             }
@@ -2391,7 +2391,7 @@ public class JSPLexer extends Lexer {
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1365:15: ( '<?xml' )
             // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1365:15: '<?xml'
             {
-            match("<?xml"); 
+            match("<?xml");
 
 
             }
@@ -2411,441 +2411,441 @@ public class JSPLexer extends Lexer {
             case 1 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:10: T66
                 {
-                mT66(); 
+                mT66();
 
                 }
                 break;
             case 2 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:14: T67
                 {
-                mT67(); 
+                mT67();
 
                 }
                 break;
             case 3 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:18: T68
                 {
-                mT68(); 
+                mT68();
 
                 }
                 break;
             case 4 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:22: T69
                 {
-                mT69(); 
+                mT69();
 
                 }
                 break;
             case 5 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:26: CDATA
                 {
-                mCDATA(); 
+                mCDATA();
 
                 }
                 break;
             case 6 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:32: LINE_COMMENT
                 {
-                mLINE_COMMENT(); 
+                mLINE_COMMENT();
 
                 }
                 break;
             case 7 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:45: JSP_COMMENT
                 {
-                mJSP_COMMENT(); 
+                mJSP_COMMENT();
 
                 }
                 break;
             case 8 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:57: XMLDECL
                 {
-                mXMLDECL(); 
+                mXMLDECL();
 
                 }
                 break;
             case 9 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:65: DOCTYPE
                 {
-                mDOCTYPE(); 
+                mDOCTYPE();
 
                 }
                 break;
             case 10 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:73: ID
                 {
-                mID(); 
+                mID();
 
                 }
                 break;
             case 11 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:76: SpecialCharacter
                 {
-                mSpecialCharacter(); 
+                mSpecialCharacter();
 
                 }
                 break;
             case 12 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:93: SQUOTE
                 {
-                mSQUOTE(); 
+                mSQUOTE();
 
                 }
                 break;
             case 13 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:100: DQUOTE
                 {
-                mDQUOTE(); 
+                mDQUOTE();
 
                 }
                 break;
             case 14 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:107: DDOT
                 {
-                mDDOT(); 
+                mDDOT();
 
                 }
                 break;
             case 15 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:112: EQUAL
                 {
-                mEQUAL(); 
+                mEQUAL();
 
                 }
                 break;
             case 16 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:118: WS
                 {
-                mWS(); 
+                mWS();
 
                 }
                 break;
             case 17 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:121: WS2
                 {
-                mWS2(); 
+                mWS2();
 
                 }
                 break;
             case 18 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:125: Digit
                 {
-                mDigit(); 
+                mDigit();
 
                 }
                 break;
             case 19 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:131: OPENCLOSE
                 {
-                mOPENCLOSE(); 
+                mOPENCLOSE();
 
                 }
                 break;
             case 20 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:141: JSPTAGOPEN
                 {
-                mJSPTAGOPEN(); 
+                mJSPTAGOPEN();
 
                 }
                 break;
             case 21 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:152: JSPTAGCLOSE
                 {
-                mJSPTAGCLOSE(); 
+                mJSPTAGCLOSE();
 
                 }
                 break;
             case 22 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:164: JSPOPENEXPR
                 {
-                mJSPOPENEXPR(); 
+                mJSPOPENEXPR();
 
                 }
                 break;
             case 23 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:176: JSPOPENDECL
                 {
-                mJSPOPENDECL(); 
+                mJSPOPENDECL();
 
                 }
                 break;
             case 24 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:188: JSPOPENDIR
                 {
-                mJSPOPENDIR(); 
+                mJSPOPENDIR();
 
                 }
                 break;
             case 25 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:199: JSPCLOSEACT
                 {
-                mJSPCLOSEACT(); 
+                mJSPCLOSEACT();
 
                 }
                 break;
             case 26 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:211: JSPUSEBEAN
                 {
-                mJSPUSEBEAN(); 
+                mJSPUSEBEAN();
 
                 }
                 break;
             case 27 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:222: JSPSET
                 {
-                mJSPSET(); 
+                mJSPSET();
 
                 }
                 break;
             case 28 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:229: JSPGET
                 {
-                mJSPGET(); 
+                mJSPGET();
 
                 }
                 break;
             case 29 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:236: JSPOPENINC
                 {
-                mJSPOPENINC(); 
+                mJSPOPENINC();
 
                 }
                 break;
             case 30 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:247: JSPCLOSEINC
                 {
-                mJSPCLOSEINC(); 
+                mJSPCLOSEINC();
 
                 }
                 break;
             case 31 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:259: JSPOPENFWD
                 {
-                mJSPOPENFWD(); 
+                mJSPOPENFWD();
 
                 }
                 break;
             case 32 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:270: JSPCLOSEFWD
                 {
-                mJSPCLOSEFWD(); 
+                mJSPCLOSEFWD();
 
                 }
                 break;
             case 33 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:282: JSPOPENPLUG
                 {
-                mJSPOPENPLUG(); 
+                mJSPOPENPLUG();
 
                 }
                 break;
             case 34 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:294: JSPCLOSEPLUG
                 {
-                mJSPCLOSEPLUG(); 
+                mJSPCLOSEPLUG();
 
                 }
                 break;
             case 35 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:307: JSPOPENFALL
                 {
-                mJSPOPENFALL(); 
+                mJSPOPENFALL();
 
                 }
                 break;
             case 36 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:319: JSPCLOSEFALL
                 {
-                mJSPCLOSEFALL(); 
+                mJSPCLOSEFALL();
 
                 }
                 break;
             case 37 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:332: JSPOPENPARA
                 {
-                mJSPOPENPARA(); 
+                mJSPOPENPARA();
 
                 }
                 break;
             case 38 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:344: JSPOPENPARAS
                 {
-                mJSPOPENPARAS(); 
+                mJSPOPENPARAS();
 
                 }
                 break;
             case 39 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:357: JSPCLOSEPARAS
                 {
-                mJSPCLOSEPARAS(); 
+                mJSPCLOSEPARAS();
 
                 }
                 break;
             case 40 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:371: JSPOPENROOT
                 {
-                mJSPOPENROOT(); 
+                mJSPOPENROOT();
 
                 }
                 break;
             case 41 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:383: JSPCLOSEROOT
                 {
-                mJSPCLOSEROOT(); 
+                mJSPCLOSEROOT();
 
                 }
                 break;
             case 42 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:396: JSPOPENTEXT
                 {
-                mJSPOPENTEXT(); 
+                mJSPOPENTEXT();
 
                 }
                 break;
             case 43 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:408: JSPCLOSETEXT
                 {
-                mJSPCLOSETEXT(); 
+                mJSPCLOSETEXT();
 
                 }
                 break;
             case 44 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:421: JSPCLOSEATTR
                 {
-                mJSPCLOSEATTR(); 
+                mJSPCLOSEATTR();
 
                 }
                 break;
             case 45 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:434: JSPOPENATTR
                 {
-                mJSPOPENATTR(); 
+                mJSPOPENATTR();
 
                 }
                 break;
             case 46 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:446: JSPOPENBODY
                 {
-                mJSPOPENBODY(); 
+                mJSPOPENBODY();
 
                 }
                 break;
             case 47 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:458: JSPCLOSEBODY
                 {
-                mJSPCLOSEBODY(); 
+                mJSPCLOSEBODY();
 
                 }
                 break;
             case 48 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:471: JSPOPENINVOKE
                 {
-                mJSPOPENINVOKE(); 
+                mJSPOPENINVOKE();
 
                 }
                 break;
             case 49 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:485: JSPOPENDOBODY
                 {
-                mJSPOPENDOBODY(); 
+                mJSPOPENDOBODY();
 
                 }
                 break;
             case 50 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:499: JSPOPENOUTPUT
                 {
-                mJSPOPENOUTPUT(); 
+                mJSPOPENOUTPUT();
 
                 }
                 break;
             case 51 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:513: JSPELEMENTOP
                 {
-                mJSPELEMENTOP(); 
+                mJSPELEMENTOP();
 
                 }
                 break;
             case 52 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:526: OPENSCRIPLET
                 {
-                mOPENSCRIPLET(); 
+                mOPENSCRIPLET();
 
                 }
                 break;
             case 53 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:539: CLOSESCRIPTLET
                 {
-                mCLOSESCRIPTLET(); 
+                mCLOSESCRIPTLET();
 
                 }
                 break;
             case 54 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:554: OPENEXPR
                 {
-                mOPENEXPR(); 
+                mOPENEXPR();
 
                 }
                 break;
             case 55 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:563: CLOSEEXPR
                 {
-                mCLOSEEXPR(); 
+                mCLOSEEXPR();
 
                 }
                 break;
             case 56 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:573: OPENDECL
                 {
-                mOPENDECL(); 
+                mOPENDECL();
 
                 }
                 break;
             case 57 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:582: CLOSEDECL
                 {
-                mCLOSEDECL(); 
+                mCLOSEDECL();
 
                 }
                 break;
             case 58 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:592: OPENDIRECT
                 {
-                mOPENDIRECT(); 
+                mOPENDIRECT();
 
                 }
                 break;
             case 59 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:603: OPENJSPCMT
                 {
-                mOPENJSPCMT(); 
+                mOPENJSPCMT();
 
                 }
                 break;
             case 60 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:614: CLOSEJSPCMT
                 {
-                mCLOSEJSPCMT(); 
+                mCLOSEJSPCMT();
 
                 }
                 break;
             case 61 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:626: OPENXMLCMT
                 {
-                mOPENXMLCMT(); 
+                mOPENXMLCMT();
 
                 }
                 break;
             case 62 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:637: CLOSEXMLCMT
                 {
-                mCLOSEXMLCMT(); 
+                mCLOSEXMLCMT();
 
                 }
                 break;
             case 63 :
                 // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:649: XMLDECLOPEN
                 {
-                mXMLDECLOPEN(); 
+                mXMLDECLOPEN();
 
                 }
                 break;
@@ -3045,6 +3045,6 @@ public class JSPLexer extends Lexer {
             return "1:1: Tokens : ( T66 | T67 | T68 | T69 | CDATA | LINE_COMMENT | JSP_COMMENT | XMLDECL | DOCTYPE | ID | SpecialCharacter | SQUOTE | DQUOTE | DDOT | EQUAL | WS | WS2 | Digit | OPENCLOSE | JSPTAGOPEN | JSPTAGCLOSE | JSPOPENEXPR | JSPOPENDECL | JSPOPENDIR | JSPCLOSEACT | JSPUSEBEAN | JSPSET | JSPGET | JSPOPENINC | JSPCLOSEINC | JSPOPENFWD | JSPCLOSEFWD | JSPOPENPLUG | JSPCLOSEPLUG | JSPOPENFALL | JSPCLOSEFALL | JSPOPENPARA | JSPOPENPARAS | JSPCLOSEPARAS | JSPOPENROOT | JSPCLOSEROOT | JSPOPENTEXT | JSPCLOSETEXT | JSPCLOSEATTR | JSPOPENATTR | JSPOPENBODY | JSPCLOSEBODY | JSPOPENINVOKE | JSPOPENDOBODY | JSPOPENOUTPUT | JSPELEMENTOP | OPENSCRIPLET | CLOSESCRIPTLET | OPENEXPR | CLOSEEXPR | OPENDECL | CLOSEDECL | OPENDIRECT | OPENJSPCMT | CLOSEJSPCMT | OPENXMLCMT | CLOSEXMLCMT | XMLDECLOPEN );";
         }
     }
- 
+
 
 }

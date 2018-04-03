@@ -1,11 +1,11 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA, and Mia-Software.
- * 
+ *
  * All rights reserved. This program and the
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Guillaume Doux (INRIA) - Initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 482672 - Benchmark command line interface
@@ -31,25 +31,25 @@ public final class ReportUtils {
 	private ReportUtils() {
 		// Must not be used
 	}
-	
+
 	public static void generateReport(final Benchmark benchmark,
-			final File targetFolder, final List<? extends Object> arguments, 
+			final File targetFolder, final List<? extends Object> arguments,
 			final boolean measureMemoryUse) throws ReportUtilsException {
 		try {
 			// Generation of the HTML report
 			final HtmlReport report = new HtmlReport(benchmark, targetFolder, arguments);
 			report.doGenerate(null);
 			// Generation of the charts
-			final BenchmarkChartGeneration chartGenerator = 
+			final BenchmarkChartGeneration chartGenerator =
 					new BenchmarkChartGeneration(targetFolder, measureMemoryUse);
 			chartGenerator.generateAll(benchmark);
 		} catch (final Exception e) {
 			throw new ReportUtilsException(e);
 		}
 	}
-	
+
 	public static void generateReport(final URI benchmarkUri, final File targetFolder,
-			final List<? extends Object> arguments, 
+			final List<? extends Object> arguments,
 			final boolean measureMemoryUse) throws ReportUtilsException {
 		final ResourceSet resourceSet = new ResourceSetImpl();
 		final Resource resource = resourceSet.getResource(benchmarkUri, true);
@@ -71,14 +71,14 @@ public final class ReportUtils {
 					measureMemoryUse);
 		} else {
 			for (Benchmark benchmark : benchmarks) {
-				generateReport(benchmark, targetFolder, arguments, 
+				generateReport(benchmark, targetFolder, arguments,
 						measureMemoryUse);
 			}
 		}
 	}
-	
+
 	public static void generateReport(final File benchmarkFile, final File targetFolder,
-			final List<? extends Object> arguments, 
+			final List<? extends Object> arguments,
 			final boolean measureMemoryUse) throws ReportUtilsException {
 		final URI uri = URI.createFileURI(benchmarkFile.getAbsolutePath());
 		generateReport(uri, targetFolder, arguments, measureMemoryUse);

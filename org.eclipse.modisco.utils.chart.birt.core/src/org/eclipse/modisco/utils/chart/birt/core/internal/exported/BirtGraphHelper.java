@@ -63,7 +63,7 @@ import org.eclipse.modisco.utils.chart.metamodel.internal.chart.Serie;
 public final class BirtGraphHelper {
 
 	private static final double UNIT_SPACING = 0.1;
-	
+
 	private static BirtGraphHelper instance;
 
 	private List<ColorDefinition> colors;
@@ -71,7 +71,7 @@ public final class BirtGraphHelper {
 	private static final int CHART_WIDTH = 800;
 
 	private static final int CHART_HEIGHT = 400;
-	
+
 	public List<ColorDefinition> getColors() {
 		return this.colors;
 	}
@@ -102,7 +102,7 @@ public final class BirtGraphHelper {
 		}
 		return BirtGraphHelper.instance;
 	}
-	
+
 	/**
 	 * Create a Birt chart using the chart passed with the birtchart parameter
 	 * Works only with graph having 2 dimensions
@@ -175,7 +175,7 @@ public final class BirtGraphHelper {
 			final ColorDefinition serieColor = getColorForSerie(birtChart.getSeries().indexOf(serie));
 
 			final LineSeries lineSeries = createLineSeries(
-					dataPoints.toArray(new Point[0]), serieColor, 
+					dataPoints.toArray(new Point[0]), serieColor,
 					LineStyle.SOLID_LITERAL, serie.getName());
 			ySeriesDefinition.getSeries().add(lineSeries);
 			final Point[] linearRegression = computeLinearRegression(dataPoints);
@@ -198,7 +198,7 @@ public final class BirtGraphHelper {
 		createYAxis(chart, ord, xAxis, ySeriesDefinition);
 		chartRendering(targetFolder, fileName, chart);
 	}
-	
+
 	private static LineSeries createLineSeries(final Point[] dataPoints,
 			final ColorDefinition serieColor, final LineStyle lineStyle, final String name) {
 		final LineSeries lineSeries = (LineSeries) LineSeriesImpl.create();
@@ -237,7 +237,7 @@ public final class BirtGraphHelper {
 		final PluginSettings pSettings = PluginSettings.instance();
 		final IDeviceRenderer render = pSettings.getDevice("dv.PNG"); //$NON-NLS-1$
 		render.setProperty(IDeviceRenderer.FILE_IDENTIFIER, new File(targetFolder,
-				fileName + ".png")); //$NON-NLS-1$ 
+				fileName + ".png")); //$NON-NLS-1$
 		final Bounds bounds = BoundsImpl.create(0, 0, CHART_WIDTH, CHART_HEIGHT);
 		final Generator generator = Generator.instance();
 		final GeneratedChartState state = generator.build(render.getDisplayServer(), chart, bounds, null,
@@ -255,7 +255,7 @@ public final class BirtGraphHelper {
 	/**
 	 * Computes the linear regression of the given list of points, and returns
 	 * points on the computed line.
-	 * 
+	 *
 	 * @param dataPoints
 	 *            the points to include in the computation
 	 * @return points on the computed approximation line, with the same abscissa

@@ -21,7 +21,7 @@ public final class ColorUtils {
 	/**
 	 * Get a color between red (for 0%) and green (for 100%), depending on the
 	 * given percentage.
-	 * 
+	 *
 	 * @param ratio
 	 *            a value between 0.0 and 1.0, inclusive.
 	 * @return a color between red and green, as a string formatted as

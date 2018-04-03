@@ -124,7 +124,7 @@ public final class DiscoveryAnnotationControls {
 	/**
 	 * Only one parameter memberDeclaration or member is not null. The service
 	 * implements the same controls with two Java reflexive API.
-	 * 
+	 *
 	 * @param parameterAnnotation
 	 * @param methodDeclaration
 	 * @param method
@@ -164,7 +164,7 @@ public final class DiscoveryAnnotationControls {
 	/**
 	 * Only one parameter memberDeclaration or member is not null. The service
 	 * implements the same controls with two Java reflexive API.
-	 * 
+	 *
 	 * @param parameterAnnotation
 	 * @param memberDeclaration
 	 * @param member
@@ -204,7 +204,7 @@ public final class DiscoveryAnnotationControls {
 	/**
 	 * Only one parameter memberDeclaration or member is not null. The service
 	 * implements the same controls with two Java reflexive API.
-	 * 
+	 *
 	 * @param parameterAnnotation
 	 * @param memberDeclaration
 	 * @param member

@@ -20,7 +20,7 @@ public interface WorkflowController {
 	/**
 	 * To validate the workflow model, for problems like a recursion in the
 	 * launch sequence
-	 * 
+	 *
 	 * @param workflowModel
 	 *            the model to validate
 	 * @return <code>null</code> if valid, or a message to indicate the error
@@ -31,7 +31,7 @@ public interface WorkflowController {
 	 * Check if the launch configuration identified by its name (rootConfigName)
 	 * could be launched directly or indirectly from the current launch
 	 * configuration (launch)
-	 * 
+	 *
 	 * @param rootConfigName
 	 *            name of a launch configuration to test for recursion
 	 * @param launch

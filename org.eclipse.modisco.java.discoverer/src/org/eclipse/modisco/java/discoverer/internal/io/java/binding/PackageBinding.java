@@ -20,7 +20,7 @@ import org.eclipse.jdt.core.dom.IPackageBinding;
 
 /**
  * {@code Binding} representing a Java package.
- * 
+ *
  * @see IPackageBinding
  */
 public class PackageBinding extends Binding {

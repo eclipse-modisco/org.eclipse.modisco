@@ -23,9 +23,9 @@ import org.eclipse.gmt.modisco.java.generation.Messages;
 
 /**
  * Util Class for formatting Java code.
- * 
+ *
  * @author fgiquel
- * 
+ *
  */
 public final class JavaUtils {
 
@@ -36,7 +36,7 @@ public final class JavaUtils {
 
 	/**
 	 * Formats java source for a hierarchy.
-	 * 
+	 *
 	 * @param directory
 	 */
 	public static void formatJavaCode(final File directory) {

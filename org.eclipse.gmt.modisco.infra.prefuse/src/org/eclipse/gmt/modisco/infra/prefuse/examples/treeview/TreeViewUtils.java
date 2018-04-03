@@ -45,10 +45,10 @@ public class TreeViewUtils {
             e.printStackTrace();
             System.exit(1);
         }
-        
+
         return demo(t, label);
     }
-    
+
     public static JPanel demo(Graph g, final String label) {
     	Color BACKGROUND = Color.WHITE;
         Color FOREGROUND = Color.BLACK;
@@ -56,7 +56,7 @@ public class TreeViewUtils {
         final TreeView tview = new TreeView(g, label, null);
         tview.setBackground(BACKGROUND);
         tview.setForeground(FOREGROUND);
-        
+
         // create a search panel for the tree map
         JSearchPanel search = new JSearchPanel(tview.getVisualization(),
         		TreeViewConstants.treeNodes, Visualization.SEARCH_ITEMS, label, true, true);
@@ -65,7 +65,7 @@ public class TreeViewUtils {
         search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11)); //$NON-NLS-1$
         search.setBackground(BACKGROUND);
         search.setForeground(FOREGROUND);
-        
+
         final JFastLabel title = new JFastLabel("                 "); //$NON-NLS-1$
         title.setPreferredSize(new Dimension(350, 20));
         title.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -73,7 +73,7 @@ public class TreeViewUtils {
         title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16)); //$NON-NLS-1$
         title.setBackground(BACKGROUND);
         title.setForeground(FOREGROUND);
-        
+
         tview.addControlListener(new ControlAdapter() {
             public void itemEntered(VisualItem item, MouseEvent e) {
                 if ( item.canGetString(label) )
@@ -83,7 +83,7 @@ public class TreeViewUtils {
                 title.setText(null);
             }
         });
-        
+
         Box box = new Box(BoxLayout.X_AXIS);
         box.add(Box.createHorizontalStrut(10));
         box.add(title);
@@ -91,7 +91,7 @@ public class TreeViewUtils {
         box.add(search);
         box.add(Box.createHorizontalStrut(3));
         box.setBackground(BACKGROUND);
-        
+
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(BACKGROUND);
         panel.setForeground(FOREGROUND);
@@ -99,6 +99,6 @@ public class TreeViewUtils {
         panel.add(box, BorderLayout.SOUTH);
         return panel;
     }
-    
-    
+
+
 }

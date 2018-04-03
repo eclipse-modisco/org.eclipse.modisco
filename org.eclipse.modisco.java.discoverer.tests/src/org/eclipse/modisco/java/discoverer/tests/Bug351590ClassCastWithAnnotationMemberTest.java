@@ -47,11 +47,11 @@ public class Bug351590ClassCastWithAnnotationMemberTest extends AbstractDiscover
 		Statement statement = aMethod.getBody().getStatements().get(1);
 		Assert.assertNotNull(statement);
 		Assert.assertTrue(statement instanceof VariableDeclarationStatement);
-		
+
 		Expression initializer = ((VariableDeclarationStatement) statement).getFragments().get(0).getInitializer();
 		Assert.assertNotNull(initializer);
 		Assert.assertTrue(initializer instanceof MethodInvocation);
-		
+
 		// Here, the fix has create some unresolvedMethod with a name indicating the true AnnotationTypeMemberDeclaration
 		AbstractMethodDeclaration method = ((MethodInvocation) initializer).getMethod();
 		Assert.assertNotNull(method);

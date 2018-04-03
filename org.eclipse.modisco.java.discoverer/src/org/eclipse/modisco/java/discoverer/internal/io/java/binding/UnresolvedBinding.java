@@ -18,7 +18,7 @@ package org.eclipse.modisco.java.discoverer.internal.io.java.binding;
 
 /**
  * {@code Binding} representing a Java entity which is unresolved.
- * 
+ *
  */
 public class UnresolvedBinding extends Binding {
 

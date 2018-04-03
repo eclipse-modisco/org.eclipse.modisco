@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
@@ -56,12 +56,12 @@ public class Bug308303Test {
 				if (eObject instanceof CatchClause) {
 					// catch (Exception theException) {...}
 					SingleVariableDeclaration exceptionVariable = ((CatchClause) eObject).getException();
-					
+
 					modelQueryImpl = catalog
 								.getModelQueryImpl(queryGetQualifiedName);
 					String qName = (String) modelQueryImpl.basicEvaluate(exceptionVariable);
 					Assert.assertTrue(qName != null && qName.equals("theException")); // qname must be "e" //$NON-NLS-1$
-					
+
 				}
 			}
 	}

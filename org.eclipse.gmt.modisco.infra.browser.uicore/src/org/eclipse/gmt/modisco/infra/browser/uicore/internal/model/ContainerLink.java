@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.model;
@@ -151,7 +151,7 @@ public class ContainerLink implements ITreeElement {
 		}
 		return parentHashCode;
 	}
-	
+
 	@Override
 	public String toString() {
 		return ContainerLink.class.getSimpleName() + "(" + getText() + ")"; //$NON-NLS-1$ //$NON-NLS-2$

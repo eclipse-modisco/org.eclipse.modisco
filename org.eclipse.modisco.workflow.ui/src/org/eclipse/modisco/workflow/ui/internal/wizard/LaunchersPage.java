@@ -68,7 +68,7 @@ public class LaunchersPage extends WizardPage {
 
 	/**
 	 * {@inheritDoc}
-	 * 
+	 *
 	 * @see org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets
 	 *      .Composite)
 	 */
@@ -141,7 +141,7 @@ public class LaunchersPage extends WizardPage {
 
 	/**
 	 * {@inheritDoc}
-	 * 
+	 *
 	 * @see org.eclipse.jface.dialogs.DialogPage#setVisible(boolean)
 	 */
 	@Override

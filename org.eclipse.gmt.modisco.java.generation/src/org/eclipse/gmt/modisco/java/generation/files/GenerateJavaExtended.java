@@ -23,7 +23,7 @@ import org.eclipse.gmt.modisco.java.generation.Messages;
 import org.eclipse.gmt.modisco.java.generation.utils.JavaUtils;
 
 /**
- * 
+ *
  * Entry point of the 'GenerateJava' generation module with additional post action : Java formatting.
  * @see GenerateJava
  *
@@ -47,17 +47,17 @@ public class GenerateJavaExtended extends GenerateJava {
 	@Override
 	public void doGenerate(Monitor monitor) throws IOException {
 		super.doGenerate(monitor);
-		
+
 		// apply default java code formatting to generated files
 	    if (monitor != null) {
 	    	monitor.setTaskName(Messages.Generate_JavaStructures_0);
 	    }
 		JavaUtils.formatJavaCode(this.targetFolder);
 	}
-	
+
 	/**
 	 * This can be used to launch the generation from a standalone application.
-	 * 
+	 *
 	 * @param args
 	 *            Arguments of the generation.
 	 */
