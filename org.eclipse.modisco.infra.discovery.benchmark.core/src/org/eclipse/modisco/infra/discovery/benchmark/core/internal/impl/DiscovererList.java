@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
 
@@ -20,14 +20,14 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
 
 /**
  * Discoverer list implementation, basically delegation of the list interface methods
- * @see IDiscovererList 
+ * @see IDiscovererList
  * @author Guillaume Doux
  *
  */
 public class DiscovererList implements IDiscovererList {
 
 
-	private List<Discovery> discoverers; 
+	private List<Discovery> discoverers;
 
 	public DiscovererList() {
 		super();
@@ -45,7 +45,7 @@ public class DiscovererList implements IDiscovererList {
 		}
 		return sb.toString();
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.eclipse.modisco.infra.discovery.benchmark.api.IDiscovererList#getDiscoverers()
 	 */
@@ -229,7 +229,7 @@ public class DiscovererList implements IDiscovererList {
 	public <T> T[] toArray(final T[] a) {
 		return this.discoverers.toArray(a);
 	}
-	
-	
-	
+
+
+
 }

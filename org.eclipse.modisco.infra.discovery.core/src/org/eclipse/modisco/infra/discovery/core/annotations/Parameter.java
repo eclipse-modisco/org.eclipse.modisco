@@ -19,24 +19,24 @@ import java.lang.annotation.Target;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 
 /**
- * 
+ *
  * The Parameter annotation describes some informations needed to characterize
  * inputs and outputs for discoverers ({@link IDiscoverer})
- * 
+ *
  * The developer is free to annotate directly a Java field or a getter/setter
  * method, or both field and getter/setter with a same id.
- * 
+ *
  * An input data is supposed to be valued before a discovery is launched : At
  * least a setter method (preferred) or a public field (discouraged) must be
  * proposed.
- * 
+ *
  * An output data is supposed to be accessed after a discovery treatment : At
  * least a setter method (preferred) or a public field (discouraged) must be
  * proposed.
- * 
+ *
  * A data both input and output of the discovery must respond to both previous
  * conditions.
- * 
+ *
  * Using the annotation will throw compilation errors in the following cases :
  * <ul>
  * <li>
@@ -57,28 +57,28 @@ import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
  * annotating more than one setter with the same id
  * <li>
  * giving some "required" value on a getter (a getter describes an output data)
- * 
+ *
  * </ul>
- * 
+ *
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.METHOD, ElementType.FIELD })
 public @interface Parameter {
 	/**
-	 * 
+	 *
 	 * @return the identifier of the discoverer parameter
 	 */
 	String name();
 
 	/**
-	 * 
+	 *
 	 * @return the optional description of the discoverer parameter
 	 */
 	String description() default "";
 
 	/**
-	 * 
+	 *
 	 * @return <code>true</code> if a value for this discoverer parameter is
 	 *         mandatory to launch the discovery.
 	 */

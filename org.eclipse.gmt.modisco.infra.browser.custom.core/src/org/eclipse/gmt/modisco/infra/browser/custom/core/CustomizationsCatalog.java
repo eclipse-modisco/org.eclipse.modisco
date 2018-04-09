@@ -134,7 +134,7 @@ public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.gmt.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
 	 * getActivator()
@@ -276,7 +276,7 @@ public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 
 	/**
 	 * This method returns the customization with the given name.
-	 * 
+	 *
 	 * @param name
 	 *            the name of a resource contained in the catalog
 	 * @return return a customization

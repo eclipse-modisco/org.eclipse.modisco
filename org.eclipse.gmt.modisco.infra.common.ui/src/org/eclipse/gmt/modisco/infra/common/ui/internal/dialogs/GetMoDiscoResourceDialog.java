@@ -103,7 +103,7 @@ public class GetMoDiscoResourceDialog extends ElementTreeSelectionDialog {
 
 	private static ILabelProvider createLabelProvider() {
 		return new LabelProvider() {
-			
+
 			@Override
 			public boolean isLabelProperty(final Object element, final String property) {
 				if (element instanceof AbstractMoDiscoCatalog) {

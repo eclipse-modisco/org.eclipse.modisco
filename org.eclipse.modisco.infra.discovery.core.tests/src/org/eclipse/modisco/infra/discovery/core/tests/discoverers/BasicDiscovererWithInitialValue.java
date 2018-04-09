@@ -28,7 +28,7 @@ public class BasicDiscovererWithInitialValue implements IDiscoverer<Object> {
 		this.myDiscoIn = value;
 	}
 
-	@SuppressWarnings("unused") // framework defined signature 
+	@SuppressWarnings("unused") // framework defined signature
 	@ParameterInitialValue(name = "DISCO_IN")
 	public static Integer getMyDiscoInInitialValue(final Object source) {
 		return BasicDiscovererWithInitialValue.DEFAULT_VALUE;

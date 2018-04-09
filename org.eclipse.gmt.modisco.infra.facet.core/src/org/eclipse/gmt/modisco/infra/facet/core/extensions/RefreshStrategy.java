@@ -26,7 +26,7 @@ public interface RefreshStrategy {
 	 * Facet may have changed. Since this method will be called for each change
 	 * in the model, it should be optimized to do the minimum amount of
 	 * computation possible while still returning an accurate result.
-	 * 
+	 *
 	 * @param eObject
 	 *            an EObject that changed
 	 * @param msg

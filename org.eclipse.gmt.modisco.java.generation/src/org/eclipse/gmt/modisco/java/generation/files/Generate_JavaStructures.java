@@ -23,7 +23,7 @@ import org.eclipse.gmt.modisco.java.generation.Messages;
 import org.eclipse.gmt.modisco.java.generation.utils.JavaUtils;
 
 /**
- * 
+ *
  * @deprecated use GenerateJavaExtended
  *
  */
@@ -51,7 +51,7 @@ public class Generate_JavaStructures extends GenerateJavaExtended {
 
 	/**
 	 * This can be used to launch the generation from a standalone application.
-	 * 
+	 *
 	 * @param args
 	 *            Arguments of the generation.
 	 */

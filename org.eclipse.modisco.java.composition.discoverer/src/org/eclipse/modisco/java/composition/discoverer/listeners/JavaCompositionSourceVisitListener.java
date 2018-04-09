@@ -5,9 +5,9 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
- * 
+ *
  * 	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  * *******************************************************************************
  */
@@ -34,10 +34,10 @@ public class JavaCompositionSourceVisitListener implements SourceVisitListener {
 	}
 
 	/**
-	 * 
+	 *
 	 * Each time this method is notified, it creates a JavaNodeSourceRegion with
 	 * the parameters and stores it in the HasMap for further utilization
-	 * 
+	 *
 	 * @param filePath
 	 *            The path of the parent compilation unit
 	 * @param startPosition
@@ -78,7 +78,7 @@ public class JavaCompositionSourceVisitListener implements SourceVisitListener {
 	/**
 	 * This method recursively compute the Node in parameter to find its Java
 	 * Compilation Unit parent.
-	 * 
+	 *
 	 * @param targetNode
 	 *            The Node to find its parent
 	 * @return the parent Compilation Unit Node, or null if no parent

@@ -15,14 +15,14 @@ public interface WorkflowModelNotifier {
 
 	/**
 	 * To add a listener to current model as in the pattern Observer
-	 * 
+	 *
 	 * @param listener
 	 */
 	public void addListener(WorkflowModelListener listener);
 
 	/**
 	 * To remove a listener to current model as in the pattern Observer
-	 * 
+	 *
 	 * @param listener
 	 */
 	public void removeListener(WorkflowModelListener listener);

@@ -23,7 +23,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 
 /**
  * <code>Binding</code> representing a Java method.
- * 
+ *
  * @see IMethodBinding
  */
 public class MethodBinding extends FeatureBinding {

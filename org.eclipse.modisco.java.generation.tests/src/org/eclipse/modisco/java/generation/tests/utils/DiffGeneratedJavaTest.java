@@ -43,7 +43,7 @@ import org.osgi.framework.Bundle;
 /**
  * Test on generated java files from javaxmi model file. Generated java code is
  * compared char by char (excluding white spaces).
- * 
+ *
  */
 public abstract class DiffGeneratedJavaTest {
 
@@ -57,7 +57,7 @@ public abstract class DiffGeneratedJavaTest {
 					".java")); //$NON-NLS-1$
 		}
 	}
-	
+
 	protected abstract String getJavaXmiFilePath();
 
 	/**
@@ -74,11 +74,11 @@ public abstract class DiffGeneratedJavaTest {
 		File xmlFile = iFile.getLocation().toFile();
 		return xmlFile;
 	}
-	
+
 	protected abstract String getCodeSourceReferencePath();
 	protected abstract Bundle getCodeSourceReferenceBundle();
 	protected abstract String getDeployedCodeSourceReferencePath();
-	
+
 
 	/**
 	 * Get the Java code reference folder
@@ -151,7 +151,7 @@ public abstract class DiffGeneratedJavaTest {
 
 	/**
 	 * Get The target folder for java generation
-	 * 
+	 *
 	 * @return
 	 */
 	protected File prepareOutputDirectory() {
@@ -193,7 +193,7 @@ public abstract class DiffGeneratedJavaTest {
 
 	/**
 	 * Gets a IProject for deploying tests resources.
-	 * 
+	 *
 	 * @return
 	 * @throws CoreException
 	 */

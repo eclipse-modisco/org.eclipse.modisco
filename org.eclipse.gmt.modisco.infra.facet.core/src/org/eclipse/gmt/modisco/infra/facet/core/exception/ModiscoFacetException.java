@@ -18,12 +18,12 @@ package org.eclipse.gmt.modisco.infra.facet.core.exception;
 public class ModiscoFacetException extends Exception {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -4130168457242723140L;
 
 	/**
-	 * 
+	 *
 	 */
 	public ModiscoFacetException() {
 		super();

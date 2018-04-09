@@ -52,7 +52,7 @@ public class JavaJdtBridge {
 	 * is to match compilation unit which contains the IType with instance of
 	 * CompilationUnit in JavaModel. Then, we will have to find corresponding
 	 * type.
-	 * 
+	 *
 	 * @param resource
 	 *            the JavaModel reflecting the java project
 	 * @param jdtType
@@ -95,7 +95,7 @@ public class JavaJdtBridge {
 	 * constructor or an operation. The strategy is to match compilation unit
 	 * which contains the IMethod with instance of CompilationUnit in JavaModel.
 	 * Then, we will have to find corresponding type and method.
-	 * 
+	 *
 	 * @param resource
 	 *            the JavaModel reflecting the java project
 	 * @param javaMethod
@@ -231,8 +231,8 @@ public class JavaJdtBridge {
 		 * declaration expression (in a loop) 3. container is a variable
 		 * declaration statement (local variable) 4. container is a method
 		 * declaration (parameter) 5. container is an enumeration declaration
-		 * 
-		 * 
+		 *
+		 *
 		 * For cases 1 and 5, we are able to retrieve a jdt element, for other
 		 * cases, there is no trivial way to retrieve corresponding jdt element.
 		 */
@@ -306,7 +306,7 @@ public class JavaJdtBridge {
 	 * From an IPackageFragment (instance from JDT abstract syntax tree) we
 	 * would like to retrieve corresponding element in JavaModel of the project.
 	 * The strategy is to match the package declaration using qualified name.
-	 * 
+	 *
 	 * @param resource
 	 *            the JavaModel reflecting the java project
 	 * @param jdtFragment
@@ -351,7 +351,7 @@ public class JavaJdtBridge {
 	 * we are not able to select local variables and method parameters, so we
 	 * only have to manage cases of class variables (static) and instance
 	 * variables.
-	 * 
+	 *
 	 * @param resource
 	 *            the JavaModel reflecting the java project
 	 * @param jdtField

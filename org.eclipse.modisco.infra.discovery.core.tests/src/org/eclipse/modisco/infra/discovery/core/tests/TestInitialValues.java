@@ -31,7 +31,7 @@ public class TestInitialValues {
 		Object initialValue = IDiscoveryManager.INSTANCE.getInitialValue(discovererParameter, discovererDescription, new Object());
 		assertEquals(initialValue, BasicDiscovererWithInitialValue.DEFAULT_VALUE);
 	}
-	
+
 	@Test
 	public void testNoInitialValue() throws Exception {
 		DiscovererDescription discovererDescription = IDiscoveryManager.INSTANCE.getDiscovererDescription("BasicDiscovererForTests");

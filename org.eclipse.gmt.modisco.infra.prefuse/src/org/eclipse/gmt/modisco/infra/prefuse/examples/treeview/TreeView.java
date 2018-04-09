@@ -61,71 +61,71 @@ import prefuse.visual.sort.TreeDepthItemSorter;
 @SuppressWarnings("serial")
 public class TreeView extends Display {
 
-    
-    
+
+
     private LabelRenderer m_nodeRenderer;
     private EdgeRenderer m_edgeRenderer;
-    
+
     private String m_label = "label"; //$NON-NLS-1$
     private String m_image = "image"; //$NON-NLS-1$
     private int m_orientation = Constants.ORIENT_LEFT_RIGHT;
-        
+
     public TreeView(Graph t, String label, String image) {
         super(new Visualization());
         this.m_label = label;
         this.m_image = image;
-        
+
         this.m_vis.add(TreeViewConstants.tree, t);
-        
+
         this.m_nodeRenderer = new LabelRenderer(this.m_label, this.m_image);
         this.m_nodeRenderer.setRenderType(AbstractShapeRenderer.RENDER_TYPE_FILL);
         this.m_nodeRenderer.setHorizontalAlignment(Constants.LEFT);
         this.m_nodeRenderer.setImagePosition(Constants.LEFT);
         this.m_nodeRenderer.setRoundedCorner(8,8);
         this.m_edgeRenderer = new EdgeRenderer(Constants.EDGE_TYPE_CURVE);
-        
+
         DefaultRendererFactory rf = new DefaultRendererFactory(this.m_nodeRenderer);
         rf.add(new InGroupPredicate(TreeViewConstants.treeEdges), this.m_edgeRenderer);
         this.m_vis.setRendererFactory(rf);
-               
+
         // colors
         ItemAction nodeColor = new NodeColorAction(TreeViewConstants.treeNodes);
         ItemAction textColor = new ColorAction(TreeViewConstants.treeNodes,
                 VisualItem.TEXTCOLOR, ColorLib.rgb(0,0,0));
         this.m_vis.putAction("textColor", textColor); //$NON-NLS-1$
-        
+
         ItemAction edgeColor = new ColorAction(TreeViewConstants.treeEdges,
                 VisualItem.STROKECOLOR, ColorLib.rgb(200,200,200));
-        
+
         // quick repaint
         ActionList repaint = new ActionList();
         repaint.add(nodeColor);
         repaint.add(new RepaintAction());
         this.m_vis.putAction("repaint", repaint); //$NON-NLS-1$
-        
+
         // full paint
         ActionList fullPaint = new ActionList();
         fullPaint.add(nodeColor);
         this.m_vis.putAction("fullPaint", fullPaint); //$NON-NLS-1$
-        
+
         // animate paint change
         ActionList animatePaint = new ActionList(400);
         animatePaint.add(new ColorAnimator(TreeViewConstants.treeNodes));
         animatePaint.add(new RepaintAction());
         this.m_vis.putAction("animatePaint", animatePaint); //$NON-NLS-1$
-        
+
         // create the tree layout action
         NodeLinkTreeLayout treeLayout = new NodeLinkTreeLayout(TreeViewConstants.tree,
                 this.m_orientation, 50, 0, 8);
         treeLayout.setLayoutAnchor(new Point2D.Double(25,300));
         this.m_vis.putAction("treeLayout", treeLayout); //$NON-NLS-1$
-        
-        CollapsedSubtreeLayout subLayout = 
+
+        CollapsedSubtreeLayout subLayout =
             new CollapsedSubtreeLayout(TreeViewConstants.tree, this.m_orientation);
         this.m_vis.putAction("subLayout", subLayout); //$NON-NLS-1$
-        
+
         AutoPanAction autoPan = new AutoPanAction(this);
-        
+
         // create the filtering and layout
         ActionList filter = new ActionList();
         filter.add(new FisheyeTreeFilter(TreeViewConstants.tree, 2));
@@ -136,7 +136,7 @@ public class TreeView extends Display {
         filter.add(nodeColor);
         filter.add(edgeColor);
         this.m_vis.putAction("filter", filter); //$NON-NLS-1$
-        
+
         // animated transition
         ActionList animate = new ActionList(1000);
         animate.setPacingFunction(new SlowInSlowOutPacer());
@@ -148,7 +148,7 @@ public class TreeView extends Display {
         animate.add(new RepaintAction());
         this.m_vis.putAction("animate", animate); //$NON-NLS-1$
         this.m_vis.alwaysRunAfter("filter", "animate"); //$NON-NLS-1$ //$NON-NLS-2$
-        
+
         // create animator for orientation changes
         ActionList orient = new ActionList(2000);
         orient.setPacingFunction(new SlowInSlowOutPacer());
@@ -157,9 +157,9 @@ public class TreeView extends Display {
         orient.add(new LocationAnimator(TreeViewConstants.treeNodes));
         orient.add(new RepaintAction());
         this.m_vis.putAction("orient", orient); //$NON-NLS-1$
-        
+
         // ------------------------------------------------
-        
+
         // initialize the display
         setSize(700,600);
         setItemSorter(new TreeDepthItemSorter());
@@ -168,7 +168,7 @@ public class TreeView extends Display {
         addControlListener(new WheelZoomControl());
         addControlListener(new PanControl());
         addControlListener(new FocusControl(1, "filter")); //$NON-NLS-1$
-        
+
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_LEFT_RIGHT, this),
             "left-to-right", KeyStroke.getKeyStroke("ctrl 1"), WHEN_FOCUSED); //$NON-NLS-1$ //$NON-NLS-2$
@@ -181,14 +181,14 @@ public class TreeView extends Display {
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_BOTTOM_TOP, this),
             "bottom-to-top", KeyStroke.getKeyStroke("ctrl 4"), WHEN_FOCUSED); //$NON-NLS-1$ //$NON-NLS-2$
-        
+
         // ------------------------------------------------
-        
+
         // filter graph and perform layout
         setOrientation(this.m_orientation);
         this.m_vis.run("filter"); //$NON-NLS-1$
-        
-        TupleSet search = new PrefixSearchTupleSet(); 
+
+        TupleSet search = new PrefixSearchTupleSet();
         this.m_vis.addFocusGroup(Visualization.SEARCH_ITEMS, search);
         search.addTupleSetListener(new TupleSetListener() {
             @SuppressWarnings("synthetic-access")
@@ -199,11 +199,11 @@ public class TreeView extends Display {
             }
         });
     }
-    
+
     // ------------------------------------------------------------------------
-    
+
     public void setOrientation(int orientation) {
-        NodeLinkTreeLayout rtl 
+        NodeLinkTreeLayout rtl
             = (NodeLinkTreeLayout)this.m_vis.getAction("treeLayout"); //$NON-NLS-1$
         CollapsedSubtreeLayout stl
             = (CollapsedSubtreeLayout)this.m_vis.getAction("subLayout"); //$NON-NLS-1$
@@ -244,16 +244,16 @@ public class TreeView extends Display {
         rtl.setOrientation(orientation);
         stl.setOrientation(orientation);
     }
-    
+
     public int getOrientation() {
         return this.m_orientation;
     }
-    
+
     // ------------------------------------------------------------------------
-       
-    
-    
+
+
+
     // ------------------------------------------------------------------------
-    
-    
+
+
 } // end of class TreeMap

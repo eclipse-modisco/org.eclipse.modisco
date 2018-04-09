@@ -54,7 +54,7 @@ public class JavaBenchmarkHtmlReportDiscoverer extends AbstractDiscoverer<IFile>
 		// refresh needed because Acceleo generates without using the
 		// workspace IResource API
 		location.refreshLocal(IResource.DEPTH_INFINITE, monitor);
-		
+
 		return location.getFile(new Path(JavaBenchmarkHtmlReportDiscoverer.TARGET_FILENAME));
 	}
 

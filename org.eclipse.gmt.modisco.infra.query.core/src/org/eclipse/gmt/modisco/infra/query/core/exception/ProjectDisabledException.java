@@ -22,7 +22,7 @@ public class ProjectDisabledException extends ModelQueryException {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 5762609362502765757L;
 

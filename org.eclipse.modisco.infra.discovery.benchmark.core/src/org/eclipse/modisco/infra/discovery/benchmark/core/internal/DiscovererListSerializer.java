@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal;
 
@@ -38,9 +38,9 @@ public class DiscovererListSerializer implements ISerializer<IDiscovererList> {
 
 	private ResourceSet rSet;
 	private Resource inMemoryRes;
-	
-	
-	
+
+
+
 	public DiscovererListSerializer() {
 		this.rSet = new ResourceSetImpl();
 		this.rSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
@@ -53,10 +53,10 @@ public class DiscovererListSerializer implements ISerializer<IDiscovererList> {
 	}
 
 	public String serialize(final IDiscovererList value) {
-		this.inMemoryRes.getContents().clear();		
+		this.inMemoryRes.getContents().clear();
 		this.inMemoryRes.getContents().addAll(value);
 		OutputStream os = new ByteArrayOutputStream();
-		try {	
+		try {
 			this.inMemoryRes.save(os, Collections.EMPTY_MAP);
 			return os.toString();
 		} catch (IOException e) {

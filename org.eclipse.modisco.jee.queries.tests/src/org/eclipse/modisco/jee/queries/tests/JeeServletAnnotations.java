@@ -42,24 +42,24 @@ public class JeeServletAnnotations {
 		// Retrieving some the queries for further testing
 		ModelQuery queryIsMultipartConfig = querySet.getQuery("IsMultipartConfig"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsMultipartConfig);
-		
+
 		// Retrieving some the queries for further testing
 		ModelQuery queryIsWebFilter = querySet.getQuery("IsWebFilter"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsWebFilter);
-		
+
 		// Retrieving some the queries for further testing
 		ModelQuery queryIsWebInitParam = querySet.getQuery("IsWebInitParam"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsWebInitParam);
-		
+
 		// Retrieving some the queries for further testing
 		ModelQuery queryIsWebListener = querySet.getQuery("IsWebListener"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsWebListener);
-		
+
 		// Retrieving some the queries for further testing
 		ModelQuery queryIsWebServlet = querySet.getQuery("IsWebServlet"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsWebServlet);
-		
-		
+
+
 
 		URI modelUri = URI
 				.createURI("platform:/plugin/org.eclipse.modisco.jee.queries.tests/resources/AnnotationServlet.javaxmi"); //$NON-NLS-1$
@@ -72,7 +72,7 @@ public class JeeServletAnnotations {
 
 			AbstractModelQuery modelQueryImpl;
 			Boolean result;
-			
+
 			if (eObject instanceof ClassDeclaration) {
 				ClassDeclaration classDecl = (ClassDeclaration) eObject;
 				if (classDecl.getName() != null) {
@@ -132,10 +132,10 @@ public class JeeServletAnnotations {
 						result = (Boolean) modelQueryImpl
 								.basicEvaluate(classDecl);
 						Assert.assertTrue(result);
-					} 
+					}
 				}
 			}
 		}
-		
+
 	}
 }

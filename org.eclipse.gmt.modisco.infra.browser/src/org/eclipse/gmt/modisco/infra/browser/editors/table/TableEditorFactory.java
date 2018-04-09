@@ -44,7 +44,7 @@ public class TableEditorFactory {
 
 	/**
 	 * Open a new table view editor on the given list of elements.
-	 * 
+	 *
 	 * @param browserConfiguration
 	 *            the main editor configuration
 	 * @param elements
@@ -80,7 +80,7 @@ public class TableEditorFactory {
 
 	/**
 	 * Open a new table view editor on the given query result.
-	 * 
+	 *
 	 * @param result
 	 *            the results of a query to display in the table
 	 */

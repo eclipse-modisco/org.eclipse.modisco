@@ -27,7 +27,7 @@ import org.eclipse.jdt.core.dom.WildcardType;
 
 /**
  * A Factory which creates MoDisco {@link Binding}s from JDT nodes.
- * 
+ *
  * @see org.eclipse.jdt.core.dom.ASTNode
  */
 public interface IBindingFactory {
@@ -35,7 +35,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the Java entity
 	 * represented by the JDT {@code name}.
-	 * 
+	 *
 	 * @param name
 	 *            the JDT name.
 	 * @return the MoDisco {@code Binding}.
@@ -45,7 +45,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the JDT
 	 * PrimitiveType {@code type}.
-	 * 
+	 *
 	 * @param type
 	 *            the JDT PrimitiveType object.
 	 * @return the MoDisco {@code Binding}.
@@ -55,7 +55,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the JDT WildcardType
 	 * {@code type}.
-	 * 
+	 *
 	 * @param type
 	 *            the JDT WildcardType object.
 	 * @return the MoDisco {@code Binding}.
@@ -65,7 +65,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the JDT
 	 * ParameterizedType {@code type}.
-	 * 
+	 *
 	 * @param type
 	 *            the JDT ParameterizedType object.
 	 * @return the MoDisco {@code Binding}.
@@ -75,7 +75,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the JDT ArrayType
 	 * {@code type}.
-	 * 
+	 *
 	 * @param type
 	 *            the JDT ArrayType object.
 	 * @return the MoDisco {@code Binding}.
@@ -85,7 +85,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to a constructor call
 	 * (basically, a {@link MethodBinding}).
-	 * 
+	 *
 	 * @param constructorCall
 	 *            the JDT ClassInstanceCreation object.
 	 * @return the MoDisco {@code Binding}.
@@ -95,7 +95,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to a constructor call
 	 * (basically, a {@link MethodBinding}).
-	 * 
+	 *
 	 * @param constructorCall
 	 *            the JDT ConstructorInvocation object.
 	 * @return the MoDisco {@code Binding}.
@@ -105,7 +105,7 @@ public interface IBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to a super constructor
 	 * call (basically, a {@link MethodBinding}).
-	 * 
+	 *
 	 * @param constructorCall
 	 *            the JDT SuperConstructorInvocation object.
 	 * @return the MoDisco {@code Binding}.
@@ -119,7 +119,7 @@ public interface IBindingFactory {
 	 * <li>local variable (declared in a method body or an initializer)</li>
 	 * <li>local method (declared in an anonymous class)</li>
 	 * </ul>
-	 * 
+	 *
 	 * @param name
 	 *            the JDT name.
 	 * @return {@code true} if this {@code name} represents a local variable or

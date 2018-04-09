@@ -81,7 +81,7 @@ import org.eclipse.swt.graphics.Point;
 
 /**
  * @author Gregoire DUPE (Mia-Software)
- * 
+ *
  */
 public class Report {
 	private static final int MINUTE_MS_RANGE = 60000;
@@ -354,7 +354,7 @@ public class Report {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void rescaleDebugCode(final long maxMemory) {
 		float coef = new Float(maxMemory) / Report.RESCALE_COEF;

@@ -57,10 +57,10 @@ public class DiscovererUIRegistry extends AbstractRegistry {
 	/**
 	 * Query the discoverers UI registry for a {@link DiscovererUI} for the
 	 * discoverer with the given name.
-	 * 
+	 *
 	 * @param name
 	 *            the name of the {@link DiscovererUI} that is looked for
-	 * 
+	 *
 	 * @return the {@link DiscovererUI} or <code>null</code> if none was found
 	 *         with the given name
 	 */

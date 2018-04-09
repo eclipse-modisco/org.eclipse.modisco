@@ -91,7 +91,7 @@ public class LinkItemEx extends LinkItem implements IEditingDomainItemProvider {
 		}
 		throw new UnsupportedOperationException();
 	}
-	
+
 	@Override
 	public String toString() {
 		return LinkItemEx.class.getSimpleName() + "(" + getText() + ")"; //$NON-NLS-1$ //$NON-NLS-2$

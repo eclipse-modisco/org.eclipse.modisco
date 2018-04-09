@@ -512,7 +512,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 	/**
 	 * Opens a message box to ask the user whether to keep customizations for the old metamodels, or
 	 * clean the customizations.
-	 * 
+	 *
 	 * @param newMetamodel
 	 */
 	private void promptToCleanCustomization(final Resource newMetamodel) {
@@ -1737,7 +1737,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 
 	/**
 	 * Clean the custom view
-	 * 
+	 *
 	 * @return whether the custom view contains information and thus must be kept
 	 */
 	private boolean clean(final CustomView customView) {

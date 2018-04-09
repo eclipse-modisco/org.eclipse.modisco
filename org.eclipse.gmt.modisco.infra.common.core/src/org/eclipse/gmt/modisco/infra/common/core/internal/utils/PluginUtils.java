@@ -57,7 +57,7 @@ public final class PluginUtils {
 	/**
 	 * Returns whether the given file is registered in the plugin.xml of the
 	 * given project, using the given extension point.
-	 * 
+	 *
 	 * @param extensionPoint
 	 *            the extension point that is used to register elements of this
 	 *            kind (elements must be declared with a "file" attribute)
@@ -76,7 +76,7 @@ public final class PluginUtils {
 
 	/**
 	 * Returns the value of an attribute in an extension point.
-	 * 
+	 *
 	 * @param project
 	 *            the project in which to look for an extension
 	 * @param extensionPoint
@@ -114,7 +114,7 @@ public final class PluginUtils {
 	/**
 	 * Registers the given file in the plugin.xml of its containing project,
 	 * using the given extension point.
-	 * 
+	 *
 	 * @param file
 	 *            the file to register
 	 * @param extensionPointId
@@ -139,15 +139,15 @@ public final class PluginUtils {
 	 * Registers an extension in the plugin.xml of the given project, using the
 	 * given extension point. If the plugin.xml file doesn't exist, it will be
 	 * created an registered in the build.properties.
-	 * 
+	 *
 	 * The extension will look like this:
-	 * 
+	 *
 	 * <pre>
 	 * &lt;extension point="extensionPointId"&gt;
 	 *   &lt;elementName attribute0="value0" attribute1="value1" ... /&gt;
 	 * &lt;/extension&gt;
 	 * </pre>
-	 * 
+	 *
 	 * @param project
 	 *            the project in which to register an extension
 	 * @param extensionPointId
@@ -267,7 +267,7 @@ public final class PluginUtils {
 
 	/**
 	 * Add a list of required bundles to a plug-in project.
-	 * 
+	 *
 	 * @param project
 	 *            the plug-in project whose Manifest.MF to modify
 	 * @param requiredBundles
@@ -335,7 +335,7 @@ public final class PluginUtils {
 	/**
 	 * Reads the MANIFEST.MF of the given project, modifies it using the
 	 * provided operation, and writes it back to its file.
-	 * 
+	 *
 	 * @param project
 	 *            the project whose Manifest to modify
 	 * @param manifestModificationOperation

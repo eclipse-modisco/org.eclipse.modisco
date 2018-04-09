@@ -67,7 +67,7 @@ public class OpenGraphAction extends AbstractAction {
         String[] names = new String[cc];
         for ( int i=0; i<cc; ++i )
             names[i] = t.getColumnName(i);
-        
+
         // where to store the result
         final String[] label = new String[1];
 
@@ -78,7 +78,7 @@ public class OpenGraphAction extends AbstractAction {
         }
         final JDialog dialog = new JDialog(
                 (JFrame)c, Messages.OpenGraphAction_ChooseLabelField, true);
-        
+
         // create the ok/cancel buttons
         final JButton ok = new JButton(Messages.OpenGraphAction_OK);
         ok.setEnabled(false);
@@ -94,14 +94,14 @@ public class OpenGraphAction extends AbstractAction {
                 dialog.setVisible(false);
             }
         });
-        
+
         // build the selection list
         final JList list = new JList(names);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.getSelectionModel().addListSelectionListener(
         new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e) {
-                int sel = list.getSelectedIndex(); 
+                int sel = list.getSelectedIndex();
                 if ( sel >= 0 ) {
                     ok.setEnabled(true);
                     label[0] = (String)list.getModel().getElementAt(sel);
@@ -112,9 +112,9 @@ public class OpenGraphAction extends AbstractAction {
             }
         });
         JScrollPane scrollList = new JScrollPane(list);
-        
+
         JLabel title = new JLabel(Messages.OpenGraphAction_ChooseFieldToUseForNodeLabels);
-        
+
         // layout the buttons
         Box bbox = new Box(BoxLayout.X_AXIS);
         bbox.add(Box.createHorizontalStrut(5));
@@ -123,21 +123,21 @@ public class OpenGraphAction extends AbstractAction {
         bbox.add(Box.createHorizontalStrut(5));
         bbox.add(cancel);
         bbox.add(Box.createHorizontalStrut(5));
-        
+
         // put everything into a panel
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(title, BorderLayout.NORTH);
         panel.add(scrollList, BorderLayout.CENTER);
         panel.add(bbox, BorderLayout.SOUTH);
         panel.setBorder(BorderFactory.createEmptyBorder(5,2,2,2));
-        
+
         // show the dialog
         dialog.setContentPane(panel);
         dialog.pack();
         dialog.setLocationRelativeTo(c);
         dialog.setVisible(true);
         dialog.dispose();
-        
+
         // return the label field selection
         return label[0];
     }

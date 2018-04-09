@@ -23,7 +23,7 @@ import com.ibm.icu.lang.UCharacter;
 /**
  * Specific file comparator for java files generated : compare char by char,
  * ignore white spaces (tab, line feeds, ...).
- * 
+ *
  */
 public class JavaFileComparator implements Comparator<File> {
 

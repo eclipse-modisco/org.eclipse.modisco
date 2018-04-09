@@ -101,11 +101,11 @@ public class WorkflowModelImpl extends WorkflowImpl implements WorkflowModel {
 
 	/**
 	 * Deserialize a list of strings (name, index, type) to a list of elements
-	 * 
+	 *
 	 * @param stringList
 	 *            String list source
 	 * @return created element list
-	 * 
+	 *
 	 * @see WorkflowModelImpl#save(ILaunchConfigurationWorkingCopy)
 	 */
 	private static final List<Element> stringListToElementList(final List<String> stringList) {

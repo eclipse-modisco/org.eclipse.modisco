@@ -61,9 +61,9 @@ public class RadialGraphView extends Display {
 
     private LabelRenderer m_nodeRenderer;
     private EdgeRenderer m_edgeRenderer;
-    
+
     private String m_label = "label"; //$NON-NLS-1$
-    
+
     public RadialGraphView(Graph g, String label) {
         super(new Visualization());
         this.m_label = label;
@@ -71,58 +71,58 @@ public class RadialGraphView extends Display {
         // -- set up visualization --
         this.m_vis.add(RadialGraphViewConstants.tree, g);
         this.m_vis.setInteractive(RadialGraphViewConstants.treeEdges, null, false);
-        
+
         // -- set up renderers --
         this.m_nodeRenderer = new LabelRenderer(this.m_label);
         this.m_nodeRenderer.setRenderType(AbstractShapeRenderer.RENDER_TYPE_FILL);
         this.m_nodeRenderer.setHorizontalAlignment(Constants.CENTER);
         this.m_nodeRenderer.setRoundedCorner(8,8);
         this.m_edgeRenderer = new EdgeRenderer();
-        
+
         DefaultRendererFactory rf = new DefaultRendererFactory(this.m_nodeRenderer);
         rf.add(new InGroupPredicate(RadialGraphViewConstants.treeEdges), this.m_edgeRenderer);
         this.m_vis.setRendererFactory(rf);
-               
+
         // -- set up processing actions --
-        
+
         // colors
         ItemAction nodeColor = new NodeColorAction(RadialGraphViewConstants.treeNodes);
         ItemAction textColor = new TextColorAction(RadialGraphViewConstants.treeNodes);
         this.m_vis.putAction("textColor", textColor); //$NON-NLS-1$
-        
+
         ItemAction edgeColor = new ColorAction(RadialGraphViewConstants.treeEdges,
                 VisualItem.STROKECOLOR, ColorLib.rgb(200,200,200));
-        
-        FontAction fonts = new FontAction(RadialGraphViewConstants.treeNodes, 
+
+        FontAction fonts = new FontAction(RadialGraphViewConstants.treeNodes,
                 FontLib.getFont("Tahoma", 10)); //$NON-NLS-1$
         fonts.add("ingroup('_focus_')", FontLib.getFont("Tahoma", 11)); //$NON-NLS-1$ //$NON-NLS-2$
-        
+
         // recolor
         ActionList recolor = new ActionList();
         recolor.add(nodeColor);
         recolor.add(textColor);
         this.m_vis.putAction("recolor", recolor); //$NON-NLS-1$
-        
+
         // repaint
         ActionList repaint = new ActionList();
         repaint.add(recolor);
         repaint.add(new RepaintAction());
         this.m_vis.putAction("repaint", repaint); //$NON-NLS-1$
-        
+
         // animate paint change
         ActionList animatePaint = new ActionList(400);
         animatePaint.add(new ColorAnimator(RadialGraphViewConstants.treeNodes));
         animatePaint.add(new RepaintAction());
         this.m_vis.putAction("animatePaint", animatePaint); //$NON-NLS-1$
-        
+
         // create the tree layout action
         RadialTreeLayout treeLayout = new RadialTreeLayout(RadialGraphViewConstants.tree);
         //treeLayout.setAngularBounds(-Math.PI/2, Math.PI);
         this.m_vis.putAction("treeLayout", treeLayout); //$NON-NLS-1$
-        
+
         CollapsedSubtreeLayout subLayout = new CollapsedSubtreeLayout(RadialGraphViewConstants.tree);
         this.m_vis.putAction("subLayout", subLayout); //$NON-NLS-1$
-        
+
         // create the filtering and layout
         ActionList filter = new ActionList();
         filter.add(new TreeRootAction(RadialGraphViewConstants.tree));
@@ -133,7 +133,7 @@ public class RadialGraphView extends Display {
         filter.add(nodeColor);
         filter.add(edgeColor);
         this.m_vis.putAction("filter", filter); //$NON-NLS-1$
-        
+
         // animated transition
         ActionList animate = new ActionList(1250);
         animate.setPacingFunction(new SlowInSlowOutPacer());
@@ -144,9 +144,9 @@ public class RadialGraphView extends Display {
         animate.add(new RepaintAction());
         this.m_vis.putAction("animate", animate); //$NON-NLS-1$
         this.m_vis.alwaysRunAfter("filter", "animate"); //$NON-NLS-1$ //$NON-NLS-2$
-        
+
         // ------------------------------------------------
-        
+
         // initialize the display
         setSize(700,600);
         setItemSorter(new TreeDepthItemSorter());
@@ -156,12 +156,12 @@ public class RadialGraphView extends Display {
         addControlListener(new PanControl());
         addControlListener(new FocusControl(1, "filter")); //$NON-NLS-1$
         addControlListener(new HoverActionControl("repaint")); //$NON-NLS-1$
-        
+
         // ------------------------------------------------
-        
+
         // filter graph and perform layout
         this.m_vis.run("filter"); //$NON-NLS-1$
-        
+
         // maintain a set of items that should be interpolated linearly
         // this isn't absolutely necessary, but makes the animations nicer
         // the PolarLocationAnimator should read this set and act accordingly
@@ -177,7 +177,7 @@ public class RadialGraphView extends Display {
                 }
             }
         );
-        
+
         SearchTupleSet search = new PrefixSearchTupleSet();
         this.m_vis.addFocusGroup(Visualization.SEARCH_ITEMS, search);
         search.addTupleSetListener(new TupleSetListener() {
@@ -189,5 +189,5 @@ public class RadialGraphView extends Display {
             }
         });
     }
-    
+
 } // end of class RadialGraphView

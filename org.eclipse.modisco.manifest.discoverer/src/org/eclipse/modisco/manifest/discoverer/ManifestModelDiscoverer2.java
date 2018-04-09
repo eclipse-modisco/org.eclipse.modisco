@@ -8,7 +8,7 @@
  * Contributors:
  *    Frederic Madiot (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
- *    Grégoire Dupé (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package' 
+ *    Grï¿½goire Dupï¿½ (Mia-Software) - Bug 480183 - The manifest.mf discoverer should manage 'Export-Package'
  *******************************************************************************/
 package org.eclipse.modisco.manifest.discoverer;
 
@@ -88,10 +88,10 @@ public class ManifestModelDiscoverer2 extends AbstractModelDiscoverer<IFile> {
 			bundle.setActivationPolicy(manifestValues.get("Bundle-ActivationPolicy")); //$NON-NLS-1$
 			bundle.setRequiredExecutionEnvironment(manifestValues
 					.get("Bundle-RequiredExecutionEnvironment")); //$NON-NLS-1$
-			final ManifestElement[] rBundleMElts = 
+			final ManifestElement[] rBundleMElts =
 					parseHeader(manifestValues, "Require-Bundle"); //$NON-NLS-1$
 			if (rBundleMElts != null) {
-				final List<RequiredBundle> requiredBundles = 
+				final List<RequiredBundle> requiredBundles =
 						discoverRequiredBundle(rBundleMElts);
 				bundle.getRequiredBundles().addAll(requiredBundles);
 			}
@@ -118,7 +118,7 @@ public class ManifestModelDiscoverer2 extends AbstractModelDiscoverer<IFile> {
 	private static void discoverExportPackage(
 			final Map<String, String> manifestValues, final Bundle bundle)
 					throws BundleException {
-		final ManifestElement[] exportPackages = 
+		final ManifestElement[] exportPackages =
 				parseHeader(manifestValues, "Export-Package"); //$NON-NLS-1$
 		if (exportPackages != null) {
 			for (ManifestElement exportPackage : exportPackages) {
@@ -149,7 +149,7 @@ public class ManifestModelDiscoverer2 extends AbstractModelDiscoverer<IFile> {
 	private static void discoverImportPackage(
 			final Map<String, String> manifestValues, final Bundle bundle)
 					throws BundleException {
-		final ManifestElement[] importedPackages = 
+		final ManifestElement[] importedPackages =
 				parseHeader(manifestValues, "Import-Package"); //$NON-NLS-1$
 		if (importedPackages != null) {
 			for (ManifestElement element : importedPackages) {

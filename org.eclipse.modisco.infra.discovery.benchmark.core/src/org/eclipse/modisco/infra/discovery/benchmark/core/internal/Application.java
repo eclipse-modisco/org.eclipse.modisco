@@ -64,7 +64,7 @@ public class Application implements IApplication {
 		if (cmd.hasOption('e')) {
 			importExistingPrj(cmd.getOptionValue('e').split(",")); //$NON-NLS-1$
 		}
-		final DiscovererBenchmarkDiscoverer discoverer = 
+		final DiscovererBenchmarkDiscoverer discoverer =
 				new DiscovererBenchmarkDiscoverer();
 		discoverer.setGenerateHtmlReport(cmd.hasOption('r'));
 		final IDiscovererList discos = IDiscovererListFactory.INSTANCE.createDiscovererList();
@@ -154,7 +154,7 @@ public class Application implements IApplication {
 			final String message = String.format("Refreshing the project '%s'",  //$NON-NLS-1$
 					prjDesc.getName());
 			DebugUtils.debug(message);
-			project.refreshLocal(IResource.DEPTH_INFINITE, 
+			project.refreshLocal(IResource.DEPTH_INFINITE,
 					new NullProgressMonitor());
 		} catch (final CoreException e) {
 			final String message = String.format(

@@ -16,5 +16,5 @@ public interface GraphViewConstants {
     static final String nodes = "graph.nodes"; //$NON-NLS-1$
     static final String edges = "graph.edges"; //$NON-NLS-1$
     static final String draw = "draw"; //$NON-NLS-1$
-    
+
 }

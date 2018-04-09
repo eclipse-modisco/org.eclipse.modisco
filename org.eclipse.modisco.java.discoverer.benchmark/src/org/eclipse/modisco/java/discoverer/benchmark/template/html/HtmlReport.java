@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire Dupe (Mia-Software) - initial API and implementation
  */
@@ -26,20 +26,20 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
  * Entry point of the 'HtmlReport' generation module.
- * 
+ *
  * @generated
  */
 public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * The name of the module.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String MODULE_FILE_NAME = "/org/eclipse/modisco/java/discoverer/benchmark/template/html/htmlReport"; //$NON-NLS-1$
 
 	/**
 	 * The name of the templates that are to be generated.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String[] TEMPLATE_NAMES = { "htmlReport" }; //$NON-NLS-1$
@@ -60,7 +60,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	 * retrieval of {@link #getProperties()} and
 	 * {@link #getGenerationListeners()}.
 	 * </p>
-	 * 
+	 *
 	 * @generated
 	 */
 	public HtmlReport() {
@@ -70,7 +70,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param modelURI
 	 *            URI where the model on which this generator will be used is
 	 *            located.
@@ -93,7 +93,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param model
 	 *            We'll iterate over the content of this element to find Objects
 	 *            matching the first parameter of the template we need to call.
@@ -115,7 +115,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 
 	/**
 	 * This can be used to launch the generation from a standalone application.
-	 * 
+	 *
 	 * @param args
 	 *            Arguments of the generation.
 	 * @generated
@@ -127,36 +127,36 @@ public class HtmlReport extends AbstractAcceleoGenerator {
             } else {
                 URI modelURI = URI.createFileURI(args[0]);
                 File folder = new File(args[1]);
-                
+
                 List<String> arguments = new ArrayList<String>();
-                
+
                 /*
                  * Add in this list all the arguments used by the starting point of the generation
                  * If your main template is called on an element of your model and a String, you can
                  * add in "arguments" this "String" attribute.
                  */
-                
+
                 HtmlReport generator = new HtmlReport(modelURI, folder, arguments);
-                
+
                 /*
                  * Add the properties from the launch arguments.
                  * If you want to programmatically add new properties, add them in "propertiesFiles"
                  * You can add the absolute path of a properties files, or even a project relative path.
-                 * If you want to add another "protocol" for your properties files, please override 
+                 * If you want to add another "protocol" for your properties files, please override
                  * "getPropertiesLoaderService(AcceleoService)" in order to return a new property loader.
                  * The behavior of the properties loader service is explained in the Acceleo documentation
                  * (Help -> Help Contents).
                  */
-                 
+
             	//Bug 382359 - Compatibility with Helios
-            	//gdupe> The properties are not used in the generation removing 
+            	//gdupe> The properties are not used in the generation removing
                 // the following lines allow to build against Helios.
                 /*
                 for (int i = 2; i < args.length; i++) {
                     generator.addPropertiesFile(args[i]);
                 }
                 */
-                
+
                 generator.doGenerate(new BasicMonitor());
             }
         } catch (IOException e) {
@@ -166,7 +166,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 
 	/**
 	 * Launches the generation described by this instance.
-	 * 
+	 *
 	 * @param monitor
 	 *            This will be used to display progress information to the user.
 	 * @throws IOException
@@ -201,7 +201,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * If this generator needs to listen to text generation events, listeners
 	 * can be returned from here.
-	 * 
+	 *
 	 * @return List of listeners that are to be notified when text is generated
 	 *         through this launch.
 	 * @generated
@@ -240,7 +240,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	 * <p>
 	 * All three of these default strategies support merging through JMerge.
 	 * </p>
-	 * 
+	 *
 	 * @return The generation strategy that is to be used for generations
 	 *         launched through this launcher.
 	 * @generated
@@ -254,7 +254,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	 * This will be called in order to find and load the module that will be
 	 * launched through this launcher. We expect this name not to contain file
 	 * extension, and the module to be located beside the launcher.
-	 * 
+	 *
 	 * @return The name of the module that is to be launched.
 	 * @generated
 	 */
@@ -276,7 +276,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	 * that needs be returned by a call to {@link #getProperties()} is
 	 * "org.eclipse.acceleo.sample.messages".
 	 * </p>
-	 * 
+	 *
 	 * @return The list of properties file we need to add to the generation
 	 *         context.
 	 * @see java.util.ResourceBundle#getBundle(String)
@@ -290,9 +290,9 @@ public class HtmlReport extends AbstractAcceleoGenerator {
          * to a Java class. For example, if you have a file named "messages.properties" in package "org.eclipse.acceleo.sample",
          * the path that needs be added to this list is "/org/eclipse/acceleo/sample/messages.properties". If you want to change the
          * contentof this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
-         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation of 
+         * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation of
          * this class will revert your modifications.
-         * 
+         *
          * To learn more about Properties Files, have a look at the Acceleo Launcher documentation (Help -> Help Contents).
          */
         return propertiesFiles;
@@ -300,7 +300,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 
 	/**
      * Adds a properties file in the list of properties files.
-     * 
+     *
      * @param propertiesFile
      *            The properties file to add.
      * @since 3.1
@@ -318,7 +318,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
   /**
 	 * This will be used to get the list of templates that are to be launched by
 	 * this launcher.
-	 * 
+	 *
 	 * @return The list of templates to call on the module
 	 *         {@link #getModuleName()}.
 	 * @generated
@@ -331,7 +331,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's package registry with all
 	 * needed EPackages.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated NOT
@@ -352,7 +352,7 @@ public class HtmlReport extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's resource factory registry
 	 * with all needed factories.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated
@@ -366,10 +366,10 @@ public class HtmlReport extends AbstractAcceleoGenerator {
          * of this method, do NOT forget to change the "@generated" tag in the Javadoc of this method to "@generated NOT".
          * Without this new tag, any compilation of the Acceleo module with the main template that has caused the creation
          * of this class will revert your modifications.
-         * 
-         * To learn more about the registration of Resource Factories, have a look at the Acceleo Launcher documentation (Help -> Help Contents). 
-         */ 
-        
+         *
+         * To learn more about the registration of Resource Factories, have a look at the Acceleo Launcher documentation (Help -> Help Contents).
+         */
+
         // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
     }
 

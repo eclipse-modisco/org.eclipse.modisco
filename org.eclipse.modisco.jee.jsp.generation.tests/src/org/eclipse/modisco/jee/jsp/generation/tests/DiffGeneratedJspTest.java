@@ -68,7 +68,7 @@ public class DiffGeneratedJspTest {
 					".jsp")); //$NON-NLS-1$
 		}
 	}
-	
+
 	/** Bug 368698 - GenerateJsp.emtl is missing in org.eclipse.modisco.jee.jsp.generation */
 	@Test
 	public void testEmtlFilePresent() {

@@ -31,7 +31,7 @@ public class TreeRootAction extends GroupAction {
     public void run(double frac) {
         TupleSet focus = this.m_vis.getGroup(Visualization.FOCUS_ITEMS);
         if ( focus==null || focus.getTupleCount() == 0 ) return;
-        
+
         Graph g = (Graph)this.m_vis.getGroup(this.m_group);
         Node f = null;
         Iterator<?> tuples = focus.tuples();

@@ -30,7 +30,7 @@ public final class PathUtils {
 
 	/**
 	 * Get a file from a Workspace project or an installed bundle.
-	 * 
+	 *
 	 * @param resourcePath
 	 *            path to the file. The first segment is the project name or
 	 *            bundle id.

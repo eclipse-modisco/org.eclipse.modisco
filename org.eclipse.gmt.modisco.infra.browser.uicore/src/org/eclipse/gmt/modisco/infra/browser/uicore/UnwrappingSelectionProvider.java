@@ -33,16 +33,16 @@ import org.eclipse.jface.viewers.StructuredSelection;
  * {@link org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider}, from which this class is
  * derived).
  * </ul>
- * 
+ *
  * <p>
  * You can use this {@link ISelectionProvider selection provider} to register a context menu on a
  * viewer created using the {@link CustomizableModelContentProvider}, so that the menu actions will
  * get the Ecore versions of the elements as the selection:
- * 
+ *
  * <pre>
  * getSite().registerContextMenu(MENU_ID, contextMenu, new UnwrappingSelectionProvider(treeViewer));
  * </pre>
- * 
+ *
  * @deprecated Will be replaced by EMF Facet,
  *             cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=470715
  */
@@ -63,7 +63,7 @@ public class UnwrappingSelectionProvider extends
 
 	/**
 	 * Replace proxy objects by their underlying Ecore objects in the given selection
-	 * 
+	 *
 	 * @return the unwrapped version of the selection
 	 */
 	public static ISelection unwrapSelection(final ISelection selection) {

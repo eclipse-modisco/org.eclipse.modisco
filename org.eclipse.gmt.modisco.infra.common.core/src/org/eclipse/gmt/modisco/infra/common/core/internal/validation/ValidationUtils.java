@@ -39,7 +39,7 @@ public final class ValidationUtils {
 	 * <p>
 	 * Puts warning markers on the plugin.xml, build.properties, or directly on
 	 * the project if needed. Replaces previous markers of the same type.
-	 * 
+	 *
 	 * @param project
 	 *            the project in which the element should be registered
 	 * @param extensionToCheck

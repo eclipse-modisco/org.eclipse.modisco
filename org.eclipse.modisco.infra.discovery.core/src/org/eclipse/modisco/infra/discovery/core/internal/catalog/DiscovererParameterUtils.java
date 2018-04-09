@@ -50,7 +50,7 @@ public final class DiscovererParameterUtils {
 	/**
 	 * This method computes the parameters description for one discoverer
 	 * implementation
-	 * 
+	 *
 	 */
 	public void computeParameters(final DiscovererDescription discovererDescription) {
 		// (discoverer parameter ID, (class field or method, Parameter

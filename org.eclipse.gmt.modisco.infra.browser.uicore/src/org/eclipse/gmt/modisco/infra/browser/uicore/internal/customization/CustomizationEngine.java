@@ -548,7 +548,7 @@ public class CustomizationEngine {
 
 	/**
 	 * Add the given type view to the engine type views
-	 * 
+	 *
 	 * @param eClass
 	 *            the metaclass corresponding to the typeView
 	 * @param typeView
@@ -568,7 +568,7 @@ public class CustomizationEngine {
 		 * for each superclass with "applies to sub-instances" set to true, apply the superclass
 		 * features to this subclass (from most specific to most generic, to respect the order of
 		 * evaluation)
-		 * 
+		 *
 		 * So we have to reverse the order of super type hierarchy
 		 */
 		engineElementView.addFeatures(typeView);
@@ -855,14 +855,14 @@ public class CustomizationEngine {
 
 	/**
 	 * Get a customized icon for a type.
-	 * 
+	 *
 	 * @param context
 	 *            the context that is passed to condition queries (may be <code>null</code>)
 	 * @param eClass
 	 *            the {@link EClass} for which to get an icon (may not be the same as
 	 *            <code>context.eClass()</code>: can be a {@link Facet})
 	 * @return the customized icon for the given {@link EClass}
-	 * 
+	 *
 	 * @deprecated replaced by instanceIcon, metaclassIcon, stickerIcon (see Bug 328473)
 	 * */
 	@Deprecated
@@ -873,7 +873,7 @@ public class CustomizationEngine {
 
 	/**
 	 * Get a customized icon for an instance.
-	 * 
+	 *
 	 * @param context
 	 *            the context that is passed to condition queries (may be <code>null</code>)
 	 * @param eClass

@@ -29,7 +29,7 @@ public interface IDiscoveryManager {
 	/**
 	 * This method creates a new {@link IDiscoverer} from the
 	 * {@link DiscovererDescription} with the given <code>id</code>.
-	 * 
+	 *
 	 * @return the created {@link IDiscoverer} or <code>null</code> if no
 	 *         {@link DiscovererDescription} was registered with the given
 	 *         <code>id</code>.
@@ -39,7 +39,7 @@ public interface IDiscoveryManager {
 	/**
 	 * This method creates a new {@link IDiscoverer} from the given
 	 * {@link DiscovererDescription}.
-	 * 
+	 *
 	 * @return the created {@link IDiscoverer} or <code>null</code> if it
 	 *         couldn't be created..
 	 */
@@ -50,7 +50,7 @@ public interface IDiscoveryManager {
 	 * accept the "source" parameter value as a discovery source. This method
 	 * basically relies on the
 	 * {@link #isApplicable(DiscovererDescription, Object)} service.
-	 * 
+	 *
 	 * The resulting collection is unmodifiable.
 	 */
 	Collection<DiscovererDescription> getApplicableDiscoverers(Object source);
@@ -65,7 +65,7 @@ public interface IDiscoveryManager {
 	/**
 	 * This method returns all existing instances of registered
 	 * {@link DiscovererDescription}s.
-	 * 
+	 *
 	 * The returned collection is unmodifiable.
 	 */
 	Collection<DiscovererDescription> getDiscoverers();
@@ -91,7 +91,7 @@ public interface IDiscoveryManager {
 	/**
 	 * Retrieve a parameter value for a {@link Discoverer<?>} using the Java
 	 * reflective API.
-	 * 
+	 *
 	 * @param parameter
 	 *            the parameter whose value to get
 	 * @param discoverer
@@ -105,7 +105,7 @@ public interface IDiscoveryManager {
 	/**
 	 * Set a parameter value for a {@link Discoverer<?>} using the Java
 	 * reflective API.
-	 * 
+	 *
 	 * @param parameter
 	 *            the parameter to set
 	 * @param discoverer
@@ -123,7 +123,7 @@ public interface IDiscoveryManager {
 	 * <p>
 	 * This method should be called from a {@link Job}, in order to avoid
 	 * freezing the UI and provide progress and cancellation.
-	 * 
+	 *
 	 * @param discoverer
 	 *            the discoverer to launch
 	 * @param source
@@ -142,7 +142,7 @@ public interface IDiscoveryManager {
 
 	/**
 	 * Whether an initial value is specified for the given parameter
-	 * 
+	 *
 	 * @param parameter
 	 *            the parameter
 	 * @param discoverer
@@ -155,7 +155,7 @@ public interface IDiscoveryManager {
 	/**
 	 * Returns the initial value for the given parameter, or <code>null</code>
 	 * if none.
-	 * 
+	 *
 	 * @param parameter
 	 *            the parameter
 	 * @param discoverer

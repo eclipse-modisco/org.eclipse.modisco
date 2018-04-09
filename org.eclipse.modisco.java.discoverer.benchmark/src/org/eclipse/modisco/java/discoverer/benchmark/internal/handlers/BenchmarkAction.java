@@ -102,11 +102,11 @@ public class BenchmarkAction extends AbstractHandler {
 				@Override
 				protected IStatus run(final IProgressMonitor monitor) {
 					try {
-						
+
 						IProject project = ResourcesPlugin.getWorkspace().getRoot()
 								.getProject("javaBenchmark_" + System.currentTimeMillis()); //$NON-NLS-1$
 						try {
-							// don't use the Job's monitor because it prevents 
+							// don't use the Job's monitor because it prevents
 							// progress display afterwards
 							project.create(new NullProgressMonitor());
 							project.open(new NullProgressMonitor());
@@ -114,7 +114,7 @@ public class BenchmarkAction extends AbstractHandler {
 							throw new CoreException(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
 									"Couldn't create a project for benchmark results", e)); //$NON-NLS-1$
 						}
-						
+
 						ResourceSet resourceSet = new ResourceSetImpl();
 						Resource resource = resourceSet.createResource(URI
 								.createURI("memory:/javaBenchmark/" //$NON-NLS-1$

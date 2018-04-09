@@ -5,9 +5,9 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
- * 
+ *
  *    Nicolas Guyomar (Mia-Software) - initial API and implementation
  * *******************************************************************************
  *
@@ -22,7 +22,7 @@ public interface SourceStrategy {
 
 	/**
 	 * Return the ASTNodeSourceRegion corresponding to the EObject in parameter
-	 * 
+	 *
 	 * @param eObject
 	 *            the EObject from which we want the ASTNodeSourceRegion
 	 * @return the ASTNodeSourceRegion
@@ -31,7 +31,7 @@ public interface SourceStrategy {
 
 	/**
 	 * Return whether or not the source strategy is applicable to the EOBject
-	 * 
+	 *
 	 * @param eObject
 	 *            the EObject
 	 * @return boolean whether or not the source strategy is applicable to the

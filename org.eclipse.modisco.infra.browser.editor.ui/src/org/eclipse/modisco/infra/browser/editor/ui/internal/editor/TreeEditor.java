@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD   (ea3b6d Switching to version 1.1.1)
  * Copyright (c) 2014, 2016 Mia-Software, and Soft-Maint.
+=======
+ * Copyright (c) 2014, 2015 Mia-Software, and Soft-Maint.
+>>>>>>> BRANCH (6dd8f8 Bug 533168 - (releng) OutOfMemory during quality postprocess)
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -147,11 +151,20 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 			 */
 			this.resourceSet = new ResourceSetImpl();
 		}
+<<<<<<< HEAD   (ea3b6d Switching to version 1.1.1)
 		this.editingDomain = initEditingDomain();
+=======
+		final AdapterFactory adapterFactory = new AdapterFactoryImpl();
+		final CommandStack commandStack = new BasicCommandStack();
+		this.editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+				commandStack, this.resourceSet);
+
+>>>>>>> BRANCH (6dd8f8 Bug 533168 - (releng) OutOfMemory during quality postprocess)
 		this.facetSetShortcuts = TreeEditorShortcutUtils.getFacetSetShortcuts(this.resourceSet);
 		this.customShortcuts = TreeEditorShortcutUtils.getCustomShortcuts(this.resourceSet);
 	}
 
+<<<<<<< HEAD   (ea3b6d Switching to version 1.1.1)
 	private final EditingDomain initEditingDomain() {
 		final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -164,6 +177,8 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		return new AdapterFactoryEditingDomain(adapterFactory,
 				commandStack, this.resourceSet);
 	}
+=======
+>>>>>>> BRANCH (6dd8f8 Bug 533168 - (releng) OutOfMemory during quality postprocess)
 
 	private void createPopupMenu() {
 		final MenuManager menuMgr = new MenuManager("#PopupMenu"); //$NON-NLS-1$
@@ -213,6 +228,10 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 				});
 		this.tree.setContentProvider(contentProvider);
 		this.tree.setLabelProvider(labelProvider);
+<<<<<<< HEAD   (ea3b6d Switching to version 1.1.1)
+=======
+
+>>>>>>> BRANCH (6dd8f8 Bug 533168 - (releng) OutOfMemory during quality postprocess)
 		final List<EObject> contents = new ArrayList<EObject>();
 		if (this.resource == null) {
 			for (final Resource res : this.resourceSet.getResources()) {
@@ -224,8 +243,13 @@ public class TreeEditor extends EditorPart implements IEditingDomainProvider,
 		TreeEditorDragAndDropUtils.addDragAndDropSupport(this.tree,
 				this.editingDomain);
 		this.tree.setInput(contents);
+<<<<<<< HEAD   (ea3b6d Switching to version 1.1.1)
 		this.selectionProvider = new TreeEditorSelectionProvider(this.tree);
 		getSite().setSelectionProvider(this.selectionProvider);
+=======
+
+		getSite().setSelectionProvider(this.tree);
+>>>>>>> BRANCH (6dd8f8 Bug 533168 - (releng) OutOfMemory during quality postprocess)
 		this.facetMgrListener = new IFacetManagerListener() {
 			public void facetManagerChanged() {
 				TreeEditor.this.refresh();

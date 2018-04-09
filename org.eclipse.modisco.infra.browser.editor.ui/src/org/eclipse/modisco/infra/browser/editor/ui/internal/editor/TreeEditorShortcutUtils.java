@@ -1,13 +1,13 @@
-/** 
+/**
  * Copyright (c) 2015 Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
- *    Grégoire Dupé (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
+ *    Grï¿½goire Dupï¿½ (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
  */
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
@@ -50,7 +50,7 @@ public final class TreeEditorShortcutUtils {
 		return shortcuts;
 	}
 
-	private static void addShortcut(final ResourceSet resourceSet, 
+	private static void addShortcut(final ResourceSet resourceSet,
 			final List<ICustomShortcut> shortcuts, final String uri,
 			final String menuItemLabel) {
 		try {

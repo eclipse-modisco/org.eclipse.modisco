@@ -31,7 +31,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.resource.MoDiscoResour
  * The values of &lt;sub-protocol&gt; are defined through the
  * <tt>org.eclipse.gmt.modisco.common.core.protocolext</tt> extension point.
  * </ul>
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
  */
 public class ModiscoResourceFactoryImpl extends XMIResourceFactoryImpl {
@@ -45,7 +45,7 @@ public class ModiscoResourceFactoryImpl extends XMIResourceFactoryImpl {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see XMIResourceFactoryImpl#createResource(URI)
 	 */
 	@Override
@@ -53,7 +53,7 @@ public class ModiscoResourceFactoryImpl extends XMIResourceFactoryImpl {
 		Resource xmiResource = new XMIResourceImpl(uri) {
 			/*
 			 * (non-Javadoc)
-			 * 
+			 *
 			 * @see
 			 * org.eclipse.emf.ecore.resource.impl.ResourceImpl#getURIConverter
 			 * ()

@@ -16,27 +16,27 @@ import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 
 public interface DiscovererParameterDisplay {
 	/**
-	 * 
+	 *
 	 * @return the value associated to this discoverer parameter.
 	 */
 	public Object getValue();
 
 	/**
 	 * To initialize the value of the discoverer parameter.
-	 * 
+	 *
 	 * @param value
 	 */
 	public void setValue(Object value);
 
 	/**
-	 * 
+	 *
 	 * @return the associated discoverer parameter description
 	 */
 	public DiscovererParameter getParameterDescription();
 
 	/**
 	 * Initialize the parameter with an initial value.
-	 * 
+	 *
 	 * @param source
 	 *            the source of the discovery
 	 */

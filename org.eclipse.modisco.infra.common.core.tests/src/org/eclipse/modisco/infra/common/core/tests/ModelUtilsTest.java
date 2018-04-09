@@ -30,16 +30,16 @@ public class ModelUtilsTest {
 	public void testComputeReferencedEPackages() {
 		EPackage facetPackage = EPackage.Registry.INSTANCE.getEPackage(FacetPackage.eNS_URI);
 		Assert.assertNotNull(facetPackage);
-		
+
 		EPackage queryPackage = EPackage.Registry.INSTANCE.getEPackage(QueryPackage.eNS_URI);
 		Assert.assertNotNull(queryPackage);
-		
+
 		EPackage ecorePackage = EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Assert.assertNotNull(ecorePackage);
-		
+
 		// Facet metamodel has references to Query and Ecore metamodels
 		Set<EPackage> references = ModelUtils.computeReferencedPackages(facetPackage);
-		
+
 		Assert.assertTrue("References from Facet metamodel to Query metamodel were not computed", references.contains(queryPackage)); //$NON-NLS-1$
 		Assert.assertTrue("References from Facet metamodel to Ecore metamodel were not computed", references.contains(ecorePackage)); //$NON-NLS-1$
 	}

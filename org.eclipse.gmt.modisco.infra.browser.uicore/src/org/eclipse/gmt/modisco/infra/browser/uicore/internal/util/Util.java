@@ -28,7 +28,7 @@ public final class Util {
 	/**
 	 * Build a valid Windows filename from the given name (replaces invalid
 	 * characters by underscores)
-	 * 
+	 *
 	 * @param name
 	 *            a non-empty name that can contain illegal file name characters
 	 * @return a valid Windows filename

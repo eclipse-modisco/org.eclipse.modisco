@@ -30,7 +30,7 @@ import org.osgi.framework.Bundle;
 /**
  * This class represents a reference to a file pointed by a model query
  * attribute.
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
  * @deprecated replaced by EMF Facet, cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470578
  */
@@ -45,7 +45,7 @@ public final class ReferedFileHandler {
 	 * This method returns an instance of ReferedFileHandler. The instance of
 	 * ReferedFileHandler can be used to check the existence of a file and get
 	 * its input stream.
-	 * 
+	 *
 	 * @param containerName
 	 *            The name of the containing plug-in or project. If
 	 *            containerName is null, the query model element container
@@ -96,7 +96,7 @@ public final class ReferedFileHandler {
 
 	/**
 	 * This method returns true is the file exists.
-	 * 
+	 *
 	 * @return Returns true is the file exists.
 	 */
 	public boolean exists() {
@@ -117,7 +117,7 @@ public final class ReferedFileHandler {
 
 	/**
 	 * Return a input stream to the corresponding file
-	 * 
+	 *
 	 * @return an input stream
 	 * @throws Exception
 	 *             If the file is not readable
@@ -140,7 +140,7 @@ public final class ReferedFileHandler {
 	/**
 	 * If the referred file is a workspace file, this method return return an
 	 * IFile instance representing the referred file
-	 * 
+	 *
 	 * @return an IFile instance representing the referred file, null if this
 	 *         referred file is not a workspace file.
 	 */

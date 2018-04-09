@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  *     Fabien Giquel (Mia-Software) - initial API and implementation
@@ -19,7 +19,7 @@ import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFr
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.JavaReaderEMFStat;
 
 public class JavaDiscovererIncrementalEMF extends DiscoverJavaModelFromJavaProjectEMFStat {
-	
+
 	@Override
 	protected JavaReaderEMFStat getJavaReader(final java.util.Map<String, Object> elementOptions) {
 		JavaReaderEMFStat javaReader = new JavaReaderEMFStat(getEFactory(), true);

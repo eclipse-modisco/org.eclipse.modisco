@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2015 Soft-Maint.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 442800 - API to open new MoDisco Browser
  */
@@ -16,13 +16,13 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IPersistableElement;
 
 public class ResourceSetEditorInput implements IEditorInput {
-	
+
 	private final ResourceSet resourceSet;
 
 	public ResourceSetEditorInput(final ResourceSet resourceSet) {
 		this.resourceSet = resourceSet;
 	}
-	
+
 	public ResourceSet getResourceSet() {
 		return this.resourceSet;
 	}
@@ -38,12 +38,12 @@ public class ResourceSetEditorInput implements IEditorInput {
 		}
 		return result;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return this.resourceSet.hashCode();
 	}
-	
+
 	public Object getAdapter(@SuppressWarnings("rawtypes") final Class adapter) {
 		// @SuppressWarnings("rawtypes") : imposed by the implemented interface.
 		return null;

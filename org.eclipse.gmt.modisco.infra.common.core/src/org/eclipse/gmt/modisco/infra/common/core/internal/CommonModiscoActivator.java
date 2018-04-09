@@ -16,9 +16,9 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
- * 
+ *
  * @author Gabriel Barbier
- * 
+ *
  */
 public class CommonModiscoActivator extends Plugin {
 
@@ -30,7 +30,7 @@ public class CommonModiscoActivator extends Plugin {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext
 	 * )
@@ -43,7 +43,7 @@ public class CommonModiscoActivator extends Plugin {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext
 	 * )
@@ -56,7 +56,7 @@ public class CommonModiscoActivator extends Plugin {
 
 	/**
 	 * Returns the shared instance
-	 * 
+	 *
 	 * @return the shared instance
 	 */
 	public static CommonModiscoActivator getDefault() {

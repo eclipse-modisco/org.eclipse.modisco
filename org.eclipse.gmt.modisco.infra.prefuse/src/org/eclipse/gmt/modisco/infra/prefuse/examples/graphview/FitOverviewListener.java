@@ -29,7 +29,7 @@ public class FitOverviewListener implements ItemBoundsListener {
     public void itemBoundsChanged(Display d) {
         d.getItemBounds(this.m_temp);
         GraphicsLib.expand(this.m_temp, 25/d.getScale());
-        
+
         double dd = this.m_d/d.getScale();
         double xd = Math.abs(this.m_temp.getMinX()-this.m_bounds.getMinX());
         double yd = Math.abs(this.m_temp.getMinY()-this.m_bounds.getMinY());

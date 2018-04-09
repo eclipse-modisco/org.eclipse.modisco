@@ -79,11 +79,11 @@ public class ContributionItemForMoDiscoMenu extends ContributionItem implements
 					/*
 					 * Items and sub-menus will only be available if they match
 					 * selected resources.
-					 * 
+					 *
 					 * First, retrieve selected resource
-					 * 
+					 *
 					 * Second, check if available discoverers handle it
-					 * 
+					 *
 					 * Third, if discoverers list is not empty, we will create a
 					 * menu item for each. For each menu item, we have to link
 					 * menu action to menu event like usual menu.

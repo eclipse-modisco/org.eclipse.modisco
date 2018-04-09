@@ -54,7 +54,7 @@ import org.junit.Test;
 
 /**
  * @author Gregoire DUPE
- * 
+ *
  */
 @SuppressWarnings({ "boxing", "nls" })
 public class Tests {

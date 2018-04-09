@@ -5,9 +5,9 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
- * 
+ *
  *    Nicolas Guyomar (Mia-Software) - initial API and implementation
  * *******************************************************************************
  *
@@ -30,7 +30,7 @@ import org.eclipse.modisco.kdm.source.extension.ui.utils.Utils;
 /**
  * A new instance of this class is added to every eObject we want to synchronize
  * with its source code
- * 
+ *
  */
 public class SourceAccessAdapter extends AdapterImpl {
 
@@ -59,7 +59,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 
 	/**
 	 * Return the {@link SourceStrategy}
-	 * 
+	 *
 	 * @return the {@link SourceStrategy}
 	 */
 	public SourceStrategy getStrategySource() {
@@ -71,7 +71,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 
 	/**
 	 * Return the {@link RevealingStrategy}
-	 * 
+	 *
 	 * @return the {@link RevealingStrategy}
 	 */
 	public RevealingStrategy getStrategyRevealing() {
@@ -83,7 +83,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 
 	/**
 	 * Call the {@link SourceStrategy} to get the {@link ASTNodeSourceRegion}
-	 * 
+	 *
 	 * @param eObject
 	 * @return
 	 */
@@ -103,7 +103,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 
 	/**
 	 * Set the {@link SourceRegion}
-	 * 
+	 *
 	 * @param sourceRegion
 	 */
 	public void setSourceRegion(final SourceRegion sourceRegion) {
@@ -113,7 +113,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 	/**
 	 * Call the {@link RevealingStrategy} to reveal the selected element in its
 	 * opened editor
-	 * 
+	 *
 	 * @param sourceRegion
 	 * @param eObject
 	 */

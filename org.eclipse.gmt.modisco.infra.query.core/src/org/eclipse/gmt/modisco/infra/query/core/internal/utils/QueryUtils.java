@@ -46,7 +46,7 @@ public final class QueryUtils {
 		}
 		return type;
 	}
-	
+
 	public static String qualifiedObjectType(final String type) {
 		if ("byte".equals(type)) { //$NON-NLS-1$
 			return "java.lang.Byte"; //$NON-NLS-1$

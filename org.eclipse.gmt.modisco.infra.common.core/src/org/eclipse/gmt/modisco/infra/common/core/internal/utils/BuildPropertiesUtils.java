@@ -38,7 +38,7 @@ public final class BuildPropertiesUtils {
 
 	/**
 	 * Get the build model of an Eclipse plug-in
-	 * 
+	 *
 	 * @param model
 	 *            a plug-in's PDE model
 	 * @return a build model or <code>null</code> if the build.properties file

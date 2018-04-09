@@ -30,7 +30,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 /**
  * This wizard proposes to create a basic new MoDisco project.
- * 
+ *
  */
 public class NewProjectWizard extends Wizard implements INewWizard {
 

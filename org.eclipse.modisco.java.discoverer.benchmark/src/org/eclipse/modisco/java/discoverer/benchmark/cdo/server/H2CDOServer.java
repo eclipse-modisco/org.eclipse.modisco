@@ -4,12 +4,12 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software) - Bug 335003 - [Discoverer] : Existing Discoverers Refactoring based on new framework
  *     Stephane Rousseau (Mia-Software) - Bug 339695 - H2 support in MoDisco Java discoverer benchmarks
- *     Nicolas Bros (Mia-Software) - Bug 342272 - [Junit] timeout in Java benchmark : CDO server doesn't start 
+ *     Nicolas Bros (Mia-Software) - Bug 342272 - [Junit] timeout in Java benchmark : CDO server doesn't start
  */
 package org.eclipse.modisco.java.discoverer.benchmark.cdo.server;
 
@@ -61,7 +61,7 @@ public class H2CDOServer extends AbstractCDOServer {
 		props.put(IRepository.Props.SUPPORTING_AUDITS, Boolean.TRUE.toString());
 		// props.put(IRepository.Props.VERIFYING_REVISIONS, Boolean.FALSE
 		// .toString());
-		// TODO Bug 329887 
+		// TODO Bug 329887
 		// props.put(IRepository.Props.CURRENT_LRU_CAPACITY, Integer
 		// .toString(CURRENT_LRU_CAPACITY));
 		// props.put(IRepository.Props.REVISED_LRU_CAPACITY, Integer

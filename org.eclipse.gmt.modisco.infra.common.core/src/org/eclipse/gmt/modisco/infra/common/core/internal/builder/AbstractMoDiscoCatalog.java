@@ -253,7 +253,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method returns the name of the given rootObject. This method must be
 	 * implemented by {@link AbstractMoDiscoCatalog} sub classes.
-	 * 
+	 *
 	 * @param rootObject
 	 *            a resource root object
 	 * @return rootObject name
@@ -264,7 +264,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	 * This method returns the id of the extension point that will be used to
 	 * declare installed models which must be stored in the catalog. This method
 	 * must be implemented by {@link AbstractMoDiscoCatalog} sub classes.
-	 * 
+	 *
 	 * @return the extension point id
 	 */
 	protected abstract String getRegistryExtensionPoint();
@@ -272,7 +272,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * Contains the procedure to open a resource, check it, and add it into the
 	 * specific maps.
-	 * 
+	 *
 	 * @param uri
 	 *            the resource URI to open
 	 * @param file
@@ -465,7 +465,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	 * (modisco:/&lt;subprotocol&gt;/), that will be used to access the
 	 * resources stored by the {@link AbstractMoDiscoCatalog} sub class. This
 	 * method must be implemented by {@link AbstractMoDiscoCatalog} sub classes.
-	 * 
+	 *
 	 * @return the string representing the modisco sub protocol
 	 */
 	protected abstract String getMoDiscoSubProtocol();
@@ -479,7 +479,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This methods returns the root objects of all the resources contained in
 	 * the catalog.
-	 * 
+	 *
 	 * @return root objects
 	 */
 	public final Collection<EObject> getAllRootObjects() {
@@ -496,7 +496,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method returns the root object of the resource having for name the
 	 * "name" parameter value.
-	 * 
+	 *
 	 * @param name
 	 *            the name of a resource contained in the catalog
 	 * @return a root object
@@ -535,14 +535,14 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method must no be used outside this class.
-	 * 
+	 *
 	 * @param declarationFile
 	 * @param pathName
 	 */
 	void removeWSFile(final IFile declarationFile, final String pathName) {
 		if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
 			System.out.println(this.getClass().getSimpleName()
-					+ ".removeWSFile(): file=" + declarationFile); //$NON-NLS-1$ 
+					+ ".removeWSFile(): file=" + declarationFile); //$NON-NLS-1$
 		}
 		URI rootObjectURI = URI.createPlatformResourceURI(pathName, false);
 		EObject oldRootObject = this.concreteUriToEObjectMap.get(rootObjectURI.toString());
@@ -553,14 +553,14 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 					&& !this.nameToWorkspaceEObjectMap.containsKey(rootObjectName)) {
 				System.out
 						.println(this.getClass().getSimpleName()
-								+ ".removeWSFile(): rootObject not contained in this.nameToWorkspaceEObjectMap"); //$NON-NLS-1$ 
+								+ ".removeWSFile(): rootObject not contained in this.nameToWorkspaceEObjectMap"); //$NON-NLS-1$
 			}
 			this.nameToWorkspaceEObjectMap.remove(rootObjectName);
 			this.concreteUriToEObjectMap.remove(rootObjectURI.toString());
 			this.nameToConcreteUriMap.remove(rootObjectName);
 			if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
 				System.out.println(this.getClass().getSimpleName()
-						+ ".removeWSFiles: oldRootObject=" + oldRootObject); //$NON-NLS-1$ 
+						+ ".removeWSFiles: oldRootObject=" + oldRootObject); //$NON-NLS-1$
 			}
 			Resource oldResource = oldRootObject.eResource();
 			if (oldResource != null) {
@@ -575,7 +575,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 						&& !this.nameToWorkspaceEObjectMap.containsKey(rootObjectName)) {
 					System.out
 							.println(this.getClass().getSimpleName()
-									+ ".removeWSFile(): replacing the removed ws root object by the installed version."); //$NON-NLS-1$ 
+									+ ".removeWSFile(): replacing the removed ws root object by the installed version."); //$NON-NLS-1$
 				}
 				EObject modiscoResourceRoot = copyToMoDiscoResource(installedVersion,
 						rootObjectName);
@@ -605,7 +605,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		} else {
 			if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
 				System.out.println(this.getClass().getSimpleName()
-						+ ".removeWSFiles: oldRootObject=null"); //$NON-NLS-1$ 
+						+ ".removeWSFiles: oldRootObject=null"); //$NON-NLS-1$
 			}
 		}
 		save();
@@ -624,7 +624,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	 * {@link #nameToConcreteUriMap}. The URI is reloaded from the extension
 	 * registry, because it was lost when a workspace version replaced the
 	 * installed version.
-	 * 
+	 *
 	 * @param modiscoResourceRoot
 	 */
 	private void restoreInstalledURI(final String rootObjectName, final EObject modiscoResourceRoot) {
@@ -669,7 +669,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 					for (IFile declarationFile : pathNames.keySet()) {
 						if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
 							System.out
-									.println("executing remove ws files: " + this + "file=" + declarationFile); //$NON-NLS-1$ //$NON-NLS-2$ 
+									.println("executing remove ws files: " + this + "file=" + declarationFile); //$NON-NLS-1$ //$NON-NLS-2$
 						}
 						removeWSFile(declarationFile, pathNames.get(declarationFile));
 					}
@@ -677,7 +677,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			}
 		};
 		if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
-			System.out.println("scheduleRemoveWSFiles: " + action); //$NON-NLS-1$ 
+			System.out.println("scheduleRemoveWSFiles: " + action); //$NON-NLS-1$
 		}
 		CatalogJob.getInstance().addAction(action);
 	}
@@ -714,7 +714,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method returns the nsURI of a given rootObject. This method must be
 	 * implemented by {@link AbstractMoDiscoCatalog} sub classes.
-	 * 
+	 *
 	 * @param rootObject
 	 *            a root eObject
 	 * @return a nsURI
@@ -736,7 +736,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		}
 
 		if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
-			System.out.println("internalAddWSFile: file=" + declarationFile); //$NON-NLS-1$ 
+			System.out.println("internalAddWSFile: file=" + declarationFile); //$NON-NLS-1$
 		}
 		EObject rootEObject = null;
 		if (declarationFile.exists()
@@ -777,7 +777,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is used by builders to update resources in the catalog.
-	 * 
+	 *
 	 * @param declarationFile
 	 *            the EMF resource file
 	 * @return the root object of the resource
@@ -883,7 +883,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method returns the URI of the file containing the root object with
 	 * the given name.
-	 * 
+	 *
 	 * @param name
 	 *            a root object name
 	 * @return the URI of a file
@@ -912,7 +912,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method is used to add a listener for catalog changes. This method is
 	 * called by the views presenting the catalog contents
-	 * 
+	 *
 	 * @param modiscoCatalogChangeListener
 	 *            a listener
 	 */
@@ -929,7 +929,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method is used to remove a catalog change listener. This method is
 	 * called by the views presenting the catalog contents
-	 * 
+	 *
 	 * @param modiscoCatalogChangeListener
 	 *            listener to remove
 	 */
@@ -943,7 +943,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is called by builders to clean the catalog contents.
-	 * 
+	 *
 	 * @param project
 	 *            project to clean
 	 */
@@ -1056,7 +1056,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * This method returns the installed bundle containing the resource file
 	 * from which the eObject parameter has been created
-	 * 
+	 *
 	 * @param rootObject
 	 *            an eObject (must be a resource root)
 	 * @return the installed bundle containing eObject
@@ -1131,7 +1131,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	public synchronized void revalidateAll(final IProject project) {
 		if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
-			System.out.println("revalidateAll: project=" + project); //$NON-NLS-1$ 
+			System.out.println("revalidateAll: project=" + project); //$NON-NLS-1$
 		}
 		for (String name : getNameToWorkspaceEObjectMap().keySet()) {
 			URI uri = this.nameToConcreteUriMap.get(name);
@@ -1193,7 +1193,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * Schedules the given {@link Runnable} to be executed when the catalog has
 	 * finished building (waits until the build jobs are all finished).
-	 * 
+	 *
 	 * @param runnable
 	 *            the runnable to be run when the catalog has finished building
 	 */
@@ -1231,7 +1231,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is used by builders to update resources in the catalog.
-	 * 
+	 *
 	 * @param declarationFile
 	 *            the EMF resource file
 	 * @return the root object of the resource
@@ -1250,7 +1250,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is used by builders to add resources into the catalog.
-	 * 
+	 *
 	 * @param declarationFile
 	 *            the EMF resource file
 	 * @return the root object of the resource
@@ -1268,7 +1268,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is used by builders to remove resources from the catalog.
-	 * 
+	 *
 	 * @param declarationFile
 	 *            the EMF resource file
 	 * @deprecated This method has been replaced by
@@ -1284,7 +1284,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	/**
 	 * This method is used by builders to update resources in the catalog.
-	 * 
+	 *
 	 * @param declarationFile
 	 *            the EMF resource file
 	 * @param update

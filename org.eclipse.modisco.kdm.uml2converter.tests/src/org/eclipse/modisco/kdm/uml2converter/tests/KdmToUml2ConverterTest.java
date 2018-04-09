@@ -231,7 +231,7 @@ public class KdmToUml2ConverterTest {
 		Assert.assertEquals(1, out.length);
 		Resource output = out[0];
 		Assert.assertNotNull(output);
-		
+
 		output.setURI(outputUri);
 		output.save(null);
 

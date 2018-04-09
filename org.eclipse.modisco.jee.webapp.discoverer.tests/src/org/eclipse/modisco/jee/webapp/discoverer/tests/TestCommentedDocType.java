@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - adapted to new discovery framework
@@ -28,7 +28,7 @@ import org.junit.Test;
 /**
  * Test of discovering a WEB.XML model 2.4 The specified file does not contain a
  * declaration of xsd, only the version
- * 
+ *
  */
 public class TestCommentedDocType {
 

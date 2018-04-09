@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2015 Soft-Maint
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
  */
@@ -42,7 +42,7 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 	private final TreeViewer tree;
 	private final IFacetManager facetManager;
 	private final ICustomizationManager customizationMgr;
-	
+
 	private final IFacetManagerListener facetMgrListener = new IFacetManagerListener() {
 		public void facetManagerChanged() {
 			EcoreMetaExplorerComposite.this.facetManagerChanged();
@@ -51,16 +51,16 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 
 	public EcoreMetaExplorerComposite(final Composite parent, final MenuManager menuManager) {
 		super(parent, SWT.NONE);
-		
+
 		setLayout(new GridLayout(1, true));
 
 		final Label label = new Label(this, SWT.NONE);
 		label.setText(Messages.EcoreMetaExplorerComposite_Metas);
-		
+
 		this.tree = new TreeViewer(this);
 		this.tree.getControl().setLayoutData(
 				new GridData(SWT.FILL, SWT.FILL, true, true));
-		
+
 		this.facetManager = IFacetManagerFactory.DEFAULT
 				.getOrCreateDefaultFacetManager(new ResourceSetImpl());
 		this.customizationMgr = ICustomizationManagerFactory.DEFAULT
@@ -88,7 +88,7 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 		this.tree.refresh();
 		this.tree.setExpandedElements(expanededElts);
 	}
-	
+
 	public void changeInput(final Collection<EPackage> ePackages) {
 		if (this.tree != null && !this.tree.getTree().isDisposed()
 				&& !ePackages.equals(this.tree.getInput())) {
@@ -96,11 +96,11 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 			this.tree.refresh();
 		}
 	}
-	
+
 	public ICustomizationManager getCustomizationManager() {
 		return this.customizationMgr;
 	}
-	
+
 	public IFacetManager getFacetManager() {
 		return this.facetManager;
 	}
@@ -122,7 +122,7 @@ public class EcoreMetaExplorerComposite extends Composite implements ISelectionP
 	public void setSelection(final ISelection selection) {
 		this.tree.setSelection(selection);
 	}
-	
+
 	@Override
 	public void dispose() {
 		this.facetManager.addListener(this.facetMgrListener);

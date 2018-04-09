@@ -33,7 +33,7 @@ import org.eclipse.gmt.modisco.java.VariableDeclarationFragment;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class GetAllPotentialTypes implements
 		IJavaModelQuery<VariableDeclaration, EList<Type>> {

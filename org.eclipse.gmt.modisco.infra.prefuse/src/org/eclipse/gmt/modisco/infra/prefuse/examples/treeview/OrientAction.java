@@ -18,7 +18,7 @@ import javax.swing.AbstractAction;
 @SuppressWarnings("serial")
 public class OrientAction extends AbstractAction {
     private int orientation;
-    
+
     private final TreeView treeView;
     public OrientAction(int orientation, TreeView treeViewParameter) {
         this.orientation = orientation;

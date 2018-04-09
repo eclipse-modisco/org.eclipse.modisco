@@ -19,7 +19,7 @@ import org.eclipse.gmt.modisco.java.VariableDeclaration;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class HasFilteredPotentialTypes implements
 		IJavaModelQuery<VariableDeclaration, Boolean> {

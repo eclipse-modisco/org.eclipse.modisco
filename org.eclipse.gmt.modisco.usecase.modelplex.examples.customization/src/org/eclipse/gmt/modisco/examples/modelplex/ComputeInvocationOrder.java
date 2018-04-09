@@ -39,7 +39,7 @@ public class ComputeInvocationOrder implements
 		}
 		return result;
 	}
-	
+
 	private final int computeIndex(final EObject element, final Block rootBlock) {
 		int result = ComputeInvocationOrder.DEFAULT_INDEX;
 		if (element.eContainer() == rootBlock) {

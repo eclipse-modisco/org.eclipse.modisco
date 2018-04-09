@@ -56,7 +56,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @seeorg.eclipse.ui.part.EditorPart#doSave(org.eclipse.core.runtime.
 	 * IProgressMonitor)
 	 */
@@ -67,7 +67,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.part.EditorPart#doSaveAs()
 	 */
 	@Override
@@ -77,7 +77,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.part.EditorPart#init(org.eclipse.ui.IEditorSite,
 	 * org.eclipse.ui.IEditorInput)
 	 */
@@ -114,7 +114,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.part.EditorPart#isDirty()
 	 */
 	@Override
@@ -124,7 +124,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.part.EditorPart#isSaveAsAllowed()
 	 */
 	@Override
@@ -134,7 +134,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.ui.part.WorkbenchPart#createPartControl(org.eclipse.swt.widgets
 	 * .Composite)
@@ -166,7 +166,7 @@ public class MethodCallsModelEditor extends EditorPart {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.ui.part.WorkbenchPart#setFocus()
 	 */
 	@Override
@@ -252,7 +252,7 @@ public class MethodCallsModelEditor extends EditorPart {
 				/*
 				 * Check that parent type is an interface ? if yes, we would
 				 * like to continue the graph with implementations class/methods
-				 * 
+				 *
 				 * A better check could be to test body of the method: no body =
 				 * abstract method All cases are handled, no matter if it is an
 				 * interface or an abstract class !

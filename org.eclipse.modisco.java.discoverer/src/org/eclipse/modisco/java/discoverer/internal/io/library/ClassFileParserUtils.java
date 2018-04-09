@@ -39,7 +39,7 @@ public final class ClassFileParserUtils {
 	/**
 	 * Resolves the Java model element and sorts the targeted
 	 * <code>element</code> in the global <code>BindingManager</code>.
-	 * 
+	 *
 	 * @param element
 	 *            the declared Java entity.
 	 * @param javaElement
@@ -60,7 +60,7 @@ public final class ClassFileParserUtils {
 	 * reference is resolved and the supplied {@code TypeAccess} is completed.
 	 * If unknown, a pending reference is created and sorted in the global
 	 * {@code BindingManager}.
-	 * 
+	 *
 	 * @param element
 	 *            the {@code TypeAccess} associated with this reference
 	 * @param name
@@ -86,7 +86,7 @@ public final class ClassFileParserUtils {
 	/**
 	 * First creation of the Java primitives types which are placed as targets
 	 * in the global {@code BindingManager}.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF {@code factory}
 	 * @param model
@@ -172,7 +172,7 @@ public final class ClassFileParserUtils {
 
 	/**
 	 * Returns the string as it would be in the source code.
-	 * 
+	 *
 	 * @see org.eclipse.jdt.core.dom.StringLiteral#getEscapedValue
 	 */
 	public static String escapeString(final String value) {
@@ -241,7 +241,7 @@ public final class ClassFileParserUtils {
 
 	/**
 	 * Returns the character as it would be in the source code.
-	 * 
+	 *
 	 * @see org.eclipse.jdt.core.dom.CharacterLiteral#getEscapedValue
 	 */
 	public static String escapeCharacter(final char value) {
@@ -306,7 +306,7 @@ public final class ClassFileParserUtils {
 
 	/**
 	 * Indicate if a type signature corresponds to the {@link Object} type.
-	 * 
+	 *
 	 * @param signature
 	 *            the signature
 	 * @return {@code true} if the supplied signature corresponds to the Object

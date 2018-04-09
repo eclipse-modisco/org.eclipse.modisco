@@ -25,5 +25,5 @@ public class IsPlugin implements IJavaModelQuery<TypeDeclaration, Boolean> {
 				"org.eclipse.core.runtime.Plugin"); //$NON-NLS-1$
 		return new Boolean(Utils.isKindOf(context, collectionInterface));
 	}
-	
+
 }

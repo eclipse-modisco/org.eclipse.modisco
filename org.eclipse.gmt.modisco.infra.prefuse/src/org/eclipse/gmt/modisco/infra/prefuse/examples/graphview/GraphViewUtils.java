@@ -23,14 +23,14 @@ import prefuse.util.GraphLib;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 @SuppressWarnings("serial")
 public class GraphViewUtils {
 
 	public static JFrame demo(Graph g, String label) {
 		final GraphView view = new GraphView(g, label);
-		
+
 		// set up menu
 		JMenu dataMenu = new JMenu(Messages.GraphViewUtils_Data);
 		dataMenu.add(new OpenGraphAction(view));

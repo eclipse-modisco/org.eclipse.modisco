@@ -34,11 +34,11 @@ public final class MathUtils {
 		for (int i = 0; i < objects.size(); i++) {
 			final double value = resolver.getValue(objects.get(i));
 			final double delta = Math.abs(value - avg);
-			sum += delta *  delta; 
+			sum += delta *  delta;
 		}
 		return Math.sqrt(sum / objects.size());
 	}
-	
+
 	public interface Resolver<T> {
 		double getValue(T object);
 	}

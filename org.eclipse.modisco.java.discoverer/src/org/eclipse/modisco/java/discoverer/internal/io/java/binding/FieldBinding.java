@@ -20,7 +20,7 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 
 /**
  * <code>Binding</code> representing a field.
- * 
+ *
  * @see IVariableBinding
  */
 public class FieldBinding extends FeatureBinding {

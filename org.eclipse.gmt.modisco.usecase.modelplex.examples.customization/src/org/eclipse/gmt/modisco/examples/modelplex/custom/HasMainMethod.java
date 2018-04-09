@@ -20,7 +20,7 @@ import org.eclipse.gmt.modisco.java.MethodDeclaration;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class HasMainMethod implements IJavaModelQuery<ClassDeclaration, Boolean> {
 

@@ -18,14 +18,14 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 
 /**
  * API to launch a workflow
- * 
+ *
  * @author Nicolas Payneau
  */
 public interface WorkflowExecution {
 
 	/**
 	 * Launch a workflow
-	 * 
+	 *
 	 * @param configuration
 	 *            LaunchConfiguration of MoDiscoWorkflow
 	 * @param mode

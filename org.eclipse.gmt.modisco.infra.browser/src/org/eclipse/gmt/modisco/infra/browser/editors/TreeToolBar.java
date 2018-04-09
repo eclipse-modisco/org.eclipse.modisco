@@ -318,7 +318,7 @@ public final class TreeToolBar {
 			TreeToolBar.this.browser.getTreeViewer().collapseAll();
 		}
 	};
-	
+
 	private final Action actionSynchroniseModelWithSourceCode = new Action(Messages.TreeToolBar_synchronizeSourceCode,
 			IAction.AS_CHECK_BOX) {
 		{
@@ -353,8 +353,8 @@ public final class TreeToolBar {
 		this.actionShowElementIDs.setChecked(this.browser.isShowElementIDs());
 		this.actionShowURI.setChecked(this.browser.isShowURI());
 		this.actionSynchroniseModelWithSourceCode.setChecked(this.browser.isSynchronizeSourceCode());
-		
+
 		this.actionShowEmptyAttributes.setEnabled(this.browser.isShowAttributes());
-		
+
 	}
 }

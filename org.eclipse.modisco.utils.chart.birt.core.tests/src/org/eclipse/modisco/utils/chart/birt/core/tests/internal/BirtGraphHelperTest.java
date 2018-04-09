@@ -1,13 +1,13 @@
 /*******************************************************************************
- * Copyright (c) 2012 INRIA. 
- * All rights reserved. This program and the accompanying materials 
- * are made available under the terms of the Eclipse Public License v1.0 
+ * Copyright (c) 2012 INRIA.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors: 
+ *
+ * Contributors:
  *     Guillaume Doux - INRIA - Initial API and implementation
- *     
+ *
  ******************************************************************************/
 package org.eclipse.modisco.utils.chart.birt.core.tests.internal;
 
@@ -37,9 +37,9 @@ import org.junit.Test;
  */
 public class BirtGraphHelperTest {
 
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private static final int FIVE = 5;
 
@@ -90,7 +90,7 @@ public class BirtGraphHelperTest {
 		}
 		File result = new File(targetFolder.getAbsolutePath() + "/" + fileName + ".png");
 		if (result.exists()) {
-			result.delete();	
+			result.delete();
 		} else {
 			fail("Chart is not generated");
 		}

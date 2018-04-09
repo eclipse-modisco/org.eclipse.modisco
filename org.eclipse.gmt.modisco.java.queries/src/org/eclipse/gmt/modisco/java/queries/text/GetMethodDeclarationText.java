@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Nicolas Guyomar (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software)
@@ -37,7 +37,7 @@ public class GetMethodDeclarationText implements IJavaModelQuery<MethodDeclarati
 				SingleVariableDeclaration var = context.getParameters().get(i);
 				if (var.getType() != null && var.getType().getType() != null) {
 					completeMethodName.append(var.getType().getType().getName())
-							.append(" ").append(var.getName()); //$NON-NLS-1$ 
+							.append(" ").append(var.getName()); //$NON-NLS-1$
 				}
 				if (i != context.getParameters().size() - 1) {
 					completeMethodName.append(", "); //$NON-NLS-1$

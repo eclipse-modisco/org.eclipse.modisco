@@ -20,7 +20,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
 public class TestModelUtils {
 	/**
 	 * Compare two ecore files as models.
-	 * 
+	 *
 	 * @param leftUri
 	 *            the left file uri
 	 * @param rightUri
@@ -48,7 +48,7 @@ public class TestModelUtils {
 
 	/**
 	 * Compare two ecore files as models.
-	 * 
+	 *
 	 * @param leftUri
 	 *            the left file uri
 	 * @param rightUri
@@ -63,7 +63,7 @@ public class TestModelUtils {
 	public static boolean compareModels(final Resource leftModel, final Resource rightModel,
 			final boolean ignoreIds) throws IOException, InterruptedException {
 		throw new UnsupportedOperationException("Must be rewritten with EMF Compare 2.0");
-//		
+//
 //		boolean result = true;
 //
 //		Map<String, Object> options = new HashMap<String, Object>();
@@ -87,7 +87,7 @@ public class TestModelUtils {
 
 //	/**
 //	 * Saves a model as a file to the given uri.
-//	 * 
+//	 *
 //	 * @param root
 //	 *            Root of the objects to be serialized in a file.
 //	 * @param path

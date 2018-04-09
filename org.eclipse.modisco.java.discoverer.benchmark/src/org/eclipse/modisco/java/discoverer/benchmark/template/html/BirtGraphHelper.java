@@ -176,7 +176,7 @@ public final class BirtGraphHelper {
 		PluginSettings ps = PluginSettings.instance();
 		IDeviceRenderer render = ps.getDevice("dv.PNG"); //$NON-NLS-1$
 		render.setProperty(IDeviceRenderer.FILE_IDENTIFIER, new File(targetFolder,
-				"executionTimeByProjectSize.png")); //$NON-NLS-1$ 
+				"executionTimeByProjectSize.png")); //$NON-NLS-1$
 		final int width = 800;
 		final int height = 400;
 		Bounds bounds = BoundsImpl.create(0, 0, width, height);
@@ -189,7 +189,7 @@ public final class BirtGraphHelper {
 	/**
 	 * Computes the linear regression of the given list of points, and returns
 	 * points on the computed line.
-	 * 
+	 *
 	 * @param dataPoints
 	 *            the points to include in the computation
 	 * @return points on the computed approximation line, with the same abscissa

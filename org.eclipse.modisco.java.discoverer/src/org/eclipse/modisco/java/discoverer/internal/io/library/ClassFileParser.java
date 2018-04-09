@@ -75,7 +75,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.library.binding.JavaModel
 /**
  * The main class for populating the Java model from the JDT Java model of
  * {@link IClassFile class files}.
- * 
+ *
  * @see Model
  */
 public class ClassFileParser {
@@ -134,7 +134,7 @@ public class ClassFileParser {
 	/**
 	 * Finds the type variable associated with the currently visited Java
 	 * element (type or method) or with it's parent.
-	 * 
+	 *
 	 * @param name
 	 *            the name of the type variable
 	 * @return the {@code ITypeParameter}
@@ -200,7 +200,7 @@ public class ClassFileParser {
 
 	/**
 	 * Creation of the {@link ClassFile} object
-	 * 
+	 *
 	 * @param classFile
 	 */
 	protected void visitClassFile(final IClassFile classFile) {
@@ -216,7 +216,7 @@ public class ClassFileParser {
 
 	/**
 	 * Visit the members (fields, methods and types) of the {@code type}.
-	 * 
+	 *
 	 * @param type
 	 *            the java model {@code IType}
 	 * @param enclosingType
@@ -279,7 +279,7 @@ public class ClassFileParser {
 
 	/**
 	 * Visit the package of the class file.
-	 * 
+	 *
 	 * @param packageFragment
 	 *            the {@code IPackageFragment}
 	 */
@@ -355,7 +355,7 @@ public class ClassFileParser {
 
 	/**
 	 * Visit the properties of an {@code IType}.
-	 * 
+	 *
 	 * @param type
 	 *            the {@code IType}
 	 * @return the {@link AbstractTypeDeclaration} object corresponding to the
@@ -428,7 +428,7 @@ public class ClassFileParser {
 
 	/**
 	 * Visit a {@code IField}.
-	 * 
+	 *
 	 * @param field
 	 *            the {@code IField}
 	 * @return the {@link FieldDeclaration} object corresponding to the
@@ -520,7 +520,7 @@ public class ClassFileParser {
 
 	/**
 	 * Visit a {@code IMethod}.
-	 * 
+	 *
 	 * @param method
 	 *            the {@code IMethod}
 	 * @return the {@link AbstractMethodDeclaration} object corresponding to the
@@ -913,7 +913,7 @@ public class ClassFileParser {
 	 * </p>
 	 * So, the returned {@code TypeAccess} may or may not have a resolved
 	 * {@link TypeAccess#getType() type}.
-	 * 
+	 *
 	 * @param qualifiedName
 	 *            the signature of the referenced type (eg : [I,
 	 *            Ljava.lang.Object;)
@@ -1062,7 +1062,7 @@ public class ClassFileParser {
 
 	/**
 	 * Complete the MoDisco modifier with the informations of the flags.
-	 * 
+	 *
 	 * @param flags
 	 *            the flags
 	 * @param modiscoModifier

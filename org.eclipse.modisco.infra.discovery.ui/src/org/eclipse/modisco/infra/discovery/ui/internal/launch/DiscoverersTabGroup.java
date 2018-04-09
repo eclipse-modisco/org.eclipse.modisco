@@ -21,7 +21,7 @@ public class DiscoverersTabGroup extends AbstractLaunchConfigurationTabGroup {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTabGroup#createTabs(org.eclipse
 	 * .debug.ui.ILaunchConfigurationDialog, java.lang.String)

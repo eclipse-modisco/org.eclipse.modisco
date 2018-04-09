@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.core;
@@ -54,7 +54,7 @@ public class QueryItem implements ITreeElement {
 
 	/**
 	 * Instantiate a new {@link QueryItem}.
-	 * 
+	 *
 	 * @param parent
 	 *            the model element that appears as the parent of the query item
 	 *            in the tree

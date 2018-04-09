@@ -16,5 +16,5 @@ public interface RadialGraphViewConstants {
     static final String treeNodes = "tree.nodes"; //$NON-NLS-1$
     static final String treeEdges = "tree.edges"; //$NON-NLS-1$
     static final String linear = "linear"; //$NON-NLS-1$
-    
+
 }

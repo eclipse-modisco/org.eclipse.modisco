@@ -8,7 +8,7 @@
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Guillaume Doux (INRIA) - refactoring and move to a separate plug-in
- *    Grégoire Dupé (Mia-Software) - Bug 482715 - NumberFormatException in SystemInfo.computeInfo (180)
+ *    Grï¿½goire Dupï¿½ (Mia-Software) - Bug 482715 - NumberFormatException in SystemInfo.computeInfo (180)
  *******************************************************************************/
 package org.eclipse.modisco.utils.core.internal.exported;
 
@@ -135,7 +135,7 @@ public final class SystemInfo {
 		this.nProcessors = bean.getAvailableProcessors();
 
 		this.procName = ""; //$NON-NLS-1$
-		this.procDescription = ""; //$NON-NLS-1$ 
+		this.procDescription = ""; //$NON-NLS-1$
 		this.procCacheSize = ""; //$NON-NLS-1$
 		this.memory = ""; //$NON-NLS-1$
 
@@ -220,7 +220,7 @@ public final class SystemInfo {
 	}
 
 	private static List<String> getInfos(final String name, final String result) {
-		Pattern patternName = Pattern.compile(name + "\\s*:\\s*(.*)"); //$NON-NLS-1$ 
+		Pattern patternName = Pattern.compile(name + "\\s*:\\s*(.*)"); //$NON-NLS-1$
 		Matcher matcher = patternName.matcher(result);
 		List<String> infos = new ArrayList<String>();
 		while (matcher.find()) {

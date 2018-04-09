@@ -8,7 +8,7 @@
  * Contributors:
  *     Nicolas Bros (Mia-Software)
  *     Nicolas Guyomar (Mia-software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
- *     Nicolas Bros (Mia-Software) - Bug 359261 - Junit failure : org.eclipse.modisco.infra.browser.tests.TestURIDialog   
+ *     Nicolas Bros (Mia-Software) - Bug 359261 - Junit failure : org.eclipse.modisco.infra.browser.tests.TestURIDialog
  *******************************************************************************/
 package org.eclipse.modisco.infra.browser.tests;
 
@@ -80,7 +80,7 @@ public class TestURIDialog {
 	@Test
 	public void testOpenModelThroughEPackageRegistryView() {
 		TestUtils.enableOpenEPackageModelsWithMoDiscoBrowser();
-		
+
 		TestUtils.closeAllEditors();
 		TestURIDialog.bot.menu("Window").menu("Show View").menu("Other...").click();
 		SWTBotShell shell = TestURIDialog.bot.shell("Show View");
@@ -91,13 +91,13 @@ public class TestURIDialog {
 
 		final SWTBotView view = TestURIDialog.bot.viewByTitle("EPackage Registry");
 		view.setFocus();
-		
+
 		// Wait for the tree to initialize
 		TestURIDialog.bot.waitUntil(new DefaultCondition() {
 			public boolean test() throws Exception {
 				return view.bot().tree().rowCount() > 1;
 			}
-			
+
 			public String getFailureMessage() {
 				return "EPackage Registry did not initialize";
 			}

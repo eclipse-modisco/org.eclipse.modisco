@@ -57,7 +57,7 @@ public class MethodCallsGraphConverter {
 	/**
 	 * From a java resource, we will compute method calls graph then initialize
 	 * a method calls model.
-	 * 
+	 *
 	 * @param javaResource
 	 * @return corresponding method calls model
 	 */
@@ -183,10 +183,10 @@ public class MethodCallsGraphConverter {
 
 	/**
 	 * To retrieve all method declarations from java model.
-	 * 
+	 *
 	 * We will also initialize collections of types and method invocations to
 	 * iterate only once on all java elements.
-	 * 
+	 *
 	 * @param javaResource
 	 * @return
 	 */
@@ -215,7 +215,7 @@ public class MethodCallsGraphConverter {
 	 * have to select all usages which are contained by this method declaration.
 	 * It means all instances of AbstractMethodInvocation Yet, we have also to
 	 * sort this collection by its order in call sequence
-	 * 
+	 *
 	 * @param parent
 	 * @return
 	 */
@@ -230,7 +230,7 @@ public class MethodCallsGraphConverter {
 	/**
 	 * To retrieve all method invocations that are contained by this method
 	 * declaration element.
-	 * 
+	 *
 	 * @param parent
 	 * @return
 	 */
@@ -250,7 +250,7 @@ public class MethodCallsGraphConverter {
 	 * method invocation. Type of parameter element is EObject, because we have
 	 * to navigate into statements hierarchy which many different kinds of
 	 * elements
-	 * 
+	 *
 	 * @param element
 	 * @return
 	 */
@@ -275,7 +275,7 @@ public class MethodCallsGraphConverter {
 			/*
 			 * Initially, I used location in file to sort invocations, but
 			 * needed information is no longer retained in java model ...
-			 * 
+			 *
 			 * Perhaps could I use index of parent element which is directly
 			 * contained in block statement of the declaring method ?
 			 */
@@ -289,7 +289,7 @@ public class MethodCallsGraphConverter {
 				/*
 				 * specific case: both invocations have the same index and are
 				 * contained in the same block.
-				 * 
+				 *
 				 * So we have to retrieve first common parent block and use it
 				 * to compute index ...
 				 */
@@ -335,7 +335,7 @@ public class MethodCallsGraphConverter {
 		 * from an example: block A contains another block B (with other
 		 * statements) block B contains two blocks C and D which contains
 		 * respectively element1 and element2
-		 * 
+		 *
 		 * Here the algorithm: From element1, I get the nearest parent block
 		 * Then I will iterate on all parent blocks of element2 and test
 		 * identity If not found, I have to iterate on parent block of element1
@@ -384,7 +384,7 @@ public class MethodCallsGraphConverter {
 	/**
 	 * To retrieve the type declaration which contains source element (which is
 	 * at the beginning a method declaration element)
-	 * 
+	 *
 	 * @param element
 	 * @return
 	 */
@@ -402,7 +402,7 @@ public class MethodCallsGraphConverter {
 
 	/**
 	 * To retrieve all sub types of parameter (type declaration element)
-	 * 
+	 *
 	 * @param contextClass
 	 * @return
 	 */
@@ -423,7 +423,7 @@ public class MethodCallsGraphConverter {
 	/**
 	 * To compute a boolean which indicate if a type (self) is in parent
 	 * hierarchy of an other type (typeDeclaration).
-	 * 
+	 *
 	 * @param self
 	 * @param typeDeclaration
 	 * @return true if self is a super type of typeDeclaration
@@ -522,7 +522,7 @@ public class MethodCallsGraphConverter {
 				} else if (expression instanceof SingleVariableAccess) {
 					/*
 					 * potential infinite recursion
-					 * 
+					 *
 					 * Object tmp; Object src = tmp; ... tmp = src;
 					 */
 					SingleVariableAccess singleVariableAccess = (SingleVariableAccess) expression;

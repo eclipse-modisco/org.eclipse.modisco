@@ -49,7 +49,7 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 	private final Object[] fSources;
 	private final Shell shell;
 	private final LaunchConfigurationUtils lcUtils;
-	
+
 	public MoDiscoMenuSelectionListener(final DiscovererDescription discoverer,
 			final Object[] sourceParameter, final Shell shell) {
 		this.fDiscovererDesc = discoverer;
@@ -60,7 +60,7 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.swt.events.SelectionListener#widgetDefaultSelected(org.eclipse
 	 * .swt.events.SelectionEvent)
@@ -93,14 +93,14 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 			return this.cancelled;
 		}
 	}
-	
-	
+
+
 	/**
 	 * Open a dialog box to let the user enter parameter values.
-	 * 
+	 *
 	 * @param discoverer
 	 * @param source
-	 * 
+	 *
 	 * @return a map of (param, value), or <code>null</code> if cancelled by the
 	 *         user
 	 */
@@ -132,12 +132,12 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 		return new ParamsDialogResult(null, false, true);
 	}
 
-	
-	
-	
+
+
+
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.swt.events.SelectionListener#widgetSelected(org.eclipse.swt
 	 * .events.SelectionEvent)
@@ -256,7 +256,7 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 			final DiscovererDescription discoverer) {
 		return LaunchConfigurationUtils.getExpectedInputParameters(discoverer);
 	}
-	
+
 
 
 }

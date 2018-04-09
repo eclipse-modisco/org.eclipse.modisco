@@ -234,7 +234,7 @@ public class KdmToUml2WithTracesConverterTest {
 
 		output.setURI(outputUri);
 		output.save(null);
-		
+
 		return output;
 	}
 

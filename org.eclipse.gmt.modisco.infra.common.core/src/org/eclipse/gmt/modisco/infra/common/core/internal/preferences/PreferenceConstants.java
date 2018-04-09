@@ -14,7 +14,7 @@ package org.eclipse.gmt.modisco.infra.common.core.internal.preferences;
  * Constant definitions for plug-in preferences
  */
 public final class PreferenceConstants {
-	
+
 	private PreferenceConstants() {
 		// constants class: no need to instantiate
 	}

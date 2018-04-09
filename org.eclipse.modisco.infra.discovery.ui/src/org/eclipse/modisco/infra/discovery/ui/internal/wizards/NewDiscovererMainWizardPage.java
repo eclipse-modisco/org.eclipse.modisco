@@ -213,7 +213,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 
 	/**
 	 * Create contents of the wizard.
-	 * 
+	 *
 	 * @param parent
 	 */
 	public void createControl(final Composite parent) {
@@ -298,7 +298,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 	private static void spacer(final Composite container) {
 		new Label(container, SWT.NONE);
 	}
-	
+
 	private static final int PARAMETER_TABLE_HEIGHT = 120;
 	private static final int NAME_COLUMN_WIDTH = 85;
 	private static final int TYPE_COLUMN_WIDTH = 85;
@@ -754,7 +754,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 		buf.append("protected void basicDiscoverElement(final ").append(inputType).append(" source, final ").append(progressMonitor).append(" monitor) throws ").append(discoveryException).append(" {").append(lineDelimiter); //$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 		final String basicDiscoverElementBodyContent = CodeGeneration.getMethodBodyContent(
 				type.getCompilationUnit(), type.getTypeQualifiedName('.'),
-				"basicDiscoverElement", false, "", lineDelimiter); //$NON-NLS-1$ //$NON-NLS-2$ 
+				"basicDiscoverElement", false, "", lineDelimiter); //$NON-NLS-1$ //$NON-NLS-2$
 		if (basicDiscoverElementBodyContent != null
 				&& basicDiscoverElementBodyContent.length() != 0) {
 			buf.append(basicDiscoverElementBodyContent);

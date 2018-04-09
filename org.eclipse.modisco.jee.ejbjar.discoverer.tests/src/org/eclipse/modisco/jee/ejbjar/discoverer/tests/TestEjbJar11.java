@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - adapted to new discovery framework
@@ -90,7 +90,7 @@ public class TestEjbJar11 {
 			Assert.assertTrue(sessionType.getEjbClass().getMixed().getValue(0).toString()
 					.equalsIgnoreCase("ejb-class-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getSessionType().getMixed().getValue(0).toString()
-					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getTransactionType().getMixed().getValue(0).toString()
 					.equalsIgnoreCase("transaction-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getDescription().getMixed().getValue(0).toString()
@@ -111,7 +111,7 @@ public class TestEjbJar11 {
 			Assert.assertTrue(entityType.getPrimKeyClass().getMixed().getValue(0).toString()
 					.equalsIgnoreCase("prim-key-class-example")); //$NON-NLS-1$
 			Assert.assertTrue(entityType.getReentrant().getMixed().getValue(0).toString()
-					.equalsIgnoreCase("True")); //$NON-NLS-1$					
+					.equalsIgnoreCase("True")); //$NON-NLS-1$
 		}
 	}
 

@@ -29,7 +29,7 @@ import org.eclipse.modisco.infra.discovery.ui.internal.util.LaunchModelUtils;
 /**
  * This class manages the serialization of a discovery launch model into one
  * {@link ILaunchConfiguration}.
- * 
+ *
  */
 public final class LaunchConfigUtils {
 

@@ -178,7 +178,7 @@ public final class BrowserUtils {
 	/**
 	 * Replace proxy objects by their underlying Ecore objects in the given
 	 * selection
-	 * 
+	 *
 	 * @return the unwrapped version of the selection
 	 */
 	public static ISelection unwrapSelection(final ISelection selection) {
@@ -187,7 +187,7 @@ public final class BrowserUtils {
 
 	/**
 	 * Open the given EObject in the MoDisco model browser.
-	 * 
+	 *
 	 * @param eObject
 	 *            the EObject to show in a model browser
 	 * @param useExistingEditor

@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - adapted to new discovery framework
@@ -91,7 +91,7 @@ public class TestEjbJar21 {
 			Assert.assertTrue(sessionType.getEjbClass().getValue().toString()
 					.equalsIgnoreCase("ejb-class-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getSessionType().getValue().toString()
-					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getTransactionType().getValue().toString()
 					.equalsIgnoreCase("transaction-type-example")); //$NON-NLS-1$
 
@@ -108,7 +108,7 @@ public class TestEjbJar21 {
 			Assert.assertTrue(entityType.getPersistenceType().getValue().toString()
 					.equalsIgnoreCase("persistence-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(entityType.getPrimKeyClass().getValue().toString()
-					.equalsIgnoreCase("prim-key-class-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("prim-key-class-example")); //$NON-NLS-1$
 
 		}
 	}

@@ -159,7 +159,7 @@ public final class DiscovererRegistry {
 	 * Computes an uri for main resource. The resource is build at runtime and
 	 * does not need a serialization. However the created uri will prepare for a
 	 * future serialization in workspace metadatas if needed.
-	 * 
+	 *
 	 * @return
 	 */
 	private static URI getDiscoverersResourceURI() {
@@ -171,7 +171,7 @@ public final class DiscovererRegistry {
 	/**
 	 * This method computes at runtime the source type argument for one
 	 * discoverer implementation (generic T type)
-	 * 
+	 *
 	 */
 	private static void computeSourceType(final DiscovererDescription discovererDescription) {
 		Class<?> sourceType = null;

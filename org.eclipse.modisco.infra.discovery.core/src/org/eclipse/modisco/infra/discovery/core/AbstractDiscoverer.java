@@ -31,7 +31,7 @@ import org.eclipse.modisco.infra.discovery.core.internal.DiscoveryManager;
 /**
  * A base implementation of Discoverer, which proposes to centralize some
  * parameters properties and behaviors :
- * 
+ *
  * <ul>
  * <li>
  * Control of source and parameters values at the beginning of a discovery
@@ -40,7 +40,7 @@ import org.eclipse.modisco.infra.discovery.core.internal.DiscoveryManager;
  * <li>
  * Source refresh management
  * </ul>
- * 
+ *
  * @param <T>
  *            the type of source of the discovery
  */
@@ -95,7 +95,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 
 	/**
 	 * A default implementation for source refresh.
-	 * 
+	 *
 	 * It invokes the IResource.refreshLocal() service if the source is an
 	 * instance of org.eclipse.core.resources.IResource
 	 */
@@ -112,7 +112,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 
 	/**
 	 * Utility service for usual isApplicableTo test.
-	 * 
+	 *
 	 * @return true if the source is an accessible instance of
 	 *         {@link IJavaProject} or {@link IProject} with java nature.
 	 */
@@ -135,7 +135,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 
 	/**
 	 * Utility service for usual isApplicableTo test.
-	 * 
+	 *
 	 * @return true if the source is an instance of {@link IFolder}
 	 */
 	public static boolean isAFolder(final Object source) {
@@ -144,7 +144,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 
 	/**
 	 * Utility service for usual isApplicableTo test.
-	 * 
+	 *
 	 * @return true if the source is an instance of {@link IProject}.
 	 */
 	public static boolean isAProject(final Object source) {
@@ -153,7 +153,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 
 	/**
 	 * Utility service for usual isApplicableTo test.
-	 * 
+	 *
 	 * @param source
 	 * @param fileExtension
 	 *            the file extension to test. May be <code>null</code> to test

@@ -49,13 +49,13 @@ public final class FolderUtils {
 
 		/**
 		 * Tests if a specified file should be included in a file list.
-		 * 
-		 * 
+		 *
+		 *
 		 * @param dir
 		 *            the directory in which the file was found.
 		 * @param name
 		 *            the name of the file.
-		 * 
+		 *
 		 * @return <code>true</code> if and only if the name should be included
 		 *         in the file list; <code>false</code> otherwise.
 		 */
@@ -397,7 +397,7 @@ public final class FolderUtils {
 
 	/**
 	 * Copies the source file to the target file.
-	 * 
+	 *
 	 * @return <code>true</code> if successful, <code>false</code> otherwise
 	 */
 	public static final boolean copyFile(final File source, final File destination) {
@@ -439,7 +439,7 @@ public final class FolderUtils {
 
 	/**
 	 * Recursively delete a directory.
-	 * 
+	 *
 	 * @param directory
 	 *            directory to delete
 	 * @throws IOException
@@ -471,7 +471,7 @@ public final class FolderUtils {
 
 	/**
 	 * write a new content into a given file.
-	 * 
+	 *
 	 * @param source
 	 *            source file. It will be created if it does not exist.
 	 * @param newContent

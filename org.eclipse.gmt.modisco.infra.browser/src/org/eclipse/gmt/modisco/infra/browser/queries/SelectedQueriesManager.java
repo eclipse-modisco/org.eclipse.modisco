@@ -75,7 +75,7 @@ public class SelectedQueriesManager {
 
 	/**
 	 * Returns the queries selected for the given model element.
-	 * 
+	 *
 	 * @return a list of selected queries (which can be empty) or
 	 *         <code>null</code>
 	 */

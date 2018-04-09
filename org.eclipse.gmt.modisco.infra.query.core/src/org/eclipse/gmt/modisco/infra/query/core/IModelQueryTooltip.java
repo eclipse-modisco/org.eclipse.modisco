@@ -23,7 +23,7 @@ import org.eclipse.swt.custom.StyledText;
 public interface IModelQueryTooltip {
 	/**
 	 * Set the tooltip text into the {@link StyledText} component.
-	 * 
+	 *
 	 * @param modelQuery
 	 *            the query that is beeing hovered, and for which the tooltip
 	 *            should be displayed

@@ -62,7 +62,7 @@ import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
  * After resolving pending references, the targets of the remaining references
  * are created as {@link org.eclipse.gmt.modisco.java.NamedElement#isProxy()
  * proxies}.
- * 
+ *
  * @see #resolveBindings(Model)
  * @see PendingElement#affectTarget(ASTNode)
  */
@@ -97,7 +97,7 @@ public class BindingManager {
 
 	/**
 	 * Constructs an empty {@code BindingManager}.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF factory
 	 */
@@ -108,7 +108,7 @@ public class BindingManager {
 	/**
 	 * Constructs a {@code BindingManager} containing the factory, the targets
 	 * and the pending references of the specified {@code BindingManager}.
-	 * 
+	 *
 	 * @param aBindingManager
 	 *            an other {@code BindingManager}
 	 */
@@ -121,7 +121,7 @@ public class BindingManager {
 
 	/**
 	 * Enable incremental behavior.
-	 * 
+	 *
 	 * @param model1
 	 */
 	public void enableIncrementalDiscovering(final Model model1) {
@@ -137,7 +137,7 @@ public class BindingManager {
 
 	/**
 	 * Return true if incremental behavior is enabled.
-	 * 
+	 *
 	 * @return true if incremental behavior is enabled
 	 */
 	public boolean isIncrementalDiscovering() {
@@ -147,7 +147,7 @@ public class BindingManager {
 	/**
 	 * Add the Java entity {@code target} represented by the {@code binding} to
 	 * the targets of this BindingManager.
-	 * 
+	 *
 	 * @param binding
 	 *            the string representation of the {@code Binding}
 	 * @param target
@@ -160,7 +160,7 @@ public class BindingManager {
 	/**
 	 * Add the Java entity {@code target} represented by the {@code binding} to
 	 * the targets of this BindingManager.
-	 * 
+	 *
 	 * @param binding
 	 *            the string representation of the {@code Binding}
 	 * @param target
@@ -173,7 +173,7 @@ public class BindingManager {
 	/**
 	 * Indicate if a {@code NamedElement} representated by the {@code binding}
 	 * is contained in this BindingManager.
-	 * 
+	 *
 	 * @param binding
 	 *            the string representation of a {@code Binding} representating
 	 *            the searched Java entity
@@ -199,7 +199,7 @@ public class BindingManager {
 	/**
 	 * Indicate if a {@code NamedElement} representated by the {@code binding}
 	 * is contained in this BindingManager.
-	 * 
+	 *
 	 * @param binding
 	 *            a {@code Binding} representating the searched Java entity.
 	 * @return {@code true} if this BindingManager contains a
@@ -212,7 +212,7 @@ public class BindingManager {
 
 	/**
 	 * Returns the {@code NamedElement} represented by the {@code Binding}.
-	 * 
+	 *
 	 * @param binding
 	 *            a {@code Binding} representating the searched Java entity.
 	 * @return the {@code NamedElement} associated with the {@code binding}, or
@@ -238,7 +238,7 @@ public class BindingManager {
 
 	/**
 	 * Returns the {@code NamedElement} represented by the {@code Binding}.
-	 * 
+	 *
 	 * @param binding
 	 *            a {@code Binding} representating the searched Java entity.
 	 * @return the {@code NamedElement} associated with the {@code binding}, or
@@ -256,7 +256,7 @@ public class BindingManager {
 	/**
 	 * Add a pending reference representated by a {@code PendingElement} to this
 	 * {@code BindingManager}.
-	 * 
+	 *
 	 * @param ref
 	 *            the {@code PendingElement} object
 	 * @param binding
@@ -271,7 +271,7 @@ public class BindingManager {
 	 * Returns the {@link PendingElement} contained in this
 	 * {@code BindingManager} specified by the {@code clientNode} and the
 	 * {@code linkName}.
-	 * 
+	 *
 	 * @param clientNode
 	 *            the client node
 	 * @param linkName
@@ -295,7 +295,7 @@ public class BindingManager {
 	 * Resolution of the pending references against the targets of this
 	 * {@code BindingManager}. if {@code model} is {@code null}, the unresolved
 	 * bindings will not be computed.
-	 * 
+	 *
 	 * @param model1
 	 *            the resulting {@link Model}.
 	 */
