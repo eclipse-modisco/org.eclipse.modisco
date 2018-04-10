@@ -15,7 +15,7 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author gdupe
- * 
+ *
  */
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.modisco.java.discoverer.benchmark.messages"; //$NON-NLS-1$

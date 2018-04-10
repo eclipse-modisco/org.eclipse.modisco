@@ -17,7 +17,7 @@ public interface EngineFactory {
 
 	/**
 	 * The singleton instance of the factory.
-	 * 
+	 *
 	 */
 	public static final EngineFactory INSTANCE = new EngineFactoryImpl();
 

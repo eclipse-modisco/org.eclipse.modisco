@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - adapted to new discovery framework
@@ -36,7 +36,7 @@ import org.junit.Test;
 
 /**
  * Test of discovering a WEB.XML model 2.5
- * 
+ *
  */
 public class TestWebXml25 {
 
@@ -132,7 +132,7 @@ public class TestWebXml25 {
 			Assert.assertTrue(errorPage.getExceptionType().getValue().toString()
 					.equalsIgnoreCase("exception-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(errorPage.getLocation().getValue().toString()
-					.equalsIgnoreCase("location-example")); //$NON-NLS-1$				
+					.equalsIgnoreCase("location-example")); //$NON-NLS-1$
 
 			// <!-- TEST Modisco security-constraint-->
 			SecurityConstraintType secu = webApp.getSecurityConstraint().get(0);
@@ -143,7 +143,7 @@ public class TestWebXml25 {
 			Assert.assertTrue(secu.getWebResourceCollection().get(0).getUrlPattern().get(0)
 					.getValue().toString().equalsIgnoreCase("url-pattern-example")); //$NON-NLS-1$
 			Assert.assertTrue(secu.getWebResourceCollection().get(0).getHttpMethod().get(0)
-					.toString().equalsIgnoreCase("http-method-example")); //$NON-NLS-1$			
+					.toString().equalsIgnoreCase("http-method-example")); //$NON-NLS-1$
 			Assert.assertTrue(secu.getAuthConstraint().getDescription().get(0).getValue()
 					.toString().equalsIgnoreCase("description-example")); //$NON-NLS-1$
 			Assert.assertTrue(secu.getAuthConstraint().getRoleName().get(0).getValue().toString()

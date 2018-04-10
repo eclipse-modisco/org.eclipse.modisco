@@ -55,7 +55,7 @@ public final class StringUtils {
 	 * Truncate the given String before the first newline or a maximum number of
 	 * characters, whichever comes first. Adds an ellipsis ("...") if it was
 	 * effectively truncated.
-	 * 
+	 *
 	 * @param str
 	 *            the string to truncate
 	 * @return the part of the given string before the first newline
@@ -107,7 +107,7 @@ public final class StringUtils {
 	 * in <code>charsToEscape</code> by <code>escapeChar</code> followed by the
 	 * corresponding character from <code>replacementChars</code>. If
 	 * <code>escapeChar</code> is present in the input string, it is doubled.
-	 * 
+	 *
 	 * @param str
 	 *            the string to escape
 	 * @param escapeChar

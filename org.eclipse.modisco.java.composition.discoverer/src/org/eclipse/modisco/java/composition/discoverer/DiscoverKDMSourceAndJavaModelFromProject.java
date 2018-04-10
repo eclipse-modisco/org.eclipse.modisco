@@ -21,13 +21,13 @@ import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromProject;
 import org.eclipse.modisco.java.discoverer.ElementsToAnalyze;
 
 /**
- * 
+ *
  * This Class provides a way of weaving a MoDisco Java Model with a MoDisco KDM Source one. Both
  * models are discovered independently and then read to weave some instances like Archive,
  * Compilation Unit ...
- * 
+ *
  * See Help contents or http://wiki.eclipse.org/MoDisco/Components/Java/Composition
- * 
+ *
  */
 public class DiscoverKDMSourceAndJavaModelFromProject extends
 		AbstractDiscoverKDMSourceAndJavaModel<IProject> {

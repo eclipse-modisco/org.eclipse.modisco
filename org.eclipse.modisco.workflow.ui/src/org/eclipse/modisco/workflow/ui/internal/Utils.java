@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Shell;
 
 /**
  * Tools box. It's a singleton
- * 
+ *
  * @author Nicolas Payneau
  */
 public final class Utils {
@@ -34,7 +34,7 @@ public final class Utils {
 	/**
 	 * Returns a Point indicating the top left position that the given
 	 * {@link Shell} must take so that it is centered.
-	 * 
+	 *
 	 * @parameter shell shell to center
 	 * @return a point
 	 */

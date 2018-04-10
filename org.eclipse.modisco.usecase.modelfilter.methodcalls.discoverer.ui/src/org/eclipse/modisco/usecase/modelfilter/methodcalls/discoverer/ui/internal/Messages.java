@@ -15,7 +15,7 @@ import org.eclipse.osgi.util.NLS;
 
 /**
  * @author GBarbier
- * 
+ *
  */
 public final class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.messages"; //$NON-NLS-1$

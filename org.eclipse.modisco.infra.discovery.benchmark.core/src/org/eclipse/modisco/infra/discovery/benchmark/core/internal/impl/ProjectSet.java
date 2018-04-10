@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
@@ -53,7 +53,7 @@ public class ProjectSet implements IProjectSet {
 	 * return the size of the project
 	 * @param p must be owned by the projectSet
 	 * @return the size
-	 * @throws CoreException 
+	 * @throws CoreException
 	 */
 	public long getProjectSize(final IProject p) throws CoreException {
 		if (this.projectSize.keySet().contains(p)) {
@@ -89,7 +89,7 @@ public class ProjectSet implements IProjectSet {
 			public int compare(final IProject arg0, final IProject arg1) {
 				try {
 					if (getProjectSize(arg0) < getProjectSize(arg1)) {
-						return -1; 
+						return -1;
 					}
 					if (getProjectSize(arg0) == getProjectSize(arg1)) {
 						return 0;

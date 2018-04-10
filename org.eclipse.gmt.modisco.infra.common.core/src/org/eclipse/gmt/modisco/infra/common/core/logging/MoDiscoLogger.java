@@ -22,7 +22,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator
 
 /**
  * Helper for logging using Eclipse API
- * 
+ *
  * @author fgiquel
  * @deprecated Replaced by org.eclipse.emf.facet.util.core.Logger,
  *             cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470725

@@ -22,7 +22,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator
  * This class offers methods to get the description of the MoDisco sub-protocol
  * registered through the org.eclipse.gmt.modisco.common.core.protocolext
  * extension point.
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
  * @see ModiscoResourceFactoryImpl
  */
@@ -60,7 +60,7 @@ public final class ModiscoProtocolExtensionRegistry {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return the map pointing to the class implementing
 	 *         IModiscoProtocolExtension for each registered MoDisco
 	 *         sub-protocol

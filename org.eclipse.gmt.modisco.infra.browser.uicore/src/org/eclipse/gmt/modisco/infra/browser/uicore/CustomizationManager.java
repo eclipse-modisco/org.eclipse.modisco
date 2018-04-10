@@ -61,7 +61,7 @@ public class CustomizationManager {
 	 * effectively load the registered customizations.
 	 * <p>
 	 * Customizations should be retrieved from the {@link CustomizationsCatalog}.
-	 * 
+	 *
 	 * @param customization
 	 *            a customization root object, defined from metamodel
 	 *            "http://www.eclipse.org/MoDisco/infra/browser/custom/0.8".

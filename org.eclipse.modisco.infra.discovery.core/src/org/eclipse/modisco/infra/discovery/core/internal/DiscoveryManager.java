@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
- *    Nicolas Bros (Mia-Software) - Bug 338702 - [Discovery] specify initial value for Parameters 
+ *    Nicolas Bros (Mia-Software) - Bug 338702 - [Discovery] specify initial value for Parameters
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core.internal;
 
@@ -33,13 +33,13 @@ import org.eclipse.modisco.infra.discovery.core.internal.catalog.DiscovererRegis
 
 /**
  * Registry for accessing {@link IDiscoverer} instances.
- * 
+ *
  */
 public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscoverer(java.lang.String)
 	 */
@@ -53,7 +53,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscoverer
 	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription)
@@ -64,7 +64,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getApplicableDiscoverers(java.lang.Object)
 	 */
@@ -80,7 +80,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * isApplicable
 	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription,
@@ -104,7 +104,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscoverers()
 	 */
@@ -114,7 +114,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscovererDescription(java.lang.Class)
 	 */
@@ -131,7 +131,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscovererDescription(java.lang.String)
 	 */
@@ -146,7 +146,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * getDiscovererDescription
 	 * (org.eclipse.modisco.infra.discovery.core.IDiscoverer)
@@ -191,7 +191,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * canRetrieveValue
 	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter)
@@ -208,7 +208,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#getValue
 	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter,
@@ -245,7 +245,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#setValue
 	 * (org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter,
@@ -280,7 +280,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.modisco.infra.discovery.core.catalog.IDiscoveryManager#
 	 * discoverElement(org.eclipse.modisco.infra.discovery.core.IDiscoverer,
 	 * java.lang.Object, java.util.Map)

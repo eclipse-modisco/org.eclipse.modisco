@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface MetaclassInstances {
 	/**
 	 * Return the list of instances for the given metaclass
-	 * 
+	 *
 	 * @param eClass
 	 *            the metaclass
 	 * @param includingSubclasses

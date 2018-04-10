@@ -183,7 +183,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Override this method to add more virtual elements.
-	 * 
+	 *
 	 * @param children
 	 *            can add more children to this list
 	 */
@@ -193,7 +193,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Create attribute elements corresponding to model attributes for the given {@link EObject}
-	 * 
+	 *
 	 * @return the list of attributes elements created for representing the attributes visually in
 	 *         the model browser
 	 */
@@ -256,11 +256,11 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Create the links corresponding to references for the given {@link EObject}
-	 * 
+	 *
 	 * @param elementsInCollapsedLinks
 	 *            elements that are under links that are set to 'collapsed' through a customization
 	 *            will be added to this list
-	 * 
+	 *
 	 * @return the list of links created for representing the references in the model browser
 	 */
 	private ArrayList<LinkItem> createLinks(final List<Object> elementsInCollapsedLinks) {
@@ -621,7 +621,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	 * <li>an icon provided by a registered icon provider
 	 * <li>an icon provided by an adapter factory from the EMF registry
 	 * <ul>
-	 * 
+	 *
 	 * @return an icon for the element or <code>null</code> if no icon is provided
 	 */
 	public static Image getImageFor(final EObject eObject,

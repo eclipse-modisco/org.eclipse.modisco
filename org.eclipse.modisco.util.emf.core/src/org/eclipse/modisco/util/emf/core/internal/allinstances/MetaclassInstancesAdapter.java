@@ -60,7 +60,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 	private Map<EClass, Set<EObject>> instancesByEClass;
 	/** All the model elements of the metaclass or one of its sub-types */
 	private Map<EClass, Set<EObject>> instancesByType;
-	
+
 	/** Indicates if cache has been cleared and must be computed at next access */
 	private boolean cacheInvalidated;
 
@@ -78,14 +78,14 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 			clearAndComputeCache();
 		}
 	}
-	
+
 	protected void clearAndComputeCache() {
 		synchronized (this) {
 			this.instancesByEClass = new HashMap<EClass, Set<EObject>>();
 			this.instancesByType = new HashMap<EClass, Set<EObject>>();
-	
+
 			final TransactionalEditingDomain transactDomain = getTransactionalEditingDomain(this.resource);
-	
+
 			if (transactDomain == null) {
 				// Standard case
 				computeCache();
@@ -98,33 +98,33 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 						}
 					});
 				} catch (InterruptedException e) {
-					Logger.logWarning(e, 
+					Logger.logWarning(e,
 							"InterruptedException during Model allOfClass computing.", Activator.getDefault()); //$NON-NLS-1$
 					// task was interrupted, trying without exclusive access
 					computeCache();
 				}
 			}
-			
+
 			this.cacheInvalidated = false;
 		}
 	}
-	
+
 	public void clearCache() {
 		synchronized (this) {
 			this.instancesByEClass = new HashMap<EClass, Set<EObject>>();
 			this.instancesByType = new HashMap<EClass, Set<EObject>>();
-			
+
 			this.cacheInvalidated = true;
 		}
 	}
-	
+
 	private void validateCache() {
 		if (this.cacheInvalidated) {
 			clearAndComputeCache();
 		}
 		this.cacheInvalidated = false;
 	}
-	
+
 	private void computeCache() {
 		final TreeIterator<EObject> allContents = this.resource.getAllContents();
 		while (allContents.hasNext()) {
@@ -136,7 +136,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 
 	/**
 	 * Add a new element to the set of elements corresponding to its metaclass.
-	 * 
+	 *
 	 * @param element
 	 *            the element to add
 	 * @param recursively
@@ -526,7 +526,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 			listener.modelChanged(msg);
 		}
 	}
-	
+
 	private static TransactionalEditingDomain getTransactionalEditingDomain(
 			final Resource aResource) {
 		TransactionalEditingDomain transactDomain = null;

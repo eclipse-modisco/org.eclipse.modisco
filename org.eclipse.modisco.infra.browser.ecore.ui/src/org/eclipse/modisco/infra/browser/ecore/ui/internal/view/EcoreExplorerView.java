@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2015 Mia-Software, and Soft-Maint
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
@@ -38,9 +38,9 @@ public class EcoreExplorerView extends ViewPart implements
 		IView<IEcoreExplorerWidget> {
 
 	private IEcoreExplorerWidget widget;
-	
+
 	private final EcoreExplorerWindowListener wListener;
-	
+
 	private final ISelectionListener selectionListener = new ISelectionListener() {
 		public void selectionChanged(final IWorkbenchPart part,
 				final ISelection selection) {

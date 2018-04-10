@@ -37,7 +37,7 @@ public class XmiToHtmlApplication implements IApplication {
 		options.addOption("m", false, Messages.XmiToHtmlApplication_MeasureMemoryUse); //$NON-NLS-1$
 		final CommandLineParser parser = new GnuParser();
 		final CommandLine cmd = parser.parse(options, args);
-		
+
 		final File benchmarkFile = new File(cmd.getOptionValue('x'));
 		final File targetFolder = new File(cmd.getOptionValue('t'));
 		List<? extends Object> arguments = Collections.emptyList();

@@ -37,7 +37,7 @@ import org.eclipse.jdt.launching.JavaRuntime;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class JavaProjectFactory {
 
@@ -158,15 +158,15 @@ public class JavaProjectFactory {
 
 	/**
 	 * when a java project try to set an unbound vm
-	 * for its execution environment. 
+	 * for its execution environment.
 	 * For instance, if it try to use a jvm 1.6 and there is only an install of jvm 1.5
-	 * @throws CoreException 
+	 * @throws CoreException
 	 */
 	public void setExecutionEnvironmentWithUnboundVm() throws CoreException {
 		IPath oldOutput = this.javaProject.getOutputLocation();
 		this.javaProject.setRawClasspath(new IClasspathEntry[0], null);
 		this.createSourceFolder();
-		this.javaProject.setOutputLocation(oldOutput, null);		
+		this.javaProject.setOutputLocation(oldOutput, null);
 		this.addSystemLibraries("bug328143");	 //$NON-NLS-1$
 		this.project.refreshLocal(IResource.DEPTH_INFINITE, null);
 	}

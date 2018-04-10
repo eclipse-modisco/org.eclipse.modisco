@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.model;
@@ -54,7 +54,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Instantiate a new {@link AttributeItem}.
-	 * 
+	 *
 	 * @param parent
 	 *            the model element that has this attribute
 	 * @param treeParent
@@ -156,7 +156,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 
 	/**
 	 * Get a text describing the given attribute
-	 * 
+	 *
 	 * @param attribute
 	 *            the attribute to describe
 	 * @param showMultiplicity

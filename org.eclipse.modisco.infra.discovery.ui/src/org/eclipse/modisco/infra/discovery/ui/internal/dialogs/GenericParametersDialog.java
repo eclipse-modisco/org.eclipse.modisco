@@ -64,7 +64,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 	private static final int TYPE_COLUMN_INDEX = 2;
 	private static final int DIALOG_WIDTH = 725;
 	private static final int DIALOG_HEIGHT = 455;
-	
+
 	private static final int NAME_COLUMN_WIDTH = 150;
 	private static final int VALUE_COLUMN_WIDTH = 250;
 	private static final int TYPE_COLUMN_WIDTH = 250;
@@ -152,7 +152,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 
 	/**
 	 * Create the dialog.
-	 * 
+	 *
 	 * @param parentShell
 	 * @param parameters
 	 * @param discovererName
@@ -206,7 +206,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 
 	/**
 	 * Create the contents of the dialog.
-	 * 
+	 *
 	 * @param parent
 	 */
 	@Override
@@ -236,7 +236,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 
 		return container;
 	}
-	
+
 	private void createParametersTable(final Composite container) {
 		this.tableViewerParameters = new TableViewer(container, SWT.MULTI | SWT.BORDER
 				| SWT.FULL_SELECTION);
@@ -353,7 +353,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 
 	/**
 	 * Create contents of the button bar.
-	 * 
+	 *
 	 * @param parent
 	 */
 	@Override

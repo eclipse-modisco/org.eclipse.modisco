@@ -4,9 +4,9 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *  
+ *
  *  Contributors:
- *  
+ *
  *  	   Nicolas Guyomar (Mia-Software) - initial API and implementation
  */
 package org.eclipse.modisco.jee.queries.annotations.servlet;
@@ -24,11 +24,11 @@ public class IsWebListener implements IJavaModelQuery<ClassDeclaration, Boolean>
 
 	static final String ANNOTATION_NAME = "WebListener"; //$NON-NLS-1$
 	private ArrayList<String> annotationClassName = null;
-	
+
 	public Boolean evaluate(final ClassDeclaration context,
 			final ParameterValueList parameterValues)
 			throws ModelQueryExecutionException {
-		
+
 		if (EvaluateAnnotation.evaluate(context,
 				IsWebListener.ANNOTATION_NAME).equals(
 				Boolean.TRUE)) {
@@ -41,7 +41,7 @@ public class IsWebListener implements IJavaModelQuery<ClassDeclaration, Boolean>
 		this.annotationClassName.add("ServletRequestAttributeListener"); //$NON-NLS-1$
 		this.annotationClassName.add("HttpSessionListener"); //$NON-NLS-1$
 		this.annotationClassName.add("HttpSessionAttributeListener"); //$NON-NLS-1$
-		
+
 		return new ResolveInheritance().evaluate(context,
 				this.annotationClassName);
 	}

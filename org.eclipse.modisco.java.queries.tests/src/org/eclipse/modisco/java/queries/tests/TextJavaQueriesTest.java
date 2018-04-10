@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Nicolas Guyomar (Mia-Software) - initial API and implementation
  *     Gregoire DUPE (Mia-Software)
@@ -52,7 +52,7 @@ public class TextJavaQueriesTest {
 	/**
 	 * Call a unit test which imports org.eclipse.gmt.modisco.java.queries
 	 * before to call the test textJavaQueriesTest().
-	 * 
+	 *
 	 * @throws Exception
 	 */
 	@Test
@@ -182,7 +182,7 @@ public class TextJavaQueriesTest {
 					modelQueryImpl = catalog.getModelQueryImpl(queryGetMethodDeclarationText);
 					result = (String) modelQueryImpl.basicEvaluate(methDecl);
 					Assert.assertEquals(result,
-							TextJavaQueriesTest.NONE_NATIVE_INT_PARAM1_INT_PARAM2); 
+							TextJavaQueriesTest.NONE_NATIVE_INT_PARAM1_INT_PARAM2);
 				}
 			} else if (eObject instanceof ConstructorDeclaration) {
 				ConstructorDeclaration constDecl = (ConstructorDeclaration) eObject;

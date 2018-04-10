@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.extensions;
@@ -74,10 +74,10 @@ public class NameProvidersRegistry extends AbstractRegistry {
 	/**
 	 * Query the name providers registry for a name for the given
 	 * {@link EObject}.
-	 * 
+	 *
 	 * @param eObject
 	 *            the model instance whose name is queried
-	 * 
+	 *
 	 * @return the name or <code>null</code> if no name was provided
 	 */
 	public String getName(final EObject eObject) {
@@ -160,7 +160,7 @@ public class NameProvidersRegistry extends AbstractRegistry {
 	/**
 	 * Read a 'nameProvider' element, and adds the name providers to the
 	 * registry.
-	 * 
+	 *
 	 * @param configurationElement
 	 *            the 'nameProvider' element
 	 * @param metamodelId

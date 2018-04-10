@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  */
@@ -95,7 +95,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 	/**
 	 * This method returns the model query set of the resource having for name
 	 * the "name" parameter value.
-	 * 
+	 *
 	 * @param name
 	 *            the name of a resource contained in the catalog
 	 * @return return a model query set
@@ -115,7 +115,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 	/**
 	 * This methods returns the query sets of all the resources contained in the
 	 * catalog.
-	 * 
+	 *
 	 * @return returns all the query sets
 	 */
 	public Collection<ModelQuerySet> getAllModelQuerySets() {
@@ -164,7 +164,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 
 	/**
 	 * This method returns the list of the installed model query factory.
-	 * 
+	 *
 	 * @return model query factories
 	 */
 	public List<IModelQueryFactory> getInstalledModelQueryFactory() {
@@ -174,7 +174,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 	/**
 	 * This method return a java object containing the model query
 	 * implementation.
-	 * 
+	 *
 	 * @param modelQuery
 	 *            a model query
 	 * @return a model query implementation instance
@@ -220,7 +220,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.gmt.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
 	 * getActivator()

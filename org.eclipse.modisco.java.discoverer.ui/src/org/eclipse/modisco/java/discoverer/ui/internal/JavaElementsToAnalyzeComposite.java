@@ -83,12 +83,12 @@ public class JavaElementsToAnalyzeComposite extends
 
 		this.button.forceFocus();
 	}
-	
+
 	// to avoid the "synthetic access" warning
 	protected void fireChangedLocal() {
 		super.fireChanged();
 	}
-	
+
 	protected void commit() {
 		fireCommit();
 	}

@@ -42,7 +42,7 @@ public final class MethodRedefinitionManager {
 
 	/**
 	 * consolidates the model with redefinitions links between methods
-	 * 
+	 *
 	 * @param model
 	 * @param facto
 	 */

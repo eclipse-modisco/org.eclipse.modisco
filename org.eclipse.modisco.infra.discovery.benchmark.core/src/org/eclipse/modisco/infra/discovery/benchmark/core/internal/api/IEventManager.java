@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.api;
 
@@ -23,17 +23,17 @@ public interface IEventManager {
 	 * @param listener
 	 */
 	public void addListener(IEventListener listener);
-	
+
 	/**
 	 * Remove the listener in parameter from the EventManager
 	 * @param listener
 	 */
 	public void removeListener(IEventListener listener);
-	
+
 	/**
 	 * Notify an event to the listeners
 	 * @param event
 	 */
 	public void notifyEvent(Event event);
-	
+
 }

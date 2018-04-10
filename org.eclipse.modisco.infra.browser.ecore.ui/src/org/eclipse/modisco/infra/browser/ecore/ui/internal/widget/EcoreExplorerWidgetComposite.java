@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2015 Soft-Maint, and Mia-Software.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
  *    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
@@ -44,7 +44,7 @@ import org.eclipse.swt.widgets.Listener;
 public class EcoreExplorerWidgetComposite extends Composite implements
 		ISelectionProvider, ICustomizationManagerProvider2,
 		IFacetManagerProvider2 {
-	
+
 	interface IEClassSelectionListener {
 		void onEClassSelected(Set<EClass> eClasses);
 	}
@@ -87,13 +87,13 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 						setLastSelection(metaSelection);
 					}
 				});
-		
+
 		addListener(SWT.Resize, new Listener() {
 			public void handleEvent(final Event event) {
 				updateSashOrientation();
 			}
 		});
-		
+
 		final ResourceSet customRS = getCustomizationManager().getResourceSet();
 		this.customShortcuts = EcoreExplorerShortcutUtils
 				.getCustomShortcuts(customRS);
@@ -102,15 +102,15 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 		this.facetSetShortcuts = EcoreExplorerShortcutUtils
 				.getFacetSetShortcuts(facetSetRS);
 	}
-	
+
 	protected ISelection getMetaSelection() {
 		return this.metaComposite.getSelection();
 	}
-	
+
 	protected ISelection getInstanceSelection() {
 		return this.instComposite.getSelection();
 	}
-	
+
 	protected void setLastSelection(final ISelection selection) {
 		this.lastSelection = selection;
 	}
@@ -151,7 +151,7 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 	public IFacetManager getFacetManager() {
 		return this.metaComposite.getFacetManager();
 	}
-	
+
 	public List<IFacetSetShortcut> getFacetSetShortcuts() {
 		return Collections.unmodifiableList(this.facetSetShortcuts);
 	}
@@ -184,16 +184,16 @@ public class EcoreExplorerWidgetComposite extends Composite implements
 	public void addEClassSelectionListener(final IEClassSelectionListener listener) {
 		this.listeners.add(listener);
 	}
-	
+
 	private void notifyEClassSelected(final Set<EClass> eClasses) {
 		for (IEClassSelectionListener listener : this.listeners) {
 			listener.onEClassSelected(eClasses);
 		}
 	}
-	
+
 	public void displayInstances(final Set<EObject> eObjects) {
 		this.instComposite.changeInput(eObjects);
-		
+
 	}
 
 }

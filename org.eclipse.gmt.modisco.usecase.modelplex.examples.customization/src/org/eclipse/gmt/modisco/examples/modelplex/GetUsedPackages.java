@@ -26,7 +26,7 @@ import org.eclipse.gmt.modisco.java.Type;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class GetUsedPackages implements
 		IJavaModelQuery<Package, EList<Package>> {
@@ -80,9 +80,9 @@ public class GetUsedPackages implements
 	/**
 	 * We should filter used packages to keep only first common parent package.
 	 * example: initial list of used packages = a.b.c, a.b.d, e.f, e.g
-	 * 
+	 *
 	 * final list of used packages = a.b, e
-	 * 
+	 *
 	 * @param usedPackages
 	 * @return a collection of common packages
 	 */
@@ -104,7 +104,7 @@ public class GetUsedPackages implements
 	 * packages which have no common hierarchy don't have to be compared. For
 	 * example, if we have two packages a.b and c.d, then result will be a.b But
 	 * if we have three packages a.b, a.c and d.e, then result will be a
-	 * 
+	 *
 	 * @param usedPackage
 	 * @param usedPackages
 	 * @return the package which is common of both packages, usedPackage
@@ -135,7 +135,7 @@ public class GetUsedPackages implements
 	}
 
 	/**
-	 * 
+	 *
 	 * @param usedPackage
 	 * @param otherPackage
 	 * @return the package which is common of both packages, null otherwise

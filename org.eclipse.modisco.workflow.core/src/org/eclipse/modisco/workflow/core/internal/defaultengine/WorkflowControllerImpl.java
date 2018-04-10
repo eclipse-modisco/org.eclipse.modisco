@@ -28,7 +28,7 @@ public class WorkflowControllerImpl implements WorkflowController {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.workflow.WorkflowController#validate(org.eclipse
 	 * .debug.ui.workflow.WorkflowModel)
@@ -65,7 +65,7 @@ public class WorkflowControllerImpl implements WorkflowController {
 
 	/**
 	 * Allows to verify the loop in the Workflow
-	 * 
+	 *
 	 * @param elements
 	 *            All elements contained in Workflow
 	 * @param name
@@ -94,7 +94,7 @@ public class WorkflowControllerImpl implements WorkflowController {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.workflow.WorkflowController#hasPotentialRecursion
 	 * (java.lang.String, org.eclipse.debug.core.ILaunchConfiguration)

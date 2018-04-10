@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
  * Entry point of the 'GenerateJsp' generation module.
- * 
+ *
  * @generated
  */
 @SuppressWarnings("all")
 public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * The name of the module.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String MODULE_FILE_NAME = "GenerateJsp"; //$NON-NLS-1$
 
 	/**
 	 * The name of the templates that are to be generated.
-	 * 
+	 *
 	 * @generated
 	 */
 	public static final String[] TEMPLATE_NAMES = { "write", }; //$NON-NLS-1$
@@ -56,7 +56,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	 * retrieval of {@link #getProperties()} and
 	 * {@link #getGenerationListeners()}.
 	 * </p>
-	 * 
+	 *
 	 * @generated
 	 */
 	public GenerateJsp() {
@@ -66,7 +66,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param modelURI
 	 *            URI where the model on which this generator will be used is
 	 *            located.
@@ -90,7 +90,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * This allows clients to instantiates a generator with all required
 	 * information.
-	 * 
+	 *
 	 * @param model
 	 *            We'll iterate over the content of this element to find Objects
 	 *            matching the first parameter of the template we need to call.
@@ -113,7 +113,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 
 	/**
 	 * This can be used to launch the generation from a standalone application.
-	 * 
+	 *
 	 * @param args
 	 *            Arguments of the generation.
 	 * @generated
@@ -139,7 +139,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 
 	/**
 	 * Launches the generation described by this instance.
-	 * 
+	 *
 	 * @param monitor
 	 *            This will be used to display progress information to the user.
 	 * @throws IOException
@@ -159,7 +159,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * If this generator needs to listen to text generation events, listeners
 	 * can be returned from here.
-	 * 
+	 *
 	 * @return List of listeners that are to be notified when text is generated
 	 *         through this launch.
 	 * @generated
@@ -193,7 +193,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	 * <p>
 	 * All three of these default strategies support merging through JMerge.
 	 * </p>
-	 * 
+	 *
 	 * @return The generation strategy that is to be used for generations
 	 *         launched through this launcher.
 	 * @generated
@@ -206,7 +206,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	 * This will be called in order to find and load the module that will be
 	 * launched through this launcher. We expect this name not to contain file
 	 * extension, and the module to be located beside the launcher.
-	 * 
+	 *
 	 * @return The name of the module that is to be launched.
 	 * @generated
 	 */
@@ -228,7 +228,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	 * that needs be returned by a call to {@link #getProperties()} is
 	 * "org.eclipse.acceleo.sample.messages".
 	 * </p>
-	 * 
+	 *
 	 * @return The list of properties file we need to add to the generation
 	 *         context.
 	 * @see java.util.ResourceBundle#getBundle(String)
@@ -252,7 +252,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * This will be used to get the list of templates that are to be launched by
 	 * this launcher.
-	 * 
+	 *
 	 * @return The list of templates to call on the module
 	 *         {@link #getModuleName()}.
 	 * @generated
@@ -265,7 +265,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's package registry with all
 	 * needed EPackages.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated
@@ -282,7 +282,7 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	/**
 	 * This can be used to update the resource set's resource factory registry
 	 * with all needed factories.
-	 * 
+	 *
 	 * @param resourceSet
 	 *            The resource set which registry has to be updated.
 	 * @generated

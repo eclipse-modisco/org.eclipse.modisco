@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.impl;
@@ -27,8 +27,8 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
  */
 public class EventManager implements IEventManager {
 
-	private List<IEventListener> eventListeners; 
-	
+	private List<IEventListener> eventListeners;
+
 	/**
 	 * Setter for the event listener list
 	 * @param eventListeners
@@ -51,7 +51,7 @@ public class EventManager implements IEventManager {
 	protected EventManager() {
 		this.eventListeners = new ArrayList<IEventListener>();
 	}
-	
+
 	/**
 	 * @see IEventManager#addListener(IEventListener)
 	 * @param eventListeners
@@ -76,7 +76,7 @@ public class EventManager implements IEventManager {
 	 */
 	public void notifyEvent(final Event event) {
 		for (IEventListener listener : this.eventListeners) {
-			listener.notifyEvent(event);	
+			listener.notifyEvent(event);
 		}
 	}
 

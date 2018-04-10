@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Nicolas Guyomar (Mia-Software) - initial API and implementation (class previously named DeploymentDescriptorDiscoverer)
  *    Nicolas Bros (Mia-Software) - refactoring for new discovery framework
@@ -37,7 +37,7 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 
 	/**
 	 * Determine which version of DTD/XSD is used in the .xml file
-	 * 
+	 *
 	 * @param source
 	 * @return the version of the .xml file
 	 */
@@ -121,7 +121,7 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 				// if no "version" attribute present, look for the xsd
 				// declaration
 			} else if (!doc.getDocumentElement()
-					.getAttribute("xsi:schemaLocation").toString().equalsIgnoreCase("")) { //$NON-NLS-1$ //$NON-NLS-2$			
+					.getAttribute("xsi:schemaLocation").toString().equalsIgnoreCase("")) { //$NON-NLS-1$ //$NON-NLS-2$
 				String schemaLocation = doc.getDocumentElement().getAttribute("xsi:schemaLocation"); //$NON-NLS-1$
 
 				if (schemaLocation.contains(rootName)) {
@@ -157,15 +157,15 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 	/**
 	 * Look for a DOCTYPE declaration, then a dtd one. Assume that the right DTD is declared right
 	 * after the DOCTYPE
-	 * 
+	 *
 	 * @param file
 	 * @return the version of the hibernate-configuration.xml file
 	 */
 	public static String getDoctypeVersion(final Plugin plugin, final Object source,
 			final String rootName, final String baseUrl) {
 		String version = ""; //$NON-NLS-1$
-		String docType = "DOCTYPE"; //$NON-NLS-1$	
-		String dtdFileExtension = ".dtd"; //$NON-NLS-1$	
+		String docType = "DOCTYPE"; //$NON-NLS-1$
+		String dtdFileExtension = ".dtd"; //$NON-NLS-1$
 
 		// Number of line used to create a single String
 		final int dtdDeclarationSize = 5;

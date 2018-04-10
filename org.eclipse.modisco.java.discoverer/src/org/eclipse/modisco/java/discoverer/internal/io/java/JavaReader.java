@@ -69,7 +69,7 @@ import org.eclipse.modisco.kdm.source.extension.discovery.ISourceRegionNotifier;
  * javaProject should reference a java project of an alive Eclipse Workspace!
  * (cf https://bugs.eclipse.org/bugs/show_bug.cgi?id=87852)
  * </p>
- * 
+ *
  * @see LibraryReader
  * @see ASTParser
  */
@@ -89,7 +89,7 @@ public class JavaReader implements IModelReader {
 
 	/**
 	 * Constructs a {@code JavaReader}.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF factory
 	 * @param options
@@ -199,7 +199,7 @@ public class JavaReader implements IModelReader {
 
 	/**
 	 * Indicate if a element is excluded from analyse (user filter choice)
-	 * 
+	 *
 	 * @param qualifiedName
 	 *            the qualified name of the element
 	 * @return
@@ -213,7 +213,7 @@ public class JavaReader implements IModelReader {
 
 	/**
 	 * Indicate if a qualified name is included in analyse (user filter choice)
-	 * 
+	 *
 	 * @param qualifiedName
 	 *            the qualified name of the element
 	 * @return
@@ -228,7 +228,7 @@ public class JavaReader implements IModelReader {
 	/**
 	 * Computes if a package does not contain any types to be analyzed
 	 * (according to user filter choice)
-	 * 
+	 *
 	 * @param aPackage
 	 * @return
 	 * @throws JavaModelException

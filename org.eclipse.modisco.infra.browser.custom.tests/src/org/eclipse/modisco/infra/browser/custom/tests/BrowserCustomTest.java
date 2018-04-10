@@ -124,7 +124,7 @@ public class BrowserCustomTest {
 		/*
 		 * Color typeColorFalse = customizationEngine.getTypeColor(classFalse);
 		 * Assert.assertTrue(typeColorFalse == null);
-		 * 
+		 *
 		 * final Color typeColorTrue =
 		 * customizationEngine.getTypeColor(classTrue);
 		 * Assert.assertTrue(typeColorTrue != null);
@@ -553,7 +553,7 @@ public class BrowserCustomTest {
 				"The element should appear directly in its own children with 'collapse links' on a FacetReference with the 'identity' query",
 				foundSelf);
 	}
-	
+
 	/** Bug 341222 - customization on feature defined in another metamodel */
 	@Test
 	public void bug341222() throws Exception {

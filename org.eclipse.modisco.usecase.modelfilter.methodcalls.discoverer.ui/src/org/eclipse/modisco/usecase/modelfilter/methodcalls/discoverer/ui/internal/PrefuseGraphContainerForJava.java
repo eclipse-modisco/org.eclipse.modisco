@@ -43,7 +43,7 @@ public final class PrefuseGraphContainerForJava extends PrefuseGraphContainer {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.gmt.modisco.infra.prefuse.PrefuseGraphContainer#initializeTreeViewContainer(prefuse
 	 * .data.Graph, java.lang.String)
@@ -54,7 +54,7 @@ public final class PrefuseGraphContainerForJava extends PrefuseGraphContainer {
 		ControlAdapter controlAdapter = new ControlAdapter() {
 			/*
 			 * (non-Javadoc)
-			 * 
+			 *
 			 * @see prefuse.controls.ControlAdapter#itemClicked(prefuse.visual.VisualItem,
 			 * java.awt.event.MouseEvent)
 			 */
@@ -66,7 +66,7 @@ public final class PrefuseGraphContainerForJava extends PrefuseGraphContainer {
 				if ((e.getButton() == MouseEvent.BUTTON1) && (e.getClickCount() > 1)) {
 					/*
 					 * We get the source object (Node) with method "item.getSourceTuple()"
-					 * 
+					 *
 					 * From the tuple, we could get the source java operation (underground
 					 * attribute)
 					 */

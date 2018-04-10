@@ -32,7 +32,7 @@ public class AdditionalButtonsComposite extends Composite {
 
 	/**
 	 * Class constructor
-	 * 
+	 *
 	 * @param parent
 	 *            The composite parent
 	 * @param style

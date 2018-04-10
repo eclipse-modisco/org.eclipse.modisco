@@ -71,7 +71,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 	public void setNumberOfIterations(final int iterations) {
 		this.numberOfIterations = iterations;
 	}
-	
+
 	public int getNumberOfIterations() {
 		return this.numberOfIterations;
 	}
@@ -259,7 +259,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 		discovery.setDicoveryDate(new Date());
 		discovery.setDiscovererClassName(DiscoverJavaModelFromJavaProject.class.getName());
 		discovery.setDiscovererId(DiscoverJavaModelFromJavaProject.ID
-				+ " v" + Activator.getDefault().getBundle().getVersion().toString()); //$NON-NLS-1$ 
+				+ " v" + Activator.getDefault().getBundle().getVersion().toString()); //$NON-NLS-1$
 		discovery.setMaxUsedMemoryInBytes(totalMemory);
 		discovery
 				.setTotalExecutionTimeInSeconds((discoveryTime / JavaBenchmarkDiscoverer.MILLISECONDS_PER_SECOND));

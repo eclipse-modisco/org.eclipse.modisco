@@ -36,7 +36,7 @@ import org.eclipse.modisco.java.discoverer.internal.Messages;
 
 /**
  * A factory which uses the JDT Binding API to build MoDisco {@link Binding}s.
- * 
+ *
  * @see IBinding
  * @see ASTParser#setResolveBindings(boolean)
  */
@@ -57,7 +57,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 
 	/**
 	 * Returns the unique instance of this factory.
-	 * 
+	 *
 	 * @return the instance.
 	 */
 	public static IBindingFactory getInstance() {
@@ -259,7 +259,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 			/*
 			 * we don't want type variables or generic types in parameter
 			 * bindings, so we replace it by the erasure
-			 * 
+			 *
 			 * @see org.eclipse.jdt.core.dom.ITypeBinding#getErasure()
 			 */
 			if (binding.getErasure() != null) {

@@ -29,7 +29,7 @@ import org.eclipse.gmt.modisco.java.TypeAccess;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class GetSubTypes implements IJavaModelQuery<Type, EList<Type>> {
 

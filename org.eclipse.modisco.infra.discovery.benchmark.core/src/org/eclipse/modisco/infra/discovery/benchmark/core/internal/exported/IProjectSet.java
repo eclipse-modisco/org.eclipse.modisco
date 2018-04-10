@@ -3,9 +3,9 @@
  * accompanying materials are made available under the terms of the Eclipse
  * Public License v1.0 which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors: Guillaume Doux - INRIA - Initial API and implementation
- * 
+ *
  ******************************************************************************/
 
 package org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported;
@@ -98,7 +98,7 @@ public interface IProjectSet extends List<IProject> {
 	 * @see java.util.List#listIterator()
 	 */
 	public abstract ListIterator<IProject> listIterator();
-	
+
 	/**
 	 * @see java.util.List#listIterator(int)
 	 */
@@ -154,7 +154,7 @@ public interface IProjectSet extends List<IProject> {
 	 * @return a List of IProject
 	 */
 	public abstract List<IProject> getProjects();
-	
+
 	/**
 	 * sort the project and return itself.
 	 * @return

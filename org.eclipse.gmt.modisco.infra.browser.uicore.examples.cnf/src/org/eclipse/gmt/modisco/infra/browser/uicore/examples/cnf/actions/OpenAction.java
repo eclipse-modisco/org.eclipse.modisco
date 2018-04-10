@@ -41,7 +41,7 @@ public class OpenAction extends Action {
 
 	/**
 	 * Construct the OpenAction with the given page.
-	 * 
+	 *
 	 * @param page
 	 *            the page to use as context to open the editor.
 	 * @param selectionProvider
@@ -55,7 +55,7 @@ public class OpenAction extends Action {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.jface.action.Action#isEnabled()
 	 */
 	@Override

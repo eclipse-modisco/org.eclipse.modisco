@@ -5,9 +5,9 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
- * 
+ *
  *    Nicolas Guyomar (Mia-Software) - initial API and implementation
  * *******************************************************************************
  *
@@ -36,7 +36,7 @@ public final class BrowseCodeUtils {
 	/**
 	 * Add an adapter to the selection and try to open correponding file and
 	 * select the piece of code
-	 * 
+	 *
 	 * @param eObject
 	 *            the selected object to be opened
 	 */

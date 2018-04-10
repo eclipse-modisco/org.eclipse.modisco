@@ -21,14 +21,14 @@ import org.eclipse.modisco.workflow.modiscoworkflow.Workflow;
 
 /**
  * API to define the workflow core
- * 
+ *
  * @author Nicolas Payneau
  */
 public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Retrieve a component at the index specified
-	 * 
+	 *
 	 * @param index
 	 *            Component index
 	 * @return an element
@@ -37,14 +37,14 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Retrieve all components of the workflow
-	 * 
+	 *
 	 * @return an element list
 	 */
 	public List<Element> getAllElements();
 
 	/**
 	 * Add a component in the workflow
-	 * 
+	 *
 	 * @param element
 	 *            Element which represents a launch configuration
 	 */
@@ -52,7 +52,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Change a component in the workflow
-	 * 
+	 *
 	 * @param index
 	 *            Component index
 	 * @param element
@@ -62,7 +62,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * To move an element up in the workflow
-	 * 
+	 *
 	 * @param index
 	 *            index of the element to move up
 	 */
@@ -70,7 +70,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * To move an element down in the workflow
-	 * 
+	 *
 	 * @param index
 	 *            index of the element to move down
 	 */
@@ -78,7 +78,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Delete a component at the index specified
-	 * 
+	 *
 	 * @param index
 	 *            Component index
 	 */
@@ -86,7 +86,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Initialize or load the workflow
-	 * 
+	 *
 	 * @param configuration
 	 *            Launch configuration associated
 	 */
@@ -94,7 +94,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Save the resource
-	 * 
+	 *
 	 * @param configuration
 	 *            Launch configuration associated
 	 */
@@ -102,7 +102,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Move the resource to a new path.
-	 * 
+	 *
 	 * @param path
 	 *            the new Workflow resource path
 	 */
@@ -110,7 +110,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Allows to remove the resource
-	 * 
+	 *
 	 * @param path
 	 *            Workflow resource path
 	 */
@@ -118,7 +118,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Export the workflow
-	 * 
+	 *
 	 * @param outputUri
 	 *            The output location
 	 */
@@ -126,7 +126,7 @@ public interface WorkflowModel extends Workflow, WorkflowModelNotifier {
 
 	/**
 	 * Synchronize resources contained in the workflow
-	 * 
+	 *
 	 * @param elements
 	 *            elements to synchronize, contained in the MoDiscoWorkflow
 	 */

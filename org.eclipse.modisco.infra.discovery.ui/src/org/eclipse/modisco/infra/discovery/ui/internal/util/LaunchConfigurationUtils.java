@@ -161,7 +161,7 @@ public class LaunchConfigurationUtils {
 		}
 		return iresource;
 	}
-	
+
 	public static List<DiscovererParameter> getExpectedInputParameters(
 			final DiscovererDescription discoverer) {
 		List<DiscovererParameter> inParameters = new ArrayList<DiscovererParameter>();
@@ -174,9 +174,9 @@ public class LaunchConfigurationUtils {
 		}
 		return inParameters;
 	}
-	
+
 	public DiscovererDescription getDiscoverer() {
 		return this.fDiscovererDesc;
 	}
-	
+
 }

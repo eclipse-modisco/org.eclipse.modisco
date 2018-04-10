@@ -25,17 +25,17 @@ public class AutoPanAction extends Action {
     private Point2D m_end   = new Point2D.Double();
     private Point2D m_cur   = new Point2D.Double();
     private int     m_bias  = 150;
-    
+
     private final TreeView treeView;
     public AutoPanAction(TreeView treeViewParameter) {
     	this.treeView = treeViewParameter;
     }
-    
+
     public void run(double frac) {
         TupleSet ts = this.m_vis.getFocusGroup(Visualization.FOCUS_ITEMS);
         if ( ts.getTupleCount() == 0 )
             return;
-        
+
         if ( frac == 0.0 ) {
             int xbias=0, ybias=0;
             switch ( this.treeView.getOrientation() ) {

@@ -171,7 +171,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					final Project projectDesc = (Project) resource;
 					final IProject project = ResourcesPlugin.getWorkspace()
 							.getRoot().getProject(projectDesc.getName());
-					final AbstractModelDiscoverer<IProject> discoverer = 
+					final AbstractModelDiscoverer<IProject> discoverer =
 							preformIteration(progressMonitor, benchmark,
 									project, discovery, i);
 					postDiscoveryDiscoInit(discovery, discoverer);
@@ -326,7 +326,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	private void safeGenerateHtmlReport(final IProgressMonitor progressMonitor, final Benchmark benchmark) {
 		try {
-			
+
 			generateHtmlReport(progressMonitor, benchmark);
 		} catch (Exception e) {
 			Logger.logError(e, "Report generation fail", Activator.getDefault()); //$NON-NLS-1$
@@ -337,8 +337,8 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * launch the generation of the HTML report and the charts for the benchmark model in parameter
 	 * @param parentMonitor
 	 * @param benchmark
-	 * @throws ReportUtilsException 
-	 * @throws CoreException 
+	 * @throws ReportUtilsException
+	 * @throws CoreException
 	 */
 	private void generateHtmlReport(final IProgressMonitor parentMonitor,
 			final Benchmark benchmark) throws ReportUtilsException, CoreException {
@@ -429,7 +429,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		for (Method method : clazz.getMethods()) {
 			if (method.isAnnotationPresent(Parameter.class)) {
 				final Parameter param = method.getAnnotation(Parameter.class);
-				if (param.name().equals(paramId) 
+				if (param.name().equals(paramId)
 						&& method.getReturnType().equals(void.class)) {
 					result = method;
 				}
@@ -535,9 +535,9 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 
 	/**
 	 * Initialize the benchmark model element with system information
-	 * @param projects 
+	 * @param projects
 	 * @return the model element
-	 * @throws DiscoveryException 
+	 * @throws DiscoveryException
 	 */
 	private Benchmark benchmarkInit(final IProjectSet projects,
 			final IProgressMonitor progressMonitor) throws DiscoveryException {
@@ -583,10 +583,10 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 *            discovery in the launch configuration
 	 * @param discoverer
 	 *            the real discoverer {@link AbstractModelDiscoverer}
-	 * @param benchmark 
+	 * @param benchmark
 	 * @param discovererId
 	 *            the discoverer id
-	 * @throws DiscoveryException 
+	 * @throws DiscoveryException
 	 */
 	private Discovery createDiscovery(final Project projectDesc,
 			final Discovery discovery, final Benchmark benchmark)
@@ -660,7 +660,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	private void postDiscoveryDiscoInit(final Discovery disco,
 			final AbstractModelDiscoverer<IProject> discoverer) {
 		if (this.iterations > 0) {
-			final MathUtils.Resolver<DiscoveryIteration> discoTimeResolver = 
+			final MathUtils.Resolver<DiscoveryIteration> discoTimeResolver =
 					new MathUtils.Resolver<DiscoveryIteration>() {
 				public double getValue(final DiscoveryIteration object) {
 					return object.getDiscoveryTimeInSeconds();
@@ -670,7 +670,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					disco.getIterations(), discoTimeResolver));
 			disco.setExecutionTimeStandardDeviation(MathUtils.standardDeviation(
 					disco.getIterations(), discoTimeResolver));
-			final MathUtils.Resolver<DiscoveryIteration> saveTimeResolver = 
+			final MathUtils.Resolver<DiscoveryIteration> saveTimeResolver =
 					new MathUtils.Resolver<DiscoveryIteration>() {
 				public double getValue(final DiscoveryIteration object) {
 					return object.getSaveTimeInSeconds();
@@ -717,7 +717,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		for (Event event : recoreder.getEvents()) {
 			if (event instanceof EndEvent
 					&& event.getEventType().getName().equals(SAVE_OPERATION)) {
-				final double saveTime = event.getTime() 
+				final double saveTime = event.getTime()
 						- ((EndEvent) event).getBeginning().getTime();
 				discoIter.setSaveTimeInSeconds(saveTime / MSINSEC);
 				discoIter.setDiscoveryTimeInSeconds(discoIter.getDiscoveryTimeInSeconds() - discoIter.getSaveTimeInSeconds());
@@ -802,7 +802,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	private List<File> createFiles(final IFolder folder, final List<File> files) throws CoreException {
 		for (IResource res : folder.members()) {
 			if (res instanceof IFolder) {
-				final List<File> newFiles = 
+				final List<File> newFiles =
 						createFiles((IFolder) res, new LinkedList<File>());
 				files.addAll(newFiles);
 			} else {
@@ -977,7 +977,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * Allow the selection of the HTML report location
 	 * @param htmlReportLoc the htmlReportLocation to set
 	 */
-	@Parameter(name = "HTML_REPORT_LOCATION", 
+	@Parameter(name = "HTML_REPORT_LOCATION",
 			description = "Tells the location of the HTML report, should be set if GENERATE_HTML_REPORT is true",
 			requiresInputValue = false)
 	public void setHtmlReportLocation(final URI htmlReportUri) {

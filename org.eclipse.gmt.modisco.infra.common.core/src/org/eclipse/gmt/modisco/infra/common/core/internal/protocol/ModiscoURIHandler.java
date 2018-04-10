@@ -34,7 +34,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#canHandle(org.eclipse.emf.common
 	 * .util.URI)
@@ -45,7 +45,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#contentDescription(org.eclipse
 	 * .emf.common.util.URI, java.util.Map)
@@ -63,7 +63,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#createInputStream(org.eclipse
 	 * .emf.common.util.URI, java.util.Map)
@@ -80,7 +80,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#createOutputStream(org.eclipse
 	 * .emf.common.util.URI, java.util.Map)
@@ -98,7 +98,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#delete(org.eclipse.emf.common
 	 * .util.URI, java.util.Map)
@@ -115,7 +115,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#exists(org.eclipse.emf.common
 	 * .util.URI, java.util.Map)
@@ -137,7 +137,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#getAttributes(org.eclipse.emf
 	 * .common.util.URI, java.util.Map)
@@ -159,7 +159,7 @@ public class ModiscoURIHandler implements URIHandler {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.emf.ecore.resource.URIHandler#setAttributes(org.eclipse.emf
 	 * .common.util.URI, java.util.Map, java.util.Map)

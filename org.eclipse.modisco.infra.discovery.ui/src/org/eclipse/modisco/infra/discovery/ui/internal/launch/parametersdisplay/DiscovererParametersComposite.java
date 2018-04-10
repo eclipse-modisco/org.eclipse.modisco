@@ -42,7 +42,7 @@ public class DiscovererParametersComposite extends Composite {
 
 		/**
 		 * This method initializes inParametersGroup
-		 * 
+		 *
 		 */
 		void createParametersGroup(final ExpandBar parametersBar,
 				final List<DiscovererParameterDisplay> discoveryParameters, final String message,
@@ -103,7 +103,7 @@ public class DiscovererParametersComposite extends Composite {
 
 	/**
 	 * This method initializes discovererParametersGroup
-	 * 
+	 *
 	 */
 	private final void createDiscovererParametersGroup() {
 		GridData gridData1 = new GridData();
@@ -135,7 +135,7 @@ public class DiscovererParametersComposite extends Composite {
 
 	/**
 	 * This method initializes inParametersGroup
-	 * 
+	 *
 	 */
 	private final void createInParametersGroup() {
 		this.inParametersGroup = new InnerParametersGroup();
@@ -155,7 +155,7 @@ public class DiscovererParametersComposite extends Composite {
 
 	/**
 	 * This method initializes inoutParametersGroup
-	 * 
+	 *
 	 */
 	private final void createInoutParametersGroup() {
 		this.inoutParametersGroup = new InnerParametersGroup();
@@ -176,7 +176,7 @@ public class DiscovererParametersComposite extends Composite {
 
 	/**
 	 * This method initializes outParametersGroup
-	 * 
+	 *
 	 */
 	private final void createOutParametersGroup() {
 		this.outParametersGroup = new InnerParametersGroup();

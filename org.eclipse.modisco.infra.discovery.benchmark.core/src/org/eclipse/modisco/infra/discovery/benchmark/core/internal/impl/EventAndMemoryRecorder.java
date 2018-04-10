@@ -1,10 +1,10 @@
 /*******************************************************************************
  * Copyright (c) 2012, 2015 INRIA and Mia-Software
- * All rights reserved. This program and the accompanying materials are made 
- * available under the terms of the Eclipse Public License v1.0 which 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v1.0 which
  * accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Guillaume Doux (INRIA) - Initial API and implementation
  *     Grégoire Dupé (Mia-Software) - Bug 483292 - [Benchmark] long must be used to store memory usage
@@ -28,20 +28,20 @@ import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmar
  */
 public class EventAndMemoryRecorder implements IEventListener {
 
-	
+
 	private long startTime;
 	private long stopTime;
 	private long maxMemoryUsed;
 	private boolean measureMemoryUse;
-	
+
 	private List<MemoryMeasurement> memoryMeasurements;
 	private List<Event> events;
-	
+
 	/**
 	 * attribute recording the memory measures in a job
 	 */
 	private MemoryMeasurementJob job;
-	
+
 	/**
 	 * constructor
 	 * @param measureMemoryUse: true if memory need to be measured
@@ -59,7 +59,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 			this.job = null;
 		}
 	}
-	
+
 	/**
 	 * Re-initialize the event and memory recorder
 	 * @return this event and memory recorder
@@ -77,13 +77,13 @@ public class EventAndMemoryRecorder implements IEventListener {
 	 * Record an event
 	 * @param event: the event to record
 	 */
-	public void notifyEvent(final Event event) {		
+	public void notifyEvent(final Event event) {
 		this.events.add(event);
 
 	}
-	
+
 	/**
-	 * Start time getter 
+	 * Start time getter
 	 * @return the start time
 	 */
 	public long getStartTime() {
@@ -91,7 +91,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 	}
 
 	/**
-	 * stop time getter 
+	 * stop time getter
 	 * @return the stop time
 	 */
 	public long getStopTime() {
@@ -99,7 +99,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 	}
 
 	/**
-	 * Max memory used getter 
+	 * Max memory used getter
 	 * @return the max memory used
 	 */
 	public long getMaxMemoryUsed() {
@@ -132,8 +132,8 @@ public class EventAndMemoryRecorder implements IEventListener {
 
 
 
-	
-	
+
+
 	/**
 	 * Start the record
 	 */
@@ -145,7 +145,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 			this.job.run(new NullProgressMonitor());
 		}
 	}
-	
+
 	/**
 	 * stop the record
 	 */
@@ -165,12 +165,12 @@ public class EventAndMemoryRecorder implements IEventListener {
 					this.maxMemoryUsed = measure.getMemoryUsed();
 				}
 			}
-			
-		
+
+
 		} catch (InterruptedException e) {
 				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
 		}
-		
-		
+
+
 	}
 }

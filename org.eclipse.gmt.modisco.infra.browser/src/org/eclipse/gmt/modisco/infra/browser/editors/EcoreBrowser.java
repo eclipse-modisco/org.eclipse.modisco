@@ -11,7 +11,7 @@
  *    Nicolas Guyomar (Mia-Software) - Code Synchronization
  *    Nicolas Guyomar (Mia_software) - Bug 333651 Remove of the MoDisco EPackage view and of the metamodel browsing button
  *    Gregoire Dupe (Mia-Software) - Bug 404263 - EditingDomainProvider does not work when using IResourceEditorInput
- *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in 
+ *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  *    Gregoire Dupe (Mia-Software) - Bug 472182 - Missing debug information in EcoreBrowser.handleChangedResources(2636)
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -660,7 +660,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * <p>
 	 * <b>see</b>: Bug 325120 - [Model Browser] don't freeze UI while loading
 	 * model
-	 * 
+	 *
 	 * @param monitor
 	 */
 	protected boolean backgroundOpenModel(final IProgressMonitor monitor) {
@@ -889,7 +889,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Create the resourceSet. This method can be overridden by subclasses.
-	 * 
+	 *
 	 * @return The ResourceSet.
 	 */
 	protected ResourceSet createResourceSet() {
@@ -921,7 +921,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	/**
 	 * If proxies are found, ask the user whether to load resources referenced
 	 * by proxies found in the given resource, and up to which depth.
-	 * 
+	 *
 	 * @param resource
 	 *            the resource in which to look for proxies to resolve
 	 * @param allResources
@@ -943,7 +943,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	/**
 	 * Adds resources referenced by proxies found in the given resources to the
 	 * set <code>allResources</code>
-	 * 
+	 *
 	 * @param resource
 	 *            the resource in which to look for proxies to resolve
 	 * @param allResources
@@ -951,7 +951,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 *            proxies
 	 * @param currentDepth
 	 *            the current depth
-	 * 
+	 *
 	 * @see EcoreBrowser#addReferencedResources(Resource, Set)
 	 */
 	private void addReferencedResourcesInternal(final Resource resource,
@@ -1048,7 +1048,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Create the left pane, containing the metaclass viewer.
-	 * 
+	 *
 	 * @param parent
 	 *            the parent composite
 	 */
@@ -1074,7 +1074,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Create the tree and its viewer
-	 * 
+	 *
 	 * @param parent
 	 *            the parent composite of the tree
 	 */
@@ -1334,7 +1334,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Create the search panel, containing a label and search field.
-	 * 
+	 *
 	 * @param parent
 	 *            the parent composite, which must have a GridLayout
 	 */
@@ -1472,7 +1472,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Adds the given metaclass to the given selection.
-	 * 
+	 *
 	 * @param addSubclasses
 	 *            also adds subclasses
 	 */
@@ -2304,7 +2304,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * Finds the path of the given element in the tree viewer. The element is
 	 * looked for at the root and under BigListItemProviders in the case the
 	 * elements are split.
-	 * 
+	 *
 	 * @return the path or <code>null</code> if the element was not found
 	 */
 	private TreePath findTreePathForElement(final EObject eObject) {
@@ -2361,7 +2361,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Restore a location (used for implementing history).
-	 * 
+	 *
 	 * @param eClass
 	 *            the metaclass viewer's selection
 	 * @param selection
@@ -2392,7 +2392,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 	/**
 	 * Refresh the editor
-	 * 
+	 *
 	 * @param metaclassViewerToo
 	 *            whether the metaclass view must be refreshed too, or only the
 	 *            tree viewer

@@ -90,7 +90,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * The constructor.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF factory
 	 */
@@ -100,7 +100,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Returns the client node of this reference.
-	 * 
+	 *
 	 * @return the client node
 	 */
 	public ASTNode getClientNode() {
@@ -109,7 +109,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Set the client node of this reference.
-	 * 
+	 *
 	 * @param clientNode
 	 *            the client node
 	 */
@@ -119,7 +119,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Returns the {@link EStructuralFeature feature}'s name of this reference.
-	 * 
+	 *
 	 * @see org.eclipse.emf.ecore.EClass#getEStructuralFeature(String)
 	 * @return the feature's name.
 	 */
@@ -129,7 +129,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Set the {@link EStructuralFeature feature}'s name of this reference.
-	 * 
+	 *
 	 * @param linkName
 	 *            the string name of the feature
 	 */
@@ -139,7 +139,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Returns the {@code Binding} representing the targeted Java entity.
-	 * 
+	 *
 	 * @return the binding
 	 */
 	public Binding getBinding() {
@@ -148,7 +148,7 @@ public class PendingElement implements ASTNode {
 
 	/**
 	 * Set the {@code Binding} representing the targeted Java entity.
-	 * 
+	 *
 	 * @param binding
 	 *            the binding
 	 */
@@ -159,7 +159,7 @@ public class PendingElement implements ASTNode {
 	/**
 	 * Affect the given {@code target} to the client node. This method use the
 	 * EMF reflexive API.
-	 * 
+	 *
 	 * @param target
 	 *            the target.
 	 */
@@ -185,7 +185,7 @@ public class PendingElement implements ASTNode {
 		// Temporary workaround : affect unresolvedMethod with name matching the AnnotationTypeMemberDeclaration
 		if (target.getOriginalCompilationUnit() != null
 				&& target.getOriginalCompilationUnit().getPackage() != null
-				&& target.getOriginalCompilationUnit().getPackage().getModel() != null) { 
+				&& target.getOriginalCompilationUnit().getPackage().getModel() != null) {
 			final NamedElement method = affectUnresolvedTarget();
 			target.getOriginalCompilationUnit().getPackage().getModel().getUnresolvedItems().add((UnresolvedItem) method);
 			method.setName(JavaUtil.getQualifiedName(target));
@@ -228,7 +228,7 @@ public class PendingElement implements ASTNode {
 	 * <p>
 	 * It will fall back to the generic {@code UnresolvedItem} meta-class for
 	 * unkown client nodes.
-	 * 
+	 *
 	 * @return an UnresolvedItem compatible with the feature's type of the
 	 *         clientNode.
 	 */

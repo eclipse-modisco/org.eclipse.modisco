@@ -37,7 +37,7 @@ import org.junit.Test;
 
 /**
  * @author Gregoire DUPE
- * 
+ *
  */
 public class Tests {
 
@@ -48,7 +48,7 @@ public class Tests {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_EMFHighlight.uiCustom"); //$NON-NLS-1$
 		FileUtils.checkEMFResource(uri, 1);
 	}
-	
+
 	@Test
 	public void jdkAndEclipseFacets() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI
@@ -59,7 +59,7 @@ public class Tests {
 		Assert.assertNotNull(facetSet);
 	}
 
-	
+
 	@Test
 	public void jdkAndEclipseFacetsCustomization() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI

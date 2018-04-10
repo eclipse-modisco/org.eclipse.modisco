@@ -66,7 +66,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManag
  * {@link LibraryReaderOptions#USE_SOURCES USE_SOURCES} option will cause the
  * creation of the model from the sources, relying on a {@code JavaReader}.
  * </p>
- * 
+ *
  * @see JavaReader
  */
 public class LibraryReader implements IModelReader {
@@ -104,7 +104,7 @@ public class LibraryReader implements IModelReader {
 
 	/**
 	 * Contructs a new {@code LibraryReader} with no options.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF factory
 	 * @param library
@@ -116,7 +116,7 @@ public class LibraryReader implements IModelReader {
 
 	/**
 	 * Contructs a new {@code LibraryReader} with options.
-	 * 
+	 *
 	 * @param factory
 	 *            the EMF factory
 	 * @param library
@@ -269,7 +269,7 @@ public class LibraryReader implements IModelReader {
 	 * {@link IPackageFragmentRoot#isArchive() archive} in which this class file
 	 * is contained. If a corresponding archive is present in the {@code model},
 	 * it is returned, or a new one is created and added to the {@code model}.
-	 * 
+	 *
 	 * @param classFile
 	 *            the class file
 	 * @param factory
@@ -307,7 +307,7 @@ public class LibraryReader implements IModelReader {
 	 * is in an archive (workspace or external), the path will be the path
 	 * inside the archive. If it is in a folder (workspace or external), the
 	 * path will be the full absolute path to this class file.
-	 * 
+	 *
 	 * @param classFile
 	 *            the class file
 	 * @return the archive-relative path
@@ -334,7 +334,7 @@ public class LibraryReader implements IModelReader {
 
 	/**
 	 * Returns the absolute path of this library in the filesystem.
-	 * 
+	 *
 	 * @param library
 	 *            the library
 	 * @return the absolute path of this library

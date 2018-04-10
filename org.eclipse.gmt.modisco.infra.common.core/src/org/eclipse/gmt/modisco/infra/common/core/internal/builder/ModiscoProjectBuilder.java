@@ -29,7 +29,7 @@ import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * This class is the MoDisco project builder implementation.
- * 
+ *
  * @author Gregoire DUPE (Mia-Software)
  */
 public class ModiscoProjectBuilder extends IncrementalProjectBuilder {
@@ -208,7 +208,7 @@ public class ModiscoProjectBuilder extends IncrementalProjectBuilder {
 
 		/*
 		 * (non-Javadoc)
-		 * 
+		 *
 		 * @see java.lang.Object#toString()
 		 */
 		@Override

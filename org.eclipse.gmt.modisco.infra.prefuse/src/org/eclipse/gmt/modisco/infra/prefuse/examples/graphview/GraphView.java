@@ -39,25 +39,25 @@ import prefuse.visual.VisualItem;
 
 @SuppressWarnings("serial")
 public class GraphView extends Display {
-	
+
     public GraphView(Graph g, String label) {
     	super(new Visualization());
-    	
+
         // --------------------------------------------------------------------
         // set up the renderers
-        
+
         LabelRenderer tr = new LabelRenderer();
         tr.setRoundedCorner(8, 8);
         this.m_vis.setRendererFactory(new DefaultRendererFactory(tr));
 
         // --------------------------------------------------------------------
         // register the data with a visualization
-        
+
         // adds graph to visualization and sets renderer label field
         setGraph(g, label);
-        
+
         // fix selected focus nodes
-        TupleSet focusGroup = this.m_vis.getGroup(Visualization.FOCUS_ITEMS); 
+        TupleSet focusGroup = this.m_vis.getGroup(Visualization.FOCUS_ITEMS);
         focusGroup.addTupleSetListener(new TupleSetListener() {
             public void tupleSetChanged(TupleSet ts, Tuple[] add, Tuple[] rem)
             {
@@ -83,20 +83,20 @@ public class GraphView extends Display {
                 GraphView.this.m_vis.run("draw"); //$NON-NLS-1$
             }
         });
-        
-        
-        
+
+
+
         // --------------------------------------------------------------------
         // create actions to process the visual data
 
 //        int hops = 30;
 //        final GraphDistanceFilter filter = new GraphDistanceFilter(GraphViewConstants.graph, hops);
 
-        ColorAction fill = new ColorAction(GraphViewConstants.nodes, 
+        ColorAction fill = new ColorAction(GraphViewConstants.nodes,
                 VisualItem.FILLCOLOR, ColorLib.rgb(200,200,255));
         fill.add(VisualItem.FIXED, ColorLib.rgb(255,100,100));
         fill.add(VisualItem.HIGHLIGHT, ColorLib.rgb(255,200,125));
-        
+
         ActionList draw = new ActionList();
 //        draw.add(filter);
         draw.add(fill);
@@ -104,18 +104,18 @@ public class GraphView extends Display {
         draw.add(new ColorAction(GraphViewConstants.nodes, VisualItem.TEXTCOLOR, ColorLib.rgb(0,0,0)));
         draw.add(new ColorAction(GraphViewConstants.edges, VisualItem.FILLCOLOR, ColorLib.gray(200)));
         draw.add(new ColorAction(GraphViewConstants.edges, VisualItem.STROKECOLOR, ColorLib.gray(200)));
-        
+
         // create the tree layout action
         RadialTreeLayout treeLayout = new RadialTreeLayout(GraphViewConstants.graph);
         //treeLayout.setAngularBounds(-Math.PI/2, Math.PI);
         this.m_vis.putAction("treeLayout", treeLayout); //$NON-NLS-1$
-        
+
         ActionList animate = new ActionList(Activity.INFINITY);
         //animate.add(new ForceDirectedLayout(GraphViewConstants.graph));
         animate.add(treeLayout);
         animate.add(fill);
         animate.add(new RepaintAction());
-        
+
         // finally, we register our ActionList with the Visualization.
         // we can later execute our Actions by invoking a method on our
         // Visualization, using the name we've chosen below.
@@ -123,16 +123,16 @@ public class GraphView extends Display {
         this.m_vis.putAction("layout", animate); //$NON-NLS-1$
 
         this.m_vis.runAfter("draw", "layout"); //$NON-NLS-1$ //$NON-NLS-2$
-        
-        
+
+
         // --------------------------------------------------------------------
         // set up a display to show the visualization
-        
+
         this.setSize(700,700);
         this.pan(350, 350);
         this.setForeground(Color.GRAY);
         this.setBackground(Color.WHITE);
-        
+
         // main display controls
         this.addControlListener(new FocusControl(1));
         this.addControlListener(new DragControl());
@@ -141,17 +141,17 @@ public class GraphView extends Display {
         this.addControlListener(new WheelZoomControl());
         this.addControlListener(new ZoomToFitControl());
         this.addControlListener(new NeighborHighlightControl());
-        
+
         this.setForeground(Color.GRAY);
         this.setBackground(Color.WHITE);
-        
-        // --------------------------------------------------------------------        
+
+        // --------------------------------------------------------------------
         // launch the visualization
-        
+
         // create a panel for editing force values
 //        ForceSimulator fsim = ((ForceDirectedLayout)animate.get(0)).getForceSimulator();
 //        JForcePanel fpanel = new JForcePanel(fsim);
-//             
+//
 //        final JValueSlider slider = new JValueSlider("Distance", 0, hops, hops);
 //        slider.addChangeListener(new ChangeListener() {
 //            public void stateChanged(ChangeEvent e) {
@@ -162,14 +162,14 @@ public class GraphView extends Display {
 //        slider.setBackground(Color.WHITE);
 //        slider.setPreferredSize(new Dimension(300,30));
 //        slider.setMaximumSize(new Dimension(300,30));
-//        
+//
 //        Box cf = new Box(BoxLayout.Y_AXIS);
 //        cf.add(slider);
 //        cf.setBorder(BorderFactory.createTitledBorder("Connectivity Filter"));
 //        fpanel.add(cf);
-//        
+//
 //        fpanel.add(Box.createVerticalGlue());
-//        
+//
 //        // create a new JSplitPane to present the interface
 //        JSplitPane split = new JSplitPane();
 //        split.setLeftComponent(display);
@@ -177,19 +177,19 @@ public class GraphView extends Display {
 //        split.setOneTouchExpandable(true);
 //        split.setContinuousLayout(false);
 //        split.setDividerLocation(700);
-        
+
         // now we run our action list
         this.m_vis.run("draw"); //$NON-NLS-1$
-        
+
 //        this.add(split);
     }
-    
+
     public void setGraph(Graph g, String label) {
         // update labeling
         DefaultRendererFactory drf = (DefaultRendererFactory)
                                                 this.m_vis.getRendererFactory();
         ((LabelRenderer)drf.getDefaultRenderer()).setTextField(label);
-        
+
         // update graph
         this.m_vis.removeGroup(GraphViewConstants.graph);
         VisualGraph vg = this.m_vis.addGraph(GraphViewConstants.graph, g);
@@ -198,5 +198,5 @@ public class GraphView extends Display {
         this.m_vis.getGroup(Visualization.FOCUS_ITEMS).setTuple(f);
         f.setFixed(false);
     }
-        
+
 } // end of class GraphView

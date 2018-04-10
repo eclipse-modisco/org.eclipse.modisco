@@ -24,7 +24,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class AmwPropParser {
 

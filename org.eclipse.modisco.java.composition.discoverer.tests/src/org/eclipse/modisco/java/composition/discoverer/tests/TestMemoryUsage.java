@@ -105,7 +105,7 @@ public class TestMemoryUsage {
 				Long.toString(this.memoryUsed),
 				Long.toString(TestMemoryUsage.MAX_MEM_AWAITED));
 		Assert.assertTrue(
-				message, 
+				message,
 				this.memoryUsed < TestMemoryUsage.MAX_MEM_AWAITED);
 	}
 

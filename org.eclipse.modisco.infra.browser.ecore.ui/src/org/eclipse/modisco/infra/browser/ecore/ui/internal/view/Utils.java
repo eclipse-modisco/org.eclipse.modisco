@@ -1,10 +1,10 @@
-/** 
+/**
  * Copyright (c) 2015 Mia-Software, and Soft-Maint
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 471020 - Ecore Explorer View
  *    Thomas Cicognani (Soft-Maint) - Bug 471020 - Ecore Explorer View
@@ -33,7 +33,7 @@ public final class Utils {
 		}
 		return result;
 	}
-	
+
 	public static EPackage getEPackage(final Object object) {
 		EPackage result = null;
 		if (object instanceof EObject) {
@@ -59,7 +59,7 @@ public final class Utils {
 		}
 		return result;
 	}
-	
+
 	public static EObject getResolvedEObject(final EObject eObject) {
 		EObject resolvedEObject = eObject;
 		if (eObject instanceof EObjectTreeElement) {

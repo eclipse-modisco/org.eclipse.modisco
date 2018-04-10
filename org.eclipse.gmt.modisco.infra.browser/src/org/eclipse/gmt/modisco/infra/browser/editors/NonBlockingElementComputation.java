@@ -26,7 +26,7 @@ import org.eclipse.ui.progress.IWorkbenchSiteProgressService;
 /**
  * Computes a value synchronously initially, and continues asynchronously if the
  * computation takes too much time.
- * 
+ *
  * @param <T>
  *            The type of the result of the computation.
  */

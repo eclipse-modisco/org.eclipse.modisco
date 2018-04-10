@@ -19,7 +19,7 @@ import org.eclipse.swt.graphics.Image;
 
 /**
  * @author Gregoire DUPE
- * 
+ *
  */
 public final class ImageUtils {
 	private static AdapterFactory composedAdapterFactory = new ComposedAdapterFactory(
@@ -32,7 +32,7 @@ public final class ImageUtils {
 	/**
 	 * Returns an image for the given model element from the EMF global
 	 * registry.
-	 * 
+	 *
 	 * @return an image or <code>null</code> if none was found for the given
 	 *         element
 	 */

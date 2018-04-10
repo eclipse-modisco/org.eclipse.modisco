@@ -38,7 +38,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.library.ClassFileParser;
 
 /**
  * A factory which uses the Java Model API to build MoDisco {@link Binding}s.
- * 
+ *
  */
 public final class JavaModelDelegateBindingFactory {
 
@@ -62,7 +62,7 @@ public final class JavaModelDelegateBindingFactory {
 
 	/**
 	 * Returns the unique instance of this factory.
-	 * 
+	 *
 	 * @return the instance.
 	 */
 	public static JavaModelDelegateBindingFactory getInstance() {
@@ -77,7 +77,7 @@ public final class JavaModelDelegateBindingFactory {
 	 * {@code ClassBinding} will only have a non-parameterized readable
 	 * {@link ClassBinding#toString() name} (eg : {@code java.lang.ArrayList})
 	 * </p>
-	 * 
+	 *
 	 * @param sig
 	 *            the java signature (eg : {@code Ljava.lang.Object;})
 	 * @param visitor
@@ -139,7 +139,7 @@ public final class JavaModelDelegateBindingFactory {
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to the Java entity
 	 * represented by the Java Model element.
-	 * 
+	 *
 	 * @param element
 	 *            the Java Model element
 	 * @param visitor

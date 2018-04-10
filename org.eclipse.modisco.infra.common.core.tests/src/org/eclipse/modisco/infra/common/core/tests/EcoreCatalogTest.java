@@ -34,7 +34,7 @@ public class EcoreCatalogTest {
 	/**
 	 * Check that when we move a facet to another directory we don't get wrong
 	 * name conflict error markers.
-	 * 
+	 *
 	 * @throws Exception
 	 */
 	@Test
@@ -68,7 +68,7 @@ public class EcoreCatalogTest {
 	 * Check that when we change the nsURI of an Ecore file the old nsURI is
 	 * removed from the EPackage.Registry. Check that when we remove an ecore
 	 * file the corresponding EPackage is removed from the EPackage.Registry
-	 * 
+	 *
 	 * @throws Exception
 	 */
 	@Test

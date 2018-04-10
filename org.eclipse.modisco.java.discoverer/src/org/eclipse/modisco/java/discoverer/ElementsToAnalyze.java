@@ -68,7 +68,7 @@ public class ElementsToAnalyze {
 
 	/**
 	 * Adds an artifact to analyze.
-	 * 
+	 *
 	 * @param element
 	 *            a {@link IJavaProject} or a {@link IPackageFragment}
 	 */

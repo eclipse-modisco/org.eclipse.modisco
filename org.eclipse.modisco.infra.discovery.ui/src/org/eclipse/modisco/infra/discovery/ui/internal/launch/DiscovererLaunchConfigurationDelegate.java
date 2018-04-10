@@ -44,7 +44,7 @@ public class DiscovererLaunchConfigurationDelegate implements ILaunchConfigurati
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.core.model.ILaunchConfigurationDelegate#launch(org.
 	 * eclipse.debug.core.ILaunchConfiguration, java.lang.String,

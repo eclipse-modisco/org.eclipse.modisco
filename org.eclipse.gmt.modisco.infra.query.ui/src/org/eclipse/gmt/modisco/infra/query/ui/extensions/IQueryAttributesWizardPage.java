@@ -22,7 +22,7 @@ public interface IQueryAttributesWizardPage extends IWizardPage {
 
 	/**
 	 * Initialize the wizard page
-	 * 
+	 *
 	 * @param modelQuerySet
 	 *            an existing query set, in which the query will be added
 	 * @param modelQuery
@@ -34,7 +34,7 @@ public interface IQueryAttributesWizardPage extends IWizardPage {
 	/**
 	 * Called when the wizard is finished to apply the attributes defined in the
 	 * wizard page to the model query.
-	 * 
+	 *
 	 * @param modelQuery
 	 *            the query to which to apply the wizard page's attributes
 	 */

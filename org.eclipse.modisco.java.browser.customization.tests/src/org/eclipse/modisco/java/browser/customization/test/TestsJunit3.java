@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  *******************************************************************************/
@@ -18,7 +18,7 @@ import junit.framework.TestSuite;
 * @generated
 */
 public class TestsJunit3 extends TestCase {
-	
+
 	/**
 	* @generated
 	*/
@@ -29,7 +29,7 @@ public class TestsJunit3 extends TestCase {
 		return suite;
 	}
 
-		
+
 /**
 * @generated
 */
@@ -38,7 +38,7 @@ public void testjavaTypesCustomizationFacetTest() throws Exception {
 	test.javaTypesCustomizationFacetTest();
 }
 
-	
-	
+
+
 }
 

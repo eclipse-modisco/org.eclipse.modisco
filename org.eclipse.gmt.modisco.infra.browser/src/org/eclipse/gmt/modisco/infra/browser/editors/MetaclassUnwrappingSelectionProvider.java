@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -19,7 +19,7 @@ import org.eclipse.jface.viewers.ISelectionProvider;
  * Unwraps the MetaclassViewer elements (see
  * {@link org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider}, from
  * which this class is derived).
- * 
+ *
  */
 public class MetaclassUnwrappingSelectionProvider extends
 		org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider {

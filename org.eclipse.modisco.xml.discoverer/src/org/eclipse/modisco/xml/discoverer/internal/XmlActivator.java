@@ -4,9 +4,9 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
- * 
+ *
  *     Fabien Giquel (Mia-Software) - initial API and implementation
  **********************************************************************************/
 package org.eclipse.modisco.xml.discoverer.internal;
@@ -24,7 +24,7 @@ public class XmlActivator extends Plugin {
 
 	// The shared instance
 	private static XmlActivator plugin;
-	
+
 	/**
 	 * The constructor
 	 */

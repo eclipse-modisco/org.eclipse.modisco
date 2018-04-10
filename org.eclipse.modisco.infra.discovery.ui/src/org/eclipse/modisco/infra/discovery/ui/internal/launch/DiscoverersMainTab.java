@@ -126,7 +126,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 	/**
 	 * This method initializes or re-initializes the source Group depending on
 	 * the selected discoverer.
-	 * 
+	 *
 	 * @param discovererDescription
 	 *            the selected discoverer (<code>null</code> if none)
 	 */
@@ -178,7 +178,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 		// close the parameter cell editors
 		this.parametersContainer.getInParametersGroup().getTableViewer().cancelEditing();
 		this.parametersContainer.getInoutParametersGroup().getTableViewer().cancelEditing();
-			
+
 		// the source changed : since the initialValue can depend on the source,
 		// initialize all parameters again
 		for (DiscovererParameterDisplay parameter : this.displayParameters) {
@@ -189,7 +189,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/**
 	 * This method initializes discovererKindGroup
-	 * 
+	 *
 	 */
 	private final void createDiscovererKindGroup() {
 		GridData gridData11 = new GridData();
@@ -255,7 +255,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#createControl(org.eclipse
 	 * .swt.widgets.Composite)
@@ -292,7 +292,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#getName()
 	 */
 	public String getName() {
@@ -301,7 +301,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#initializeFrom(org.eclipse
 	 * .debug.core.ILaunchConfiguration)
@@ -321,7 +321,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 		if (this.sourceCellEditorComposite != null && !this.sourceCellEditorComposite.isDisposed()) {
 			this.sourceCellEditorComposite.setValue(source);
 		}
-		
+
 		updateDiscovererParametersContainer(configurationModel);
 		this.checkboxOpenModel.setSelection(configurationModel.isOpenModelAfterDiscovery());
 
@@ -330,7 +330,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#performApply(org.eclipse
 	 * .debug.core.ILaunchConfigurationWorkingCopy)
@@ -361,7 +361,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.ILaunchConfigurationTab#setDefaults(org.eclipse.
 	 * debug.core.ILaunchConfigurationWorkingCopy)
@@ -372,7 +372,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.debug.ui.AbstractLaunchConfigurationTab#isValid(org.eclipse
 	 * .debug.core.ILaunchConfiguration)
@@ -409,7 +409,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.eclipse.modisco.infra.discoverymanager.ui.launch.DiscovererUpdate
 	 * #update()

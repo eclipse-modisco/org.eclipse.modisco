@@ -22,7 +22,7 @@ public class ImageProvider {
 	private static final String MODISCO_LOGO = "icons/logoMoDiscoMini.gif"; //$NON-NLS-1$
 	protected static final String CATALOG_ICON_URL = "/icons/catalog.png"; //$NON-NLS-1$
 	protected static final String ERROR_ICON_URL = "/icons/error.png"; //$NON-NLS-1$
-	
+
 	private static ImageProvider instance = new ImageProvider();
 	private Image modiscoLogo;
 	private Image catalog = null;
@@ -33,7 +33,7 @@ public class ImageProvider {
 
 	/**
 	 * Create an image descriptor from a resource
-	 * 
+	 *
 	 * @param resourcePath
 	 *            the path of the resource (in the bundle)
 	 * @return the image descriptor
@@ -66,7 +66,7 @@ public class ImageProvider {
 		}
 		return this.catalog;
 	}
-	
+
 	/** Return the icon representing a red cross */
 	public Image getErrorIcon() {
 		if (this.catalog == null) {

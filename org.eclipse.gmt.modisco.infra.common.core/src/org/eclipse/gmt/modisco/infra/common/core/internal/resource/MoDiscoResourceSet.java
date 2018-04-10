@@ -64,7 +64,7 @@ public final class MoDiscoResourceSet extends ResourceSetImpl {
 
 	/**
 	 * Return a loaded (or reloaded) EMF resource.
-	 * 
+	 *
 	 * @param uri
 	 *            the resource
 	 * @param listener
@@ -175,10 +175,10 @@ public final class MoDiscoResourceSet extends ResourceSetImpl {
 	/**
 	 * This method is used to notify the resource set that one of its resources
 	 * has been reloaded.
-	 * 
+	 *
 	 * This method is used by the
 	 * {@link AbstractMoDiscoCatalog#addWSFile(IFile)} method.
-	 * 
+	 *
 	 * @param resource
 	 *            a reloaded resource
 	 */
@@ -222,7 +222,7 @@ public final class MoDiscoResourceSet extends ResourceSetImpl {
 
 	/**
 	 * Create a URI converter that includes the {@link ModiscoURIHandler}
-	 * 
+	 *
 	 * @author nbros
 	 */
 	public static synchronized URIConverter createURIConverter() {

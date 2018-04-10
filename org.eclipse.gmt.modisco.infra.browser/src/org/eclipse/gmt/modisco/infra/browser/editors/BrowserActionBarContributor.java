@@ -8,7 +8,7 @@
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Nicolas Payneau (Mia-Software) - Enable editability
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.editors;
@@ -762,7 +762,7 @@ public class BrowserActionBarContributor extends EditingDomainActionBarContribut
 	/**
 	 * Returns false to avoid changing elements from the EPackage registry (i.e.
 	 * metamodels)
-	 * 
+	 *
 	 * @see Bug 319015 - [Model Browser] Null Pointer after deleting a field in
 	 *      a model
 	 * @see Bug 319016 - [Model Browser] ClassCastException while saving a model

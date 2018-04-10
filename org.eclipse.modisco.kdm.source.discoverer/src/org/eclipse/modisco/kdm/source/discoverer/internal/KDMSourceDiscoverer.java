@@ -89,7 +89,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create a new File system representation for the given File.
-	 * 
+	 *
 	 * @param file
 	 *            must be a directory
 	 * @return the resource containing the representation
@@ -105,7 +105,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create a new File system representation for the given project.
-	 * 
+	 *
 	 * @param project
 	 *            a project
 	 * @return the resource containing the representation
@@ -118,7 +118,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create a new File system representation for the given Eclipse container.
-	 * 
+	 *
 	 * @param aContainer
 	 *            a Eclipse container
 	 * @return the resource containing the representation
@@ -131,7 +131,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create a new File system representation for the given directory.
-	 * 
+	 *
 	 * @param directoryFile
 	 *            a directory
 	 * @param name
@@ -155,7 +155,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create a new File system representation for the given directory.
-	 * 
+	 *
 	 * @param directory
 	 *            a directory
 	 * @return the inventory container
@@ -193,7 +193,7 @@ public class KDMSourceDiscoverer {
 	 * Between multiple content types for the file, search for the most
 	 * specialized defined in this plug-in, or <code>null</code> if no content
 	 * type is associated with this file in this plug-in.
-	 * 
+	 *
 	 * @param fileName
 	 *            the file name
 	 * @return the more specialized content type defined in this plug-in
@@ -216,7 +216,7 @@ public class KDMSourceDiscoverer {
 
 	/**
 	 * Create the Inventory Item corresponding to the given file's content type.
-	 * 
+	 *
 	 * @param file
 	 *            the file
 	 * @return the inventory item

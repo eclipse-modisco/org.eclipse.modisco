@@ -58,10 +58,10 @@ public class JeeEjbAnnotationsTests {
 
 		ModelQuery queryIsInit = querySet.getQuery("IsInit"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsInit);
-		
+
 		ModelQuery queryIsApplicationException = querySet.getQuery("IsApplicationException"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsApplicationException);
-		
+
 		ModelQuery queryIsMessageDriven = querySet.getQuery("IsMessageDriven"); //$NON-NLS-1$
 		Assert.assertNotNull(queryIsMessageDriven);
 

@@ -55,7 +55,7 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	/**
 	 * Launch a java files generation, and compares result with from reference
 	 * java files.
-	 * 
+	 *
 	 * @throws URISyntaxException
 	 * @throws IOException
 	 * @throws CoreException

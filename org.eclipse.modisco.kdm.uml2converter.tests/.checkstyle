@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fileset-config file-format-version="1.2.0" simple-config="true" sync-formatter="false">
-  <fileset name="all" enabled="true" check-config-name="MoDisco" local="false">
+   <local-check-config name="MoDisco" location="../org.eclipse.emf.facet.archi.tech.rules/checkstyle/EmfFacet-6.2.checkstyle" type="project" description=""/>
+  <fileset name="all" enabled="true" check-config-name="MoDisco" local="true">
     <file-match-pattern match-pattern="." include-pattern="true"/>
   </fileset>
 </fileset-config>

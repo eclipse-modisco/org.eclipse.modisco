@@ -49,7 +49,7 @@ public class GetCalledMethods
 		}
 		return result;
 	}
-	
+
 	private final AbstractMethodDeclaration getInvoker(final EObject element) {
 		AbstractMethodDeclaration result = null;
 		if (element != null) {
@@ -61,7 +61,7 @@ public class GetCalledMethods
 		}
 		return result;
 	}
-	
+
 	private static class MethodInvocationComparator implements Comparator<AbstractMethodInvocation>  {
 
 		private static final int DEFAULT_INDEX = -2;
@@ -76,7 +76,7 @@ public class GetCalledMethods
 			 * Initially, I used location in file
 			 * to sort invocations, but needed information
 			 * is no longer retained in java model ...
-			 * 
+			 *
 			 * Perhpas could I use index of parent element
 			 * which is directly contained in block statement
 			 * of the declaring method ?
@@ -89,7 +89,7 @@ public class GetCalledMethods
 			 * specific case:
 			 * both invocations have the same index
 			 * and are contained in the same block.
-			 * 
+			 *
 			 * So we have to retrieve first common parent block
 			 * and use it to compute index ...
 			 */
@@ -98,11 +98,11 @@ public class GetCalledMethods
 				index1 = this.computeIndex(invocation1, commonBlock);
 				index2 = this.computeIndex(invocation2, commonBlock);
 			}
-			
+
 			int result = Integer.valueOf(index1).compareTo(Integer.valueOf(index2));
 			return result;
 		}
-		
+
 		private final int computeIndex(final EObject element, final Block rootBlock) {
 			int result = MethodInvocationComparator.DEFAULT_INDEX;
 			if (element.eContainer() == rootBlock) {
@@ -112,7 +112,7 @@ public class GetCalledMethods
 			}
 			return result;
 		}
-		
+
 		private final Block getRootBlock(final EObject element) {
 			Block result = null;
 			if (element != null) {
@@ -129,7 +129,7 @@ public class GetCalledMethods
 		 * lets start from an example:
 		 * block A contains another block B (with other statements)
 		 * block B contains two blocks C and D which contains respectively element1 and element2
-		 * 
+		 *
 		 * Here the algorithm:
 		 * From element1, I get the nearest parent block
 		 * Then I will iterate on all parent blocks of element2 and test identity

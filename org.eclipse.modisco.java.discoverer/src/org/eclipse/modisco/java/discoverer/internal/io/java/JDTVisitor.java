@@ -56,7 +56,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
 
 /**
  * The main class for populating the Java model from the JDT model.
- * 
+ *
  * @see Model
  * @see ASTVisitor
  */
@@ -77,7 +77,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * The resulting model.
-	 * 
+	 *
 	 * @see Model
 	 */
 	private final Model jdtModel;
@@ -105,7 +105,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * {@link BijectiveMap} used to retrieve Java comments.
-	 * 
+	 *
 	 * @see CommentsManager
 	 */
 	private final BijectiveMap<org.eclipse.jdt.core.dom.ASTNode, Comment> commentsBinding = new BijectiveMap<org.eclipse.jdt.core.dom.ASTNode, Comment>();
@@ -122,7 +122,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Current RootType.
-	 * 
+	 *
 	 * @see org.eclipse.jdt.core.dom.CompilationUnit#getTypeRoot()
 	 */
 	private AbstractTypeDeclaration rootTypeOrEnum = null;
@@ -143,7 +143,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * affect generic informations to {@code element}.
-	 * 
+	 *
 	 * @param element
 	 *            the ASTNode to initialize
 	 * @param node
@@ -206,7 +206,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the EMF factory.
-	 * 
+	 *
 	 * @return the EMF factory
 	 */
 	JavaFactory getFactory() {
@@ -215,7 +215,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the {@code Model}.
-	 * 
+	 *
 	 * @return the {@code Model}
 	 */
 	Model getJdtModel() {
@@ -224,7 +224,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the {@code BijectiveMap} dedicated to comments.
-	 * 
+	 *
 	 * @return the {@code BijectiveMap} dedicated to comments
 	 */
 	BijectiveMap<org.eclipse.jdt.core.dom.ASTNode, Comment> getCommentsBinding() {
@@ -233,7 +233,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the {@code BijectiveMap} dedicated to {@code ASTNode}s.
-	 * 
+	 *
 	 * @return the {@code BijectiveMap} dedicated to {@code ASTNode}s
 	 */
 	BijectiveMap<org.eclipse.jdt.core.dom.ASTNode, ASTNode> getBijectiveMap() {
@@ -242,7 +242,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the root type of this compilation unit.
-	 * 
+	 *
 	 * @return the root type, or {@code null} if none
 	 * @see org.eclipse.jdt.core.dom.CompilationUnit#getTypeRoot()
 	 */
@@ -252,7 +252,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the JDT {@code CompilationUnit} object currently visited.
-	 * 
+	 *
 	 * @return the JDT {@code CompilationUnit} object currently visited
 	 */
 	org.eclipse.jdt.core.dom.CompilationUnit getCuNode() {
@@ -261,7 +261,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Returns the content (text) of this compilation unit.
-	 * 
+	 *
 	 * @return the content (text) of this compilation unit.
 	 */
 	String getJavaContent() {
@@ -2014,7 +2014,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Indicate if a {@code SimpleName} is an array length access.
-	 * 
+	 *
 	 * @param node
 	 *            the {@code SimpleName}
 	 * @return {@code true} if {@code node} is a length array access,
@@ -2054,7 +2054,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * indicate if {@code node} is of type array.
-	 * 
+	 *
 	 * @param node
 	 *            the expression
 	 * @return {@code true} if it is of type array, {@code false} otherwise
@@ -2070,7 +2070,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Indicate if {@code node} is the name of a constructor declaration.
-	 * 
+	 *
 	 * @param node
 	 *            the {@code SimpleName}
 	 * @return {@code true} if this {@code SimpleName} is a name of a
@@ -2098,7 +2098,7 @@ public class JDTVisitor extends ASTVisitor {
 	 * {@link org.eclipse.jdt.core.dom.MemberRef MemberRef}. Used because a
 	 * MemberRef directly references a NamedElement, so we don't want
 	 * SingleVariableAccess, etc.
-	 * 
+	 *
 	 * @param node
 	 *            the {@code SimpleName}
 	 * @return {@code true} if {@code node} is the name of a MemberRef,
@@ -2918,7 +2918,7 @@ public class JDTVisitor extends ASTVisitor {
 	/**
 	 * Fill informations in the MoDisco {@code AbstractTypeDeclaration} node
 	 * from the JDT {@code AbstractTypeDeclaration} node.
-	 * 
+	 *
 	 * @param node
 	 *            the JDT {@code AbstractTypeDeclaration} node
 	 * @param element
@@ -3026,7 +3026,7 @@ public class JDTVisitor extends ASTVisitor {
 	/**
 	 * Fill informations in the MoDisco {@code BodyDeclaration} node from the
 	 * JDT {@code BodyDeclaration} node.
-	 * 
+	 *
 	 * @param node
 	 *            the JDT {@code BodyDeclaration} node
 	 * @param element
@@ -3067,7 +3067,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	/**
 	 * Complete the MoDisco modifier with the informations of the JDT Modifier.
-	 * 
+	 *
 	 * @param jdtModifier
 	 *            the JDT Modifier
 	 * @param modiscoModifier

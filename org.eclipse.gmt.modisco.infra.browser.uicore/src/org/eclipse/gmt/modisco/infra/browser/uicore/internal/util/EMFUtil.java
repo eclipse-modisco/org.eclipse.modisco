@@ -65,7 +65,7 @@ public class EMFUtil {
 
 	/**
 	 * Search for instances of the given EClass
-	 * 
+	 *
 	 * @param eClass
 	 *            the EClass of the elements that are looked for
 	 * @param resource
@@ -86,7 +86,7 @@ public class EMFUtil {
 
 	/**
 	 * Find and return all the metaclasses of the given resource set.
-	 * 
+	 *
 	 * @return a list of all the metaclasses of elements contained in the resource set, and
 	 *         metaclasses in resources in which metaclasses of elements in the resource set have
 	 *         been found
@@ -221,7 +221,7 @@ public class EMFUtil {
 
 	/**
 	 * Find the most specific metaclass that is common to all of the given elements.
-	 * 
+	 *
 	 * @return the common metaclass or <code>null</code> if none was found
 	 */
 	public static EClass findCommonClass(final List<EObject> elements) {
@@ -277,7 +277,7 @@ public class EMFUtil {
 
 	/**
 	 * Try to resolve the given proxy.
-	 * 
+	 *
 	 * @return whether the proxy could be resolved
 	 */
 	public static boolean tryResolve(final EObject eObject) {
@@ -353,7 +353,7 @@ public class EMFUtil {
 
 	/**
 	 * Find the {@link EObject} with the given URI in the given {@link ResourceSet}
-	 * 
+	 *
 	 * @return the element or <code>null</code> if no element was found with this URI in the given
 	 *         {@link ResourceSet}
 	 */

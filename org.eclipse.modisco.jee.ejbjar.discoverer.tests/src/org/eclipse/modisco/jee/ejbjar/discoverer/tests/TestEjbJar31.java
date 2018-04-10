@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - adapted to new discovery framework
@@ -84,7 +84,7 @@ public class TestEjbJar31 {
 			// Session Type Test
 			SessionBeanType sessionType = entBean.getSession().get(0);
 			Assert.assertTrue(sessionType.getEjbName().getValue().toString()
-					.equalsIgnoreCase("ejb-name-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("ejb-name-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getServiceEndpoint().getValue().toString()
 					.equalsIgnoreCase("service-endpoint-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getBusinessLocal().get(0).getValue().toString()
@@ -94,9 +94,9 @@ public class TestEjbJar31 {
 			Assert.assertTrue(sessionType.getEjbClass().getValue().toString()
 					.equalsIgnoreCase("ejb-class-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getSessionType().getValue().toString()
-					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("session-type-example")); //$NON-NLS-1$
 			Assert.assertTrue(sessionType.getTransactionType().getValue().toString()
-					.equalsIgnoreCase("transaction-type-example")); //$NON-NLS-1$			
+					.equalsIgnoreCase("transaction-type-example")); //$NON-NLS-1$
 
 			// Message Driven Test
 			MessageDrivenBeanType messageDriven = entBean.getMessageDriven().get(0);
@@ -143,7 +143,7 @@ public class TestEjbJar31 {
 					.equalsIgnoreCase("field-name-example")); //$NON-NLS-1$
 
 			Assert.assertTrue(entityType.getQuery().get(0).getQueryMethod().getMethodName()
-					.getValue().toString().equalsIgnoreCase("method-name-example")); //$NON-NLS-1$			
+					.getValue().toString().equalsIgnoreCase("method-name-example")); //$NON-NLS-1$
 			Assert.assertTrue(entityType.getQuery().get(0).getQueryMethod().getMethodParams()
 					.getMethodParam().get(0).getValue().toString()
 					.equalsIgnoreCase("method-param-example")); //$NON-NLS-1$

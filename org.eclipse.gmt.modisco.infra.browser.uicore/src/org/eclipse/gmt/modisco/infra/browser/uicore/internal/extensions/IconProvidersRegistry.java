@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    
+ *
  *******************************************************************************/
 
 package org.eclipse.gmt.modisco.infra.browser.uicore.internal.extensions;
@@ -85,10 +85,10 @@ public class IconProvidersRegistry extends AbstractRegistry {
 	/**
 	 * Query the icon providers registry for an icon for the given
 	 * {@link EObject}.
-	 * 
+	 *
 	 * @param eObject
 	 *            the model instance whose icon is queried
-	 * 
+	 *
 	 * @return the icon or <code>null</code> if no icon was provided
 	 */
 	public Image getIcon(final EObject eObject) {
@@ -159,7 +159,7 @@ public class IconProvidersRegistry extends AbstractRegistry {
 	/**
 	 * Read an 'iconProvider' element, and adds the icon providers to the
 	 * registry.
-	 * 
+	 *
 	 * @param configurationElement
 	 *            the 'iconProvider' element
 	 * @param metamodelId

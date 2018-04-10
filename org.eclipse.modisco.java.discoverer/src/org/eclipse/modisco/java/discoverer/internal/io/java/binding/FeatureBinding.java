@@ -18,7 +18,7 @@ package org.eclipse.modisco.java.discoverer.internal.io.java.binding;
 
 /**
  * <code>Binding</code> representing a featured Java entity.
- * 
+ *
  */
 public abstract class FeatureBinding extends Binding {
 

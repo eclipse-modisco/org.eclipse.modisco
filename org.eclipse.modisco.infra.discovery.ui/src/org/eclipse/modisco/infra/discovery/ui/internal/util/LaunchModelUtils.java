@@ -88,7 +88,7 @@ public final class LaunchModelUtils {
 
 	/**
 	 * Validate the given {@link LaunchConfiguration}.
-	 * 
+	 *
 	 * @return <code>null</code> if OK, or a localized String indicating the
 	 *         error.
 	 */

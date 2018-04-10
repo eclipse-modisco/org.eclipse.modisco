@@ -182,7 +182,7 @@ public final class Messages extends NLS {
 	public static String UI_ErrorFile_message;
 	public static String UI_modiscoEditor_menu;
 	public static String UI_CreateChild_menu_item;
-	
+
 	public static String ErrorsDialog_errors;
 
 	// public static String UI_CreateSibling_menu_item;

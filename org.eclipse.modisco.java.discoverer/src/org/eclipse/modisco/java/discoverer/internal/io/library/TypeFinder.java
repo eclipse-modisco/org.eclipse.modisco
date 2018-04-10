@@ -46,7 +46,7 @@ public class TypeFinder {
 
 	/**
 	 * Returns the {@link IType} corresponding to the supplied qualified name.
-	 * 
+	 *
 	 * @param qualifiedName
 	 *            the dot based qualified name ({@code java.lang.String} for
 	 *            example)
@@ -81,7 +81,7 @@ public class TypeFinder {
 
 	/**
 	 * Indicate if the designated type name has a corresponding {@code IType}.
-	 * 
+	 *
 	 * @param qualifiedName
 	 *            the dot based qualified name ({@code java.lang.String} for
 	 *            example)

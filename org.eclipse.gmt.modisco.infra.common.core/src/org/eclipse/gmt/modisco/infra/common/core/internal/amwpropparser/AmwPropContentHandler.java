@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
 
 /**
  * @author Gabriel Barbier
- * 
+ *
  */
 public class AmwPropContentHandler implements ContentHandler {
 

@@ -56,25 +56,25 @@ public class PrefuseGraphContainer {
 
 	private static PrefuseGraphContainer instance = new PrefuseGraphContainer();
 	protected PrefuseGraphContainer() {
-		
+
 	}
-	
+
 	public static PrefuseGraphContainer getInstance() {
 		return PrefuseGraphContainer.instance;
 	}
-	
+
 	/**
 	 * From a prefuse graph, it initializes a TreeView container,
 	 * composed of a tree (deduced from graph informations, so the
 	 * graph shall not contain cyclic links, in this case you should
 	 * use the initializeRadialGraphViewContainer method instead), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the tree
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @return a swing panel which encapsulate tree view
@@ -88,13 +88,13 @@ public class PrefuseGraphContainer {
 	 * composed of a tree (deduced from graph informations, so the
 	 * graph shall not contain cyclic links, in this case you should
 	 * use the initializeRadialGraphViewContainer method instead), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the tree
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @param image the name of the attribute which will be used to render image of nodes
@@ -108,7 +108,7 @@ public class PrefuseGraphContainer {
         final TreeView tview = new TreeView(graph, label, image);
         tview.setBackground(BACKGROUND);
         tview.setForeground(FOREGROUND);
-        
+
         // create a search panel for the tree map
         JSearchPanel search = new JSearchPanel(tview.getVisualization(),
         		TreeViewConstants.treeNodes, Visualization.SEARCH_ITEMS, label, true, true);
@@ -117,7 +117,7 @@ public class PrefuseGraphContainer {
         search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11)); //$NON-NLS-1$
         search.setBackground(BACKGROUND);
         search.setForeground(FOREGROUND);
-        
+
         final JFastLabel title = new JFastLabel("                 "); //$NON-NLS-1$
         title.setPreferredSize(new Dimension(350, 20));
         title.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -125,7 +125,7 @@ public class PrefuseGraphContainer {
         title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16)); //$NON-NLS-1$
         title.setBackground(BACKGROUND);
         title.setForeground(FOREGROUND);
-        
+
         tview.addControlListener(new ControlAdapter() {
             public void itemEntered(VisualItem item, MouseEvent e) {
                 if ( item.canGetString(label) )
@@ -145,7 +145,7 @@ public class PrefuseGraphContainer {
         box.add(search);
         box.add(Box.createHorizontalStrut(3));
         box.setBackground(BACKGROUND);
-        
+
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(BACKGROUND);
         panel.setForeground(FOREGROUND);
@@ -153,46 +153,46 @@ public class PrefuseGraphContainer {
         panel.add(box, BorderLayout.SOUTH);
         return panel;
     }
-    
+
 	/**
 	 * From a prefuse graph, it initializes a RadialGraphView container,
 	 * composed of a radial graph (deduced from graph informations), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the radial graph
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @return a swing panel which encapsulate radial graph view
 	 */
-	public JPanel initializeRadialGraphViewContainer(Graph graph, final String label) {        
+	public JPanel initializeRadialGraphViewContainer(Graph graph, final String label) {
 	    JPanel result = this.initializeRadialGraphViewContainer(graph, label, null);
 	    return result;
 	}
-	
+
 	/**
 	 * From a prefuse graph, it initializes a RadialGraphView container,
 	 * composed of a radial graph (deduced from graph informations), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the radial graph
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @param controlAdapter to add a specific listener on radial graph view
 	 * @return a swing panel which encapsulate radial graph view
 	 */
-	public JPanel initializeRadialGraphViewContainer(Graph graph, final String label, Control controlAdapter) {        
+	public JPanel initializeRadialGraphViewContainer(Graph graph, final String label, Control controlAdapter) {
         // create a new radial tree view
         final RadialGraphView gview = new RadialGraphView(graph, label);
         Visualization vis = gview.getVisualization();
-        
+
         // create a search panel for the tree map
         SearchQueryBinding sq = new SearchQueryBinding(
              (Table)vis.getGroup(RadialGraphViewConstants.treeNodes), label,
@@ -201,13 +201,13 @@ public class PrefuseGraphContainer {
         search.setShowResultCount(true);
         search.setBorder(BorderFactory.createEmptyBorder(5,5,4,0));
         search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11)); //$NON-NLS-1$
-        
+
         final JFastLabel title = new JFastLabel("                 "); //$NON-NLS-1$
         title.setPreferredSize(new Dimension(350, 20));
         title.setVerticalAlignment(SwingConstants.BOTTOM);
         title.setBorder(BorderFactory.createEmptyBorder(3,0,0,0));
         title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16)); //$NON-NLS-1$
-        
+
         gview.addControlListener(new ControlAdapter() {
             public void itemEntered(VisualItem item, MouseEvent e) {
                 if ( item.canGetString(label) )
@@ -220,61 +220,61 @@ public class PrefuseGraphContainer {
         if (controlAdapter != null) {
         	gview.addControlListener(controlAdapter);
         }
-        
+
         Box box = new Box(BoxLayout.X_AXIS);
         box.add(Box.createHorizontalStrut(10));
         box.add(title);
         box.add(Box.createHorizontalGlue());
         box.add(search);
         box.add(Box.createHorizontalStrut(3));
-        
+
         JPanel panel = new JPanel(new BorderLayout());
         panel.add(gview, BorderLayout.CENTER);
         panel.add(box, BorderLayout.SOUTH);
-        
+
         Color BACKGROUND = Color.WHITE;
         Color FOREGROUND = Color.DARK_GRAY;
         UILib.setColor(panel, BACKGROUND, FOREGROUND);
-        
+
         return panel;
     }
-	
+
 	/**
 	 * From a prefuse graph, it initializes a GraphView container,
 	 * composed of a radial graph (deduced from graph informations), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the radial graph
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @return a swing panel which encapsulate radial graph view
 	 */
-	public JPanel initializeGraphViewContainer(Graph graph, final String label) {        
+	public JPanel initializeGraphViewContainer(Graph graph, final String label) {
 	    JPanel result = this.initializeGraphViewContainer(graph, label, null);
 	    return result;
 	}
-	
+
 	/**
 	 * From a prefuse graph, it initializes a GraphView container,
 	 * composed of a radial graph (deduced from graph informations), a search
-	 * area and custom navigation (left click on an element will center 
+	 * area and custom navigation (left click on an element will center
 	 * the view on it, right click will zoom out to fit the graph into
 	 * the window, left press and move will move the graph, etc.).
-	 * 
+	 *
 	 * To encapsulate the swing component into an SWT component,
 	 * use provided method createPartControl(Composite parent, JPanel treeview)
-	 * 
+	 *
 	 * @param graph informations to build the radial graph
 	 * @param label the name of the attribute which will be used to render text of nodes
 	 * @param controlAdapter to add a specific listener on radial graph view
 	 * @return a swing panel which encapsulate radial graph view
 	 */
 	@SuppressWarnings("serial")
-	public JPanel initializeGraphViewContainer(Graph graph, final String label, Control controlAdapter) {        
+	public JPanel initializeGraphViewContainer(Graph graph, final String label, Control controlAdapter) {
 		final GraphView view = new GraphView(graph, label);
 		if (controlAdapter != null) {
 			view.addControlListener(controlAdapter);
@@ -316,7 +316,7 @@ public class PrefuseGraphContainer {
         panel.add(view, BorderLayout.CENTER);
 		return panel;
     }
-	
+
 	/**
 	 * To embed a Swing component into an SWT component.
 	 * @param parent
@@ -325,7 +325,7 @@ public class PrefuseGraphContainer {
 	public void createPartControl(Composite parent, JPanel treeview) {
 		Composite composite = new Composite(parent, SWT.EMBEDDED | SWT.NO_BACKGROUND);
 	    Frame frame = SWT_AWT.new_Frame(composite);
-	    
+
         frame.add(treeview);
 	}
 }

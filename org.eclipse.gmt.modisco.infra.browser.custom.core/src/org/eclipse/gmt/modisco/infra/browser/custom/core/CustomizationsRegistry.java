@@ -21,7 +21,7 @@ import java.util.List;
 @Deprecated
 public final class CustomizationsRegistry {
 
-	
+
 
 	private static CustomizationsRegistry instance = null;
 

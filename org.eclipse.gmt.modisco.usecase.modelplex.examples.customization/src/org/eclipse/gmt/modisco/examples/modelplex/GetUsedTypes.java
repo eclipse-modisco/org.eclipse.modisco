@@ -47,7 +47,7 @@ public class GetUsedTypes implements IJavaModelQuery<Type, EList<Type>> {
 		}
 		return result;
 	}
-	
+
 	private final Type getContainerType(final EObject source) {
 		Type result = null;
 		if (source.eContainer() instanceof Type) {

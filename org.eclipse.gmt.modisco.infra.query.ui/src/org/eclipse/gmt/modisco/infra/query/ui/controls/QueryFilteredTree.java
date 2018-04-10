@@ -43,7 +43,7 @@ public class QueryFilteredTree extends FilteredTree {
 
 	/**
 	 * Create a tree with a filter text field to select queries.
-	 * 
+	 *
 	 * @param parentComposite
 	 *            the parent composite
 	 * @param availableQuerySets

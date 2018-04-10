@@ -18,7 +18,7 @@ package org.eclipse.modisco.java.discoverer.internal.io.java.binding;
 
 /**
  * <code>Binding</code> representing a method parameter.
- * 
+ *
  */
 public class ParameterBinding extends Binding {
 

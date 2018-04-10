@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - adapted to new discovery framework (Bug 335003)
@@ -37,7 +37,7 @@ public abstract class AbstractJspDiscoverer<T> extends AbstractModelDiscoverer<T
 
 	/**
 	 * get the JSP Factory
-	 * 
+	 *
 	 * @return the JSP Factory
 	 */
 	protected static JspFactory getEFactory() {
@@ -86,7 +86,7 @@ public abstract class AbstractJspDiscoverer<T> extends AbstractModelDiscoverer<T
 
 	/**
 	 * Recursively discover all JSP files contained in the given directory into the given JSP model
-	 * 
+	 *
 	 * @throws DiscoveryException
 	 */
 	protected static void discoverDirectory(final File directory, final Model model)

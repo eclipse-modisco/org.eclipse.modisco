@@ -31,7 +31,7 @@ public class WorkflowTableContextMenu {
 
 	/**
 	 * Create a pop-up menu on item selected with right click
-	 * 
+	 *
 	 * @param shell
 	 *            Shell of selection
 	 */
@@ -77,7 +77,7 @@ public class WorkflowTableContextMenu {
 	/**
 	 * Create a pop-up menu on right click on table selection (Not item
 	 * selected)
-	 * 
+	 *
 	 * @param shell
 	 */
 	public void createPopupMenuNoSelectionItem(final Shell shell) {

@@ -23,7 +23,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 
 /**
  * {@code Binding} representing a type (Class, Interface, Annotation, or Enum).
- * 
+ *
  * @see ITypeBinding
  */
 public class ClassBinding extends Binding {

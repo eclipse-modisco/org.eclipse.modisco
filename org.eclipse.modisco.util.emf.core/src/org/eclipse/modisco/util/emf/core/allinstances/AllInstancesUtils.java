@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Grégoire Dupé (Mia-Software) - Bug 471096 - MetaclassInstance features have to be moved to an EMF dedicated plug-in
  */
@@ -23,11 +23,11 @@ import org.eclipse.modisco.util.emf.core.internal.allinstances.MetaclassInstance
  * @since 1.0.0
  */
 public final class AllInstancesUtils {
-	
+
 	private AllInstancesUtils() {
 		// Must not be used
 	}
-	
+
 	public static List<EObject> allInstances(final EClass eClass,
 			final Resource resource, final boolean includingSubTypes) {
 		final List<EObject> result = new ArrayList<EObject>();
