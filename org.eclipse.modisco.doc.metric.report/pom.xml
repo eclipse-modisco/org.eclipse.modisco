@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:m2="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.eclipse.mdt</groupId>
+    <artifactId>org.eclipse.modisco</artifactId>
+    <version>1.2.0</version>
+  </parent>
+  <groupId>org.eclipse.mdt</groupId>
+  <artifactId>org.eclipse.modisco.doc.metric.report</artifactId>
+  <version>1.2.0-SNAPSHOT</version>
+  <packaging>eclipse-plugin</packaging>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.7</version>
+            <executions>
+               <execution>
+                  <id>compute metrics</id>
+                  <phase>process-resources</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <target>
+                        <property name="releng.dir">${{releng.dir}}</property>
+                        <ant antfile="${releng.dir}/build.xml" target="compute-metric-report"
+                             inheritRefs="true"
+                             inheritAll="true">
+                           <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.compute-metric-report.reportDir"
+                                     value="${project.basedir}/report"/>
+                           <property name="org.eclipse.emf.facet.releng.tycho.util.ant-script.compute-metric-report.sourceRoot"
+                                     value="${product.source.location}"/>
+                        </ant>
+                     </target>
+                  </configuration>
+               </execution>
+            </executions>
+            <dependencies>
+               <dependency>
+                  <groupId>net.sf.saxon</groupId>
+                  <artifactId>saxon</artifactId>
+                  <version>8.7</version>
+               </dependency>
+               <dependency>
+                  <groupId>net.sf.saxon</groupId>
+                  <artifactId>saxon-dom</artifactId>
+                  <version>8.7</version>
+               </dependency>
+               <dependency>
+                  <groupId>ant-contrib</groupId>
+                  <artifactId>ant-contrib</artifactId>
+                  <version>1.0b3</version>
+                  <exclusions>
+                     <exclusion>
+                        <groupId>ant</groupId>
+                        <artifactId>ant</artifactId>
+                     </exclusion>
+                  </exclusions>
+               </dependency>
+            </dependencies>
+         </plugin>
+      </plugins>
+   </build>
+</project>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:m2="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <parent>
+      <groupId>org.eclipse.mdt</groupId>
+      <artifactId>org.eclipse.modisco</artifactId>
+      <version>1.2.0</version>
+      <relativePath>..//pom.xml</relativePath>
+   </parent>
+   <groupId>org.eclipse.mdt</groupId>
+   <artifactId>org.eclipse.modisco.doc.api.report.eclipsepackage</artifactId>
+   <version>1.2.0</version>
+   <modelVersion>4.0.0</modelVersion>
+   <packaging>eclipse-repository</packaging>
+   <profiles>
+      <profile>
+			      <id>RunEclipsePackageBuild</id>
+			      <build>
+				        <plugins>
+					          <plugin>
+			<!-- GDU: This is a hack to get the build qualifier. To my mind the property 
+				'buildQualifier' should be set by the plug-in tycho-packaging-plugin:build-qualifier 
+				(cf. http://www.eclipse.org/tycho/sitedocs/tycho-packaging-plugin/build-qualifier-mojo.html). 
+				'tycho-packaging:build-qualifier' is declared/call in the parent pom. I do 
+				not understand why the property 'buildQualifier'is properly set for others 
+				artifact and not for the eclipse-repository artifacts. -->
+						<groupId>org.codehaus.mojo</groupId>
+						            <artifactId>properties-maven-plugin</artifactId>
+						            <version>1.0-alpha-2</version>
+						            <executions>
+							<!-- We load project build properties -->
+							<execution>
+								                <id>reading-build-propeties</id>
+								                <phase>initialize</phase>
+								                <goals>
+									                  <goal>read-project-properties</goal>
+								                </goals>
+								                <configuration>
+									                  <files>
+										                    <file>${WORKSPACE}/org.eclipse.emf.facet.releng.tycho.util.finalize.properties</file>
+									                  </files>
+								                </configuration>
+							              </execution>
+						            </executions>
+					          </plugin>
+					          <plugin>
+						            <groupId>org.eclipse.tycho</groupId>
+						            <artifactId>tycho-p2-director-plugin</artifactId>
+						            <version>${tycho-version}</version>
+						            <executions>
+							              <execution>
+								                <id>materialize-products</id>
+								                <goals>
+									                  <goal>materialize-products</goal>
+								                </goals>
+							              </execution>
+							              <execution>
+								                <id>archive-products</id>
+								                <goals>
+									                  <goal>archive-products</goal>
+								                </goals>
+							              </execution>
+						            </executions>
+						            <configuration>
+						               <products>
+						                  <product>
+						                     <id>${project.artifactId}</id>
+						                     <archiveFileName>${project.artifactId}-${project.version}.${org.eclipse.emf.facet.releng.tycho.util.finalize.buildQualifier}</archiveFileName>
+						                  </product>
+						               </products>
+						            </configuration>
+					          </plugin>
+					          <plugin>
+						            <groupId>org.apache.maven.plugins</groupId>
+						            <artifactId>maven-antrun-plugin</artifactId>
+						            <version>1.7</version>
+						            <executions>
+							              <execution>
+								                <id>add_build_info_file</id>
+								                <phase>package</phase>
+								                <goals>
+									                  <goal>run</goal>
+								                </goals>
+								                <configuration>
+									                  <target>
+										<!-- We load ant-contrib tasks definitions for if, for, ... tasks -->
+										<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+										                    <ant target="createScmFiles" antfile="${releng.dir}/build_time.build.xml"/>
+										                    <for param="file">
+											                      <path>
+												                        <fileset dir="${project.build.directory}${file.separator}products"
+                                             includes="${project.name}-${project.version}*.zip"/>
+											                      </path>
+											                      <sequential>
+												                        <zip destfile="@{file}" basedir="${project.build.directory}${file.separator}svninfo"
+                                         update="true"/>
+											                      </sequential>
+										                    </for>
+									                  </target>
+								                </configuration>
+							              </execution>
+						            </executions>
+						            <dependencies>
+							              <dependency>
+								                <groupId>ant-contrib</groupId>
+								                <artifactId>ant-contrib</artifactId>
+								                <version>1.0b3</version>
+								                <exclusions>
+									                  <exclusion>
+										                    <groupId>ant</groupId>
+										                    <artifactId>ant</artifactId>
+									                  </exclusion>
+									                  <exclusion>
+										                    <groupId>org.apache.ant</groupId>
+										                    <artifactId>ant</artifactId>
+									                  </exclusion>
+								                </exclusions>
+							              </dependency>
+						            </dependencies>
+					          </plugin>
+				        </plugins>
+			      </build>
+			      <activation>
+  				      <activeByDefault>false</activeByDefault>
+  				      <property>
+  					        <name>env.BUILD_ECLIPSE_PACKAGES</name>
+  					        <value>true</value>
+  				      </property>
+    		   </activation>
+		    </profile>
+      <profile>
+         <id>RunApiUseAnalysis</id>
+         <build>
+            <plugins>
+               <plugin>
+                  <groupId>org.eclipse.tycho.extras</groupId>
+                  <artifactId>tycho-eclipserun-plugin</artifactId>
+                  <version>0.21.0</version>
+                  <executions>
+                     <execution>
+                        <id>install-api-report</id>
+                        <goals>
+                           <goal>eclipse-run</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                           <argLine>-Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.properties=/var/lib/jenkins_slave/workspace/org.eclipse.modisco-master-helios/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/releng-build.properties -Dorg.eclipse.emf.facet.releng.tycho.util.apiUse.target=${project.build.directory}</argLine>
+                           <appArgLine>-application org.eclipse.ant.core.antRunner -buildfile /var/lib/jenkins_slave/workspace/org.eclipse.modisco-master-helios/org.eclipse.emf.facet.releng/org.eclipse.emf.facet.releng.tycho.util/apiuse/apiuse.build.xml -vmargs</appArgLine>
+                           <dependencies>
+                              <dependency>
+                                 <artifactId>org.apache.ant</artifactId>
+                                 <type>eclipse-plugin</type>
+                              </dependency>
+                              <dependency>
+                                 <artifactId>org.eclipse.pde.api.tools</artifactId>
+                                 <type>eclipse-plugin</type>
+                              </dependency>
+                           </dependencies>
+                           <repositories>
+                              <repository>
+                                 <id>Helios</id>
+                                 <layout>p2</layout>
+                                 <url>http://download.eclipse.org/releases/helios/</url>
+                              </repository>
+                           </repositories>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+         <activation>
+            <activeByDefault>false</activeByDefault>
+            <property>
+               <name>env.RUN_API_USE_ANALYSIS</name>
+               <value>true</value>
+            </property>
+         </activation>
+      </profile>
+   </profiles>
+</project>
