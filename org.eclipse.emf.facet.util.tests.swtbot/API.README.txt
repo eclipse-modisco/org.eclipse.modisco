@@ -1,0 +1,16 @@
+/*******************************************************************************
+ * Copyright (c) 2011 CEA LIST.
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Nicolas Guyomar (Mia-Software) - Bug 343811 - EMF Facet Regression : Created elements in a table are not serialized
+ *   Nicolas Guyomar (Mia-Software) - Bug 342154 - EMF Facet API should be covered with Unit tests
+ *******************************************************************************/
+org.eclipse.emf.facet.util.tests.swtbot
+	x-friends:="org.eclipse.emf.facet.widgets.nattable.tests" for testing purposes
+	x-friends:="org.eclipse.emf.facet.query.java.ui.tests" for testing purposes
+	x-friends:="org.eclipse.emf.facet.util.emf.ui.tests" for testing purposes

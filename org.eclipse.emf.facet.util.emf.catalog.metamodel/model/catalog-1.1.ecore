@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2015 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+   Grégoire Dupé (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model 
+ -->
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="catalog" nsURI="http://www.eclipse.org/emf/facet/catalog/1.1.0/internal/catalog/"
+    nsPrefix="catalog">
+  <eClassifiers xsi:type="ecore:EClass" name="InstallAndWokspaceCatalog">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A EMF Facet Catalog catalog is a way to references sets of EObject.&#xD;&#xA;It has to be subclassed for each user catalog, especially to create derived links to access elements with their right type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="installedEntries" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;installedEntries&quot; represents all the EObject initially registered through the registration extension point."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workspaceEntries" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;installedEntries&quot; represents all the EObject initially registered through the registration extension point."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
