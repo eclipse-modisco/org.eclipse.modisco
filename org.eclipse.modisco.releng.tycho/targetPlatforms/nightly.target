@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target includeMode="feature" name="Eclipse Modisco Nightly Build Target Platform" sequenceNumber="16">
+<locations>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.pde.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>  
+    <!--repository location="https://download.eclipse.org/eclipse/updates/I-builds"/-->
+    <repository location="https://download.eclipse.org/releases/2019-09"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.acceleo.runtime.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/acceleo/updates/releases/3.7/R201902261618"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.m2m.atl.sdk.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/mmt/atl/updates/milestones/4.1/S201908031203"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+	<unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.swtbot.ide.feature.group" version="0.0.0"/>
+    <!--unit id="org.eclipse.swtbot.eclipse.test.junit4.feature.group" version="0.0.0"/-->
+    <unit id="org.eclipse.swtbot.eclipse.test.junit.feature.group" version="0.0.0"/>
+    <!--unit id="org.eclipse.swtbot.junit4" version="0.0.0"/-->
+    <unit id="org.eclipse.swtbot.forms.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.swtbot.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0"/>
+    <!--unit id="org.eclipse.emf.examples.library" version="0.0.0"/-->
+    <!--repository location="https://download.eclipse.org/modeling/emf/emf/builds/nightly"/-->
+    <repository location="https://download.eclipse.org/modeling/emf/emf/builds/release/latest"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.emf.cdo.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.net4j.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.net4j.db.derby.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/emf/cdo/updates/interim"/-->
+    <repository location="http://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/emf/query/updates/interim"/-->
+    <repository location="https://download.eclipse.org/modeling/emf/query/updates/releases/R201706061326"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
+    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R201706061339"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.emf.validation.sdk.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
+    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R201706061352"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/birt/update-site/4.6/"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.gmf.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
+    <repository location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R201706061437"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.ocl.all.sdk.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/mdt/ocl/updates/nightly/latest"/>
+    <repository location="https://download.eclipse.org/modeling/mdt/ocl/updates/interim/latest"/>
+    <repository location="https://download.eclipse.org/modeling/mdt/ocl/updates/milestones/latest"/-->
+    <repository location="https://download.eclipse.org/modeling/mdt/ocl/updates/releases/latest"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.uml2.sdk.feature.group" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/modeling/mdt/uml2/updates/interim/latest"/>
+    <repository location="https://download.eclipse.org/modeling/mdt/uml2/updates/milestones/latest"/-->
+    <repository location="https://download.eclipse.org/modeling/mdt/uml2/updates/releases/latest"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/cbi/updates/license"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="com.google.guava" version="0.0.0"/>
+    <unit id="org.antlr.runtime" version="3.0.0.v200803061811"/> 
+    <unit id="org.antlr.runtime.source" version="3.0.0.v200803061811"/> 
+    <unit id="org.apache.commons.cli" version="0.0.0"/>
+    <unit id="org.apache.lucene" version="0.0.0"/>
+    <unit id="org.hamcrest" version="0.0.0"/>
+    <unit id="org.prefuse" version="0.0.0"/>
+    <unit id="org.prefuse.source" version="0.0.0"/>
+    <!--repository location="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+    <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-S"/>
+    <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-R"/-->
+    <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository"/>
+  </location>
+</locations>
+</target>
