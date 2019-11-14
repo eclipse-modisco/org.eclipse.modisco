@@ -77,9 +77,9 @@
     <module>org.eclipse.gmt.modisco.xml</module>
     <module>org.eclipse.gmt.modisco.xml.browser.customization</module>
     <module>org.eclipse.modisco.doc</module>
-    <module>org.eclipse.modisco.doc.api.report</module>
+    <!--module>org.eclipse.modisco.doc.api.report</module>
     <module>org.eclipse.modisco.doc.metric.report</module>
-    <module>org.eclipse.modisco.doc.test.report</module>
+    <module>org.eclipse.modisco.doc.test.report</module-->
     <module>org.eclipse.modisco.eclipseplugin</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>
