@@ -1,4 +1,4 @@
-// $ANTLR 3.0 C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g 2010-10-25 10:23:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 JSP.g 2019-11-14 15:50:29
 
 /**
  *  Copyright (c) 2010 Mia-Software.
@@ -6,11 +6,11 @@
  *  are made available under the terms of the Eclipse Public License v1.0
  *  which accompanies this distribution, and is available at
  *  http://www.eclipse.org/legal/epl-v10.html
- *
+ *  
  *  Contributors:
- *
+ *  
  *       Nicolas Guyomar (Mia-Software) - initial API and implementation
- *
+ * 
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
   import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
@@ -22,76 +22,74 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-@SuppressWarnings("all")
 public class JSPLexer extends Lexer {
-    public static final int JSPOPENEXPR=24;
-    public static final int OPENJSPCMT=61;
-    public static final int CLOSEEXPR=57;
-    public static final int CDATA=6;
-    public static final int JSPCLOSEFWD=34;
-    public static final int JSPCLOSEFALL=38;
-    public static final int LETTER=18;
-    public static final int OPENDECL=58;
-    public static final int DQUOTE=13;
-    public static final int CLOSEXMLCMT=64;
-    public static final int CLOSESCRIPTLET=55;
-    public static final int JSPCLOSEACT=27;
-    public static final int ID=8;
-    public static final int EOF=-1;
-    public static final int JSPOPENINVOKE=50;
-    public static final int CLOSEDECL=59;
-    public static final int JSPOPENOUTPUT=52;
-    public static final int JSPCLOSEINC=32;
-    public static final int JSPOPENFALL=37;
-    public static final int JSP_COMMENT=9;
-    public static final int T66=66;
-    public static final int JSPTAGOPEN=22;
-    public static final int T67=67;
-    public static final int CLOSEJSPCMT=62;
-    public static final int T68=68;
-    public static final int T69=69;
-    public static final int JSPCLOSEBODY=49;
-    public static final int EQUAL=16;
-    public static final int JSPOPENPLUG=35;
-    public static final int OPENSCRIPLET=54;
-    public static final int OPENEXPR=56;
-    public static final int JSPCLOSEPARAS=41;
     public static final int DOCTYPE=5;
-    public static final int XMLDECLOPEN=65;
-    public static final int IDDigit=19;
-    public static final int SpecialCharacter=12;
-    public static final int JSPOPENPARAS=40;
-    public static final int OPENDIRECT=60;
-    public static final int JSPOPENTEXT=44;
-    public static final int JSPCLOSEPLUG=36;
-    public static final int DDOT=15;
-    public static final int JSPOPENDOBODY=51;
-    public static final int LINE_COMMENT=10;
-    public static final int OPENCLOSE=21;
-    public static final int JSPCLOSETEXT=45;
-    public static final int JSPOPENDIR=26;
-    public static final int XMLDECL=4;
-    public static final int JSPTAGCLOSE=23;
-    public static final int OPENXMLCMT=63;
-    public static final int SQUOTE=14;
-    public static final int INTERNAL_DTD=17;
-    public static final int Digit=11;
-    public static final int Tokens=70;
-    public static final int JSPOPENINC=31;
-    public static final int JSPOPENDECL=25;
-    public static final int JSPCLOSEATTR=46;
+    public static final int CLOSEXMLCMT=64;
     public static final int JSPOPENATTR=47;
-    public static final int JSPCLOSEROOT=43;
-    public static final int JSPOPENFWD=33;
-    public static final int WS=7;
+    public static final int Digit=11;
+    public static final int CLOSESCRIPTLET=55;
+    public static final int OPENDIRECT=60;
+    public static final int OPENJSPCMT=61;
+    public static final int JSPOPENEXPR=24;
+    public static final int T__69=69;
     public static final int JSPUSEBEAN=28;
+    public static final int OPENEXPR=56;
+    public static final int JSPCLOSEFALL=38;
+    public static final int JSPOPENDOBODY=51;
+    public static final int JSPCLOSEINC=32;
+    public static final int JSPOPENPARA=39;
+    public static final int JSPCLOSEPLUG=36;
+    public static final int JSPOPENROOT=42;
+    public static final int DQUOTE=13;
+    public static final int JSPOPENPLUG=35;
+    public static final int SQUOTE=14;
+    public static final int T__67=67;
+    public static final int JSPOPENPARAS=40;
+    public static final int CLOSEEXPR=57;
+    public static final int JSPCLOSEPARAS=41;
+    public static final int T__68=68;
+    public static final int OPENCLOSE=21;
+    public static final int JSPCLOSEACT=27;
+    public static final int XMLDECLOPEN=65;
+    public static final int JSPOPENDECL=25;
+    public static final int INTERNAL_DTD=17;
+    public static final int JSPOPENINC=31;
     public static final int JSPSET=29;
     public static final int JSPGET=30;
-    public static final int JSPOPENBODY=48;
-    public static final int WS2=20;
+    public static final int JSPOPENOUTPUT=52;
+    public static final int JSPCLOSEATTR=46;
+    public static final int OPENXMLCMT=63;
+    public static final int JSPCLOSETEXT=45;
+    public static final int ID=8;
     public static final int JSPELEMENTOP=53;
-    public static final int JSPOPENPARA=39;
-    public static final int JSPOPENROOT=42;
+    public static final int LETTER=18;
+    public static final int JSPCLOSEFWD=34;
+    public static final int CDATA=6;
+    public static final int JSPOPENFWD=33;
+    public static final int SpecialCharacter=12;
+    public static final int JSPOPENTEXT=44;
+    public static final int WS=7;
+    public static final int JSPCLOSEROOT=43;
+    public static final int T__66=66;
+    public static final int JSPOPENFALL=37;
+    public static final int LINE_COMMENT=10;
+    public static final int JSPOPENINVOKE=50;
+    public static final int DDOT=15;
+    public static final int OPENDECL=58;
+    public static final int JSPOPENBODY=48;
+    public static final int EQUAL=16;
+    public static final int OPENSCRIPLET=54;
+    public static final int CLOSEJSPCMT=62;
+    public static final int EOF=-1;
+    public static final int JSPOPENDIR=26;
+    public static final int JSP_COMMENT=9;
+    public static final int CLOSEDECL=59;
+    public static final int IDDigit=19;
+    public static final int JSPTAGOPEN=22;
+    public static final int JSPTAGCLOSE=23;
+    public static final int JSPCLOSEBODY=49;
+    public static final int XMLDECL=4;
+    public static final int WS2=20;
 
     //This method redirect error messages from ANTLR to MoDisco Logger
      @Override
@@ -107,95 +105,112 @@ public class JSPLexer extends Lexer {
             this.filePath = path;
         }
 
-    public JSPLexer() {;}
+
+    // delegates
+    // delegators
+
+    public JSPLexer() {;} 
     public JSPLexer(CharStream input) {
-        super(input);
+        this(input, new RecognizerSharedState());
     }
-    public String getGrammarFileName() { return "C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g"; }
+    public JSPLexer(CharStream input, RecognizerSharedState state) {
+        super(input,state);
 
-    // $ANTLR start T66
-    public final void mT66() throws RecognitionException {
+    }
+    public String getGrammarFileName() { return "JSP.g"; }
+
+    // $ANTLR start "T__66"
+    public final void mT__66() throws RecognitionException {
         try {
-            int _type = T66;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:39:7: ( '>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:39:7: '>'
+            int _type = T__66;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:40:7: ( '>' )
+            // JSP.g:40:9: '>'
             {
-            match('>');
+            match('>'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end T66
+    // $ANTLR end "T__66"
 
-    // $ANTLR start T67
-    public final void mT67() throws RecognitionException {
+    // $ANTLR start "T__67"
+    public final void mT__67() throws RecognitionException {
         try {
-            int _type = T67;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:40:7: ( '<' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:40:7: '<'
+            int _type = T__67;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:41:7: ( '<' )
+            // JSP.g:41:9: '<'
             {
-            match('<');
+            match('<'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end T67
+    // $ANTLR end "T__67"
 
-    // $ANTLR start T68
-    public final void mT68() throws RecognitionException {
+    // $ANTLR start "T__68"
+    public final void mT__68() throws RecognitionException {
         try {
-            int _type = T68;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:41:7: ( '</jsp:element>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:41:7: '</jsp:element>'
+            int _type = T__68;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:42:7: ( '</jsp:element>' )
+            // JSP.g:42:9: '</jsp:element>'
             {
-            match("</jsp:element>");
+            match("</jsp:element>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end T68
+    // $ANTLR end "T__68"
 
-    // $ANTLR start T69
-    public final void mT69() throws RecognitionException {
+    // $ANTLR start "T__69"
+    public final void mT__69() throws RecognitionException {
         try {
-            int _type = T69;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:42:7: ( ';' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:42:7: ';'
+            int _type = T__69;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:43:7: ( ';' )
+            // JSP.g:43:9: ';'
             {
-            match(';');
+            match(';'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end T69
+    // $ANTLR end "T__69"
 
-    // $ANTLR start CDATA
+    // $ANTLR start "CDATA"
     public final void mCDATA() throws RecognitionException {
         try {
             int _type = CDATA;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:5: ( '<![CDATA[' ( options {greedy=false; } : . )* ']]>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:5: '<![CDATA[' ( options {greedy=false; } : . )* ']]>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:261:3: ( '<![CDATA[' ( options {greedy=false; } : . )* ']]>' )
+            // JSP.g:261:5: '<![CDATA[' ( options {greedy=false; } : . )* ']]>'
             {
-            match("<![CDATA[");
+            match("<![CDATA["); 
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:17: ( options {greedy=false; } : . )*
+            // JSP.g:261:17: ( options {greedy=false; } : . )*
             loop1:
             do {
                 int alt1=2;
@@ -207,31 +222,31 @@ public class JSPLexer extends Lexer {
                     if ( (LA1_1==']') ) {
                         int LA1_3 = input.LA(3);
 
-                        if ( ((LA1_3>='\u0000' && LA1_3<='=')||(LA1_3>='?' && LA1_3<='\uFFFE')) ) {
-                            alt1=1;
-                        }
-                        else if ( (LA1_3=='>') ) {
+                        if ( (LA1_3=='>') ) {
                             alt1=2;
+                        }
+                        else if ( ((LA1_3>='\u0000' && LA1_3<='=')||(LA1_3>='?' && LA1_3<='\uFFFF')) ) {
+                            alt1=1;
                         }
 
 
                     }
-                    else if ( ((LA1_1>='\u0000' && LA1_1<='\\')||(LA1_1>='^' && LA1_1<='\uFFFE')) ) {
+                    else if ( ((LA1_1>='\u0000' && LA1_1<='\\')||(LA1_1>='^' && LA1_1<='\uFFFF')) ) {
                         alt1=1;
                     }
 
 
                 }
-                else if ( ((LA1_0>='\u0000' && LA1_0<='\\')||(LA1_0>='^' && LA1_0<='\uFFFE')) ) {
+                else if ( ((LA1_0>='\u0000' && LA1_0<='\\')||(LA1_0>='^' && LA1_0<='\uFFFF')) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:261:44: .
+            	    // JSP.g:261:44: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -241,35 +256,37 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("]]>");
+            match("]]>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CDATA
+    // $ANTLR end "CDATA"
 
-    // $ANTLR start LINE_COMMENT
+    // $ANTLR start "LINE_COMMENT"
     public final void mLINE_COMMENT() throws RecognitionException {
         try {
             int _type = LINE_COMMENT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:5: ( '<!--' ( options {greedy=false; } : . ) ( . )* '-->' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:5: '<!--' ( options {greedy=false; } : . ) ( . )* '-->'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1196:3: ( '<!--' ( options {greedy=false; } : . ) ( . )* '-->' )
+            // JSP.g:1197:5: '<!--' ( options {greedy=false; } : . ) ( . )* '-->'
             {
-            match("<!--");
+            match("<!--"); 
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:12: ( options {greedy=false; } : . )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:39: .
+            // JSP.g:1197:12: ( options {greedy=false; } : . )
+            // JSP.g:1197:39: .
             {
-            matchAny();
+            matchAny(); 
 
             }
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:41: ( . )*
+            // JSP.g:1197:41: ( . )*
             loop2:
             do {
                 int alt2=2;
@@ -284,28 +301,28 @@ public class JSPLexer extends Lexer {
                         if ( (LA2_3=='>') ) {
                             alt2=2;
                         }
-                        else if ( ((LA2_3>='\u0000' && LA2_3<='=')||(LA2_3>='?' && LA2_3<='\uFFFE')) ) {
+                        else if ( ((LA2_3>='\u0000' && LA2_3<='=')||(LA2_3>='?' && LA2_3<='\uFFFF')) ) {
                             alt2=1;
                         }
 
 
                     }
-                    else if ( ((LA2_1>='\u0000' && LA2_1<=',')||(LA2_1>='.' && LA2_1<='\uFFFE')) ) {
+                    else if ( ((LA2_1>='\u0000' && LA2_1<=',')||(LA2_1>='.' && LA2_1<='\uFFFF')) ) {
                         alt2=1;
                     }
 
 
                 }
-                else if ( ((LA2_0>='\u0000' && LA2_0<=',')||(LA2_0>='.' && LA2_0<='\uFFFE')) ) {
+                else if ( ((LA2_0>='\u0000' && LA2_0<=',')||(LA2_0>='.' && LA2_0<='\uFFFF')) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1197:41: .
+            	    // JSP.g:1197:41: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -315,35 +332,37 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("-->");
+            match("-->"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end LINE_COMMENT
+    // $ANTLR end "LINE_COMMENT"
 
-    // $ANTLR start JSP_COMMENT
+    // $ANTLR start "JSP_COMMENT"
     public final void mJSP_COMMENT() throws RecognitionException {
         try {
             int _type = JSP_COMMENT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:5: ( '<%--' ( options {greedy=false; } : . ) ( . )* '--%>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:5: '<%--' ( options {greedy=false; } : . ) ( . )* '--%>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1201:3: ( '<%--' ( options {greedy=false; } : . ) ( . )* '--%>' )
+            // JSP.g:1202:5: '<%--' ( options {greedy=false; } : . ) ( . )* '--%>'
             {
-            match("<%--");
+            match("<%--"); 
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:12: ( options {greedy=false; } : . )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:39: .
+            // JSP.g:1202:12: ( options {greedy=false; } : . )
+            // JSP.g:1202:39: .
             {
-            matchAny();
+            matchAny(); 
 
             }
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:41: ( . )*
+            // JSP.g:1202:41: ( . )*
             loop3:
             do {
                 int alt3=2;
@@ -361,34 +380,34 @@ public class JSPLexer extends Lexer {
                             if ( (LA3_4=='>') ) {
                                 alt3=2;
                             }
-                            else if ( ((LA3_4>='\u0000' && LA3_4<='=')||(LA3_4>='?' && LA3_4<='\uFFFE')) ) {
+                            else if ( ((LA3_4>='\u0000' && LA3_4<='=')||(LA3_4>='?' && LA3_4<='\uFFFF')) ) {
                                 alt3=1;
                             }
 
 
                         }
-                        else if ( ((LA3_3>='\u0000' && LA3_3<='$')||(LA3_3>='&' && LA3_3<='\uFFFE')) ) {
+                        else if ( ((LA3_3>='\u0000' && LA3_3<='$')||(LA3_3>='&' && LA3_3<='\uFFFF')) ) {
                             alt3=1;
                         }
 
 
                     }
-                    else if ( ((LA3_1>='\u0000' && LA3_1<=',')||(LA3_1>='.' && LA3_1<='\uFFFE')) ) {
+                    else if ( ((LA3_1>='\u0000' && LA3_1<=',')||(LA3_1>='.' && LA3_1<='\uFFFF')) ) {
                         alt3=1;
                     }
 
 
                 }
-                else if ( ((LA3_0>='\u0000' && LA3_0<=',')||(LA3_0>='.' && LA3_0<='\uFFFE')) ) {
+                else if ( ((LA3_0>='\u0000' && LA3_0<=',')||(LA3_0>='.' && LA3_0<='\uFFFF')) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1202:41: .
+            	    // JSP.g:1202:41: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -398,58 +417,57 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("--%>");
+            match("--%>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSP_COMMENT
+    // $ANTLR end "JSP_COMMENT"
 
-    // $ANTLR start XMLDECL
+    // $ANTLR start "XMLDECL"
     public final void mXMLDECL() throws RecognitionException {
         try {
             int _type = XMLDECL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:3: ( '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:3: '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1206:3: ( '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>' )
+            // JSP.g:1207:3: '<?' ( 'x' | 'X' ) ( 'm' | 'M' ) ( 'l' | 'L' ) ( options {greedy=false; } : . )* '?>'
             {
-            match("<?");
+            match("<?"); 
 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:35: ( options {greedy=false; } : . )*
+            // JSP.g:1207:35: ( options {greedy=false; } : . )*
             loop4:
             do {
                 int alt4=2;
@@ -461,22 +479,22 @@ public class JSPLexer extends Lexer {
                     if ( (LA4_1=='>') ) {
                         alt4=2;
                     }
-                    else if ( ((LA4_1>='\u0000' && LA4_1<='=')||(LA4_1>='?' && LA4_1<='\uFFFE')) ) {
+                    else if ( ((LA4_1>='\u0000' && LA4_1<='=')||(LA4_1>='?' && LA4_1<='\uFFFF')) ) {
                         alt4=1;
                     }
 
 
                 }
-                else if ( ((LA4_0>='\u0000' && LA4_0<='>')||(LA4_0>='@' && LA4_0<='\uFFFE')) ) {
+                else if ( ((LA4_0>='\u0000' && LA4_0<='>')||(LA4_0>='@' && LA4_0<='\uFFFF')) ) {
                     alt4=1;
                 }
 
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1207:62: .
+            	    // JSP.g:1207:62: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -486,98 +504,93 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match("?>");
+            match("?>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end XMLDECL
+    // $ANTLR end "XMLDECL"
 
-    // $ANTLR start DOCTYPE
+    // $ANTLR start "DOCTYPE"
     public final void mDOCTYPE() throws RecognitionException {
         try {
             int _type = DOCTYPE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:7: ( '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:7: '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1211:5: ( '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>' )
+            // JSP.g:1212:7: '<!' ( 'D' | 'd' ) ( 'O' | 'o' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'Y' | 'y' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( options {greedy=false; } : . )* '>'
             {
-            match("<!");
+            match("<!"); 
 
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='O'||input.LA(1)=='o' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='Y'||input.LA(1)=='y' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:74: ( options {greedy=false; } : . )*
+            // JSP.g:1212:74: ( options {greedy=false; } : . )*
             loop5:
             do {
                 int alt5=2;
@@ -586,16 +599,16 @@ public class JSPLexer extends Lexer {
                 if ( (LA5_0=='>') ) {
                     alt5=2;
                 }
-                else if ( ((LA5_0>='\u0000' && LA5_0<='=')||(LA5_0>='?' && LA5_0<='\uFFFE')) ) {
+                else if ( ((LA5_0>='\u0000' && LA5_0<='=')||(LA5_0>='?' && LA5_0<='\uFFFF')) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1212:101: .
+            	    // JSP.g:1212:101: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -605,25 +618,26 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match('>');
+            match('>'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end DOCTYPE
+    // $ANTLR end "DOCTYPE"
 
-    // $ANTLR start INTERNAL_DTD
+    // $ANTLR start "INTERNAL_DTD"
     public final void mINTERNAL_DTD() throws RecognitionException {
         try {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:25: ( '[' ( options {greedy=false; } : . )* ']' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:25: '[' ( options {greedy=false; } : . )* ']'
+            // JSP.g:1215:23: ( '[' ( options {greedy=false; } : . )* ']' )
+            // JSP.g:1215:25: '[' ( options {greedy=false; } : . )* ']'
             {
-            match('[');
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:29: ( options {greedy=false; } : . )*
+            match('['); 
+            // JSP.g:1215:29: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -632,16 +646,16 @@ public class JSPLexer extends Lexer {
                 if ( (LA6_0==']') ) {
                     alt6=2;
                 }
-                else if ( ((LA6_0>='\u0000' && LA6_0<='\\')||(LA6_0>='^' && LA6_0<='\uFFFE')) ) {
+                else if ( ((LA6_0>='\u0000' && LA6_0<='\\')||(LA6_0>='^' && LA6_0<='\uFFFF')) ) {
                     alt6=1;
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1215:56: .
+            	    // JSP.g:1215:56: .
             	    {
-            	    matchAny();
+            	    matchAny(); 
 
             	    }
             	    break;
@@ -651,7 +665,7 @@ public class JSPLexer extends Lexer {
                 }
             } while (true);
 
-            match(']');
+            match(']'); 
 
             }
 
@@ -659,110 +673,77 @@ public class JSPLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end INTERNAL_DTD
+    // $ANTLR end "INTERNAL_DTD"
 
-    // $ANTLR start ID
+    // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1219:7: ( ( LETTER | '_' | '&' | '#' ) ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )* )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1219:7: ( LETTER | '_' | '&' | '#' ) ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )*
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1219:5: ( ( LETTER | '_' | '&' | '#' ) ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )* )
+            // JSP.g:1219:7: ( LETTER | '_' | '&' | '#' ) ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )*
             {
             if ( (input.LA(1)>='#' && input.LA(1)<='$')||input.LA(1)=='&'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||input.LA(1)=='\u00A0'||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u2018' && input.LA(1)<='\u201F')||(input.LA(1)>='\u2032' && input.LA(1)<='\u2037')||input.LA(1)=='\u20AC'||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:9: ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )*
+            // JSP.g:1220:9: ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )*
             loop7:
             do {
                 int alt7=8;
-                int LA7_0 = input.LA(1);
-
-                if ( (LA7_0=='\u00C2') ) {
-                    int LA7_2 = input.LA(2);
-
-                    if ( (LA7_2=='\u00B0') ) {
-                        alt7=7;
-                    }
-
-                    else {
-                        alt7=1;
-                    }
-
-                }
-                else if ( ((LA7_0>='0' && LA7_0<='9')) ) {
-                    alt7=2;
-                }
-                else if ( (LA7_0=='.') ) {
-                    alt7=3;
-                }
-                else if ( (LA7_0=='-') ) {
-                    alt7=4;
-                }
-                else if ( (LA7_0=='_') ) {
-                    alt7=5;
-                }
-                else if ( (LA7_0=='@') ) {
-                    alt7=6;
-                }
-                else if ( (LA7_0=='$'||(LA7_0>='A' && LA7_0<='Z')||(LA7_0>='a' && LA7_0<='z')||LA7_0=='\u00A0'||(LA7_0>='\u00C0' && LA7_0<='\u00C1')||(LA7_0>='\u00C3' && LA7_0<='\u00D6')||(LA7_0>='\u00D8' && LA7_0<='\u00F6')||(LA7_0>='\u00F8' && LA7_0<='\u1FFF')||(LA7_0>='\u2018' && LA7_0<='\u201F')||(LA7_0>='\u2032' && LA7_0<='\u2037')||LA7_0=='\u20AC'||(LA7_0>='\u3040' && LA7_0<='\u318F')||(LA7_0>='\u3300' && LA7_0<='\u337F')||(LA7_0>='\u3400' && LA7_0<='\u3D2D')||(LA7_0>='\u4E00' && LA7_0<='\u9FFF')||(LA7_0>='\uF900' && LA7_0<='\uFAFF')) ) {
-                    alt7=1;
-                }
-
-
+                alt7 = dfa7.predict(input);
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:36: LETTER
+            	    // JSP.g:1220:36: LETTER
             	    {
-            	    mLETTER();
+            	    mLETTER(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:45: IDDigit
+            	    // JSP.g:1220:45: IDDigit
             	    {
-            	    mIDDigit();
+            	    mIDDigit(); 
 
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:55: '.'
+            	    // JSP.g:1220:55: '.'
             	    {
-            	    match('.');
+            	    match('.'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:61: '-'
+            	    // JSP.g:1220:61: '-'
             	    {
-            	    match('-');
+            	    match('-'); 
 
             	    }
             	    break;
             	case 5 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:67: '_'
+            	    // JSP.g:1220:67: '_'
             	    {
-            	    match('_');
+            	    match('_'); 
 
             	    }
             	    break;
             	case 6 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:74: '@'
+            	    // JSP.g:1220:74: '@'
             	    {
-            	    match('@');
+            	    match('@'); 
 
             	    }
             	    break;
             	case 7 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1220:80: '°'
+            	    // JSP.g:1220:80: '°'
             	    {
-            	    match("°");
+            	    match("°"); 
 
 
             	    }
@@ -776,28 +757,28 @@ public class JSPLexer extends Lexer {
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end ID
+    // $ANTLR end "ID"
 
-    // $ANTLR start LETTER
+    // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1225:8: ( '\\u0024' | '\\u00A0' | '\\u0041' .. '\\u005a' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' | '\\u20AC' | '\\u2032' .. '\\u2037' | '\\u2018' .. '\\u201F' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:
+            // JSP.g:1225:5: ( '\\u0024' | '\\u00A0' | '\\u0041' .. '\\u005a' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' | '\\u20AC' | '\\u2032' .. '\\u2037' | '\\u2018' .. '\\u201F' )
+            // JSP.g:
             {
             if ( input.LA(1)=='$'||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||input.LA(1)=='\u00A0'||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u2018' && input.LA(1)<='\u201F')||(input.LA(1)>='\u2032' && input.LA(1)<='\u2037')||input.LA(1)=='\u20AC'||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
                 input.consume();
 
             }
             else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
 
 
             }
@@ -806,15 +787,15 @@ public class JSPLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end LETTER
+    // $ANTLR end "LETTER"
 
-    // $ANTLR start IDDigit
+    // $ANTLR start "IDDigit"
     public final void mIDDigit() throws RecognitionException {
         try {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1248:5: ( '\\u0030' .. '\\u0039' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1248:5: '\\u0030' .. '\\u0039'
+            // JSP.g:1247:3: ( '\\u0030' .. '\\u0039' )
+            // JSP.g:1248:5: '\\u0030' .. '\\u0039'
             {
-            matchRange('0','9');
+            matchRange('0','9'); 
 
             }
 
@@ -822,560 +803,394 @@ public class JSPLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end IDDigit
+    // $ANTLR end "IDDigit"
 
-    // $ANTLR start SpecialCharacter
+    // $ANTLR start "SpecialCharacter"
     public final void mSpecialCharacter() throws RecognitionException {
         try {
             int _type = SpecialCharacter;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1254:5: ( '\\u00A0' .. '\\u00FF' | '{' | '}' | '|' | '!' | '#' | '$' | '&' | '(' | ')' | '*' | '+' | ',' | ( '-' )* | '.' | '\\/' | ';' | '?' | '[' | ']' | '`' | '%' | '@' | '\\\\' | '//' | '^' )
-            int alt9=26;
-            switch ( input.LA(1) ) {
-            case '\u00A0':
-            case '\u00A1':
-            case '\u00A2':
-            case '\u00A3':
-            case '\u00A4':
-            case '\u00A5':
-            case '\u00A6':
-            case '\u00A7':
-            case '\u00A8':
-            case '\u00A9':
-            case '\u00AA':
-            case '\u00AB':
-            case '\u00AC':
-            case '\u00AD':
-            case '\u00AE':
-            case '\u00AF':
-            case '\u00B0':
-            case '\u00B1':
-            case '\u00B2':
-            case '\u00B3':
-            case '\u00B4':
-            case '\u00B5':
-            case '\u00B6':
-            case '\u00B7':
-            case '\u00B8':
-            case '\u00B9':
-            case '\u00BA':
-            case '\u00BB':
-            case '\u00BC':
-            case '\u00BD':
-            case '\u00BE':
-            case '\u00BF':
-            case '\u00C0':
-            case '\u00C1':
-            case '\u00C2':
-            case '\u00C3':
-            case '\u00C4':
-            case '\u00C5':
-            case '\u00C6':
-            case '\u00C7':
-            case '\u00C8':
-            case '\u00C9':
-            case '\u00CA':
-            case '\u00CB':
-            case '\u00CC':
-            case '\u00CD':
-            case '\u00CE':
-            case '\u00CF':
-            case '\u00D0':
-            case '\u00D1':
-            case '\u00D2':
-            case '\u00D3':
-            case '\u00D4':
-            case '\u00D5':
-            case '\u00D6':
-            case '\u00D7':
-            case '\u00D8':
-            case '\u00D9':
-            case '\u00DA':
-            case '\u00DB':
-            case '\u00DC':
-            case '\u00DD':
-            case '\u00DE':
-            case '\u00DF':
-            case '\u00E0':
-            case '\u00E1':
-            case '\u00E2':
-            case '\u00E3':
-            case '\u00E4':
-            case '\u00E5':
-            case '\u00E6':
-            case '\u00E7':
-            case '\u00E8':
-            case '\u00E9':
-            case '\u00EA':
-            case '\u00EB':
-            case '\u00EC':
-            case '\u00ED':
-            case '\u00EE':
-            case '\u00EF':
-            case '\u00F0':
-            case '\u00F1':
-            case '\u00F2':
-            case '\u00F3':
-            case '\u00F4':
-            case '\u00F5':
-            case '\u00F6':
-            case '\u00F7':
-            case '\u00F8':
-            case '\u00F9':
-            case '\u00FA':
-            case '\u00FB':
-            case '\u00FC':
-            case '\u00FD':
-            case '\u00FE':
-            case '\u00FF':
-                {
-                alt9=1;
-                }
-                break;
-            case '{':
-                {
-                alt9=2;
-                }
-                break;
-            case '}':
-                {
-                alt9=3;
-                }
-                break;
-            case '|':
-                {
-                alt9=4;
-                }
-                break;
-            case '!':
-                {
-                alt9=5;
-                }
-                break;
-            case '#':
-                {
-                alt9=6;
-                }
-                break;
-            case '$':
-                {
-                alt9=7;
-                }
-                break;
-            case '&':
-                {
-                alt9=8;
-                }
-                break;
-            case '(':
-                {
-                alt9=9;
-                }
-                break;
-            case ')':
-                {
-                alt9=10;
-                }
-                break;
-            case '*':
-                {
-                alt9=11;
-                }
-                break;
-            case '+':
-                {
-                alt9=12;
-                }
-                break;
-            case ',':
-                {
-                alt9=13;
-                }
-                break;
-            case '.':
-                {
-                alt9=15;
-                }
-                break;
-            case '/':
-                {
-                int LA9_16 = input.LA(2);
-
-                if ( (LA9_16=='/') ) {
-                    alt9=25;
-                }
-                else {
-                    alt9=16;}
-                }
-                break;
-            case ';':
-                {
-                alt9=17;
-                }
-                break;
-            case '?':
-                {
-                alt9=18;
-                }
-                break;
-            case '[':
-                {
-                alt9=19;
-                }
-                break;
-            case ']':
-                {
-                alt9=20;
-                }
-                break;
-            case '`':
-                {
-                alt9=21;
-                }
-                break;
-            case '%':
-                {
-                alt9=22;
-                }
-                break;
-            case '@':
-                {
-                alt9=23;
-                }
-                break;
-            case '\\':
-                {
-                alt9=24;
-                }
-                break;
-            case '^':
-                {
-                alt9=26;
-                }
-                break;
-            default:
-                alt9=14;}
-
-            switch (alt9) {
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1253:3: ( '\\u00A0' .. '\\u00FF' | '\\u2400' .. '\\u377F' | '{' | '}' | '|' | '!' | '#' | '$' | '&' | '(' | ')' | '*' | '+' | ',' | '-' | '--' | '.' | '\\/' | ';' | '?' | '[' | ']' | '`' | '%' | '@' | '\\\\' | '//' | '^' )
+            int alt8=28;
+            alt8 = dfa8.predict(input);
+            switch (alt8) {
                 case 1 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1254:5: '\\u00A0' .. '\\u00FF'
+                    // JSP.g:1254:5: '\\u00A0' .. '\\u00FF'
                     {
-                    matchRange('\u00A0','\u00FF');
+                    matchRange('\u00A0','\u00FF'); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1255:6: '{'
+                    // JSP.g:1255:6: '\\u2400' .. '\\u377F'
                     {
-                    match('{');
+                    matchRange('\u2400','\u377F'); 
 
                     }
                     break;
                 case 3 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1256:6: '}'
+                    // JSP.g:1256:6: '{'
                     {
-                    match('}');
+                    match('{'); 
 
                     }
                     break;
                 case 4 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1257:6: '|'
+                    // JSP.g:1257:6: '}'
                     {
-                    match('|');
+                    match('}'); 
 
                     }
                     break;
                 case 5 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1258:6: '!'
+                    // JSP.g:1258:6: '|'
                     {
-                    match('!');
+                    match('|'); 
 
                     }
                     break;
                 case 6 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1259:6: '#'
+                    // JSP.g:1259:6: '!'
                     {
-                    match('#');
+                    match('!'); 
 
                     }
                     break;
                 case 7 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1260:6: '$'
+                    // JSP.g:1260:6: '#'
                     {
-                    match('$');
+                    match('#'); 
 
                     }
                     break;
                 case 8 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1261:6: '&'
+                    // JSP.g:1261:6: '$'
                     {
-                    match('&');
+                    match('$'); 
 
                     }
                     break;
                 case 9 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1262:6: '('
+                    // JSP.g:1262:6: '&'
                     {
-                    match('(');
+                    match('&'); 
 
                     }
                     break;
                 case 10 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1263:6: ')'
+                    // JSP.g:1263:6: '('
                     {
-                    match(')');
+                    match('('); 
 
                     }
                     break;
                 case 11 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1264:6: '*'
+                    // JSP.g:1264:6: ')'
                     {
-                    match('*');
+                    match(')'); 
 
                     }
                     break;
                 case 12 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1265:6: '+'
+                    // JSP.g:1265:6: '*'
                     {
-                    match('+');
+                    match('*'); 
 
                     }
                     break;
                 case 13 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1266:6: ','
+                    // JSP.g:1266:6: '+'
                     {
-                    match(',');
+                    match('+'); 
 
                     }
                     break;
                 case 14 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1267:6: ( '-' )*
+                    // JSP.g:1267:6: ','
                     {
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1267:6: ( '-' )*
-                    loop8:
-                    do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
-
-                        if ( (LA8_0=='-') ) {
-                            alt8=1;
-                        }
-
-
-                        switch (alt8) {
-                    	case 1 :
-                    	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1267:6: '-'
-                    	    {
-                    	    match('-');
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop8;
-                        }
-                    } while (true);
-
+                    match(','); 
 
                     }
                     break;
                 case 15 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1268:6: '.'
+                    // JSP.g:1268:6: '-'
                     {
-                    match('.');
+                    match('-'); 
 
                     }
                     break;
                 case 16 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1269:6: '\\/'
+                    // JSP.g:1269:6: '--'
                     {
-                    match('/');
+                    match("--"); 
+
 
                     }
                     break;
                 case 17 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1270:6: ';'
+                    // JSP.g:1270:6: '.'
                     {
-                    match(';');
+                    match('.'); 
 
                     }
                     break;
                 case 18 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1271:6: '?'
+                    // JSP.g:1271:6: '\\/'
                     {
-                    match('?');
+                    match('/'); 
 
                     }
                     break;
                 case 19 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1272:6: '['
+                    // JSP.g:1272:6: ';'
                     {
-                    match('[');
+                    match(';'); 
 
                     }
                     break;
                 case 20 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1273:6: ']'
+                    // JSP.g:1273:6: '?'
                     {
-                    match(']');
+                    match('?'); 
 
                     }
                     break;
                 case 21 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1274:6: '`'
+                    // JSP.g:1274:6: '['
                     {
-                    match('`');
+                    match('['); 
 
                     }
                     break;
                 case 22 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1275:6: '%'
+                    // JSP.g:1275:6: ']'
                     {
-                    match('%');
+                    match(']'); 
 
                     }
                     break;
                 case 23 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1276:6: '@'
+                    // JSP.g:1276:6: '`'
                     {
-                    match('@');
+                    match('`'); 
 
                     }
                     break;
                 case 24 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1277:6: '\\\\'
+                    // JSP.g:1277:6: '%'
                     {
-                    match('\\');
+                    match('%'); 
 
                     }
                     break;
                 case 25 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1278:6: '//'
+                    // JSP.g:1278:6: '@'
                     {
-                    match("//");
-
+                    match('@'); 
 
                     }
                     break;
                 case 26 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1279:6: '^'
+                    // JSP.g:1279:6: '\\\\'
                     {
-                    match('^');
+                    match('\\'); 
+
+                    }
+                    break;
+                case 27 :
+                    // JSP.g:1280:6: '//'
+                    {
+                    match("//"); 
+
+
+                    }
+                    break;
+                case 28 :
+                    // JSP.g:1281:6: '^'
+                    {
+                    match('^'); 
 
                     }
                     break;
 
             }
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end SpecialCharacter
+    // $ANTLR end "SpecialCharacter"
 
-    // $ANTLR start SQUOTE
+    // $ANTLR start "SQUOTE"
     public final void mSQUOTE() throws RecognitionException {
         try {
             int _type = SQUOTE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1282:10: ( '\\'' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1282:10: '\\''
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1284:8: ( '\\'' )
+            // JSP.g:1284:10: '\\''
             {
-            match('\'');
+            match('\''); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end SQUOTE
+    // $ANTLR end "SQUOTE"
 
-    // $ANTLR start DQUOTE
+    // $ANTLR start "DQUOTE"
     public final void mDQUOTE() throws RecognitionException {
         try {
             int _type = DQUOTE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1283:10: ( '\"' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1283:10: '\"'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1285:8: ( '\"' )
+            // JSP.g:1285:10: '\"'
             {
-            match('\"');
+            match('\"'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end DQUOTE
+    // $ANTLR end "DQUOTE"
 
-    // $ANTLR start DDOT
+    // $ANTLR start "DDOT"
     public final void mDDOT() throws RecognitionException {
         try {
             int _type = DDOT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1284:10: ( ':' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1284:10: ':'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1286:8: ( ':' )
+            // JSP.g:1286:10: ':'
             {
-            match(':');
+            match(':'); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end DDOT
+    // $ANTLR end "DDOT"
 
-    // $ANTLR start EQUAL
+    // $ANTLR start "EQUAL"
     public final void mEQUAL() throws RecognitionException {
         try {
             int _type = EQUAL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1285:10: ( '=' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1285:10: '='
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1287:8: ( '=' )
+            // JSP.g:1287:10: '='
             {
-            match('=');
+            match('='); 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end EQUAL
+    // $ANTLR end "EQUAL"
 
-    // $ANTLR start WS
+    // $ANTLR start "WS"
     public final void mWS() throws RecognitionException {
         try {
             int _type = WS;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1290:5: ( ( ' ' | '\\n' )+ )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1290:5: ( ' ' | '\\n' )+
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1290:3: ( ( ' ' | '\\n' )+ )
+            // JSP.g:1292:5: ( ' ' | '\\n' )+
             {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1290:5: ( ' ' | '\\n' )+
-            int cnt10=0;
-            loop10:
+            // JSP.g:1292:5: ( ' ' | '\\n' )+
+            int cnt9=0;
+            loop9:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA10_0=='\n'||LA10_0==' ') ) {
-                    alt10=1;
+                if ( (LA9_0=='\n'||LA9_0==' ') ) {
+                    alt9=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt9) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:
+            	    // JSP.g:
             	    {
             	    if ( input.LA(1)=='\n'||input.LA(1)==' ' ) {
             	        input.consume();
 
             	    }
             	    else {
-            	        MismatchedSetException mse =
-            	            new MismatchedSetException(null,input);
-            	        recover(mse);    throw mse;
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
             	    }
+            	    break;
+
+            	default :
+            	    if ( cnt9 >= 1 ) break loop9;
+                        EarlyExitException eee =
+                            new EarlyExitException(9, input);
+                        throw eee;
+                }
+                cnt9++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "WS"
+
+    // $ANTLR start "WS2"
+    public final void mWS2() throws RecognitionException {
+        try {
+            int _type = WS2;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1299:3: ( ( '\\r' | '\\f' | '\\t' )+ )
+            // JSP.g:1300:5: ( '\\r' | '\\f' | '\\t' )+
+            {
+            // JSP.g:1300:5: ( '\\r' | '\\f' | '\\t' )+
+            int cnt10=0;
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0=='\t'||(LA10_0>='\f' && LA10_0<='\r')) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // JSP.g:
+            	    {
+            	    if ( input.LA(1)=='\t'||(input.LA(1)>='\f' && input.LA(1)<='\r') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
 
 
             	    }
@@ -1390,103 +1205,48 @@ public class JSPLexer extends Lexer {
                 cnt10++;
             } while (true);
 
+            _channel = HIDDEN;
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end WS
+    // $ANTLR end "WS2"
 
-    // $ANTLR start WS2
-    public final void mWS2() throws RecognitionException {
-        try {
-            int _type = WS2;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1298:5: ( ( '\\r' | '\\f' | '\\t' )+ )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1298:5: ( '\\r' | '\\f' | '\\t' )+
-            {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1298:5: ( '\\r' | '\\f' | '\\t' )+
-            int cnt11=0;
-            loop11:
-            do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
-
-                if ( (LA11_0=='\t'||(LA11_0>='\f' && LA11_0<='\r')) ) {
-                    alt11=1;
-                }
-
-
-                switch (alt11) {
-            	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:
-            	    {
-            	    if ( input.LA(1)=='\t'||(input.LA(1)>='\f' && input.LA(1)<='\r') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse =
-            	            new MismatchedSetException(null,input);
-            	        recover(mse);    throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt11 >= 1 ) break loop11;
-                        EarlyExitException eee =
-                            new EarlyExitException(11, input);
-                        throw eee;
-                }
-                cnt11++;
-            } while (true);
-
-            channel = HIDDEN;
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end WS2
-
-    // $ANTLR start Digit
+    // $ANTLR start "Digit"
     public final void mDigit() throws RecognitionException {
         try {
             int _type = Digit;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:5: ( ( ( '-' | '#' | '+' )? ) ( '\\u0030' .. '\\u0039' ) ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )* )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:5: ( ( '-' | '#' | '+' )? ) ( '\\u0030' .. '\\u0039' ) ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )*
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1307:3: ( ( ( '-' | '#' | '+' )? ) ( '\\u0030' .. '\\u0039' ) ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )* )
+            // JSP.g:1309:5: ( ( '-' | '#' | '+' )? ) ( '\\u0030' .. '\\u0039' ) ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )*
             {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:5: ( ( '-' | '#' | '+' )? )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:6: ( '-' | '#' | '+' )?
+            // JSP.g:1309:5: ( ( '-' | '#' | '+' )? )
+            // JSP.g:1309:6: ( '-' | '#' | '+' )?
             {
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:6: ( '-' | '#' | '+' )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // JSP.g:1309:6: ( '-' | '#' | '+' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0=='#'||LA12_0=='+'||LA12_0=='-') ) {
-                alt12=1;
+            if ( (LA11_0=='#'||LA11_0=='+'||LA11_0=='-') ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:
+                    // JSP.g:
                     {
                     if ( input.LA(1)=='#'||input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
 
                     }
                     else {
-                        MismatchedSetException mse =
-                            new MismatchedSetException(null,input);
-                        recover(mse);    throw mse;
-                    }
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;}
 
 
                     }
@@ -1497,1355 +1257,1445 @@ public class JSPLexer extends Lexer {
 
             }
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:21: ( '\\u0030' .. '\\u0039' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:22: '\\u0030' .. '\\u0039'
+            // JSP.g:1309:21: ( '\\u0030' .. '\\u0039' )
+            // JSP.g:1309:22: '\\u0030' .. '\\u0039'
             {
-            matchRange('0','9');
+            matchRange('0','9'); 
 
             }
 
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1307:41: ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )*
-            loop13:
+            // JSP.g:1309:41: ( '\\u0030' .. '\\u0039' | '%' | ',' | '.' )*
+            loop12:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA13_0=='%'||LA13_0==','||LA13_0=='.'||(LA13_0>='0' && LA13_0<='9')) ) {
-                    alt13=1;
+                if ( (LA12_0=='%'||LA12_0==','||LA12_0=='.'||(LA12_0>='0' && LA12_0<='9')) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt12) {
             	case 1 :
-            	    // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:
+            	    // JSP.g:
             	    {
             	    if ( input.LA(1)=='%'||input.LA(1)==','||input.LA(1)=='.'||(input.LA(1)>='0' && input.LA(1)<='9') ) {
             	        input.consume();
 
             	    }
             	    else {
-            	        MismatchedSetException mse =
-            	            new MismatchedSetException(null,input);
-            	        recover(mse);    throw mse;
-            	    }
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
 
 
             	    }
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop12;
                 }
             } while (true);
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end Digit
+    // $ANTLR end "Digit"
 
-    // $ANTLR start OPENCLOSE
+    // $ANTLR start "OPENCLOSE"
     public final void mOPENCLOSE() throws RecognitionException {
         try {
             int _type = OPENCLOSE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1311:15: ( '</' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1311:15: '</'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1313:13: ( '</' )
+            // JSP.g:1313:15: '</'
             {
-            match("</");
+            match("</"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENCLOSE
+    // $ANTLR end "OPENCLOSE"
 
-    // $ANTLR start JSPTAGOPEN
+    // $ANTLR start "JSPTAGOPEN"
     public final void mJSPTAGOPEN() throws RecognitionException {
         try {
             int _type = JSPTAGOPEN;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1314:15: ( '<%' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1314:15: '<%'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1316:13: ( '<%' )
+            // JSP.g:1316:15: '<%'
             {
-            match("<%");
+            match("<%"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPTAGOPEN
+    // $ANTLR end "JSPTAGOPEN"
 
-    // $ANTLR start JSPTAGCLOSE
+    // $ANTLR start "JSPTAGCLOSE"
     public final void mJSPTAGCLOSE() throws RecognitionException {
         try {
             int _type = JSPTAGCLOSE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1315:15: ( '%>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1315:15: '%>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1317:13: ( '%>' )
+            // JSP.g:1317:15: '%>'
             {
-            match("%>");
+            match("%>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPTAGCLOSE
+    // $ANTLR end "JSPTAGCLOSE"
 
-    // $ANTLR start JSPOPENEXPR
+    // $ANTLR start "JSPOPENEXPR"
     public final void mJSPOPENEXPR() throws RecognitionException {
         try {
             int _type = JSPOPENEXPR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1316:15: ( '<%=' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1316:15: '<%='
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1318:13: ( '<%=' )
+            // JSP.g:1318:15: '<%='
             {
-            match("<%=");
+            match("<%="); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENEXPR
+    // $ANTLR end "JSPOPENEXPR"
 
-    // $ANTLR start JSPOPENDECL
+    // $ANTLR start "JSPOPENDECL"
     public final void mJSPOPENDECL() throws RecognitionException {
         try {
             int _type = JSPOPENDECL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1317:15: ( '<%!' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1317:15: '<%!'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1319:13: ( '<%!' )
+            // JSP.g:1319:15: '<%!'
             {
-            match("<%!");
+            match("<%!"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENDECL
+    // $ANTLR end "JSPOPENDECL"
 
-    // $ANTLR start JSPOPENDIR
+    // $ANTLR start "JSPOPENDIR"
     public final void mJSPOPENDIR() throws RecognitionException {
         try {
             int _type = JSPOPENDIR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1318:15: ( '<%@' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1318:15: '<%@'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1320:13: ( '<%@' )
+            // JSP.g:1320:15: '<%@'
             {
-            match("<%@");
+            match("<%@"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENDIR
+    // $ANTLR end "JSPOPENDIR"
 
-    // $ANTLR start JSPCLOSEACT
+    // $ANTLR start "JSPCLOSEACT"
     public final void mJSPCLOSEACT() throws RecognitionException {
         try {
             int _type = JSPCLOSEACT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1319:15: ( '/>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1319:15: '/>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1321:13: ( '/>' )
+            // JSP.g:1321:15: '/>'
             {
-            match("/>");
+            match("/>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEACT
+    // $ANTLR end "JSPCLOSEACT"
 
-    // $ANTLR start JSPUSEBEAN
+    // $ANTLR start "JSPUSEBEAN"
     public final void mJSPUSEBEAN() throws RecognitionException {
         try {
             int _type = JSPUSEBEAN;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1322:15: ( '<jsp:useBean' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1322:15: '<jsp:useBean'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1324:13: ( '<jsp:useBean' )
+            // JSP.g:1324:15: '<jsp:useBean'
             {
-            match("<jsp:useBean");
+            match("<jsp:useBean"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPUSEBEAN
+    // $ANTLR end "JSPUSEBEAN"
 
-    // $ANTLR start JSPSET
+    // $ANTLR start "JSPSET"
     public final void mJSPSET() throws RecognitionException {
         try {
             int _type = JSPSET;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1323:15: ( '<jsp:setProperty' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1323:15: '<jsp:setProperty'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1325:13: ( '<jsp:setProperty' )
+            // JSP.g:1325:15: '<jsp:setProperty'
             {
-            match("<jsp:setProperty");
+            match("<jsp:setProperty"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPSET
+    // $ANTLR end "JSPSET"
 
-    // $ANTLR start JSPGET
+    // $ANTLR start "JSPGET"
     public final void mJSPGET() throws RecognitionException {
         try {
             int _type = JSPGET;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1324:15: ( '<jsp:getProperty' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1324:15: '<jsp:getProperty'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1326:13: ( '<jsp:getProperty' )
+            // JSP.g:1326:15: '<jsp:getProperty'
             {
-            match("<jsp:getProperty");
+            match("<jsp:getProperty"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPGET
+    // $ANTLR end "JSPGET"
 
-    // $ANTLR start JSPOPENINC
+    // $ANTLR start "JSPOPENINC"
     public final void mJSPOPENINC() throws RecognitionException {
         try {
             int _type = JSPOPENINC;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1325:15: ( '<jsp:include' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1325:15: '<jsp:include'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1327:13: ( '<jsp:include' )
+            // JSP.g:1327:15: '<jsp:include'
             {
-            match("<jsp:include");
+            match("<jsp:include"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENINC
+    // $ANTLR end "JSPOPENINC"
 
-    // $ANTLR start JSPCLOSEINC
+    // $ANTLR start "JSPCLOSEINC"
     public final void mJSPCLOSEINC() throws RecognitionException {
         try {
             int _type = JSPCLOSEINC;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1326:15: ( '</jsp:include>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1326:15: '</jsp:include>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1328:13: ( '</jsp:include>' )
+            // JSP.g:1328:15: '</jsp:include>'
             {
-            match("</jsp:include>");
+            match("</jsp:include>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEINC
+    // $ANTLR end "JSPCLOSEINC"
 
-    // $ANTLR start JSPOPENFWD
+    // $ANTLR start "JSPOPENFWD"
     public final void mJSPOPENFWD() throws RecognitionException {
         try {
             int _type = JSPOPENFWD;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1327:15: ( '<jsp:forward' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1327:15: '<jsp:forward'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1329:13: ( '<jsp:forward' )
+            // JSP.g:1329:15: '<jsp:forward'
             {
-            match("<jsp:forward");
+            match("<jsp:forward"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENFWD
+    // $ANTLR end "JSPOPENFWD"
 
-    // $ANTLR start JSPCLOSEFWD
+    // $ANTLR start "JSPCLOSEFWD"
     public final void mJSPCLOSEFWD() throws RecognitionException {
         try {
             int _type = JSPCLOSEFWD;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1328:15: ( '</jsp:forward>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1328:15: '</jsp:forward>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1330:13: ( '</jsp:forward>' )
+            // JSP.g:1330:15: '</jsp:forward>'
             {
-            match("</jsp:forward>");
+            match("</jsp:forward>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEFWD
+    // $ANTLR end "JSPCLOSEFWD"
 
-    // $ANTLR start JSPOPENPLUG
+    // $ANTLR start "JSPOPENPLUG"
     public final void mJSPOPENPLUG() throws RecognitionException {
         try {
             int _type = JSPOPENPLUG;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1329:15: ( '<jsp:plugin' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1329:15: '<jsp:plugin'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1331:13: ( '<jsp:plugin' )
+            // JSP.g:1331:15: '<jsp:plugin'
             {
-            match("<jsp:plugin");
+            match("<jsp:plugin"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENPLUG
+    // $ANTLR end "JSPOPENPLUG"
 
-    // $ANTLR start JSPCLOSEPLUG
+    // $ANTLR start "JSPCLOSEPLUG"
     public final void mJSPCLOSEPLUG() throws RecognitionException {
         try {
             int _type = JSPCLOSEPLUG;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1330:15: ( '</jsp:plugin>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1330:15: '</jsp:plugin>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1332:13: ( '</jsp:plugin>' )
+            // JSP.g:1332:15: '</jsp:plugin>'
             {
-            match("</jsp:plugin>");
+            match("</jsp:plugin>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEPLUG
+    // $ANTLR end "JSPCLOSEPLUG"
 
-    // $ANTLR start JSPOPENFALL
+    // $ANTLR start "JSPOPENFALL"
     public final void mJSPOPENFALL() throws RecognitionException {
         try {
             int _type = JSPOPENFALL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1331:15: ( '<jsp:fallback>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1331:15: '<jsp:fallback>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1333:13: ( '<jsp:fallback>' )
+            // JSP.g:1333:15: '<jsp:fallback>'
             {
-            match("<jsp:fallback>");
+            match("<jsp:fallback>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENFALL
+    // $ANTLR end "JSPOPENFALL"
 
-    // $ANTLR start JSPCLOSEFALL
+    // $ANTLR start "JSPCLOSEFALL"
     public final void mJSPCLOSEFALL() throws RecognitionException {
         try {
             int _type = JSPCLOSEFALL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1332:15: ( '</jsp:fallback>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1332:15: '</jsp:fallback>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1334:13: ( '</jsp:fallback>' )
+            // JSP.g:1334:15: '</jsp:fallback>'
             {
-            match("</jsp:fallback>");
+            match("</jsp:fallback>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEFALL
+    // $ANTLR end "JSPCLOSEFALL"
 
-    // $ANTLR start JSPOPENPARA
+    // $ANTLR start "JSPOPENPARA"
     public final void mJSPOPENPARA() throws RecognitionException {
         try {
             int _type = JSPOPENPARA;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1333:15: ( '<jsp:param' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1333:15: '<jsp:param'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1335:13: ( '<jsp:param' )
+            // JSP.g:1335:15: '<jsp:param'
             {
-            match("<jsp:param");
+            match("<jsp:param"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENPARA
+    // $ANTLR end "JSPOPENPARA"
 
-    // $ANTLR start JSPOPENPARAS
+    // $ANTLR start "JSPOPENPARAS"
     public final void mJSPOPENPARAS() throws RecognitionException {
         try {
             int _type = JSPOPENPARAS;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1334:15: ( '<jsp:params>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1334:15: '<jsp:params>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1336:13: ( '<jsp:params>' )
+            // JSP.g:1336:15: '<jsp:params>'
             {
-            match("<jsp:params>");
+            match("<jsp:params>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENPARAS
+    // $ANTLR end "JSPOPENPARAS"
 
-    // $ANTLR start JSPCLOSEPARAS
+    // $ANTLR start "JSPCLOSEPARAS"
     public final void mJSPCLOSEPARAS() throws RecognitionException {
         try {
             int _type = JSPCLOSEPARAS;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1335:15: ( '</jsp:params>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1335:15: '</jsp:params>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1337:14: ( '</jsp:params>' )
+            // JSP.g:1337:15: '</jsp:params>'
             {
-            match("</jsp:params>");
+            match("</jsp:params>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEPARAS
+    // $ANTLR end "JSPCLOSEPARAS"
 
-    // $ANTLR start JSPOPENROOT
+    // $ANTLR start "JSPOPENROOT"
     public final void mJSPOPENROOT() throws RecognitionException {
         try {
             int _type = JSPOPENROOT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1336:15: ( '<jsp:root' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1336:15: '<jsp:root'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1338:13: ( '<jsp:root' )
+            // JSP.g:1338:15: '<jsp:root'
             {
-            match("<jsp:root");
+            match("<jsp:root"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENROOT
+    // $ANTLR end "JSPOPENROOT"
 
-    // $ANTLR start JSPCLOSEROOT
+    // $ANTLR start "JSPCLOSEROOT"
     public final void mJSPCLOSEROOT() throws RecognitionException {
         try {
             int _type = JSPCLOSEROOT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1337:15: ( '</jsp:root>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1337:15: '</jsp:root>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1339:13: ( '</jsp:root>' )
+            // JSP.g:1339:15: '</jsp:root>'
             {
-            match("</jsp:root>");
+            match("</jsp:root>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEROOT
+    // $ANTLR end "JSPCLOSEROOT"
 
-    // $ANTLR start JSPOPENTEXT
+    // $ANTLR start "JSPOPENTEXT"
     public final void mJSPOPENTEXT() throws RecognitionException {
         try {
             int _type = JSPOPENTEXT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1338:15: ( '<jsp:text>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1338:15: '<jsp:text>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1340:13: ( '<jsp:text>' )
+            // JSP.g:1340:15: '<jsp:text>'
             {
-            match("<jsp:text>");
+            match("<jsp:text>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENTEXT
+    // $ANTLR end "JSPOPENTEXT"
 
-    // $ANTLR start JSPCLOSETEXT
+    // $ANTLR start "JSPCLOSETEXT"
     public final void mJSPCLOSETEXT() throws RecognitionException {
         try {
             int _type = JSPCLOSETEXT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1339:15: ( '</jsp:text>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1339:15: '</jsp:text>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1341:13: ( '</jsp:text>' )
+            // JSP.g:1341:15: '</jsp:text>'
             {
-            match("</jsp:text>");
+            match("</jsp:text>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSETEXT
+    // $ANTLR end "JSPCLOSETEXT"
 
-    // $ANTLR start JSPCLOSEATTR
+    // $ANTLR start "JSPCLOSEATTR"
     public final void mJSPCLOSEATTR() throws RecognitionException {
         try {
             int _type = JSPCLOSEATTR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1340:15: ( '</jsp:attribute>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1340:15: '</jsp:attribute>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1342:13: ( '</jsp:attribute>' )
+            // JSP.g:1342:15: '</jsp:attribute>'
             {
-            match("</jsp:attribute>");
+            match("</jsp:attribute>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEATTR
+    // $ANTLR end "JSPCLOSEATTR"
 
-    // $ANTLR start JSPOPENATTR
+    // $ANTLR start "JSPOPENATTR"
     public final void mJSPOPENATTR() throws RecognitionException {
         try {
             int _type = JSPOPENATTR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1341:15: ( '<jsp:attribute' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1341:15: '<jsp:attribute'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1343:13: ( '<jsp:attribute' )
+            // JSP.g:1343:15: '<jsp:attribute'
             {
-            match("<jsp:attribute");
+            match("<jsp:attribute"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENATTR
+    // $ANTLR end "JSPOPENATTR"
 
-    // $ANTLR start JSPOPENBODY
+    // $ANTLR start "JSPOPENBODY"
     public final void mJSPOPENBODY() throws RecognitionException {
         try {
             int _type = JSPOPENBODY;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1342:15: ( '<jsp:body>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1342:15: '<jsp:body>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1344:13: ( '<jsp:body>' )
+            // JSP.g:1344:15: '<jsp:body>'
             {
-            match("<jsp:body>");
+            match("<jsp:body>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENBODY
+    // $ANTLR end "JSPOPENBODY"
 
-    // $ANTLR start JSPCLOSEBODY
+    // $ANTLR start "JSPCLOSEBODY"
     public final void mJSPCLOSEBODY() throws RecognitionException {
         try {
             int _type = JSPCLOSEBODY;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1343:15: ( '</jsp:body>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1343:15: '</jsp:body>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1345:13: ( '</jsp:body>' )
+            // JSP.g:1345:15: '</jsp:body>'
             {
-            match("</jsp:body>");
+            match("</jsp:body>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPCLOSEBODY
+    // $ANTLR end "JSPCLOSEBODY"
 
-    // $ANTLR start JSPOPENINVOKE
+    // $ANTLR start "JSPOPENINVOKE"
     public final void mJSPOPENINVOKE() throws RecognitionException {
         try {
             int _type = JSPOPENINVOKE;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1344:16: ( '<jsp:invoke' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1344:16: '<jsp:invoke'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1346:14: ( '<jsp:invoke' )
+            // JSP.g:1346:16: '<jsp:invoke'
             {
-            match("<jsp:invoke");
+            match("<jsp:invoke"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENINVOKE
+    // $ANTLR end "JSPOPENINVOKE"
 
-    // $ANTLR start JSPOPENDOBODY
+    // $ANTLR start "JSPOPENDOBODY"
     public final void mJSPOPENDOBODY() throws RecognitionException {
         try {
             int _type = JSPOPENDOBODY;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1345:16: ( '<jsp:doBody' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1345:16: '<jsp:doBody'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1347:14: ( '<jsp:doBody' )
+            // JSP.g:1347:16: '<jsp:doBody'
             {
-            match("<jsp:doBody");
+            match("<jsp:doBody"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENDOBODY
+    // $ANTLR end "JSPOPENDOBODY"
 
-    // $ANTLR start JSPOPENOUTPUT
+    // $ANTLR start "JSPOPENOUTPUT"
     public final void mJSPOPENOUTPUT() throws RecognitionException {
         try {
             int _type = JSPOPENOUTPUT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1346:16: ( '<jsp:output' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1346:16: '<jsp:output'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1348:14: ( '<jsp:output' )
+            // JSP.g:1348:16: '<jsp:output'
             {
-            match("<jsp:output");
+            match("<jsp:output"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPOPENOUTPUT
+    // $ANTLR end "JSPOPENOUTPUT"
 
-    // $ANTLR start JSPELEMENTOP
+    // $ANTLR start "JSPELEMENTOP"
     public final void mJSPELEMENTOP() throws RecognitionException {
         try {
             int _type = JSPELEMENTOP;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1347:16: ( '<jsp:element' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1347:16: '<jsp:element'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1349:14: ( '<jsp:element' )
+            // JSP.g:1349:16: '<jsp:element'
             {
-            match("<jsp:element");
+            match("<jsp:element"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end JSPELEMENTOP
+    // $ANTLR end "JSPELEMENTOP"
 
-    // $ANTLR start OPENSCRIPLET
+    // $ANTLR start "OPENSCRIPLET"
     public final void mOPENSCRIPLET() throws RecognitionException {
         try {
             int _type = OPENSCRIPLET;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1351:15: ( '<jsp:scriptlet>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1351:15: '<jsp:scriptlet>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1353:13: ( '<jsp:scriptlet>' )
+            // JSP.g:1353:15: '<jsp:scriptlet>'
             {
-            match("<jsp:scriptlet>");
+            match("<jsp:scriptlet>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENSCRIPLET
+    // $ANTLR end "OPENSCRIPLET"
 
-    // $ANTLR start CLOSESCRIPTLET
+    // $ANTLR start "CLOSESCRIPTLET"
     public final void mCLOSESCRIPTLET() throws RecognitionException {
         try {
             int _type = CLOSESCRIPTLET;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1352:17: ( '</jsp:scriptlet>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1352:17: '</jsp:scriptlet>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1354:15: ( '</jsp:scriptlet>' )
+            // JSP.g:1354:17: '</jsp:scriptlet>'
             {
-            match("</jsp:scriptlet>");
+            match("</jsp:scriptlet>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CLOSESCRIPTLET
+    // $ANTLR end "CLOSESCRIPTLET"
 
-    // $ANTLR start OPENEXPR
+    // $ANTLR start "OPENEXPR"
     public final void mOPENEXPR() throws RecognitionException {
         try {
             int _type = OPENEXPR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1353:15: ( '<jsp:expression>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1353:15: '<jsp:expression>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1355:13: ( '<jsp:expression>' )
+            // JSP.g:1355:15: '<jsp:expression>'
             {
-            match("<jsp:expression>");
+            match("<jsp:expression>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENEXPR
+    // $ANTLR end "OPENEXPR"
 
-    // $ANTLR start CLOSEEXPR
+    // $ANTLR start "CLOSEEXPR"
     public final void mCLOSEEXPR() throws RecognitionException {
         try {
             int _type = CLOSEEXPR;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1354:15: ( '</jsp:expression>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1354:15: '</jsp:expression>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1356:13: ( '</jsp:expression>' )
+            // JSP.g:1356:15: '</jsp:expression>'
             {
-            match("</jsp:expression>");
+            match("</jsp:expression>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CLOSEEXPR
+    // $ANTLR end "CLOSEEXPR"
 
-    // $ANTLR start OPENDECL
+    // $ANTLR start "OPENDECL"
     public final void mOPENDECL() throws RecognitionException {
         try {
             int _type = OPENDECL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1355:15: ( '<jsp:declaration>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1355:15: '<jsp:declaration>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1357:13: ( '<jsp:declaration>' )
+            // JSP.g:1357:15: '<jsp:declaration>'
             {
-            match("<jsp:declaration>");
+            match("<jsp:declaration>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENDECL
+    // $ANTLR end "OPENDECL"
 
-    // $ANTLR start CLOSEDECL
+    // $ANTLR start "CLOSEDECL"
     public final void mCLOSEDECL() throws RecognitionException {
         try {
             int _type = CLOSEDECL;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1356:15: ( '</jsp:declaration>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1356:15: '</jsp:declaration>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1358:13: ( '</jsp:declaration>' )
+            // JSP.g:1358:15: '</jsp:declaration>'
             {
-            match("</jsp:declaration>");
+            match("</jsp:declaration>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CLOSEDECL
+    // $ANTLR end "CLOSEDECL"
 
-    // $ANTLR start OPENDIRECT
+    // $ANTLR start "OPENDIRECT"
     public final void mOPENDIRECT() throws RecognitionException {
         try {
             int _type = OPENDIRECT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1357:15: ( '<jsp:directive.' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1357:15: '<jsp:directive.'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1359:13: ( '<jsp:directive.' )
+            // JSP.g:1359:15: '<jsp:directive.'
             {
-            match("<jsp:directive.");
+            match("<jsp:directive."); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENDIRECT
+    // $ANTLR end "OPENDIRECT"
 
-    // $ANTLR start OPENJSPCMT
+    // $ANTLR start "OPENJSPCMT"
     public final void mOPENJSPCMT() throws RecognitionException {
         try {
             int _type = OPENJSPCMT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1360:15: ( '<%--' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1360:15: '<%--'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1362:13: ( '<%--' )
+            // JSP.g:1362:15: '<%--'
             {
-            match("<%--");
+            match("<%--"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENJSPCMT
+    // $ANTLR end "OPENJSPCMT"
 
-    // $ANTLR start CLOSEJSPCMT
+    // $ANTLR start "CLOSEJSPCMT"
     public final void mCLOSEJSPCMT() throws RecognitionException {
         try {
             int _type = CLOSEJSPCMT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1361:15: ( '--%>' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1361:15: '--%>'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1363:13: ( '--%>' )
+            // JSP.g:1363:15: '--%>'
             {
-            match("--%>");
+            match("--%>"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CLOSEJSPCMT
+    // $ANTLR end "CLOSEJSPCMT"
 
-    // $ANTLR start OPENXMLCMT
+    // $ANTLR start "OPENXMLCMT"
     public final void mOPENXMLCMT() throws RecognitionException {
         try {
             int _type = OPENXMLCMT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1362:15: ( '<!--' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1362:15: '<!--'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1364:13: ( '<!--' )
+            // JSP.g:1364:15: '<!--'
             {
-            match("<!--");
+            match("<!--"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end OPENXMLCMT
+    // $ANTLR end "OPENXMLCMT"
 
-    // $ANTLR start CLOSEXMLCMT
+    // $ANTLR start "CLOSEXMLCMT"
     public final void mCLOSEXMLCMT() throws RecognitionException {
         try {
             int _type = CLOSEXMLCMT;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1363:15: ( '-->' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1363:15: '-->'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1365:13: ( '-->' )
+            // JSP.g:1365:15: '-->'
             {
-            match("-->");
+            match("-->"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end CLOSEXMLCMT
+    // $ANTLR end "CLOSEXMLCMT"
 
-    // $ANTLR start XMLDECLOPEN
+    // $ANTLR start "XMLDECLOPEN"
     public final void mXMLDECLOPEN() throws RecognitionException {
         try {
             int _type = XMLDECLOPEN;
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1365:15: ( '<?xml' )
-            // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1365:15: '<?xml'
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // JSP.g:1367:13: ( '<?xml' )
+            // JSP.g:1367:15: '<?xml'
             {
-            match("<?xml");
+            match("<?xml"); 
 
 
             }
 
-            this.type = _type;
+            state.type = _type;
+            state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end XMLDECLOPEN
+    // $ANTLR end "XMLDECLOPEN"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:10: ( T66 | T67 | T68 | T69 | CDATA | LINE_COMMENT | JSP_COMMENT | XMLDECL | DOCTYPE | ID | SpecialCharacter | SQUOTE | DQUOTE | DDOT | EQUAL | WS | WS2 | Digit | OPENCLOSE | JSPTAGOPEN | JSPTAGCLOSE | JSPOPENEXPR | JSPOPENDECL | JSPOPENDIR | JSPCLOSEACT | JSPUSEBEAN | JSPSET | JSPGET | JSPOPENINC | JSPCLOSEINC | JSPOPENFWD | JSPCLOSEFWD | JSPOPENPLUG | JSPCLOSEPLUG | JSPOPENFALL | JSPCLOSEFALL | JSPOPENPARA | JSPOPENPARAS | JSPCLOSEPARAS | JSPOPENROOT | JSPCLOSEROOT | JSPOPENTEXT | JSPCLOSETEXT | JSPCLOSEATTR | JSPOPENATTR | JSPOPENBODY | JSPCLOSEBODY | JSPOPENINVOKE | JSPOPENDOBODY | JSPOPENOUTPUT | JSPELEMENTOP | OPENSCRIPLET | CLOSESCRIPTLET | OPENEXPR | CLOSEEXPR | OPENDECL | CLOSEDECL | OPENDIRECT | OPENJSPCMT | CLOSEJSPCMT | OPENXMLCMT | CLOSEXMLCMT | XMLDECLOPEN )
-        int alt14=63;
-        alt14 = dfa14.predict(input);
-        switch (alt14) {
+        // JSP.g:1:8: ( T__66 | T__67 | T__68 | T__69 | CDATA | LINE_COMMENT | JSP_COMMENT | XMLDECL | DOCTYPE | ID | SpecialCharacter | SQUOTE | DQUOTE | DDOT | EQUAL | WS | WS2 | Digit | OPENCLOSE | JSPTAGOPEN | JSPTAGCLOSE | JSPOPENEXPR | JSPOPENDECL | JSPOPENDIR | JSPCLOSEACT | JSPUSEBEAN | JSPSET | JSPGET | JSPOPENINC | JSPCLOSEINC | JSPOPENFWD | JSPCLOSEFWD | JSPOPENPLUG | JSPCLOSEPLUG | JSPOPENFALL | JSPCLOSEFALL | JSPOPENPARA | JSPOPENPARAS | JSPCLOSEPARAS | JSPOPENROOT | JSPCLOSEROOT | JSPOPENTEXT | JSPCLOSETEXT | JSPCLOSEATTR | JSPOPENATTR | JSPOPENBODY | JSPCLOSEBODY | JSPOPENINVOKE | JSPOPENDOBODY | JSPOPENOUTPUT | JSPELEMENTOP | OPENSCRIPLET | CLOSESCRIPTLET | OPENEXPR | CLOSEEXPR | OPENDECL | CLOSEDECL | OPENDIRECT | OPENJSPCMT | CLOSEJSPCMT | OPENXMLCMT | CLOSEXMLCMT | XMLDECLOPEN )
+        int alt13=63;
+        alt13 = dfa13.predict(input);
+        switch (alt13) {
             case 1 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:10: T66
+                // JSP.g:1:10: T__66
                 {
-                mT66();
+                mT__66(); 
 
                 }
                 break;
             case 2 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:14: T67
+                // JSP.g:1:16: T__67
                 {
-                mT67();
+                mT__67(); 
 
                 }
                 break;
             case 3 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:18: T68
+                // JSP.g:1:22: T__68
                 {
-                mT68();
+                mT__68(); 
 
                 }
                 break;
             case 4 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:22: T69
+                // JSP.g:1:28: T__69
                 {
-                mT69();
+                mT__69(); 
 
                 }
                 break;
             case 5 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:26: CDATA
+                // JSP.g:1:34: CDATA
                 {
-                mCDATA();
+                mCDATA(); 
 
                 }
                 break;
             case 6 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:32: LINE_COMMENT
+                // JSP.g:1:40: LINE_COMMENT
                 {
-                mLINE_COMMENT();
+                mLINE_COMMENT(); 
 
                 }
                 break;
             case 7 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:45: JSP_COMMENT
+                // JSP.g:1:53: JSP_COMMENT
                 {
-                mJSP_COMMENT();
+                mJSP_COMMENT(); 
 
                 }
                 break;
             case 8 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:57: XMLDECL
+                // JSP.g:1:65: XMLDECL
                 {
-                mXMLDECL();
+                mXMLDECL(); 
 
                 }
                 break;
             case 9 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:65: DOCTYPE
+                // JSP.g:1:73: DOCTYPE
                 {
-                mDOCTYPE();
+                mDOCTYPE(); 
 
                 }
                 break;
             case 10 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:73: ID
+                // JSP.g:1:81: ID
                 {
-                mID();
+                mID(); 
 
                 }
                 break;
             case 11 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:76: SpecialCharacter
+                // JSP.g:1:84: SpecialCharacter
                 {
-                mSpecialCharacter();
+                mSpecialCharacter(); 
 
                 }
                 break;
             case 12 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:93: SQUOTE
+                // JSP.g:1:101: SQUOTE
                 {
-                mSQUOTE();
+                mSQUOTE(); 
 
                 }
                 break;
             case 13 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:100: DQUOTE
+                // JSP.g:1:108: DQUOTE
                 {
-                mDQUOTE();
+                mDQUOTE(); 
 
                 }
                 break;
             case 14 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:107: DDOT
+                // JSP.g:1:115: DDOT
                 {
-                mDDOT();
+                mDDOT(); 
 
                 }
                 break;
             case 15 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:112: EQUAL
+                // JSP.g:1:120: EQUAL
                 {
-                mEQUAL();
+                mEQUAL(); 
 
                 }
                 break;
             case 16 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:118: WS
+                // JSP.g:1:126: WS
                 {
-                mWS();
+                mWS(); 
 
                 }
                 break;
             case 17 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:121: WS2
+                // JSP.g:1:129: WS2
                 {
-                mWS2();
+                mWS2(); 
 
                 }
                 break;
             case 18 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:125: Digit
+                // JSP.g:1:133: Digit
                 {
-                mDigit();
+                mDigit(); 
 
                 }
                 break;
             case 19 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:131: OPENCLOSE
+                // JSP.g:1:139: OPENCLOSE
                 {
-                mOPENCLOSE();
+                mOPENCLOSE(); 
 
                 }
                 break;
             case 20 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:141: JSPTAGOPEN
+                // JSP.g:1:149: JSPTAGOPEN
                 {
-                mJSPTAGOPEN();
+                mJSPTAGOPEN(); 
 
                 }
                 break;
             case 21 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:152: JSPTAGCLOSE
+                // JSP.g:1:160: JSPTAGCLOSE
                 {
-                mJSPTAGCLOSE();
+                mJSPTAGCLOSE(); 
 
                 }
                 break;
             case 22 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:164: JSPOPENEXPR
+                // JSP.g:1:172: JSPOPENEXPR
                 {
-                mJSPOPENEXPR();
+                mJSPOPENEXPR(); 
 
                 }
                 break;
             case 23 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:176: JSPOPENDECL
+                // JSP.g:1:184: JSPOPENDECL
                 {
-                mJSPOPENDECL();
+                mJSPOPENDECL(); 
 
                 }
                 break;
             case 24 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:188: JSPOPENDIR
+                // JSP.g:1:196: JSPOPENDIR
                 {
-                mJSPOPENDIR();
+                mJSPOPENDIR(); 
 
                 }
                 break;
             case 25 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:199: JSPCLOSEACT
+                // JSP.g:1:207: JSPCLOSEACT
                 {
-                mJSPCLOSEACT();
+                mJSPCLOSEACT(); 
 
                 }
                 break;
             case 26 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:211: JSPUSEBEAN
+                // JSP.g:1:219: JSPUSEBEAN
                 {
-                mJSPUSEBEAN();
+                mJSPUSEBEAN(); 
 
                 }
                 break;
             case 27 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:222: JSPSET
+                // JSP.g:1:230: JSPSET
                 {
-                mJSPSET();
+                mJSPSET(); 
 
                 }
                 break;
             case 28 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:229: JSPGET
+                // JSP.g:1:237: JSPGET
                 {
-                mJSPGET();
+                mJSPGET(); 
 
                 }
                 break;
             case 29 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:236: JSPOPENINC
+                // JSP.g:1:244: JSPOPENINC
                 {
-                mJSPOPENINC();
+                mJSPOPENINC(); 
 
                 }
                 break;
             case 30 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:247: JSPCLOSEINC
+                // JSP.g:1:255: JSPCLOSEINC
                 {
-                mJSPCLOSEINC();
+                mJSPCLOSEINC(); 
 
                 }
                 break;
             case 31 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:259: JSPOPENFWD
+                // JSP.g:1:267: JSPOPENFWD
                 {
-                mJSPOPENFWD();
+                mJSPOPENFWD(); 
 
                 }
                 break;
             case 32 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:270: JSPCLOSEFWD
+                // JSP.g:1:278: JSPCLOSEFWD
                 {
-                mJSPCLOSEFWD();
+                mJSPCLOSEFWD(); 
 
                 }
                 break;
             case 33 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:282: JSPOPENPLUG
+                // JSP.g:1:290: JSPOPENPLUG
                 {
-                mJSPOPENPLUG();
+                mJSPOPENPLUG(); 
 
                 }
                 break;
             case 34 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:294: JSPCLOSEPLUG
+                // JSP.g:1:302: JSPCLOSEPLUG
                 {
-                mJSPCLOSEPLUG();
+                mJSPCLOSEPLUG(); 
 
                 }
                 break;
             case 35 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:307: JSPOPENFALL
+                // JSP.g:1:315: JSPOPENFALL
                 {
-                mJSPOPENFALL();
+                mJSPOPENFALL(); 
 
                 }
                 break;
             case 36 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:319: JSPCLOSEFALL
+                // JSP.g:1:327: JSPCLOSEFALL
                 {
-                mJSPCLOSEFALL();
+                mJSPCLOSEFALL(); 
 
                 }
                 break;
             case 37 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:332: JSPOPENPARA
+                // JSP.g:1:340: JSPOPENPARA
                 {
-                mJSPOPENPARA();
+                mJSPOPENPARA(); 
 
                 }
                 break;
             case 38 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:344: JSPOPENPARAS
+                // JSP.g:1:352: JSPOPENPARAS
                 {
-                mJSPOPENPARAS();
+                mJSPOPENPARAS(); 
 
                 }
                 break;
             case 39 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:357: JSPCLOSEPARAS
+                // JSP.g:1:365: JSPCLOSEPARAS
                 {
-                mJSPCLOSEPARAS();
+                mJSPCLOSEPARAS(); 
 
                 }
                 break;
             case 40 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:371: JSPOPENROOT
+                // JSP.g:1:379: JSPOPENROOT
                 {
-                mJSPOPENROOT();
+                mJSPOPENROOT(); 
 
                 }
                 break;
             case 41 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:383: JSPCLOSEROOT
+                // JSP.g:1:391: JSPCLOSEROOT
                 {
-                mJSPCLOSEROOT();
+                mJSPCLOSEROOT(); 
 
                 }
                 break;
             case 42 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:396: JSPOPENTEXT
+                // JSP.g:1:404: JSPOPENTEXT
                 {
-                mJSPOPENTEXT();
+                mJSPOPENTEXT(); 
 
                 }
                 break;
             case 43 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:408: JSPCLOSETEXT
+                // JSP.g:1:416: JSPCLOSETEXT
                 {
-                mJSPCLOSETEXT();
+                mJSPCLOSETEXT(); 
 
                 }
                 break;
             case 44 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:421: JSPCLOSEATTR
+                // JSP.g:1:429: JSPCLOSEATTR
                 {
-                mJSPCLOSEATTR();
+                mJSPCLOSEATTR(); 
 
                 }
                 break;
             case 45 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:434: JSPOPENATTR
+                // JSP.g:1:442: JSPOPENATTR
                 {
-                mJSPOPENATTR();
+                mJSPOPENATTR(); 
 
                 }
                 break;
             case 46 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:446: JSPOPENBODY
+                // JSP.g:1:454: JSPOPENBODY
                 {
-                mJSPOPENBODY();
+                mJSPOPENBODY(); 
 
                 }
                 break;
             case 47 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:458: JSPCLOSEBODY
+                // JSP.g:1:466: JSPCLOSEBODY
                 {
-                mJSPCLOSEBODY();
+                mJSPCLOSEBODY(); 
 
                 }
                 break;
             case 48 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:471: JSPOPENINVOKE
+                // JSP.g:1:479: JSPOPENINVOKE
                 {
-                mJSPOPENINVOKE();
+                mJSPOPENINVOKE(); 
 
                 }
                 break;
             case 49 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:485: JSPOPENDOBODY
+                // JSP.g:1:493: JSPOPENDOBODY
                 {
-                mJSPOPENDOBODY();
+                mJSPOPENDOBODY(); 
 
                 }
                 break;
             case 50 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:499: JSPOPENOUTPUT
+                // JSP.g:1:507: JSPOPENOUTPUT
                 {
-                mJSPOPENOUTPUT();
+                mJSPOPENOUTPUT(); 
 
                 }
                 break;
             case 51 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:513: JSPELEMENTOP
+                // JSP.g:1:521: JSPELEMENTOP
                 {
-                mJSPELEMENTOP();
+                mJSPELEMENTOP(); 
 
                 }
                 break;
             case 52 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:526: OPENSCRIPLET
+                // JSP.g:1:534: OPENSCRIPLET
                 {
-                mOPENSCRIPLET();
+                mOPENSCRIPLET(); 
 
                 }
                 break;
             case 53 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:539: CLOSESCRIPTLET
+                // JSP.g:1:547: CLOSESCRIPTLET
                 {
-                mCLOSESCRIPTLET();
+                mCLOSESCRIPTLET(); 
 
                 }
                 break;
             case 54 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:554: OPENEXPR
+                // JSP.g:1:562: OPENEXPR
                 {
-                mOPENEXPR();
+                mOPENEXPR(); 
 
                 }
                 break;
             case 55 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:563: CLOSEEXPR
+                // JSP.g:1:571: CLOSEEXPR
                 {
-                mCLOSEEXPR();
+                mCLOSEEXPR(); 
 
                 }
                 break;
             case 56 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:573: OPENDECL
+                // JSP.g:1:581: OPENDECL
                 {
-                mOPENDECL();
+                mOPENDECL(); 
 
                 }
                 break;
             case 57 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:582: CLOSEDECL
+                // JSP.g:1:590: CLOSEDECL
                 {
-                mCLOSEDECL();
+                mCLOSEDECL(); 
 
                 }
                 break;
             case 58 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:592: OPENDIRECT
+                // JSP.g:1:600: OPENDIRECT
                 {
-                mOPENDIRECT();
+                mOPENDIRECT(); 
 
                 }
                 break;
             case 59 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:603: OPENJSPCMT
+                // JSP.g:1:611: OPENJSPCMT
                 {
-                mOPENJSPCMT();
+                mOPENJSPCMT(); 
 
                 }
                 break;
             case 60 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:614: CLOSEJSPCMT
+                // JSP.g:1:622: CLOSEJSPCMT
                 {
-                mCLOSEJSPCMT();
+                mCLOSEJSPCMT(); 
 
                 }
                 break;
             case 61 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:626: OPENXMLCMT
+                // JSP.g:1:634: OPENXMLCMT
                 {
-                mOPENXMLCMT();
+                mOPENXMLCMT(); 
 
                 }
                 break;
             case 62 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:637: CLOSEXMLCMT
+                // JSP.g:1:645: CLOSEXMLCMT
                 {
-                mCLOSEXMLCMT();
+                mCLOSEXMLCMT(); 
 
                 }
                 break;
             case 63 :
-                // C:\\Documents and Settings\\Nguyomar\\workspace\\org.eclipse.modisco.jee.jsp.discoverer\\resources\\internal\\JSP.g:1:649: XMLDECLOPEN
+                // JSP.g:1:657: XMLDECLOPEN
                 {
-                mXMLDECLOPEN();
+                mXMLDECLOPEN(); 
 
                 }
                 break;
@@ -2855,134 +2705,277 @@ public class JSPLexer extends Lexer {
     }
 
 
-    protected DFA14 dfa14 = new DFA14(this);
-    static final String DFA14_eotS =
-        "\1\6\1\uffff\1\32\2\uffff\1\11\4\uffff\4\6\10\uffff\1\42\2\uffff"+
-        "\1\54\2\uffff\1\11\1\6\17\uffff\2\11\5\uffff\1\71\1\74\2\uffff\1"+
-        "\113\63\uffff\1\156\2\uffff";
-    static final String DFA14_eofS =
-        "\157\uffff";
-    static final String DFA14_minS =
-        "\1\11\1\uffff\1\41\2\uffff\1\60\4\uffff\1\60\1\55\2\76\7\uffff"+
-        "\1\163\1\152\1\130\1\55\1\41\2\uffff\2\45\2\uffff\1\160\1\163\1"+
-        "\uffff\1\115\3\uffff\1\55\3\uffff\1\55\1\uffff\2\45\2\uffff\1\72"+
-        "\1\160\1\114\2\0\1\141\1\72\1\0\4\uffff\1\154\1\145\1\141\1\uffff"+
-        "\1\156\1\uffff\1\141\3\uffff\1\143\2\uffff\1\141\6\uffff\1\162\1"+
-        "\uffff\1\143\11\uffff\1\141\1\154\1\141\2\uffff\1\141\10\uffff\1"+
-        "\155\1\163\2\uffff";
-    static final String DFA14_maxS =
-        "\1\ufaff\1\uffff\1\152\2\uffff\1\71\4\uffff\2\71\2\76\7\uffff\1"+
-        "\163\1\152\1\170\1\144\1\100\2\uffff\1\71\1\76\2\uffff\1\160\1\163"+
-        "\1\uffff\1\155\3\uffff\1\55\3\uffff\1\55\1\uffff\2\71\2\uffff\1"+
-        "\72\1\160\1\154\2\ufffe\1\165\1\72\1\ufffe\4\uffff\1\170\1\157\1"+
-        "\154\1\uffff\1\156\1\uffff\1\157\3\uffff\1\145\2\uffff\1\164\6\uffff"+
-        "\1\162\1\uffff\1\166\11\uffff\1\154\1\170\1\157\2\uffff\1\141\10"+
-        "\uffff\1\155\1\163\2\uffff";
-    static final String DFA14_acceptS =
-        "\1\uffff\1\1\1\uffff\1\4\1\12\1\uffff\1\13\3\12\4\uffff\1\14\1"+
-        "\15\1\16\1\17\1\20\1\21\1\22\5\uffff\1\2\1\4\2\uffff\1\31\1\25\2"+
-        "\uffff\1\23\1\uffff\1\10\1\11\1\5\1\uffff\1\30\1\26\1\27\1\uffff"+
-        "\1\24\2\uffff\1\76\1\74\10\uffff\1\75\1\6\1\7\1\73\3\uffff\1\34"+
-        "\1\uffff\1\32\1\uffff\1\55\1\56\1\62\1\uffff\1\52\1\50\1\uffff\1"+
-        "\77\1\66\1\63\1\70\1\61\1\72\1\uffff\1\41\1\uffff\1\43\1\37\1\64"+
-        "\1\33\1\71\1\57\1\53\1\51\1\65\3\uffff\1\36\1\54\1\uffff\1\35\1"+
-        "\60\1\47\1\42\1\3\1\67\1\44\1\40\2\uffff\1\46\1\45";
-    static final String DFA14_specialS =
-        "\157\uffff}>";
-    static final String[] DFA14_transitionS = {
-            "\1\23\1\22\1\uffff\2\23\22\uffff\1\22\1\uffff\1\17\1\5\1\7"+
-            "\1\15\1\10\1\16\3\uffff\1\12\1\uffff\1\13\1\uffff\1\14\12\24"+
-            "\1\20\1\3\1\2\1\21\1\1\2\uffff\32\11\4\uffff\1\11\1\uffff\32"+
-            "\11\45\uffff\1\4\37\uffff\27\4\1\uffff\37\4\1\uffff\10\4\u1f00"+
-            "\11\30\uffff\10\11\22\uffff\6\11\164\uffff\1\11\u0f93\uffff"+
-            "\u0150\11\u0170\uffff\u0080\11\u0080\uffff\u092e\11\u10d2\uffff"+
-            "\u5200\11\u5900\uffff\u0200\11",
+    protected DFA7 dfa7 = new DFA7(this);
+    protected DFA8 dfa8 = new DFA8(this);
+    protected DFA13 dfa13 = new DFA13(this);
+    static final String DFA7_eotS =
+        "\1\1\1\uffff\1\10\7\uffff";
+    static final String DFA7_eofS =
+        "\12\uffff";
+    static final String DFA7_minS =
+        "\1\44\1\uffff\1\u00b0\7\uffff";
+    static final String DFA7_maxS =
+        "\1\ufaff\1\uffff\1\u00b0\7\uffff";
+    static final String DFA7_acceptS =
+        "\1\uffff\1\10\1\uffff\1\2\1\3\1\4\1\5\1\6\1\1\1\7";
+    static final String DFA7_specialS =
+        "\12\uffff}>";
+    static final String[] DFA7_transitionS = {
+            "\1\10\10\uffff\1\5\1\4\1\uffff\12\3\6\uffff\1\7\32\10\4\uffff"+
+            "\1\6\1\uffff\32\10\45\uffff\1\10\37\uffff\2\10\1\2\24\10\1\uffff"+
+            "\37\10\1\uffff\u1f08\10\30\uffff\10\10\22\uffff\6\10\164\uffff"+
+            "\1\10\u0f93\uffff\u0150\10\u0170\uffff\u0080\10\u0080\uffff"+
+            "\u092e\10\u10d2\uffff\u5200\10\u5900\uffff\u0200\10",
             "",
-            "\1\30\3\uffff\1\31\11\uffff\1\26\17\uffff\1\27\52\uffff\1"+
-            "\25",
-            "",
-            "",
-            "\12\34",
+            "\1\11",
             "",
             "",
             "",
             "",
-            "\12\24",
-            "\1\35\2\uffff\12\24",
-            "\1\36",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA7_eot = DFA.unpackEncodedString(DFA7_eotS);
+    static final short[] DFA7_eof = DFA.unpackEncodedString(DFA7_eofS);
+    static final char[] DFA7_min = DFA.unpackEncodedStringToUnsignedChars(DFA7_minS);
+    static final char[] DFA7_max = DFA.unpackEncodedStringToUnsignedChars(DFA7_maxS);
+    static final short[] DFA7_accept = DFA.unpackEncodedString(DFA7_acceptS);
+    static final short[] DFA7_special = DFA.unpackEncodedString(DFA7_specialS);
+    static final short[][] DFA7_transition;
+
+    static {
+        int numStates = DFA7_transitionS.length;
+        DFA7_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA7_transition[i] = DFA.unpackEncodedString(DFA7_transitionS[i]);
+        }
+    }
+
+    class DFA7 extends DFA {
+
+        public DFA7(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 7;
+            this.eot = DFA7_eot;
+            this.eof = DFA7_eof;
+            this.min = DFA7_min;
+            this.max = DFA7_max;
+            this.accept = DFA7_accept;
+            this.special = DFA7_special;
+            this.transition = DFA7_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 1220:9: ( options {greedy=true; } : LETTER | IDDigit | '.' | '-' | '_' | '@' | '°' )*";
+        }
+    }
+    static final String DFA8_eotS =
+        "\17\uffff\1\34\1\uffff\1\36\15\uffff";
+    static final String DFA8_eofS =
+        "\37\uffff";
+    static final String DFA8_minS =
+        "\1\41\16\uffff\1\55\1\uffff\1\57\15\uffff";
+    static final String DFA8_maxS =
+        "\1\u377f\16\uffff\1\55\1\uffff\1\57\15\uffff";
+    static final String DFA8_acceptS =
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1"+
+        "\15\1\16\1\uffff\1\21\1\uffff\1\23\1\24\1\25\1\26\1\27\1\30\1\31"+
+        "\1\32\1\34\1\20\1\17\1\33\1\22";
+    static final String DFA8_specialS =
+        "\37\uffff}>";
+    static final String[] DFA8_transitionS = {
+            "\1\6\1\uffff\1\7\1\10\1\27\1\11\1\uffff\1\12\1\13\1\14\1\15"+
+            "\1\16\1\17\1\20\1\21\13\uffff\1\22\3\uffff\1\23\1\30\32\uffff"+
+            "\1\24\1\31\1\25\1\32\1\uffff\1\26\32\uffff\1\3\1\5\1\4\42\uffff"+
+            "\140\1\u2300\uffff\u1380\2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\33",
+            "",
+            "\1\35",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA8_eot = DFA.unpackEncodedString(DFA8_eotS);
+    static final short[] DFA8_eof = DFA.unpackEncodedString(DFA8_eofS);
+    static final char[] DFA8_min = DFA.unpackEncodedStringToUnsignedChars(DFA8_minS);
+    static final char[] DFA8_max = DFA.unpackEncodedStringToUnsignedChars(DFA8_maxS);
+    static final short[] DFA8_accept = DFA.unpackEncodedString(DFA8_acceptS);
+    static final short[] DFA8_special = DFA.unpackEncodedString(DFA8_specialS);
+    static final short[][] DFA8_transition;
+
+    static {
+        int numStates = DFA8_transitionS.length;
+        DFA8_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA8_transition[i] = DFA.unpackEncodedString(DFA8_transitionS[i]);
+        }
+    }
+
+    class DFA8 extends DFA {
+
+        public DFA8(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 8;
+            this.eot = DFA8_eot;
+            this.eof = DFA8_eof;
+            this.min = DFA8_min;
+            this.max = DFA8_max;
+            this.accept = DFA8_accept;
+            this.special = DFA8_special;
+            this.transition = DFA8_transition;
+        }
+        public String getDescription() {
+            return "1252:1: SpecialCharacter : ( '\\u00A0' .. '\\u00FF' | '\\u2400' .. '\\u377F' | '{' | '}' | '|' | '!' | '#' | '$' | '&' | '(' | ')' | '*' | '+' | ',' | '-' | '--' | '.' | '\\/' | ';' | '?' | '[' | ']' | '`' | '%' | '@' | '\\\\' | '//' | '^' );";
+        }
+    }
+    static final String DFA13_eotS =
+        "\2\uffff\1\33\4\uffff\1\12\3\uffff\4\6\7\uffff\1\42\1\uffff\1\52"+
+        "\4\uffff\1\12\1\6\17\uffff\2\12\3\uffff\1\71\1\73\7\uffff\1\77\60"+
+        "\uffff\1\157\2\uffff";
+    static final String DFA13_eofS =
+        "\160\uffff";
+    static final String DFA13_minS =
+        "\1\11\1\uffff\1\41\4\uffff\1\60\3\uffff\1\60\1\55\2\76\7\uffff"+
+        "\1\152\1\55\1\41\1\130\1\163\2\uffff\2\45\2\uffff\1\163\2\uffff"+
+        "\1\55\1\uffff\1\55\4\uffff\1\115\1\uffff\1\160\2\45\2\uffff\1\160"+
+        "\2\0\1\114\2\72\4\uffff\1\0\2\141\2\uffff\1\143\1\uffff\1\156\2"+
+        "\141\4\uffff\1\145\1\uffff\2\154\1\uffff\2\141\10\uffff\1\143\3"+
+        "\uffff\1\162\15\uffff\1\141\1\155\1\163\2\uffff";
+    static final String DFA13_maxS =
+        "\1\ufaff\1\uffff\1\152\4\uffff\1\71\3\uffff\2\71\2\76\7\uffff\1"+
+        "\152\1\144\1\100\1\170\1\163\2\uffff\1\71\1\76\2\uffff\1\163\2\uffff"+
+        "\1\55\1\uffff\1\55\4\uffff\1\155\1\uffff\1\160\2\71\2\uffff\1\160"+
+        "\2\uffff\1\154\2\72\4\uffff\1\uffff\1\165\1\164\2\uffff\1\145\1"+
+        "\uffff\1\156\1\157\1\154\4\uffff\1\157\1\uffff\2\170\1\uffff\1\157"+
+        "\1\154\10\uffff\1\166\3\uffff\1\162\15\uffff\1\141\1\155\1\163\2"+
+        "\uffff";
+    static final String DFA13_acceptS =
+        "\1\uffff\1\1\1\uffff\1\4\2\12\1\13\1\uffff\3\12\4\uffff\1\14\1"+
+        "\15\1\16\1\17\1\20\1\21\1\22\5\uffff\1\2\1\4\2\uffff\1\31\1\25\1"+
+        "\uffff\1\23\1\5\1\uffff\1\11\1\uffff\1\26\1\27\1\30\1\24\1\uffff"+
+        "\1\10\3\uffff\1\74\1\76\6\uffff\1\6\1\75\1\7\1\73\3\uffff\1\77\1"+
+        "\32\1\uffff\1\34\3\uffff\1\50\1\52\1\55\1\56\1\uffff\1\62\2\uffff"+
+        "\1\36\2\uffff\1\51\1\53\1\54\1\57\1\65\1\71\1\33\1\64\1\uffff\1"+
+        "\37\1\43\1\41\1\uffff\1\61\1\70\1\72\1\63\1\66\1\3\1\67\1\40\1\44"+
+        "\1\42\1\47\1\35\1\60\3\uffff\1\46\1\45";
+    static final String DFA13_specialS =
+        "\63\uffff\1\2\1\0\7\uffff\1\1\63\uffff}>";
+    static final String[] DFA13_transitionS = {
+            "\1\24\1\23\1\uffff\2\24\22\uffff\1\23\1\6\1\20\1\7\1\10\1\16"+
+            "\1\11\1\17\3\6\1\13\1\6\1\14\1\6\1\15\12\25\1\21\1\3\1\2\1\22"+
+            "\1\1\2\6\32\12\4\6\1\12\1\6\32\12\3\6\42\uffff\1\4\37\6\27\4"+
+            "\1\6\37\4\1\6\10\4\u1f00\12\30\uffff\10\12\22\uffff\6\12\164"+
+            "\uffff\1\12\u0353\uffff\u0c40\6\u0150\5\u0170\6\u0080\5\u0080"+
+            "\6\u0380\5\u05ae\12\u10d2\uffff\u5200\12\u5900\uffff\u0200\12",
+            "",
+            "\1\27\3\uffff\1\30\11\uffff\1\26\17\uffff\1\31\52\uffff\1"+
+            "\32",
+            "",
+            "",
+            "",
+            "",
+            "\12\35",
+            "",
+            "",
+            "",
+            "\12\25",
+            "\1\36\2\uffff\12\25",
             "\1\37",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\40",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\41",
-            "\1\44\37\uffff\1\43",
-            "\1\47\26\uffff\1\45\26\uffff\1\46\10\uffff\1\45",
-            "\1\52\13\uffff\1\53\17\uffff\1\51\2\uffff\1\50",
+            "\1\44\26\uffff\1\45\26\uffff\1\43\10\uffff\1\45",
+            "\1\50\13\uffff\1\46\17\uffff\1\47\2\uffff\1\51",
+            "\1\54\37\uffff\1\53",
+            "\1\55",
             "",
             "",
-            "\1\24\6\uffff\1\24\1\uffff\1\56\1\uffff\12\55",
-            "\1\60\30\uffff\1\57",
+            "\1\25\6\uffff\1\25\1\uffff\1\57\1\uffff\12\56",
+            "\1\60\30\uffff\1\61",
             "",
             "",
-            "\1\61",
             "\1\62",
             "",
-            "\1\44\37\uffff\1\63",
             "",
-            "",
+            "\1\63",
             "",
             "\1\64",
             "",
             "",
             "",
-            "\1\65",
             "",
-            "\1\24\6\uffff\1\24\1\uffff\1\56\1\uffff\12\55",
-            "\1\24\6\uffff\1\24\1\uffff\1\56\1\uffff\12\55",
-            "",
+            "\1\54\37\uffff\1\65",
             "",
             "\1\66",
+            "\1\25\6\uffff\1\25\1\uffff\1\57\1\uffff\12\56",
+            "\1\25\6\uffff\1\25\1\uffff\1\57\1\uffff\12\56",
+            "",
+            "",
             "\1\67",
-            "\1\44\37\uffff\1\70",
-            "\uffff\72",
-            "\uffff\73",
-            "\1\104\1\105\1\uffff\1\76\1\75\1\103\1\100\1\uffff\1\101\5"+
-            "\uffff\1\106\1\77\1\uffff\1\111\1\107\1\110\1\102",
-            "\1\112",
-            "\uffff\44",
+            "\0\70",
+            "\0\72",
+            "\1\54\37\uffff\1\74",
+            "\1\75",
+            "\1\76",
             "",
             "",
             "",
             "",
-            "\1\115\13\uffff\1\114",
-            "\1\116\3\uffff\1\120\5\uffff\1\117",
-            "\1\121\12\uffff\1\122",
-            "",
-            "\1\123",
-            "",
-            "\1\124\15\uffff\1\125",
+            "\0\54",
+            "\1\110\1\111\1\uffff\1\112\1\114\1\104\1\102\1\uffff\1\103"+
+            "\5\uffff\1\113\1\105\1\uffff\1\106\1\101\1\107\1\100",
+            "\1\123\1\124\1\uffff\1\126\1\115\1\117\2\uffff\1\116\6\uffff"+
+            "\1\120\1\uffff\1\121\1\125\1\122",
             "",
             "",
+            "\1\130\1\uffff\1\127",
             "",
-            "\1\126\1\uffff\1\127",
-            "",
-            "",
-            "\1\141\1\131\1\uffff\1\130\1\136\1\137\2\uffff\1\140\6\uffff"+
-            "\1\135\1\uffff\1\133\1\134\1\132",
+            "\1\131",
+            "\1\133\15\uffff\1\132",
+            "\1\135\12\uffff\1\134",
             "",
             "",
             "",
             "",
+            "\1\137\3\uffff\1\140\5\uffff\1\136",
             "",
+            "\1\141\13\uffff\1\142",
+            "\1\143\13\uffff\1\144",
             "",
-            "\1\142",
-            "",
-            "\1\143\22\uffff\1\144",
+            "\1\146\15\uffff\1\145",
+            "\1\150\12\uffff\1\147",
             "",
             "",
             "",
@@ -2991,10 +2984,8 @@ public class JSPLexer extends Lexer {
             "",
             "",
             "",
+            "\1\151\22\uffff\1\152",
             "",
-            "\1\145\12\uffff\1\146",
-            "\1\147\13\uffff\1\150",
-            "\1\151\15\uffff\1\152",
             "",
             "",
             "\1\153",
@@ -3006,45 +2997,91 @@ public class JSPLexer extends Lexer {
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\154",
             "\1\155",
+            "\1\156",
             "",
             ""
     };
 
-    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
-    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
-    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
-    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
-    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
-    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
-    static final short[][] DFA14_transition;
+    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
+    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
+    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
+    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
+    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
+    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
+    static final short[][] DFA13_transition;
 
     static {
-        int numStates = DFA14_transitionS.length;
-        DFA14_transition = new short[numStates][];
+        int numStates = DFA13_transitionS.length;
+        DFA13_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
+            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
         }
     }
 
-    class DFA14 extends DFA {
+    class DFA13 extends DFA {
 
-        public DFA14(BaseRecognizer recognizer) {
+        public DFA13(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 14;
-            this.eot = DFA14_eot;
-            this.eof = DFA14_eof;
-            this.min = DFA14_min;
-            this.max = DFA14_max;
-            this.accept = DFA14_accept;
-            this.special = DFA14_special;
-            this.transition = DFA14_transition;
+            this.decisionNumber = 13;
+            this.eot = DFA13_eot;
+            this.eof = DFA13_eof;
+            this.min = DFA13_min;
+            this.max = DFA13_max;
+            this.accept = DFA13_accept;
+            this.special = DFA13_special;
+            this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T66 | T67 | T68 | T69 | CDATA | LINE_COMMENT | JSP_COMMENT | XMLDECL | DOCTYPE | ID | SpecialCharacter | SQUOTE | DQUOTE | DDOT | EQUAL | WS | WS2 | Digit | OPENCLOSE | JSPTAGOPEN | JSPTAGCLOSE | JSPOPENEXPR | JSPOPENDECL | JSPOPENDIR | JSPCLOSEACT | JSPUSEBEAN | JSPSET | JSPGET | JSPOPENINC | JSPCLOSEINC | JSPOPENFWD | JSPCLOSEFWD | JSPOPENPLUG | JSPCLOSEPLUG | JSPOPENFALL | JSPCLOSEFALL | JSPOPENPARA | JSPOPENPARAS | JSPCLOSEPARAS | JSPOPENROOT | JSPCLOSEROOT | JSPOPENTEXT | JSPCLOSETEXT | JSPCLOSEATTR | JSPOPENATTR | JSPOPENBODY | JSPCLOSEBODY | JSPOPENINVOKE | JSPOPENDOBODY | JSPOPENOUTPUT | JSPELEMENTOP | OPENSCRIPLET | CLOSESCRIPTLET | OPENEXPR | CLOSEEXPR | OPENDECL | CLOSEDECL | OPENDIRECT | OPENJSPCMT | CLOSEJSPCMT | OPENXMLCMT | CLOSEXMLCMT | XMLDECLOPEN );";
+            return "1:1: Tokens : ( T__66 | T__67 | T__68 | T__69 | CDATA | LINE_COMMENT | JSP_COMMENT | XMLDECL | DOCTYPE | ID | SpecialCharacter | SQUOTE | DQUOTE | DDOT | EQUAL | WS | WS2 | Digit | OPENCLOSE | JSPTAGOPEN | JSPTAGCLOSE | JSPOPENEXPR | JSPOPENDECL | JSPOPENDIR | JSPCLOSEACT | JSPUSEBEAN | JSPSET | JSPGET | JSPOPENINC | JSPCLOSEINC | JSPOPENFWD | JSPCLOSEFWD | JSPOPENPLUG | JSPCLOSEPLUG | JSPOPENFALL | JSPCLOSEFALL | JSPOPENPARA | JSPOPENPARAS | JSPCLOSEPARAS | JSPOPENROOT | JSPCLOSEROOT | JSPOPENTEXT | JSPCLOSETEXT | JSPCLOSEATTR | JSPOPENATTR | JSPOPENBODY | JSPCLOSEBODY | JSPOPENINVOKE | JSPOPENDOBODY | JSPOPENOUTPUT | JSPELEMENTOP | OPENSCRIPLET | CLOSESCRIPTLET | OPENEXPR | CLOSEEXPR | OPENDECL | CLOSEDECL | OPENDIRECT | OPENJSPCMT | CLOSEJSPCMT | OPENXMLCMT | CLOSEXMLCMT | XMLDECLOPEN );";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            IntStream input = _input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA13_52 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_52>='\u0000' && LA13_52<='\uFFFF')) ) {s = 58;}
+
+                        else s = 59;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA13_60 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_60>='\u0000' && LA13_60<='\uFFFF')) ) {s = 44;}
+
+                        else s = 63;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA13_51 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_51>='\u0000' && LA13_51<='\uFFFF')) ) {s = 56;}
+
+                        else s = 57;
+
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 13, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
-
+ 
 
 }
