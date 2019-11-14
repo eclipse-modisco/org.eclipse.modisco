@@ -13,9 +13,10 @@
 /*.updatesite/pom_after_updatesite.xml
 /*.updatesite/poma.xml
 /*/bin/
-/*/pom.xml
-/*/pom.xml.*
+/*/target/
+--/*/pom.xml
+--/*/pom.xml.*
 /*/pom.xml.configure-quality-poms.bak
 /*source.feature
-/pom.xml*
+--/pom.xml*
 /pom_after_configure.xml
