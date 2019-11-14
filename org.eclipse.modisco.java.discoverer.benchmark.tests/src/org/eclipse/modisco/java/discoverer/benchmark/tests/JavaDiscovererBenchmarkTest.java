@@ -37,6 +37,7 @@ import org.eclipse.modisco.java.discoverer.benchmark.RunBenchmark;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class JavaDiscovererBenchmarkTest {
@@ -58,6 +59,7 @@ public class JavaDiscovererBenchmarkTest {
 		AcceleoEnginePlugin.getDefault().getLog().addLogListener(this.listener);
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test(timeout = 25 * 60 * 1000)
 	public void test001() throws CoreException, IOException {
 		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {

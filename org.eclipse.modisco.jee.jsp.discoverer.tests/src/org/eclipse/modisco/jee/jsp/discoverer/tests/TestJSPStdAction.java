@@ -31,6 +31,7 @@ import org.eclipse.modisco.jee.jsp.JSPStdAction;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -65,6 +66,7 @@ public class TestJSPStdAction {
 		}
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test(timeout = 5 * 60 * 1000)
 	public void test1() throws Exception {
 		initResource();

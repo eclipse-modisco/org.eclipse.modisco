@@ -39,6 +39,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -83,6 +84,7 @@ public class DiffGeneratedJspTest {
 	 * @throws IOException
 	 * @throws CoreException
 	 */
+	@Ignore // FIXME Bug 552989
 	@Test(timeout = 5 * 60 * 1000)
 	public final void testJspFileExistence() throws URISyntaxException,
 			CoreException, IOException {
