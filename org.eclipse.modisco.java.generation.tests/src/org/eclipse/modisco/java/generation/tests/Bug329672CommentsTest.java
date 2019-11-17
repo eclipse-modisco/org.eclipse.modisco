@@ -17,6 +17,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -46,6 +47,7 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 		return Activator.getDefault().getBundle();
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test
 	public final void testBug329672Comments() throws CoreException, IOException {
 		File sourceJavaModel = getInputModelFile();

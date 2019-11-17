@@ -33,6 +33,7 @@ import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -85,6 +86,7 @@ public class Tests {
 		FileUtils.checkEMFResource(uri, 1);
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug308991() throws CoreException, IOException,
 			InterruptedException {

@@ -25,6 +25,7 @@ import org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreBuilder;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class EcoreCatalogTest {
@@ -71,6 +72,7 @@ public class EcoreCatalogTest {
 	 *
 	 * @throws Exception
 	 */
+	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug309990() throws Exception {
 		final String name = "bug309990"; //$NON-NLS-1$

@@ -50,6 +50,7 @@ import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Property;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -358,6 +359,7 @@ public class Tests {
 		Assert.assertFalse((Boolean) queryImpl.basicEvaluate(cModelBrowser));
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug308991() throws CoreException, IOException,
 			InterruptedException {
