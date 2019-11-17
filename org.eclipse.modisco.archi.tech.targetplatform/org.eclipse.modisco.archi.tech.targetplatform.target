@@ -30,6 +30,8 @@
     <repository location="https://download.eclipse.org/birt/update-site/4.6/"/>
     <repository location="http://download.eclipse.org/modeling/emf/cdo/updates/releases/4.7"/>
     <repository location="https://download.eclipse.org/modeling/emf/emf/builds/milestone/latest"/>
+    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R201706061339"/>
+    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R201706061352"/>
     <repository location="https://download.eclipse.org/modeling/mdt/ocl/updates/milestones/latest"/>
     <repository location="https://download.eclipse.org/technology/swtbot/releases/latest"/>
     <!--repository location="https://download.eclipse.org/modeling/mdt/uml2/updates/milestones"/-->
