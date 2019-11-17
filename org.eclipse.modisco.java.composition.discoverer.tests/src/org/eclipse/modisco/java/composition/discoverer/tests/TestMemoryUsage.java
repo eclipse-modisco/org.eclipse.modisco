@@ -40,6 +40,7 @@ import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
 import org.eclipse.modisco.java.discoverer.tests.Activator;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -98,6 +99,7 @@ public class TestMemoryUsage {
 		}
 	}
 
+	@Ignore // FIXME Bug 552989
 	@Test
 	public void test002() {
 		final String message = String.format(

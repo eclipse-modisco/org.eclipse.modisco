@@ -296,6 +296,7 @@ public class BrowserCustomTest {
 	 * Check that a query referenced by a customization is the same physical
 	 * object as a query with the same name from the catalog.
 	 */
+	@Ignore // FIXME Bug 552989
 	@Test
 	public void test001() throws CoreException, IOException,
 			InterruptedException {
