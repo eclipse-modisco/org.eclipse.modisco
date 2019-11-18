@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.eclipse.modisco.examples.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.examples.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.facet.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.facet.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.cdo.derby.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.cdo.derby.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.omg.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.omg.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infrastructure.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infrastructure.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.java.cdo.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature id="org.eclipse.modisco.java.cdo.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.cdo"/>
+   </feature>
+   <feature id="org.eclipse.modisco.java.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.java.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.jee.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.jee.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.sdk.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.main"/>
+   </feature>
+   <feature id="org.eclipse.modisco.sdk.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.main"/>
+   </feature>
+   <feature id="org.eclipse.modisco.usecase.modelfilter.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature id="org.eclipse.modisco.usecase.modelfilter.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.usecases"/>
+   </feature>
+   <feature id="org.eclipse.modisco.xml.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.xml.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.all.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.all.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.thirdparties" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.thirdparties.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.dev"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.browser.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.infra.browser.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.infrastructure"/>
+   </feature>
+   <feature id="org.eclipse.modisco.eclipse.feature" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <feature id="org.eclipse.modisco.eclipse.feature.source" version="0.0.0">
+      <category name="org.eclipse.modisco.updatesite.technologies"/>
+   </feature>
+   <category-def name="org.eclipse.modisco.updatesite.infrastructure" label="Infrastructure"/>
+   <category-def name="org.eclipse.modisco.updatesite.technologies" label="Technologies"/>
+   <category-def name="org.eclipse.modisco.updatesite.cdo" label="CDO Adapters"/>
+   <category-def name="org.eclipse.modisco.updatesite.usecases" label="Usecases"/>
+   <category-def name="org.eclipse.modisco.updatesite.dev" label="MoDisco developers tools"/>
+   <category-def name="org.eclipse.modisco.updatesite.main" label="MoDisco"/>
+</site>

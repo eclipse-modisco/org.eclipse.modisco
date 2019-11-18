@@ -9,7 +9,7 @@
 /*.eclipsepackage/pom_updated_modules.xml
 /*.targetplatform/pom.tmp.xml
 /*.tests/screenshots/
-/*.updatesite/category.xml
+--/*.updatesite/category.xml
 /*.updatesite/pom_after_updatesite.xml
 /*.updatesite/poma.xml
 /*/bin/
