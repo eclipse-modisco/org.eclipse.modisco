@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<h2 id="UI_test">UI test</h2>
+		<p>Create a MoDisco project named facetTest</p>
+		<p>In the project facetTest, create a facet set named My</p>
+		<p>Open My.facetSet in the model editor.</p>
+		<p>Right-click &gt; Load meta-model</p>
+		<ul>
+			<li>Select: 
+				<a href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java">http://www.eclipse.org/MoDisco/Java/0.2.incubation/java</a>
+			</li>
+		</ul>
+		<p>Set the facetSet:</p>
+		<ul>
+			<li>Extended meta-model: java</li>
+			<li>Name: My</li>
+			<li>Ns prefix: my</li>
+			<li>Ns URI: 
+				<a href="http://test/facet/my">http://test/facet/my</a>
+			</li>
+		</ul>
+		<p>Right-click &gt; Load MoDisco Resource</p>
+		<ul>
+			<li>Select : modifierJavaQueries</li>
+		</ul>
+		<p>Create a facet (Right-click &gt; New child &gt; Facet)</p>
+		<ul>
+			<li>Condition query: isAbstract</li>
+			<li>ESuper type: ClassDeclaration</li>
+			<li>Name: MyAbstractClassDeclaration</li>
+		</ul>
+		<p>File &gt; Import &gt; Plug-ins and Fragements</p>
+		<ul>
+			<li>Project with source folder</li>
+			<li>Next</li>
+			<li>org.eclipse.gmt.modisco.common.core</li>
+			<li>Finish</li>
+		</ul>
+		<p>Select the project org.eclipse.gmt.modisco.common.core</p>
+		<ul>
+			<li>Right-click &gt; MoDisco &gt; Discover Java Model From Java project</li>
+		</ul>
+		<p>Open /org.eclipse.gmt.modisco.infra.common.core/org.eclipse.gmt.modisco.infra.common.core.javaxmi with the model browser</p>
+		<p>Remove all the applied facet and customization</p>
+		<p>Re-open the browser</p>
+		<p>Apply the facet set My </p>
+		<ul>
+			<li>You must get a new element named MyAbstractClassDeclaration in the left panel.</li>
+		</ul>
+		<p>In the editor of My.facetSet</p>
+		<ul>
+			<li>Right-click &gt; Load MoDisco Resource
+				<ul>
+					<li>Select : _example_jdkAndEclipseQuerySet</li>
+				</ul>
+			</li>
+			<li>Select MyAbstractClassDeclaration</li>
+			<li>Right-click &gt; New Child &gt; FacetReference
+				<ul>
+					<li>Name : subtypes</li>
+					<li>Value Query : getSubTypes</li>
+					<li>Upper bound: -1</li>
+					<li>EType: TypeDeclaration</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi</p>
+		<ul>
+			<li>Check that the FacetReference subtypes work properly</li>
+		</ul>
+		<p>Open testFacet/My.facetSet</p>
+		<ul>
+			<li>Select My</li>
+			<li>Right-click &gt; New Child &gt; Facet
+				<ul>
+					<li>Name : ClassDeclarationExt</li>
+					<li>ESuper Type: ClassDeclaration</li>
+				</ul>
+			</li>
+			<li>Select ClassDeclarationExt</li>
+			<li>Right-click &gt; New Child &gt; FacetAttribute
+				<ul>
+					<li>Name : isAbstract</li>
+					<li>Value Query : isAbstract</li>
+					<li>EType: EBoolean</li>
+				</ul>
+			</li>
+			<li>Save My.facetSet</li>
+		</ul>
+		<p>Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi</p>
+		<ul>
+			<li>Enable the facet ClassDeclarationExt</li>
+			<li>Check that the FacetAttribute isAbstract works properly.</li>
+		</ul>
+		<p>Import the uml browser customization example</p>
+		<ul>
+			<li>File &gt; New &gt; Example &gt; UML MoDisco Browser customization </li>
+		</ul>
+		<p>Open the "Facet set view"</p>
+		<ul>
+			<li>Check that only one instance of the facet set _example_umlFacets exists.</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h1 id="Java_Discoverer_API">Java Discoverer API</h1>
+		<p>First, add the following plug-in dependencies to your project (
+			<b>Require-Bundle</b> in your Manifest.MF):
+		</p>
+		<ul>
+			<li>org.eclipse.gmt.modisco.java</li>
+			<li>org.eclipse.modisco.java.discoverer</li>
+			<li>org.eclipse.modisco.infra.discovery.core</li>
+		</ul>
+		<p>There are several Java discoverer classes that do the same discovery but on different inputs:</p>
+		<ul>
+			<li>DiscoverJavaModelFromJavaProject : from an IJavaProject (defined in jdt.core)</li>
+			<li>DiscoverJavaModelFromProject : from an IProject</li>
+			<li>DiscoverJavaModelFromClassFile : from an IClassFile (defined in jdt.core)</li>
+			<li>DiscoverJavaModelFromLibrary : from an IPackageFragmentRoot (for jars; defined in jdt.core)</li>
+		</ul>
+		<p>You can easily discover a Java model programmatically. For example, to discover a Java model from a Java project:</p>
+		<pre>
+DiscoverJavaModelFromJavaProject discoverer = new DiscoverJavaModelFromJavaProject();
+javaDiscoverer.discoverElement(javaProject, monitor);
+Resource javaResource = javaDiscoverer.getTargetModel();
+</pre>
+		<p>To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.</p>
+		<p>Once you have the Java Resource, you can use the standard EMF API to read model elements. For example, to get the root:</p>
+		<pre>
+Model javaModel = (Model) javaResource.getContents().get(0);
+</pre>
+		<p>To print the list of Java classes in the model:</p>
+		<pre>
+EList&lt;ClassFile&gt; classFiles = javaModel.getClassFiles();
+for (ClassFile classFile : classFiles) {
+    System.out.println(classFile.getName());
+}
+</pre>
+	</body>
+</html>

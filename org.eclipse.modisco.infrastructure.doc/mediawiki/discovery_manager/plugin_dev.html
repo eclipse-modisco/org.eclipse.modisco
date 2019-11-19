@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h1 id="Discovery_Manager_Developer_Documentation">Discovery Manager Developer Documentation</h1>
+		<h2 id="Discoverers_declaration_API">Discoverers declaration API</h2>
+		<h3 id="Developing_a_new_Discoverer">Developing a new Discoverer</h3>
+		<h4 id="Basics_concepts">Basics concepts</h4>
+		<p>The framework defines a Java interface 
+			<i>org.eclipse.modisco.infra.discovery.core.IDiscoverer&lt;T&gt;</i> that every discoverer must implement. 
+		</p>
+		<pre>
+public interface IDiscoverer&lt;T&gt; {
+  boolean isApplicableTo(T source);
+  void discoverElement(T source, IProgressMonitor monitor) throws DiscoveryException;
+}
+</pre>
+		<ul>
+			<li>T : the java type for the source of the discovery</li>
+			<li>isApplicableTo method: Determines if the source object can be handled by the discoverer. Each discoverer has to implement this method with its own criteria to filter the selected object. This service is used in the framework that manipulates discoverers in a generic way. For example, for the end user, if the source object is managed by this discoverer then a discoverer menu will be available in the pop-up menu when users click with the contextual button. </li>
+			<li>discoverElement method: Generic method for launching a discovery from a source element. The service may throw some functional exception (a subclass of 
+				<i>DiscoveryException</i>)
+			</li>
+			<li>additional discovery parameter values (input or output) should be managed using fields and methods annotated with the 
+				<i>org.eclipse.modisco.infra.discoverymanager.core.annotations.Parameter</i> annotation.
+			</li>
+		</ul>
+		<p>Annotating your method/field as parameters of the discoverer enables a generic description using the catalog API (see below) and so some client generic behavior (e.g. launchconfig feature for end user).</p>
+		<pre>
+@Target({ ElementType.METHOD, ElementType.FIELD })
+public @interface Parameter {
+  String name();
+  String description() default "";
+  boolean requiresInputValue() default false;
+}
+</pre>
+		<p>The developer is free to annotate directly a Java field or a getter/setter method, or both field and getter/setter with the same id. See the java documentation on 
+			<i>org.eclipse.modisco.infra.discovery.core.annotations.Parameter</i> for details about the properties and the rules to satisfy. Some compilation errors will appear if some of the rules are violated (JDT APT processing must be activated on the project).
+		</p>
+		<h4 id="A_small_example">A small example</h4>
+		<pre>
+public class BasicDiscoverer implements IDiscoverer&lt;Object&gt; {
+
+  private String myParamIn;
+  private URI myParamOut;
+
+  @Parameter(name="PARAM_IN")
+  public void setMyParamIn(final String value) {
+    this.myParamIn = value;
+  }
+
+  @Parameter(name="PARAM_OUT")
+  public URI getMyParamOut() {
+    return this.myParamOut;
+  }
+
+  public boolean isApplicableTo(final Object source) {
+    return ...;
+  }
+
+  public void discoverElement(final Object source, final IProgressMonitor monitor) {
+    ...
+  }
+}
+</pre>
+		<p>Note : inheritance is taken into account in the framework for the generic description of a discoverer: your discoverer class will inherit from the parameters declared (using annotations) on the super class or interfaces. The annotation validity rules will be checked against this whole parameters group.</p>
+		<h4 id="The_advanced_API">The advanced API</h4>
+		<p>Some usual parameters and behaviors have been grouped in abstract java discoverers for reuse.</p>
+		<p>
+			<b>org.eclipse.modisco.infra.discovery.core.AbstractDiscoverer</b> proposes some usual services for testing the validity of the discovery source.
+		</p>
+		<p>
+			<b>org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer</b> proposes some usual parameters for handling a model as result of the discovery (based on EMF org.eclipse.emf.ecore.Resource API). It also proposes some usual model creation and save actions.
+		</p>
+		<h5 id="initial_values">initial values</h5>
+		<p>You can specify an initial value for a discoverer parameter using the 
+			<b>@ParameterInitialValue</b> annotation on a method that returns an instance of the parameter type, and takes a <code>source</code> parameter that has the same type as the source of the discovery (i.e. corresponds to the generic <code>&lt;T&gt;</code> parameter of the discoverer). This method should be <code>static</code>, but this is not required.
+		</p>
+		<p>For example, this can be used to initialize a parameter that depends on the source of the discovery:</p>
+		<pre>
+@ParameterInitialValue(name = "ELEMENTS_TO_ANALYZE")
+public static ElementsToAnalyze getElementsToAnalyzeInitialValue(final IJavaProject source) {
+  return new ElementsToAnalyze(source);
+}
+</pre>
+		<p>
+			<b>note:</b> Since the initialization can depend on the <code>source</code> parameter, discoverer parameters that are initialized in this way will be reset to their initial value every time the source changes (for example when switching the source in a discovery launch configuration).
+		</p>
+		<h3 id="Declaring_a_new_Discoverer">Declaring a new Discoverer</h3>
+		<p>A discoverer must declare an ID and its Java implementation of the IDiscoverer interface to be managed by the Discoverers catalog (see below).</p>
+		<p>Use extension point 
+			<b>org.eclipse.modisco.infra.discovery.core.discoverer</b> to declare the discoverer, with the following attributes :
+		</p>
+		<ul>
+			<li>
+				<b>id</b> — Required — information to identify a discoverer in the catalog; it must be unique.
+			</li>
+			<li>
+				<b>class</b> — Required — A class that implements the IDiscoverer interface to be managed and used by the discovery manager.
+			</li>
+		</ul>
+		<h3 id="Using_the_.27.27new_Discoverer.27.27_wizard">Using the ''new Discoverer'' wizard</h3>
+		<p>To create a new MoDisco discoverer, you can use the wizard : </p>
+		<ul>
+			<li>
+				<b>File &gt; New &gt; Other...</b> 
+			</li>
+			<li>Select 
+				<b>MoDisco &gt; MoDisco Discoverer</b>
+			</li>
+		</ul>
+		<p>You will be presented with a wizard that looks like this:</p>
+		<p>
+			<img border="0" src="../../img/discovery_manager/MoDisco_New_MoDisco_Discoverer.png"/>
+		</p>
+		<p>If you selected a project, source folder or Java package, then the first two fields are already filled in. If not, then click 
+			<b>Browse...</b> to select where you want to create your discoverer class.
+		</p>
+		<ul>
+			<li>Class name : give a name to the new Java class for your discoverer</li>
+			<li>Input type : select the Java type that your discoverer will take as input. For example, if your discoverer works on projects from the Eclipse workspace, then choose "org.eclipse.core.resources.IProject" from the dropdown list. If the type you want to use is not in the dropdown list, then you can either click the 
+				<b>Browse...</b> button and select it, or type it in.
+			</li>
+			<li>UI name : choose a user-friendly name for your discoverer, that will appear in the popup menu</li>
+			<li>Discovery parameters declaration : you can add parameters to your discoverer. Click 
+				<b>Add</b> to add a new parameter, or 
+				<b>Remove</b> to remove the selected parameters. Each parameter must have :
+				<ul>
+					<li>name : name of the Java field</li>
+					<li>type : a Java type</li>
+					<li>description : a comment to let the user of your discoverer know what this parameter is for</li>
+					<li>direction : whether this parameter works as input, output or both</li>
+					<li>required : whether the parameter must be set for the discoverer to work</li>
+					<li>multivalued : whether the parameter is represented by an array of values</li>
+				</ul>
+			</li>
+			<li>Finally, you can tell the wizard whether your discoverer handles a model, in which case it inherits from a class that implements services needed when handling a model as the result of a discovery</li>
+		</ul>
+		<h3 id="Registering_a_Discoverer_in_the_MoDisco_menu">Registering a Discoverer in the MoDisco menu</h3>
+		<p>For a Discoverer to appear in the MoDisco menu of Discoverers, it must be registered using the 
+			<b>org.eclipse.modisco.infra.discovery.ui.discoverer</b> extension point (note that there are 2 
+			<b>discoverer</b> extension points; one in the 
+			<b>discovery.core</b> namespace, and the other in the 
+			<b>discovery.ui</b> namespace).
+		</p>
+		<p>In the extension, you must provide:</p>
+		<ul>
+			<li>
+				<b>discovererName</b> : The name that uniquely identifies a discoverer, and which must refer to an existing discoverer defined using the extension point 
+				<b>org.eclipse.modisco.infra.discovery.core.discoverer</b> (see section 
+				<a href="plugin_dev.html#Declaring_a_new_Discoverer">Declaring a new Discoverer</a>).
+			</li>
+			<li>
+				<b>label</b> : The label that describes the discoverer in the popup menu. For example: "Discover Java Project..."
+			</li>
+		</ul>
+		<p>You can also set:</p>
+		<ul>
+			<li>
+				<b>path</b> : If you want your discoverer to appear in a sub-menu of the MoDisco menu. This is a list of sub-menu names separated by slashes.
+			</li>
+			<li>
+				<b>icon</b> : The icon associated to the label of the discoverer in the menu.
+			</li>
+		</ul>
+		<h4 id="Example">Example</h4>
+		<p>For example, if you register a discoverer like this:</p>
+		<pre>
+&lt;extension point="org.eclipse.modisco.infra.discovery.ui.discoverer"&gt;
+   &lt;discoverer
+         discovererID="org.eclipse.modisco.xml.discoverer"
+         icon="icons/xml_tag.gif"
+         label="Discover XML Model"
+         path="abc/def"/&gt;
+&lt;/extension&gt;
+</pre>
+		<p>You will get:</p>
+		<p>
+			<img border="0" src="../../img/discovery_manager/MoDisco_DiscoveryMenu.png"/>
+		</p>
+		<h2 id="Discovery_manager">Discovery manager</h2>
+		<p>To access the discoverers, you must use the discovery manager (<code>IDiscoveryManager.INSTANCE</code>).</p>
+		<p>For example, to discover a XML model:</p>
+		<pre>
+XMLModelDiscoverer2 discoverer = (XMLModelDiscoverer2) IDiscoveryManager.INSTANCE.createDiscovererImpl(XMLModelDiscoverer2.ID);
+discoverer.discoverElement(xmlFile, new NullProgressMonitor());
+Resource resultModel = discoverer.getTargetModel();
+</pre>
+		<p>The discovery manager represents discoverers using two interfaces:</p>
+		<ul>
+			<li>DiscovererDescription : represents the definition of a discoverer, with information about its parameters, source type, etc.</li>
+			<li>IDiscoverer : represents an instantiated discoverer, which you can call to discover a model</li>
+		</ul>
+		<p>See the java documentation associated to these interfaces for more details.</p>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Web_XML_Discoverer">Web XML Discoverer</h1>
+		<p>The goal of the Generic Web Xml Discoverer plug-in is to allow generic extractions of information from a Web.xml file, without the need for a metamodel dedicated to a conforming Document Type Definition (DTD) or XML Schema Description (XSD). </p>
+		<p>
+			<i>Quality disclaimer: this WebApp Discoverer was tested on many files, both well-formed and not well-formed.</i>
+		</p>
+		<h2 id="Details">Details</h2>
+		<p>Considering Web.xml files conforming to a DTD or XSD, it would be more convenient to have dedicated metamodels to manipulate the information. However, the generic XML Discoverer is an alternative for miscellaneous XML files.</p>
+		<p>This plug-in aims at analyzing any Web.xml file by providing a model describing the information found. The supported versions are JEE 1.2, 1.3, 1.4, 5 and 6.</p>
+		<p>Moreover, it allows to serialize the xml file back from the model. Thus, some M2M transformation might be used jointly to upgrade some xml files.</p>
+		<h2 id="User_manual">User manual</h2>
+		<h3 id="Discovering_and_browsing_from_contextual_menu">Discovering and browsing from contextual menu</h3>
+		<p>The plug-in provides the user a contextual menu to easily create models.</p>
+		<p>To discover a Web XML configuration file, right-click on it in the Eclipse 
+			<b>Package Explorer</b> view, and select 
+			<b>Discovery &gt; Discoverers &gt; Discover JEE web.xml</b>:
+		</p>
+		<p>
+			<img align="middle" title="Menu to discover a Web XML file" alt="Menu to discover a Web XML file" border="1" src="../../img/webapp/MoDisco_Discover_WebXML_menu.png"/>
+		</p>
+		<p>A discovery parameters dialog opens to let you specify the parameters of the discovery:</p>
+		<p>
+			<img align="middle" title="Web XML discoverer parameters dialog" alt="Web XML discoverer parameters dialog" border="1" src="../../img/webapp/MoDisco_Launching_discovery_org.eclipse.modisco.jee.webapp.discoverer.png"/>
+		</p>
+		<ul>
+			<li>Set 
+				<b>SERIALIZE_TARGET</b> to true if you want to save the model to a file
+			</li>
+			<li>You can define 
+				<b>TARGET_URI</b> to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.
+				<br/> 
+				<b>Beware: the file will be overwritten if it already exists!</b>
+			</li>
+		</ul>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress dialog during model creation" alt="Progress dialog during model creation" border="1" src="../../img/webapp/MoDisco_discoverer_org.eclipse.modisco.jee.webapp.discoverer_in_progress.png"/>
+		</p>
+		<p>At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:</p>
+		<p>
+			<img align="middle" title="Web XML model in the Package Explorer" alt="Web XML model in the Package Explorer" border="1" src="../../img/webapp/MoDisco_WebApp_Model_inWorkspaceProject.png"/>
+		</p>
+		<p>And the model is opened in the default model browser if you selected 
+			<b>Open model in editor after discovery</b>:
+		</p>
+		<p>
+			<img align="middle" title="Web XML model in the MoDisco model browser" alt="Web XML model in the MoDisco model browser" border="1" src="../../img/webapp/MoDisco_WebXML_inModelBrowser.png"/>
+		</p>
+		<p>The Web XML XMI files (with a filename ending in ".xml_webapp.xmi" by convention) can be opened in any model browser:</p>
+		<p>
+			<img align="middle" title="Opening a Web XML model" alt="Opening a Web XML model" border="1" src="../../img/webapp/MoDisco_WebXML_OpenWith.png"/>
+		</p>
+	</body>
+</html>

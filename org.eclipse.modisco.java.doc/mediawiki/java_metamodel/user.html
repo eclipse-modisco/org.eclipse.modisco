@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Java_Metamodel">Java Metamodel</h1>
+		<p>The Java metamodel is the reflection of the Java language, as defined in version 3 of "Java Language Specification" from Sun Microsystems ("JLS3" corresponds to JDK 5). </p>
+		<p>The Java metamodel contains 126 metaclasses. To better understand it, this page will introduce its main features (metaclasses and links). </p>
+		<p>You can also browse the model definition, java.ecore available in the source of plug-in org.eclipse.gmt.modisco.java. </p>
+		<p>A good tip is also to see the 
+			<a href="http://help.eclipse.org/galileo/index.jsp?topic=/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/core/dom/package-summary.html">javadoc</a> associated to the Java code DOM implemented by the Eclipse team in the JDT (Java Development Tools) project. The JDT code DOM and the Java metamodel are very similar.
+		</p>
+		<h3 id="Main_metaclasses">Main metaclasses</h3>
+		<h4 id="ASTNode">ASTNode</h4>
+		<p>Every metaclass (apart from the 
+			<b>Model</b> metaclass) inherits from ASTNode. As its name indicates, ASTNode represents a graph node. ASTNode has a reference to the Comment metaclass because almost every java element can be associated to a comment (block or line comment and Javadoc). More details in the 
+			<a href="user.html#Zoom_on_comments">"Comment" section</a>. 
+		</p>
+		<p>
+			<img align="middle" title="ASTNode metaclass" alt="ASTNode metaclass" border="1" src="../../img/MoDisco-Java_metaclass_ASTNode.png"/> 
+		</p>
+		<h4 id="Model.2C_Package.2C_AbstractTypeDeclaration">Model, Package, AbstractTypeDeclaration</h4>
+		<p>The root element of each Java model is an instance of the "Model" metaclass. It is a translation of the concept of java application, so it contains package declarations (instances of the Package metaclass). And package declarations contain type declarations (instances compatible with the AbstractTypeDeclaration metaclass), and so on... </p>
+		<p>
+			<img align="middle" title="Model, Package &amp; type declaration superclass" alt="Model, Package &amp; type declaration superclass" border="1" src="../../img/MoDisco-Java_metaclass_Model_Package.png"/> 
+		</p>
+		<h4 id="NamedElement_and_notion_of_Proxy">NamedElement and notion of Proxy</h4>
+		<p>A lot of java elements are "named", and this name could be considered as an identifier methods, packages, types, variables, fields, ... So all the corresponding metaclasses inherit from the NamedElement metaclass. </p>
+		<p>Another goal of this metaclass is to indicate whether an element is part of the current Java application or not (element from an external library of from the JDK). So, external elements are tagged as proxy through a dedicated attribute and can be easily filtered. For example, instruction "System.out.println" has been decomposed into three named elements (one class, one variable and one method) the definitions of which are not part of the current Java application. So attribute "proxy" of these elements has been initialized to true. </p>
+		<p>
+			<img align="middle" title="NamedElement and its hierarchy" alt="NamedElement and its hierarchy" border="1" src="../../img/MoDisco-Java_metaclass_NamedElement_and_its_hierarchy.png"/> 
+		</p>
+		<h4 id="TypeAccess.2C_PackageAccess.2C_SingleVariableAccess.2C_UnresolvedItemAccess">TypeAccess, PackageAccess, SingleVariableAccess, UnresolvedItemAccess</h4>
+		<p>To represent links between Java elements, metaclasses TypeAccess, PackageAccess, SingleVariableAccess and UnresolvedItemAccess were introduced. Each allows to navigate directly to a NamedElement (proxy or not) in the graph. </p>
+		<p>A TypeAccess represents a reference on a type. </p>
+		<p>
+			<img align="middle" title="TypeAccess" alt="TypeAccess" border="1" src="../../img/MoDisco-Java_metaclass_TypeAccess.png"/> 
+		</p>
+		<p>A PackageAccess represents a reference on a package. </p>
+		<p>
+			<img align="middle" title="PackageAccess" alt="PackageAccess" border="1" src="../../img/MoDisco-Java_metaclass_PackageAccess.png"/> 
+		</p>
+		<p>A SingleVariableAccess represents a reference on a variable.</p>
+		<p>
+			<img align="middle" title="SingleVariableAccess" alt="SingleVariableAccess" border="1" src="../../img/MoDisco-Java_metaclass_SingleVariableAccess.png"/> 
+		</p>
+		<p>On the contrary, references to methods are direct.</p>
+		<p>
+			<img align="middle" title="MethodInvocation" alt="MethodInvocation" border="1" src="../../img/MoDisco-Java_metaclass_MethodDeclaration_MethodInvocation.png"/> 
+		</p>
+		<h4 id="BodyDeclaration">BodyDeclaration</h4>
+		<p>A type declaration has different kinds of contents fields, methods, static block, initialization block or other type declarations. All of these elements are of type BodyDeclaration metaclass. </p>
+		<p>
+			<img align="middle" title="BodyDeclaration and its hierarchy" alt="BodyDeclaration and its hierarchy" border="1" src="../../img/MoDisco-Java_metaclass_BodyDeclaration_and_its_hierarchy.png"/> 
+		</p>
+		<h4 id="Expressions">Expressions</h4>
+		<p>Like in many languages, the concept of expression exists in Java it is a portion of code, without declarations, and its evaluation returns a value, numerical or boolean or other ... For example, <code>++i</code> is an expression and it will be translated to the concept of PrefixExpression metaclass. All types of expressions shall inherit from the Expression metaclass. </p>
+		<p>
+			<img align="middle" title="Expression and its hierarchy" alt="Expression and its hierarchy" border="1" src="../../img/MoDisco-J2SE5_metaclass_Expression_and_its_hierarchy.jpg"/> 
+		</p>
+		<h4 id="Statements">Statements</h4>
+		<p>An "instruction" in Java is represented by the Statement metaclass. A block of code (Block metaclass) contains a collection of statements, and a block of code may be contained by a method. Some examples of statements in java <code>if, while, for, do, ...</code> All of their definitions use the concept of expression to separate the value from the instruction keyword. </p>
+		<p>
+			<img align="middle" title="Statement and its hierarchy" alt="Statement and its hierarchy" border="1" src="../../img/MoDisco-J2SE5_metaclass_Statement_and_its_hierarchy.jpg"/> 
+		</p>
+		<h4 id="Zoom_on_comments">Zoom on comments</h4>
+		<p>There are three kinds of comments line comments (//), block comments (/* */) and javadoc comments (/** */). Every comment contains text fragments, but we can have more information on javadoc comments (Javadoc metaclass): they can also contain javadoc tags that are identified and collected through instances of the TagElement metaclass. </p>
+		<p>
+			<img align="middle" title="Comment and its hierarchy" alt="Comment and its hierarchy" border="1" src="../../img/MoDisco-Java_metaclass_Comment_and_its_hierarchy.png"/> 
+		</p>
+		<h4 id="Zoom_on_annotations">Zoom on annotations</h4>
+		<p>Official usage of annotations has been introduced in version 5 of the JDK. To handle them, annotation declarations are managed as type declarations (AnnotationTypeDeclaration metaclass) with specific attributes (AnnotationTypeMemberDeclaration metaclass). And annotation usages are translated into instances of the Annotation metaclass, which reference corresponding annotation declarations. And parameters are translated into instances of the MemberValuePair metaclass. Some statements also have a list of annotations. </p>
+		<p>
+			<img align="middle" title="Annotation" alt="Annotation" border="1" src="../../img/MoDisco-Java_metaclass_AnnotationTypeDeclaration_and_Annotation.png"/> 
+		</p>
+		<h4 id="Zoom_on_generics">Zoom on generics</h4>
+		<p>Version 5 of the JDK also introduced the concept of "generics". Generic types of method declarations are translated into instances of TypeDeclaration of AbstractMethodDeclaration metaclass with arguments as instances of the TypeParameter metaclass. Uses of these generics are translated into instances of the ParameterizedType metaclass which reference concrete elements (type and type arguments). </p>
+		<p>A specific case of type argument is the "wildcard" (for example "&lt;? extends X&gt;"). There is a specific metaclass to handle it WildCardType. </p>
+		<p>
+			<img align="middle" title="Generics" alt="Generics" border="1" src="../../img/MoDisco-Java_generics_declarations_and_usages.png"/> 
+		</p>
+		<h3 id="Associated_Discoverers">Associated Discoverers</h3>
+		<p>The main discoverer available for this metamodel: 
+			<a href="../java_discoverer/user.html">Java Discoverer</a>
+		</p>
+	</body>
+</html>

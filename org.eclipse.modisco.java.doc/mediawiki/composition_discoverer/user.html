@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Java_Composition_Discoverer">Java Composition Discoverer</h1>
+		<p>
+			<i>Quality disclaimer: this Java Composition discoverer has good test coverage compared to the complexity of the discovery process, and it is based on the Java and KDM Source discoverers, which are well tested.</i>
+		</p>
+		<h2 id="Description">Description</h2>
+		<p>MoDisco provides a discoverer associated to the metamodel definition described here.</p>
+		<p>The discovery takes a workspace Java project as input.</p>
+		<ul>
+			<li>The first step of the discovery creates one Java model, using the associated discoverer.</li>
+			<li>The second step of the discovery creates one Kdm inventory model, using the associated discoverer.</li>
+			<li>The third step creates a model with 
+				<i>JavaApplication</i> metamodel instances with references to the two 
+				<i>leaf</i> models.
+			</li>
+		</ul>
+		<p>
+			<img align="middle" title="Java and kdm inventory discovery" alt="Java and kdm inventory discovery" border="1" src="../../img/composition/Javakdmdiscovery.JPG"/>
+		</p>
+		<h2 id="User_manual">User manual</h2>
+		<p>The plug-in provides the user with a contextual menu to easily create models. </p>
+		<p>By right-clicking on a Java Project in the Eclipse 
+			<b>Package Explorer</b> view and choosing 
+			<b>Discovery &gt; Discoverers &gt; Discover Java and Inventory model from Java project</b> you can quickly create the Java Application model of your application:
+		</p>
+		<p>
+			<img align="middle" title="Discovering a JavaApplication model" alt="Discovering a JavaApplication model" border="1" src="../../img/composition/MoDisco_JavaComposition_Discoverer_Menu.png"/>
+		</p>
+		<p>A discovery parameters dialog opens to let you specify the parameters of the discovery:</p>
+		<p>
+			<img align="middle" title="Discovery parameters dialog" alt="Discovery parameters dialog" border="1" src="../../img/composition/Launching_discovery_org.eclipse.modisco.java.composition.discoverer.fromJavaProject.png"/>
+		</p>
+		<p>See the 
+			<a href="../../../org.eclipse.modisco.java.doc/mediawiki/user.html#User_manual">documentation of the Java discoverer</a> for an explanation of the parameters.
+		</p>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress bar during model creation" alt="Progress bar during model creation" border="1" src="../../img/composition/MoDisco_discoverer_org.eclipse.modisco.java.composition.discoverer.fromJavaProject_in_progress.png"/> 
+		</p>
+		<p>At the end of the process, the newly created model files are added to the root of your project if you set SERIALIZE_TARGET to true:</p>
+		<p>
+			<img align="middle" title="JavaApplication xmi files in the package explorer" alt="JavaApplication xmi files in the package explorer" border="1" src="../../img/composition/MoDisco_JavaKDM_ResultInProject.png"/>
+		</p>
+		<p>And the model is opened in the default model browser if you selected 
+			<b>Open model in editor after discovery</b>:
+		</p>
+		<p>
+			<img align="middle" title="JavaApplication model in the MoDisco model browser" alt="JavaApplication model in the MoDisco model browser" border="1" src="../../img/composition/MoDisco_JavaKDM_ModelBrowser.png"/>
+		</p>
+		<p>A xmi file suffixed by 
+			<i>_java2kdm.xmi</i> contains the root element of the model, which refers to the 
+			<i>_java.xmi</i> Java model file and the 
+			<i>_kdm.xmi</i> Inventory model file.
+		</p>
+		<p>Some referenced xmi 
+			<i>fragment</i> files are serialized into a 
+			<i>java2kdmFragments</i> directory (see Resources distribution in the 
+			<a href="../../../org.eclipse.modisco.java.doc.archi/mediawiki/composition/archi.html">benchmark</a>).
+		</p>
+		<p>
+			<img align="middle" title="JavaApplication xmi files in the package explorer" alt="JavaApplication xmi files in the package explorer" border="1" src="../../img/composition/MoDisco_JavaKDM_infraCommonCore_PackageExplorer.png"/>
+		</p>
+		<p>Once the main file 
+			<i>_java2kdm.xmi</i> has been opened in the MoDisco model Browser, you may navigate through the 
+			<i>JavaApplication</i> metamodel instances to the 
+			<i>Java</i> and 
+			<i>kdm.source</i> metamodel instances.
+		</p>
+		<p>
+			<img align="middle" title="browsing the JavaApplication model" alt="browsing the JavaApplication model" border="1" src="../../img/composition/MoDisco_infraCommonCore_Java2KDM_ModelBrowser.png"/>
+		</p>
+		<p><!-- 
+			<img align="middle" title="browsing the JavaApplication model" alt="browsing the JavaApplication model" border="1" src="../../img/composition/JavakdmBrowsing.JPG"/> -->
+		</p>
+		<p>Some facets called 
+			<i>javaToKdmShortcuts</i> and 
+			<i>KdmToJavaShortcuts</i> are available for allowing navigation shortcuts from some Java/Kdm.source model elements.
+			(enabling the "Show Derived Links" option is necessary to view the shorcut links)
+		</p>
+		<p>
+			<img align="middle" title="Applying the Facets" alt="Applying the Facets" border="1" src="../../img/composition/MoDisco_Applied_facets_kdmToJavaShortcuts.png"/>
+		</p>
+		<p>
+			<img align="middle" title="Navigation shortcut from a java element to the associated source region" alt="Navigation shortcut from a java element to the associated source region" border="1" src="../../img/composition/MoDisco_Java2KDM_SourceRegion_FacetReference.png"/>
+		</p>
+		<p>To take advantage of memory usage tuning (see the 
+			<a href="../../../org.eclipse.modisco.java.doc.archi/mediawiki/composition/archi.html">benchmark</a>), for huge Java legacy code, the MoDisco global preferences should have the "resources loading depth" set to 1 (0 works but is less interesting for browsing). This setting allows the lazy loading of xmi fragment files, through the model navigation, for less memory usage than with an initial complete loading of resources.
+		</p>
+		<p>
+			<img align="middle" title="Setting MoDisco global loading depth preference" alt="Setting MoDisco global loading depth preference" border="1" src="../../img/composition/MoDisco_Preferences_LoadingDepth.png"/>
+		</p>
+		<p>Using the 
+			<i>Group by package</i> setting will ease the selection in the types panel considering the metamodels (EPackages instances) involved.
+		</p>
+		<p>
+			<img align="middle" title="Group by package in MoDisco model browser" alt="Group by package in MoDisco model browser" border="1" src="../../img/composition/Modiscobrowsergroup.JPG"/>
+		</p>
+	</body>
+</html>

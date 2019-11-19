@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<h2 id="Class_Architecture">Class Architecture</h2>
+		<p>In order to apply a single file discoverer directly to a project, we use the ProjectDeploymentDescriptorDiscoverer.</p>
+		<ul>
+			<li>It lists all the xml files in the containers</li>
+			<li>It retrieves the Discoverer to be used with getSingleFileDiscoverer()</li>
+			<li>It applies the discoverer to every xml files listed and store the returned resource</li>
+			<li>It merges all the resources and open the result using the factory obtained with getDiscovererFactory()</li>
+		</ul>
+		<p>
+			<img align="middle" title="Class Diagram for Deployment Descriptor Discoverers" alt="Class Diagram for Deployment Descriptor Discoverers" border="0" src="../img/ClassDiagramForDeploymentDescriptorDiscoverer.jpg"/>
+		</p>
+	</body>
+</html>

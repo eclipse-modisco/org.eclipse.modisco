@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>new_and_noteworthy</title>
+	</head>
+	<body>
+		<h1 id="0.9">0.9</h1>
+		<h2 id="Discovery_manager">Discovery manager</h2>
+		<p>The discoverer framework has been refactored to satisfy new requirements, including major simplifications for adopters and developers: discoverers are now easier to define and call programmatically.</p>
+		<p>All existing discoverer implementations have been migrated to this new framework, and old discoverer implementations have been deprecated.</p>
+		<p>Please consult the related documentation for more details on new features.</p>
+		<h2 id="Model_Browser">Model Browser</h2>
+		<p>The browser now does more operations in the background, so that you can continue to interact with the UI while it is loading model elements or computing queries, customizations or facets</p>
+		<h2 id="Query_Manager">Query Manager</h2>
+		<ul>
+			<li>Tooltips on queries:</li>
+		</ul>
+		<p>
+			<img border="0" src="../img/MoDisco_Queries_Tooltip.png"/>
+		</p>
+		<h2 id="Workflow">Workflow</h2>
+		<p>The workflow component was simplified by removing cruft.</p>
+		<h2 id="Java">Java</h2>
+		<h3 id="New_Java_Discoverer_conforming_to_new_Discovery_framework">New Java Discoverer conforming to new Discovery framework</h3>
+		<p>The discoverer framework has been refactored to satisfy new requirements, including some simplification for adopters and developers. Existing discoverer implementations have be migrated to this new framework. Old discoverer implementations have been deprecated. </p>
+		<h3 id="Java_Discoverer_API">Java Discoverer API</h3>
+		<p>Some unnecessary limitations have been removed for calling the java discoverer from Java. It is now possible to specify a set of IJavaProject instances as input, whatever the dependencies between these java projects.</p>
+		<h3 id="Java_Generation_API">Java Generation API</h3>
+		<p>org.eclipse.gmt.modisco.java.generation.files.GenerateJavaExtended becomes the main public API. So Generate_JavaStructures is deprecated.</p>
+		<h3 id="Java_to_KDM_discoverer">Java to KDM discoverer</h3>
+		<p>An additional discoverer parameter allows to indicate some path to a custom .asm file to use while transforming Java models to KDM models.</p>
+		<h3 id="Java_Discovery_filters">Java Discovery filters</h3>
+		<p>Discovery filters are improved using regular expressions for types and packages to exclude/include.</p>
+		<h2 id="Composition">Composition</h2>
+		<ul>
+			<li>On a model discovered with the Discoverer named 
+				<b>Discover Java and Inventory Model from Java Project</b>, you can now browse from a model element to its source code:
+			</li>
+		</ul>
+		<p>
+			<img align="middle" title="Browse Code in Text Editor" alt="Browse Code in Text Editor" border="1" src="../img/MoDisco_ModelOpenSourceInEditor.png"/>
+		</p>
+		<p>The corresponding code is then highlighted in a source editor:</p>
+		<p>
+			<img align="middle" title="Corresponding code" alt="Corresponding code" border="1" src="../img/MoDisco_BrowseInTextEditor_SourceCode.png"/>
+		</p>
+		<ul>
+			<li>You can also activate 
+				<b>Synchronize with source code</b>. Then, when you double click on a model element, the corresponding code is highlighted.
+			</li>
+		</ul>
+		<h1 id="0.8">0.8</h1>
+		<h2 id="Discovery_manager_2">Discovery manager</h2>
+		<p>We have added notion of discovery parameters in process. So it changes the api of Discoverer interface: method <code>Resource discoverElement(Object source, URI target)</code> is now deprecated and has been replaced by method <code>void discoverElement(Object source, Map&lt;DiscoveryParameter, Object&gt; parameters)</code>. This new method is more generic and should be used in coordination with provided list of discovery parameters. </p>
+		<p>We provide also an abstract class <code>AbstractDiscovererImpl</code> to ease the development of new discoverers. </p>
+		<p>The launch configuration dedicated to discovery has been adapted to represent all discovery parameters and to edit their values (it only supports basic types, like primitive types and collections of Strings). </p>
+		<p>
+			<img border="0" src="../img/MoDisco_DiscoveryParameters.jpg"/>
+		</p>
+		<h2 id="Facet_Manager">Facet Manager</h2>
+		<p>A MoDisco resource selection dialog is now available. This dialog avoids having to manually write the URI of the required resource (eg: "modisco:/query/myQuery"). </p>
+		<p>To open this dialog, right-click and select 
+			<b>Load MoDisco resource</b>.
+		</p>
+		<p>
+			<img border="0" src="../img/DialogLoadMoDiscoResource.png"/>.
+		</p>
+		<h2 id="Model_Browser_2">Model Browser</h2>
+		<p>Extracted core functionality from the browser, so that it can be reused in other plug-ins (see 
+			<a href="../../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/plugin_dev.html#UI_Core">UI Core</a>).
+			This makes it possible to embed model browsing functionality in any view. For example, plug-in 
+			<a href="https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/examples/trunk/org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf">infra.browser.uicore.examples.cnf</a> demonstrates how to integrate the model browser in the Project Explorer (using the Common Navigator Framework) :
+		</p>
+		<p>
+			<img border="0" src="../img/ProjectExplorerWithModelContents.png"/>
+		</p>
+		<ul>
+			<li>Editing support: 
+				<ul>
+					<li>Create new children elements</li>
+					<li>Delete a model element (with all its references)</li>
+					<li>Cut/Copy/Paste</li>
+					<li>Undo/Redo</li>
+					<li>Edit attributes through the Properties view</li>
+					<li>Save and Save As</li>
+				</ul>
+			</li>
+			<li>Performance improvements</li>
+			<li>For each metamodel, memorize and restore chosen customizations and facets when the browser is opened</li>
+			<li>Support for contributions to the browser's context menu</li>
+			<li>Option to show the EMF URI of each model element</li>
+			<li>The browser is now automatically refreshed when one of its resources is externally modified</li>
+		</ul>
+		<ul>
+			<li>New option to display a unique ID on each model element ( 
+				<img border="0" src="../img/MoDiscoBrowser_Element_id.gif"/> ). This makes it easier to know whether two elements in the tree are equal.
+			</li>
+			<li>Removed the dialog that asked for the loading depth each time the browser was opened; replaced it by a preference in a new preference page.</li>
+		</ul>
+		<h3 id="Customization">Customization</h3>
+		<p>The browser is now extensively 
+			<a href="../../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/user.html#Customization">customizable</a> through the use of uiCustom files:
+		</p>
+		<p>
+			<img border="0" src="../img/Customization_example.png"/>
+		</p>
+		<p>These customizations can be easily created using a 
+			<a href="../../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/user.html#Editing_a_customization">dedicated editor</a>]:
+		</p>
+		<h3 id="New_options">New options</h3>
+		<ul>
+			<li>Sort links by type (
+				<img border="0" src="../img/MoDisco_ModelBrowser_SortLinksByType.png"/>)
+			</li>
+			<li>Show Ordering (
+				<img border="0" src="../img/MoDisco_ModelBrowser_ShowOrdering.png"/>):
+			</li>
+		</ul>
+		<p>
+			<img border="0" src="../img/MoDisco_ModelBrowser_Ordering.png"/>
+		</p>
+		<h3 id="Internationalization">Internationalization</h3>
+		<p>The browser components are now fully internationalization ready.</p>
+		<h3 id="New_Look">New Look</h3>
+		<p>Eclipse Forms look:</p>
+		<p>
+			<img border="0" src="../img/MoDisco_ModelBrowser_FormsLook.png"/>
+		</p>
+		<p>Less often used options are moved to a sub-menu in each toolbar so as to avoid cluttering the UI.</p>
+		<h3 id="Linked_resources">Linked resources</h3>
+		<ul>
+			<li>The browser now allows displaying linked resources</li>
+		</ul>
+		<h2 id="Query_Manager_2">Query Manager</h2>
+		<ul>
+			<li>An action to open the query set creation wizard from the "Query Execution" view</li>
+			<li>A wizard to create a Java model query:
+				<ul>
+					<li>the query is created in the chosen query set</li>
+					<li>the metamodels are automatically added to the query set and the plug-in dependencies</li>
+					<li>the corresponding Java class stub is created and opened in an editor, with the correct imports and generic parameters instantiation</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			<img border="0" src="../img/MoDisco_createModelQueryWizard.png"/>
+		</p>
+		<p>
+			<img border="0" src="../img/MoDisco_javaCodeAfterCreateJavaQueryWizard.png"/>
+		</p>
+		<p>A pop-up menu action helping to create a Java model query implementation class is now available. To use it right-click on a JavaModelQuery and use 
+			<b>Create Java Query Implementation Class</b>.
+		</p>
+		<p>
+			<img border="0" src="../img/MoDisco_CreateJavaQueryImplementationClass.png"/>
+		</p>
+		<h2 id="Workflow_2">Workflow</h2>
+		<p>With notion of discovery parameters, driver for discoverers has been updated to reflect new kind of parameters.</p>
+		<h2 id="Java_2">Java</h2>
+		<h3 id="Java_generation">Java generation</h3>
+		<p>A 
+			<a href="../../org.eclipse.modisco.java.doc/mediawiki/user.html#Java_Generation">"Java Generation"</a> plug-in is available.
+			The aim is to provide Java code generation from a Java model.
+			Such a generation will participate to Legacy Refactoring &amp; Migration chains.
+		</p>
+		<h3 id="Java_discovery_filters">Java discovery filters</h3>
+		<p>Java Discovery parameters are completed with a Java filter field which allows to exclude some Java packages from discovery. This feature will be convenient when dealing with a large amount of Java source in one single Java project.</p>
+		<h1 id="0.7">0.7</h1>
+		<p>initial version</p>
+	</body>
+</html>

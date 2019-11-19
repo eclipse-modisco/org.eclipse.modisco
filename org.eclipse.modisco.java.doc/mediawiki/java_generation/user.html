@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Java_Generation">Java Generation</h2>
+		<p>The goal of the Java Generation plug-in is to allow Java code generation from a Java model. Such a generation will fulfill some of the requirements for Legacy refactoring and migration. </p>
+		<p>
+			<i>Quality disclaimer: this generator is provided without any guarantee.</i>
+		</p>
+		<h3 id="Description">Description</h3>
+		<p>
+			<img align="middle" border="1" src="../../img/JavaM2T.PNG"/> 
+		</p>
+		<p>This plug-in proposes Acceleo modules for generating Java files conforming to Java models. Templates are contained in two modules </p>
+		<ul>
+			<li>Structures modules top level templates for generating classes/method/field declarations </li>
+			<li>Statements modules</li>
+		</ul>
+		<p>Java models are obtained with the 
+			<a href="../java_discoverer/user.html">Java Discoverer</a> component. 
+		</p>
+		<p>Considering a Java legacy, a minimal migration/refactoring chain will involve </p>
+		<ul>
+			<li>A Java model discovery step </li>
+			<li>A M2M transformation step </li>
+			<li>A Java generation code step with the current component</li>
+		</ul>
+		<h3 id="User_manual">User manual</h3>
+		<p>A prerequisite is a Java model. Please refer to the 
+			<a href="../java_discoverer/user.html"> Java Discoverer</a> user manual. 
+		</p>
+		<p>To launch a Java generation, add 
+			<i>org.eclipse.gmt.modisco.java.generation</i> in your plugin dependencies and use the 
+			<i>GenerateJavaExtended</i> main method with input model and target folder as parameters. The code should look like this :
+		</p>
+		<pre>
+GenerateJavaExtended javaGenerator = new GenerateJavaExtended(URI.createFileURI("C:/.../my.javaxmi"),
+    new File("C:/.../myOutputFolder"), new ArrayList&lt;Object&gt;());
+javaGenerator.doGenerate(null);
+</pre>
+		<p>Note : at the moment this documentation is written, there is no way of creating one Acceleo Launch Configuration based on one installed Acceleo module plugin.</p>
+	</body>
+</html>

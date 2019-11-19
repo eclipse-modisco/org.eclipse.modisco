@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>overview</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>A discoverer is a component that injects an element into a model which represents this element. To allow an easy manipulation of different discoverers and to be independent of the discoverers implementation, we provide a standard contract for discoverers. Through that, we provide a set of common tools:</p>
+		<ul>
+			<li>a registry of all discoverers available in the Eclipse platform</li>
+			<li>a contextual menu to use discoverers available on a single selected resource</li>
+			<li>a launch configuration to run discoverers and encapsulate them in a workflow</li>
+		</ul>
+		<h2 id="Abstract">Abstract</h2>
+		<p>A general definition of MoDisco Discovery :
+
+			<b>A discovery is a process which takes an input source, and which aims to discover and return some information. This process may take into account some additional input data (discovery parameters), some of which being possibly mandatory for the process.</b>
+		</p>
+		<h2 id="Documentation">Documentation</h2>
+		<p>The documentation is divided in two parts: </p>
+		<ul>
+			<li>
+				<a href="user.html">User Documentation</a>:
+				<ul>
+					<li>If you want to use existing discoverers through the Eclipse workbench</li>
+				</ul>
+			</li>
+			<li>
+				<a href="plugin_dev.html">Developer Documentation</a>:
+				<ul>
+					<li>If you want to use existing discoverers through a dedicated Eclipse/Java API</li>
+					<li>If you want to develop new discoverers through a dedicated Eclipse/Java API</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Fabien Giquel (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Bros (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>metamodel: org.eclipse.modisco.infra.discovery</li>
+			<li>core plug-in : org.eclipse.modisco.infra.discovery.core</li>
+			<li>UI plug-in : org.eclipse.modisco.infra.discovery.ui</li>
+		</ul>
+	</body>
+</html>

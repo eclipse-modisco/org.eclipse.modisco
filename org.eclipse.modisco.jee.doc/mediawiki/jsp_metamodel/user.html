@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="JSP_Metamodel">JSP Metamodel</h2>
+		<p>The Modisco JSP MetaModel inherits from the Modisco XML one :</p>
+		<p>
+			<img border="0" src="../../img/jsp/JSP_Metamodel.png"/>
+		</p>
+		<p>The choice to extend the XML metamodel was made because JSP scripts use the same tag mechanism, attributes and comments, and contain well formed XML most of the time.</p>
+		<p>According to the "Java Server Pages Specifications Version 1.2", JSP content is divided into 4 categories : </p>
+		<ul>
+			<li>JSP Scripts : 
+				<ul>
+					<li>JSP Scriplet : <code>   &lt;% int variable = 0;%&gt; </code> </li>
+					<li>JSP Expression : <code> &lt;%= variable %&gt;  </code></li>
+					<li>JSP Declaration :<code> &lt;%! int variable = 0; %&gt;  </code></li>
+				</ul>
+			</li>
+			<li>JSP Actions : <code> &lt;myPrefix:myAction arg1="value" /&gt;  </code>
+				<ul>
+					<li>JSP Standard Action : <code>  &lt;jsp:getProperty name="beanName" property="propertyNamef" /&gt;  </code></li>
+				</ul>
+			</li>
+			<li>JSP Directive :  <code> &lt;%@ include file="myFilePath" %&gt;  </code>
+				<ul>
+					<li>JSP TagLib : <code> &lt;%@ taglib prefix="myPrefix" uri="taglib/mytag.tld" %&gt;  </code></li>
+				</ul>
+			</li>
+			<li>Comments : <code>  &lt;%-- This is a JSP comment --%&gt;   </code></li>
+		</ul>
+	</body>
+</html>

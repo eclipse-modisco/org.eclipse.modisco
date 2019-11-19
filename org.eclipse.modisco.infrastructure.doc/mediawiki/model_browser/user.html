@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>The 
+			<b>MoDisco Model Browser</b> is a feature-rich Ecore model browser. You can use it to browse any Ecore model more easily than with the default Ecore editor. 
+		</p>
+		<p>
+			<img border="0" src="../../img/model_browser/MoDiscoModelBrowser0.8.png"/>
+		</p>
+		<p>The browser surface is separated in two panes. The left one displays a list of meta-classes, and the right one shows instances of the selected meta-class (that is, model elements). </p>
+		<p>At the top of each pane, a toolbar allows you to quickly change display options relative to that pane. </p>
+		<h2 id="Features">Features</h2>
+		<h3 id="Links">Links</h3>
+		<p>You can follow links between model elements by expanding the links tree nodes. Links appear for associations, aggregations and the EMF container. The tree representing the model is infinite. </p>
+		<p>An icon indicates the link type, and the number of instances under the link is displayed in parentheses. </p>
+		<table class="wikitable" style="text-align: left;" border="0" cellspacing="10">
+			<tr>
+				<th>icon </th>
+				<th>meaning</th>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_link.gif"/> 
+				</td>
+				<td>bidirectional link</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_unidirectional_link.gif"/> 
+				</td>
+				<td>unidirectional link</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_Aggregation.gif"/> 
+				</td>
+				<td>bidirectional aggregation link</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_unidirectional_aggregation.gif"/> 
+				</td>
+				<td>unidirectional aggregation link</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_inverse_aggregation.gif"/> 
+				</td>
+				<td>bidirectional inverse aggregation link</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_container_link.gif"/> 
+				</td>
+				<td>link to the EMF container of the element (eContainer); this link is not defined in the metamodel</td>
+			</tr>
+		</table>
+		<p>The source of the link is always its parent in the tree, and the targets are its children. </p>
+		<h3 id="Display_options">Display options</h3>
+		<p>You can use the buttons at the top of the 
+			<i>Instances</i> panel to set the following options (click on the down-pointing arrow 
+			<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-View_menu.gif"/> to see hidden options): 
+		</p>
+		<table class="wikitable" style="text-align: left;" border="0" cellspacing="10">
+			<tr>
+				<th>icon </th>
+				<th>description</th>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Sort.gif"/> 
+				</td>
+				<td>Sort instances by name </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Empty_links.gif"/> 
+				</td>
+				<td>Show empty links (containing no instances)</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Derived.gif"/> 
+				</td>
+				<td>Show derived links</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Sort_links.gif"/> 
+				</td>
+				<td>Sort links by name</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Sort_links_by_type.gif"/> 
+				</td>
+				<td>Sort links by type</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Full_name.gif"/> 
+				</td>
+				<td>Display full qualified meta-classes names </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Multiplicity.gif"/> 
+				</td>
+				<td>Display multiplicities on links</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Ordering.gif"/> 
+				</td>
+				<td>Show ordering</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Opposite_links.gif"/> 
+				</td>
+				<td>Show opposite links </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Container.gif"/> 
+				</td>
+				<td>Show a link to the container (which is not part of the metamodel definition)</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Attributes.gif"/> 
+				</td>
+				<td>Show attributes as tree elements (in addition to the Properties view) </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Empty_attributes.gif"/> 
+				</td>
+				<td>Show empty attributes</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Link_type.gif"/> 
+				</td>
+				<td>Show type of links</td>
+			</tr>
+		</table>
+		<h3 id="Meta-class_list">Meta-class list</h3>
+		<p>The 
+			<i>Types</i> panel displays all the meta-classes of the opened model, with the number of instances for each meta-class. When you click on a meta-class, its instances are displayed in the 
+			<i>Instances</i> panel. Multi-selection of meta-classes is also supported. 
+		</p>
+		<p>You can use the buttons at the top of the 
+			<i>Types</i> panel to set the following options (click on the down-pointing arrow 
+			<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-View_menu.gif"/> to see hidden options):
+		</p>
+		<table class="wikitable" style="text-align: left;" border="0" cellspacing="10">
+			<tr>
+				<th>icon </th>
+				<th>description</th>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Zero.gif"/> 
+				</td>
+				<td>Show empty meta-classes </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Derived_instances.gif"/> 
+				</td>
+				<td>Display instances of subclasses (for example, when an abstract meta-class is selected, instances of its derived classes are displayed) </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Derivation_tree.gif"/> 
+				</td>
+				<td>Show derivation tree</td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Sort.gif"/> 
+				</td>
+				<td>Sort by name </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Sort_num.gif"/> 
+				</td>
+				<td>Sort by instance count </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Full_name.gif"/> 
+				</td>
+				<td>Show full qualified names </td>
+			</tr>
+			<tr>
+				<td>
+					<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Package.gif"/> 
+				</td>
+				<td>Group meta-classes by package </td>
+			</tr>
+		</table>
+		<h3 id="Browse">Browse</h3>
+		<p>Right-click on a model element and select "Browse" to select the meta-class of this element in the 
+			<i>Types</i> panel and display this model element amongst its siblings of the same type. You can also press 
+			<b>Enter</b> while an element is selected to trigger this action. 
+		</p>
+		<p>
+			<img border="0" src="../../img/model_browser/MoDiscoModelBrowser-Browse.png"/>
+		</p>
+		<h3 id="Navigation_history">Navigation history</h3>
+		<p>When you navigate from one meta-class to another, or when you browse an instance, you can then go back and forth in navigation history by using the left and right arrows in the toolbar (or the 
+			<b>Alt+Left</b>, 
+			<b>Alt+Right</b> shortcuts). 
+		</p>
+		<h3 id="Search">Search</h3>
+		<p>Type some text in the search bar and type 
+			<b>Enter</b> to filter the currently displayed instances by name. Press 
+			<b>Escape</b> to restore the view. Only instances of the currently selected meta-class are filtered. 
+		</p>
+		<h3 id="Attributes">Attributes</h3>
+		<p>Attributes of the selected element are displayed in the Properties view. To show this view, double-click on a model element or right-click and select 
+			<b>Show Properties View</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_Properties_view.png"/> 
+		</p>
+		<p>You can also display attributes directly in the model tree by activating the "Show Attributes" option in the right toolbar. </p>
+		<h3 id="Accessibility">Accessibility</h3>
+		<p>The font size can easily be changed by the click of a button in the main toolbar. </p>
+		<p>
+			<img border="0" src="../../img/model_browser/MoDisco_model_browser_-_font_size.png"/> 
+		</p>
+		<p>The first button makes the font larger, the second one smaller, and the third one restores the default font size. The base font is configurable in Eclipse preferences. </p>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Nicolas Bros (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Gabriel Barbier (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Grégoire Dupé (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Frédéric Madiot (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Guyomar (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>the main browser component : org.eclipse.gmt.modisco.infra.browser</li>
+			<li>re-usable browser components : org.eclipse.gmt.modisco.infra.browser.uicore</li>
+			<li>customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom</li>
+			<li>customization core : org.eclipse.gmt.modisco.infra.browser.custom.core</li>
+			<li>customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor</li>
+			<li>customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui</li>
+		</ul>
+	</body>
+</html>

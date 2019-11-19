@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>The MoDisco query component allows executing model queries independently of any technology. To offer this feature, the component provides a meta-model to describe queries and a set of tools to manage the queries and their descriptions.</p>
+		<p>MoDisco provides drivers for Java, OCL and JXPath. Other drivers can be written for other query technologies.</p>
+		<h2 id="How_to_create_a_MoDisco_query_set">How to create a MoDisco query set</h2>
+		<p>The first step is to create a MoDisco project.</p>
+		<p>Then right-click on the MoDisco project and select 
+			<b>New &gt; Other ...</b>.
+		</p>
+		<p>
+			<img width="520" border="0" src="../../img/query_manager/MoDisco_Facet_NewOther.png"/>
+		</p>
+		<p>Select 
+			<b>QuerySet Model</b> and press the 
+			<b>Next</b> button
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_NewQuerySetWizard.png"/>
+		</p>
+		<p>Choose a name for your model query set (
+			<i>My.querySet</i> in the
+			example) and press 
+			<b>Finish</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_NewQuerySetWizard_Name.png"/>
+		</p>
+		<p>Open the "My.querySet" file and open the "Properties View"</p>
+		<p>Set the description of the query set and make sure that the query
+			set name is the same as the containing file name ("My" in the
+			example).</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_QuerySetProperties.png"/>
+		</p>
+		<h2 id="How_to_create_a_MoDisco_query">How to create a MoDisco query</h2>
+		<h3 id="The_easy_way">The easy way</h3>
+		<p>Right-click on a query set, and choose 
+			<b>Create Query</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_CreateQueryAction.png"/>
+		</p>
+		<p>This opens the Create Query wizard, with the parent query set already selected.</p>
+		<p>Fill in the query name, description, scope and return type. Then click 
+			<b>Finish</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_CreateQueryWizard.png"/>
+		</p>
+		<p>A Java editor opens on the Java class that was created for your query. Complete the "evaluate" method body with your code:</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_JavaQueryClassCode.png"/>
+		</p>
+		<p>Then do 
+			<b>File &gt; Save</b> in the query set editor.
+		</p>
+		<h3 id="Manually">Manually</h3>
+		<p>The wizard does everything for you, but it is still interesting to know how to create and edit a query manually. Also, the wizard only handles creating Java queries for now, so if you want to create an OCL query for example, then you have to do it manually.</p>
+		<p>Load the resources containing the meta-models used by the model
+			queries that will be owned by the query set. To load a meta-model
+			resource use the 
+			<b>Load meta-model resource</b> action in the query set editor.
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_LoadMetamodelResource.png"/>
+		</p>
+		<p>In this example, we choose to use the KDM meta-model.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_Package_Selection_KDM.png"/>
+		</p>
+		<p>Fill the "Associated Metamodels" field with the ePackages
+			containing the meta-models used by the model queries that will be owned
+			by the query set.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_Properties_AssociatedMetamodels.png"/>
+		</p>
+		<p>In this example we use the "core" package.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_Associated_Metamodels_Core.png"/>
+		</p>
+		<p>Right click on the ModelQuerySet element and choose the 
+
+			<b>New Child &gt; Java Model Query</b> action to create a "Java Model Query".
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_NewChild_JavaModelQuery.png"/>
+		</p>
+		<p>Set the name, the description and the return type of the query.
+			Set the "Implementation Class Name" field with the qualified name of the
+			class that will contain the query's Java implementation.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_JavaModelQuery_Properties.png"/>
+		</p>
+		<p>Fill the "Scope" field with the meta-class to which the query will be
+			applicable.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_QueryScope.png"/>
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_QueryScopeKDMEntity.png"/>
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_PropertiesScopeKDMEntity.png"/>
+		</p>
+		<p>A MoDisco project is also a "Plug-in project". To be able to
+			refer to the API of the used meta-model, we have to add the "org.eclipse.gmt.modisco.infra.query.core" plug-in and the meta-model
+			implementation plug-in to the plug-in dependencies.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_QueryPluginDependencies.png"/>
+		</p>
+		<p>Create the query's implementation class.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_NewJavaQueryClass.png"/>
+		</p>
+		<p>The Java Query implementation class must implement
+			org.eclipse.gmt.modisco.query.core.java.IJavaModelQuery.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_NewJavaQueryClassWizard.png"/>
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_JavaQueryClassCode.png"/>
+		</p>
+		<h2 id="How_to_consult_the_MoDisco_query_set_catalog_through_the_UI">How to consult the MoDisco query set catalog through the UI</h2>
+		<p>If a query set model is valid, it is registered in the model
+			query set catalog. To consult the model query set catalog, we can use
+			the "Model Query Set" view.</p>
+		<p>To get this view select 
+			<b>Windows &gt; Show view &gt; Other ...</b>
+			in the menu bar and choose "Query Sets" in the list.
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Window_ShowView_Other.png"/>
+		</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_ShowView_QuerySets.png"/>
+		</p>
+		<p>The "Query Sets" view presents the available query sets and their
+			queries. And for each query, its description and model location are displayed.</p>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_QuerySetsView.png"/>
+		</p>
+		<h2 id="JXPath_Queries">JXPath Queries</h2>
+		<h3 id="JXPath_Meta-model_Extension_Description">JXPath Meta-model Extension Description</h3>
+		<p>
+			<img title="JXPath Query Meta-model Extension" alt="JXPath Query Meta-model Extension" border="0" src="../../img/query_manager/MoDisco_Query_jxpath_metamodel.png"/>
+		</p>
+		<p>A JXPathModelQuery is a ModelQuery describing a 
+			<b>
+				<a href="http://commons.apache.org/jxpath/">JXPath</a>
+			</b> expression.
+		</p>
+		<p>The JXPath expressions are stored into the JXPathModelQuery::query attribure.</p>
+		<h3 id="Example">Example</h3>
+		<p>The 
+			<b>
+				<a href="https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet">jxpathQueryTest.querySet</a>
+			</b>
+			model provides an example of a JXPath query. The JXPathQuery stored into
+
+			<b>
+				<a href="https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet">jxpathQueryTest.querySet</a>
+			</b> returns the name of the EPackage passed in the query
+			context.
+		</p>
+		<h2 id="How_to_log_in_a_Java_query">How to log in a Java query</h2>
+		<p>If you want to log errors or messages in a Java query, you can use the MoDisco logger, like this (where Activator is the class that is already generated by default in your MoDisco project):</p>
+		<ul>
+			<li>To log an error message:</li>
+		</ul>
+		<pre>MoDiscoLogger.logError("Error message", Activator.getDefault());
+</pre>
+		<ul>
+			<li>To log an exception:</li>
+		</ul>
+		<pre>MoDiscoLogger.logError(exception, Activator.getDefault());
+</pre>
+		<ul>
+			<li>To log an information message:</li>
+		</ul>
+		<pre>MoDiscoLogger.logInfo("Error message", Activator.getDefault());
+</pre>
+		<ul>
+			<li>... (see also the other methods on MoDiscoLogger)</li>
+		</ul>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Grégoire Dupé (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Frédéric Madiot (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Guyomar (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Bros (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>metamodel: org.eclipse.gmt.modisco.infra.query</li>
+			<li>metamodel edit plug-in : org.eclipse.gmt.modisco.infra.query.edit</li>
+			<li>metamodel editor plug-in : org.eclipse.gmt.modisco.infra.query.editor</li>
+			<li>core plug-in: org.eclipse.gmt.modisco.infra.query.core</li>
+			<li>UI plug-in : org.eclipse.gmt.modisco.infra.query.ui</li>
+			<li>query implementation for jxpath : org.eclipse.gmt.modisco.infra.query.jxpath</li>
+		</ul>
+	</body>
+</html>

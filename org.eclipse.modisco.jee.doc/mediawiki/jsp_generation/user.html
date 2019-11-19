@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="JSP_Generation">JSP Generation</h2>
+		<p>The goal of the JSP Generation plug-in is to allow JSP / HTML code generation from a Java model </p>
+		<p>
+			<i>Quality disclaimer: this generator is provided without any guarantee.</i>
+		</p>
+		<h3 id="Description">Description</h3>
+		<p>
+			<img align="middle" alt="JSP Code Generation" border="1" src="../../img/jsp/JspM2T.PNG"/> 
+		</p>
+		<p>This plug-in proposes 
+			<a href="/wiki/Acceleo" title="Acceleo">Acceleo MTL</a> modules for generating JSP/html files conforming to JSP models. There is only one template which generates the code.
+		</p>
+		<p>JSP models are obtained with the 
+			<a href="../jsp_discoverer/user.html#JSP_Discoverer">JSP Discoverer</a> component.
+		</p>
+		<h3 id="User_Manual">User Manual</h3>
+		<p>First, you need a JSP model. Please refer to the JSP Discoverer user manual.</p>
+		<p>To launch a JSP generation, Add 
+			<i>org.eclipse.modisco.jee.jsp.generation</i> to your plug-in dependencies and use the 
+			<i>GenerateJsp</i> main method with the input model and target folder as parameters. The code should look like this :
+		</p>
+		<pre>
+GenerateJsp jspGenerator = new GenerateJsp(URI.createFileURI("C:/.../my.javaxmi"),
+    new File("C:/.../myOutputFolder"), new ArrayList&lt;Object&gt;());
+jspGenerator.doGenerate(null);
+</pre>
+		<p>Note : at the moment this documentation is written, there is no way of creating one Acceleo Launch Configuration based on one installed Acceleo module plugin.</p>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Java_Discoverer">Java Discoverer</h1>
+		<p>The goal of the Java Discoverer plug-in is to allow practical extractions of Java models from Java projects. </p>
+		<p>
+			<i>Quality disclaimer: this Java Discoverer was tested on projects of varied sizes: see the 
+				<a href="java_discoverer_benchmark/user.html">Java discoverer benchmark</a>.
+			</i>
+		</p>
+		<h3 id="Description">Description</h3>
+		<p>This plug-in aims at analyzing Java source code compliant with version 3 of "Java Language Specification" from Sun Microsystems and providing a model describing the information found, conforming to the 
+			<a href="../java_metamodel/user.html">Java metamodel</a>. 
+		</p>
+		<p>A Java model contains the full abstract syntax tree of the Java program: each statement such as attribute definition, method invocation or loop is described. In addition, links between elements are resolved (by resolved link we mean for instance a link between a method invocation and the declaration of this method, or between the usage of a variable and its declaration). The model can thus be seen as an abstract syntax graph (ASG). </p>
+		<h3 id="User_manual">User manual</h3>
+		<p>The plug-in provides the user with a contextual menu to easily create models. </p>
+		<p>By right-clicking on a Java Project in the Eclipse Package Explorer view, you can quickly create the Java model of your application (see next Figure). </p>
+		<p>
+			<img align="middle" title="Menus in Eclipse to create model from source code" alt="Menus in Eclipse to create model from source code" border="1" src="../../img/MoDisco_DiscoverJavaProject_Menu.png"/> 
+		</p>
+		<p>A discovery parameters dialog opens to let you specify the parameters of the discovery:</p>
+		<p>
+			<img align="middle" title="Discovery parameters dialog" alt="Discovery parameters dialog" border="1" src="../../img/MoDisco_Launching_discovery_org.eclipse.modisco.java.discoverer.javaProject.png"/>
+		</p>
+		<ul>
+			<li>Set 
+				<b>SERIALIZE_TARGET</b> to true if you want to save the model to a file
+			</li>
+			<li>You can define 
+				<b>TARGET_URI</b> to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.
+				<br/>'
+				<i>Beware: the file will be overwritten if it already exists!</i>'
+			</li>
+			<li>You can filter the classes to analyze using regular expressions, by setting INCLUDED_ELEMENTS_REGEX and/or EXCLUDED_ELEMENTS_REGEX</li>
+			<li>You can specify additional dependencies (projects or libraries) that you want to analyze and add to the model, by selecting them in the dialog that opens when you click the 
+				<b>ELEMENTS_TO_ANALYZE</b> parameter:
+			</li>
+		</ul>
+		<p>
+			<img align="middle" title="Choosing the elements to analyze" alt="Choosing the elements to analyze" border="1" src="../../img/MoDisco_JavaDiscoverer_ElementsToAnalyze_Dialog.png"/>
+		</p>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress dialog" alt="Progress dialog" border="1" src="../../img/MoDisco_JavaDiscoverer_ProgressDialog.png"/>
+		</p>
+		<p>At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:</p>
+		<p>
+			<img align="middle" title="Java model in the package explorer" alt="Java model in the package explorer" border="1" src="../../img/MoDisco_Java_Test4javaXMI.png"/> 
+		</p>
+		<p>And the model is opened in the default model browser if you selected 
+			<b>Open model in editor after discovery</b>:
+		</p>
+		<p>
+			<img align="middle" title="Java model viewed with the MoDisco model browser" alt="Java model viewed with the MoDisco model browser" border="1" src="../../img/MoDisco_Test4JavaXMI_ModelBrowser.png"/> 
+		</p>
+		<p>The Java XMI files (with a filename ending in "_java.xmi" by convention) can be opened in any model browser:</p>
+		<p>
+			<img align="middle" title="&quot;Open With&quot; on a Java model" alt="&quot;Open With&quot; on a Java model" border="1" src="../../img/MoDisco_Test4JavaXMI_OpenWithMenu.png"/>
+		</p>
+	</body>
+</html>

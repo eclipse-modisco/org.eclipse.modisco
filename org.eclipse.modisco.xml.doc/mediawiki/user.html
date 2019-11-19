@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>The Generic XML Metamodel represents a subset of concepts defined in 
+			<a href="http://www.w3.org/TR/2008/REC-xml-20081126/">W3C XML Recommendation</a>.
+		</p>
+		<p>Its purpose is to represent XML content without taking care of conformance to concepts described in a Document Type Definition(DTD) or in a XML Schema Description (XSD) (i.e. without having a metamodel dedicated to one or many DTD/XSD).</p>
+		<p>It is an alternative to the metamodel definition provided with EMF plug-ins (nsuri : 
+			<a href="http://www.eclipse.org/emf/2003/XMLType">http://www.eclipse.org/emf/2003/XMLType</a>) : we think that a more understandable model navigation, without the use of the Extended Ecore Modeling FeatureMap type, can be proposed to the end user. In return, some filtering (on node children) might be more time expensive.
+		</p>
+		<p>
+			<i>Quality disclaimer: this XML discoverer has good test coverage compared to the complexity of the discovery process.</i>
+		</p>
+		<h2 id="Components">Components</h2>
+		<ul>
+			<li>
+				<a href="xml_metamodel/user.html">XML metamodel</a>
+			</li>
+			<li>
+				<a href="xml_discoverer/user.html">XML discoverer</a>
+				<ul>
+					<li>
+						<a href="xml_discoverer/plugin_dev.html">XML discoverer API</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Fabien Giquel (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>XML metamodel : org.eclipse.gmt.modisco.xml</li>
+			<li>XML discoverer : org.eclipse.modisco.xml.discoverer</li>
+		</ul>
+	</body>
+</html>

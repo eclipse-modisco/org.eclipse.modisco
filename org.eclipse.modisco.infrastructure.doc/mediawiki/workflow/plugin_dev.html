@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h2 id="Add_a_workflow_engine_in_MoDiscoWorkflow">Add a workflow engine in MoDiscoWorkflow</h2>
+		<p>To extend the capabilities of MoDiscoWorkflow, other workflow engines can be provided through the "engine" extension point.</p>
+		<h3 id=".22engine.22_extension_point">"engine" extension point</h3>
+		<p>
+			<div class="thumb middle">
+				<div class="thumbinner">
+					<a href="../../img/workflow/MoDiscoWorkflowEngineExtensionPoint.jpg" class="image">
+						<img class="thumbimage" align="middle" border="0" src="../../img/workflow/MoDiscoWorkflowEngineExtensionPoint.jpg"/>
+					</a>
+					<div class="thumbcaption">"engine" extension point definition</div>
+				</div>
+			</div> 
+		</p>
+		<p>The MoDiscoWorkflow plug-in proposes an extension point named "engine". </p>
+		<p>This extension point allows you to add a new type of Workflow. To do this, you define:</p>
+		<ul>
+			<li>a workflow engine, specified by the "workflowExecution" element</li>
+			<li>a workflow model item definition specified by the "workflowCore" element, to bridge the internal model representation with the MoDiscoWorkflow representation</li>
+		</ul>
+		<h4 id=".22workflowExecution.22_part">"workflowExecution" part</h4>
+		<p>This part defines: </p>
+		<ul>
+			<li>
+				<b>class</b>: The class which has to implement interface "org.eclipse.modisco.workflow.core.WorkflowExecution". It will bridge a MoDiscoWorkflow definition with the internal execution engine to run the specified workflow.
+			</li>
+		</ul>
+		<h4 id=".22workflowCore.22_part">"workflowCore" part</h4>
+		<p>This part defines: </p>
+		<ul>
+			<li>
+				<b>name</b>: a name that describes the workflow engine
+			</li>
+			<li>
+				<b>class</b>: a class which implements interface "org.eclipse.modisco.workflow.core.WorkflowModel". It will bridge the internal model representation with the MoDiscoWorkflow representation.
+			</li>
+		</ul>
+	</body>
+</html>

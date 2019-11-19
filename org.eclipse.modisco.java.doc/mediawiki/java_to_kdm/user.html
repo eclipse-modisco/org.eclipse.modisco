@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Java_model_to_KDM_model_transformation">Java model to KDM model transformation</h2>
+		<p>The goal of the "Java to KDM transformation" discoverer is to get a KDM model from a Java model.
+			It is useful when the only available information on a java source code is contained in a Java model. Even without the source code it is then possible to get a KDM representation.</p>
+		<p>
+			<i>Quality disclaimer: this discoverer is provided without any guarantee: it was only tested on a small number of projects of relatively small sizes. It may not be suitable for production environments.</i>
+		</p>
+		<h3 id="User_Manual">User Manual</h3>
+		<p>A prerequisite is a Java model. Please refer to the 
+			<a href="../java_discoverer/user.html"> Java Discoverer</a> user manual. 
+		</p>
+		<p>
+			<img align="middle" title="Discovering a KDM code model from a Java model" alt="Discovering a KDM code model from a Java model" border="1" src="../../img/MoDisco_DiscoverKDMFromJavaModel_Menu.png"/>
+		</p>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your java model, the transformation might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress bar during java model transformation" alt="Progress bar during java model transformation" border="1" src="../../img/MoDisco_discoverer_org.eclipse.modisco.java.discoverer.javaToKDM_in_progress.png"/>
+		</p>
+		<p>At the end of the process, the newly created model files are added to the root of your project:</p>
+		<p>
+			<img align="middle" title="KDM model" alt="KDM model" border="1" src="../../img/MoDisco_test4KDMXMI.png"/>
+		</p>
+		<p>And the model is automatically opened in the default model browser if you selected "Open model in editor after discovery":</p>
+		<p>
+			<img align="middle" title="KDM model in the MoDisco Model Browser" alt="KDM model in the MoDisco Model Browser" border="1" src="../../img/MoDisco_test4KDMXMI_ModelBrowser.png"/>
+		</p>
+	</body>
+</html>

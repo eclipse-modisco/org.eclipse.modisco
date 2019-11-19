@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<h1 id="Extension_of_the_launch_configuration_mechanism">Extension of the launch configuration mechanism</h1>
+		<p>A launch configuration is a description of how to launch a program. A workflow could be viewed as a composition of launch configurations.</p>
+		<p>
+			<img border="0" src="../../img/workflow/MoDiscoWorkflowPatternCompositeLaunchConfiguration.jpg"/>
+		</p>
+		<h2 id="Purpose">Purpose</h2>
+		<p>To be able to propose an interface for a workflow definition dedicated to modernization (strong use of modeling tools), we have extended the notion of launch configuration following a composite pattern: notion of leaf for launch configurations and notion of composite for launch configuration.
+			Extending the mechanism of launch configuration will provide us a nice wizard with all the options. Especially, if the MoDiscoWorkflow is itself a type of launch configuration.</p>
+		<p>However we had some requirements to be able to implement such workflow mechanism:</p>
+		<ul>
+			<li>from a workflow, we should be able to load an existing launch configuration, which implies to retrieve a list of all launch configurations defined (with a filter to keep only the launch configurations whom type has a driver in ModiscoWorkflow).</li>
+			<li>from a workflow, we should be able to modify directly a loaded launch configuration (without having to select it in main list and after go back manually to workflow definition)</li>
+			<li>from a workflow, we should be able to create directly a launch configuration. This new launch configuration should be created in the main list and loaded in the workflow defintion</li>
+		</ul>
+		<h2 id="Implementation_in_MoDisco_Workflow">Implementation in MoDisco Workflow</h2>
+		<p>The first step was to add the MoDiscoWorkflow as a launch configuration. So we followed the eclipse help and provided two classes (one for the type and one for the tab group).</p>
+		<p>
+			<img border="0" src="../../img/workflow/MoDiscoWorkflowDelegateDiagram.jpg"/>
+
+			<img border="0" src="../../img/workflow/MoDiscoWorkflowTabGroupDiagram.jpg"/>
+		</p>
+		<p>The second step was to retrieve the list of existing launch configurations. So we created a dedicated wizard and get the list of existing launch configuration from an instance of org.eclipse.debug.core.ILaunchManager. Instance provided by static access DebugPlugin.getDefault().getLaunchManager(). Using this API, we were able to retrieve an array of ILaunchConfiguration which prodides us enough informations (type, name).</p>
+		<p>The third step was to modify, directly from the workflow definition, a loaded launch configuration. Instead of creating a specific wizard for each type of launch configuration, we would would like to reuse existing tab group defined for the type of selected launch configuration. So in our simple wizard, we have a wizard page which should be able to contain the same component that have been used in main list of launch configurations.
+			However to do that we had to link two classes that shouldn't be accessed: </p>
+		<ul>
+			<li>org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog</li>
+			<li>org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer</li>
+		</ul>
+		<p>
+			<img border="0" src="../../img/workflow/MoDiscoWorkflowDriverPageHackForLaunchConfigurationTabsDiagram.jpg"/>
+		</p>
+		<p>The fourth step was to create, directly from the workflow definition, a launch configuration. Difficulty was to add it in the main list of launch configurations, but the links made in the third step were enough to reach this goal.</p>
+	</body>
+</html>

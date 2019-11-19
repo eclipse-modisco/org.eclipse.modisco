@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h2 id="UI_Core">UI Core</h2>
+		<p>Plug-in "org.eclipse.gmt.modisco.infra.browser.uicore" contains the core parts of the browser, that can be integrated in any tree viewer.
+			It provides a tree content provider, a label provider, and a customization manager.</p>
+		<p><code>CustomizableModelContentProvider</code> and <code>CustomizableModelLabelProvider</code> are abstract classes that must be sub-classed, providing an instance of a <code>CustomizationManager</code>.</p>
+		<p>The <code>CustomizationManager</code> class is the entry point for customizing the way things look and behave in the browser, through:</p>
+		<ul>
+			<li>Browser customizations ("uiCustom" files)</li>
+			<li>Facets ("facetSet" files)</li>
+			<li>APIs to control options that would appear in the MoDisco Browser's toolbar (sort instances, show empty links, etc.)</li>
+		</ul>
+		<p>If parameters are modified in <code>CustomizationManager</code> after the <code>TreeViewer</code> was displayed, the viewer must be refreshed explicitly to account for these changes.</p>
+		<p>You may also want to override method <code>getRootElements</code> in <code>CustomizableModelContentProvider</code>, to provide the <code>EObject</code>s you want to display at the root of the tree.</p>
+		<p>Pay attention to the fact that the elements in the JFace model are not directly <code>EObject</code>s, but objects internal to the browser. So, don't redefine the <code>getElements</code> method to return <code>EObject</code>s, since that wouldn't work.</p>
+		<h3 id="EObject_from_selection">EObject from selection</h3>
+		<p>If you want to get an <code>EObject</code> from a selection, you must use an adapter like this:</p>
+		<pre>EObject eObject = (EObject) Platform.getAdapterManager().getAdapter(selectedElement, EObject.class);
+</pre>
+		<h3 id="Selection_from_EObject">Selection from EObject</h3>
+		<p>To select an EObject in a TreeViewer created using UiCore, you can't just create a StructuredSelection(eObject), since the TreeViewer is composed of elements that encapsulate the EObjects.</p>
+		<p>Instead, you can retrieve the wrapping element by doing something like this:</p>
+		<pre> public Object findElementForEObject(EObject eObjectToFind, TreeViewer treeViewer) {
+   ITreeContentProvider contentProvider = (ITreeContentProvider) treeViewer
+       .getContentProvider();
+   Object[] elements = contentProvider.getElements(treeViewer.getInput());
+   LinkedList&lt;Object&gt; elementsToHandle = new LinkedList&lt;Object&gt;();
+   for (Object element : elements) {
+     elementsToHandle.add(element);
+   }
+   while (!elementsToHandle.isEmpty()) {
+     Object e = elementsToHandle.removeFirst();
+     EObject eObject = (EObject) Platform.getAdapterManager().getAdapter(e, EObject.class);
+     if (eObject != null &amp;&amp; eObject.equals(eObjectToFind)) {
+       return e;
+     }
+     if (contentProvider.hasChildren(e)) {
+       Object[] children = contentProvider.getChildren(e);
+       if (children != null) {
+         for (Object child : children) {
+           elementsToHandle.addLast(child);
+         }
+       }
+     }
+   }
+   return null;
+ }
+</pre>
+		<h3 id="Context_menu_.2F_Selection_provider">Context menu / Selection provider</h3>
+		<p>If you need to use a selection provider, for example if you want to add a context menu on your UiCore viewer, you can use <code>UnwrappingSelectionProvider</code> :</p>
+		<pre>getSite().registerContextMenu(MENU_ID, contextMenu, new UnwrappingSelectionProvider(treeViewer));
+</pre>
+		<p><code>UnwrappingSelectionProvider</code> also offers static methods should you need them:</p>
+		<ul>
+			<li><code>ISelection unwrapSelection(ISelection selection)</code></li>
+			<li><code>Object unwrapElement(Object element)</code></li>
+		</ul>
+	</body>
+</html>

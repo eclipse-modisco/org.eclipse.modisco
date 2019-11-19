@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<p>
+			<b>This is a draft.</b>
+		</p>
+		<h2 id="Use_cases">Use cases</h2>
+		<p>This document assumes that:</p>
+		<ul>
+			<li>A user is the actor which uses the query manager </li>
+			<li>A developer is a kind of user which creates queries.</li>
+		</ul>
+		<p>
+			<b>UC1 - Create query set</b>: The developer creates a query set by declaring its identifier and the used meta-models. Each query set contains one or more queries. The developer has to add queries in the new query set (
+			<b>UC2</b>)
+		</p>
+		<p>
+			<b>UC2 - Add a query in a query set</b>: The developer selects an existing query set and adds a new query in this query set. Each query has a name and this name is the query identifier. To add a model query the developer has to provide: the name, the parameters, the description and the implementation. All the model query sets are automatically detected and added into a catalog.
+		</p>
+		<p>
+			<b>UC3 - Use a model query</b>: To use a model query the user has to find it in the model query set catalog (
+			<b>UC5</b>). To execute a query the user has to provide an execution context (a set of models and of model elements) and the parameter values.
+		</p>
+		<p>
+			<b>UC4 - Add a query to a meta-class</b>: The developer wants to create a query dedicated to a certain meta-class by selecting the meta-class or one of its instances. He has to choose a query set in the catalog, or create a new query set (
+			<b>UC1</b>) and then create a new query.
+		</p>
+		<p>
+			<b>UC5 - Find a query in the catalog</b>: by scope, by name, by query set name, by return type.
+		</p>
+		<p>
+			<b>UC6 - Publish a model query</b>: The developer publishes a query set to allow other users to install the query set in their working environment. A published and/or installed query cannot be modified by the query set user (to make sure that the published model query set will never be modified). An installed model query set is available through the model query set catalog. A published query set has a version number.
+		</p>
+		<h2 id="Functional_specification">Functional specification</h2>
+		<p>Actors: query developer, query user</p>
+		<p>Functional components:</p>
+		<ul>
+			<li>ModelQuerySetEditor
+				<ul>
+					<li>createModelQuerySet()</li>
+					<li>editModelQuerySet()</li>
+				</ul>
+			</li>
+			<li>ModelQuerySetCatalog
+				<ul>
+					<li>addQuerySet()</li>
+					<li>removeQuerySet()</li>
+					<li>getAllModelQuerySet()</li>
+					<li>findQueryByName()</li>
+				</ul>
+			</li>
+			<li>Sharing
+				<ul>
+					<li>commit()</li>
+					<li>checkout()</li>
+				</ul>
+			</li>
+			<li>ModelQuery
+				<ul>
+					<li>evaluate</li>
+				</ul>
+			</li>
+			<li>Publisher
+				<ul>
+					<li>publish()</li>
+					<li>get()</li>
+				</ul>
+			</li>
+			<li>Installer
+				<ul>
+					<li>install()</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Implementation">Implementation</h2>
+		<h3 id="org.eclipe.gmt.modisco.infra.query.core">org.eclipe.gmt.modisco.infra.query.core</h3>
+		<h4 id="Model_Query_Set_Catalog">Model Query Set Catalog</h4>
+		<p>
+			<b>Implementation classes:</b>
+		</p>
+		<ul>
+			<li>org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog</li>
+			<li>org.eclipse.gmt.modisco.infra.query.core.internal.QueryBuilder</li>
+			<li>org.eclipse.gmt.modisco.infra.query.ui.dialogs.QuerySelectionDialog extends Dialog
+				<ul>
+					<li>Implements the query catalog graphical representation.</li>
+				</ul>
+			</li>
+		</ul>
+		<h3 id="org.eclipe.gmt.modisco.infra.query.editor">org.eclipe.gmt.modisco.infra.query.editor</h3>
+		<h4 id="Wizard_.22New_QuerySet_model.22">Wizard "New QuerySet model"</h4>
+		<p>
+			<b>Scope:</b> This wizard can be called using a popup menu on 
+			<i>the main menu, package explorer, navigator, etc.</i>. If a project was selected, it is automatically chosen in the wizard. This wizard can also be called from the query panel of the "Query Execution" view
+		</p>
+		<p>
+			<b>Implementation classes:</b> org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryModelWizard
+		</p>
+		<h4 id="Properties_view">Properties view</h4>
+		<h3 id="org.eclipe.gmt.modisco.infra.query.ui">org.eclipe.gmt.modisco.infra.query.ui</h3>
+		<h4 id="Create_Query_Wizard">Create Query Wizard</h4>
+		<p>
+			<b>Scope:</b>
+		</p>
+		<ol>
+			<li>This wizard can be called from the popup menu of an existing query set.</li>
+			<li>EClass or EObject (whose EClass will be used)</li>
+		</ol>
+		<p>
+			<b>Behaviour:</b>
+		</p>
+		<ol>
+			<li>The name, parameters, implementation class, etc. are fields in this wizard. Each query type (Java, OCL, etc.) can contribute a page to this wizard, for its own specific attributes (eg: Java class, OCL query).</li>
+			<li>The query scope is already chosen based on the selection.</li>
+		</ol>
+		<p>
+			<b>Extension point:</b>
+		</p>
+		<p>
+			<b>Implementation classes:</b>
+		</p>
+		<h4 id="Query_execution_view">Query execution view</h4>
+		<p>
+			<b>Uses</b>: 
+		</p>
+		<ul>
+			<li>org.eclipse.gmt.modisco.infra.query.ui.dialogs.QuerySelectionDialog (query catalog ui)</li>
+		</ul>
+		<h3 id="Summary">Summary</h3>
+		<table border="1">
+			<tr>
+				<th>Functional operation </th>
+				<th>Realization</th>
+			</tr>
+			<tr>
+				<td>ModelQuerySetEditor::createModelQuerySet()</td>
+				<td>Wizard "New QuerySet model"</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySetEditor::editModelQuerySet()</td>
+				<td>EMF generated model editor</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySetCatalog::addQuerySet()</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySetCatalog::removeQuerySet()</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySetCatalog::getAllModelQuerySet()</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySetCatalog:: findQueryByName()</td>
+			</tr>
+			<tr>
+				<td>Sharing::commit()</td>
+				<td>org.eclipse.team</td>
+			</tr>
+			<tr>
+				<td>Sharing::checkout()</td>
+				<td>org.eclipse.team</td>
+			</tr>
+			<tr>
+				<td>ModelQuery::editQuery()</td>
+				<td>Query property view</td>
+			</tr>
+			<tr>
+				<td>ModelQuery::evaluate</td>
+				<td>"Query Execution" view</td>
+			</tr>
+			<tr>
+				<td>Publisher::publish()</td>
+				<td>PDE Export plug-in</td>
+			</tr>
+			<tr>
+				<td>Publisher::get()</td>
+				<td>PDE Import plug-in</td>
+			</tr>
+			<tr>
+				<td>Installer::install()</td>
+				<td>P2</td>
+			</tr>
+			<tr>
+				<td>ModelQuerySet::addQuery()</td>
+				<td>Wizard "Create Query Wizard"</td>
+			</tr>
+			<tr>
+				<td>MetaClass::addQuery</td>
+			</tr>
+			<tr></tr>
+		</table>
+		<h2 id="UI_Test">UI Test</h2>
+		<p>Create a MoDisco project named test001</p>
+		<p>In the project test001, create a query set:</p>
+		<ul>
+			<li>name: My </li>
+			<li>associated meta-model: ecore</li>
+		</ul>
+		<p>In the query set My, create an OCL query:</p>
+		<ul>
+			<li>name: self</li>
+			<li>query string : self</li>
+			<li>return type : ECLass</li>
+			<li>scope: EClass</li>
+		</ul>
+		<p>Save My.querySet</p>
+		<p>Open the Ecore meta-model (
+			<a href="http://www.eclipse.org/emf/2002/Ecore">http://www.eclipse.org/emf/2002/Ecore</a>) using the MoDisco model browser.
+		</p>
+		<p>Select a set of EClass, right-click &gt; Execute Query</p>
+		<p>In the "Query Execution" view select the query My/self and execute the query.</p>
+		<ul>
+			<li>You must get the query results in a table.</li>
+		</ul>
+		<p>In the project test001, create a query set named My1.querySet.</p>
+		<p>In the project test001, create a query set named My2.querySet.</p>
+		<p>In the "Query Execution" view, </p>
+		<ul>
+			<li>remove all elements from the "Context" list,</li>
+			<li>on the My1 query set, right-click &gt; Create Query
+				<ul>
+					<li>You must get a wizard named "Create a new model query".</li>
+					<li>M1 must be selected in "Parent query set".</li>
+					<li>Query type: Java</li>
+					<li>Query name: attr</li>
+					<li>Description: attr</li>
+					<li>Scope : EClass</li>
+					<li>Return type: EAttribute</li>
+					<li>Multi-valued: true</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Press Next </p>
+		<ul>
+			<li>Package= my1</li>
+		</ul>
+		<p>Press Finish</p>
+		<ul>
+			<li>A class my1.Attr must be created and must contain an evaluate method.</li>
+			<li>The QuerySet test001/M1.querySet must contain the new Java query.</li>
+		</ul>
+		<p>Implement the method my1.Attr.evaluate(…):</p>
+		<pre>return context.getEAllAttributes();
+</pre>
+		<p>In "Query Execution" view</p>
+		<ul>
+			<li>Select My1/attr</li>
+			<li>Drag and drop EClasses from the MoDisco browser to the context field.</li>
+			<li>Execute the query.</li>
+			<li>You must get as result a list of attributes contained in the EClasses you selected</li>
+		</ul>
+		<p>Import the uml browser customization example</p>
+		<ul>
+			<li>File &gt; New &gt; Example &gt; UML MoDisco Browser customization</li>
+		</ul>
+		<p>Open the "Query set view"</p>
+		<ul>
+			<li>Check that only one instance of the query set _example_uml exists.</li>
+		</ul>
+	</body>
+</html>

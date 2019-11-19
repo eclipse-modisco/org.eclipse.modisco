@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="JSP_Discoverer">JSP Discoverer</h2>
+		<p>
+			<i>Quality disclaimer: this JSP Discoverer was tested on many files, both well-formed and not well-formed.</i>
+		</p>
+		<h3 id="User_Manual">User Manual</h3>
+		<p>The plug-in provides the user with a contextual menu to easily create JSP models.</p>
+		<p>By right-clicking on a JSP Project in the Eclipse 
+			<b>Package Explorer</b> view and choosing 
+			<b>Discovery &gt; Discoverers &gt; Discover JSP Model...</b>, you can quickly create the JSP model of your application:
+		</p>
+		<p>
+			<img align="middle" title="Menu in Eclipse to create a JSP model from a Java project" alt="Menu in Eclipse to create a JSP model from a Java project" border="1" src="../../img/jsp/MoDisco_DiscoverJSP_menu.png"/>
+		</p>
+		<p>You can also select one or several files to create a model for each one of them:</p>
+		<p>
+			<img align="middle" title="Menu in Eclipse to create a JSP model from several JSP files" alt="Menu in Eclipse to create a JSP model from several JSP files" border="1" src="../../img/jsp/MoDisco_SeveralJSP_Menu.png"/>
+		</p>
+		<p>A discovery parameters dialog opens to let you specify the parameters of the discovery:</p>
+		<p>
+			<img align="middle" title="JSP discoverer parameters dialog" alt="JSP discoverer parameters dialog" border="1" src="../../img/jsp/MoDisco_Launching_discovery_org_eclipse_modisco_jee_jsp_discoverer_resource.png"/>
+		</p>
+		<ul>
+			<li>Set 
+				<b>SERIALIZE_TARGET</b> to true if you want to save the model to a file
+			</li>
+			<li>You can define 
+				<b>TARGET_URI</b> to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.
+				<br/>'
+				<i>Beware: the file will be overwritten if it already exists!</i>'
+			</li>
+		</ul>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress dialog during model creation" alt="Progress dialog during model creation" border="1" src="../../img/jsp/MoDisco_discoverer_org_eclipse_modisco_jee_jsp_discoverer_javaElement_in_progress.png"/>
+		</p>
+		<p>At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:</p>
+		<p>
+			<img align="middle" title="JSP model in the Package Explorer" alt="JSP model in the Package Explorer" border="1" src="../../img/jsp/MoDisco_JSP_ModelInWorkspace.png"/>
+		</p>
+		<p>And the model is opened in the default model browser if you selected 
+			<b>Open model in editor after discovery</b>:
+		</p>
+		<p>
+			<img align="middle" title="JSP model in MoDisco model browser" alt="JSP model in MoDisco model browser" border="1" src="../../img/jsp/MoDisco_JSP_inModelBrowser.png"/>
+		</p>
+		<p>The JSP XMI files (with a filename ending in "_jsp.xmi" by convention) can be opened in any model browser:</p>
+		<p>
+			<img align="middle" title="Opening a JSP model" alt="Opening a JSP model" border="1" src="../../img/jsp/MoDisco_JSP_OpenWith.png"/>
+		</p>
+		<h3 id="Discovery_Limitations">Discovery Limitations</h3>
+		<p>Because the JSP language is used to generate some content, JSP constructs can be placed almost anywhere in the file, which implies some limitations.</p>
+		<p>This is why the "isTagFragment : EBoolean" attribute was added. In fact, everything contained in a tag declaration, as in its body, is considered as a children of this tag. It is indeed necessary to be able to differentiate whether the JSP tag is used to generate the tag description, or its body.</p>
+		<p>Some ways of implementing JSP might cause some problems with the parser, especially for the evaluation of tag attributes. What was expected to be found is some kind of syntax like : </p>
+		<p><code> name="value" </code> or <code> name='value' </code> or even <code> name=value </code></p>
+		<p>Sometimes we were faced with implementations like :
+<code>			 &lt;tag name=" &lt;% if(condition){ %&gt;  value1" &lt;% }else{ %&gt;  value2" &lt;% } %&gt; &gt;  </code></p>
+		<p>The parser finds the opening double quote for the attribute's value, then looks for the closing one. </p>
+		<p>The returned value will be:</p>
+		<p>
+			<img border="0" src="../../img/jsp/JSP_Metamodel_Limit_1.png"/>
+		</p>
+		<p>with an exception raised on the last double quote, because '=' is expected.</p>
+	</body>
+</html>

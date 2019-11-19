@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>
+			<b>MoDisco workflow</b> provides a mechanism to initialize and launch a workflow of discoverers, generators and model transformations. These workflows are defined on top of the Eclipse platform's launch configuration mechanism.
+		</p>
+		<p>A MoDisco workflow is created as a launch configuration, which itself consists of an ordered list of launch configurations. When launching the workflow, each launch configuration is launched in the order specified in the workflow.</p>
+		<h2 id="Creating_a_MoDiscoWorkflow">Creating a MoDiscoWorkflow</h2>
+		<h3 id="The_user_interface_of_MoDiscoWorkflow">The user interface of MoDiscoWorkflow</h3>
+		<p>A MoDisco workflow is defined in a launch configuration: select 
+			<b>Run &gt; Run Configurations...</b> in the main menu, or click on the arrow on the 
+			<b>Run</b> button in the toolbar 
+			<img border="0" src="../../img/workflow/MoDiscoWorkflow-Execution.png"/> and then select 
+			<b>Run Configurations...</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/workflow/MoDiscoWorkflow_Run_Configuration.png"/>
+		</p>
+		<p>You can now build your MoDiscoWorkflow:</p>
+		<ul>
+			<li>Add a launch configuration to the MoDiscoWorkflow as a work item using the 
+				<b>Load...</b> button
+			</li>
+			<li>Remove a selected work item using the 
+				<b>Remove</b> button
+			</li>
+			<li>Move a selected work item up or down in the MoDiscoWorkflow using the 
+				<b>Up</b> or 
+				<b>Down</b> buttons
+			</li>
+		</ul>
+		<p>The workflow component provides a simple workflow engine (only sequential execution, no binding of parameters, etc.).</p>
+		<h3 id="Add_a_work_item">Add a work item</h3>
+		<p>After clicking on the "Load..." button, you must choose a launch configuration to add to the workflow:</p>
+		<p>
+			<img border="0" src="../../img/workflow/MoDiscoWorkflow_SelectLaunchConfiguration.png"/> 
+		</p>
+		<h3 id="Run_your_MoDisco_Workflow">Run your MoDisco Workflow</h3>
+		<p>When you have finished building your MoDiscoWorkflow, click on the 
+			<b>Run</b> button. An error window opens if one or more MoDiscoWork items are not valid. Every MoDiscoWork item must be valid in order to be able to run the MoDiscoWorkflow.
+		</p>
+		<h2 id="Current_limitations">Current limitations</h2>
+		<p>It is currently not possible to bind the parameters between components. Furthermore, the workflow is executed in a sequential way.</p>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Nicolas Payneau (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Gabriel Barbier (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+		</ul>
+		<h3 id="Included_Plug-ins">Included Plug-ins</h3>
+		<ul>
+			<li>metamodel : org.eclipse.modisco.workflow</li>
+			<li>core : org.eclipse.modisco.workflow.core</li>
+			<li>UI : org.eclipse.modisco.workflow.ui</li>
+		</ul>
+	</body>
+</html>

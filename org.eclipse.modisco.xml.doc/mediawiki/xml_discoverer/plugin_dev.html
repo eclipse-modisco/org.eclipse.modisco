@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h1 id="Discoverer_API">Discoverer API</h1>
+		<p>First, add the following plug-in dependencies to your project (
+			<b>Require-Bundle</b> in your Manifest.MF):
+		</p>
+		<ul>
+			<li>org.eclipse.modisco.infra.discovery.core</li>
+			<li>org.eclipse.gmt.modisco.xml</li>
+			<li>org.eclipse.modisco.xml.discoverer</li>
+		</ul>
+		<p>You can launch the discovery of a XML model from a file programmatically, and get the resulting model:</p>
+		<pre>
+XMLModelDiscoverer discoverer = new XMLModelDiscoverer();
+// you can set some parameters
+discoverer.setIgnoreWhitespace(true);
+discoverer.setLightweightModel(false);
+// launch the discovery
+discoverer.discoverElement(xmlFile, monitor);
+// get the resulting resource containing the XML model
+Resource xmlResource = discoverer.getTargetModel();
+</pre>
+		<p>To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.</p>
+		<p>Some options can be set for the discovery operation :</p>
+		<ul>
+			<li>IGNORE_WHITESPACE : ignore white space in text portions</li>
+			<li>LIGHTWEIGHT : to minimize the memory size of the obtained model. If set to true : comments are ignored, text portions with only spaces and line delimiters are ignored.</li>
+		</ul>
+		<p>The XML content can be serialized back since the model elements are contained in a dedicated org.eclipse.emf.ecore.resource.Resource implementation.</p>
+		<p>For more details see the java documentation on the XMLModelDiscoverer class.</p>
+	</body>
+</html>

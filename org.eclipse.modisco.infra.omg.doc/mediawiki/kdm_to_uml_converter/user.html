@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="KDM_to_UML_Converter">KDM to UML Converter</h1>
+		<p>The goal of the KDM to UML converter plug-in is to allow practical transformations of KDM models to UML models.</p>
+		<p>
+			<i>Quality disclaimer: this discoverer is provided without any guarantee: it was only tested on a small number of projects of relatively small sizes. It may not be suitable for production environments.</i>
+		</p>
+		<h2 id="Description">Description</h2>
+		<p>This tool aims at converting KDM models into UML models in order to allow integrating KDM-compliant tools (i.e. discoverers) with UML-compliant tools (e.g. modelers, model transformation tools, code generators, etc), as shown in the next figure.</p>
+		<p>
+			<img align="middle" title="Overall approach of the KDM to UML converter" alt="Overall approach of the KDM to UML converter" border="1" src="../../img/kdm/MoDisco-KDM_Kdm_to_Uml_converter_overview.jpg"/>
+		</p>
+		<p>The converter is mainly implemented by an 
+			<a href="/wiki/ATL" title="ATL">ATL model-to-model transformation</a> taking as input a model conforming to the KDM meta model and producing as output a model conforming to the 
+			<a href="http://www.uml.org/">UML meta model</a>.
+		</p>
+		<p>The mapping between KDM and UML is described in the following table:</p>
+		<table style="text-align:center" border="1" cellpadding="5" cellspacing="0">
+			<tr>
+				<td>+KDM to UML mapping</td>
+			</tr>
+			<tr>
+				<th>KDM</th>
+				<th>UML</th>
+			</tr>
+			<tr>
+				<td>LanguageUnit</td>
+				<td>Package</td>
+			</tr>
+			<tr>
+				<td>CodeModel</td>
+				<td>Model</td>
+			</tr>
+			<tr>
+				<td>CodeAssembly</td>
+				<td>Model</td>
+			</tr>
+			<tr>
+				<td>Package</td>
+				<td>Package</td>
+			</tr>
+			<tr>
+				<td>ClassUnit</td>
+				<td>Class</td>
+			</tr>
+			<tr>
+				<td>InterfaceUnit</td>
+				<td>Interface</td>
+			</tr>
+			<tr>
+				<td>MethodUnit</td>
+				<td>Operation</td>
+			</tr>
+			<tr>
+				<td>ParameterUnit</td>
+				<td>Parameter</td>
+			</tr>
+			<tr>
+				<td>Extends, Implements</td>
+				<td>Generalization</td>
+			</tr>
+			<tr>
+				<td>PrimitiveType</td>
+				<td>PrimitiveType</td>
+			</tr>
+			<tr>
+				<td>MemberUnit</td>
+				<td>Property, Association</td>
+			</tr>
+		</table>
+		<p><!--
+			<img align="middle" title="KDM to UML mapping" alt="KDM to UML mapping" border="1" src="../../img/kdm/MoDisco-KDM_kdm_uml_mapping_table.jpg"/>-->
+		</p>
+		<p>This mapping can be changed or completed easily by updating the 
+			<a href="/wiki/ATL" title="ATL">ATL rules</a>.
+		</p>
+		<p>The converter can also generate a trace file of the transformation to UML and a transformation log.</p>
+		<h2 id="User_manual">User manual</h2>
+		<p>Right-click on a KDM model file (ending in "_kdm.xmi") and choose 
+			<b>Discovery &gt; Discoverers &gt; Discover UML model from KDM model...</b> to create the UML model from the KDM model:
+		</p>
+		<p>
+			<img align="middle" title="Menu in Eclipse to create a UML model from a KDM model" alt="Menu in Eclipse to create a UML model from a KDM model" border="1" src="../../img/kdm/MoDisco_KDMToUML_menu.png"/>
+		</p>
+		<p>A discovery parameters dialog opens to let you specify the parameters of the discovery:</p>
+		<p>
+			<img align="middle" title="Discoverer parameters dialog" alt="Discoverer parameters dialog" border="1" src="../../img/kdm/MoDisco_Launching_discovery_org.eclipse.modisco.kdm.uml2converter.discoverUmlModelFromKdmModel.png"/>
+		</p>
+		<ul>
+			<li>Set 
+				<b>SERIALIZE_TARGET</b> to true if you want to save the model to a file
+			</li>
+			<li>You can define 
+				<b>TARGET_URI</b> to the location of a file in your workspace. If it is not defined and SERIALIZE_TARGET is true, a model file will be created in the project.
+				<br/> 
+				<b>Beware: the file will be overwritten if it already exists!</b>
+			</li>
+			<li>You can set a 
+				<b>CUSTOM_TRANSFORMATION</b>, by providing the location of an ATL ".asm" file (compiled ATL transformation) that replaces the default transformation
+			</li>
+		</ul>
+		<p>Once launched, a progress dialog will appear as soon as the operation begins. Depending on the size of your application, the reverse engineering process might take some time to complete:</p>
+		<p>
+			<img align="middle" title="Progress dialog during model creation" alt="Progress dialog during model creation" border="1" src="../../img/kdm/MoDisco_discoverer_org.eclipse.modisco.kdm.uml2converter.discoverUmlModelFromKdmModel_in_progress.png"/>
+		</p>
+		<p>At the end of the process, the newly created model file is added to the root of your project if you set SERIALIZE_TARGET to true:</p>
+		<p>
+			<img align="middle" title="UML model in the Package Explorer" alt="UML model in the Package Explorer" border="1" src="../../img/kdm/MoDisco_KDMtoUML_File_inPackageExplorer.png"/>
+		</p>
+		<p>And the model is opened in the default model browser if you selected 
+			<b>Open model in editor after discovery</b>:
+		</p>
+		<p>
+			<img align="middle" title="UML model in MoDisco model browser" alt="UML model in MoDisco model browser" border="1" src="../../img/kdm/MoDisco_KDMtoUML_model_inModelBrowser.png"/>
+		</p>
+		<p>This UML model can be displayed in any modeler (you can use 
+			<a href="/wiki/MDT/Papyrus" title="MDT/Papyrus">Papyrus</a> for example). For most modelers, you would usually create a UML class diagram and then drag and drop model elements to the diagram.
+		</p>
+		<p>
+			<img align="middle" title="UML diagram" alt="UML diagram" border="1" src="../../img/kdm/MoDisco-KDM_Uml_target_diagram.jpg"/>
+		</p>
+		<h2 id="Current_Limitations">Current Limitations</h2>
+		<p>The bidirectional UML Association elements are not identified by the rules: two complementary unidirectional UML Association elements are generated.</p>
+	</body>
+</html>

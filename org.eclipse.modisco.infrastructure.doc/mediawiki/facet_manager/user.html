@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h2 id="Overview">Overview</h2>
+		<p>The MoDisco facet component introduces the concept of "facet". A facet is a kind of virtual class extension. Those "virtual classes" never have instances. An object can conform to a facet but can not be an instance of a facet.</p>
+		<p>For example, assuming we have a class named Employee and two facets: "Manager" and "Developer". We have a set of Employee instances and some of them have the facet of "Manager" or "Developer".</p>
+		<p>The goal of introducing the concept of facet is to be able to highlight some model elements as corresponding to a specific facet.</p>
+		<p>The MoDisco facet feature allows describing and using facet. The description is done by editing a model and the use is done through an API. The main client of this API is the MoDisco browser.</p>
+		<h2 id="How_to_create_a_model_facet_set">How to create a model facet set</h2>
+		<p>The first step is to create a MoDisco project.</p>
+		<p>The second step is to create a query set. This query set will store boolean queries indicating if an
+			object conforms to a facet.</p>
+		<p>Right-click on the MoDisco project and select 
+			<b>New &gt; Other...</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_NewOther.png"/>
+		</p>
+		<p>Select 
+			<b>Facet Model</b> and press the 
+			<b>Next</b> button
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_NewFacetModel.png"/>
+		</p>
+		<p>Choose a name for your model facet set (My.facetSet in the example)
+			and press 
+			<b>Finish</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_NewFacetSet_name.png"/>
+		</p>
+		<p>Open the "My.facetSet" file and open the 
+			<b>Properties</b> View.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_FacetSetPropertiesView.png"/>
+		</p>
+		<p>Set the name of the facet set and make sure that the facet set name
+			is the same as the containing file name ("My" in the example). The
+			nsURI and prefix must also be filled.</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_FacetSetProperties2.png"/>
+		</p>
+		<p>Load the resources containing the meta-model extended by the
+			facet set. To load a meta-model resource you must use the 
+
+			<b>Load Meta-model Resource</b> action.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_LoadMetamodelResource.png"/>
+		</p>
+		<p>In this example, we choose to use the Java meta-model.</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_LoadMetamodelResourceJava.png"/>
+		</p>
+		<p>Fill the 
+			<b>Extended Package</b> field with the ePackage
+			containing the virtually extended meta-model.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_ExtendedPackageJava.png"/>
+		</p>
+		<p>Right click on the FacetSet element and choose 
+			<b>New Child &gt; Facet</b> to create a facet.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_NewChildFacet.png"/>
+		</p>
+		<p>Set the facet name and the class that the facet will extend.</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_FacetSuperTypeAndName.png"/>
+		</p>
+		<p>To specify how to know if an object conforms to a facet, we have
+			to provide a boolean query. To provide this query we have to load the
+			model containing its description.</p>
+		<p>Right-click in the editor and choose 
+			<b>Load MoDisco Resource</b>:
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_LoadMoDiscoResource.png"/>
+		</p>
+		<p>The query has to be referred to using the MoDisco protocol ("modisco:/query/&lt;querySetName&gt;"). 
+			In the example, we use the "My" query set.</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_LoadMyQuerySet.png"/>
+		</p>
+		<p>Once the query set resource is referenced, we just have to select the
+			query describing the facet. In the example this query is named
+			"isAbstract".</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_FacetSelectConditionQuery.png"/>
+		</p>
+		<p>At this step, if we save the model, the error marker should disappear
+			from the file's icon, indicating that the facet set model is now valid.</p>
+		<p>If the facet has specific attributes or references which can be
+			calculated, we can declare them. In this example, we will declare an
+			attribute indicating the number of abstract methods contained in the
+			abstract class. To create a new facet attribute right-click on the facet
+			element and select the 
+			<b>New Child &gt; FacetAttribute</b>.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_NewFacetAttribute.png"/>
+		</p>
+		<p>The attribute's type and name must be set. The "Value Query" field must
+			be filled with a reference to a query which is used to calculate the
+			attribute's value. This query must have the same type as the attribute
+			and be applicable to the virtually extended class.</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_FacetProperties.png"/>
+		</p>
+		<p>The facet set is now ready to be used.</p>
+		<h2 id="How_to_consult_the_MoDisco_facet_set_catalog_through_the_UI">How to consult the MoDisco facet set catalog through the UI</h2>
+		<p>If a facet set model is valid, it is registered in the facet set
+			catalog. To consult the facet set catalog, we can use the "Facet Set"
+			view.</p>
+		<p>To open this view select 
+			<b>Windows &gt; Show view &gt; Other ...</b>
+			in the menu bar and choose 
+			<b>Facet Sets</b> in the list.
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_ShowView_FacetSets.png"/>
+		</p>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_FacetSetsView.png"/>
+		</p>
+		<p>The "Facet Sets" view presents the available facet sets and their
+			facets. For each facet set the location of its description model is pointed out.</p>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Grégoire Dupé (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Frédéric Madiot (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Guyomar (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Bros (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>metamodel: org.eclipse.gmt.modisco.infra.facet</li>
+			<li>metamodel edit plug-in : org.eclipse.gmt.modisco.infra.facet.edit</li>
+			<li>metamodel editor plug-in : org.eclipse.gmt.modisco.infra.facet.editor</li>
+			<li>core plug-in: org.eclipse.gmt.modisco.infra.facet.core</li>
+			<li>UI plug-in : org.eclipse.gmt.modisco.infra.facet.ui</li>
+		</ul>
+	</body>
+</html>

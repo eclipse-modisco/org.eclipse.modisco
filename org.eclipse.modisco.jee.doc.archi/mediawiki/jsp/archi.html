@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<h1 id="JSP_Parser">JSP Parser</h1>
+		<p>Modisco JSP Parser has been developed using an ANTLR grammar.</p>
+		<p>It can support JSP file, as well as HTML files, TAG files, and JSP/TAG fragment files</p>
+		<h2 id="Grammar_Architecture">Grammar Architecture</h2>
+		<p>The ANTLR grammar is composed with rules representing what could be founded in a JSP file : </p>
+		<p>The root element for the grammar is "Page", which is basically a JSP file.</p>
+		<p>A "Page" can contain JSP items, as well as Doctype declarations, comments, CData items or simply HTML tags</p>
+		<p>Tags are the basic elements to describe a JSP file. A tag can contain xml-like attributes, possibly composed with JSP elements.</p>
+		<h2 id="Updating_the_Grammar">Updating the Grammar</h2>
+		<h3 id="Non_XML_Conformity">Non XML Conformity</h3>
+		<p>The JSP Grammar takes in consideration the non XML conformity of a JSP file.
+			Knowing that it can contain html or javascript tags, an opened tag is not necessarily closed by one</p>
+		<p>Example : 
+<code>			 &lt;img src="./img/myImage.png"&gt; </code></p>
+		<p>In order to build the inheritance tree, we had to store all the found tags, and each time a closing one is detected, rebuild the inheritance tree.</p>
+		<p>Example :</p>
+		<pre> 
+&lt;p&gt;
+&lt;img src="./img/myImage.png"&gt;
+&lt;/p&gt;
+</pre>
+		<p>This fragment of code will add the &lt;img&gt; tag to the children of the  &lt;p&gt; tag when &lt;/p&gt;  is detected, and so on.</p>
+		<h3 id="User_Code_in_the_generated_one">User Code in the generated one</h3>
+		<p>Because we do not know if a tag will be closed later in the code, we had to manually implement some text concatenation.</p>
+		<p>Let's say we meet a new opening tag:</p>
+		<pre>
+&lt;p&gt;
+This is some HTML content
+&lt;/p&gt;
+</pre>
+		<p>We cannot declare a rule   "'&lt;p&gt;'  'any letter'  '&lt;/p&gt;'" because &lt;/p&gt;  might never appear, or a JSP expression could be there. That is why we concatenate manually the potentially present content after an opening tag, and wait till we found a known token.</p>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Java_Composition_Metamodel">Java Composition Metamodel</h1>
+		<h2 id="Description">Description</h2>
+		<p>This 
+			<i>JavaApplication</i> metamodel aims at weaving a MoDisco Java Model with a MoDisco KDM Inventory Model. It relies on the core metamodel described in the 
+
+			<a href="../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html">kdm.source extension framework</a>.
+		</p>
+		<p>Such a metamodel allows linking java nodes to their physical position in the source files (
+			<i>JavaNodeSourceRegion</i> metaclass owning 
+			<i>startLine</i>, 
+			<i>endLine</i> properties).
+		</p>
+		<p>As proposed in the 
+			<a href="../../../org.eclipse.modisco.infrastructure.doc/mediawiki/kdm_source_extension/user.html">kdm.source extension framework</a>, the reference 
+			<i>JavaASTNodeSourceRegion.javaNode</i> derives from 
+			<i>ASTNodeSourceRegion.node</i>. So does 
+			<i>Java2File.javaUnit</i> from 
+			<i>CodeUnit2File.unit</i>.
+		</p>
+		<p>
+			<img align="middle" title="JavaApplication Metamodel" alt="JavaApplication Metamodel" border="1" src="../../img/composition/JavaApplicationMetaModel.png"/>
+		</p>
+		<p>Note : the references 
+			<i>java2DirectoryChildren</i> and 
+			<i>java2FileChildren</i> are expected to be containment references. For some technical reasons (memory usage tuning via lazy loading), they are not containments to make sure that the 
+			<i>Java2Directory</i>, 
+			<i>Java2File</i> and 
+			<i>JavaNodeSourceRegion</i> instances are managed in their own graph compared with 
+			<i>JavaApplication</i> instances (see 
+			<a href="../../../org.eclipse.modisco.java.doc.archi/mediawiki/composition/archi.html#Benchmark">benchmark</a>).
+		</p>
+	</body>
+</html>

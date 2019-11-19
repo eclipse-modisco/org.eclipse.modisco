@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>archi</title>
+	</head>
+	<body>
+		<h2 id="Benchmark_1_:_dispatching_elements_in_XMI_resources">Benchmark 1 : dispatching elements in XMI resources</h2>
+		<p>Java Composition Model, weaving KDM Model Source and Java Model, can easily become a big model, in terms of XMI size as well as number of model elements. </p>
+		<p>First implementation resulted in a single XMI file containing all the weaving elements between both models. </p>
+		<p>Second implementation results in a root XMI file, referencing other xmi fragment </p>
+		<p>
+			<br/> Splitting was done following this repartition: 
+		</p>
+		<ul>
+			<li>First resource contains the JavaApplication itself </li>
+			<li>Second resource contains all Java2Directory </li>
+			<li>One resource per package/directory</li>
+		</ul>
+		<p>This splitting enable the browser to perform lazy loading when browsing a composite model in the MoDisco Model Browser It has been decided to split after realizing a benchmark on the memory consumption of the MoDisco model browser.</p>
+		<p>
+			<img align="middle" title="Three levels of resource" alt="Three levels of resource" border="1" src="../../img/composition/ResourceComposition.png"/>
+		</p>
+		<h3 id="Memory_usage">Memory usage</h3>
+		<p>This figure shows the memory used by the MoDisco Model Browser on several xmi resources obtained with the Java Composition Discoverer. The gain of memory thanks to the lazy loading is significant.</p>
+		<p>
+			<img width="500" align="middle" border="0" src="../../img/composition/MoDiscoOpeningBrowserCompositeBenchmark.png"/>
+		</p>
+		<h3 id="Saving_time">Saving time</h3>
+		<p>To decide which spliting solution to choose, we made another benchmark on the time spent on serializing the resource on the hard drive. Moreover, serializing plenty of files (one xmi for each java classes) creates a lot of hard drive access resulting in some delay while browsing</p>
+		<p>
+			<img width="500" align="middle" border="0" src="../../img/composition/MoDiscoSavingCompositeBenchmark.png"/>
+		</p>
+		<h2 id="Benchmark_2_:_MinimalEObject_vs_EObject">Benchmark 2 : MinimalEObject vs EObject</h2>
+		<p>Measures in 
+			<i>Browser opening</i> figure have been done with -1 as "Resource Loading Depth" setting, for initial complete xmi resources loading in MoDisco Browser.
+		</p>
+		<p>
+			<img align="middle" border="0" src="../../img/composition/Javakdmbenchmark2d.JPG"/>
+		</p>
+		<p>
+			<img align="middle" border="0" src="../../img/composition/Javakdmbenchmark2c.JPG"/>
+		</p>
+		<p>
+			<img align="middle" border="0" src="../../img/composition/Javakdmbenchmark2.JPG"/>
+		</p>
+		<p>
+			<img align="middle" border="0" src="../../img/composition/Javakdmbenchmark2b.JPG"/>
+		</p>
+	</body>
+</html>

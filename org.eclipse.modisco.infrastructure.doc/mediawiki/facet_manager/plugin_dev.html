@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h2 id="How_to_programmatically_use_the_MoDisco_facet_set_catalog">How to programmatically use the MoDisco facet set catalog</h2>
+		<p>Here is an example of using the MoDisco facet API. For more information please refer to the JavaDoc.</p>
+		<pre>import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryException;
+import org.eclipse.gmt.modisco.infra.facet.Facet;
+import org.eclipse.gmt.modisco.infra.facet.FacetSet;
+import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
+import org.eclipse.gmt.modisco.infra.facet.core.exception.ModiscoFacetException;
+</pre>
+		<pre>public class Example {
+</pre>
+		<pre>	public Integer getNbAbstractMethod(EObject eObject)
+			throws ModelQueryException, ModiscoFacetException {
+		FacetSet facetSet = FacetSetCatalog.getSingleton().getFacetSet("My");
+		FacetContext context = new FacetContext();
+		context.addFacetSet(facetSet);
+		Facet facet = facetSet.getFacet("AbstractClassDeclaration");
+		if (context.isInstance(eObject, facet)) {
+			Object object = context.get(eObject, facet
+					.getEStructuralFeature("nbAbstractMethod"));
+			if (object instanceof Integer) {
+				Integer nbAbstractMethod = (Integer) object;
+				return nbAbstractMethod;
+			}
+		}
+		return null;
+	}
+}
+</pre>
+		<h2 id="How_to_package_a_facet_set_in_a_plug-in">How to package a facet set in a plug-in</h2>
+		<p>To package a facet set in a plug-in, an extension must be added in the plugin.xml file (contained by the facet set's project). The extension point to use is: org.eclipse.gmt.modisco.infra.facet.registration.
+			Here is an example of a facet set declaration:</p>
+		<pre> &lt;plugin&gt;
+      &lt;extension
+          point="org.eclipse.gmt.modisco.infra.facet.registration"&gt;
+       &lt;facetset
+             file="_example_jdkAndEclipseFacets.facetSet"&gt;
+       &lt;/facetset&gt;
+    &lt;/extension&gt;
+ &lt;/plugin&gt;
+</pre>
+		<p>Thanks to this extension declaration, the MoDisco project is ready to be exported as a plug-in.</p>
+		<h2 id="Facet_Meta-model_Description">Facet Meta-model Description</h2>
+		<p>
+			<img border="0" src="../../img/facet_manager/MoDisco_Facet_metamodel.png"/>
+		</p>
+		<p>The facet meta-model extends the ecore meta-model and uses the query meta-model.</p>
+		<p>A FacetSet is a kind of EPackage. A FacetSet contains facets through
+			the eClassifier reference. A facet is a kind of EClass.</p>
+		<p>For a facet instance, the eSuperType reference must be set to
+			specify which class the facet virtually extends.</p>
+		<p>The facet class has one specific reference: conditionQuery. The
+			conditionQuery reference points to the ModelQuery class. The model queries
+			pointed to by the conditionQuery reference must return a Boolean. Those
+			queries are used to specify how to decide whether an instance conforms to a
+			facet. If the conditionQuery is empty then all the instances of the class
+			referred to by the facet instance through the eSuperType reference conform
+			to this facet.</p>
+		<p>A facet contains facetAttributes and facetReferences through the
+			eStructuralFeature reference. The FacetAttribute and FacetReference
+			classes have a common super class: FacetStructuralFeature. The
+			FacetStructuralFeature has one reference named valueQuery pointing to
+			the ModelQuery class. The valueQuery is used to compute the facet
+			structural feature value. The facetAttribute and facetReference must have
+			the same type as the query they refer to.</p>
+	</body>
+</html>

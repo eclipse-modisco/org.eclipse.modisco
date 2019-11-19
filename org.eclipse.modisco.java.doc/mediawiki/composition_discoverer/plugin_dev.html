@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h1 id="Composition_Discoverer_API">Composition Discoverer API</h1>
+		<p>Each MoDisco discoverer implements a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer&lt;T&gt;).</p>
+		<p>First, add the following plug-in dependencies to your project (
+			<b>Require-Bundle</b> in your Manifest.MF):
+		</p>
+		<ul>
+			<li>org.eclipse.modisco.java.composition</li>
+			<li>org.eclipse.modisco.kdm.source.extension</li>
+			<li>org.eclipse.modisco.java.composition.discoverer</li>
+			<li>org.eclipse.modisco.infra.discovery.core</li>
+		</ul>
+		<p>You can easily discover a Java application model programmatically. For example:</p>
+		<pre>
+DiscoverKDMSourceAndJavaModelFromJavaProject discoverer = new DiscoverKDMSourceAndJavaModelFromJavaProject();
+discoverer.discoverElement(javaProject, monitor);
+Resource javaApplicationModel = discoverer.getTargetModel();
+</pre>
+		<p>To have a monitor to pass to the <code>discoverElement</code> method, you can either call the discoverer in an Eclipse Job, or pass a new NullProgressMonitor if you don't need progress reporting.</p>
+		<p>As an example, you may checkout the code from the org.eclipse.modisco.java.composition.discoverer.tests project:</p>
+		<p>
+			<a href="https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/tests/trunk/org.eclipse.modisco.java.composition.discoverer.tests">https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/tests/trunk/org.eclipse.modisco.java.composition.discoverer.tests</a>
+		</p>
+	</body>
+</html>

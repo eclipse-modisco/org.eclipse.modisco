@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>plugin_dev</title>
+	</head>
+	<body>
+		<h2 id="How_to_programmatically_use_the_MoDisco_query_set_catalog">How to programmatically use the MoDisco query set catalog</h2>
+		<p>Here a MoDisco query API example is provided. For more
+			information please refer to the JavaDoc.</p>
+		<pre>
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmt.modisco.infra.query.ModelQuery;
+import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
+import org.eclipse.gmt.modisco.infra.query.core.AbstractModelQuery;
+import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
+import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryResult;
+
+public class Example {
+  public Integer main(EObject context) throws Exception {
+    // Get the model query set catalog.
+    ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton(); 
+    // Get the query set named "My".
+    ModelQuerySet modelQuerySet = catalog.getModelQuerySet("My");
+    // Select in the "My" query set a query named "myQuery".
+    // modelQueryDescription is a model element.
+    ModelQuery modelQueryDescription = null;
+    for (ModelQuery modelQuery : modelQuerySet.getQueries()) {
+      if (modelQuery.getName().equals("myQuery")) {
+        modelQueryDescription = modelQuery;
+        break;
+      }
+    }
+    if (modelQueryDescription == null) {
+      throw new Exception();
+    }
+    //Get a java instance of the querySet
+    AbstractModelQuery myModelQuery = catalog
+        .getModelQueryImpl(modelQueryDescription);
+    //the model query set evaluation
+    ModelQueryResult result = myModelQuery.evaluate(context);
+    if (result.getException() != null) {
+      throw new Exception();
+    }
+    return (Integer) result.getValue();
+  }
+}
+</pre>
+		<h2 id="How_to_package_a_query_set_in_a_plug-in">How to package a query set in a plug-in</h2>
+		<p>To package a query set in a plug-in, an extension must be added in the file plugin.xml (contained in the query set's project). The extension point to use is: org.eclipse.gmt.modisco.infra.query.registration.
+			Here is an example of a query set declaration:</p>
+		<pre> &lt;plugin&gt;
+    &lt;extension
+          point="org.eclipse.gmt.modisco.infra.query.registration"&gt;
+       &lt;modelqueryset
+             file="_example_jdkAndEclipseQuerySet.querySet"&gt;
+       &lt;/modelqueryset&gt;
+    &lt;/extension&gt;
+ &lt;/plugin&gt;
+</pre>
+		<p>Thanks to this extension declaration, The MoDisco project is ready to be exported as a plug-in.</p>
+		<h2 id="Query_Meta-model_Description">Query Meta-model Description</h2>
+		<p>
+			<img border="0" src="../../img/query_manager/MoDisco_Query_Metamodel.png"/>
+		</p>
+		<p>ModelQuerySet is the root of the query model. One root per query
+			model is expected.</p>
+		<p>ModelQuerySet::name must be unique (in the Eclipse platform) and
+			equal to the containing file name. We recommend to use a name prefix
+			with a namespace, for example: org.eclipse.gmt.modisco.example1.querySet1.</p>
+		<p>ModelQuerySet::isEditable is true if the query can be edited. If
+			the query is stored into a compiled file then ModelQuerySet::isEditable is
+			false.</p>
+		<p>ModelQuerySet::getQuery(EString) returns the contained ModelQuery
+			having the requested name.</p>
+		<p>ModelQuerySet::associatedMetamodels points to the meta-models
+			used by the contained queries.</p>
+		<p>ModelQuerySet::queries refers to the contained queries.</p>
+		<p>ModelQuery is an abstract class representing a query.</p>
+		<p>ModelQuery::name is the query name. In each query set the query
+			names must be unique.</p>
+		<p>ModelQuery::parameters a set of ModelQueryParameter instances
+			describing the query parameters.</p>
+		<p>ModelQuery::returnType is an ecore::DataType representing the
+			query return type.</p>
+		<p>ModelQuery::scope is the set of types on which the query is
+			applicable. Those types are represented by ecore::DataType instances.</p>
+		<p>ModelQueryParameter is a class representing the query parameters.</p>
+		<p>ModelQueryParameter::type is an ecore::DataType representing the
+			query parameter type.</p>
+		<p>ModelQueryParameter::name is the parameter name. In each query
+			the parameter names must be unique.</p>
+		<p>ModelQuery::isExternalContextDependent must be true if two
+			evaluations of the same query with the same context and parameters can
+			return different results.</p>
+		<p>JavaModelQuery is a sub class of ModelQuery which points to a
+			Java implemented query.</p>
+		<p>JavaModelQuery::implemenationClassName contains the qualified
+			name of the class implementing the query. This class must be a sub class
+			of org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery. The
+			Java implementation class must be stored in the same plug-in (or plug-in
+			project) as the query model.</p>
+		<p>OCLModelQuery::query is the OCL query string.</p>
+	</body>
+</html>

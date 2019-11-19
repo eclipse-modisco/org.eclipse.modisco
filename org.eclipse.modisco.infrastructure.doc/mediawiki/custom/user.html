@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<h1 id="Customization">Customization</h1>
+		<p>MoDisco defines a customization mechanism, that can be used to define the appearance of model elements when viewed in an editor that supports this customization mechanism.</p>
+		<p>For example, the MoDisco 
+			<a href="../model_browser/user.html">Model Browser</a> can be customized through the use of these customizations.
+		</p>
+		<h2 id="Description">Description</h2>
+		<p>A MoDisco customization is a file contained in a MoDisco project inside your Eclipse Workspace, that has the 
+			<b>uiCustom</b> file extension.
+			It can also be packaged inside a plug-in for distribution.
+		</p>
+		<p>Customizations are useful to modify the appearance of any element from its associated metamodel when shown in the Model Browser.</p>
+		<p>For example, you could specify that all instances of a certain metaclass that have an attribute set to a given value should be displayed in bold with a specific icon.</p>
+		<p>
+			<img border="0" src="../../img/custom/Customization_example.png"/>
+		</p>
+		<h3 id="How_it_works">How it works</h3>
+		<p>Each customizable feature (color, boldness, text font, label, visibility, etc.) can have a default value and a list of conditional values, each one predicated by a 
+			<a href="../../../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html">query</a>. The chosen value will be the one corresponding to the first condition that evaluated to "true", or the default value if all conditions were false or none was defined. 
+		</p>
+		<p>Furthermore, if no default value is provided for a feature, then a default default value will be used, which corresponds to the default behavior of the Model Browser. For example, if the "icon" feature is not customized, then the icon will be given by the "icon provider" extension point or a registered EMF adapter factory. If neither returned an icon, then a generated icon will be used.</p>
+		<p>
+			<img border="0" src="../../img/custom/MoDisco_UiCustom_Flowchart.png"/>
+		</p>
+		<p>Each value can itself be either a static value (a constant) or a value computed by a 
+			<a href="../../../org.eclipse.modisco.infrastructure.doc/mediawiki/query_manager/user.html">query</a>.
+		</p>
+		<h2 id="Creating_a_customization">Creating a customization</h2>
+		<p>To create a new MoDisco customization, select a MoDisco project and click on 
+			<b>New &gt; Other...</b>. Then select 
+			<b>MoDisco &gt; Browser Customization</b> in the wizard. Give a name to the customization file, select the metamodel to which the customization will apply, and optionally choose which query sets will be available to the customization.
+		</p>
+		<h2 id="Editing_a_customization">Editing a customization</h2>
+		<p>To edit a customization, open its 
+			<i>uiCustom</i> file in Eclipse:
+		</p>
+		<p>
+			<img border="0" src="../../img/custom/MoDiscoCustomizationEditor.png"/>
+		</p>
+		<p>The 
+			<i>Types</i> section presents a tree of metaclasses from the customized metamodel, each one containing its attributes and references. It is similar to the metaclass pane in the MoDisco Model Browser.
+		</p>
+		<p>When you select a metaclass, attribute or reference in the 
+			<i>Types</i> section, its customizable features are shown in the 
+			<i>Customizations</i> section.
+		</p>
+		<p>The right side of the editor presents a list of buttons used for modifying the customizations shown in the 
+			<i>Customizations</i> section.
+		</p>
+		<h3 id="Editing_a_default_value">Editing a default value</h3>
+		<p>To edit the default value of a feature, click on the feature in the 
+			<i>Customizations</i> section, and then click on the 
+			<b>Edit feature value...</b> button. Alternatively, you can double-click on the feature.
+		</p>
+		<p>This opens a dialog where you can choose the value:</p>
+		<p>
+			<img border="0" src="../../img/custom/MoDisco_uiCustomEditor_DefaultValueDialogs.png"/>
+		</p>
+		<p>You can choose between:</p>
+		<ul>
+			<li>Default value : remove the customization on the feature's default value</li>
+			<li>Static value : set the default value as a constant (which can be a boolean, a color, a font name, etc.)</li>
+			<li>Value computed by a query : the default value of the feature will be dynamically computed at runtime by the query you select</li>
+		</ul>
+		<h3 id="Editing_a_conditional_value">Editing a conditional value</h3>
+		<p>To add a conditional value to a feature, click on the feature in the 
+			<i>Customizations</i> section, then click on the 
+			<b>Add...</b> button.
+			You will be presented with the following dialog:
+		</p>
+		<p>
+			<img width="802" border="0" src="../../img/custom/MoDisco_uiCustomEditor_ConditionalValueDialogs.png"/>
+		</p>
+		<p>As for default values, you can choose (in the right pane) between either a static value or a query which will yield the value at runtime.</p>
+		<p>In addition, you must select a query in the left pane that specifies the condition. This query must have a boolean return type, that will determine at runtime whether the value will be chosen or not.</p>
+		<p>Once you have added a condition, you can then use the 
+			<b>Edit...</b> button to change it, the 
+			<b>Remove</b> button to remove it, and the 
+			<b>Up</b> and 
+			<b>Down</b> buttons to reorder the conditions.
+		</p>
+		<h2 id="What_can_be_customized.3F">What can be customized?</h2>
+		<table class="wikitable" style="text-align: left;" border="0" cellspacing="10">
+			<tr>
+				<th>customization</th>
+				<th>description</th>
+			</tr>
+			<tr>
+				<td>Is Visible</td>
+				<td>Whether to display the element</td>
+			</tr>
+			<tr>
+				<td>Label</td>
+				<td>The text that appears for this element</td>
+			</tr>
+			<tr>
+				<td>Text Font Name</td>
+				<td>The font used to display the label</td>
+			</tr>
+			<tr>
+				<td>Text Color</td>
+				<td>The color of the Label</td>
+			</tr>
+			<tr>
+				<td>Background Color</td>
+				<td>The background color of the Label</td>
+			</tr>
+			<tr>
+				<td>Type Icon</td>
+				<td>A 16x16 image to display as icon for this element</td>
+			</tr>
+			<tr>
+				<td>Is Bold</td>
+				<td>Whether to display the label in bold</td>
+			</tr>
+			<tr>
+				<td>Is Italic</td>
+				<td>Whether to display the label in italic</td>
+			</tr>
+			<tr>
+				<td>Is Underlined</td>
+				<td>Whether to underline the label</td>
+			</tr>
+			<tr>
+				<td>Is Struckthrough</td>
+				<td>Whether to strike through the label</td>
+			</tr>
+			<tr>
+				<td>Hide Metaclass Name</td>
+				<td>Whether to display the metaclass of each element as a prefix of its label ("
+					<a href="Metaclass">Metaclass</a>")
+				</td>
+			</tr>
+			<tr>
+				<td>Visible In Types Panel</td>
+				<td>Whether the metaclass is visible in the "Types" panel</td>
+			</tr>
+			<tr>
+				<td>Overlay Icon</td>
+				<td>A 8x8 image to display over the type icon (for Facets only)</td>
+			</tr>
+			<tr>
+				<td>Collapse Link</td>
+				<td>Hide the tree node corresponding to the reference. If true the model elements are directly contained by the parent model element. If false the model elements are contained by a link node which is itself contained by the parent model element.</td>
+			</tr>
+		</table>
+		<h2 id="Expected_queries_return_types">Expected queries return types</h2>
+		<p>The queries are expected to return a value of the right type for the feature they customize:</p>
+		<table class="wikitable" border="1" cellpadding="10" cellspacing="0">
+			<tr>
+				<th>Feature </th>
+				<th>Return type </th>
+				<th>Example </th>
+				<th>Comment</th>
+			</tr>
+			<tr>
+				<td>Bold, Italic, Struck-through, </td>
+				<td>Boolean</td>
+				<td><code>true</code> or <code>false</code></td>
+				<td>The value can depend on attributes of the model element</td>
+			</tr>
+			<tr>
+				<td>Text Color, Background Color</td>
+				<td>String</td>
+				<td>"(255,128,128)"</td>
+				<td>Encoded as (red, green, blue) with integer intensity values in the interval [0,255]</td>
+			</tr>
+			<tr>
+				<td>Icon</td>
+				<td>String</td>
+				<td>"/MyModiscoProject/icons/myIcon.gif"</td>
+				<td>A path to a resource relative to the Workspace root, or in an installed plug-in (the first segment is then the plug-in name)</td>
+			</tr>
+			<tr>
+				<td>Label</td>
+				<td>String</td>
+				<td>"MyClass (public, final) [proxy]"</td>
+				<td>Typically, the query can add information about attributes or references on the model element</td>
+			</tr>
+		</table>
+		<h2 id="How_to_customize_a_Facet">How to customize a Facet</h2>
+		<p>A facet is a kind of meta-class (EClass) and a facet set a kind of meta-model (EPackage). The facet sets are represented in the meta-model list by their nsURI. To customize a facet set you just have to create a customization pointing to its nsURI. </p>
+		<p>
+			<img border="0" src="../../img/custom/MoDisco_FacetCustomization.png"/>
+		</p>
+		<h2 id="Team">Team</h2>
+		<ul>
+			<li>Nicolas Bros (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Gabriel Barbier (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Grégoire Dupé (
+				<a href="http://www.mia-software.com">Mia-Software</a>) 
+			</li>
+			<li>Frédéric Madiot (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+			<li>Nicolas Guyomar (
+				<a href="http://www.mia-software.com">Mia-Software</a>)
+			</li>
+		</ul>
+		<h2 id="Included_Plug-ins">Included Plug-ins</h2>
+		<ul>
+			<li>customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom</li>
+			<li>customization core : org.eclipse.gmt.modisco.infra.browser.custom.core</li>
+			<li>customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor</li>
+			<li>customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui</li>
+		</ul>
+	</body>
+</html>
