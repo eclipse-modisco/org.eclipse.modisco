@@ -17,7 +17,7 @@
 #    -q PUBLISH__QUALIFIER      Version qualifier e.g. v20171025-1600
 #
 updatesFolder="/home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/"
-group="modeling.mdt.modisco"
+# group="genie.modisco"
 localZip="modisco.zip"
 projectRepoName="Modisco"
 manageComposite="/shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml"
@@ -80,7 +80,7 @@ then
     then
       cp ~/publish.zip ${localZip}
       unzip -ou ${localZip} -d new${PUBLISH__VERSION}
-      chgrp -R ${group} new${PUBLISH__VERSION}
+      # chgrp -R ${group} new${PUBLISH__VERSION}
       chmod -R g+w new${PUBLISH__VERSION}
       mv ${PUBLISH__VERSION} old${PUBLISH__VERSION}
       mv new${PUBLISH__VERSION} ${PUBLISH__VERSION}
@@ -89,7 +89,7 @@ then
     then
       cp ~/publish.zip ${localZip}
       unzip -ou ${localZip} -d new${PUBLISH__VERSION}
-      chgrp -R ${group} new${PUBLISH__VERSION}
+      # chgrp -R ${group} new${PUBLISH__VERSION}
       chmod -R g+w new${PUBLISH__VERSION}
       mv ${PUBLISH__VERSION} old${PUBLISH__VERSION}
       mv new${PUBLISH__VERSION} ${PUBLISH__VERSION}
@@ -108,7 +108,7 @@ then
         unzip ${localZip} -d ${tQualifier}
         rm ${localZip}
 
-        chgrp -R ${group} ${tQualifier}
+        # chgrp -R ${group} ${tQualifier}
         chmod -R g+w ${tQualifier}
         ${manageComposite} add -Dchild.repository=${tQualifier} -Dcomposite.name="${projectRepoName} ${PUBLISH__VERSION} ${buildRepoName} Repository"
       popd
@@ -116,7 +116,7 @@ then
     then
       cp ~/publish.zip ${localZip}
       unzip -ou ${localZip} -d new${PUBLISH__VERSION}
-      chgrp -R ${group} new${PUBLISH__VERSION}
+      # chgrp -R ${group} new${PUBLISH__VERSION}
       chmod -R g+w new${PUBLISH__VERSION}
       mv ${PUBLISH__VERSION} old${PUBLISH__VERSION}
       mv new${PUBLISH__VERSION} ${PUBLISH__VERSION}

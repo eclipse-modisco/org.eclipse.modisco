@@ -18,7 +18,7 @@
 #    -a PUBLISH__ALIAS          Non blank to use alias as part of final name
 #
 dropsFolder="/home/data/httpd/download.eclipse.org/modeling/mdt/modisco/downloads/drops/"
-group="modeling.mdt.modisco"
+# group="genie.modisco"
 zipPrefix="modisco-Update-"
 
 while getopts v:t:q:a: option
@@ -54,7 +54,7 @@ then
     md5sum -b ${zipFile} > ${zipFile}.md5
     sha512sum -b ${zipFile} > ${zipFile}.sha1
     # make sure permissions are for the intended group
-    chgrp -R ${group} ${zipFile} ${zipFile}.md5 ${zipFile}.sha1
+    # chgrp -R ${group} ${zipFile} ${zipFile}.md5 ${zipFile}.sha1
     chmod -R g+w ${zipFile} ${zipFile}.md5 ${zipFile}.sha1
   popd
 
