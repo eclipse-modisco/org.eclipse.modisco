@@ -9,8 +9,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.6.0",
  org.eclipse.emf.facet.util.core;bundle-version="1.0.0",
  org.eclipse.emf.transaction;bundle-version="1.4.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.util.emf.core.allinstances,
  org.eclipse.modisco.util.emf.core.internal.allinstances;x-internal:=true,
  org.eclipse.modisco.util.emf.core.subclasses
+Automatic-Module-Name: org.eclipse.modisco.util.emf.core

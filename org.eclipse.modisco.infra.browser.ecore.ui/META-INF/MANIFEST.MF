@@ -21,5 +21,6 @@ Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-Activator: org.eclipse.modisco.infra.browser.ecore.ui.internal.Activator
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser.ecore.ui;singleton:=true
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.modisco.infra.browser.ecore.ui
 

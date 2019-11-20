@@ -6,7 +6,7 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.eclipseplugin,
  org.eclipse.modisco.eclipseplugin.impl;x-internal:=true,
  org.eclipse.modisco.eclipseplugin.util;x-internal:=true
@@ -17,3 +17,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmt.modisco.xml;visibility:=reexport,
  org.eclipse.modisco.manifest;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.eclipseplugin

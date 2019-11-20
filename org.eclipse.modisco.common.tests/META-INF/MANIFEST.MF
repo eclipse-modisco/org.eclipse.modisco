@@ -10,5 +10,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.9.0",
  org.junit;bundle-version="4.8.1";resolution:=optional
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.common.tests
+Automatic-Module-Name: org.eclipse.modisco.common.tests

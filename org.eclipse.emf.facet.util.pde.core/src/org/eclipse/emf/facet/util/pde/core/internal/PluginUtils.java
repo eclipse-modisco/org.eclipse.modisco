@@ -242,7 +242,7 @@ public final class PluginUtils {
 		}
 	}
 
-	private static final String JAVA_VERSION = "J2SE-1.5"; //$NON-NLS-1$
+	private static final String JAVA_VERSION = "JavaSE-1.8"; //$NON-NLS-1$
 	private static final String ACTIVATOR_NAME = "Activator"; //$NON-NLS-1$
 	private static final String MANIFEST_MF_TPL = "resources/MANIFEST.MF.template"; //$NON-NLS-1$
 	private static final String ACTIVATOR_TPL = "resources/Activator.java.template"; //$NON-NLS-1$

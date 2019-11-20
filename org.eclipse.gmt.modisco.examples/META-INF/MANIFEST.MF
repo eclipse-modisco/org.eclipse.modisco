@@ -4,3 +4,4 @@ Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.examples
 Bundle-Version: 1.2.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
+Automatic-Module-Name: org.eclipse.gmt.modisco.examples

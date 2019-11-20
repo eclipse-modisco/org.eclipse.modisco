@@ -16,7 +16,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.acceleo.engine;bundle-version="3.0.0",
  com.ibm.icu;bundle-version="4.2.1"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %Bundle-Vendor
 Export-Package: org.eclipse.modisco.java.generation.tests,
  org.eclipse.modisco.java.generation.tests.utils
+Automatic-Module-Name: org.eclipse.modisco.java.generation.tests

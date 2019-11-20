@@ -13,7 +13,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
  org.junit;bundle-version="4.7.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %Bundle-Vendor
 Import-Package: org.eclipse.gmt.modisco.infra.facet
 Export-Package: org.eclipse.modisco.java.browser.customization.test
+Automatic-Module-Name: org.eclipse.modisco.java.browser.customization.tests

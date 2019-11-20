@@ -39,7 +39,7 @@ Require-Bundle: org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
  org.eclipse.ui.ide;bundle-version="3.6.0",
  org.eclipse.ui,
  org.eclipse.core.resources
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.java.discoverer.benchmark;x-friends:="org.eclipse.modisco.java.composition.discoverer.benchmark,org.eclipse.modisco.java.discoverer.benchmark.tests",
  org.eclipse.modisco.java.discoverer.benchmark.emf.client;x-friends:="org.eclipse.modisco.java.discoverer.benchmark.tests",
  org.eclipse.modisco.java.discoverer.benchmark.emfstat;x-friends:="org.eclipse.modisco.java.composition.discoverer.benchmark",
@@ -47,3 +47,4 @@ Export-Package: org.eclipse.modisco.java.discoverer.benchmark;x-friends:="org.ec
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: bin/,
  .
+Automatic-Module-Name: org.eclipse.modisco.java.discoverer.benchmark

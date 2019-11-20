@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jdt.ui;bundle-version="3.6.0",
  com.ibm.icu;bundle-version="4.2.1"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Export-Package: org.eclipse.gmt.modisco.infra.common.ui.internal.actions;x-internal:=true,
@@ -45,3 +45,4 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.ui.internal.actions;x-inter
    org.eclipse.gmt.modisco.infra.facet.ui,
    org.eclipse.modisco.infra.discovery.ui",
  org.eclipse.gmt.modisco.infra.common.ui.internal.wizards;x-friends:="org.eclipse.gmt.modisco.java.browser.customization"
+Automatic-Module-Name: org.eclipse.gmt.modisco.infra.common.ui

@@ -11,5 +11,6 @@ Bundle-Name: %Bundle-Name
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.eclipse.modisco.jee.jsp.browser.customization
  ;singleton:=true
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.modisco.jee.jsp.browser.customization
 

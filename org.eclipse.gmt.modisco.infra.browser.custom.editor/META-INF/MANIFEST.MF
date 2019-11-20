@@ -21,5 +21,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmt.modisco.infra.common.ui,
  org.eclipse.gmt.modisco.infra.query.ui,
  org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="0.8.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.gmt.modisco.infra.browser.custom.editor

@@ -16,5 +16,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jdt.ui;bundle-version="3.6.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.java.discoverer.ui

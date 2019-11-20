@@ -23,5 +23,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.kdm.source.discoverer;bundle-version="0.9.0"
 Export-Package: org.eclipse.modisco.kdm.uml2converter,
  org.eclipse.modisco.kdm.uml2converter.internal;x-friends:="org.eclipse.modisco.usecase.simpletransformationschain"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.kdm.uml2converter

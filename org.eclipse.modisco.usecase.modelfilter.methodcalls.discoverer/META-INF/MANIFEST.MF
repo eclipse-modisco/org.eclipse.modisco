@@ -12,8 +12,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jdt.core;bundle-version="3.6.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.9.0",
  org.eclipse.modisco.java.discoverer;bundle-version="0.9.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal;x-internal:=true,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.internal.converter;x-friends:="org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui"
+Automatic-Module-Name: org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer

@@ -9,9 +9,10 @@ Require-Bundle: org.eclipse.ui,
  org.apache.lucene,
  org.prefuse;bundle-version="0.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.gmt.modisco.infra.prefuse,
  org.eclipse.gmt.modisco.infra.prefuse.examples.graphview,
  org.eclipse.gmt.modisco.infra.prefuse.examples.radialgraphview,
  org.eclipse.gmt.modisco.infra.prefuse.examples.treeview
 Bundle-Vendor: %Bundle-Vendor
+Automatic-Module-Name: org.eclipse.gmt.modisco.infra.prefuse

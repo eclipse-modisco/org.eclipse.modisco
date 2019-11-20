@@ -20,5 +20,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.discovery.ui,
  org.eclipse.modisco.infra.discovery.benchmark;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %Bundle-Vendor
+Automatic-Module-Name: org.eclipse.modisco.java.composition.discoverer.benchmark

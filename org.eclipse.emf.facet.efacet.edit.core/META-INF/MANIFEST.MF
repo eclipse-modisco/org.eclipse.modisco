@@ -8,7 +8,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
  org.eclipse.emf.edit;bundle-version="2.6.0",
  org.eclipse.emf.facet.efacet.core;bundle-version="1.1.0",
  org.eclipse.emf.facet.util.core;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %Bundle-Vendor
 Export-Package: org.eclipse.emf.facet.efacet.edit.core
+Automatic-Module-Name: org.eclipse.emf.facet.efacet.edit.core

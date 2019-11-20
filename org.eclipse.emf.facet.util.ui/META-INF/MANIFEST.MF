@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.workbench;bundle-version="3.6.0",
  org.eclipse.jface;bundle-version="3.6.0",
  org.eclipse.emf.edit;bundle-version="2.6.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: 
  org.eclipse.emf.facet.util.ui.internal.exported,
@@ -40,3 +40,4 @@ Export-Package:
  org.eclipse.emf.facet.util.ui.internal.exported.widget.getorcreate,
  org.eclipse.emf.facet.util.ui.internal.exported.wizard,
  org.eclipse.emf.facet.util.ui.utils
+Automatic-Module-Name: org.eclipse.emf.facet.util.ui

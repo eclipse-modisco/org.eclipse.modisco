@@ -6,7 +6,7 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark;
   x-friends:="org.eclipse.modisco.infra.discovery.benchmark.core",
  org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.impl;x-internal:=true,
@@ -18,3 +18,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.discovery;visibility:=reexport,
  org.eclipse.emf.facet.util.emf.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.infra.discovery.benchmark.metamodel

@@ -20,7 +20,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.edit.ui;bundle-version="2.6.0"
 Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.gmt.modisco.infra.browser.uicore,
  org.eclipse.gmt.modisco.infra.browser.uicore.extensions.icons,
  org.eclipse.gmt.modisco.infra.browser.uicore.extensions.naming,
@@ -30,3 +30,4 @@ Export-Package: org.eclipse.gmt.modisco.infra.browser.uicore,
  org.eclipse.gmt.modisco.infra.browser.uicore.internal.extensions;x-friends:="org.eclipse.gmt.modisco.infra.browser",
  org.eclipse.gmt.modisco.infra.browser.uicore.internal.model;x-friends:="org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.custom.editor",
  org.eclipse.gmt.modisco.infra.browser.uicore.internal.util;x-friends:="org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.custom.ui,org.eclipse.gmt.modisco.infra.browser.custom.editor"
+Automatic-Module-Name: org.eclipse.gmt.modisco.infra.browser.uicore

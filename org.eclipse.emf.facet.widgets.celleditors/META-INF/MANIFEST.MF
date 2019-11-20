@@ -6,7 +6,7 @@ Bundle-Version: 1.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.swt;bundle-version="3.6.0",
@@ -34,3 +34,4 @@ Export-Package: org.eclipse.emf.facet.widgets.celleditors,
  org.eclipse.emf.facet.widgets.celleditors.modelCellEditor.impl;x-internal:=true,
  org.eclipse.emf.facet.widgets.celleditors.modelCellEditor.util;x-friends:="org.eclipse.emf.facet.widgets.celleditors.edit"
 Bundle-Activator: org.eclipse.emf.facet.widgets.celleditors.internal.Activator
+Automatic-Module-Name: org.eclipse.emf.facet.widgets.celleditors

@@ -13,6 +13,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.facet.util.core;bundle-version="0.1.0",
  org.eclipse.emf.facet.custom.ui;bundle-version="0.2.0",
  org.eclipse.emf.facet.custom.core;bundle-version="0.2.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.emf.facet.widgets.internal;x-friends:="org.eclipse.emf.facet.widgets.celleditors,org.eclipse.emf.facet.widgets.nattable"
+Automatic-Module-Name: org.eclipse.emf.facet.widgets

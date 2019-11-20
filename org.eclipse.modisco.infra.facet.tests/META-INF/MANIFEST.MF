@@ -6,7 +6,7 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.gmt.modisco.infra.query;visibility:=reexport,
@@ -25,3 +25,4 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.modisco.infra.facet.tests.Activator
 Export-Package: org.eclipse.modisco.infra.facet.tests
+Automatic-Module-Name: org.eclipse.modisco.infra.facet.tests

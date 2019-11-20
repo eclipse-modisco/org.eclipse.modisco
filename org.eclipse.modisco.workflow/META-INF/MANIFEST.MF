@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.modisco.workflow;singleton:=true
 Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.workflow.modiscoworkflow,
  org.eclipse.modisco.workflow.modiscoworkflow.impl;x-friends:="org.eclipse.modisco.workflow.core",
  org.eclipse.modisco.workflow.modiscoworkflow.util;x-internal:=true
@@ -13,3 +13,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.modisco.workflow.Activator
+Automatic-Module-Name: org.eclipse.modisco.workflow

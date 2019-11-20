@@ -74,7 +74,7 @@ public final class ProjectUtils {
 		// Nothing
 	}
 
-	private static final String JAVA_VERSION = "J2SE-1.5"; //$NON-NLS-1$
+	private static final String JAVA_VERSION = "JavaSE-1.8"; //$NON-NLS-1$
 
 	public static void addPdeClassPath(final IProject project) throws JavaModelException {
 		IJavaProject javaProject = JavaCore.create(project);

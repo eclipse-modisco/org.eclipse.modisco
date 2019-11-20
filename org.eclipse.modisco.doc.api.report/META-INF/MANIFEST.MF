@@ -4,4 +4,5 @@ Bundle-Name: MoDisco API Report
 Bundle-SymbolicName: org.eclipse.modisco.doc.api.report;singleton:=true
 Bundle-Version: 1.2.0.qualifier
 Bundle-Vendor: Eclipse Modeling Project
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.eclipse.modisco.doc.api.report

@@ -6,7 +6,7 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.gmt.modisco.java.nousages.cdo.impl;x-internal:=true,
  org.eclipse.gmt.modisco.java.nousages.cdo.meta,
  org.eclipse.gmt.modisco.java.nousages.cdo.util;x-internal:=true
@@ -16,3 +16,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.gmt.modisco.java;bundle-version="0.7.0"
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.gmt.modisco.java.nousages.cdo

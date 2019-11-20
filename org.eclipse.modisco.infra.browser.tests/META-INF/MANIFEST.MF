@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser.tests;singleton:=true
 Bundle-Version: 1.2.0.qualifier
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.swtbot.swt.finder;resolution:=optional,
  org.eclipse.swtbot.eclipse.finder,
  org.junit;bundle-version="4.7.0",
@@ -21,3 +21,4 @@ Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Eclipse-RegisterBuddy: org.apache.log4j
 Export-Package: org.eclipse.modisco.infra.browser.tests;x-friends:="org.eclipse.modisco.tests"
+Automatic-Module-Name: org.eclipse.modisco.infra.browser.tests

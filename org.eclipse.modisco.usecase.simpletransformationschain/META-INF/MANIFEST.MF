@@ -11,7 +11,8 @@ Require-Bundle: org.eclipse.core.resources,
  org.eclipse.modisco.kdm.uml2converter;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0",
  org.eclipse.modisco.util.atl.core;bundle-version="0.9.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.usecase.simpletransformationschain
 Bundle-Name: %Bundle-Name
 Bundle-Vendor: %Bundle-Vendor
+Automatic-Module-Name: org.eclipse.modisco.usecase.simpletransformationschain

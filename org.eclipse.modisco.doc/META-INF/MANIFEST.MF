@@ -8,6 +8,7 @@ Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.help;bundle-version="3.5.0",
  org.apache.ant;bundle-version="1.7.1"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.doc
  

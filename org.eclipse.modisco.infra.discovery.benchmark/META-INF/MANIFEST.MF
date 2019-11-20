@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.modisco.infra.discovery.benchmark;singleton:=tr
 Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.infra.discovery.benchmark,
  org.eclipse.modisco.infra.discovery.benchmark.impl;x-internal:=true,
  org.eclipse.modisco.infra.discovery.benchmark.util;x-internal:=true
@@ -13,3 +13,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.modisco.infra.discovery.benchmark

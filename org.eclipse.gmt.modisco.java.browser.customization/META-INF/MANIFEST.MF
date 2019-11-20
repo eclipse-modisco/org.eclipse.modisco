@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.gmt.modisco.java.browser.customization;singleto
 Bundle-Version: 1.2.0.qualifier
 Bundle-Vendor: 
  %Bundle-Vendor
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
 Require-Bundle: org.eclipse.gmt.modisco.java.queries;bundle-version="0.0.1",
@@ -18,3 +18,4 @@ Require-Bundle: org.eclipse.gmt.modisco.java.queries;bundle-version="0.0.1",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
  org.eclipse.gmt.modisco.infra.common.ui;bundle-version="0.8.0"
 Bundle-Activator: org.eclipse.gmt.modisco.java.browser.customization.internal.Activator
+Automatic-Module-Name: org.eclipse.gmt.modisco.java.browser.customization

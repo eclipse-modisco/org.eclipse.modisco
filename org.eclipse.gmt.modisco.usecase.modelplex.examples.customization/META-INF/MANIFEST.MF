@@ -4,7 +4,7 @@ Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.usecase.modelplex.examples.customization;singleton:=true
 Bundle-Version: 1.2.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
 Require-Bundle: org.eclipse.gmt.modisco.infra.query.core,
@@ -12,3 +12,4 @@ Require-Bundle: org.eclipse.gmt.modisco.infra.query.core,
  org.eclipse.gmt.modisco.infra.browser.custom.core,
  org.eclipse.gmt.modisco.infra.facet.core,
  org.eclipse.gmt.modisco.java.queries;bundle-version="0.8.0"
+Automatic-Module-Name: org.eclipse.gmt.modisco.usecase.modelplex.examples.customization

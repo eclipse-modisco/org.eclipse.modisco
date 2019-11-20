@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.modisco.jee.webapp;singleton:=true
 Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
@@ -27,3 +27,4 @@ Export-Package: org.eclipse.modisco.jee.webapp.webapp22,
  org.eclipse.modisco.jee.webapp.webapp30.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp30.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer"
 Bundle-Vendor: %Bundle-Vendor
+Automatic-Module-Name: org.eclipse.modisco.jee.webapp

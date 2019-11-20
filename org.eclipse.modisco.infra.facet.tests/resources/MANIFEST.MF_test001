@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Bundle name
 Bundle-SymbolicName: test001;singleton:=true
 Bundle-Version: 0.0.1.qualifier
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
 Require-Bundle: org.eclipse.core.runtime,

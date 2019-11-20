@@ -7,10 +7,11 @@ Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmt.modisco.java;bundle-version="0.9.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.9.0"
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.usecase.modelfilter.methodcalls,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.internal;x-internal:=true,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.impl;x-internal:=true,
  org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.util;x-internal:=true
+Automatic-Module-Name: org.eclipse.modisco.usecase.modelfilter.methodcalls

@@ -6,7 +6,7 @@ Bundle-Version: 1.2.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.gmt.modisco.omg.kdm,
  org.eclipse.gmt.modisco.omg.kdm.action,
  org.eclipse.gmt.modisco.omg.kdm.action.impl;x-internal:=true,
@@ -47,3 +47,4 @@ Export-Package: org.eclipse.gmt.modisco.omg.kdm,
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.eclipse.gmt.modisco.omg.kdm
