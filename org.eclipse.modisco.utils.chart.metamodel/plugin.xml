@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/modisco/utils/chart/0.1/chart"
-            class="org.eclipse.modisco.utils.chart.metamodel.chart.chartPackage"
-            genModel="model/birtChart.genmodel"/>
+            class="org.eclipse.modisco.utils.chart.metamodel.internal.chart.impl.ChartPackageImpl"
+            genModel="model/chart.genmodel"/>
    </extension>
 
 </plugin>
