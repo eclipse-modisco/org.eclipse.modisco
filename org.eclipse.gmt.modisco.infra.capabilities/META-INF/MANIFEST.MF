@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.capabilities;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.5.0.qualifier
 Bundle-Vendor: %Bundle-Vendor

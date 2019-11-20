@@ -12,7 +12,7 @@
   </parent>
   <groupId>org.eclipse.modisco</groupId>
   <artifactId>org.eclipse.modisco.tests</artifactId>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.5.0-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
    <build>
       <plugins>
