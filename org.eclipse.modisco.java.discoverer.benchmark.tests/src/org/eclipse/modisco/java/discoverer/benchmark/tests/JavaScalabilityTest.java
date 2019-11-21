@@ -89,7 +89,7 @@ public class JavaScalabilityTest {
 	 * @throws CoreException
 	 * @throws IOException
 	 */
-	@Ignore // FIXME Bug 552989
+	@Ignore
 	@Test(timeout=30*60*1000)
 	public void testMemoryUsed() throws CoreException, IOException {
 

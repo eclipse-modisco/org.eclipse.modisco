@@ -197,7 +197,7 @@
     <module>org.eclipse.modisco.java.generation.tests</module>
     <module>org.eclipse.modisco.java.queries.tests</module>
     <module>org.eclipse.modisco.jee.ejbjar.discoverer.tests</module>
-    <!--module>org.eclipse.modisco.jee.jsp.discoverer.tests</module-->
+    <module>org.eclipse.modisco.jee.jsp.discoverer.tests</module>
     <module>org.eclipse.modisco.jee.jsp.generation.tests</module>
     <module>org.eclipse.modisco.jee.queries.tests</module>
     <module>org.eclipse.modisco.kdm.uml2converter.tests</module>

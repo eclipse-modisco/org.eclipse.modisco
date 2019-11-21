@@ -66,7 +66,6 @@ public class TestJSPStdAction {
 		}
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test(timeout = 5 * 60 * 1000)
 	public void test1() throws Exception {
 		initResource();

@@ -47,7 +47,6 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 		return Activator.getDefault().getBundle();
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public final void testBug329672Comments() throws CoreException, IOException {
 		File sourceJavaModel = getInputModelFile();

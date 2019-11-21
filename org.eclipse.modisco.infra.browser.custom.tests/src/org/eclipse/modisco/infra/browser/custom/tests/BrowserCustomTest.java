@@ -148,7 +148,6 @@ public class BrowserCustomTest {
 	 * Test that a customization in the workspace takes precedence over a
 	 * customization with the same name from the registry.
 	 */
-	@Ignore // FIXME Bug 552989
 	@SuppressWarnings("null")
 	@Test
 	public void testWorkspaceCustomizationHidesRegistryCustomization()
@@ -240,7 +239,6 @@ public class BrowserCustomTest {
 				anEPackage.eClass(), "name", anEPackage));
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void testBug299277() throws CoreException, IOException,
 			InterruptedException, ModelQueryException {
@@ -296,7 +294,6 @@ public class BrowserCustomTest {
 	 * Check that a query referenced by a customization is the same physical
 	 * object as a query with the same name from the catalog.
 	 */
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void test001() throws CoreException, IOException,
 			InterruptedException {
@@ -446,7 +443,6 @@ public class BrowserCustomTest {
 	 * Bug 306724 - deleting a project containing a query set does not remove
 	 * the query set from its catalog
 	 */
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug306724() throws Exception {
 		String name = "bug306724"; //$NON-NLS-1$
@@ -482,7 +478,6 @@ public class BrowserCustomTest {
 	 * customizations have the same name, only one will be registered in the
 	 * catalog and the user will never be informed about this problem.
 	 */
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug307187() throws Exception {
 		final String name = "bug307187"; //$NON-NLS-1$

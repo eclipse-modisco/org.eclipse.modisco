@@ -359,7 +359,6 @@ public class Tests {
 		Assert.assertFalse((Boolean) queryImpl.basicEvaluate(cModelBrowser));
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug308991() throws CoreException, IOException,
 			InterruptedException {

@@ -72,7 +72,6 @@ public class EcoreCatalogTest {
 	 *
 	 * @throws Exception
 	 */
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug309990() throws Exception {
 		final String name = "bug309990"; //$NON-NLS-1$

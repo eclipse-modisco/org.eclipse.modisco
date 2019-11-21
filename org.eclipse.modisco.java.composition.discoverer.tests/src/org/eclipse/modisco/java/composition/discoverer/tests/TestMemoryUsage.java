@@ -99,7 +99,6 @@ public class TestMemoryUsage {
 		}
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void test002() {
 		final String message = String.format(

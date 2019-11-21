@@ -86,7 +86,6 @@ public class Tests {
 		FileUtils.checkEMFResource(uri, 1);
 	}
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void bug308991() throws CoreException, IOException,
 			InterruptedException {

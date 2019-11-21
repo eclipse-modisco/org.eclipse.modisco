@@ -31,7 +31,6 @@ public class TestMemory {
 	private static final String RESOURCES_TEST_MEMORY = "/resources/memory.jsp"; //$NON-NLS-1$
 	private static final long EXPECTED_MEM_MAXIMUM = 200;
 
-	@Ignore // FIXME Bug 552989
 	@Test
 	public void memoryTest() throws Exception {
 		final long totalMemory = Runtime.getRuntime().totalMemory();
