@@ -103,7 +103,7 @@ public final class MoDiscoLogger {
 			effectiveMessage = effectiveMessage + " (" //$NON-NLS-1$
 					+ effectivePlugin.getBundle().getSymbolicName() + "_" //$NON-NLS-1$
 					+ effectivePlugin.getBundle().getVersion() + ")"; //$NON-NLS-1$
-			if (effectiveE == null) {
+			if ((effectiveE == null) && (level > IStatus.INFO)) {
 				// record a stacktrace
 				effectiveE = new LogStackTrace();
 			}
