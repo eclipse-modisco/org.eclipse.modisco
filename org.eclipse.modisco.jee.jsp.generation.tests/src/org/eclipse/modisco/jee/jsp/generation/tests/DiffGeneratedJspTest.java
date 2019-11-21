@@ -48,11 +48,7 @@ import org.osgi.framework.Bundle;
  *
  */
 public class DiffGeneratedJspTest {
-
-	/* Bug 415657 - Disabling of 'org.eclipse.modisco.jee.jsp.discoverer' to deliver to Luna M1
 	private static final String JSP_DISCOVERER_TESTS_PLUGINID = org.eclipse.modisco.jee.jsp.discoverer.tests.Activator.PLUGIN_ID;
-	*/
-	private static final String JSP_DISCOVERER_TESTS_PLUGINID = null;
 	private static final String RESOURCES_TEST1_XML = "resources/org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi"; //$NON-NLS-1$
 	private static final String RESOURCES_TEST1_JSP = "resources/"; //$NON-NLS-1$
 	private static final String DEPLOYED_TEST1_JSP = "resources/"; //$NON-NLS-1$
@@ -84,8 +80,7 @@ public class DiffGeneratedJspTest {
 	 * @throws IOException
 	 * @throws CoreException
 	 */
-	@Ignore // FIXME Bug 552989
-	@Test(timeout = 5 * 60 * 1000)
+	@Test // (timeout = 5 * 60 * 1000)
 	public final void testJspFileExistence() throws URISyntaxException,
 			CoreException, IOException {
 		File sourceJspModel = getInputModelFile();
@@ -227,8 +222,15 @@ public class DiffGeneratedJspTest {
 				jspGenerator.getModel());
 		Assert.assertTrue("JSP Model instance not found in jsp model before generation", //$NON-NLS-1$
 				jspGenerator.getModel().eClass().getName().equals("Model")); //$NON-NLS-1$
-		jspGenerator.doGenerate(null);
-
+		try {
+			jspGenerator.doGenerate(null);
+		}
+		catch (IOException e) {
+			throw e;
+		}
+		catch (Exception e) {
+			throw new IOException("Acceleo generation failed", e);
+		}
 	}
 
 	/**
