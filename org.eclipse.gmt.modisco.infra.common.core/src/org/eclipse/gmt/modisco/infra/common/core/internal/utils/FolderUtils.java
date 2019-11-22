@@ -25,6 +25,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Comparator;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -321,20 +323,37 @@ public final class FolderUtils {
 
 	public static final void copyDirectory(final File srcDir, final File destDir,
 			final IFilter filter) throws IOException {
-
-		if (!destDir.exists()) {
-			destDir.mkdirs();
+		//
+		//	Build Map of folders to copy before copying to avoid recursion for Maven.
+		//
+		Map<File, File> src2dest = new HashMap<File, File>();
+		copyDirectory2(srcDir, destDir, filter, src2dest);
+		for (File srcDir2 : src2dest.keySet()) {
+			File destDir2 = src2dest.get(srcDir2);
+			if (!destDir2.exists()) {
+				destDir2.mkdirs();
+			}
+			// Copies each file and directory, one by one
+			for (File src : srcDir2.listFiles()) {
+				if (!src.isDirectory()) {
+					File dest = new File(destDir2.getPath() + File.separator + src.getName());
+					if (filter.filter(dest)) {
+						FolderUtils.copyFile(src, dest);
+					}
+				}
+			}
 		}
-		File[] filesList = srcDir.listFiles();
-		File dest;
-		// Copies each file and directory, one by one
-		for (File src : filesList) {
-			dest = new File(destDir.getPath() + File.separator + src.getName());
-			if (filter.filter(dest)) {
-				if (src.isDirectory()) {
-					FolderUtils.copyDirectory(src, dest, filter);
-				} else {
-					FolderUtils.copyFile(src, dest);
+	}
+
+	/* Recurse to gather the directories to be copied in src2dest */
+	private static final void copyDirectory2(final File srcDir, final File destDir,
+			final IFilter filter, Map<File, File> src2dest) throws IOException {
+		src2dest.put(srcDir, destDir);
+		for (File src : srcDir.listFiles()) {
+			if (src.isDirectory()) {
+				File dest = new File(destDir.getPath() + File.separator + src.getName());
+				if (filter.filter(dest)) {
+					FolderUtils.copyDirectory2(src, dest, filter, src2dest);
 				}
 			}
 		}
