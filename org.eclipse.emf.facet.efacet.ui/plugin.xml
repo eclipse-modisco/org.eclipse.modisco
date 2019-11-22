@@ -86,6 +86,10 @@
    </extension>
    <extension
          point="org.eclipse.ui.commands">
+      <category
+            id="org.eclipse.emf.facet.widgets.table.command.category"
+            name="%category.name">
+      </category>
       <command
             id="org.eclipse.emf.facet.efacet.ui.createFacetInFacetSet"
             name="%command.name">
