@@ -43,7 +43,14 @@
     <unit id="org.antlr.runtime" version="3.2.0.v201101311130"/> 
     <unit id="org.antlr.runtime.source" version="3.2.0.v201101311130"/> 
     <unit id="org.apache.commons.cli" version="0.0.0"/>
-    <unit id="org.apache.lucene" version="0.0.0"/>
+    <unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.source" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.core" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.core.source" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.misc" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.misc.source" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.queries" version="3.5.0.v20120725-1805"/>
+    <unit id="org.apache.lucene.queries.source" version="3.5.0.v20120725-1805"/>
     <unit id="org.hamcrest" version="0.0.0"/>
     <unit id="org.prefuse" version="0.0.0"/>
     <unit id="org.prefuse.source" version="0.0.0"/>
