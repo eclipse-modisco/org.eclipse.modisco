@@ -16,7 +16,7 @@ Contributors:
       <!-- @generated catalog-1.1 -->
       <package
             uri="http://www.eclipse.org/emf/facet/catalog/1.1.0/internal/catalog/"
-            class="org.eclipse.emf.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.CatalogPackage"
+            class="org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.CatalogPackage"
             genModel="model/catalog-1.1.genmodel"/>
    </extension>
 

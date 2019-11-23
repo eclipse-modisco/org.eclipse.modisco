@@ -23,7 +23,7 @@
    <extension
        point="org.eclipse.core.runtime.preferences">
       <initializer
-         class="org.eclipse.emf.facet.util.emf.core.internal.preferences.PreferenceInitializer">
+         class="org.eclipse.modisco.facet.util.emf.core.internal.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    <extension

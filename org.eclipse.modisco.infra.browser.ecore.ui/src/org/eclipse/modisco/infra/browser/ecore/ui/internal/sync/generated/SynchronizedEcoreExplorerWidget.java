@@ -11,10 +11,10 @@
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.sync.generated;
 
-import org.eclipse.emf.facet.util.ui.internal.exported.displaysync.SynchronizedObject;
+import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.AbstractExceptionFreeRunnable;
+import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.AbstractVoidExceptionFreeRunnable;
+import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.SynchronizedObject;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.emf.facet.util.ui.internal.exported.displaysync.AbstractVoidExceptionFreeRunnable;
-import org.eclipse.emf.facet.util.ui.internal.exported.displaysync.AbstractExceptionFreeRunnable;
 
 @SuppressWarnings("PMD.ExcessivePublicCount")
 public class SynchronizedEcoreExplorerWidget extends SynchronizedObject<org.eclipse.modisco.infra.browser.ecore.ui.internal.exported.IEcoreExplorerWidget> implements org.eclipse.modisco.infra.browser.ecore.ui.internal.exported.IEcoreExplorerWidget {

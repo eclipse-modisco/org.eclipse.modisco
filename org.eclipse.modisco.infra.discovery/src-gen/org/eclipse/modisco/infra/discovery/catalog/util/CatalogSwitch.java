@@ -15,9 +15,7 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.facet.util.emf.catalog.Catalog;
-
+import org.eclipse.modisco.facet.util.emf.catalog.Catalog;
 import org.eclipse.modisco.infra.discovery.catalog.*;
 
 /**

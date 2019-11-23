@@ -12,8 +12,7 @@
 package org.eclipse.modisco.infra.discovery.catalog;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.facet.util.emf.catalog.Catalog;
+import org.eclipse.modisco.facet.util.emf.catalog.Catalog;
 
 /**
  * <!-- begin-user-doc -->

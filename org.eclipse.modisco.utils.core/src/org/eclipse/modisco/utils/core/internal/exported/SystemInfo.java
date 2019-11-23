@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.eclipse.emf.facet.util.core.Logger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.utils.core.internal.Activator;
 
 /**

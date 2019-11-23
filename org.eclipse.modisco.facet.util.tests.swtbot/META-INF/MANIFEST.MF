@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: EMF Facet Util for SwtBot
 Bundle-SymbolicName: org.eclipse.emf.facet.util.tests.swtbot
 Bundle-Version: 1.3.0.qualifier
-Bundle-Activator: org.eclipse.emf.facet.util.tests.swtbot.internal.Activator
+Bundle-Activator: org.eclipse.modisco.facet.util.tests.swtbot.internal.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -14,9 +14,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.facet.util.core;bundle-version="0.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.emf.facet.util.tests.swtbot.internal;
+Export-Package: org.eclipse.modisco.facet.util.tests.swtbot.internal;
   x-friends:="org.eclipse.emf.facet.widgets.nattable.tests,
    org.eclipse.emf.facet.query.java.ui.tests,
    org.eclipse.modisco.infra.browser.tests,
    org.eclipse.emf.facet.util.emf.ui.tests",
- org.eclipse.emf.facet.util.tests.swtbot.internal.exported
+ org.eclipse.modisco.facet.util.tests.swtbot.internal.exported

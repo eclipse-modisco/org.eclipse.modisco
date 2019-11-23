@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.emf.facet.widgets.celleditors.ecore;singleton:=true
 Bundle-Version: 1.3.0.qualifier
-Bundle-Activator: org.eclipse.emf.facet.widgets.celleditors.ecore.Activator
+Bundle-Activator: org.eclipse.modisco.facet.widgets.celleditors.ecore.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -13,5 +13,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.facet.util.core;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.emf.facet.widgets.celleditors.ecore.composite
+Export-Package: org.eclipse.modisco.facet.widgets.celleditors.ecore.composite
 Automatic-Module-Name: org.eclipse.emf.facet.widgets.celleditors.ecore

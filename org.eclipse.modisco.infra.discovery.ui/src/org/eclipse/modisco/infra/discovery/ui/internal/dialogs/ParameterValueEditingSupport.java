@@ -12,12 +12,12 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.ui.internal.dialogs;
 
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
-import org.eclipse.emf.facet.widgets.celleditors.core.composite.registry.ICompositeEditorFactoriesRegistry;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnViewer;
 import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.core.composite.registry.ICompositeEditorFactoriesRegistry;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite.ComposedCellEditor;
 import org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite.IComposedCellEditorListener;

@@ -256,7 +256,7 @@ public interface CatalogPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCOVERER_CATALOG__INSTALLED_ENTRIES = org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.CATALOG__INSTALLED_ENTRIES;
+	int DISCOVERER_CATALOG__INSTALLED_ENTRIES = org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.CATALOG__INSTALLED_ENTRIES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -265,7 +265,7 @@ public interface CatalogPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCOVERER_CATALOG__NAME = org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.CATALOG__NAME;
+	int DISCOVERER_CATALOG__NAME = org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.CATALOG__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Installed Discoverers</b></em>' reference list.
@@ -274,7 +274,7 @@ public interface CatalogPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCOVERER_CATALOG__INSTALLED_DISCOVERERS = org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.CATALOG_FEATURE_COUNT + 0;
+	int DISCOVERER_CATALOG__INSTALLED_DISCOVERERS = org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.CATALOG_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Discoverer Catalog</em>' class.
@@ -283,7 +283,7 @@ public interface CatalogPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCOVERER_CATALOG_FEATURE_COUNT = org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.CATALOG_FEATURE_COUNT + 1;
+	int DISCOVERER_CATALOG_FEATURE_COUNT = org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.CATALOG_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.infra.discovery.catalog.DirectionKind <em>Direction Kind</em>}' enum.

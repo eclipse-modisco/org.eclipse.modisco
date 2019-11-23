@@ -22,7 +22,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
+import org.eclipse.modisco.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;

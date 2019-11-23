@@ -22,16 +22,16 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.facet.util.emf.ui;bundle-version="0.2.0",
  org.eclipse.emf.facet.util.swt;bundle-version="0.4.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.emf.facet.widgets.celleditors,
- org.eclipse.emf.facet.widgets.celleditors.core.composite.registry,
- org.eclipse.emf.facet.widgets.celleditors.internal;x-friends:="org.eclipse.emf.facet.widgets.nattable",
- org.eclipse.emf.facet.widgets.celleditors.internal.composite.registries;x-internal:=true,
- org.eclipse.emf.facet.widgets.celleditors.internal.core;x-friends:="org.eclipse.emf.facet.widgets.nattable",
- org.eclipse.emf.facet.widgets.celleditors.internal.core.composite;x-internal:=true,
- org.eclipse.emf.facet.widgets.celleditors.internal.core.composite.factories;x-internal:=true,
- org.eclipse.emf.facet.widgets.celleditors.internal.ui;x-internal:=true,
- org.eclipse.emf.facet.widgets.celleditors.modelCellEditor,
- org.eclipse.emf.facet.widgets.celleditors.modelCellEditor.impl;x-internal:=true,
- org.eclipse.emf.facet.widgets.celleditors.modelCellEditor.util;x-friends:="org.eclipse.emf.facet.widgets.celleditors.edit"
-Bundle-Activator: org.eclipse.emf.facet.widgets.celleditors.internal.Activator
+Export-Package: org.eclipse.modisco.facet.widgets.celleditors,
+ org.eclipse.modisco.facet.widgets.celleditors.core.composite.registry,
+ org.eclipse.modisco.facet.widgets.celleditors.internal;x-friends:="org.eclipse.emf.facet.widgets.nattable",
+ org.eclipse.modisco.facet.widgets.celleditors.internal.composite.registries;x-internal:=true,
+ org.eclipse.modisco.facet.widgets.celleditors.internal.core;x-friends:="org.eclipse.emf.facet.widgets.nattable",
+ org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite;x-internal:=true,
+ org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite.factories;x-internal:=true,
+ org.eclipse.modisco.facet.widgets.celleditors.internal.ui;x-internal:=true,
+ org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor,
+ org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.impl;x-internal:=true,
+ org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.util;x-friends:="org.eclipse.emf.facet.widgets.celleditors.edit"
+Bundle-Activator: org.eclipse.modisco.facet.widgets.celleditors.internal.Activator
 Automatic-Module-Name: org.eclipse.emf.facet.widgets.celleditors

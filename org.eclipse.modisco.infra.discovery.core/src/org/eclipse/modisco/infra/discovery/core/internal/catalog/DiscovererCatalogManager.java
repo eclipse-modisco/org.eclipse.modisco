@@ -11,8 +11,8 @@
 package org.eclipse.modisco.infra.discovery.core.internal.catalog;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.facet.util.emf.catalog.CatalogSet;
-import org.eclipse.emf.facet.util.emf.core.ICatalogManager;
+import org.eclipse.modisco.facet.util.emf.catalog.CatalogSet;
+import org.eclipse.modisco.facet.util.emf.core.ICatalogManager;
 
 public class DiscovererCatalogManager implements ICatalogManager {
 

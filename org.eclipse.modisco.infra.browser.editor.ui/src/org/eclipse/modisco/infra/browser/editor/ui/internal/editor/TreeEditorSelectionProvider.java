@@ -13,12 +13,12 @@ package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
-import org.eclipse.emf.facet.util.core.DebugUtils;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.modisco.facet.custom.ui.CustomizedContentProviderUtils;
+import org.eclipse.modisco.facet.util.core.DebugUtils;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 
 public class TreeEditorSelectionProvider implements ISelectionProvider {

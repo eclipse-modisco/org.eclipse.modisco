@@ -13,9 +13,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.resources.IProject;
-import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.window.Window;
+import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;

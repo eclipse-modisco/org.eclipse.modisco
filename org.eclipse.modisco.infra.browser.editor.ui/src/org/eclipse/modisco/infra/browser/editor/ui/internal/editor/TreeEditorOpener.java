@@ -13,7 +13,7 @@ package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.facet.util.ui.internal.exported.handler.HandlerUtils;
+import org.eclipse.modisco.facet.util.ui.internal.exported.handler.HandlerUtils;
 import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditor;
 import org.eclipse.modisco.infra.browser.editor.ui.ITreeEditorOpener;
 import org.eclipse.modisco.infra.browser.editor.ui.exceptions.TreeEditorOpenerException;

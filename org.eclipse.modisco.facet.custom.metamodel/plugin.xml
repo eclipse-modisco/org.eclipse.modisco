@@ -20,21 +20,21 @@ Contributors:
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/emf/facet/custom/0.2.incubation/custom"
-            class="org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.CustomPackage"
+            class="org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.CustomPackage"
             genModel="model/custom-0.2.0.genmodel"/>
    </extension>
 
 	<extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/emf/facet/custom/0.2.incubation/custom_primitive_types"
-            class="org.eclipse.emf.facet.custom.metamodel.v0_2_0.custompt.CustomptPackage"
+            class="org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custompt.CustomptPackage"
             genModel="model/custom_primitive_types-0.2.0.genmodel"/>
    </extension>
 
 	<extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/emf/facet/custom/0.3.incubation/query"
-            class="org.eclipse.emf.facet.custom.metamodel.v0_3_0.query.QueryPackage"
+            class="org.eclipse.modisco.facet.custom.metamodel.v0_3_0.query.QueryPackage"
             genModel="model/query-0.3.0.genmodel"/>
    </extension>
 

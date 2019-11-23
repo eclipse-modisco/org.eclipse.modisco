@@ -16,7 +16,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="org.eclipse.emf.facet.common.ui.internal.preference.pages.EmfFacetRootPreferencePage"
+            class="org.eclipse.modisco.facet.common.ui.internal.preference.pages.EmfFacetRootPreferencePage"
             id="org.eclipse.emf.facet.common.ui.preference.pages.EmfFacetRootPreferencePage"
             name="%page.name">
       </page>

@@ -26,9 +26,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.facet.util.emf.core.serialization.model.serialization.SerializationPackage;
-
+import org.eclipse.modisco.facet.util.emf.core.serialization.model.serialization.SerializationPackage;
 import org.eclipse.modisco.infra.discovery.catalog.CatalogFactory;
 import org.eclipse.modisco.infra.discovery.catalog.CatalogPackage;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
@@ -152,7 +150,7 @@ public class CatalogPackageImpl extends EPackageImpl implements CatalogPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.eINSTANCE.eClass();
+		org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.eINSTANCE.eClass();
 		SerializationPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
@@ -475,7 +473,7 @@ public class CatalogPackageImpl extends EPackageImpl implements CatalogPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		org.eclipse.emf.facet.util.emf.catalog.CatalogPackage theCatalogPackage_1 = (org.eclipse.emf.facet.util.emf.catalog.CatalogPackage)EPackage.Registry.INSTANCE.getEPackage(org.eclipse.emf.facet.util.emf.catalog.CatalogPackage.eNS_URI);
+		org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage theCatalogPackage_1 = (org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage)EPackage.Registry.INSTANCE.getEPackage(org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage.eNS_URI);
 
 		// Create type parameters
 

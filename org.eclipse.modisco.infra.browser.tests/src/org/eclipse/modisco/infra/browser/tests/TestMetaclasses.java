@@ -21,12 +21,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.eclipse.emf.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
 import org.eclipse.gmt.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser;
 import org.eclipse.gmt.modisco.infra.browser.editors.MetaclassViewer;
 import org.eclipse.gmt.modisco.infra.browser.preferences.PreferenceConstants;
 import org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.BigListItem;
+import org.eclipse.modisco.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
 import org.eclipse.modisco.infra.browser.tests.project.WorkspaceSetup;
 import org.eclipse.modisco.infra.browser.tests.utils.TestUtils;
 import org.eclipse.swt.widgets.Menu;

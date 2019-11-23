@@ -11,9 +11,9 @@
 package org.eclipse.modisco.infra.browser.editor.ui.internal.editor;
 
 import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
-import org.eclipse.emf.facet.custom.ui.CustomizedContentProviderUtils;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.modisco.facet.custom.ui.CustomizedContentProviderUtils;
 import org.eclipse.swt.dnd.DragSourceEvent;
 import org.eclipse.swt.dnd.DragSourceListener;
 

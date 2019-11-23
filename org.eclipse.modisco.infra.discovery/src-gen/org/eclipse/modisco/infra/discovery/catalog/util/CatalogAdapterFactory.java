@@ -17,9 +17,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.facet.util.emf.catalog.Catalog;
-
+import org.eclipse.modisco.facet.util.emf.catalog.Catalog;
 import org.eclipse.modisco.infra.discovery.catalog.*;
 
 /**
@@ -157,13 +155,13 @@ public class CatalogAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.facet.util.emf.catalog.Catalog <em>Catalog</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.facet.util.emf.catalog.Catalog <em>Catalog</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.facet.util.emf.catalog.Catalog
+	 * @see org.eclipse.modisco.facet.util.emf.catalog.Catalog
 	 * @generated
 	 */
 	public Adapter createCatalogAdapter() {

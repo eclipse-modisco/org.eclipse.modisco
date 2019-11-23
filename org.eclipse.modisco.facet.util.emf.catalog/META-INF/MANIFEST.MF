@@ -9,8 +9,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.emf.facet.util.emf.catalog.plugin.Activator
-Export-Package: org.eclipse.emf.facet.util.emf.catalog,
- org.eclipse.emf.facet.util.emf.catalog.impl;x-internal:=true,
- org.eclipse.emf.facet.util.emf.catalog.util;x-internal:=true
+Bundle-Activator: org.eclipse.modisco.facet.util.emf.catalog.plugin.Activator
+Export-Package: org.eclipse.modisco.facet.util.emf.catalog,
+ org.eclipse.modisco.facet.util.emf.catalog.impl;x-internal:=true,
+ org.eclipse.modisco.facet.util.emf.catalog.util;x-internal:=true
 Automatic-Module-Name: org.eclipse.emf.facet.util.emf.catalog

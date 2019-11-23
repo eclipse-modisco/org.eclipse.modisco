@@ -17,10 +17,10 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.facet.util.tests.swtbot.internal.ContextMenuUtils;
 import org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser;
 import org.eclipse.gmt.modisco.infra.browser.editors.LeftPane;
 import org.eclipse.gmt.modisco.infra.browser.editors.TreeToolBar;
+import org.eclipse.modisco.facet.util.tests.swtbot.internal.ContextMenuUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;

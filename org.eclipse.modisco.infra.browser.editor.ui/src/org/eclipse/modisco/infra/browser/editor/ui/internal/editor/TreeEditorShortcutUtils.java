@@ -20,12 +20,12 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.Customization;
-import org.eclipse.emf.facet.custom.ui.ICustomizationManagerProvider2.ICustomShortcut;
-import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
-import org.eclipse.emf.facet.efacet.ui.IFacetManagerProvider2.IFacetSetShortcut;
-import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.Customization;
+import org.eclipse.modisco.facet.custom.ui.ICustomizationManagerProvider2.ICustomShortcut;
+import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
+import org.eclipse.modisco.facet.efacet.ui.IFacetManagerProvider2.IFacetSetShortcut;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Activator;
 import org.eclipse.modisco.infra.browser.editor.ui.internal.Messages;
 

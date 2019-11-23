@@ -10,8 +10,8 @@
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.handler;
 
-import org.eclipse.emf.facet.custom.ui.LoadCustomShortcutsMenuUtils;
 import org.eclipse.jface.action.IContributionItem;
+import org.eclipse.modisco.facet.custom.ui.LoadCustomShortcutsMenuUtils;
 import org.eclipse.ui.actions.CompoundContributionItem;
 
 public class LoadCustomShortcutsMenu extends CompoundContributionItem {

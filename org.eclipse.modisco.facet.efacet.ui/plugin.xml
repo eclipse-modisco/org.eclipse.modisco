@@ -22,7 +22,7 @@
    <extension point="org.eclipse.ui.newWizards">
       <wizard
             category="org.eclipse.emf.facet.common.ui.wizardsCategory"
-            class="org.eclipse.emf.facet.efacet.ui.internal.wizards.CreateFacetSetWizardImpl"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.wizards.CreateFacetSetWizardImpl"
             icon="icons/facet.gif"
             id="org.eclipse.emf.facet.infra.facet.editor.presentation.FacetModelWizardID"
             name="%wizard.name">
@@ -111,7 +111,7 @@
             name="%command.name.3">
       </command>
       <command
-            defaultHandler="org.eclipse.emf.facet.efacet.ui.internal.handlers.NavigationHandler"
+            defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.NavigationHandler"
             id="org.eclipse.emf.facet.efacet.ui.navigate"
             name="%navigate_handler">
       </command>
@@ -122,13 +122,13 @@
       </command>
       <command
             categoryId="org.eclipse.emf.facet.widgets.table.command.category"
-            defaultHandler="org.eclipse.emf.facet.efacet.ui.internal.handlers.SaveStructuralFeatureInstanceModelHandler"
+            defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.SaveStructuralFeatureInstanceModelHandler"
             id="org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel"
             name="%SaveStructuralFeatureInstanceModel">
       </command>
       <command
             categoryId="org.eclipse.emf.facet.widgets.table.command.category"
-            defaultHandler="org.eclipse.emf.facet.efacet.ui.internal.handlers.SetStructuralFeatureInstanceResourceHandler"
+            defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.SetStructuralFeatureInstanceResourceHandler"
             id="org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource"
             name="%SetSFInstanceResource">
       </command>
@@ -136,7 +136,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.CreateFacetInFacetSetHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.CreateFacetInFacetSetHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.createFacetInFacetSet">
          <activeWhen>
             <with
@@ -150,7 +150,7 @@
          </activeWhen>
       </handler>
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.AddFacetOperationHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetOperationHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.addFacetOperation">
          <activeWhen>
             <with
@@ -164,7 +164,7 @@
          </activeWhen>
       </handler>
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.AddFacetAttributeHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetAttributeHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.addFacetAttribute">
          <activeWhen>
             <with
@@ -178,7 +178,7 @@
          </activeWhen>
       </handler>
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.AddFacetParameterOperationHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetParameterOperationHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.addParameterToFacetOperation">
          <activeWhen>
             <with
@@ -192,7 +192,7 @@
          </activeWhen>
       </handler>
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.AddFacetReferenceHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetReferenceHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.addFacetReference">
          <activeWhen>
             <with
@@ -206,7 +206,7 @@
          </activeWhen>
       </handler>
       <handler
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.LoadFacetHandler"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.LoadFacetHandler"
             commandId="org.eclipse.emf.facet.efacet.ui.loadFacet">
          <enabledWhen>
             <with
@@ -221,7 +221,7 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.emf.facet.efacet.ui.internal.handlers.FacetPropertyTester"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.FacetPropertyTester"
             id="org.eclipse.emf.facet.efacet.ui.facetPropertyTester"
             namespace="org.eclipse.emf.facet.efacet.ui.facetPropertyTester"
             properties="isFacet,isFacetSet,isFacetOperation,isFacetAttribute,isFacetReference"
@@ -232,7 +232,7 @@
          point="org.eclipse.ui.views">
       <view
             category="org.eclipse.emf.facet.common.ui.views"
-            class="org.eclipse.emf.facet.efacet.ui.internal.view.NavigationView"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.view.NavigationView"
             id="org.eclipse.emf.facet.efacet.ui.view.navigation"
             name="%navigation_view"
             restorable="true">
@@ -242,7 +242,7 @@
    <extension point="org.eclipse.ui.views">
       <view
             category="org.eclipse.emf.facet.common.ui.views"
-            class="org.eclipse.emf.facet.efacet.ui.internal.view.FacetSetsCatalogView"
+            class="org.eclipse.modisco.facet.efacet.ui.internal.view.FacetSetsCatalogView"
             icon="icons/facet.gif"
             id="org.eclipse.emf.facet.efacet.ui.view.catalog"
             name="%view.facetSets"
@@ -277,7 +277,7 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.emf.facet.efacet.ui.internal.preferences.PreferencesInitializer">
+            class="org.eclipse.modisco.facet.efacet.ui.internal.preferences.PreferencesInitializer">
       </initializer>
    </extension>
 </plugin>

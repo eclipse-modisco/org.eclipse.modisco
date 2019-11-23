@@ -39,8 +39,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
-import org.eclipse.emf.facet.util.core.Logger;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.util.emf.core.internal.Activator;
 
 /**

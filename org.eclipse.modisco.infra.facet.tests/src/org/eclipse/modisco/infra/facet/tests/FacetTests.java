@@ -45,8 +45,6 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.facet.util.pde.core.internal.exported.TargetPlatformUtils;
-import org.eclipse.emf.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreCatalog;
 import org.eclipse.gmt.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
@@ -65,7 +63,8 @@ import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.gmt.modisco.infra.query.ModelQuery;
 import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
 import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
-import org.eclipse.modisco.common.tests.TestUIUtil;
+import org.eclipse.modisco.facet.util.pde.core.internal.exported.TargetPlatformUtils;
+import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.query.tests.Utils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -89,13 +88,7 @@ public class FacetTests {
 
 	@BeforeClass
 	public static void loadTarget() throws PdeCoreUtilsException {
-		TestUIUtil.suppressGitPrefixPopUp();
-		System.out.println("closeIntro");
-		TestUIUtil.closeIntro();
-		System.out.println("loadTargetPlatform");
 	//	TargetPlatformUtils.loadTargetPlatform();
-		System.out.println("wait 1");
-	//	TestUIUtil.wait(10000);
 	}
 	
 	/**
@@ -108,8 +101,6 @@ public class FacetTests {
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001";
-		System.out.println("start " + name);
-	//	TestUIUtil.wait(10000);
 		IProject projectToCreate = this.utils.createProject(name);
 		IFile queryFile = FileUtils.copyFileFromBundle("resources/" + name + ".querySet",
 				projectToCreate, "/" + name + ".querySet", Activator.getDefault().getBundle());
@@ -121,11 +112,7 @@ public class FacetTests {
 				projectToCreate,
 				"/src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java",
 				Activator.getDefault().getBundle());
-		System.out.println("pre-refresh");
-	//	TestUIUtil.wait(10000);
 		ProjectUtils.refresh(projectToCreate);
-		System.out.println("post-refresh wait");
-	//	TestUIUtil.wait(1000000);
 		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKER_GETSUBCLASSES);
 		FileUtils.checkNoMarkerOn(queryFile);
 		FileUtils.checkNoMarkerOn(facetFile);

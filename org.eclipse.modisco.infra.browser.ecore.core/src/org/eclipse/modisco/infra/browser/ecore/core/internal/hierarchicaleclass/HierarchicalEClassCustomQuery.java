@@ -18,14 +18,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.facet.efacet.core.FacetUtils;
-import org.eclipse.emf.facet.efacet.core.IFacetManager;
-import org.eclipse.emf.facet.efacet.core.exception.DerivedTypedElementException;
-import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElement;
-import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.Facet;
-import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
-import org.eclipse.emf.facet.query.java.core.IJavaQuery3;
-import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
+import org.eclipse.modisco.facet.efacet.core.FacetUtils;
+import org.eclipse.modisco.facet.efacet.core.IFacetManager;
+import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
+import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElement;
+import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.Facet;
+import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
+import org.eclipse.modisco.facet.query.java.core.IJavaQuery3;
+import org.eclipse.modisco.facet.query.java.core.IParameterValueList2;
 
 public class HierarchicalEClassCustomQuery implements
 		IJavaQuery3<EClass, List<EStructuralFeature>> {

@@ -23,7 +23,7 @@ Contributors:
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/EMF_Facet/ModelCellEditor/0.1.0/modelCellEditor"
-            class="org.eclipse.emf.facet.widgets.celleditors.modelCellEditor.ModelCellEditorPackage"
+            class="org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.ModelCellEditorPackage"
             genModel="model/celleditors.genmodel"/>
    </extension>
 

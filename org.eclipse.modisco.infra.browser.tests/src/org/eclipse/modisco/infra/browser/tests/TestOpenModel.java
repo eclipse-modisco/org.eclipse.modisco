@@ -16,9 +16,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.eclipse.emf.facet.util.tests.swtbot.internal.ContextMenuUtils;
-import org.eclipse.emf.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
 import org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser;
+import org.eclipse.modisco.facet.util.tests.swtbot.internal.ContextMenuUtils;
+import org.eclipse.modisco.facet.util.tests.swtbot.internal.exported.SWTBotUtils;
 import org.eclipse.modisco.infra.browser.tests.project.WorkspaceSetup;
 import org.eclipse.modisco.infra.browser.tests.utils.TestUtils;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;

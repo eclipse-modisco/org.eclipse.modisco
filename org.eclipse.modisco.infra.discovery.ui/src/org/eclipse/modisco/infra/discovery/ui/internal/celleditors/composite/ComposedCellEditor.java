@@ -15,11 +15,11 @@ package org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
-import org.eclipse.emf.facet.widgets.celleditors.IListener;
-import org.eclipse.emf.facet.widgets.celleditors.IWidget2;
 import org.eclipse.jface.viewers.CellEditor;
+import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.IListener;
+import org.eclipse.modisco.facet.widgets.celleditors.IWidget2;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;

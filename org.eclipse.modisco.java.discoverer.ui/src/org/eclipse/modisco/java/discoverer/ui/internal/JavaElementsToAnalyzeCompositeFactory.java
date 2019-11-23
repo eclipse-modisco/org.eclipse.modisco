@@ -10,8 +10,8 @@
  *******************************************************************************/
 package org.eclipse.modisco.java.discoverer.ui.internal;
 
-import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.modisco.java.discoverer.ElementsToAnalyze;
 import org.eclipse.swt.widgets.Composite;
 

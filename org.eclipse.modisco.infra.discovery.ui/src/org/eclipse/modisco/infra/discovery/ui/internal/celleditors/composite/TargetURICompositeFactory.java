@@ -11,8 +11,8 @@
 package org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.swt.widgets.Composite;
 
 public class TargetURICompositeFactory implements ICompositeEditorFactory<URI> {

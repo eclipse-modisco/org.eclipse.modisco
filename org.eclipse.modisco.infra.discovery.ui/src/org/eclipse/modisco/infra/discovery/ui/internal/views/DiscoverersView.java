@@ -13,7 +13,6 @@ package org.eclipse.modisco.infra.discovery.ui.internal.views;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.emf.facet.common.ui.internal.controls.PersistableColumn;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -25,6 +24,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.modisco.facet.common.ui.internal.controls.PersistableColumn;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;

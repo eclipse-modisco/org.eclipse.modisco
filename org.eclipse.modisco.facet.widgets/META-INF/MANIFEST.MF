@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.emf.facet.widgets
 Bundle-Version: 1.3.0.qualifier
-Bundle-Activator: org.eclipse.emf.facet.widgets.internal.Activator
+Bundle-Activator: org.eclipse.modisco.facet.widgets.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -15,5 +15,5 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.facet.custom.core;bundle-version="0.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.emf.facet.widgets.internal;x-friends:="org.eclipse.emf.facet.widgets.celleditors,org.eclipse.emf.facet.widgets.nattable"
+Export-Package: org.eclipse.modisco.facet.widgets.internal;x-friends:="org.eclipse.emf.facet.widgets.celleditors,org.eclipse.emf.facet.widgets.nattable"
 Automatic-Module-Name: org.eclipse.emf.facet.widgets

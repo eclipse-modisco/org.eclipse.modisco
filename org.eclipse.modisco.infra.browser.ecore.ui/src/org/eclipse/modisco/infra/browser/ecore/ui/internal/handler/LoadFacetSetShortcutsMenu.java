@@ -10,8 +10,8 @@
  */
 package org.eclipse.modisco.infra.browser.ecore.ui.internal.handler;
 
-import org.eclipse.emf.facet.efacet.ui.LoadFacetSetShortcutsMenuUtils;
 import org.eclipse.jface.action.IContributionItem;
+import org.eclipse.modisco.facet.efacet.ui.LoadFacetSetShortcutsMenuUtils;
 import org.eclipse.ui.actions.CompoundContributionItem;
 
 public class LoadFacetSetShortcutsMenu extends CompoundContributionItem {

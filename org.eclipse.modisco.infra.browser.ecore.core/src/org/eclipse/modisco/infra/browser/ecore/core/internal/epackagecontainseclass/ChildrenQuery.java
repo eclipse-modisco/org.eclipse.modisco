@@ -16,10 +16,10 @@ import java.util.List;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.emf.facet.efacet.core.IFacetManager;
-import org.eclipse.emf.facet.efacet.core.exception.DerivedTypedElementException;
-import org.eclipse.emf.facet.query.java.core.IJavaQuery2;
-import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
+import org.eclipse.modisco.facet.efacet.core.IFacetManager;
+import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
+import org.eclipse.modisco.facet.query.java.core.IJavaQuery2;
+import org.eclipse.modisco.facet.query.java.core.IParameterValueList2;
 
 public class ChildrenQuery implements IJavaQuery2<EPackage, List<EStructuralFeature>> {
 	public List<EStructuralFeature> evaluate(final EPackage context,

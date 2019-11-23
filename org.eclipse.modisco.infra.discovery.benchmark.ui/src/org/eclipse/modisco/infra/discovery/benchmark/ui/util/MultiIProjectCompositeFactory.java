@@ -9,8 +9,8 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.ui.util;
 
-import org.eclipse.emf.facet.widgets.celleditors.AbstractCellEditorComposite;
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
 import org.eclipse.swt.widgets.Composite;
 

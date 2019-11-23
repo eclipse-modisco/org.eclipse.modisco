@@ -9,7 +9,7 @@
  ******************************************************************************/
 package org.eclipse.modisco.infra.discovery.benchmark.ui.util;
 
-import org.eclipse.emf.facet.widgets.celleditors.ICompositeEditorFactory;
+import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.swt.widgets.Composite;
 

@@ -4,13 +4,13 @@ Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.emf.facet.util.emf.catalog.metamodel;singleton:=true
 Bundle-Version: 1.3.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.emf.facet.util.emf.catalog.metamodel.internal.Activator
+Bundle-Activator: org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.emf.facet.util.emf.catalog.metamodel.internal.v1_1.catalog;x-friends:="org.eclipse.emf.facet.util.emf.core",
- org.eclipse.emf.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.impl;x-internal:=true,
- org.eclipse.emf.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.util;x-internal:=true
+Export-Package: org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.v1_1.catalog;x-friends:="org.eclipse.emf.facet.util.emf.core",
+ org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.impl;x-internal:=true,
+ org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.v1_1.catalog.util;x-internal:=true
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.eclipse.emf.facet.util.emf.catalog.metamodel

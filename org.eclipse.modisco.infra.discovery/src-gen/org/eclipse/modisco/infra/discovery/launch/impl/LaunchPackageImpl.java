@@ -17,11 +17,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.facet.util.emf.catalog.CatalogPackage;
-
-import org.eclipse.emf.facet.util.emf.core.serialization.model.serialization.SerializationPackage;
-
+import org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage;
+import org.eclipse.modisco.facet.util.emf.core.serialization.model.serialization.SerializationPackage;
 import org.eclipse.modisco.infra.discovery.catalog.impl.CatalogPackageImpl;
 
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
