@@ -20,7 +20,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmt.modisco.infra.common.ui,
  org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="0.8.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
- org.eclipse.emf.facet.common.ui;bundle-version="0.1.0"
+ org.eclipse.modisco.facet.common.ui;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.gmt.modisco.infra.browser.custom.ui;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor",

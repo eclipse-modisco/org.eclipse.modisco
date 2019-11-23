@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.emf.facet.widgets.celleditors;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.facet.widgets.celleditors;singleton:=true
 Bundle-Version: 1.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,28 +10,28 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.swt;bundle-version="3.6.0",
- org.eclipse.emf.facet.widgets;bundle-version="0.1.0",
+ org.eclipse.modisco.facet.widgets;bundle-version="0.1.0",
  org.eclipse.jface;bundle-version="3.6.0",
  org.eclipse.ui.workbench;bundle-version="3.6.0",
  org.eclipse.emf.edit;bundle-version="2.6.0",
  org.eclipse.ui.ide;bundle-version="3.6.0",
- org.eclipse.emf.facet.util.core;bundle-version="0.1.0",
+ org.eclipse.modisco.facet.util.core;bundle-version="0.1.0",
  org.eclipse.core.resources;bundle-version="3.6.0",
- org.eclipse.emf.facet.efacet.metamodel;bundle-version="0.2.0",
- org.eclipse.emf.facet.util.emf.core;bundle-version="0.2.0",
- org.eclipse.emf.facet.util.emf.ui;bundle-version="0.2.0",
- org.eclipse.emf.facet.util.swt;bundle-version="0.4.0"
+ org.eclipse.modisco.facet.efacet.metamodel;bundle-version="0.2.0",
+ org.eclipse.modisco.facet.util.emf.core;bundle-version="0.2.0",
+ org.eclipse.modisco.facet.util.emf.ui;bundle-version="0.2.0",
+ org.eclipse.modisco.facet.util.swt;bundle-version="0.4.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.widgets.celleditors,
  org.eclipse.modisco.facet.widgets.celleditors.core.composite.registry,
- org.eclipse.modisco.facet.widgets.celleditors.internal;x-friends:="org.eclipse.emf.facet.widgets.nattable",
+ org.eclipse.modisco.facet.widgets.celleditors.internal;x-friends:="org.eclipse.modisco.facet.widgets.nattable",
  org.eclipse.modisco.facet.widgets.celleditors.internal.composite.registries;x-internal:=true,
- org.eclipse.modisco.facet.widgets.celleditors.internal.core;x-friends:="org.eclipse.emf.facet.widgets.nattable",
+ org.eclipse.modisco.facet.widgets.celleditors.internal.core;x-friends:="org.eclipse.modisco.facet.widgets.nattable",
  org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite;x-internal:=true,
  org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite.factories;x-internal:=true,
  org.eclipse.modisco.facet.widgets.celleditors.internal.ui;x-internal:=true,
  org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor,
  org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.impl;x-internal:=true,
- org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.util;x-friends:="org.eclipse.emf.facet.widgets.celleditors.edit"
+ org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.util;x-friends:="org.eclipse.modisco.facet.widgets.celleditors.edit"
 Bundle-Activator: org.eclipse.modisco.facet.widgets.celleditors.internal.Activator
-Automatic-Module-Name: org.eclipse.emf.facet.widgets.celleditors
+Automatic-Module-Name: org.eclipse.modisco.facet.widgets.celleditors

@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.emf.facet.custom.core;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.facet.custom.core;singleton:=true
 Bundle-Version: 1.3.0.qualifier
 Bundle-Activator: org.eclipse.modisco.facet.custom.core.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
- org.eclipse.emf.facet.custom.metamodel;bundle-version="0.2.0";visibility:=reexport,
- org.eclipse.emf.facet.util.emf.core;bundle-version="0.2.0",
- org.eclipse.emf.facet.efacet.core;bundle-version="0.2.0";visibility:=reexport,
- org.eclipse.emf.facet.util.core;bundle-version="0.2.0",
+ org.eclipse.modisco.facet.custom.metamodel;bundle-version="0.2.0";visibility:=reexport,
+ org.eclipse.modisco.facet.util.emf.core;bundle-version="0.2.0",
+ org.eclipse.modisco.facet.efacet.core;bundle-version="0.2.0";visibility:=reexport,
+ org.eclipse.modisco.facet.util.core;bundle-version="0.2.0",
  org.eclipse.emf.edit;bundle-version="2.6.0",
  org.eclipse.emf.validation;bundle-version="1.4.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
@@ -19,8 +19,5 @@ Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.custom.core,
  org.eclipse.modisco.facet.custom.core.exception,
  org.eclipse.modisco.facet.custom.core.internal.exported;
-  x-friends:="org.eclipse.emf.facet.custom.ui,
-   org.eclipse.emf.facet.custom.sdk.core,
-   org.eclipse.emf.facet.custom.tests,
-   org.eclipse.emf.facet.aggregate.tests"
-Automatic-Module-Name: org.eclipse.emf.facet.custom.core
+  x-friends:=org.eclipse.modisco.facet.custom.sdk.core
+Automatic-Module-Name: org.eclipse.modisco.facet.custom.core

@@ -1,23 +1,23 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.emf.facet.util.swt;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.facet.util.swt;singleton:=true
 Bundle-Version: 1.3.0.qualifier
 Bundle-Activator: org.eclipse.modisco.facet.util.swt.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.swt;bundle-version="3.6.0",
  org.eclipse.ui;bundle-version="3.6.0",
- org.eclipse.emf.facet.util.core;bundle-version="0.3.0"
+ org.eclipse.modisco.facet.util.core;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.util.swt.colorprovider,
  org.eclipse.modisco.facet.util.swt.fontprovider,
  org.eclipse.modisco.facet.util.swt.imageprovider,
  org.eclipse.modisco.facet.util.swt.internal.exported;
-  x-friends:="org.eclipse.emf.facet.aggregate.tests,
-   org.eclipse.emf.facet.efacet.tests,
-   org.eclipse.emf.facet.custom.tests,
-   org.eclipse.emf.facet.widgets.table.tests,
-   org.eclipse.emf.facet.util.emf.ui.tests"
-Automatic-Module-Name: org.eclipse.emf.facet.util.swt
+  x-friends:="org.eclipse.modisco.facet.aggregate.tests,
+   org.eclipse.modisco.facet.efacet.tests,
+   org.eclipse.modisco.facet.custom.tests,
+   org.eclipse.modisco.facet.widgets.table.tests,
+   org.eclipse.modisco.facet.util.emf.ui.tests"
+Automatic-Module-Name: org.eclipse.modisco.facet.util.swt

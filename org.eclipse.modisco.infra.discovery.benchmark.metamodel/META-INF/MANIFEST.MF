@@ -13,9 +13,9 @@ Export-Package: org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal
  org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.facet.util.emf.catalog;visibility:=reexport,
+ org.eclipse.modisco.facet.util.emf.catalog;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.0",
  org.eclipse.modisco.infra.discovery;visibility:=reexport,
- org.eclipse.emf.facet.util.emf.core;visibility:=reexport
+ org.eclipse.modisco.facet.util.emf.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.eclipse.modisco.infra.discovery.benchmark.metamodel

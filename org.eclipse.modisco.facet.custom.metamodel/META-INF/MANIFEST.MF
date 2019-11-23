@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.emf.facet.custom.metamodel;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.facet.custom.metamodel;singleton:=true
 Bundle-Version: 1.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -9,14 +9,14 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: 
  org.eclipse.modisco.facet.custom.metamodel.custompt,
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom,
- org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.impl;x-friends:="org.eclipse.emf.facet.aggregate.metamodel,org.eclipse.emf.facet.aggregate.metamodel.notgenerated",
- org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.util;x-friends:="org.eclipse.emf.facet.custom.metamodel.edit",
- org.eclipse.modisco.facet.custom.metamodel.v0_2_0.customizationcatalog;x-friends:="org.eclipse.emf.facet.custom.core",
+ org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.impl;x-friends:="org.eclipse.modisco.facet.aggregate.metamodel,org.eclipse.modisco.facet.aggregate.metamodel.notgenerated",
+ org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.util;x-friends:="org.eclipse.modisco.facet.custom.metamodel.edit",
+ org.eclipse.modisco.facet.custom.metamodel.v0_2_0.customizationcatalog;x-friends:="org.eclipse.modisco.facet.custom.core",
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.customizationcatalog.impl;x-internal:=true,
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.customizationcatalog.util;x-internal:=true,
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custompt;x-internal:=true,
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custompt.impl;x-internal:=true,
- org.eclipse.modisco.facet.custom.metamodel.v0_2_0.internal.treeproxy;x-friends:="org.eclipse.emf.facet.custom.ui,org.eclipse.emf.facet.custom.tests",
+ org.eclipse.modisco.facet.custom.metamodel.v0_2_0.internal.treeproxy;x-friends:="org.eclipse.modisco.facet.custom.tests,org.eclipse.modisco.facet.custom.ui",
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.internal.treeproxy.impl;x-internal:=true,
  org.eclipse.modisco.facet.custom.metamodel.v0_2_0.internal.treeproxy.util;x-internal:=true,
  org.eclipse.modisco.facet.custom.metamodel.v0_3_0.query,
@@ -24,7 +24,7 @@ Export-Package:
  org.eclipse.modisco.facet.custom.metamodel.v0_3_0.query.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
- org.eclipse.emf.facet.efacet.metamodel;visibility:=reexport,
- org.eclipse.emf.facet.util.emf.catalog;bundle-version="0.2.0"
+ org.eclipse.modisco.facet.efacet.metamodel;visibility:=reexport,
+ org.eclipse.modisco.facet.util.emf.catalog;bundle-version="0.2.0"
 Bundle-ActivationPolicy: lazy
-Automatic-Module-Name: org.eclipse.emf.facet.custom.metamodel
+Automatic-Module-Name: org.eclipse.modisco.facet.custom.metamodel
