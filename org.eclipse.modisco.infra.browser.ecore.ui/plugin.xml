@@ -28,13 +28,13 @@ Contributors:
          allPopups="false"
          locationURI="toolbar:org.eclipse.modisco.infra.browser.ecore.ui.view1">
             <command
-               commandId="org.eclipse.emf.facet.ui.loadCustomization"
+               commandId="org.eclipse.modisco.facet.ui.loadCustomization"
                id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadCustomization"
                label="Load/Unload customizations"
                style="pulldown">
             </command>
             <command
-               commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+               commandId="org.eclipse.modisco.facet.efacet.ui.loadFacet"
                id="org.eclipse.modisco.infra.browser.ecore.ui.menu.loadFacet"
                label="Load/Unload facets"
                style="pulldown">
@@ -58,7 +58,7 @@ Contributors:
       </menuContribution>
    </extension>
    <extension
-         point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
+         point="org.eclipse.modisco.facet.util.emf.core.modeldeclaration">
       <modeldeclaration
             file="custom/nbInstancesEClassByResourceSet.custom">
       </modeldeclaration>

@@ -15,7 +15,7 @@ Contributors:
    Thomas Cicognani (Mia-Software) - Bug 470962 - Add shortcuts to activate customs
 -->
 <plugin>
-   <extension point="org.eclipse.emf.facet.util.emf.core.modeldeclaration">
+   <extension point="org.eclipse.modisco.facet.util.emf.core.modeldeclaration">
       <modeldeclaration file="custom/ePackageContainsEClass.custom"/>
       <modeldeclaration file="custom/hierarchicalEClass.custom"/>
       <modeldeclaration  file="facet/hierarchicalEClass.efacet" />

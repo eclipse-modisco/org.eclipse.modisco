@@ -17,24 +17,24 @@
     Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
     Gregoire Dupe (Mia-Software) - Bug 375087 - [Table] ITableWidget.addColumn(List<ETypedElement>, List<FacetSet>)
     Nicolas Bros (Mia-Software) - Bug 376941 - [EFacet] Facet operation arguments in Facet model
-    Gregoire Dupe (Mia-Software) - Bug 466738 - ClassNotFoundException: org.eclipse.emf.facet.efacet.core.internal.catalog.EFacetCatalogManager
+    Gregoire Dupe (Mia-Software) - Bug 466738 - ClassNotFoundException: org.eclipse.modisco.facet.efacet.core.internal.catalog.EFacetCatalogManager
     Grégoire Dupé (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model
  -->
 
 <plugin>
-   <extension-point id="org.eclipse.emf.facet.efacet.core.query.evaluatorregistration" name="%queryEvaluatorRegistration.extension-point.name" schema="schema/org.eclipse.emf.facet.efacet.core.query.evaluatorregistration.exsd"/>
+   <extension-point id="org.eclipse.modisco.facet.efacet.core.query.evaluatorregistration" name="%queryEvaluatorRegistration.extension-point.name" schema="schema/org.eclipse.modisco.facet.efacet.core.query.evaluatorregistration.exsd"/>
    <extension-point id="queryImplementationRegistration" name="EMF Facet Query implementation registration" schema="schema/queryImplementationRegistration.exsd"/>
-   <extension-point id="org.eclipse.emf.facet.efacet.core.internal.resolver" name="Resolver" schema="schema/internal.resolver.exsd"/>
-   <extension point="org.eclipse.emf.facet.efacet.core.queryImplementationRegistration">
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.NavigationQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.IsOneOfQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.StringLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.FalseLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.TrueLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.NullLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.EObjectLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.FloatLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.IntegerLiteralQueryImplementationFactory"/>
-      <queryImplementationRegistration class="org.eclipse.emf.facet.efacet.core.internal.query.OperationCallQueryImplementationFactory"/>
+   <extension-point id="org.eclipse.modisco.facet.efacet.core.internal.resolver" name="Resolver" schema="schema/internal.resolver.exsd"/>
+   <extension point="org.eclipse.modisco.facet.efacet.core.queryImplementationRegistration">
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.NavigationQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.IsOneOfQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.StringLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.FalseLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.TrueLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.NullLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.EObjectLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.FloatLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.IntegerLiteralQueryImplementationFactory"/>
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.efacet.core.internal.query.OperationCallQueryImplementationFactory"/>
    </extension>
 </plugin>

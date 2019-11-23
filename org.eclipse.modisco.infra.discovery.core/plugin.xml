@@ -37,7 +37,7 @@
       </super>
    </extension>
    <extension
-         point="org.eclipse.emf.facet.util.emf.core.catalogmanager">
+         point="org.eclipse.modisco.facet.util.emf.core.catalogmanager">
       <catalog
             class="org.eclipse.modisco.infra.discovery.core.internal.catalog.DiscovererCatalogManager">
       </catalog>

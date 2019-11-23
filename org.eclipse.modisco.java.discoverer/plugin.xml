@@ -48,7 +48,7 @@
       </discoverer>
    </extension>
    
-   <extension point="org.eclipse.emf.facet.util.emf.core.serialization">
+   <extension point="org.eclipse.modisco.facet.util.emf.core.serialization">
       <serializer class="org.eclipse.modisco.java.discoverer.internal.serialization.ElementsToAnalyzeSerializer"/>
       <serializer class="org.eclipse.modisco.java.discoverer.internal.serialization.JavaProjectSerializer"/>
    </extension>

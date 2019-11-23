@@ -32,7 +32,7 @@
       </editor>
    </extension>
    <extension
-         point="org.eclipse.emf.facet.util.emf.core.modelViewer">
+         point="org.eclipse.modisco.facet.util.emf.core.modelViewer">
       <resourceViewer
             class="org.eclipse.modisco.infra.browser.editor.ui.internal.opener.ResourceBrowserOpener">
       </resourceViewer>
@@ -52,7 +52,7 @@
                id="org.eclipse.modisco.infra.browser.editor.ui.toolbar1"
                label="%modiscoBrowserToolbarLabel">
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.loadFacet"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.loadFacet"
                   id="org.eclipse.modisco.util.emffacet.menu.ui.loadFacet"
                   label="%LoadUnloadFacets"
                   style="pulldown">
@@ -81,7 +81,7 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="org.eclipse.emf.facet.ui.loadCustomization"
+                  commandId="org.eclipse.modisco.facet.ui.loadCustomization"
                   id="org.eclipse.modisco.util.emffacet.ui.menu.loadCustomization"
                   label="%LoadUnloadCustoms"
                   style="pulldown">

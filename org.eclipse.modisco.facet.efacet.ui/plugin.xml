@@ -13,7 +13,7 @@
         Grégoire Dupé (Mia-Software) - Bug 377782 - The command 'Navigation' and 'View in table' must not be unable in all menu.
         Grégoire Dupé (Mia-Software) - Bug 441051 - Reusable customization and facet loading dialogs
         Jonathan Pepin (Soft-Maint) - Bug 463907 - Command for load and save Facet serialization
-        Grégoire Dupé (Mia-Software) - Bug 480772 - NPE at org.eclipse.emf.facet.efacet.ui.internal.handlers.LoadFacetHandler.execute(LoadFacetHandler.java:44)
+        Grégoire Dupé (Mia-Software) - Bug 480772 - NPE at org.eclipse.modisco.facet.efacet.ui.internal.handlers.LoadFacetHandler.execute(LoadFacetHandler.java:44)
  -->
 
 <plugin>
@@ -21,10 +21,10 @@
    <extension-point id="eTypedElementResultDisplay" name="%ETypedElementResult_Display" schema="schema/eTypedElementResultDisplay.exsd"/>
    <extension point="org.eclipse.ui.newWizards">
       <wizard
-            category="org.eclipse.emf.facet.common.ui.wizardsCategory"
+            category="org.eclipse.modisco.facet.common.ui.wizardsCategory"
             class="org.eclipse.modisco.facet.efacet.ui.internal.wizards.CreateFacetSetWizardImpl"
             icon="icons/facet.gif"
-            id="org.eclipse.emf.facet.infra.facet.editor.presentation.FacetModelWizardID"
+            id="org.eclipse.modisco.facet.infra.facet.editor.presentation.FacetModelWizardID"
             name="%wizard.name">
          <description>
             %wizard.description
@@ -38,11 +38,11 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.emf.facet.efacet.presentation.EFacetEditorID?before=edit">
+            locationURI="popup:org.eclipse.modisco.facet.efacet.presentation.EFacetEditorID?before=edit">
          <menu
                label="%menu.label">
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.createFacetInFacetSet"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.createFacetInFacetSet"
                   icon="icons/facet.gif"
                   style="push">
                <visibleWhen
@@ -50,7 +50,7 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.addParameterToFacetOperation"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.addParameterToFacetOperation"
                   icon="icons/facet.gif"
                   style="push">
                <visibleWhen
@@ -58,7 +58,7 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.addFacetReference"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.addFacetReference"
                   icon="icons/facet.gif"
                   style="push">
                <visibleWhen
@@ -66,7 +66,7 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.addFacetOperation"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.addFacetOperation"
                   icon="icons/facet.gif"
                   style="push">
                <visibleWhen
@@ -74,7 +74,7 @@
                </visibleWhen>
             </command>
             <command
-                  commandId="org.eclipse.emf.facet.efacet.ui.addFacetAttribute"
+                  commandId="org.eclipse.modisco.facet.efacet.ui.addFacetAttribute"
                   icon="icons/facet.gif"
                   style="push">
                <visibleWhen
@@ -87,49 +87,49 @@
    <extension
          point="org.eclipse.ui.commands">
       <category
-            id="org.eclipse.emf.facet.widgets.table.command.category"
+            id="org.eclipse.modisco.facet.widgets.table.command.category"
             name="%category.name">
       </category>
       <command
-            id="org.eclipse.emf.facet.efacet.ui.createFacetInFacetSet"
+            id="org.eclipse.modisco.facet.efacet.ui.createFacetInFacetSet"
             name="%command.name">
       </command>
       <command
-            id="org.eclipse.emf.facet.efacet.ui.addFacetAttribute"
+            id="org.eclipse.modisco.facet.efacet.ui.addFacetAttribute"
             name="%command.name.0">
       </command>
       <command
-            id="org.eclipse.emf.facet.efacet.ui.addFacetOperation"
+            id="org.eclipse.modisco.facet.efacet.ui.addFacetOperation"
             name="%command.name.1">
       </command>
       <command
-            id="org.eclipse.emf.facet.efacet.ui.addParameterToFacetOperation"
+            id="org.eclipse.modisco.facet.efacet.ui.addParameterToFacetOperation"
             name="%command.name.2">
       </command>
       <command
-            id="org.eclipse.emf.facet.efacet.ui.addFacetReference"
+            id="org.eclipse.modisco.facet.efacet.ui.addFacetReference"
             name="%command.name.3">
       </command>
       <command
             defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.NavigationHandler"
-            id="org.eclipse.emf.facet.efacet.ui.navigate"
+            id="org.eclipse.modisco.facet.efacet.ui.navigate"
             name="%navigate_handler">
       </command>
       <command
-            categoryId="org.eclipse.emf.facet.widgets.table.command.category"
-            id="org.eclipse.emf.facet.efacet.ui.loadFacet"
+            categoryId="org.eclipse.modisco.facet.widgets.table.command.category"
+            id="org.eclipse.modisco.facet.efacet.ui.loadFacet"
             name="%loadFacets">
       </command>
       <command
-            categoryId="org.eclipse.emf.facet.widgets.table.command.category"
+            categoryId="org.eclipse.modisco.facet.widgets.table.command.category"
             defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.SaveStructuralFeatureInstanceModelHandler"
-            id="org.eclipse.emf.facet.efacet.ui.saveStructuralFeatureInstanceModel"
+            id="org.eclipse.modisco.facet.efacet.ui.saveStructuralFeatureInstanceModel"
             name="%SaveStructuralFeatureInstanceModel">
       </command>
       <command
-            categoryId="org.eclipse.emf.facet.widgets.table.command.category"
+            categoryId="org.eclipse.modisco.facet.widgets.table.command.category"
             defaultHandler="org.eclipse.modisco.facet.efacet.ui.internal.handlers.SetStructuralFeatureInstanceResourceHandler"
-            id="org.eclipse.emf.facet.efacet.ui.setStructuralFeatureInstanceResource"
+            id="org.eclipse.modisco.facet.efacet.ui.setStructuralFeatureInstanceResource"
             name="%SetSFInstanceResource">
       </command>
    </extension>
@@ -137,13 +137,13 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.CreateFacetInFacetSetHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.createFacetInFacetSet">
+            commandId="org.eclipse.modisco.facet.efacet.ui.createFacetInFacetSet">
          <activeWhen>
             <with
                   variable="selection">
                <test
                      forcePluginActivation="true"
-                     property="org.eclipse.emf.facet.efacet.ui.facetPropertyTester.isFacetSet"
+                     property="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester.isFacetSet"
                      value="true">
                </test>
             </with>
@@ -151,13 +151,13 @@
       </handler>
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetOperationHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.addFacetOperation">
+            commandId="org.eclipse.modisco.facet.efacet.ui.addFacetOperation">
          <activeWhen>
             <with
                   variable="selection">
                <test
                      forcePluginActivation="true"
-                     property="org.eclipse.emf.facet.efacet.ui.facetPropertyTester.isFacet"
+                     property="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester.isFacet"
                      value="true">
                </test>
             </with>
@@ -165,13 +165,13 @@
       </handler>
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetAttributeHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.addFacetAttribute">
+            commandId="org.eclipse.modisco.facet.efacet.ui.addFacetAttribute">
          <activeWhen>
             <with
                   variable="selection">
                <test
                      forcePluginActivation="true"
-                     property="org.eclipse.emf.facet.efacet.ui.facetPropertyTester.isFacet"
+                     property="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester.isFacet"
                      value="true">
                </test>
             </with>
@@ -179,13 +179,13 @@
       </handler>
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetParameterOperationHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.addParameterToFacetOperation">
+            commandId="org.eclipse.modisco.facet.efacet.ui.addParameterToFacetOperation">
          <activeWhen>
             <with
                   variable="selection">
                <test
                      forcePluginActivation="true"
-                     property="org.eclipse.emf.facet.efacet.ui.facetPropertyTester.isFacetOperation"
+                     property="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester.isFacetOperation"
                      value="true">
                </test>
             </with>
@@ -193,13 +193,13 @@
       </handler>
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.AddFacetReferenceHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.addFacetReference">
+            commandId="org.eclipse.modisco.facet.efacet.ui.addFacetReference">
          <activeWhen>
             <with
                   variable="selection">
                <test
                      forcePluginActivation="true"
-                     property="org.eclipse.emf.facet.efacet.ui.facetPropertyTester.isFacet"
+                     property="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester.isFacet"
                      value="true">
                </test>
             </with>
@@ -207,12 +207,12 @@
       </handler>
       <handler
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.LoadFacetHandler"
-            commandId="org.eclipse.emf.facet.efacet.ui.loadFacet">
+            commandId="org.eclipse.modisco.facet.efacet.ui.loadFacet">
          <enabledWhen>
             <with
                   variable="activePart">
                <adapt
-                     type="org.eclipse.emf.facet.efacet.core.IFacetManagerProvider">
+                     type="org.eclipse.modisco.facet.efacet.core.IFacetManagerProvider">
                </adapt>
             </with>
          </enabledWhen>
@@ -222,8 +222,8 @@
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
             class="org.eclipse.modisco.facet.efacet.ui.internal.handlers.FacetPropertyTester"
-            id="org.eclipse.emf.facet.efacet.ui.facetPropertyTester"
-            namespace="org.eclipse.emf.facet.efacet.ui.facetPropertyTester"
+            id="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester"
+            namespace="org.eclipse.modisco.facet.efacet.ui.facetPropertyTester"
             properties="isFacet,isFacetSet,isFacetOperation,isFacetAttribute,isFacetReference"
             type="org.eclipse.jface.viewers.StructuredSelection">
       </propertyTester>
@@ -231,9 +231,9 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.emf.facet.common.ui.views"
+            category="org.eclipse.modisco.facet.common.ui.views"
             class="org.eclipse.modisco.facet.efacet.ui.internal.view.NavigationView"
-            id="org.eclipse.emf.facet.efacet.ui.view.navigation"
+            id="org.eclipse.modisco.facet.efacet.ui.view.navigation"
             name="%navigation_view"
             restorable="true">
       </view>
@@ -241,10 +241,10 @@
 
    <extension point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.emf.facet.common.ui.views"
+            category="org.eclipse.modisco.facet.common.ui.views"
             class="org.eclipse.modisco.facet.efacet.ui.internal.view.FacetSetsCatalogView"
             icon="icons/facet.gif"
-            id="org.eclipse.emf.facet.efacet.ui.view.catalog"
+            id="org.eclipse.modisco.facet.efacet.ui.view.catalog"
             name="%view.facetSets"
             restorable="true">
       </view>
@@ -256,7 +256,7 @@
             allPopups="true"
             locationURI="popup:org.eclipse.ui.popup.any?after=additions">
          <command
-               commandId="org.eclipse.emf.facet.efacet.ui.navigate"
+               commandId="org.eclipse.modisco.facet.efacet.ui.navigate"
                label="%navigate_command"
                style="push">
             <visibleWhen

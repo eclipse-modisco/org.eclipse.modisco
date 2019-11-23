@@ -59,7 +59,7 @@
             id="org.eclipse.modisco.infra.discovery.launchConfigurationTypeImage">
       </launchConfigurationTypeImage>
    </extension>
-   <extension point="org.eclipse.emf.facet.widgets.celleditors.compositeEditorFactories">
+   <extension point="org.eclipse.modisco.facet.widgets.celleditors.compositeEditorFactories">
       <compositeEditorFactory class="org.eclipse.modisco.infra.discovery.ui.internal.celleditors.composite.TargetURICompositeFactory"/>
    </extension>
 

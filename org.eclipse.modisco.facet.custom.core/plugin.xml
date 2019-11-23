@@ -15,7 +15,7 @@ Contributors:
      Gregoire Dupe (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model
 -->
 <plugin>
-   <extension point="org.eclipse.emf.facet.efacet.core.queryImplementationRegistration">
-      <queryImplementationRegistration class="org.eclipse.emf.facet.custom.core.internal.query.SwitchQueryImplementationFactory"/>
+   <extension point="org.eclipse.modisco.facet.efacet.core.queryImplementationRegistration">
+      <queryImplementationRegistration class="org.eclipse.modisco.facet.custom.core.internal.query.SwitchQueryImplementationFactory"/>
    </extension>
 </plugin>

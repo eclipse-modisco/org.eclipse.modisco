@@ -141,7 +141,7 @@
 	</extension>
 
   <extension
-        point="org.eclipse.emf.facet.util.emf.core.modelViewer">
+        point="org.eclipse.modisco.facet.util.emf.core.modelViewer">
      <resourceViewer
            class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
      </resourceViewer>
