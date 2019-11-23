@@ -37,7 +37,7 @@ public class NameAndProviderTest {
 				.getBundles();
 		for (int i = 0; i < bundles.length; i++) {
 			String symbolicName = bundles[i].getSymbolicName();
-			if (symbolicName.matches("org\\.eclipse(\\.gmt)?\\.modisco\\..*")) {
+			if (symbolicName.matches("org\\.eclipse\\.modisco\\..*")) {
 				if (!bundles[i].getHeaders().get(property).toString().matches(regex)) {
 					wrongBundle.add(bundles[i]);
 				}

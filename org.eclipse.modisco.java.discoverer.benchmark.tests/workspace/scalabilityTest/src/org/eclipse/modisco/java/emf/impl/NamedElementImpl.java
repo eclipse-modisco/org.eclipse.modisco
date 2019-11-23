@@ -47,9 +47,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.NamedElementImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.NamedElementImpl#isProxy <em>Proxy</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.NamedElementImpl#getUsagesInImports <em>Usages In Imports</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#isProxy <em>Proxy</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
  * </p>
  *

@@ -612,7 +612,7 @@ public class FacetEditor extends MultiPageEditorPart implements IEditingDomainPr
 	protected void updateProblemIndication() {
 		if (this.updateProblemIndication) {
 			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
-					"org.eclipse.gmt.modisco.infra.facet.editor", //$NON-NLS-1$
+					"org.eclipse.modisco.infra.facet.editor", //$NON-NLS-1$
 					0, null, new Object[] { this.editingDomain.getResourceSet() });
 			for (Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
 				if (childDiagnostic.getSeverity() != Diagnostic.OK) {
@@ -1085,14 +1085,14 @@ public class FacetEditor extends MultiPageEditorPart implements IEditingDomainPr
 	public Diagnostic analyzeResourceProblems(final Resource resource, final Exception exception) {
 		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
-					"org.eclipse.gmt.modisco.infra.facet.editor", //$NON-NLS-1$
+					"org.eclipse.modisco.infra.facet.editor", //$NON-NLS-1$
 					0, getString("_UI_CreateModelError_message", resource.getURI()), //$NON-NLS-1$
 					new Object[] { exception == null ? (Object) resource : exception });
 			basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
 			return basicDiagnostic;
 		} else if (exception != null) {
 			return new BasicDiagnostic(Diagnostic.ERROR,
-					"org.eclipse.gmt.modisco.infra.facet.editor", //$NON-NLS-1$
+					"org.eclipse.modisco.infra.facet.editor", //$NON-NLS-1$
 					0, getString("_UI_CreateModelError_message", resource.getURI()), //$NON-NLS-1$
 					new Object[] { exception });
 		} else {

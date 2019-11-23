@@ -24,13 +24,13 @@ Create a facet (Right-click > New child > Facet)
 File > Import > Plug-ins and Fragements
 * Project with source folder
 * Next
-* org.eclipse.gmt.modisco.common.core
+* org.eclipse.modisco.common.core
 * Finish
 
-Select the project org.eclipse.gmt.modisco.common.core
+Select the project org.eclipse.modisco.common.core
 * Right-click > MoDisco > Discover Java Model From Java project
 
-Open /org.eclipse.gmt.modisco.infra.common.core/org.eclipse.gmt.modisco.infra.common.core.javaxmi with the model browser
+Open /org.eclipse.modisco.infra.common.core/org.eclipse.modisco.infra.common.core.javaxmi with the model browser
 
 Remove all the applied facet and customization
 
@@ -49,7 +49,7 @@ In the editor of My.facetSet
 ** Upper bound: -1
 ** EType: TypeDeclaration
 
-Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi
+Re-open org.eclipse.modisco.infra.common.core.javaxmi
 * Check that the FacetReference subtypes work properly
 
 Open testFacet/My.facetSet
@@ -64,7 +64,7 @@ Open testFacet/My.facetSet
 ** EType: EBoolean
 * Save My.facetSet
 
-Re-open org.eclipse.gmt.modisco.infra.common.core.javaxmi
+Re-open org.eclipse.modisco.infra.common.core.javaxmi
 * Enable the facet ClassDeclarationExt
 * Check that the FacetAttribute isAbstract works properly.
 

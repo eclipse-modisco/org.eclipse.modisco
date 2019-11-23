@@ -30,12 +30,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ParameterizedType#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ParameterizedType#getTypeArguments <em>Type Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ParameterizedType#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ParameterizedType#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getParameterizedType()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getParameterizedType()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface ParameterizedType extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getParameterizedType_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getParameterizedType_Type()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ParameterizedType#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ParameterizedType#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' containment reference.
@@ -68,7 +68,7 @@ public interface ParameterizedType extends Type {
 
 	/**
 	 * Returns the value of the '<em><b>Type Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeAccess}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeAccess}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Arguments</em>' containment reference list isn't clear,
@@ -76,7 +76,7 @@ public interface ParameterizedType extends Type {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Arguments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getParameterizedType_TypeArguments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getParameterizedType_TypeArguments()
 	 * @model containment="true"
 	 * @generated
 	 */

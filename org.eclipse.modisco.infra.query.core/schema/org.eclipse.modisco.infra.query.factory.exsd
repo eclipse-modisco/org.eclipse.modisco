@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.query.core" id="org.eclipse.gmt.modisco.infra.query.factory" name="org.eclipse.gmt.modisco.infra.query.factory"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.query.core" id="org.eclipse.modisco.infra.query.factory" name="org.eclipse.modisco.infra.query.factory"/>
       </appinfo>
       <documentation>
          Use this extension point when you want to define a new type of queries (Java, OCL, Scala, etc.).
@@ -57,7 +57,7 @@ You must provide an implementation of IModelQueryFactory, so that queries of the
                   The implementation of the query factory.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.query.core.IModelQueryFactory"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.infra.query.core.IModelQueryFactory"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -72,7 +72,7 @@ You must provide an implementation of IModelQueryFactory, so that queries of the
                   Implement this interface if you want to customize the tooltip that is shown for this kind of queries.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.query.core.IModelQueryTooltip"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.infra.query.core.IModelQueryTooltip"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -94,8 +94,8 @@ You must provide an implementation of IModelQueryFactory, so that queries of the
       </appinfo>
       <documentation>
          &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.query.factory&quot;&gt;
-  &lt;factory class=&quot;org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaModelQueryFactory&quot;/&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.query.factory&quot;&gt;
+  &lt;factory class=&quot;org.eclipse.modisco.infra.query.core.java.internal.JavaModelQueryFactory&quot;/&gt;
 &lt;/extension&gt;
 &lt;/pre&gt;
       </documentation>
@@ -110,9 +110,9 @@ You must provide an implementation of IModelQueryFactory, so that queries of the
          &lt;p&gt;
 See:
 &lt;ul&gt;
-&lt;li&gt; org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaModelQueryFactory
-&lt;li&gt; org.eclipse.gmt.modisco.infra.query.jxpath.query.JXPathModelQueryFactory
-&lt;li&gt; org.eclipse.gmt.modisco.infra.query.core.ocl.OclModelQueryFactory
+&lt;li&gt; org.eclipse.modisco.infra.query.core.java.internal.JavaModelQueryFactory
+&lt;li&gt; org.eclipse.modisco.infra.query.jxpath.query.JXPathModelQueryFactory
+&lt;li&gt; org.eclipse.modisco.infra.query.core.ocl.OclModelQueryFactory
 &lt;/ul&gt;
 &lt;/p&gt;
       </documentation>

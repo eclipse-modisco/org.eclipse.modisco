@@ -13,7 +13,7 @@ package org.eclipse.modisco.java.generation;
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.java.generation.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.java.generation.messages"; //$NON-NLS-1$
 	public static String Generate_JavaStructures_0;
 	public static String Generate_JavaStructures_13;
 	public static String JavaUtils_1;

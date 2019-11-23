@@ -5,11 +5,11 @@ information please refer to the JavaDoc.
 
 <pre>
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.ModelQuery;
-import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
-import org.eclipse.gmt.modisco.infra.query.core.AbstractModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
-import org.eclipse.gmt.modisco.infra.query.runtime.ModelQueryResult;
+import org.eclipse.modisco.infra.query.ModelQuery;
+import org.eclipse.modisco.infra.query.ModelQuerySet;
+import org.eclipse.modisco.infra.query.core.AbstractModelQuery;
+import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
+import org.eclipse.modisco.infra.query.runtime.ModelQueryResult;
 
 public class Example {
   public Integer main(EObject context) throws Exception {
@@ -43,11 +43,11 @@ public class Example {
 </pre>
 
 == How to package a query set in a plug-in ==
-To package a query set in a plug-in, an extension must be added in the file plugin.xml (contained in the query set's project). The extension point to use is: org.eclipse.gmt.modisco.infra.query.registration.
+To package a query set in a plug-in, an extension must be added in the file plugin.xml (contained in the query set's project). The extension point to use is: org.eclipse.modisco.infra.query.registration.
 Here is an example of a query set declaration:
   <plugin>
      <extension
-           point="org.eclipse.gmt.modisco.infra.query.registration">
+           point="org.eclipse.modisco.infra.query.registration">
         <modelqueryset
               file="_example_jdkAndEclipseQuerySet.querySet">
         </modelqueryset>
@@ -65,7 +65,7 @@ model is expected.
 
 ModelQuerySet::name must be unique (in the Eclipse platform) and
 equal to the containing file name. We recommend to use a name prefix
-with a namespace, for example: org.eclipse.gmt.modisco.example1.querySet1.
+with a namespace, for example: org.eclipse.modisco.example1.querySet1.
 
 ModelQuerySet::isEditable is true if the query can be edited. If
 the query is stored into a compiled file then ModelQuerySet::isEditable is
@@ -110,7 +110,7 @@ Java implemented query.
 
 JavaModelQuery::implemenationClassName contains the qualified
 name of the class implementing the query. This class must be a sub class
-of org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery. The
+of org.eclipse.modisco.infra.query.core.java.IJavaModelQuery. The
 Java implementation class must be stored in the same plug-in (or plug-in
 project) as the query model.
 

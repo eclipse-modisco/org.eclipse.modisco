@@ -20,7 +20,7 @@ import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 
 /**
  * This class offers methods to get the description of the MoDisco sub-protocol
- * registered through the org.eclipse.gmt.modisco.common.core.protocolext
+ * registered through the org.eclipse.modisco.common.core.protocolext
  * extension point.
  *
  * @author Gregoire DUPE (Mia-Software)
@@ -28,7 +28,7 @@ import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
  */
 public final class ModiscoProtocolExtensionRegistry {
 
-	private static final String EXTENTION_POINT_ID = "org.eclipse.gmt.modisco.common.core.protocolext"; //$NON-NLS-1$
+	private static final String EXTENTION_POINT_ID = "org.eclipse.modisco.common.core.protocolext"; //$NON-NLS-1$
 	private static HashMap<String, IModiscoProtocolExtension> factoryExtMap = initMap();
 
 	/**

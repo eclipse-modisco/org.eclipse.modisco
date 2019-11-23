@@ -23,7 +23,7 @@ public class Activator extends Plugin {
 	/**
 	 * The plug-in ID.
 	 */
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.java.generation"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.java.generation"; //$NON-NLS-1$
 
 	/**
 	 * The shared instance.

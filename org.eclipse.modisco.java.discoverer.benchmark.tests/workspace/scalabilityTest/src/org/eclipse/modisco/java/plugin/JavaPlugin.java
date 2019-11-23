@@ -24,7 +24,7 @@ import org.osgi.framework.BundleContext;
 
 public class JavaPlugin extends Plugin {
 	
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.java"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.java"; //$NON-NLS-1$
 
 	// The shared instance
 	private static JavaPlugin plugin;

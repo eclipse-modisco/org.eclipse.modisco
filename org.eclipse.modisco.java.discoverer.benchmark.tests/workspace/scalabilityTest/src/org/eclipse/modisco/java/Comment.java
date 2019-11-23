@@ -29,13 +29,13 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Comment#getContent <em>Content</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Comment#getContent <em>Content</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getComment()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getComment()
  * @model abstract="true"
  * @generated
  */
@@ -50,14 +50,14 @@ public interface Comment extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Content</em>' attribute.
 	 * @see #setContent(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getComment_Content()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getComment_Content()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getContent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Comment#getContent <em>Content</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Comment#getContent <em>Content</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Content</em>' attribute.
@@ -76,14 +76,14 @@ public interface Comment extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enclosed By Parent</em>' attribute.
 	 * @see #setEnclosedByParent(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getComment_EnclosedByParent()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getComment_EnclosedByParent()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isEnclosedByParent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enclosed By Parent</em>' attribute.
@@ -102,14 +102,14 @@ public interface Comment extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prefix Of Parent</em>' attribute.
 	 * @see #setPrefixOfParent(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getComment_PrefixOfParent()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getComment_PrefixOfParent()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isPrefixOfParent();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Prefix Of Parent</em>' attribute.

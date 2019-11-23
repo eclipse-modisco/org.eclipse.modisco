@@ -36,7 +36,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage
+ * @see org.eclipse.modisco.java.emf.JavaPackage
  * @generated
  */
 public class JavaSwitch<T> {
@@ -663,7 +663,7 @@ public class JavaSwitch<T> {
 				return result;
 			}
 			case JavaPackage.PACKAGE: {
-				org.eclipse.gmt.modisco.java.Package package_ = (org.eclipse.gmt.modisco.java.Package)theEObject;
+				org.eclipse.modisco.java.Package package_ = (org.eclipse.modisco.java.Package)theEObject;
 				T result = casePackage(package_);
 				if (result == null) result = caseNamedElement(package_);
 				if (result == null) result = caseASTNode(package_);
@@ -1285,7 +1285,7 @@ public class JavaSwitch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackage(org.eclipse.gmt.modisco.java.Package object) {
+	public T casePackage(org.eclipse.modisco.java.Package object) {
 		return null;
 	}
 

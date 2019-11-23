@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.browser" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.browser" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.browser" id="loadingDepth" name="resources loading depth"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.browser" id="loadingDepth" name="resources loading depth"/>
       </appInfo>
       <documentation>
          Specify the loading depth for Resources of a given metamodel.
@@ -90,7 +90,7 @@
          The following is an example of an extension that defines a loading depth for 2 metamodels:
 &lt;p&gt;
 &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.browser.loadingDepth&quot;&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.browser.loadingDepth&quot;&gt;
    &lt;loadingDepth
          depth=&quot;1&quot;
          metamodel=&quot;http://www.eclipse.org/MoDisco/Java/0.2.incubation/java&quot;/&gt;

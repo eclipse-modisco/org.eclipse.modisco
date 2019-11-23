@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.prefuse;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.prefuse;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.prefuse.Activator
 Require-Bundle: org.eclipse.ui,
@@ -15,4 +15,4 @@ Export-Package: org.eclipse.modisco.infra.prefuse,
  org.eclipse.modisco.infra.prefuse.examples.radialgraphview,
  org.eclipse.modisco.infra.prefuse.examples.treeview
 Bundle-Vendor: %Bundle-Vendor
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.prefuse
+Automatic-Module-Name: org.eclipse.modisco.infra.prefuse

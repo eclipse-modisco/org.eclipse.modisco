@@ -62,7 +62,7 @@ import org.eclipse.modisco.java.emf.JavaFactory;
  */
 public class JDTVisitor extends ASTVisitor {
 
-	private static final String TRACEID_DEEPREMOVE2 = "org.eclipse.gmt.modisco.java.discoverer/debug/JDTVisitor/deepRemove2"; //$NON-NLS-1$
+	private static final String TRACEID_DEEPREMOVE2 = "org.eclipse.modisco.java.discoverer/debug/JDTVisitor/deepRemove2"; //$NON-NLS-1$
 	private static final boolean TRACE_DEEPREMOVE2 = JavaActivator.getDefault().isDebugging()
 			&& new Boolean(Platform.getDebugOption(JDTVisitor.TRACEID_DEEPREMOVE2));
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2009, 2018 Hatha Systems, and Mia-Software.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Nikolai Mansourov (Hatha Systems) - initial API and implementation&#xD;&#xA;    Gabriel Barbier (Mia-Software) - minor evolutions for version 1.1&#xD;&#xA;    Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings"
-    modelDirectory="/org.eclipse.gmt.modisco.omg.kdm/src-gen" editDirectory="/org.eclipse.gmt.modisco.omg.kdm.edit/src-gen"
-    editorDirectory="/org.eclipse.gmt.modisco.omg.kdm.editor/src-gen" modelPluginID="org.eclipse.gmt.modisco.omg.kdm"
+    modelDirectory="/org.eclipse.modisco.omg.kdm/src-gen" editDirectory="/org.eclipse.modisco.omg.kdm.edit/src-gen"
+    editorDirectory="/org.eclipse.modisco.omg.kdm.editor/src-gen" modelPluginID="org.eclipse.modisco.omg.kdm"
     modelName="Kdm" nonNLSMarkers="true" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="5.0" copyrightFields="false">
   <foreignModel>kdm.ecore</foreignModel>
-  <genPackages prefix="Kdm" basePackage="org.eclipse.gmt.modisco.omg" disposableProviderFactory="true"
+  <genPackages prefix="Kdm" basePackage="org.eclipse.modisco.omg" disposableProviderFactory="true"
       ecorePackage="kdm.ecore#/">
-    <nestedGenPackages prefix="Core" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Core" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//core">
       <genDataTypes ecoreDataType="kdm.ecore#//core/String"/>
       <genDataTypes ecoreDataType="kdm.ecore#//core/Integer"/>
@@ -55,7 +55,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kdm.ecore#//core/AggregatedRelationship/density"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Kdm" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Kdm" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//kdm">
       <genClasses image="false" ecoreClass="kdm.ecore#//kdm/KDMFramework">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//kdm/KDMFramework/audit"/>
@@ -106,7 +106,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kdm.ecore#//kdm/Annotation/text"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Source" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Source" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//source">
       <genClasses ecoreClass="kdm.ecore#//source/InventoryModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//source/InventoryModel/inventoryElement"/>
@@ -164,7 +164,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//source/InventoryRelationship/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Code" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Code" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//code">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="kdm.ecore#//code/CallableKind">
         <genEnumLiterals ecoreEnumLiteral="kdm.ecore#//code/CallableKind/external"/>
@@ -449,7 +449,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//code/CodeRelationship/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Action" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Action" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//action">
       <genClasses ecoreClass="kdm.ecore#//action/ActionElement">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kdm.ecore#//action/ActionElement/kind"/>
@@ -551,7 +551,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//action/ActionRelationship/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Platform" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Platform" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//platform">
       <genClasses ecoreClass="kdm.ecore#//platform/PlatformModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//platform/PlatformModel/platformElement"/>
@@ -657,7 +657,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//platform/PlatformRelationship/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Build" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Build" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//build">
       <genClasses image="false" ecoreClass="kdm.ecore#//build/AbstractBuildElement">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//build/AbstractBuildElement/buildRelation"/>
@@ -728,7 +728,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//build/DescribedBy/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Conceptual" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Conceptual" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//conceptual">
       <genClasses ecoreClass="kdm.ecore#//conceptual/ConceptualModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//conceptual/ConceptualModel/conceptualElement"/>
@@ -767,7 +767,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//conceptual/ConceptualRole/conceptualElement"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Data" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Data" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//data">
       <genClasses ecoreClass="kdm.ecore#//data/DataModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//data/DataModel/dataElement"/>
@@ -912,7 +912,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//data/ManagesData/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Event" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Event" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//event">
       <genClasses ecoreClass="kdm.ecore#//event/EventModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//event/EventModel/eventElement"/>
@@ -978,7 +978,7 @@
             ecoreFeature="ecore:EReference kdm.ecore#//event/HasState/from"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Structure" basePackage="org.eclipse.gmt.modisco.omg.kdm"
+    <nestedGenPackages prefix="Structure" basePackage="org.eclipse.modisco.omg.kdm"
         disposableProviderFactory="true" ecorePackage="kdm.ecore#//structure">
       <genClasses image="false" ecoreClass="kdm.ecore#//structure/AbstractStructureElement">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//structure/AbstractStructureElement/aggregated"/>
@@ -1004,7 +1004,7 @@
       <genClasses ecoreClass="kdm.ecore#//structure/ArchitectureView"/>
       <genClasses ecoreClass="kdm.ecore#//structure/StructureElement"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Ui" basePackage="org.eclipse.gmt.modisco.omg.kdm" disposableProviderFactory="true"
+    <nestedGenPackages prefix="Ui" basePackage="org.eclipse.modisco.omg.kdm" disposableProviderFactory="true"
         ecorePackage="kdm.ecore#//ui">
       <genClasses image="false" ecoreClass="kdm.ecore#//ui/AbstractUIElement">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kdm.ecore#//ui/AbstractUIElement/source"/>

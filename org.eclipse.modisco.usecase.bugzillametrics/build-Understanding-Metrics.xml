@@ -39,7 +39,7 @@
 		<am3.loadModel modelHandler="EMF" name="Bugzilla" metamodel="MOF" path="Metamodels/Bugzilla.ecore" />
 		
 		<!-- Load Metrics metamodel -->
-		<am3.loadModel modelHandler="EMF" name="Metrics" metamodel="MOF" path="/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/Metamodels/Metrics.ecore" />
+		<am3.loadModel modelHandler="EMF" name="Metrics" metamodel="MOF" path="/org.eclipse.modisco.tool.metricsvisualizationbuilder/Metamodels/Metrics.ecore" />
 		
 	</target>
 	

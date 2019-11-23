@@ -15,7 +15,7 @@
       label="MoDisco Java Feature"
       version="1.5.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.gmt.modisco.java"
+      plugin="org.eclipse.modisco.java"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -37,7 +37,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java"
+         id="org.eclipse.modisco.java"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -58,28 +58,28 @@ http://www.eclipse.org/legal/epl-v10.html
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.cdo"
+         id="org.eclipse.modisco.java.cdo"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.generation"
+         id="org.eclipse.modisco.java.generation"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.queries"
+         id="org.eclipse.modisco.java.queries"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.browser.customization"
+         id="org.eclipse.modisco.java.browser.customization"
          download-size="0"
          install-size="0"
          version="0.0.0"

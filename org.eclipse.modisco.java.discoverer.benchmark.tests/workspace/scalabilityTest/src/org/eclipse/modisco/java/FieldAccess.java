@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.FieldAccess#getField <em>Field</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.FieldAccess#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.FieldAccess#getField <em>Field</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.FieldAccess#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getFieldAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getFieldAccess()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface FieldAccess extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Field</em>' containment reference.
 	 * @see #setField(SingleVariableAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getFieldAccess_Field()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getFieldAccess_Field()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	SingleVariableAccess getField();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.FieldAccess#getField <em>Field</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.FieldAccess#getField <em>Field</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Field</em>' containment reference.
@@ -75,14 +75,14 @@ public interface FieldAccess extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getFieldAccess_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getFieldAccess_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.FieldAccess#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.FieldAccess#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.

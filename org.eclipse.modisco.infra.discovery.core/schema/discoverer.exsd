@@ -98,7 +98,7 @@ However, each discoverer should provide a resource filter to trigger its visibil
 &lt;pre&gt;
 &lt;extension point=&quot;org.eclipse.modisco.infra.discovery.core.discoverer&quot;&gt;
       &lt;discoverer
-            class=&quot;org.eclipse.gmt.modisco.java.JavaModelDiscoverer&quot;
+            class=&quot;org.eclipse.modisco.java.JavaModelDiscoverer&quot;
             name=&quot;Java model discoverer&quot;&gt;
       &lt;/discoverer&gt;
 &lt;/extension&gt;
@@ -116,8 +116,8 @@ In the example above, the provided class JavaModelDiscoverer implements interfac
       <documentation>
          &lt;p&gt;
 MoDisco comes with existing discoverers in the following plug-ins:&lt;ul&gt;
-&lt;li&gt;org.eclipse.gmt.modisco.java&lt;/li&gt;
-&lt;li&gt;org.eclipse.gmt.modisco.xml&lt;/li&gt;
+&lt;li&gt;org.eclipse.modisco.java&lt;/li&gt;
+&lt;li&gt;org.eclipse.modisco.xml&lt;/li&gt;
 &lt;li&gt;org.eclipse.modisco.jee.ejbjar.discoverer&lt;/li&gt;
 &lt;li&gt;org.eclipse.modisco.jee.jsp.discoverer&lt;/li&gt;
 &lt;li&gt;...&lt;/li&gt;

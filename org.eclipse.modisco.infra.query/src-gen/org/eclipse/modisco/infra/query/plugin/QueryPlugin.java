@@ -21,7 +21,7 @@ import org.osgi.framework.BundleContext;
 public class QueryPlugin extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.query"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.query"; //$NON-NLS-1$
 
 	// The shared instance
 	private static QueryPlugin plugin;

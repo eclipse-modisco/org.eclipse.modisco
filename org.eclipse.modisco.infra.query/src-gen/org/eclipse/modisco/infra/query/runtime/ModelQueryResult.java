@@ -100,7 +100,7 @@ public interface ModelQueryResult extends EObject {
 	 * @return the value of the '<em>Exception</em>' attribute.
 	 * @see #setException(Exception)
 	 * @see org.eclipse.modisco.infra.query.runtime.RuntimePackage#getModelQueryResult_Exception()
-	 * @model dataType="org.eclipse.gmt.modisco.infra.query.runtime.JavaException"
+	 * @model dataType=org.eclipse.modisco.infra.query.runtime.JavaException"
 	 * @generated
 	 */
 	Exception getException();

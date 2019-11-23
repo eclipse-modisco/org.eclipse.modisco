@@ -30,18 +30,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Block#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Block#getStatements <em>Statements</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getBlock()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getBlock()
  * @model
  * @generated
  */
 public interface Block extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Statement}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Statement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Statements</em>' containment reference list isn't clear,
@@ -49,7 +49,7 @@ public interface Block extends Statement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Statements</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getBlock_Statements()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getBlock_Statements()
 	 * @model containment="true"
 	 * @generated
 	 */

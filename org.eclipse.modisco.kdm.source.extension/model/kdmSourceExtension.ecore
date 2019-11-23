@@ -8,7 +8,7 @@
     <eSubpackages name="extension" nsURI="http://www.eclipse.org/MoDisco/kdmsourceextension/0.1.incubation/kdm/source/extension"
         nsPrefix="extension">
       <eClassifiers xsi:type="ecore:EClass" name="ASTNodeSourceRegion" abstract="false"
-          eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion">
+          eSuperTypes="platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion">
         <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1"
             eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -16,7 +16,7 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="CodeUnit2File" abstract="false">
         <eStructuralFeatures xsi:type="ecore:EReference" name="file" lowerBound="1"
-            eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceFile"/>
+            eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/SourceFile"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
             eType="#//source/extension/ASTNodeSourceRegion" containment="true" eOpposite="#//source/extension/ASTNodeSourceRegion/parent"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1"

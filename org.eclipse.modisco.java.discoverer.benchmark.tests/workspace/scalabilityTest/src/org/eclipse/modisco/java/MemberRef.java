@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.MemberRef#getMember <em>Member</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MemberRef#getMember <em>Member</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMemberRef()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getMemberRef()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface MemberRef extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Member</em>' reference.
 	 * @see #setMember(NamedElement)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMemberRef_Member()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMemberRef_Member()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	NamedElement getMember();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.MemberRef#getMember <em>Member</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.MemberRef#getMember <em>Member</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Member</em>' reference.
@@ -75,14 +75,14 @@ public interface MemberRef extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Qualifier</em>' containment reference.
 	 * @see #setQualifier(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMemberRef_Qualifier()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMemberRef_Qualifier()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getQualifier();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Qualifier</em>' containment reference.

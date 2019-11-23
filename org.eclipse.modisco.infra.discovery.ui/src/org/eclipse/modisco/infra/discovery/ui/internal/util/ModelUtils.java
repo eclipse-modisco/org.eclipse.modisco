@@ -128,7 +128,7 @@ public final class ModelUtils {
 		}
 
 		IEditorDescriptor editDesc = PlatformUI.getWorkbench().getEditorRegistry()
-				.findEditor("org.eclipse.gmt.modisco.infra.browser.editorID"); //$NON-NLS-1$
+				.findEditor("org.eclipse.modisco.infra.browser.editorID"); //$NON-NLS-1$
 
 		if (editDesc != null) {
 			try {

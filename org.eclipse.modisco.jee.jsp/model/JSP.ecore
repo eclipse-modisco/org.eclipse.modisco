@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jsp"
     nsURI="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp" nsPrefix="jsp">
-  <eClassifiers xsi:type="ecore:EClass" name="JSPScript" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="JSPScript" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTagFragment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
@@ -22,7 +22,7 @@
       <details key="documentation" value="Eg : &amp;#60;%! int myVariable= 0; %&amp;#62;"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSPAction" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="JSPAction" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Reference to a declared taglib :&amp;#60;%@ taglib prefix=&quot;myprefix&quot; uri=&quot;taglib/mytag.tld&quot; %&amp;#62;&#xD;&#xA;Eg : &amp;#60;myprefix:getText() /&amp;#62;"/>
     </eAnnotations>
@@ -30,7 +30,7 @@
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSPStdAction" eSuperTypes="#//JSPAction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JSPDirective" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="JSPDirective" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Eg : &amp;#60;jsp:directive.page import=&quot;java.util.*&quot; /&amp;#62;"/>
     </eAnnotations>
@@ -40,12 +40,12 @@
       <details key="documentation" value="Eg : &amp;#60;%@ taglib prefix=&quot;myprefix&quot; uri=&quot;taglib/mytag.tld&quot; %&amp;#62;&#xD;&#xA;"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JavaScript" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="JavaScript" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Eg : &#xD;&#xA;&amp;#60;script type=&quot;text/javascript&quot;&amp;#62; &amp;#60;/script&amp;#62; "/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSPComment" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="JSPComment" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Node">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="&amp;#60;%-- Here is a JSP Comment --%&amp;#62;"/>
     </eAnnotations>
@@ -57,7 +57,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmlDeclaration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="doctype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedElements" upperBound="-1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Node"
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Node"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pageOwner" lowerBound="1"
         eType="#//Model" eOpposite="#//Model/pages"/>
@@ -67,7 +67,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
         eType="#//Page" containment="true" eOpposite="#//Page/pageOwner"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComposedAttribute" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="ComposedAttribute" eSuperTypes="platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="ComposedAttribute is an Attribute which value is composed with Elements, like tag, JSP scriplet, actions &amp;#xD;&amp;#xA;Eg :  &amp;amp;#60;tag name=&amp;quot; &amp;amp;#60;%= variable %&amp;amp;#62; &amp;quot; &amp;amp;#62;"/>
     </eAnnotations>

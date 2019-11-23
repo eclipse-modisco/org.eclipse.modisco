@@ -29,29 +29,29 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getVisibility <em>Visibility</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getInheritance <em>Inheritance</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isStatic <em>Static</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isTransient <em>Transient</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isVolatile <em>Volatile</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isNative <em>Native</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getInheritance <em>Inheritance</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isStatic <em>Static</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isTransient <em>Transient</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isVolatile <em>Volatile</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isNative <em>Native</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier()
  * @model
  * @generated
  */
 public interface Modifier extends ASTNode {
 	/**
 	 * Returns the value of the '<em><b>Visibility</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.gmt.modisco.java.VisibilityKind}.
+	 * The literals are from the enumeration {@link org.eclipse.modisco.java.VisibilityKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Visibility</em>' attribute isn't clear,
@@ -59,20 +59,20 @@ public interface Modifier extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Visibility</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.VisibilityKind
+	 * @see org.eclipse.modisco.java.VisibilityKind
 	 * @see #setVisibility(VisibilityKind)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Visibility()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Visibility()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	VisibilityKind getVisibility();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getVisibility <em>Visibility</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getVisibility <em>Visibility</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Visibility</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.VisibilityKind
+	 * @see org.eclipse.modisco.java.VisibilityKind
 	 * @see #getVisibility()
 	 * @generated
 	 */
@@ -80,7 +80,7 @@ public interface Modifier extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Inheritance</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.gmt.modisco.java.InheritanceKind}.
+	 * The literals are from the enumeration {@link org.eclipse.modisco.java.InheritanceKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Inheritance</em>' attribute isn't clear,
@@ -88,20 +88,20 @@ public interface Modifier extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inheritance</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.InheritanceKind
+	 * @see org.eclipse.modisco.java.InheritanceKind
 	 * @see #setInheritance(InheritanceKind)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Inheritance()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Inheritance()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	InheritanceKind getInheritance();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getInheritance <em>Inheritance</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getInheritance <em>Inheritance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Inheritance</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.InheritanceKind
+	 * @see org.eclipse.modisco.java.InheritanceKind
 	 * @see #getInheritance()
 	 * @generated
 	 */
@@ -117,14 +117,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Static</em>' attribute.
 	 * @see #setStatic(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Static()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Static()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isStatic();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isStatic <em>Static</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isStatic <em>Static</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Static</em>' attribute.
@@ -143,14 +143,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transient</em>' attribute.
 	 * @see #setTransient(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Transient()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Transient()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isTransient();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isTransient <em>Transient</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isTransient <em>Transient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Transient</em>' attribute.
@@ -169,14 +169,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Volatile</em>' attribute.
 	 * @see #setVolatile(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Volatile()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Volatile()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isVolatile();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isVolatile <em>Volatile</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isVolatile <em>Volatile</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Volatile</em>' attribute.
@@ -195,14 +195,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Native</em>' attribute.
 	 * @see #setNative(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Native()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Native()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isNative();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isNative <em>Native</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isNative <em>Native</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Native</em>' attribute.
@@ -221,14 +221,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Strictfp</em>' attribute.
 	 * @see #setStrictfp(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Strictfp()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Strictfp()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isStrictfp();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Strictfp</em>' attribute.
@@ -247,14 +247,14 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Synchronized</em>' attribute.
 	 * @see #setSynchronized(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_Synchronized()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_Synchronized()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isSynchronized();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Synchronized</em>' attribute.
@@ -265,7 +265,7 @@ public interface Modifier extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Body Declaration</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.BodyDeclaration#getModifier <em>Modifier</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.BodyDeclaration#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Body Declaration</em>' container reference isn't clear,
@@ -274,15 +274,15 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body Declaration</em>' container reference.
 	 * @see #setBodyDeclaration(BodyDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_BodyDeclaration()
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration#getModifier
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_BodyDeclaration()
+	 * @see org.eclipse.modisco.java.BodyDeclaration#getModifier
 	 * @model opposite="modifier" transient="false" ordered="false"
 	 * @generated
 	 */
 	BodyDeclaration getBodyDeclaration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body Declaration</em>' container reference.
@@ -293,7 +293,7 @@ public interface Modifier extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Single Variable Declaration</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getModifier <em>Modifier</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Single Variable Declaration</em>' container reference isn't clear,
@@ -302,15 +302,15 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Single Variable Declaration</em>' container reference.
 	 * @see #setSingleVariableDeclaration(SingleVariableDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_SingleVariableDeclaration()
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getModifier
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_SingleVariableDeclaration()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getModifier
 	 * @model opposite="modifier" transient="false" ordered="false"
 	 * @generated
 	 */
 	SingleVariableDeclaration getSingleVariableDeclaration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Single Variable Declaration</em>' container reference.
@@ -321,7 +321,7 @@ public interface Modifier extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Variable Declaration Statement</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variable Declaration Statement</em>' container reference isn't clear,
@@ -330,15 +330,15 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Declaration Statement</em>' container reference.
 	 * @see #setVariableDeclarationStatement(VariableDeclarationStatement)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_VariableDeclarationStatement()
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_VariableDeclarationStatement()
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement#getModifier
 	 * @model opposite="modifier" transient="false" ordered="false"
 	 * @generated
 	 */
 	VariableDeclarationStatement getVariableDeclarationStatement();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable Declaration Statement</em>' container reference.
@@ -349,7 +349,7 @@ public interface Modifier extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Variable Declaration Expression</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getModifier <em>Modifier</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.VariableDeclarationExpression#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variable Declaration Expression</em>' container reference isn't clear,
@@ -358,15 +358,15 @@ public interface Modifier extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Declaration Expression</em>' container reference.
 	 * @see #setVariableDeclarationExpression(VariableDeclarationExpression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getModifier_VariableDeclarationExpression()
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getModifier
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier_VariableDeclarationExpression()
+	 * @see org.eclipse.modisco.java.VariableDeclarationExpression#getModifier
 	 * @model opposite="modifier" transient="false" ordered="false"
 	 * @generated
 	 */
 	VariableDeclarationExpression getVariableDeclarationExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable Declaration Expression</em>' container reference.

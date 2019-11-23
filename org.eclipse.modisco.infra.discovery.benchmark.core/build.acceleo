@@ -17,7 +17,7 @@
     <target name="post.compile.@dot">
         <acceleoCompiler 
             sourceFolder="${target.folder}" 
-            dependencies="${target.folder}/../../org.eclipse.modisco.infra.discovery.benchmark.metamodel;${target.folder}/../../org.eclipse.gmt.modisco.infra.discoverymanager;${target.folder}/../../org.eclipse.gmt.modisco.infra.common.core;${target.folder}/../../org.eclipse.modisco.utils.core;${target.folder}/../../org.eclipse.modisco.utils.chart.birt.core;${target.folder}/../../org.eclipse.modisco.utils.chart.metamodel;"
+            dependencies="${target.folder}/../../org.eclipse.modisco.infra.discovery.benchmark.metamodel;${target.folder}/../../org.eclipse.modisco.infra.discoverymanager;${target.folder}/../../org.eclipse.modisco.infra.common.core;${target.folder}/../../org.eclipse.modisco.utils.core;${target.folder}/../../org.eclipse.modisco.utils.chart.birt.core;${target.folder}/../../org.eclipse.modisco.utils.chart.metamodel;"
             binaryResource="true">
         </acceleoCompiler>
     </target>    

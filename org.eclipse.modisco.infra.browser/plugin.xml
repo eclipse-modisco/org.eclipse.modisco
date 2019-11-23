@@ -20,7 +20,7 @@
             contributorClass="org.eclipse.modisco.infra.browser.editors.BrowserActionBarContributor"
             default="true"
             icon="icons/full/obj16/MoDiscoModelIcon.gif"
-            id="org.eclipse.gmt.modisco.infra.browser.editorID"
+            id="org.eclipse.modisco.infra.browser.editorID"
             name="%Browser_label">
          <contentTypeBinding
                contentTypeId="org.eclipse.emf.ecore.xmi">
@@ -30,19 +30,19 @@
             class="org.eclipse.modisco.infra.browser.editors.table.TableEditor"
             default="false"
             icon="icons/full/obj16/MoDiscoModelIcon.gif"
-            id="org.eclipse.gmt.modisco.infra.browser.table.editorID"
+            id="org.eclipse.modisco.infra.browser.table.editorID"
             name="%TableViewer">
       </editor>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <category
-            id="org.eclipse.gmt.modisco.infra.browser.category"
+            id="org.eclipse.modisco.infra.browser.category"
             name="%Category">
       </category>
       <command
-            categoryId="org.eclipse.gmt.modisco.infra.browser.category"
-            id="org.eclipse.gmt.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
+            categoryId="org.eclipse.modisco.infra.browser.category"
+            id="org.eclipse.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
             name="%OpenModelFromEmfRegistry">
       </command>
    </extension>
@@ -50,7 +50,7 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="org.eclipse.gmt.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
+            commandId="org.eclipse.modisco.infra.browser.OpenModelFromEmfRegistryCommand"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+M2+M3+R">
@@ -58,7 +58,7 @@
    </extension>
    -->
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.ui.queryResultDisplay">
+         point="org.eclipse.modisco.infra.query.ui.queryResultDisplay">
       <queryResultDisplayer
             class="org.eclipse.modisco.infra.browser.queryResultDisplayers.TableQueryResultDisplayer"
             name="Table">
@@ -73,9 +73,9 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="org.eclipse.gmt.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
+            category="org.eclipse.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
             class="org.eclipse.modisco.infra.browser.preferences.BrowserPreferencePage"
-            id="org.eclipse.gmt.modisco.infra.browser.preferencePage"
+            id="org.eclipse.modisco.infra.browser.preferencePage"
             name="%preferencePage.name">
       </page>
    </extension>
@@ -84,12 +84,12 @@
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             adaptable="false"
-            id="org.eclipse.gmt.modisco.infra.browser.openResourceInMoDiscoBrowser"
+            id="org.eclipse.modisco.infra.browser.openResourceInMoDiscoBrowser"
             objectClass="org.eclipse.emf.ecore.resource.Resource">
          <action
                class="org.eclipse.modisco.infra.browser.actions.OpenResourceInMoDiscoBrowserAction"
                enablesFor="1"
-               id="org.eclipse.gmt.modisco.infra.browser.actions.openResourceInMoDiscoBrowserAction"
+               id="org.eclipse.modisco.infra.browser.actions.openResourceInMoDiscoBrowserAction"
                label="%OpenResourceInMoDiscoBrowserAction"
                style="push"
                tooltip="%OpenResourceInMoDiscoBrowserAction">
@@ -100,7 +100,7 @@
    <!-- see EcoreBrowser#fixClipboardCommands -->
    <extension point="org.eclipse.ui.contexts">
       <context
-	    id="org.eclipse.gmt.modisco.infra.browser.dummyContext"
+	    id="org.eclipse.modisco.infra.browser.dummyContext"
 	    parentId="org.eclipse.ui.contexts.dialogAndWindow"
 	    name="%dummyContext.name"/>
    </extension>
@@ -108,8 +108,8 @@
    <!-- see EcoreBrowser#fixClipboardCommands -->
    <extension point="org.eclipse.ui.commands">
       <command
-	     id="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
-	     categoryId="org.eclipse.gmt.modisco.infra.browser.category"
+	     id="org.eclipse.modisco.infra.browser.commands.doNothingCommand"
+	     categoryId="org.eclipse.modisco.infra.browser.category"
 	     name="%dummyCommand.name"/>
    </extension>
 	
@@ -120,23 +120,23 @@
 	       default commands from getting used -->
 	  <key
 	    sequence="M1+X"
-	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
-	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    contextId="org.eclipse.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.modisco.infra.browser.commands.doNothingCommand"
 	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	  <key
 	    sequence="M1+C"
-	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
-	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    contextId="org.eclipse.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.modisco.infra.browser.commands.doNothingCommand"
 	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	  <key
 	    sequence="M1+V"
-	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
-	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    contextId="org.eclipse.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.modisco.infra.browser.commands.doNothingCommand"
 	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	  <key
 	    sequence="M1+Z"
-	    contextId="org.eclipse.gmt.modisco.infra.browser.dummyContext"
-	    commandId="org.eclipse.gmt.modisco.infra.browser.commands.doNothingCommand"
+	    contextId="org.eclipse.modisco.infra.browser.dummyContext"
+	    commandId="org.eclipse.modisco.infra.browser.commands.doNothingCommand"
 	    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
 

@@ -54,7 +54,7 @@ public class TestOpenModel {
 	@Parameters
 	public static Collection<Object[]> modelFilenames() {
 		return Arrays.asList(new Object[][] {
-				{ "org.eclipse.gmt.modisco.infra.browser.javaxmi" },
+				{ "org.eclipse.modisco.infra.browser.javaxmi" },
 				{ "Company.uml" }, { "java.ecore" } });
 	}
 

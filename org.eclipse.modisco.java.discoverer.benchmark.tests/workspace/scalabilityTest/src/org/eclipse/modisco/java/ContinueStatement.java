@@ -29,18 +29,18 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ContinueStatement#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ContinueStatement#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getContinueStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getContinueStatement()
  * @model
  * @generated
  */
 public interface ContinueStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Label</em>' reference isn't clear,
@@ -49,15 +49,15 @@ public interface ContinueStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' reference.
 	 * @see #setLabel(LabeledStatement)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getContinueStatement_Label()
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInContinueStatements
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getContinueStatement_Label()
+	 * @see org.eclipse.modisco.java.LabeledStatement#getUsagesInContinueStatements
 	 * @model opposite="usagesInContinueStatements" required="true" ordered="false"
 	 * @generated
 	 */
 	LabeledStatement getLabel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ContinueStatement#getLabel <em>Label</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ContinueStatement#getLabel <em>Label</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Label</em>' reference.

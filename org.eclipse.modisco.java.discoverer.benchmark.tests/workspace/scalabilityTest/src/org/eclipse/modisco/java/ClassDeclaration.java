@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getClassDeclaration()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface ClassDeclaration extends TypeDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Super Class</em>' containment reference.
 	 * @see #setSuperClass(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassDeclaration_SuperClass()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getClassDeclaration_SuperClass()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getSuperClass();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Super Class</em>' containment reference.

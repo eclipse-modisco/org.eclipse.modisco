@@ -29,19 +29,19 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperand <em>Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.PrefixExpression#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.PrefixExpression#getOperand <em>Operand</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getPrefixExpression()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getPrefixExpression()
  * @model
  * @generated
  */
 public interface PrefixExpression extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.gmt.modisco.java.PrefixExpressionKind}.
+	 * The literals are from the enumeration {@link org.eclipse.modisco.java.PrefixExpressionKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -49,20 +49,20 @@ public interface PrefixExpression extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpressionKind
+	 * @see org.eclipse.modisco.java.PrefixExpressionKind
 	 * @see #setOperator(PrefixExpressionKind)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getPrefixExpression_Operator()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getPrefixExpression_Operator()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	PrefixExpressionKind getOperator();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperator <em>Operator</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.PrefixExpression#getOperator <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpressionKind
+	 * @see org.eclipse.modisco.java.PrefixExpressionKind
 	 * @see #getOperator()
 	 * @generated
 	 */
@@ -78,14 +78,14 @@ public interface PrefixExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operand</em>' containment reference.
 	 * @see #setOperand(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getPrefixExpression_Operand()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getPrefixExpression_Operand()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getOperand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperand <em>Operand</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.PrefixExpression#getOperand <em>Operand</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operand</em>' containment reference.

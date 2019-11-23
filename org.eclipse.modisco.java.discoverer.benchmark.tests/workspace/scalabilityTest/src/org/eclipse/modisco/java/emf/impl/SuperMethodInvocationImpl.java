@@ -50,9 +50,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperMethodInvocationImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperMethodInvocationImpl#getMethod <em>Method</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
  * </p>
  *

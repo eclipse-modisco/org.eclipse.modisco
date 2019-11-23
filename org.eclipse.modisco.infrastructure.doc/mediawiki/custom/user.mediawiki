@@ -158,7 +158,7 @@ A facet is a kind of meta-class (EClass) and a facet set a kind of meta-model (E
 *Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
 
 == Included Plug-ins ==
-* customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom
-* customization core : org.eclipse.gmt.modisco.infra.browser.custom.core
-* customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor
-* customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui
+* customization metamodel : org.eclipse.modisco.infra.browser.custom
+* customization core : org.eclipse.modisco.infra.browser.custom.core
+* customization metamodel editor : org.eclipse.modisco.infra.browser.custom.editor
+* customization UI components : org.eclipse.modisco.infra.browser.custom.ui

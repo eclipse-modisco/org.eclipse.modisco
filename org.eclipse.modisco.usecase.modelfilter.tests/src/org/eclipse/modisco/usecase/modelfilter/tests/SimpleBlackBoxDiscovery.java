@@ -8,7 +8,7 @@
  * Contributors:
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
- *    Grégoire Dupé (Mia-Software) - Bug 470806 - [Deprecated] org.eclipse.gmt.modisco.usecase.modelfilter
+ *    Grégoire Dupé (Mia-Software) - Bug 470806 - [Deprecated] org.eclipse.modisco.usecase.modelfilter
  */
 
 package org.eclipse.modisco.usecase.modelfilter.tests;

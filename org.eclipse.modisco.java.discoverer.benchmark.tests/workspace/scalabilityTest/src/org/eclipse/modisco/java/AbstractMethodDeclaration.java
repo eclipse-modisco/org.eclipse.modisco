@@ -30,16 +30,16 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getThrownExceptions <em>Thrown Exceptions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getTypeParameters <em>Type Parameters</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getThrownExceptions <em>Thrown Exceptions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getTypeParameters <em>Type Parameters</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration()
  * @model abstract="true"
  * @generated
  */
@@ -54,14 +54,14 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(Block)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Body()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Body()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	Block getBody();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body</em>' containment reference.
@@ -72,8 +72,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getMethodDeclaration <em>Method Declaration</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.SingleVariableDeclaration}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getMethodDeclaration <em>Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
@@ -81,8 +81,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Parameters()
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getMethodDeclaration
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Parameters()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getMethodDeclaration
 	 * @model opposite="methodDeclaration" containment="true"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Thrown Exceptions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeAccess}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeAccess}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Thrown Exceptions</em>' containment reference list isn't clear,
@@ -98,7 +98,7 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Thrown Exceptions</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_ThrownExceptions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_ThrownExceptions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -106,7 +106,7 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Type Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeParameter}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeParameter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Parameters</em>' containment reference list isn't clear,
@@ -114,7 +114,7 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Parameters</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_TypeParameters()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_TypeParameters()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -122,8 +122,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Usages In Doc Comments</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.MethodRef}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.MethodRef#getMethod <em>Method</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.MethodRef}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.MethodRef#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usages In Doc Comments</em>' reference list isn't clear,
@@ -131,8 +131,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usages In Doc Comments</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_UsagesInDocComments()
-	 * @see org.eclipse.gmt.modisco.java.MethodRef#getMethod
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_UsagesInDocComments()
+	 * @see org.eclipse.modisco.java.MethodRef#getMethod
 	 * @model opposite="method" ordered="false"
 	 * @generated
 	 */
@@ -140,8 +140,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Usages</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.AbstractMethodInvocation}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usages</em>' reference list isn't clear,
@@ -149,8 +149,8 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usages</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Usages()
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration_Usages()
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation#getMethod
 	 * @model opposite="method" ordered="false"
 	 * @generated
 	 */

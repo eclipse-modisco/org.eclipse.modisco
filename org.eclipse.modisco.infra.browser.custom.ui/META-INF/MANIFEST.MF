@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.browser.custom.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.browser.custom.ui;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.browser.custom.ui.Activator
 Bundle-Vendor: %Bundle-Vendor
@@ -9,20 +9,20 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf;bundle-version="2.5.0",
  org.eclipse.emf.ecore;bundle-version="2.5.0",
- org.eclipse.gmt.modisco.infra.query,
- org.eclipse.gmt.modisco.infra.query.core,
+ org.eclipse.modisco.infra.query,
+ org.eclipse.modisco.infra.query.core,
  org.eclipse.ui.ide,
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
- org.eclipse.gmt.modisco.infra.browser.custom,
- org.eclipse.gmt.modisco.infra.browser.custom.core,
+ org.eclipse.modisco.infra.browser.custom,
+ org.eclipse.modisco.infra.browser.custom.core,
  org.eclipse.emf.common.ui;bundle-version="2.5.0",
- org.eclipse.gmt.modisco.infra.browser,
- org.eclipse.gmt.modisco.infra.common.ui,
- org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser,
+ org.eclipse.modisco.infra.common.ui,
+ org.eclipse.modisco.infra.browser.uicore;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.core;bundle-version="0.8.0",
  org.eclipse.modisco.facet.common.ui;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.modisco.infra.browser.custom.ui;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor",
- org.eclipse.modisco.infra.browser.custom.ui.controls;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor"
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.browser.custom.ui
+Export-Package: org.eclipse.modisco.infra.browser.custom.ui;x-friends:="org.eclipse.modisco.infra.browser.custom.editor",
+ org.eclipse.modisco.infra.browser.custom.ui.controls;x-friends:="org.eclipse.modisco.infra.browser.custom.editor"
+Automatic-Module-Name: org.eclipse.modisco.infra.browser.custom.ui

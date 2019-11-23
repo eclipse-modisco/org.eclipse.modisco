@@ -14,7 +14,7 @@
       label="MoDisco Xml Feature"
       version="1.5.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.gmt.modisco.xml"
+      plugin="org.eclipse.modisco.xml"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -36,14 +36,14 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.gmt.modisco.xml"
+         id="org.eclipse.modisco.xml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.xml.browser.customization"
+         id="org.eclipse.modisco.xml.browser.customization"
          download-size="0"
          install-size="0"
          version="0.0.0"

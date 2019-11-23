@@ -25,7 +25,7 @@ Considering a Java legacy, a minimal migration/refactoring chain will involve
 
 A prerequisite is a Java model. Please refer to the [../java_discoverer/user.html  Java Discoverer] user manual. 
 
-To launch a Java generation, add ''org.eclipse.gmt.modisco.java.generation'' in your plugin dependencies and use the ''GenerateJavaExtended'' main method with input model and target folder as parameters. The code should look like this :
+To launch a Java generation, add ''org.eclipse.modisco.java.generation'' in your plugin dependencies and use the ''GenerateJavaExtended'' main method with input model and target folder as parameters. The code should look like this :
 <pre>
 GenerateJavaExtended javaGenerator = new GenerateJavaExtended(URI.createFileURI("C:/.../my.javaxmi"),
     new File("C:/.../myOutputFolder"), new ArrayList<Object>());

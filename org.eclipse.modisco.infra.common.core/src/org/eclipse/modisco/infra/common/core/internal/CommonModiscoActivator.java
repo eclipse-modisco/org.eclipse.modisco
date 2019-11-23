@@ -23,7 +23,7 @@ import org.osgi.framework.BundleContext;
 public class CommonModiscoActivator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.common.core"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.common.core"; //$NON-NLS-1$
 
 	// The shared instance
 	private static CommonModiscoActivator plugin;

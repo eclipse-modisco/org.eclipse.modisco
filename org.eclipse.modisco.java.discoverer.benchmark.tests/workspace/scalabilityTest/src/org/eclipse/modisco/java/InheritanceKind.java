@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Inheritance Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInheritanceKind()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getInheritanceKind()
  * @model
  * @generated
  */

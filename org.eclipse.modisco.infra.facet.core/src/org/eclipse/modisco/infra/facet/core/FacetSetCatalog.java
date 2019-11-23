@@ -38,7 +38,7 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 @Deprecated
 public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalogChangeListener {
 
-	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.facet.registration"; //$NON-NLS-1$
+	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.modisco.infra.facet.registration"; //$NON-NLS-1$
 
 	public static final String FILE_EXTENSION = "facetSet"; //$NON-NLS-1$
 
@@ -181,7 +181,7 @@ public final class FacetSetCatalog extends EcoreCatalog implements ModiscoCatalo
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreCatalog
+	 * org.eclipse.modisco.infra.common.core.internal.builder.EcoreCatalog
 	 * #getActivator()
 	 */
 	@Override

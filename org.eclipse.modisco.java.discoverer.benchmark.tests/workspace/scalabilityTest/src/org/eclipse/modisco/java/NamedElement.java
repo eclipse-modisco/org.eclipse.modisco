@@ -30,13 +30,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.NamedElement#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.NamedElement#isProxy <em>Proxy</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.NamedElement#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.NamedElement#isProxy <em>Proxy</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getNamedElement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getNamedElement()
  * @model abstract="true"
  * @generated
  */
@@ -51,14 +51,14 @@ public interface NamedElement extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getNamedElement_Name()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getNamedElement_Name()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.NamedElement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.NamedElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -77,14 +77,14 @@ public interface NamedElement extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Proxy</em>' attribute.
 	 * @see #setProxy(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getNamedElement_Proxy()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getNamedElement_Proxy()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isProxy();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.NamedElement#isProxy <em>Proxy</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.NamedElement#isProxy <em>Proxy</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Proxy</em>' attribute.
@@ -95,8 +95,8 @@ public interface NamedElement extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Usages In Imports</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ImportDeclaration}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ImportDeclaration}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usages In Imports</em>' reference list isn't clear,
@@ -104,8 +104,8 @@ public interface NamedElement extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usages In Imports</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getNamedElement_UsagesInImports()
-	 * @see org.eclipse.gmt.modisco.java.ImportDeclaration#getImportedElement
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getNamedElement_UsagesInImports()
+	 * @see org.eclipse.modisco.java.ImportDeclaration#getImportedElement
 	 * @model opposite="importedElement" ordered="false"
 	 * @generated
 	 */

@@ -22,20 +22,20 @@ Contributors:
       <extension
          point="org.eclipse.emf.validation.constraintProviders">
       <category
-            id="org.eclipse.gmt.modisco.infra.facet.validation"
+            id="org.eclipse.modisco.infra.facet.validation"
             mandatory="false"
             name="%category.name"/>
       <constraintProvider
             mode="Batch">
          <package namespaceUri="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation"/>
-         <constraints categories="org.eclipse.gmt.modisco.infra.facet.validation">
+         <constraints categories="org.eclipse.modisco.infra.facet.validation">
             <constraint
                   lang="Java"
                   class="org.eclipse.modisco.infra.facet.validation.NonEmptyName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name"
-                  id="org.eclipse.gmt.modisco.infra.facet.validation.nonemptyname"
+                  id="org.eclipse.modisco.infra.facet.validation.nonemptyname"
                   statusCode="1">
                <description>
                   %constraint.description
@@ -56,7 +56,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.0"
-                  id="org.eclipse.gmt.modisco.infra.facet.validation.ModelfacetSetRoot"
+                  id="org.eclipse.modisco.infra.facet.validation.ModelfacetSetRoot"
                   statusCode="1">
                <description>
                   %constraint.description.0
@@ -75,7 +75,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.1"
-                  id="org.eclipse.gmt.modisco.infra.facet.validation.FacetSetName"
+                  id="org.eclipse.modisco.infra.facet.validation.FacetSetName"
                   statusCode="1">
                <description>
                   %constraint.description.1
@@ -91,7 +91,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.2"
-                  id="org.eclipse.gmt.modisco.infra.facet.validation.ExtendedClassValidation"
+                  id="org.eclipse.modisco.infra.facet.validation.ExtendedClassValidation"
                   statusCode="1">
                <description>
                   %constraint.description.2 
@@ -107,7 +107,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.3"
-                  id="org.eclipse.gmt.modisco.infra.facet.validation.UniqueName"
+                  id="org.eclipse.modisco.infra.facet.validation.UniqueName"
                   statusCode="1">
                <description>
                   %constraint.description.3
@@ -118,7 +118,7 @@ Contributors:
                <target class="FacetSet"/>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetInQueryScope"
+                  id="org.eclipse.modisco.infra.facet.FacetInQueryScope"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.4"
@@ -138,7 +138,7 @@ if self.conditionQuery = null then true else self.conditionQuery.scope->exists(s
 ]]>
             </constraint>   
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.BooleanFacetQuery"
+                  id="org.eclipse.modisco.infra.facet.BooleanFacetQuery"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.5"
@@ -162,7 +162,7 @@ endif
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.OnlyFacetStructuralFeature"
+                  id="org.eclipse.modisco.infra.facet.OnlyFacetStructuralFeature"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.6"
@@ -182,7 +182,7 @@ self.eStructuralFeatures->forAll(e|e.oclIsKindOf(facet::FacetStructuralFeature) 
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.QueryReturnsDataType"
+                  id="org.eclipse.modisco.infra.facet.QueryReturnsDataType"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.7"
@@ -202,7 +202,7 @@ self.valueQuery.returnType.oclIsKindOf(ecore::EDataType)
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.QueryReturnsEClass"
+                  id="org.eclipse.modisco.infra.facet.QueryReturnsEClass"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.8"
@@ -222,7 +222,7 @@ self.valueQuery.returnType.oclIsKindOf(ecore::EClass)
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetIsAbstract"
+                  id="org.eclipse.modisco.infra.facet.FacetIsAbstract"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.9"
@@ -242,7 +242,7 @@ self.abstract
 ]]>
             </constraint> 
 			<constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.ExtendedPackage"
+                  id="org.eclipse.modisco.infra.facet.ExtendedPackage"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.10"
@@ -262,7 +262,7 @@ self.extendedPackage <> self
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.AttributeQueryType"
+                  id="org.eclipse.modisco.infra.facet.AttributeQueryType"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.11"
@@ -282,7 +282,7 @@ self.extendedPackage <> self
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.ReferenceQueryType"
+                  id="org.eclipse.modisco.infra.facet.ReferenceQueryType"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.12"
@@ -302,7 +302,7 @@ self.eType = self.valueQuery.returnType
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.AttributeMultiplicity"
+                  id="org.eclipse.modisco.infra.facet.AttributeMultiplicity"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.13"
@@ -322,7 +322,7 @@ self.eType = self.valueQuery.returnType
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.ReferenceMultiplicity"
+                  id="org.eclipse.modisco.infra.facet.ReferenceMultiplicity"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.14"
@@ -345,7 +345,7 @@ self.eType = self.valueQuery.returnType
 
             
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.refNotChangeable"
+                  id="org.eclipse.modisco.infra.facet.refNotChangeable"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.15"
@@ -365,7 +365,7 @@ self.changeable=false
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.refDerived"
+                  id="org.eclipse.modisco.infra.facet.refDerived"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.16"
@@ -385,7 +385,7 @@ self.derived
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.refVolatile"
+                  id="org.eclipse.modisco.infra.facet.refVolatile"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.17"
@@ -405,7 +405,7 @@ self.volatile
 ]]>
             </constraint>           
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.refUnsettable"
+                  id="org.eclipse.modisco.infra.facet.refUnsettable"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.18"
@@ -425,7 +425,7 @@ self.unsettable
 ]]>
             </constraint>             
              <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.refNotContainment"
+                  id="org.eclipse.modisco.infra.facet.refNotContainment"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.19"
@@ -448,7 +448,7 @@ self.containment=false
 
             
            <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.attrNotChangeable"
+                  id="org.eclipse.modisco.infra.facet.attrNotChangeable"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.20"
@@ -468,7 +468,7 @@ self.changeable=false
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.attrDerived"
+                  id="org.eclipse.modisco.infra.facet.attrDerived"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.21"
@@ -488,7 +488,7 @@ self.derived
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.attrVolatile"
+                  id="org.eclipse.modisco.infra.facet.attrVolatile"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.22"
@@ -508,7 +508,7 @@ self.volatile
 ]]>
             </constraint>           
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.attrUnsettable"
+                  id="org.eclipse.modisco.infra.facet.attrUnsettable"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.23"
@@ -528,7 +528,7 @@ self.unsettable
 ]]>
             </constraint> 
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetESuperTypes"
+                  id="org.eclipse.modisco.infra.facet.FacetESuperTypes"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.24"
@@ -548,7 +548,7 @@ self.eSuperTypes->size() > 0
 ]]>
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetSetNsURI"
+                  id="org.eclipse.modisco.infra.facet.FacetSetNsURI"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.25"
@@ -568,7 +568,7 @@ self.nsURI->notEmpty() and self.nsURI <> ''
 ]]>               
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetSetNsPrefix"
+                  id="org.eclipse.modisco.infra.facet.FacetSetNsPrefix"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.26"
@@ -588,7 +588,7 @@ self.nsPrefix->notEmpty() and self.nsPrefix <> ''
 ]]>               
             </constraint>
             <constraint
-                  id="org.eclipse.gmt.modisco.infra.facet.FacetSetExtendedPackages"
+                  id="org.eclipse.modisco.infra.facet.FacetSetExtendedPackages"
                   lang="OCL"
                   mode="Batch"
                   name="%constraint.name.27"
@@ -614,12 +614,12 @@ self.extendedPackage->notEmpty()
          point="org.eclipse.emf.validation.constraintBindings">
       <clientContext
             default="false"
-            id="org.eclipse.gmt.modisco.infra.facet.clientcontext">
+            id="org.eclipse.modisco.infra.facet.clientcontext">
          <enablement></enablement>
       </clientContext>
       <binding
-            context="org.eclipse.gmt.modisco.infra.facet.clientcontext"
-            category="org.eclipse.gmt.modisco.infra.facet.validation"/>
+            context="org.eclipse.modisco.infra.facet.clientcontext"
+            category="org.eclipse.modisco.infra.facet.validation"/>
    </extension> 
    
    <!-- so that model editors know they can open it -->
@@ -628,7 +628,7 @@ self.extendedPackage->notEmpty()
       <content-type
             base-type="org.eclipse.emf.ecore.xmi"
             file-extensions="facetSet"
-            id="org.eclipse.gmt.modisco.infra.facet.contenttype"
+            id="org.eclipse.modisco.infra.facet.contenttype"
             name="%content-type.name"
             priority="normal">
       </content-type>

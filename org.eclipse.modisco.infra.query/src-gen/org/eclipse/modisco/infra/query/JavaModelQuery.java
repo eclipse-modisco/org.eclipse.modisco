@@ -48,7 +48,7 @@ public interface JavaModelQuery extends ModelQuery {
 	 * <!-- end-user-doc --> <!-- begin-model-doc -->
 	 * JavaModelQuery::implemenationClassName contains the qualified name of the
 	 * class implementing the query. This class must be a sub class of
-	 * org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery. The Java
+	 * org.eclipse.modisco.infra.query.core.java.IJavaModelQuery. The Java
 	 * implementation class must be stored in the same plug-in (or plug-in
 	 * project) than the query model. <!-- end-model-doc -->
 	 * 

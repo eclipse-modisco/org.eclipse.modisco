@@ -18,14 +18,14 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="org.eclipse.gmt.modisco"
+            id="org.eclipse.modisco"
             name="%new.category.name">
       </category>
       <wizard
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.common.ui.internal.wizards.NewProjectWizard"
             icon="icons/modisconewproject.gif"
-            id="org.eclipse.gmt.modisco.NewProjectWizard"
+            id="org.eclipse.modisco.NewProjectWizard"
             name="%new.moDiscoProject.name"
             project="true">
          <description>
@@ -37,15 +37,15 @@
          point="org.eclipse.ui.ide.projectNatureImages">
       <image
             icon="icons/modiscoprojectimage8x9.gif"
-            id="org.eclipse.gmt.modisco.common.ProjectNatureImage"
-            natureId="org.eclipse.gmt.modisco.common.ProjectNature">
+            id="org.eclipse.modisco.common.ProjectNatureImage"
+            natureId="org.eclipse.modisco.common.ProjectNature">
       </image>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             class="org.eclipse.modisco.infra.common.ui.internal.preferences.MoDiscoRootPreferencePage"
-            id="org.eclipse.gmt.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
+            id="org.eclipse.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
             name="%modisco.preferencepage.name">
       </page>
    </extension>
@@ -55,13 +55,13 @@
    <objectContribution
             objectClass="org.eclipse.core.resources.IProject"
             adaptable="true"
-            id="org.eclipse.gmt.modisco.infra.common.ui.convertToMoDiscoProject">
+            id="org.eclipse.modisco.infra.common.ui.convertToMoDiscoProject">
        	 <visibility>
         	<not>
         	<or>
             <objectState 
 	            name="projectNature" 
-	            value="org.eclipse.gmt.modisco.common.ProjectNature"/>
+	            value="org.eclipse.modisco.common.ProjectNature"/>
 	        <objectState
 	        	name="open"
 	        	value="false"/>
@@ -73,7 +73,7 @@
                class="org.eclipse.modisco.infra.common.ui.internal.actions.ConvertToMoDiscoProjectAction"
                enablesFor="+"
                icon="icons/logoMoDiscoMini.gif"
-               id="org.eclipse.gmt.modisco.infra.common.ui.convertToMoDiscoProject"
+               id="org.eclipse.modisco.infra.common.ui.convertToMoDiscoProject"
                label="%convertToMoDiscoProject.action.label"
                menubarPath="org.eclipse.ui.projectConfigure/group0">
       	</action>

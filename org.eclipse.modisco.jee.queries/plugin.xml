@@ -12,13 +12,13 @@ Contributors:
     Nicolas Guyomar (Mia-Software) - initial API and implementation
 -->
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="jeeEjbAnnotations.querySet"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="jeeServletAnnotations.querySet"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="jeeJpaAnnotations.querySet"/>
    </extension>
 </plugin>

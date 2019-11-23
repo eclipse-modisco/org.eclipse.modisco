@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.gmt.modisco.omg.kdm.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.omg.kdm.edit;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.modisco.omg.kdm.core.provider.KdmEditPlugin$Implementation
@@ -9,7 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.omg.kdm;visibility:=reexport,
+ org.eclipse.modisco.omg.kdm;visibility:=reexport,
  org.eclipse.emf.edit
 Bundle-ActivationPolicy: lazy
-Automatic-Module-Name: org.eclipse.gmt.modisco.omg.kdm.edit
+Automatic-Module-Name: org.eclipse.modisco.omg.kdm.edit

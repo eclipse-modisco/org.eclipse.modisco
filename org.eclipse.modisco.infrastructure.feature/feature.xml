@@ -16,7 +16,7 @@
       label="%featureName"
       version="1.5.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.gmt.modisco.infra.common.core"
+      plugin="org.eclipse.modisco.infra.common.core"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -42,91 +42,91 @@ http://www.eclipse.org/legal/epl-v10.html
          version="0.0.0"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.common.core"
+         id="org.eclipse.modisco.infra.common.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
+         id="org.eclipse.modisco.tool.metricsvisualizationbuilder"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser"
+         id="org.eclipse.modisco.infra.browser"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom"
+         id="org.eclipse.modisco.infra.browser.custom"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom.core"
+         id="org.eclipse.modisco.infra.browser.custom.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom.editor"
+         id="org.eclipse.modisco.infra.browser.custom.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom.ui"
+         id="org.eclipse.modisco.infra.browser.custom.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query"
+         id="org.eclipse.modisco.infra.query"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query.core"
+         id="org.eclipse.modisco.infra.query.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query.edit"
+         id="org.eclipse.modisco.infra.query.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query.editor"
+         id="org.eclipse.modisco.infra.query.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query.jxpath"
+         id="org.eclipse.modisco.infra.query.jxpath"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.query.ui"
+         id="org.eclipse.modisco.infra.query.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -140,49 +140,49 @@ http://www.eclipse.org/legal/epl-v10.html
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.common.ui"
+         id="org.eclipse.modisco.infra.common.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.facet"
+         id="org.eclipse.modisco.infra.facet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.facet.core"
+         id="org.eclipse.modisco.infra.facet.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.facet.edit"
+         id="org.eclipse.modisco.infra.facet.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.facet.editor"
+         id="org.eclipse.modisco.infra.facet.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.facet.ui"
+         id="org.eclipse.modisco.infra.facet.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.uicore"
+         id="org.eclipse.modisco.infra.browser.uicore"
          download-size="0"
          install-size="0"
          version="0.0.0"

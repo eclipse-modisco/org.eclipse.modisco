@@ -35,7 +35,7 @@ See more on the dedicated web site : [http://www.omg.org/technology/kdm/index.ht
 
 == Included plug-ins ==
 
-* KDM metamodel : org.eclipse.gmt.modisco.omg.kdm
+* KDM metamodel : org.eclipse.modisco.omg.kdm
 * KDM Source discoverer : org.eclipse.modisco.kdm.source.discoverer
 * KDM to UML discoverer : org.eclipse.modisco.kdm.uml2converter
 

@@ -143,7 +143,7 @@ public interface AggregatedRelationship extends ModelElement {
 	 * @return the value of the '<em>Density</em>' attribute.
 	 * @see #setDensity(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.core.CorePackage#getAggregatedRelationship_Density()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getDensity();

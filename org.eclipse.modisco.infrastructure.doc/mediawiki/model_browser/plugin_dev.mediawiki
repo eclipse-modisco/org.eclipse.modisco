@@ -1,5 +1,5 @@
 == UI Core ==
-Plug-in "org.eclipse.gmt.modisco.infra.browser.uicore" contains the core parts of the browser, that can be integrated in any tree viewer.
+Plug-in "org.eclipse.modisco.infra.browser.uicore" contains the core parts of the browser, that can be integrated in any tree viewer.
 It provides a tree content provider, a label provider, and a customization manager.
 
 <code>CustomizableModelContentProvider</code> and <code>CustomizableModelLabelProvider</code> are abstract classes that must be sub-classed, providing an instance of a <code>CustomizationManager</code>.

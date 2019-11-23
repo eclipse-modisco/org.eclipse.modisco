@@ -29,18 +29,18 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.BreakStatement#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.BreakStatement#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getBreakStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getBreakStatement()
  * @model
  * @generated
  */
 public interface BreakStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Label</em>' reference isn't clear,
@@ -49,15 +49,15 @@ public interface BreakStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' reference.
 	 * @see #setLabel(LabeledStatement)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getBreakStatement_Label()
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInBreakStatements
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getBreakStatement_Label()
+	 * @see org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements
 	 * @model opposite="usagesInBreakStatements" required="true" ordered="false"
 	 * @generated
 	 */
 	LabeledStatement getLabel();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.BreakStatement#getLabel <em>Label</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.BreakStatement#getLabel <em>Label</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Label</em>' reference.

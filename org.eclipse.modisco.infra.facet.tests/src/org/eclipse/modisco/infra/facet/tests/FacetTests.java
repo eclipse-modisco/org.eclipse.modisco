@@ -8,7 +8,7 @@
  * Contributors:
  *    Gregoire DUPE (Mia-Software)
  *    Nicolas Bros (Mia-Software)
- *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.modisco.infra.facet.tests;
 
@@ -608,9 +608,9 @@ public class FacetTests {
 				statusList.add(status);
 			}
 		};
-		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.gmt.modisco.infra.facet.core"));
+		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.modisco.infra.facet.core"));
 		log.addLogListener(listener);
-		ProjectUtils.importPlugin(Platform.getBundle("org.eclipse.gmt.modisco.java.queries"),
+		ProjectUtils.importPlugin(Platform.getBundle("org.eclipse.modisco.java.queries"),
 				new IFilter() {
 					public boolean filter(final Object object) {
 						boolean result = true;
@@ -651,18 +651,18 @@ public class FacetTests {
 				statusList.add(status);
 			}
 		};
-		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.gmt.modisco.infra.facet.core"));
+		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.modisco.infra.facet.core"));
 		log.addLogListener(listener);
 		// Clean the workspace
 		ResourcesPlugin.getWorkspace().getRoot().delete(true, true, new NullProgressMonitor());
 		ResourcesPlugin.getWorkspace().build(IncrementalProjectBuilder.CLEAN_BUILD,
 				new NullProgressMonitor());
 		joinJobs();
-		// create the project org.eclipse.gmt.modisco.java.queries
+		// create the project org.eclipse.modisco.java.queries
 		final IProject project = ResourcesPlugin.getWorkspace().getRoot()
-				.getProject("org.eclipse.gmt.modisco.java.queries");
+				.getProject("org.eclipse.modisco.java.queries");
 		ProjectUtils.create(project, new NullProgressMonitor());
-		Bundle javaQueriesBundle = Platform.getBundle("org.eclipse.gmt.modisco.java.queries");
+		Bundle javaQueriesBundle = Platform.getBundle("org.eclipse.modisco.java.queries");
 		// create the querySet
 		FileUtils.copyFileFromBundle("META-INF/MANIFEST.MF", project, "META-INF/MANIFEST.MF",
 				javaQueriesBundle);
@@ -744,9 +744,9 @@ public class FacetTests {
 				statusList.add(status);
 			}
 		};
-		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.gmt.modisco.infra.facet.core"));
+		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.modisco.infra.facet.core"));
 		log.addLogListener(listener);
-		String pluginName = "org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk";
+		String pluginName = "org.eclipse.modisco.infra.browser.custom.examples.java.jdk";
 		ProjectUtils.importPlugin(Platform.getBundle(pluginName), new IFilter() {
 			public boolean filter(final Object object) {
 				boolean result = true;

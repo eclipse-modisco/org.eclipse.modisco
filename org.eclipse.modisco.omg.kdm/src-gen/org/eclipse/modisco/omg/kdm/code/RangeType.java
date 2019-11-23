@@ -44,7 +44,7 @@ public interface RangeType extends DerivedType {
 	 * @return the value of the '<em>Lower</em>' attribute.
 	 * @see #setLower(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getRangeType_Lower()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getLower();
@@ -70,7 +70,7 @@ public interface RangeType extends DerivedType {
 	 * @return the value of the '<em>Upper</em>' attribute.
 	 * @see #setUpper(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getRangeType_Upper()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getUpper();

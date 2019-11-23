@@ -14,14 +14,14 @@ Contributors:
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.gmt.modisco"
+            id="org.eclipse.modisco"
             name="%category.name">
       </category>
       <view
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.facet.ui.views.FacetView"
             icon="icons/Facet.gif"
-            id="org.eclipse.gmt.modisco.infra.facet.ui.view"
+            id="org.eclipse.modisco.infra.facet.ui.view"
             name="%catalogView.name"
             restorable="true">
       </view>

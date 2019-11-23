@@ -50,10 +50,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getMethod <em>Method</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *

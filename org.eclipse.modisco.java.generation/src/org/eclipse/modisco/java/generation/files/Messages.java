@@ -18,7 +18,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.java.generation.files.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.java.generation.files.messages"; //$NON-NLS-1$
 	public static String GenerateJava_0;
 	static {
 		// initialize resource bundle

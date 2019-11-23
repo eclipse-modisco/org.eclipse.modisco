@@ -24,7 +24,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public final class MoDiscoBrowserPlugin extends EMFPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.browser"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.browser"; //$NON-NLS-1$
 
 	/** Keep track of the singleton. */
 	// public static final MoDiscoBrowserPlugin INSTANCE = new

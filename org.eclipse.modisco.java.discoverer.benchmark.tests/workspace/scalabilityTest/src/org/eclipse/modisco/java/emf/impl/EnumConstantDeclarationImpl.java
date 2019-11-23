@@ -51,11 +51,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
  * </p>
  *

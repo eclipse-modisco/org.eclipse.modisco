@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayType#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayType#getElementType <em>Element Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayType()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayType()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface ArrayType extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dimensions</em>' attribute.
 	 * @see #setDimensions(int)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayType_Dimensions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayType_Dimensions()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	int getDimensions();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Dimensions</em>' attribute.
@@ -75,14 +75,14 @@ public interface ArrayType extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Type</em>' containment reference.
 	 * @see #setElementType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayType_ElementType()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayType_ElementType()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getElementType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayType#getElementType <em>Element Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayType#getElementType <em>Element Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Element Type</em>' containment reference.

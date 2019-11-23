@@ -73,7 +73,7 @@ public interface DataElement extends ComputationalObject {
 	 * @return the value of the '<em>Ext</em>' attribute.
 	 * @see #setExt(String)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getDataElement_Ext()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getExt();
@@ -99,7 +99,7 @@ public interface DataElement extends ComputationalObject {
 	 * @return the value of the '<em>Size</em>' attribute.
 	 * @see #setSize(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getDataElement_Size()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getSize();

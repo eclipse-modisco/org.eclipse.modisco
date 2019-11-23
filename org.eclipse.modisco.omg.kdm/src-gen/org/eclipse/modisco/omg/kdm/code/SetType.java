@@ -43,7 +43,7 @@ public interface SetType extends DerivedType {
 	 * @return the value of the '<em>Size</em>' attribute.
 	 * @see #setSize(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getSetType_Size()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getSize();

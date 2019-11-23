@@ -149,7 +149,7 @@ public class JavaDiscovererCDO extends DiscoverJavaModelFromJavaProject {
 			if (e.getCause() instanceof org.eclipse.net4j.util.concurrent.TimeoutRuntimeException) {
 				MoDiscoLogger.logError(
 						"If you are using the JavaDiscovererCDO in a unit test, the CDO may be " //$NON-NLS-1$
-								+ "not already started. You should increase the org.eclipse.gmt" //$NON-NLS-1$
+								+ "not already started. You should increase the org.eclipse" //$NON-NLS-1$
 								+ ".modisco.java.discoverer.tests.cdo.server.AbstractCDOServer." //$NON-NLS-1$
 								+ "SLEEP_TIME_AFTER_LAUNCHE constant", //$NON-NLS-1$
 						Activator.getDefault());

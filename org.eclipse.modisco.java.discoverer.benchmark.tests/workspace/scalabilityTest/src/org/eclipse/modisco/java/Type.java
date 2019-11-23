@@ -30,19 +30,19 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getType()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getType()
  * @model abstract="true"
  * @generated
  */
 public interface Type extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Usages In Type Access</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeAccess}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.TypeAccess#getType <em>Type</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeAccess}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.TypeAccess#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usages In Type Access</em>' reference list isn't clear,
@@ -50,8 +50,8 @@ public interface Type extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usages In Type Access</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getType_UsagesInTypeAccess()
-	 * @see org.eclipse.gmt.modisco.java.TypeAccess#getType
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getType_UsagesInTypeAccess()
+	 * @see org.eclipse.modisco.java.TypeAccess#getType
 	 * @model opposite="type" ordered="false"
 	 * @generated
 	 */

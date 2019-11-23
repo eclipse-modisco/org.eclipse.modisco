@@ -944,7 +944,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package createPackage() {
+	public org.eclipse.modisco.java.Package createPackage() {
 		PackageImpl package_ = new PackageImpl();
 		return package_;
 	}

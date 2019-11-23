@@ -21,7 +21,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.query.jxpath"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.query.jxpath"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

@@ -32,19 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Manifest#getMainAttributes <em>Main Attributes</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Manifest#getEntryAttributes <em>Entry Attributes</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Manifest#getMainAttributes <em>Main Attributes</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Manifest#getEntryAttributes <em>Entry Attributes</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getManifest()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getManifest()
  * @model
  * @generated
  */
 public interface Manifest extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Main Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ManifestAttribute}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ManifestAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Main Attributes</em>' containment reference list isn't clear,
@@ -52,7 +52,7 @@ public interface Manifest extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Main Attributes</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getManifest_MainAttributes()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getManifest_MainAttributes()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface Manifest extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Entry Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ManifestEntry}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ManifestEntry}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entry Attributes</em>' containment reference list isn't clear,
@@ -68,7 +68,7 @@ public interface Manifest extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entry Attributes</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getManifest_EntryAttributes()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getManifest_EntryAttributes()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */

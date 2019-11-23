@@ -13,31 +13,31 @@ Contributors:
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="_example_jdkAndEclipseQuerySet">
   <associatedMetamodels href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
-  <queries xsi:type="query:JavaModelQuery" name="isEObject" description="returns true if the class is an EObject class" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsEObject">
+  <queries xsi:type="query:JavaModelQuery" name="isEObject" description="returns true if the class is an EObject class" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsEObject">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isIndirectEObject" description="true if the class is indirectly an EObject " implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsIndirectEObject">
+  <queries xsi:type="query:JavaModelQuery" name="isIndirectEObject" description="true if the class is indirectly an EObject " implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsIndirectEObject">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isImpl" description="true if the class is an implementation one" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsImpl">
+  <queries xsi:type="query:JavaModelQuery" name="isImpl" description="true if the class is an implementation one" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsImpl">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isCollection" description="true if the TypeDeclaration is a Collection" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsCollection">
+  <queries xsi:type="query:JavaModelQuery" name="isCollection" description="true if the TypeDeclaration is a Collection" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsCollection">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isThrowable" description="true if the TypeDeclaration is Throwable" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsThrowable">
+  <queries xsi:type="query:JavaModelQuery" name="isThrowable" description="true if the TypeDeclaration is Throwable" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsThrowable">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isRunnable" description="true if the TypeDeclaration is Runnable" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsRunnable">
+  <queries xsi:type="query:JavaModelQuery" name="isRunnable" description="true if the TypeDeclaration is Runnable" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsRunnable">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isPlugin" description="true if the TypeDeclaration is an Eclipse plugin" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsPlugin">
+  <queries xsi:type="query:JavaModelQuery" name="isPlugin" description="true if the TypeDeclaration is an Eclipse plugin" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsPlugin">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
@@ -49,11 +49,11 @@ Contributors:
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//NamedElement"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isEclipseUI" description="true if the TypeDeclaration deals with User Interface components (JFace, SWT, ...)" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.IsEclipseUI">
+  <queries xsi:type="query:JavaModelQuery" name="isEclipseUI" description="true if the TypeDeclaration deals with User Interface components (JFace, SWT, ...)" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.IsEclipseUI">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getSubTypes" description="returns subtypes" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.GetSubTypes">
+  <queries xsi:type="query:JavaModelQuery" name="getSubTypes" description="returns subtypes" upperBound="-1" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.GetSubTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//TypeDeclaration"/>
   </queries>

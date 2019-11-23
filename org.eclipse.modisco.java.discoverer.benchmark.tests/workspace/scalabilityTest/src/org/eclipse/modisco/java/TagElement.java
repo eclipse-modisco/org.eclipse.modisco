@@ -30,12 +30,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TagElement#getTagName <em>Tag Name</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.TagElement#getFragments <em>Fragments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TagElement#getTagName <em>Tag Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TagElement#getFragments <em>Fragments</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTagElement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTagElement()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface TagElement extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tag Name</em>' attribute.
 	 * @see #setTagName(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTagElement_TagName()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTagElement_TagName()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getTagName();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TagElement#getTagName <em>Tag Name</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TagElement#getTagName <em>Tag Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tag Name</em>' attribute.
@@ -68,7 +68,7 @@ public interface TagElement extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Fragments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ASTNode}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ASTNode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fragments</em>' containment reference list isn't clear,
@@ -76,7 +76,7 @@ public interface TagElement extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fragments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTagElement_Fragments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTagElement_Fragments()
 	 * @model containment="true"
 	 * @generated
 	 */

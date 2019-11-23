@@ -11,7 +11,7 @@
  -->
 
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="resources/bug311684.querySet"/>
    </extension>
 </plugin>

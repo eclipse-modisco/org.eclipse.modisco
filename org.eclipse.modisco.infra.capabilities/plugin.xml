@@ -15,25 +15,25 @@
          point="org.eclipse.ui.activities">
       <activity
             description="%activity.description"
-            id="org.eclipse.gmt.modisco.activities.activity"
+            id="org.eclipse.modisco.activities.activity"
             name="%activity.name">
       </activity>
       <category
             description="%category.description"
-            id="org.eclipse.gmt.modisco.activities.category"
+            id="org.eclipse.modisco.activities.category"
             name="%category.name">
       </category>
       <categoryActivityBinding
-            activityId="org.eclipse.gmt.modisco.activities.activity"
-            categoryId="org.eclipse.gmt.modisco.activities.category">
+            activityId="org.eclipse.modisco.activities.activity"
+            categoryId="org.eclipse.modisco.activities.category">
       </categoryActivityBinding>
       <activityPatternBinding
-            activityId="org.eclipse.gmt.modisco.activities.activity"
+            activityId="org.eclipse.modisco.activities.activity"
             isEqualityPattern="false"
             pattern="org\.eclipse(\.gmt)?\.modisco\..*/.*">
       </activityPatternBinding>
       <defaultEnablement
-            id="org.eclipse.gmt.modisco.activities.activity">
+            id="org.eclipse.modisco.activities.activity">
       </defaultEnablement>
    </extension>
 </plugin>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.m2m.atl.adt.launching.atlTransformation">
-<stringAttribute key="ATL File Name" value="/org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart/Transformations/SpreadsheetMLSimplified2Trace.atl"/>
+<stringAttribute key="ATL File Name" value="/org.eclipse.modisco.usecase.perfannotatedumlstatechart/Transformations/SpreadsheetMLSimplified2Trace.atl"/>
 <stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
 <booleanAttribute key="AllowInterModelReferences" value="false"/>
 <mapAttribute key="Input">
@@ -22,12 +22,12 @@
 <mapEntry key="OUT" value="Trace"/>
 </mapAttribute>
 <mapAttribute key="Path">
-<mapEntry key="Trace" value="/org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart/Metamodels/Trace.ecore"/>
-<mapEntry key="IN" value="/org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart/Outputs/TraceSamples-Excel.xmi"/>
-<mapEntry key="OUT" value="/org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart/Outputs/TraceSamples-Trace.xmi"/>
-<mapEntry key="SpreadsheetMLSimplified" value="/org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart/Metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"/>
+<mapEntry key="Trace" value="/org.eclipse.modisco.usecase.perfannotatedumlstatechart/Metamodels/Trace.ecore"/>
+<mapEntry key="IN" value="/org.eclipse.modisco.usecase.perfannotatedumlstatechart/Outputs/TraceSamples-Excel.xmi"/>
+<mapEntry key="OUT" value="/org.eclipse.modisco.usecase.perfannotatedumlstatechart/Outputs/TraceSamples-Trace.xmi"/>
+<mapEntry key="SpreadsheetMLSimplified" value="/org.eclipse.modisco.usecase.perfannotatedumlstatechart/Metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"/>
 </mapAttribute>
-<stringAttribute key="Project Name" value="org.eclipse.gmt.modisco.usecase.perfannotatedumlstatechart"/>
+<stringAttribute key="Project Name" value="org.eclipse.modisco.usecase.perfannotatedumlstatechart"/>
 <listAttribute key="Superimpose"/>
 <booleanAttribute key="continueAfterError" value="false"/>
 <booleanAttribute key="disableAttributeHelperCache" value="false"/>

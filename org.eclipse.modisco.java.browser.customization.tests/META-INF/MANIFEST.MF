@@ -6,11 +6,11 @@ Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.java.browser.customization.test.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.facet.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0",
+ org.eclipse.modisco.infra.facet.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.core;bundle-version="0.7.0",
  org.eclipse.core.resources;bundle-version="3.5.0",
- org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.java;bundle-version="0.7.0",
+ org.eclipse.modisco.infra.query.core;bundle-version="0.8.0",
+ org.eclipse.modisco.java;bundle-version="0.7.0",
  org.junit;bundle-version="4.7.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -19,7 +19,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.prefuse.examples.treeview.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.prefuse.examples.treeview.messages"; //$NON-NLS-1$
 	public static String TreeView_UnrecognizedOrientationValue;
 	static {
 		// initialize resource bundle

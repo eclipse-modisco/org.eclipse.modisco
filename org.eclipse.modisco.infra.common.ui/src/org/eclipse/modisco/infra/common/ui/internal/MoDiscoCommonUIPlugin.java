@@ -19,9 +19,9 @@ import org.osgi.framework.BundleContext;
 public class MoDiscoCommonUIPlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.common.ui.internal"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.common.ui.internal"; //$NON-NLS-1$
 	// this is here to avoid explicitly depending on the browser
-	public static final String MODISCO_BROWSER_ID = "org.eclipse.gmt.modisco.infra.browser.editorID"; //$NON-NLS-1$
+	public static final String MODISCO_BROWSER_ID = "org.eclipse.modisco.infra.browser.editorID"; //$NON-NLS-1$
 
 	// The shared instance
 	private static MoDiscoCommonUIPlugin plugin;

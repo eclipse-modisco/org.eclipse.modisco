@@ -156,7 +156,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 			IFile manifestFile = project.getFile("META-INF/MANIFEST.MF"); //$NON-NLS-1$
 			if (manifestFile.exists()) {
 				String contents = FileUtils.readInputStream(manifestFile.getContents(true));
-				contents = contents.replaceFirst("Bundle-SymbolicName:\\s*org\\.eclipse\\.gmt\\.", //$NON-NLS-1$
+				contents = contents.replaceFirst("Bundle-SymbolicName:\\s*org\\.eclipse\\.", //$NON-NLS-1$
 						"Bundle-SymbolicName: "); //$NON-NLS-1$
 				manifestFile.setContents(new ByteArrayInputStream(contents.getBytes()), true, true,
 						new NullProgressMonitor());

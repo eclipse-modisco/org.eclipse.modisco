@@ -5,16 +5,16 @@
     nsURI="http://www.eclipse.org/MoDisco/eclipseplugin" nsPrefix="eclipseplugin">
   <eClassifiers xsi:type="ecore:EClass" name="EclipsePlugin">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bundle" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.manifest/model/Manifest.ecore#//Bundle"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="javaModel" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//Model"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inventoryProject" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/Project"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="classPathRoot" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Root"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buildProperties" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginProperties" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bundleProperties" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="javaModel" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//Model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inventoryProject" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classPathRoot" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buildProperties" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginProperties" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bundleProperties" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//code/CompilationUnit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputDirectory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="srcDirectory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginXml" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Root"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pluginXml" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.xml/model/xml.ecore#//Root"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -92,12 +92,12 @@
 								</entries>
 								<jars>
 									<jar>p2.eclipse-plugin:org.eclipse.emf.ecore</jar>
-									<jar>org.eclipse.mdt:org.eclipse.gmt.modisco.java</jar>
+									<jar>org.eclipse.mdt:org.eclipse.modisco.java</jar>
 								</jars>
 							</acceleoProject>
 							<packagesToRegister>
 								<packageToRegister>org.eclipse.emf.ecore.EcorePackage</packageToRegister>
-								<packageToRegister>org.eclipse.gmt.modisco.java.emf.JavaPackage</packageToRegister>
+								<packageToRegister>org.eclipse.modisco.java.emf.JavaPackage</packageToRegister>
 							</packagesToRegister>
 							<uriHandler>org.eclipse.acceleo.maven.AcceleoURIHandler</uriHandler>
 						</configuration>

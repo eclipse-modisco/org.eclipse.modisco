@@ -43,17 +43,17 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl#getOwnedElements <em>Owned Elements</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl#getModel <em>Model</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl#getOwnedPackages <em>Owned Packages</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getOwnedElements <em>Owned Elements</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getModel <em>Model</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getOwnedPackages <em>Owned Packages</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.modisco.java.Package {
+public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco.java.Package {
 	/**
 	 * The cached value of the '{@link #getOwnedElements() <em>Owned Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<org.eclipse.gmt.modisco.java.Package> ownedPackages;
+	protected EList<org.eclipse.modisco.java.Package> ownedPackages;
 
 	/**
 	 * The cached value of the '{@link #getUsagesInPackageAccess() <em>Usages In Package Access</em>}' reference list.
@@ -161,9 +161,9 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<org.eclipse.gmt.modisco.java.Package> getOwnedPackages() {
+	public EList<org.eclipse.modisco.java.Package> getOwnedPackages() {
 		if (ownedPackages == null) {
-			ownedPackages = new EObjectContainmentWithInverseEList<org.eclipse.gmt.modisco.java.Package>(org.eclipse.gmt.modisco.java.Package.class, this, JavaPackage.PACKAGE__OWNED_PACKAGES, JavaPackage.PACKAGE__PACKAGE);
+			ownedPackages = new EObjectContainmentWithInverseEList<org.eclipse.modisco.java.Package>(org.eclipse.modisco.java.Package.class, this, JavaPackage.PACKAGE__OWNED_PACKAGES, JavaPackage.PACKAGE__PACKAGE);
 		}
 		return ownedPackages;
 	}
@@ -173,9 +173,9 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package getPackage() {
+	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE) return null;
-		return (org.eclipse.gmt.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eContainer();
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPackage(org.eclipse.gmt.modisco.java.Package newPackage, NotificationChain msgs) {
+	public NotificationChain basicSetPackage(org.eclipse.modisco.java.Package newPackage, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newPackage, JavaPackage.PACKAGE__PACKAGE, msgs);
 		return msgs;
 	}
@@ -193,7 +193,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(org.eclipse.gmt.modisco.java.Package newPackage) {
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
@@ -201,7 +201,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newPackage != null)
-				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__OWNED_PACKAGES, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__OWNED_PACKAGES, org.eclipse.modisco.java.Package.class, msgs);
 			msgs = basicSetPackage(newPackage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -241,7 +241,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 			case JavaPackage.PACKAGE__PACKAGE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetPackage((org.eclipse.gmt.modisco.java.Package)otherEnd, msgs);
+				return basicSetPackage((org.eclipse.modisco.java.Package)otherEnd, msgs);
 			case JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsagesInPackageAccess()).basicAdd(otherEnd, msgs);
 		}
@@ -281,7 +281,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 			case JavaPackage.PACKAGE__MODEL:
 				return eInternalContainer().eInverseRemove(this, JavaPackage.MODEL__OWNED_ELEMENTS, Model.class, msgs);
 			case JavaPackage.PACKAGE__PACKAGE:
-				return eInternalContainer().eInverseRemove(this, JavaPackage.PACKAGE__OWNED_PACKAGES, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				return eInternalContainer().eInverseRemove(this, JavaPackage.PACKAGE__OWNED_PACKAGES, org.eclipse.modisco.java.Package.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -326,10 +326,10 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 				return;
 			case JavaPackage.PACKAGE__OWNED_PACKAGES:
 				getOwnedPackages().clear();
-				getOwnedPackages().addAll((Collection<? extends org.eclipse.gmt.modisco.java.Package>)newValue);
+				getOwnedPackages().addAll((Collection<? extends org.eclipse.modisco.java.Package>)newValue);
 				return;
 			case JavaPackage.PACKAGE__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)newValue);
+				setPackage((org.eclipse.modisco.java.Package)newValue);
 				return;
 			case JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS:
 				getUsagesInPackageAccess().clear();
@@ -357,7 +357,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.gmt.mod
 				getOwnedPackages().clear();
 				return;
 			case JavaPackage.PACKAGE__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)null);
+				setPackage((org.eclipse.modisco.java.Package)null);
 				return;
 			case JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS:
 				getUsagesInPackageAccess().clear();

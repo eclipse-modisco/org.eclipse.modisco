@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayAccess#getArray <em>Array</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayAccess#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayAccess#getArray <em>Array</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayAccess#getIndex <em>Index</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayAccess()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface ArrayAccess extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Array</em>' containment reference.
 	 * @see #setArray(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayAccess_Array()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayAccess_Array()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getArray();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayAccess#getArray <em>Array</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayAccess#getArray <em>Array</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Array</em>' containment reference.
@@ -75,14 +75,14 @@ public interface ArrayAccess extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' containment reference.
 	 * @see #setIndex(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayAccess_Index()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayAccess_Index()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getIndex();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayAccess#getIndex <em>Index</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayAccess#getIndex <em>Index</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Index</em>' containment reference.

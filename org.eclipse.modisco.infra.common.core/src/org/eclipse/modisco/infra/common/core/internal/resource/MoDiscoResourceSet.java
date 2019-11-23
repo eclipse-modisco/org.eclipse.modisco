@@ -44,7 +44,7 @@ import org.eclipse.modisco.infra.common.core.internal.protocol.ModiscoURIHandler
  */
 public final class MoDiscoResourceSet extends ResourceSetImpl {
 
-	private static final String DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/MoDiscoResoureSet/debug"; //$NON-NLS-1$
+	private static final String DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/MoDiscoResoureSet/debug"; //$NON-NLS-1$
 	public static final boolean DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(MoDiscoResourceSet.DEBUG_ID));
 

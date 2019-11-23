@@ -43,7 +43,7 @@ import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 public class NameProvidersRegistry extends AbstractRegistry {
 
 	private static final String METACLASS_ELEMENT = "metaclass"; //$NON-NLS-1$
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.browser.uicore"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.infra.browser.uicore"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "naming"; //$NON-NLS-1$
 	private static final String METAMODEL_ID_ATTRIBUTE = "id"; //$NON-NLS-1$
 	private static final String METAMODEL_ELEMENT = "metamodel"; //$NON-NLS-1$

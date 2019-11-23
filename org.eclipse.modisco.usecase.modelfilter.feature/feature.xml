@@ -35,7 +35,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.prefuse"
+         id="org.eclipse.modisco.infra.prefuse"
          download-size="0"
          install-size="0"
          version="0.0.0"

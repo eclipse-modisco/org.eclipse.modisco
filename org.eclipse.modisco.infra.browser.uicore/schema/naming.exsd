@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.browser.uicore" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.browser.uicore" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.browser.uicore" id="naming" name="Naming of metamodel instances"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.browser.uicore" id="naming" name="Naming of metamodel instances"/>
       </appinfo>
       <documentation>
          Used to specify naming rules for model instances.
@@ -83,7 +83,7 @@
                   Specify a class that will provide a name for model instances.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.common.editor.extensions.naming.NameProvider"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.common.editor.extensions.naming.NameProvider"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -137,9 +137,9 @@
          The following is an example of a name provider extension definition for the Java metamodel:
 &lt;p&gt;
 &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.browser.uicore.naming&quot;&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.browser.uicore.naming&quot;&gt;
   &lt;metamodel id=&quot;http://www.eclipse.org/MoDisco/Java/0.2.incubation/java&quot;&gt;
-    &lt;nameProvider class=&quot;org.eclipse.gmt.modisco.java.browser.extension.NameProvider&quot;/&gt;
+    &lt;nameProvider class=&quot;org.eclipse.modisco.java.browser.extension.NameProvider&quot;/&gt;
   &lt;/metamodel&gt;
 &lt;/extension&gt;
 &lt;/pre&gt;
@@ -161,7 +161,7 @@
          <meta.section type="implementation"/>
       </appinfo>
       <documentation>
-         See plugin project &quot;org.eclipse.gmt.modisco.java.browser.extension&quot;, available at  https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.java.browser.extension
+         See plugin project &quot;org.eclipse.modisco.java.browser.extension&quot;, available at  https://dev.eclipse.org/svnroot/modeling/org.eclipse.modisco/deprecated/plugins/org.eclipse.modisco.java.browser.extension
       </documentation>
    </annotation>
 

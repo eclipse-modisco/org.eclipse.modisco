@@ -32,20 +32,20 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ASTNode#getComments <em>Comments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ASTNode#getComments <em>Comments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getASTNode()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getASTNode()
  * @model abstract="true"
  * @generated
  */
 public interface ASTNode extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Comment}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Comment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Comments</em>' containment reference list isn't clear,
@@ -53,7 +53,7 @@ public interface ASTNode extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Comments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getASTNode_Comments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getASTNode_Comments()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,14 +69,14 @@ public interface ASTNode extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Original Compilation Unit</em>' reference.
 	 * @see #setOriginalCompilationUnit(CompilationUnit)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getASTNode_OriginalCompilationUnit()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getASTNode_OriginalCompilationUnit()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	CompilationUnit getOriginalCompilationUnit();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Original Compilation Unit</em>' reference.
@@ -95,14 +95,14 @@ public interface ASTNode extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Original Class File</em>' reference.
 	 * @see #setOriginalClassFile(ClassFile)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getASTNode_OriginalClassFile()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getASTNode_OriginalClassFile()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	ClassFile getOriginalClassFile();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Original Class File</em>' reference.

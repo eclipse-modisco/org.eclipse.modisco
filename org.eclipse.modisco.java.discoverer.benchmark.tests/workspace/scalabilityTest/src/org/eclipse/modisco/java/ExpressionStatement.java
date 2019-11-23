@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getExpressionStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getExpressionStatement()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface ExpressionStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getExpressionStatement_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getExpressionStatement_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.

@@ -19,7 +19,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.prefuse.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.prefuse.messages"; //$NON-NLS-1$
 	public static String PrefuseGraphContainer_BalancedTree;
 	public static String PrefuseGraphContainer_Clique;
 	public static String PrefuseGraphContainer_Data;

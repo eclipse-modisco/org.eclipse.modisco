@@ -14,7 +14,7 @@
       label="MoDisco Examples"
       version="1.5.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.gmt.modisco.examples"
+      plugin="org.eclipse.modisco.examples"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -36,28 +36,28 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml"
+         id="org.eclipse.modisco.infra.browser.custom.examples.uml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk"
+         id="org.eclipse.modisco.infra.browser.custom.examples.java.jdk"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf"
+         id="org.eclipse.modisco.infra.browser.uicore.examples.cnf"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.examples"
+         id="org.eclipse.modisco.examples"
          download-size="0"
          install-size="0"
          version="0.0.0"

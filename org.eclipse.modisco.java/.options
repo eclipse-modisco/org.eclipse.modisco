@@ -1,5 +1,5 @@
 #master switch  
-org.eclipse.gmt.modisco.java/debug=false
-org.eclipse.gmt.modisco.java/debug/JavaUtil/getQualifiedName=false
-org.eclipse.gmt.modisco.java/debug/JavaUtil/getNamedElementByQualifiedName=false
+org.eclipse.modisco.java/debug=false
+org.eclipse.modisco.java/debug/JavaUtil/getQualifiedName=false
+org.eclipse.modisco.java/debug/JavaUtil/getNamedElementByQualifiedName=false
 

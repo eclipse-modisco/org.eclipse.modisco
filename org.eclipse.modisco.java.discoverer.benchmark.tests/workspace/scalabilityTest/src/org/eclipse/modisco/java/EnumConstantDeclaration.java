@@ -30,12 +30,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.EnumConstantDeclaration#getArguments <em>Arguments</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getEnumConstantDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getEnumConstantDeclaration()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface EnumConstantDeclaration extends BodyDeclaration, VariableDeclar
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Anonymous Class Declaration</em>' containment reference.
 	 * @see #setAnonymousClassDeclaration(AnonymousClassDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getEnumConstantDeclaration_AnonymousClassDeclaration()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getEnumConstantDeclaration_AnonymousClassDeclaration()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	AnonymousClassDeclaration getAnonymousClassDeclaration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Anonymous Class Declaration</em>' containment reference.
@@ -68,7 +68,7 @@ public interface EnumConstantDeclaration extends BodyDeclaration, VariableDeclar
 
 	/**
 	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Expression}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
@@ -76,7 +76,7 @@ public interface EnumConstantDeclaration extends BodyDeclaration, VariableDeclar
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getEnumConstantDeclaration_Arguments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getEnumConstantDeclaration_Arguments()
 	 * @model containment="true"
 	 * @generated
 	 */

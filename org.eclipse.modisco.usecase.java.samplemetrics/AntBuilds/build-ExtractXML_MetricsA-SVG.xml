@@ -33,7 +33,7 @@
 	<target name="loadMetamodels">
 
 		<!-- Load XML metamodel -->
-		<atl.loadModel modelHandler="EMF" name="XML" metamodel="%EMF" path="org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/Metamodels/XML.ecore" />
+		<atl.loadModel modelHandler="EMF" name="XML" metamodel="%EMF" path="org.eclipse.modisco.tool.metricsvisualizationbuilder/Metamodels/XML.ecore" />
 
 	</target>
 

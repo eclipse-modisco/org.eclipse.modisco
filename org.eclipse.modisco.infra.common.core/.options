@@ -1,8 +1,8 @@
 #master switch  
-org.eclipse.gmt.modisco.infra.common.core/debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/MoDiscoResoureSet/debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/ModiscoURIHandler/debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/scheduling_debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/MoDiscoCatalogBuilder/debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/EcoreCatalog/debug=false
-org.eclipse.gmt.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/bundle_debug=false
+org.eclipse.modisco.infra.common.core/debug=false
+org.eclipse.modisco.infra.common.core/debug/MoDiscoResoureSet/debug=false
+org.eclipse.modisco.infra.common.core/debug/ModiscoURIHandler/debug=false
+org.eclipse.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/scheduling_debug=false
+org.eclipse.modisco.infra.common.core/debug/MoDiscoCatalogBuilder/debug=false
+org.eclipse.modisco.infra.common.core/debug/EcoreCatalog/debug=false
+org.eclipse.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/bundle_debug=false

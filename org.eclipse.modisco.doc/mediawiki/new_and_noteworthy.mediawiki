@@ -34,7 +34,7 @@ Some unnecessary limitations have been removed for calling the java discoverer f
 
 === Java Generation API ===
 
-org.eclipse.gmt.modisco.java.generation.files.GenerateJavaExtended becomes the main public API. So Generate_JavaStructures is deprecated.
+org.eclipse.modisco.java.generation.files.GenerateJavaExtended becomes the main public API. So Generate_JavaStructures is deprecated.
 
 === Java to KDM discoverer ===
 An additional discoverer parameter allows to indicate some path to a custom .asm file to use while transforming Java models to KDM models.
@@ -78,7 +78,7 @@ To open this dialog, right-click and select '''Load MoDisco resource'''.
 == Model Browser ==
 
 Extracted core functionality from the browser, so that it can be reused in other plug-ins (see [../../org.eclipse.modisco.infrastructure.doc/mediawiki/model_browser/plugin_dev.html#UI_Core UI Core]).
-This makes it possible to embed model browsing functionality in any view. For example, plug-in [https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/examples/trunk/org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf infra.browser.uicore.examples.cnf] demonstrates how to integrate the model browser in the Project Explorer (using the Common Navigator Framework) :
+This makes it possible to embed model browsing functionality in any view. For example, plug-in [https://dev.eclipse.org/svnroot/modeling/org.eclipse.modisco/examples/trunk/org.eclipse.modisco.infra.browser.uicore.examples.cnf infra.browser.uicore.examples.cnf] demonstrates how to integrate the model browser in the Project Explorer (using the Common Navigator Framework) :
 
 [[Image:../img/ProjectExplorerWithModelContents.png]]
 

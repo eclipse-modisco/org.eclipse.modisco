@@ -109,11 +109,11 @@ public class Tests {
 			}
 		};
 		ILog log = Platform.getLog(Platform
-				.getBundle("org.eclipse.gmt.modisco.infra.common.core")); //$NON-NLS-1$
+				.getBundle("org.eclipse.modisco.infra.common.core")); //$NON-NLS-1$
 		log.addLogListener(listener);
 		ProjectUtils
 				.importPlugin(
-						Platform.getBundle("org.eclipse.gmt.modisco.infra.browser.custom.examples.uml"), //$NON-NLS-1$
+						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"), //$NON-NLS-1$
 						new IFilter() {
 							public boolean filter(final Object object) {
 								boolean result = true;
@@ -129,7 +129,7 @@ public class Tests {
 							}
 						});
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(
-				"org.eclipse.gmt.modisco.java.browser.customization"); //$NON-NLS-1$
+				"org.eclipse.modisco.java.browser.customization"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		log.removeLogListener(listener);
 		if (!statusList.isEmpty()) {

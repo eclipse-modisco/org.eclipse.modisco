@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.eclipse.gmt.modisco.java.emf.JavaFactory
+ * @see org.eclipse.modisco.java.emf.JavaFactory
  * @model kind="package"
  * @generated
  */
@@ -72,14 +72,14 @@ public interface JavaPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	JavaPackage eINSTANCE = org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl.init();
+	JavaPackage eINSTANCE = org.eclipse.modisco.java.emf.impl.JavaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ASTNodeImpl <em>AST Node</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ASTNodeImpl <em>AST Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ASTNodeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getASTNode()
+	 * @see org.eclipse.modisco.java.emf.impl.ASTNodeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getASTNode()
 	 * @generated
 	 */
 	int AST_NODE = 8;
@@ -121,11 +121,11 @@ public interface JavaPackage extends EPackage {
 	int AST_NODE_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl <em>Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.NamedElementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getNamedElement()
+	 * @see org.eclipse.modisco.java.emf.impl.NamedElementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNamedElement()
 	 * @generated
 	 */
 	int NAMED_ELEMENT = 65;
@@ -194,11 +194,11 @@ public interface JavaPackage extends EPackage {
 	int NAMED_ELEMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.BodyDeclarationImpl <em>Body Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl <em>Body Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.BodyDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getBodyDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBodyDeclaration()
 	 * @generated
 	 */
 	int BODY_DECLARATION = 19;
@@ -303,11 +303,11 @@ public interface JavaPackage extends EPackage {
 	int BODY_DECLARATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractMethodDeclarationImpl <em>Abstract Method Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl <em>Abstract Method Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AbstractMethodDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAbstractMethodDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	int ABSTRACT_METHOD_DECLARATION = 0;
@@ -466,11 +466,11 @@ public interface JavaPackage extends EPackage {
 	int ABSTRACT_METHOD_DECLARATION_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractMethodInvocationImpl <em>Abstract Method Invocation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AbstractMethodInvocationImpl <em>Abstract Method Invocation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AbstractMethodInvocationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAbstractMethodInvocation()
+	 * @see org.eclipse.modisco.java.emf.impl.AbstractMethodInvocationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAbstractMethodInvocation()
 	 * @generated
 	 */
 	int ABSTRACT_METHOD_INVOCATION = 1;
@@ -539,11 +539,11 @@ public interface JavaPackage extends EPackage {
 	int ABSTRACT_METHOD_INVOCATION_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl <em>Abstract Type Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl <em>Abstract Type Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAbstractTypeDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	int ABSTRACT_TYPE_DECLARATION = 2;
@@ -702,11 +702,11 @@ public interface JavaPackage extends EPackage {
 	int ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ExpressionImpl <em>Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.ExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getExpression()
 	 * @generated
 	 */
 	int EXPRESSION = 41;
@@ -748,11 +748,11 @@ public interface JavaPackage extends EPackage {
 	int EXPRESSION_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeQualifiedExpressionImpl <em>Abstract Type Qualified Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AbstractTypeQualifiedExpressionImpl <em>Abstract Type Qualified Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeQualifiedExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAbstractTypeQualifiedExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.AbstractTypeQualifiedExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAbstractTypeQualifiedExpression()
 	 * @generated
 	 */
 	int ABSTRACT_TYPE_QUALIFIED_EXPRESSION = 3;
@@ -803,11 +803,11 @@ public interface JavaPackage extends EPackage {
 	int ABSTRACT_TYPE_QUALIFIED_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractVariablesContainerImpl <em>Abstract Variables Container</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AbstractVariablesContainerImpl <em>Abstract Variables Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AbstractVariablesContainerImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAbstractVariablesContainer()
+	 * @see org.eclipse.modisco.java.emf.impl.AbstractVariablesContainerImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAbstractVariablesContainer()
 	 * @generated
 	 */
 	int ABSTRACT_VARIABLES_CONTAINER = 4;
@@ -867,11 +867,11 @@ public interface JavaPackage extends EPackage {
 	int ABSTRACT_VARIABLES_CONTAINER_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AnnotationImpl <em>Annotation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AnnotationImpl <em>Annotation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AnnotationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAnnotation()
+	 * @see org.eclipse.modisco.java.emf.impl.AnnotationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAnnotation()
 	 * @generated
 	 */
 	int ANNOTATION = 5;
@@ -931,11 +931,11 @@ public interface JavaPackage extends EPackage {
 	int ANNOTATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArchiveImpl <em>Archive</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl <em>Archive</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArchiveImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArchive()
+	 * @see org.eclipse.modisco.java.emf.impl.ArchiveImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArchive()
 	 * @generated
 	 */
 	int ARCHIVE = 6;
@@ -1031,11 +1031,11 @@ public interface JavaPackage extends EPackage {
 	int ARCHIVE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.StatementImpl <em>Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.StatementImpl <em>Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.StatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.StatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getStatement()
 	 * @generated
 	 */
 	int STATEMENT = 88;
@@ -1077,11 +1077,11 @@ public interface JavaPackage extends EPackage {
 	int STATEMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AssertStatementImpl <em>Assert Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AssertStatementImpl <em>Assert Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AssertStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAssertStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.AssertStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAssertStatement()
 	 * @generated
 	 */
 	int ASSERT_STATEMENT = 7;
@@ -1141,11 +1141,11 @@ public interface JavaPackage extends EPackage {
 	int ASSERT_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AnnotationMemberValuePairImpl <em>Annotation Member Value Pair</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AnnotationMemberValuePairImpl <em>Annotation Member Value Pair</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AnnotationMemberValuePairImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAnnotationMemberValuePair()
+	 * @see org.eclipse.modisco.java.emf.impl.AnnotationMemberValuePairImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAnnotationMemberValuePair()
 	 * @generated
 	 */
 	int ANNOTATION_MEMBER_VALUE_PAIR = 9;
@@ -1232,11 +1232,11 @@ public interface JavaPackage extends EPackage {
 	int ANNOTATION_MEMBER_VALUE_PAIR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AnnotationTypeDeclarationImpl <em>Annotation Type Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AnnotationTypeDeclarationImpl <em>Annotation Type Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AnnotationTypeDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAnnotationTypeDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.AnnotationTypeDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAnnotationTypeDeclaration()
 	 * @generated
 	 */
 	int ANNOTATION_TYPE_DECLARATION = 10;
@@ -1395,11 +1395,11 @@ public interface JavaPackage extends EPackage {
 	int ANNOTATION_TYPE_DECLARATION_FEATURE_COUNT = ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl <em>Annotation Type Member Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl <em>Annotation Type Member Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAnnotationTypeMemberDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
 	int ANNOTATION_TYPE_MEMBER_DECLARATION = 11;
@@ -1531,11 +1531,11 @@ public interface JavaPackage extends EPackage {
 	int ANNOTATION_TYPE_MEMBER_DECLARATION_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AnonymousClassDeclarationImpl <em>Anonymous Class Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AnonymousClassDeclarationImpl <em>Anonymous Class Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AnonymousClassDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAnonymousClassDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.AnonymousClassDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAnonymousClassDeclaration()
 	 * @generated
 	 */
 	int ANONYMOUS_CLASS_DECLARATION = 12;
@@ -1595,11 +1595,11 @@ public interface JavaPackage extends EPackage {
 	int ANONYMOUS_CLASS_DECLARATION_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayAccessImpl <em>Array Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArrayAccessImpl <em>Array Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArrayAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArrayAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.ArrayAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArrayAccess()
 	 * @generated
 	 */
 	int ARRAY_ACCESS = 13;
@@ -1659,11 +1659,11 @@ public interface JavaPackage extends EPackage {
 	int ARRAY_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayCreationImpl <em>Array Creation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArrayCreationImpl <em>Array Creation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArrayCreationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArrayCreation()
+	 * @see org.eclipse.modisco.java.emf.impl.ArrayCreationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArrayCreation()
 	 * @generated
 	 */
 	int ARRAY_CREATION = 14;
@@ -1732,11 +1732,11 @@ public interface JavaPackage extends EPackage {
 	int ARRAY_CREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayInitializerImpl <em>Array Initializer</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArrayInitializerImpl <em>Array Initializer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArrayInitializerImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArrayInitializer()
+	 * @see org.eclipse.modisco.java.emf.impl.ArrayInitializerImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArrayInitializer()
 	 * @generated
 	 */
 	int ARRAY_INITIALIZER = 15;
@@ -1787,11 +1787,11 @@ public interface JavaPackage extends EPackage {
 	int ARRAY_INITIALIZER_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayLengthAccessImpl <em>Array Length Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArrayLengthAccessImpl <em>Array Length Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArrayLengthAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArrayLengthAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.ArrayLengthAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArrayLengthAccess()
 	 * @generated
 	 */
 	int ARRAY_LENGTH_ACCESS = 16;
@@ -1842,11 +1842,11 @@ public interface JavaPackage extends EPackage {
 	int ARRAY_LENGTH_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeImpl <em>Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getType()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getType()
 	 * @generated
 	 */
 	int TYPE = 101;
@@ -1924,11 +1924,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayTypeImpl <em>Array Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ArrayTypeImpl <em>Array Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ArrayTypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getArrayType()
+	 * @see org.eclipse.modisco.java.emf.impl.ArrayTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getArrayType()
 	 * @generated
 	 */
 	int ARRAY_TYPE = 17;
@@ -2024,11 +2024,11 @@ public interface JavaPackage extends EPackage {
 	int ARRAY_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.AssignmentImpl <em>Assignment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.AssignmentImpl <em>Assignment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.AssignmentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAssignment()
+	 * @see org.eclipse.modisco.java.emf.impl.AssignmentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAssignment()
 	 * @generated
 	 */
 	int ASSIGNMENT = 18;
@@ -2097,11 +2097,11 @@ public interface JavaPackage extends EPackage {
 	int ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.BooleanLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getBooleanLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.BooleanLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBooleanLiteral()
 	 * @generated
 	 */
 	int BOOLEAN_LITERAL = 20;
@@ -2152,11 +2152,11 @@ public interface JavaPackage extends EPackage {
 	int BOOLEAN_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.CommentImpl <em>Comment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CommentImpl <em>Comment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.CommentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getComment()
+	 * @see org.eclipse.modisco.java.emf.impl.CommentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getComment()
 	 * @generated
 	 */
 	int COMMENT = 33;
@@ -2225,11 +2225,11 @@ public interface JavaPackage extends EPackage {
 	int COMMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.BlockCommentImpl <em>Block Comment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockCommentImpl <em>Block Comment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.BlockCommentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getBlockComment()
+	 * @see org.eclipse.modisco.java.emf.impl.BlockCommentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlockComment()
 	 * @generated
 	 */
 	int BLOCK_COMMENT = 21;
@@ -2298,11 +2298,11 @@ public interface JavaPackage extends EPackage {
 	int BLOCK_COMMENT_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.BlockImpl <em>Block</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockImpl <em>Block</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.BlockImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getBlock()
+	 * @see org.eclipse.modisco.java.emf.impl.BlockImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlock()
 	 * @generated
 	 */
 	int BLOCK = 22;
@@ -2353,11 +2353,11 @@ public interface JavaPackage extends EPackage {
 	int BLOCK_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.BreakStatementImpl <em>Break Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BreakStatementImpl <em>Break Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.BreakStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getBreakStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.BreakStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBreakStatement()
 	 * @generated
 	 */
 	int BREAK_STATEMENT = 23;
@@ -2408,11 +2408,11 @@ public interface JavaPackage extends EPackage {
 	int BREAK_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.CastExpressionImpl <em>Cast Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CastExpressionImpl <em>Cast Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.CastExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getCastExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.CastExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCastExpression()
 	 * @generated
 	 */
 	int CAST_EXPRESSION = 24;
@@ -2472,11 +2472,11 @@ public interface JavaPackage extends EPackage {
 	int CAST_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.CatchClauseImpl <em>Catch Clause</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CatchClauseImpl <em>Catch Clause</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.CatchClauseImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getCatchClause()
+	 * @see org.eclipse.modisco.java.emf.impl.CatchClauseImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCatchClause()
 	 * @generated
 	 */
 	int CATCH_CLAUSE = 25;
@@ -2536,11 +2536,11 @@ public interface JavaPackage extends EPackage {
 	int CATCH_CLAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.CharacterLiteralImpl <em>Character Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CharacterLiteralImpl <em>Character Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.CharacterLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getCharacterLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.CharacterLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCharacterLiteral()
 	 * @generated
 	 */
 	int CHARACTER_LITERAL = 26;
@@ -2591,11 +2591,11 @@ public interface JavaPackage extends EPackage {
 	int CHARACTER_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl <em>Class File</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl <em>Class File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getClassFile()
+	 * @see org.eclipse.modisco.java.emf.impl.ClassFileImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassFile()
 	 * @generated
 	 */
 	int CLASS_FILE = 27;
@@ -2700,11 +2700,11 @@ public interface JavaPackage extends EPackage {
 	int CLASS_FILE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ClassInstanceCreationImpl <em>Class Instance Creation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl <em>Class Instance Creation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ClassInstanceCreationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getClassInstanceCreation()
+	 * @see org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassInstanceCreation()
 	 * @generated
 	 */
 	int CLASS_INSTANCE_CREATION = 28;
@@ -2800,11 +2800,11 @@ public interface JavaPackage extends EPackage {
 	int CLASS_INSTANCE_CREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ConstructorDeclarationImpl <em>Constructor Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConstructorDeclarationImpl <em>Constructor Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ConstructorDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getConstructorDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.ConstructorDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConstructorDeclaration()
 	 * @generated
 	 */
 	int CONSTRUCTOR_DECLARATION = 29;
@@ -2963,11 +2963,11 @@ public interface JavaPackage extends EPackage {
 	int CONSTRUCTOR_DECLARATION_FEATURE_COUNT = ABSTRACT_METHOD_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ConditionalExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getConditionalExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConditionalExpression()
 	 * @generated
 	 */
 	int CONDITIONAL_EXPRESSION = 30;
@@ -3036,11 +3036,11 @@ public interface JavaPackage extends EPackage {
 	int CONDITIONAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ConstructorInvocationImpl <em>Constructor Invocation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl <em>Constructor Invocation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ConstructorInvocationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getConstructorInvocation()
+	 * @see org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConstructorInvocation()
 	 * @generated
 	 */
 	int CONSTRUCTOR_INVOCATION = 31;
@@ -3109,11 +3109,11 @@ public interface JavaPackage extends EPackage {
 	int CONSTRUCTOR_INVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeDeclarationImpl <em>Type Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeDeclarationImpl <em>Type Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclaration()
 	 * @generated
 	 */
 	int TYPE_DECLARATION = 103;
@@ -3281,11 +3281,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_DECLARATION_FEATURE_COUNT = ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ClassDeclarationImpl <em>Class Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ClassDeclarationImpl <em>Class Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ClassDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getClassDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.ClassDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassDeclaration()
 	 * @generated
 	 */
 	int CLASS_DECLARATION = 32;
@@ -3462,11 +3462,11 @@ public interface JavaPackage extends EPackage {
 	int CLASS_DECLARATION_FEATURE_COUNT = TYPE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.CompilationUnitImpl <em>Compilation Unit</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl <em>Compilation Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.CompilationUnitImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getCompilationUnit()
+	 * @see org.eclipse.modisco.java.emf.impl.CompilationUnitImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCompilationUnit()
 	 * @generated
 	 */
 	int COMPILATION_UNIT = 34;
@@ -3580,11 +3580,11 @@ public interface JavaPackage extends EPackage {
 	int COMPILATION_UNIT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ContinueStatementImpl <em>Continue Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ContinueStatementImpl <em>Continue Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ContinueStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getContinueStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.ContinueStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getContinueStatement()
 	 * @generated
 	 */
 	int CONTINUE_STATEMENT = 35;
@@ -3635,11 +3635,11 @@ public interface JavaPackage extends EPackage {
 	int CONTINUE_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.DoStatementImpl <em>Do Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.DoStatementImpl <em>Do Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.DoStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getDoStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.DoStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getDoStatement()
 	 * @generated
 	 */
 	int DO_STATEMENT = 36;
@@ -3699,11 +3699,11 @@ public interface JavaPackage extends EPackage {
 	int DO_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.EmptyStatementImpl <em>Empty Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.EmptyStatementImpl <em>Empty Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.EmptyStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getEmptyStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.EmptyStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEmptyStatement()
 	 * @generated
 	 */
 	int EMPTY_STATEMENT = 37;
@@ -3745,11 +3745,11 @@ public interface JavaPackage extends EPackage {
 	int EMPTY_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.EnhancedForStatementImpl <em>Enhanced For Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.EnhancedForStatementImpl <em>Enhanced For Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.EnhancedForStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getEnhancedForStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.EnhancedForStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnhancedForStatement()
 	 * @generated
 	 */
 	int ENHANCED_FOR_STATEMENT = 38;
@@ -3818,11 +3818,11 @@ public interface JavaPackage extends EPackage {
 	int ENHANCED_FOR_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl <em>Enum Constant Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl <em>Enum Constant Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.EnumConstantDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getEnumConstantDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnumConstantDeclaration()
 	 * @generated
 	 */
 	int ENUM_CONSTANT_DECLARATION = 39;
@@ -3972,11 +3972,11 @@ public interface JavaPackage extends EPackage {
 	int ENUM_CONSTANT_DECLARATION_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.EnumDeclarationImpl <em>Enum Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.EnumDeclarationImpl <em>Enum Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.EnumDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getEnumDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.EnumDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnumDeclaration()
 	 * @generated
 	 */
 	int ENUM_DECLARATION = 40;
@@ -4144,11 +4144,11 @@ public interface JavaPackage extends EPackage {
 	int ENUM_DECLARATION_FEATURE_COUNT = ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ExpressionStatementImpl <em>Expression Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ExpressionStatementImpl <em>Expression Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ExpressionStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getExpressionStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.ExpressionStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getExpressionStatement()
 	 * @generated
 	 */
 	int EXPRESSION_STATEMENT = 42;
@@ -4199,11 +4199,11 @@ public interface JavaPackage extends EPackage {
 	int EXPRESSION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.FieldAccessImpl <em>Field Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.FieldAccessImpl <em>Field Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.FieldAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getFieldAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.FieldAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getFieldAccess()
 	 * @generated
 	 */
 	int FIELD_ACCESS = 43;
@@ -4263,11 +4263,11 @@ public interface JavaPackage extends EPackage {
 	int FIELD_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.FieldDeclarationImpl <em>Field Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.FieldDeclarationImpl <em>Field Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.FieldDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getFieldDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.FieldDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getFieldDeclaration()
 	 * @generated
 	 */
 	int FIELD_DECLARATION = 44;
@@ -4390,11 +4390,11 @@ public interface JavaPackage extends EPackage {
 	int FIELD_DECLARATION_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl <em>For Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl <em>For Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getForStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.ForStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getForStatement()
 	 * @generated
 	 */
 	int FOR_STATEMENT = 45;
@@ -4472,11 +4472,11 @@ public interface JavaPackage extends EPackage {
 	int FOR_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.IfStatementImpl <em>If Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.IfStatementImpl <em>If Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.IfStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getIfStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.IfStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getIfStatement()
 	 * @generated
 	 */
 	int IF_STATEMENT = 46;
@@ -4545,11 +4545,11 @@ public interface JavaPackage extends EPackage {
 	int IF_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ImportDeclarationImpl <em>Import Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ImportDeclarationImpl <em>Import Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ImportDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getImportDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.ImportDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getImportDeclaration()
 	 * @generated
 	 */
 	int IMPORT_DECLARATION = 47;
@@ -4609,11 +4609,11 @@ public interface JavaPackage extends EPackage {
 	int IMPORT_DECLARATION_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.InfixExpressionImpl <em>Infix Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.InfixExpressionImpl <em>Infix Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.InfixExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInfixExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.InfixExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInfixExpression()
 	 * @generated
 	 */
 	int INFIX_EXPRESSION = 48;
@@ -4691,11 +4691,11 @@ public interface JavaPackage extends EPackage {
 	int INFIX_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.InitializerImpl <em>Initializer</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.InitializerImpl <em>Initializer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.InitializerImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInitializer()
+	 * @see org.eclipse.modisco.java.emf.impl.InitializerImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInitializer()
 	 * @generated
 	 */
 	int INITIALIZER = 49;
@@ -4809,11 +4809,11 @@ public interface JavaPackage extends EPackage {
 	int INITIALIZER_FEATURE_COUNT = BODY_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.InstanceofExpressionImpl <em>Instanceof Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl <em>Instanceof Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.InstanceofExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInstanceofExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInstanceofExpression()
 	 * @generated
 	 */
 	int INSTANCEOF_EXPRESSION = 50;
@@ -4873,11 +4873,11 @@ public interface JavaPackage extends EPackage {
 	int INSTANCEOF_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.InterfaceDeclarationImpl <em>Interface Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.InterfaceDeclarationImpl <em>Interface Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.InterfaceDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInterfaceDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.InterfaceDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInterfaceDeclaration()
 	 * @generated
 	 */
 	int INTERFACE_DECLARATION = 51;
@@ -5045,11 +5045,11 @@ public interface JavaPackage extends EPackage {
 	int INTERFACE_DECLARATION_FEATURE_COUNT = TYPE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.JavadocImpl <em>Javadoc</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.JavadocImpl <em>Javadoc</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavadocImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getJavadoc()
+	 * @see org.eclipse.modisco.java.emf.impl.JavadocImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getJavadoc()
 	 * @generated
 	 */
 	int JAVADOC = 52;
@@ -5127,11 +5127,11 @@ public interface JavaPackage extends EPackage {
 	int JAVADOC_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.LabeledStatementImpl <em>Labeled Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.LabeledStatementImpl <em>Labeled Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.LabeledStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getLabeledStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.LabeledStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getLabeledStatement()
 	 * @generated
 	 */
 	int LABELED_STATEMENT = 53;
@@ -5227,11 +5227,11 @@ public interface JavaPackage extends EPackage {
 	int LABELED_STATEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.LineCommentImpl <em>Line Comment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.LineCommentImpl <em>Line Comment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.LineCommentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getLineComment()
+	 * @see org.eclipse.modisco.java.emf.impl.LineCommentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getLineComment()
 	 * @generated
 	 */
 	int LINE_COMMENT = 54;
@@ -5300,11 +5300,11 @@ public interface JavaPackage extends EPackage {
 	int LINE_COMMENT_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ManifestImpl <em>Manifest</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ManifestImpl <em>Manifest</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ManifestImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getManifest()
+	 * @see org.eclipse.modisco.java.emf.impl.ManifestImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifest()
 	 * @generated
 	 */
 	int MANIFEST = 55;
@@ -5337,11 +5337,11 @@ public interface JavaPackage extends EPackage {
 	int MANIFEST_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ManifestAttributeImpl <em>Manifest Attribute</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ManifestAttributeImpl <em>Manifest Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ManifestAttributeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getManifestAttribute()
+	 * @see org.eclipse.modisco.java.emf.impl.ManifestAttributeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifestAttribute()
 	 * @generated
 	 */
 	int MANIFEST_ATTRIBUTE = 56;
@@ -5374,11 +5374,11 @@ public interface JavaPackage extends EPackage {
 	int MANIFEST_ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ManifestEntryImpl <em>Manifest Entry</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ManifestEntryImpl <em>Manifest Entry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ManifestEntryImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getManifestEntry()
+	 * @see org.eclipse.modisco.java.emf.impl.ManifestEntryImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifestEntry()
 	 * @generated
 	 */
 	int MANIFEST_ENTRY = 57;
@@ -5411,11 +5411,11 @@ public interface JavaPackage extends EPackage {
 	int MANIFEST_ENTRY_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.MemberRefImpl <em>Member Ref</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MemberRefImpl <em>Member Ref</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.MemberRefImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getMemberRef()
+	 * @see org.eclipse.modisco.java.emf.impl.MemberRefImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMemberRef()
 	 * @generated
 	 */
 	int MEMBER_REF = 58;
@@ -5475,11 +5475,11 @@ public interface JavaPackage extends EPackage {
 	int MEMBER_REF_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl <em>Method Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl <em>Method Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getMethodDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodDeclaration()
 	 * @generated
 	 */
 	int METHOD_DECLARATION = 59;
@@ -5674,11 +5674,11 @@ public interface JavaPackage extends EPackage {
 	int METHOD_DECLARATION_FEATURE_COUNT = ABSTRACT_METHOD_DECLARATION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.MethodInvocationImpl <em>Method Invocation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MethodInvocationImpl <em>Method Invocation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.MethodInvocationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getMethodInvocation()
+	 * @see org.eclipse.modisco.java.emf.impl.MethodInvocationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodInvocation()
 	 * @generated
 	 */
 	int METHOD_INVOCATION = 60;
@@ -5756,11 +5756,11 @@ public interface JavaPackage extends EPackage {
 	int METHOD_INVOCATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.MethodRefImpl <em>Method Ref</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MethodRefImpl <em>Method Ref</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.MethodRefImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getMethodRef()
+	 * @see org.eclipse.modisco.java.emf.impl.MethodRefImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodRef()
 	 * @generated
 	 */
 	int METHOD_REF = 61;
@@ -5829,11 +5829,11 @@ public interface JavaPackage extends EPackage {
 	int METHOD_REF_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.MethodRefParameterImpl <em>Method Ref Parameter</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MethodRefParameterImpl <em>Method Ref Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.MethodRefParameterImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getMethodRefParameter()
+	 * @see org.eclipse.modisco.java.emf.impl.MethodRefParameterImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodRefParameter()
 	 * @generated
 	 */
 	int METHOD_REF_PARAMETER = 62;
@@ -5902,11 +5902,11 @@ public interface JavaPackage extends EPackage {
 	int METHOD_REF_PARAMETER_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl <em>Model</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ModelImpl <em>Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ModelImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getModel()
+	 * @see org.eclipse.modisco.java.emf.impl.ModelImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getModel()
 	 * @generated
 	 */
 	int MODEL = 63;
@@ -5984,11 +5984,11 @@ public interface JavaPackage extends EPackage {
 	int MODEL_FEATURE_COUNT = 7;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl <em>Modifier</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ModifierImpl <em>Modifier</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getModifier()
+	 * @see org.eclipse.modisco.java.emf.impl.ModifierImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getModifier()
 	 * @generated
 	 */
 	int MODIFIER = 64;
@@ -6138,11 +6138,11 @@ public interface JavaPackage extends EPackage {
 	int MODIFIER_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 12;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.NamespaceAccessImpl <em>Namespace Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.NamespaceAccessImpl <em>Namespace Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.NamespaceAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getNamespaceAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.NamespaceAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNamespaceAccess()
 	 * @generated
 	 */
 	int NAMESPACE_ACCESS = 66;
@@ -6184,11 +6184,11 @@ public interface JavaPackage extends EPackage {
 	int NAMESPACE_ACCESS_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.NumberLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getNumberLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.NumberLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNumberLiteral()
 	 * @generated
 	 */
 	int NUMBER_LITERAL = 67;
@@ -6239,11 +6239,11 @@ public interface JavaPackage extends EPackage {
 	int NUMBER_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.NullLiteralImpl <em>Null Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.NullLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getNullLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.NullLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNullLiteral()
 	 * @generated
 	 */
 	int NULL_LITERAL = 68;
@@ -6285,11 +6285,11 @@ public interface JavaPackage extends EPackage {
 	int NULL_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PackageImpl <em>Package</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PackageImpl <em>Package</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PackageImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPackage()
+	 * @see org.eclipse.modisco.java.emf.impl.PackageImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPackage()
 	 * @generated
 	 */
 	int PACKAGE = 69;
@@ -6403,11 +6403,11 @@ public interface JavaPackage extends EPackage {
 	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PackageAccessImpl <em>Package Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PackageAccessImpl <em>Package Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PackageAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPackageAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.PackageAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPackageAccess()
 	 * @generated
 	 */
 	int PACKAGE_ACCESS = 70;
@@ -6467,11 +6467,11 @@ public interface JavaPackage extends EPackage {
 	int PACKAGE_ACCESS_FEATURE_COUNT = NAMESPACE_ACCESS_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ParameterizedTypeImpl <em>Parameterized Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ParameterizedTypeImpl <em>Parameterized Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ParameterizedTypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getParameterizedType()
+	 * @see org.eclipse.modisco.java.emf.impl.ParameterizedTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getParameterizedType()
 	 * @generated
 	 */
 	int PARAMETERIZED_TYPE = 71;
@@ -6567,11 +6567,11 @@ public interface JavaPackage extends EPackage {
 	int PARAMETERIZED_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ParenthesizedExpressionImpl <em>Parenthesized Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ParenthesizedExpressionImpl <em>Parenthesized Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ParenthesizedExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getParenthesizedExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.ParenthesizedExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getParenthesizedExpression()
 	 * @generated
 	 */
 	int PARENTHESIZED_EXPRESSION = 72;
@@ -6622,11 +6622,11 @@ public interface JavaPackage extends EPackage {
 	int PARENTHESIZED_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PostfixExpressionImpl <em>Postfix Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PostfixExpressionImpl <em>Postfix Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PostfixExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.PostfixExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpression()
 	 * @generated
 	 */
 	int POSTFIX_EXPRESSION = 73;
@@ -6686,11 +6686,11 @@ public interface JavaPackage extends EPackage {
 	int POSTFIX_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrefixExpressionImpl <em>Prefix Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrefixExpressionImpl <em>Prefix Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrefixExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.PrefixExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpression()
 	 * @generated
 	 */
 	int PREFIX_EXPRESSION = 74;
@@ -6750,11 +6750,11 @@ public interface JavaPackage extends EPackage {
 	int PREFIX_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveType()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveType()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE = 75;
@@ -6832,11 +6832,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeBooleanImpl <em>Primitive Type Boolean</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeBooleanImpl <em>Primitive Type Boolean</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeBooleanImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeBoolean()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeBooleanImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeBoolean()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_BOOLEAN = 76;
@@ -6914,11 +6914,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_BOOLEAN_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeByteImpl <em>Primitive Type Byte</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeByteImpl <em>Primitive Type Byte</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeByteImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeByte()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeByteImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeByte()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_BYTE = 77;
@@ -6996,11 +6996,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_BYTE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeCharImpl <em>Primitive Type Char</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeCharImpl <em>Primitive Type Char</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeCharImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeChar()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeCharImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeChar()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_CHAR = 78;
@@ -7078,11 +7078,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_CHAR_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeDoubleImpl <em>Primitive Type Double</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeDoubleImpl <em>Primitive Type Double</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeDoubleImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeDouble()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeDoubleImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeDouble()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_DOUBLE = 79;
@@ -7160,11 +7160,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_DOUBLE_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeShortImpl <em>Primitive Type Short</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeShortImpl <em>Primitive Type Short</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeShortImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeShort()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeShortImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeShort()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_SHORT = 80;
@@ -7242,11 +7242,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_SHORT_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeFloatImpl <em>Primitive Type Float</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeFloatImpl <em>Primitive Type Float</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeFloatImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeFloat()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeFloatImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeFloat()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_FLOAT = 81;
@@ -7324,11 +7324,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_FLOAT_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeIntImpl <em>Primitive Type Int</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeIntImpl <em>Primitive Type Int</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeIntImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeInt()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeIntImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeInt()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_INT = 82;
@@ -7406,11 +7406,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_INT_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeLongImpl <em>Primitive Type Long</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeLongImpl <em>Primitive Type Long</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeLongImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeLong()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeLongImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeLong()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_LONG = 83;
@@ -7488,11 +7488,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_LONG_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeVoidImpl <em>Primitive Type Void</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.PrimitiveTypeVoidImpl <em>Primitive Type Void</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.PrimitiveTypeVoidImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeVoid()
+	 * @see org.eclipse.modisco.java.emf.impl.PrimitiveTypeVoidImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeVoid()
 	 * @generated
 	 */
 	int PRIMITIVE_TYPE_VOID = 84;
@@ -7570,11 +7570,11 @@ public interface JavaPackage extends EPackage {
 	int PRIMITIVE_TYPE_VOID_FEATURE_COUNT = PRIMITIVE_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ReturnStatementImpl <em>Return Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ReturnStatementImpl <em>Return Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ReturnStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getReturnStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.ReturnStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getReturnStatement()
 	 * @generated
 	 */
 	int RETURN_STATEMENT = 85;
@@ -7625,11 +7625,11 @@ public interface JavaPackage extends EPackage {
 	int RETURN_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableAccessImpl <em>Single Variable Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SingleVariableAccessImpl <em>Single Variable Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SingleVariableAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.SingleVariableAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableAccess()
 	 * @generated
 	 */
 	int SINGLE_VARIABLE_ACCESS = 86;
@@ -7689,11 +7689,11 @@ public interface JavaPackage extends EPackage {
 	int SINGLE_VARIABLE_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationImpl <em>Variable Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationImpl <em>Variable Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.VariableDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclaration()
 	 * @generated
 	 */
 	int VARIABLE_DECLARATION = 120;
@@ -7789,11 +7789,11 @@ public interface JavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl <em>Single Variable Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl <em>Single Variable Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableDeclaration()
 	 * @generated
 	 */
 	int SINGLE_VARIABLE_DECLARATION = 87;
@@ -7952,11 +7952,11 @@ public interface JavaPackage extends EPackage {
 	int SINGLE_VARIABLE_DECLARATION_FEATURE_COUNT = VARIABLE_DECLARATION_FEATURE_COUNT + 7;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.StringLiteralImpl <em>String Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.StringLiteralImpl <em>String Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.StringLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getStringLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.StringLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getStringLiteral()
 	 * @generated
 	 */
 	int STRING_LITERAL = 89;
@@ -8007,11 +8007,11 @@ public interface JavaPackage extends EPackage {
 	int STRING_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl <em>Super Constructor Invocation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl <em>Super Constructor Invocation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SuperConstructorInvocationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSuperConstructorInvocation()
+	 * @see org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperConstructorInvocation()
 	 * @generated
 	 */
 	int SUPER_CONSTRUCTOR_INVOCATION = 90;
@@ -8089,11 +8089,11 @@ public interface JavaPackage extends EPackage {
 	int SUPER_CONSTRUCTOR_INVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SuperFieldAccessImpl <em>Super Field Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SuperFieldAccessImpl <em>Super Field Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SuperFieldAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSuperFieldAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.SuperFieldAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperFieldAccess()
 	 * @generated
 	 */
 	int SUPER_FIELD_ACCESS = 91;
@@ -8153,11 +8153,11 @@ public interface JavaPackage extends EPackage {
 	int SUPER_FIELD_ACCESS_FEATURE_COUNT = ABSTRACT_TYPE_QUALIFIED_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SuperMethodInvocationImpl <em>Super Method Invocation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SuperMethodInvocationImpl <em>Super Method Invocation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SuperMethodInvocationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSuperMethodInvocation()
+	 * @see org.eclipse.modisco.java.emf.impl.SuperMethodInvocationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperMethodInvocation()
 	 * @generated
 	 */
 	int SUPER_METHOD_INVOCATION = 92;
@@ -8235,11 +8235,11 @@ public interface JavaPackage extends EPackage {
 	int SUPER_METHOD_INVOCATION_FEATURE_COUNT = ABSTRACT_TYPE_QUALIFIED_EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SwitchCaseImpl <em>Switch Case</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SwitchCaseImpl <em>Switch Case</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SwitchCaseImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSwitchCase()
+	 * @see org.eclipse.modisco.java.emf.impl.SwitchCaseImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSwitchCase()
 	 * @generated
 	 */
 	int SWITCH_CASE = 93;
@@ -8299,11 +8299,11 @@ public interface JavaPackage extends EPackage {
 	int SWITCH_CASE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SwitchStatementImpl <em>Switch Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SwitchStatementImpl <em>Switch Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SwitchStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSwitchStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.SwitchStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSwitchStatement()
 	 * @generated
 	 */
 	int SWITCH_STATEMENT = 94;
@@ -8363,11 +8363,11 @@ public interface JavaPackage extends EPackage {
 	int SWITCH_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.SynchronizedStatementImpl <em>Synchronized Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.SynchronizedStatementImpl <em>Synchronized Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.SynchronizedStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getSynchronizedStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.SynchronizedStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSynchronizedStatement()
 	 * @generated
 	 */
 	int SYNCHRONIZED_STATEMENT = 95;
@@ -8427,11 +8427,11 @@ public interface JavaPackage extends EPackage {
 	int SYNCHRONIZED_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TagElementImpl <em>Tag Element</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TagElementImpl <em>Tag Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TagElementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTagElement()
+	 * @see org.eclipse.modisco.java.emf.impl.TagElementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTagElement()
 	 * @generated
 	 */
 	int TAG_ELEMENT = 96;
@@ -8491,11 +8491,11 @@ public interface JavaPackage extends EPackage {
 	int TAG_ELEMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TextElementImpl <em>Text Element</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TextElementImpl <em>Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TextElementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTextElement()
+	 * @see org.eclipse.modisco.java.emf.impl.TextElementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTextElement()
 	 * @generated
 	 */
 	int TEXT_ELEMENT = 97;
@@ -8546,11 +8546,11 @@ public interface JavaPackage extends EPackage {
 	int TEXT_ELEMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ThisExpressionImpl <em>This Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ThisExpressionImpl <em>This Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ThisExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getThisExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.ThisExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getThisExpression()
 	 * @generated
 	 */
 	int THIS_EXPRESSION = 98;
@@ -8601,11 +8601,11 @@ public interface JavaPackage extends EPackage {
 	int THIS_EXPRESSION_FEATURE_COUNT = ABSTRACT_TYPE_QUALIFIED_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.ThrowStatementImpl <em>Throw Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ThrowStatementImpl <em>Throw Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.ThrowStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getThrowStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.ThrowStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getThrowStatement()
 	 * @generated
 	 */
 	int THROW_STATEMENT = 99;
@@ -8656,11 +8656,11 @@ public interface JavaPackage extends EPackage {
 	int THROW_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TryStatementImpl <em>Try Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TryStatementImpl <em>Try Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TryStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTryStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.TryStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTryStatement()
 	 * @generated
 	 */
 	int TRY_STATEMENT = 100;
@@ -8729,11 +8729,11 @@ public interface JavaPackage extends EPackage {
 	int TRY_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeAccessImpl <em>Type Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeAccessImpl <em>Type Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTypeAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeAccess()
 	 * @generated
 	 */
 	int TYPE_ACCESS = 102;
@@ -8793,11 +8793,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeDeclarationStatementImpl <em>Type Declaration Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeDeclarationStatementImpl <em>Type Declaration Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeDeclarationStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclarationStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeDeclarationStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclarationStatement()
 	 * @generated
 	 */
 	int TYPE_DECLARATION_STATEMENT = 104;
@@ -8848,11 +8848,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_DECLARATION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeLiteralImpl <em>Type Literal</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeLiteralImpl <em>Type Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeLiteralImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTypeLiteral()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeLiteralImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeLiteral()
 	 * @generated
 	 */
 	int TYPE_LITERAL = 105;
@@ -8903,11 +8903,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.TypeParameterImpl <em>Type Parameter</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeParameterImpl <em>Type Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.TypeParameterImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getTypeParameter()
+	 * @see org.eclipse.modisco.java.emf.impl.TypeParameterImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeParameter()
 	 * @generated
 	 */
 	int TYPE_PARAMETER = 106;
@@ -8994,11 +8994,11 @@ public interface JavaPackage extends EPackage {
 	int TYPE_PARAMETER_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedItemImpl <em>Unresolved Item</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedItemImpl <em>Unresolved Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedItemImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItem()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedItemImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItem()
 	 * @generated
 	 */
 	int UNRESOLVED_ITEM = 107;
@@ -9067,11 +9067,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_ITEM_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedItemAccessImpl <em>Unresolved Item Access</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedItemAccessImpl <em>Unresolved Item Access</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedItemAccessImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItemAccess()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedItemAccessImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItemAccess()
 	 * @generated
 	 */
 	int UNRESOLVED_ITEM_ACCESS = 108;
@@ -9131,11 +9131,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_ITEM_ACCESS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedAnnotationDeclarationImpl <em>Unresolved Annotation Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedAnnotationDeclarationImpl <em>Unresolved Annotation Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedAnnotationDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedAnnotationDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_ANNOTATION_DECLARATION = 109;
@@ -9294,11 +9294,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_ANNOTATION_DECLARATION_FEATURE_COUNT = ANNOTATION_TYPE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedAnnotationTypeMemberDeclarationImpl <em>Unresolved Annotation Type Member Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedAnnotationTypeMemberDeclarationImpl <em>Unresolved Annotation Type Member Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedAnnotationTypeMemberDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationTypeMemberDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedAnnotationTypeMemberDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION = 110;
@@ -9430,11 +9430,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION_FEATURE_COUNT = ANNOTATION_TYPE_MEMBER_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedClassDeclarationImpl <em>Unresolved Class Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedClassDeclarationImpl <em>Unresolved Class Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedClassDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedClassDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedClassDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedClassDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_CLASS_DECLARATION = 111;
@@ -9611,11 +9611,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_CLASS_DECLARATION_FEATURE_COUNT = CLASS_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedEnumDeclarationImpl <em>Unresolved Enum Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedEnumDeclarationImpl <em>Unresolved Enum Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedEnumDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedEnumDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedEnumDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedEnumDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_ENUM_DECLARATION = 112;
@@ -9783,11 +9783,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_ENUM_DECLARATION_FEATURE_COUNT = ENUM_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedInterfaceDeclarationImpl <em>Unresolved Interface Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedInterfaceDeclarationImpl <em>Unresolved Interface Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedInterfaceDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedInterfaceDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedInterfaceDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedInterfaceDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_INTERFACE_DECLARATION = 113;
@@ -9955,11 +9955,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_INTERFACE_DECLARATION_FEATURE_COUNT = INTERFACE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedLabeledStatementImpl <em>Unresolved Labeled Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedLabeledStatementImpl <em>Unresolved Labeled Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedLabeledStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedLabeledStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedLabeledStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedLabeledStatement()
 	 * @generated
 	 */
 	int UNRESOLVED_LABELED_STATEMENT = 114;
@@ -10055,11 +10055,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_LABELED_STATEMENT_FEATURE_COUNT = LABELED_STATEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedMethodDeclarationImpl <em>Unresolved Method Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedMethodDeclarationImpl <em>Unresolved Method Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedMethodDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedMethodDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedMethodDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedMethodDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_METHOD_DECLARATION = 115;
@@ -10254,11 +10254,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_METHOD_DECLARATION_FEATURE_COUNT = METHOD_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedSingleVariableDeclarationImpl <em>Unresolved Single Variable Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedSingleVariableDeclarationImpl <em>Unresolved Single Variable Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedSingleVariableDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedSingleVariableDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedSingleVariableDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedSingleVariableDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_SINGLE_VARIABLE_DECLARATION = 116;
@@ -10417,11 +10417,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_SINGLE_VARIABLE_DECLARATION_FEATURE_COUNT = SINGLE_VARIABLE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedTypeImpl <em>Unresolved Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedTypeImpl <em>Unresolved Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedTypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedType()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedType()
 	 * @generated
 	 */
 	int UNRESOLVED_TYPE = 117;
@@ -10499,11 +10499,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedTypeDeclarationImpl <em>Unresolved Type Declaration</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedTypeDeclarationImpl <em>Unresolved Type Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedTypeDeclarationImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedTypeDeclaration()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedTypeDeclarationImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedTypeDeclaration()
 	 * @generated
 	 */
 	int UNRESOLVED_TYPE_DECLARATION = 118;
@@ -10662,11 +10662,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_TYPE_DECLARATION_FEATURE_COUNT = ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationFragmentImpl <em>Variable Declaration Fragment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationFragmentImpl <em>Variable Declaration Fragment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationFragmentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationFragment()
+	 * @see org.eclipse.modisco.java.emf.impl.VariableDeclarationFragmentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationFragment()
 	 * @generated
 	 */
 	int VARIABLE_DECLARATION_FRAGMENT = 122;
@@ -10771,11 +10771,11 @@ public interface JavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_FRAGMENT_FEATURE_COUNT = VARIABLE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.UnresolvedVariableDeclarationFragmentImpl <em>Unresolved Variable Declaration Fragment</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedVariableDeclarationFragmentImpl <em>Unresolved Variable Declaration Fragment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.UnresolvedVariableDeclarationFragmentImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedVariableDeclarationFragment()
+	 * @see org.eclipse.modisco.java.emf.impl.UnresolvedVariableDeclarationFragmentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedVariableDeclarationFragment()
 	 * @generated
 	 */
 	int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT = 119;
@@ -10880,11 +10880,11 @@ public interface JavaPackage extends EPackage {
 	int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT_FEATURE_COUNT = VARIABLE_DECLARATION_FRAGMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl <em>Variable Declaration Expression</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl <em>Variable Declaration Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationExpression()
+	 * @see org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationExpression()
 	 * @generated
 	 */
 	int VARIABLE_DECLARATION_EXPRESSION = 121;
@@ -10962,11 +10962,11 @@ public interface JavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl <em>Variable Declaration Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl <em>Variable Declaration Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationStatement()
 	 * @generated
 	 */
 	int VARIABLE_DECLARATION_STATEMENT = 123;
@@ -11053,11 +11053,11 @@ public interface JavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.WildCardTypeImpl <em>Wild Card Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl <em>Wild Card Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.WildCardTypeImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getWildCardType()
+	 * @see org.eclipse.modisco.java.emf.impl.WildCardTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWildCardType()
 	 * @generated
 	 */
 	int WILD_CARD_TYPE = 124;
@@ -11153,11 +11153,11 @@ public interface JavaPackage extends EPackage {
 	int WILD_CARD_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.emf.impl.WhileStatementImpl <em>While Statement</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.WhileStatementImpl <em>While Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.WhileStatementImpl
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getWhileStatement()
+	 * @see org.eclipse.modisco.java.emf.impl.WhileStatementImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWhileStatement()
 	 * @generated
 	 */
 	int WHILE_STATEMENT = 125;
@@ -11217,3725 +11217,3725 @@ public interface JavaPackage extends EPackage {
 	int WHILE_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.AssignmentKind <em>Assignment Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.AssignmentKind <em>Assignment Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.AssignmentKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getAssignmentKind()
+	 * @see org.eclipse.modisco.java.AssignmentKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAssignmentKind()
 	 * @generated
 	 */
 	int ASSIGNMENT_KIND = 126;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.InfixExpressionKind <em>Infix Expression Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.InfixExpressionKind <em>Infix Expression Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.InfixExpressionKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInfixExpressionKind()
+	 * @see org.eclipse.modisco.java.InfixExpressionKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInfixExpressionKind()
 	 * @generated
 	 */
 	int INFIX_EXPRESSION_KIND = 127;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.InheritanceKind <em>Inheritance Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.InheritanceKind <em>Inheritance Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.InheritanceKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getInheritanceKind()
+	 * @see org.eclipse.modisco.java.InheritanceKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInheritanceKind()
 	 * @generated
 	 */
 	int INHERITANCE_KIND = 128;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.PostfixExpressionKind <em>Postfix Expression Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.PostfixExpressionKind <em>Postfix Expression Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpressionKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpressionKind()
+	 * @see org.eclipse.modisco.java.PostfixExpressionKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpressionKind()
 	 * @generated
 	 */
 	int POSTFIX_EXPRESSION_KIND = 129;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.PrefixExpressionKind <em>Prefix Expression Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.PrefixExpressionKind <em>Prefix Expression Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpressionKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpressionKind()
+	 * @see org.eclipse.modisco.java.PrefixExpressionKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpressionKind()
 	 * @generated
 	 */
 	int PREFIX_EXPRESSION_KIND = 130;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.gmt.modisco.java.VisibilityKind <em>Visibility Kind</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.java.VisibilityKind
-	 * @see org.eclipse.gmt.modisco.java.emf.impl.JavaPackageImpl#getVisibilityKind()
+	 * @see org.eclipse.modisco.java.VisibilityKind
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
 	int VISIBILITY_KIND = 131;
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration <em>Abstract Method Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AbstractMethodDeclaration <em>Abstract Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Method Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration
 	 * @generated
 	 */
 	EClass getAbstractMethodDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getBody()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getBody()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_Body();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getParameters()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getParameters()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_Parameters();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getThrownExceptions <em>Thrown Exceptions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getThrownExceptions <em>Thrown Exceptions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Thrown Exceptions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getThrownExceptions()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getThrownExceptions()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_ThrownExceptions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getTypeParameters <em>Type Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getTypeParameters <em>Type Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Type Parameters</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getTypeParameters()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getTypeParameters()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_TypeParameters();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Doc Comments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_UsagesInDocComments();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsages()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages()
 	 * @see #getAbstractMethodDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractMethodDeclaration_Usages();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation <em>Abstract Method Invocation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AbstractMethodInvocation <em>Abstract Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Method Invocation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation
 	 * @generated
 	 */
 	EClass getAbstractMethodInvocation();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Method</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod()
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation#getMethod()
 	 * @see #getAbstractMethodInvocation()
 	 * @generated
 	 */
 	EReference getAbstractMethodInvocation_Method();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getArguments()
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation#getArguments()
 	 * @see #getAbstractMethodInvocation()
 	 * @generated
 	 */
 	EReference getAbstractMethodInvocation_Arguments();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Type Arguments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getTypeArguments()
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation#getTypeArguments()
 	 * @see #getAbstractMethodInvocation()
 	 * @generated
 	 */
 	EReference getAbstractMethodInvocation_TypeArguments();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Type Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration
 	 * @generated
 	 */
 	EClass getAbstractTypeDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getBodyDeclarations <em>Body Declarations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getBodyDeclarations <em>Body Declarations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Body Declarations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getBodyDeclarations()
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration#getBodyDeclarations()
 	 * @see #getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractTypeDeclaration_BodyDeclarations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getCommentsBeforeBody <em>Comments Before Body</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getCommentsBeforeBody <em>Comments Before Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Comments Before Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getCommentsBeforeBody()
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration#getCommentsBeforeBody()
 	 * @see #getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractTypeDeclaration_CommentsBeforeBody();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getCommentsAfterBody <em>Comments After Body</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getCommentsAfterBody <em>Comments After Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Comments After Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getCommentsAfterBody()
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration#getCommentsAfterBody()
 	 * @see #getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractTypeDeclaration_CommentsAfterBody();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getPackage <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getPackage()
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration#getPackage()
 	 * @see #getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractTypeDeclaration_Package();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getSuperInterfaces <em>Super Interfaces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getSuperInterfaces <em>Super Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Super Interfaces</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration#getSuperInterfaces()
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration#getSuperInterfaces()
 	 * @see #getAbstractTypeDeclaration()
 	 * @generated
 	 */
 	EReference getAbstractTypeDeclaration_SuperInterfaces();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression <em>Abstract Type Qualified Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AbstractTypeQualifiedExpression <em>Abstract Type Qualified Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Type Qualified Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression
+	 * @see org.eclipse.modisco.java.AbstractTypeQualifiedExpression
 	 * @generated
 	 */
 	EClass getAbstractTypeQualifiedExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AbstractTypeQualifiedExpression#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression#getQualifier()
+	 * @see org.eclipse.modisco.java.AbstractTypeQualifiedExpression#getQualifier()
 	 * @see #getAbstractTypeQualifiedExpression()
 	 * @generated
 	 */
 	EReference getAbstractTypeQualifiedExpression_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AbstractVariablesContainer <em>Abstract Variables Container</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AbstractVariablesContainer <em>Abstract Variables Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Abstract Variables Container</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractVariablesContainer
+	 * @see org.eclipse.modisco.java.AbstractVariablesContainer
 	 * @generated
 	 */
 	EClass getAbstractVariablesContainer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AbstractVariablesContainer#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getType()
+	 * @see org.eclipse.modisco.java.AbstractVariablesContainer#getType()
 	 * @see #getAbstractVariablesContainer()
 	 * @generated
 	 */
 	EReference getAbstractVariablesContainer_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getFragments <em>Fragments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AbstractVariablesContainer#getFragments <em>Fragments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Fragments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getFragments()
+	 * @see org.eclipse.modisco.java.AbstractVariablesContainer#getFragments()
 	 * @see #getAbstractVariablesContainer()
 	 * @generated
 	 */
 	EReference getAbstractVariablesContainer_Fragments();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Annotation <em>Annotation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Annotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Annotation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Annotation
+	 * @see org.eclipse.modisco.java.Annotation
 	 * @generated
 	 */
 	EClass getAnnotation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.Annotation#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.Annotation#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Annotation#getType()
+	 * @see org.eclipse.modisco.java.Annotation#getType()
 	 * @see #getAnnotation()
 	 * @generated
 	 */
 	EReference getAnnotation_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Annotation#getValues <em>Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Annotation#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Values</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Annotation#getValues()
+	 * @see org.eclipse.modisco.java.Annotation#getValues()
 	 * @see #getAnnotation()
 	 * @generated
 	 */
 	EReference getAnnotation_Values();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Archive <em>Archive</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Archive <em>Archive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Archive</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Archive
+	 * @see org.eclipse.modisco.java.Archive
 	 * @generated
 	 */
 	EClass getArchive();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Original File Path</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Archive#getOriginalFilePath()
+	 * @see org.eclipse.modisco.java.Archive#getOriginalFilePath()
 	 * @see #getArchive()
 	 * @generated
 	 */
 	EAttribute getArchive_OriginalFilePath();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Archive#getClassFiles <em>Class Files</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Archive#getClassFiles <em>Class Files</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Class Files</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Archive#getClassFiles()
+	 * @see org.eclipse.modisco.java.Archive#getClassFiles()
 	 * @see #getArchive()
 	 * @generated
 	 */
 	EReference getArchive_ClassFiles();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.Archive#getManifest <em>Manifest</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.Archive#getManifest <em>Manifest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Manifest</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Archive#getManifest()
+	 * @see org.eclipse.modisco.java.Archive#getManifest()
 	 * @see #getArchive()
 	 * @generated
 	 */
 	EReference getArchive_Manifest();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AssertStatement <em>Assert Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AssertStatement <em>Assert Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Assert Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AssertStatement
+	 * @see org.eclipse.modisco.java.AssertStatement
 	 * @generated
 	 */
 	EClass getAssertStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AssertStatement#getMessage <em>Message</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AssertStatement#getMessage <em>Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Message</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AssertStatement#getMessage()
+	 * @see org.eclipse.modisco.java.AssertStatement#getMessage()
 	 * @see #getAssertStatement()
 	 * @generated
 	 */
 	EReference getAssertStatement_Message();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AssertStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AssertStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AssertStatement#getExpression()
+	 * @see org.eclipse.modisco.java.AssertStatement#getExpression()
 	 * @see #getAssertStatement()
 	 * @generated
 	 */
 	EReference getAssertStatement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ASTNode <em>AST Node</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ASTNode <em>AST Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>AST Node</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ASTNode
+	 * @see org.eclipse.modisco.java.ASTNode
 	 * @generated
 	 */
 	EClass getASTNode();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ASTNode#getComments <em>Comments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ASTNode#getComments <em>Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Comments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ASTNode#getComments()
+	 * @see org.eclipse.modisco.java.ASTNode#getComments()
 	 * @see #getASTNode()
 	 * @generated
 	 */
 	EReference getASTNode_Comments();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Original Compilation Unit</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ASTNode#getOriginalCompilationUnit()
+	 * @see org.eclipse.modisco.java.ASTNode#getOriginalCompilationUnit()
 	 * @see #getASTNode()
 	 * @generated
 	 */
 	EReference getASTNode_OriginalCompilationUnit();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Original Class File</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ASTNode#getOriginalClassFile()
+	 * @see org.eclipse.modisco.java.ASTNode#getOriginalClassFile()
 	 * @see #getASTNode()
 	 * @generated
 	 */
 	EReference getASTNode_OriginalClassFile();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AnnotationMemberValuePair <em>Annotation Member Value Pair</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AnnotationMemberValuePair <em>Annotation Member Value Pair</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Annotation Member Value Pair</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationMemberValuePair
+	 * @see org.eclipse.modisco.java.AnnotationMemberValuePair
 	 * @generated
 	 */
 	EClass getAnnotationMemberValuePair();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.AnnotationMemberValuePair#getMember <em>Member</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getMember <em>Member</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Member</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationMemberValuePair#getMember()
+	 * @see org.eclipse.modisco.java.AnnotationMemberValuePair#getMember()
 	 * @see #getAnnotationMemberValuePair()
 	 * @generated
 	 */
 	EReference getAnnotationMemberValuePair_Member();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AnnotationMemberValuePair#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationMemberValuePair#getValue()
+	 * @see org.eclipse.modisco.java.AnnotationMemberValuePair#getValue()
 	 * @see #getAnnotationMemberValuePair()
 	 * @generated
 	 */
 	EReference getAnnotationMemberValuePair_Value();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AnnotationTypeDeclaration <em>Annotation Type Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AnnotationTypeDeclaration <em>Annotation Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Annotation Type Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeDeclaration
+	 * @see org.eclipse.modisco.java.AnnotationTypeDeclaration
 	 * @generated
 	 */
 	EClass getAnnotationTypeDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration <em>Annotation Type Member Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration <em>Annotation Type Member Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Annotation Type Member Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration
 	 * @generated
 	 */
 	EClass getAnnotationTypeMemberDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getDefault <em>Default</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getDefault <em>Default</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Default</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getDefault()
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getDefault()
 	 * @see #getAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
 	EReference getAnnotationTypeMemberDeclaration_Default();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getType()
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getType()
 	 * @see #getAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
 	EReference getAnnotationTypeMemberDeclaration_Type();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getUsages <em>Usages</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getUsages <em>Usages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration#getUsages()
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getUsages()
 	 * @see #getAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
 	EReference getAnnotationTypeMemberDeclaration_Usages();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.AnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.AnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Anonymous Class Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnonymousClassDeclaration
+	 * @see org.eclipse.modisco.java.AnonymousClassDeclaration
 	 * @generated
 	 */
 	EClass getAnonymousClassDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.AnonymousClassDeclaration#getBodyDeclarations <em>Body Declarations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.AnonymousClassDeclaration#getBodyDeclarations <em>Body Declarations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Body Declarations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnonymousClassDeclaration#getBodyDeclarations()
+	 * @see org.eclipse.modisco.java.AnonymousClassDeclaration#getBodyDeclarations()
 	 * @see #getAnonymousClassDeclaration()
 	 * @generated
 	 */
 	EReference getAnonymousClassDeclaration_BodyDeclarations();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.AnonymousClassDeclaration#getClassInstanceCreation <em>Class Instance Creation</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.AnonymousClassDeclaration#getClassInstanceCreation <em>Class Instance Creation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Class Instance Creation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AnonymousClassDeclaration#getClassInstanceCreation()
+	 * @see org.eclipse.modisco.java.AnonymousClassDeclaration#getClassInstanceCreation()
 	 * @see #getAnonymousClassDeclaration()
 	 * @generated
 	 */
 	EReference getAnonymousClassDeclaration_ClassInstanceCreation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ArrayAccess <em>Array Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ArrayAccess <em>Array Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Array Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayAccess
+	 * @see org.eclipse.modisco.java.ArrayAccess
 	 * @generated
 	 */
 	EClass getArrayAccess();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayAccess#getArray <em>Array</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayAccess#getArray <em>Array</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Array</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayAccess#getArray()
+	 * @see org.eclipse.modisco.java.ArrayAccess#getArray()
 	 * @see #getArrayAccess()
 	 * @generated
 	 */
 	EReference getArrayAccess_Array();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayAccess#getIndex <em>Index</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayAccess#getIndex <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Index</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayAccess#getIndex()
+	 * @see org.eclipse.modisco.java.ArrayAccess#getIndex()
 	 * @see #getArrayAccess()
 	 * @generated
 	 */
 	EReference getArrayAccess_Index();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ArrayCreation <em>Array Creation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ArrayCreation <em>Array Creation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Array Creation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayCreation
+	 * @see org.eclipse.modisco.java.ArrayCreation
 	 * @generated
 	 */
 	EClass getArrayCreation();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ArrayCreation#getDimensions <em>Dimensions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ArrayCreation#getDimensions <em>Dimensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Dimensions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayCreation#getDimensions()
+	 * @see org.eclipse.modisco.java.ArrayCreation#getDimensions()
 	 * @see #getArrayCreation()
 	 * @generated
 	 */
 	EReference getArrayCreation_Dimensions();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Initializer</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayCreation#getInitializer()
+	 * @see org.eclipse.modisco.java.ArrayCreation#getInitializer()
 	 * @see #getArrayCreation()
 	 * @generated
 	 */
 	EReference getArrayCreation_Initializer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayCreation#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayCreation#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayCreation#getType()
+	 * @see org.eclipse.modisco.java.ArrayCreation#getType()
 	 * @see #getArrayCreation()
 	 * @generated
 	 */
 	EReference getArrayCreation_Type();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ArrayInitializer <em>Array Initializer</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ArrayInitializer <em>Array Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Array Initializer</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayInitializer
+	 * @see org.eclipse.modisco.java.ArrayInitializer
 	 * @generated
 	 */
 	EClass getArrayInitializer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ArrayInitializer#getExpressions <em>Expressions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ArrayInitializer#getExpressions <em>Expressions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayInitializer#getExpressions()
+	 * @see org.eclipse.modisco.java.ArrayInitializer#getExpressions()
 	 * @see #getArrayInitializer()
 	 * @generated
 	 */
 	EReference getArrayInitializer_Expressions();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ArrayLengthAccess <em>Array Length Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ArrayLengthAccess <em>Array Length Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Array Length Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayLengthAccess
+	 * @see org.eclipse.modisco.java.ArrayLengthAccess
 	 * @generated
 	 */
 	EClass getArrayLengthAccess();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Array</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayLengthAccess#getArray()
+	 * @see org.eclipse.modisco.java.ArrayLengthAccess#getArray()
 	 * @see #getArrayLengthAccess()
 	 * @generated
 	 */
 	EReference getArrayLengthAccess_Array();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ArrayType <em>Array Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ArrayType <em>Array Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Array Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayType
+	 * @see org.eclipse.modisco.java.ArrayType
 	 * @generated
 	 */
 	EClass getArrayType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Dimensions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayType#getDimensions()
+	 * @see org.eclipse.modisco.java.ArrayType#getDimensions()
 	 * @see #getArrayType()
 	 * @generated
 	 */
 	EAttribute getArrayType_Dimensions();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ArrayType#getElementType <em>Element Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ArrayType#getElementType <em>Element Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Element Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ArrayType#getElementType()
+	 * @see org.eclipse.modisco.java.ArrayType#getElementType()
 	 * @see #getArrayType()
 	 * @generated
 	 */
 	EReference getArrayType_ElementType();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Assignment <em>Assignment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Assignment <em>Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Assignment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Assignment
+	 * @see org.eclipse.modisco.java.Assignment
 	 * @generated
 	 */
 	EClass getAssignment();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Left Hand Side</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Assignment#getLeftHandSide()
+	 * @see org.eclipse.modisco.java.Assignment#getLeftHandSide()
 	 * @see #getAssignment()
 	 * @generated
 	 */
 	EReference getAssignment_LeftHandSide();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Assignment#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Assignment#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Assignment#getOperator()
+	 * @see org.eclipse.modisco.java.Assignment#getOperator()
 	 * @see #getAssignment()
 	 * @generated
 	 */
 	EAttribute getAssignment_Operator();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Right Hand Side</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Assignment#getRightHandSide()
+	 * @see org.eclipse.modisco.java.Assignment#getRightHandSide()
 	 * @see #getAssignment()
 	 * @generated
 	 */
 	EReference getAssignment_RightHandSide();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.BodyDeclaration <em>Body Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.BodyDeclaration <em>Body Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Body Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration
+	 * @see org.eclipse.modisco.java.BodyDeclaration
 	 * @generated
 	 */
 	EClass getBodyDeclaration();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.BodyDeclaration#getAbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.BodyDeclaration#getAbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Abstract Type Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration#getAbstractTypeDeclaration()
+	 * @see org.eclipse.modisco.java.BodyDeclaration#getAbstractTypeDeclaration()
 	 * @see #getBodyDeclaration()
 	 * @generated
 	 */
 	EReference getBodyDeclaration_AbstractTypeDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.BodyDeclaration#getAnnotations <em>Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.BodyDeclaration#getAnnotations <em>Annotations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration#getAnnotations()
+	 * @see org.eclipse.modisco.java.BodyDeclaration#getAnnotations()
 	 * @see #getBodyDeclaration()
 	 * @generated
 	 */
 	EReference getBodyDeclaration_Annotations();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.BodyDeclaration#getAnonymousClassDeclarationOwner <em>Anonymous Class Declaration Owner</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.BodyDeclaration#getAnonymousClassDeclarationOwner <em>Anonymous Class Declaration Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Anonymous Class Declaration Owner</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration#getAnonymousClassDeclarationOwner()
+	 * @see org.eclipse.modisco.java.BodyDeclaration#getAnonymousClassDeclarationOwner()
 	 * @see #getBodyDeclaration()
 	 * @generated
 	 */
 	EReference getBodyDeclaration_AnonymousClassDeclarationOwner();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.BodyDeclaration#getModifier <em>Modifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.BodyDeclaration#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Modifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration#getModifier()
+	 * @see org.eclipse.modisco.java.BodyDeclaration#getModifier()
 	 * @see #getBodyDeclaration()
 	 * @generated
 	 */
 	EReference getBodyDeclaration_Modifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.BooleanLiteral <em>Boolean Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.BooleanLiteral <em>Boolean Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Boolean Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BooleanLiteral
+	 * @see org.eclipse.modisco.java.BooleanLiteral
 	 * @generated
 	 */
 	EClass getBooleanLiteral();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.BooleanLiteral#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.BooleanLiteral#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BooleanLiteral#isValue()
+	 * @see org.eclipse.modisco.java.BooleanLiteral#isValue()
 	 * @see #getBooleanLiteral()
 	 * @generated
 	 */
 	EAttribute getBooleanLiteral_Value();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.BlockComment <em>Block Comment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.BlockComment <em>Block Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Block Comment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BlockComment
+	 * @see org.eclipse.modisco.java.BlockComment
 	 * @generated
 	 */
 	EClass getBlockComment();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Block <em>Block</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Block <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Block</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Block
+	 * @see org.eclipse.modisco.java.Block
 	 * @generated
 	 */
 	EClass getBlock();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Block#getStatements <em>Statements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Block#getStatements <em>Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Statements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Block#getStatements()
+	 * @see org.eclipse.modisco.java.Block#getStatements()
 	 * @see #getBlock()
 	 * @generated
 	 */
 	EReference getBlock_Statements();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.BreakStatement <em>Break Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.BreakStatement <em>Break Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Break Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BreakStatement
+	 * @see org.eclipse.modisco.java.BreakStatement
 	 * @generated
 	 */
 	EClass getBreakStatement();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.BreakStatement#getLabel <em>Label</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.BreakStatement#getLabel <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Label</em>'.
-	 * @see org.eclipse.gmt.modisco.java.BreakStatement#getLabel()
+	 * @see org.eclipse.modisco.java.BreakStatement#getLabel()
 	 * @see #getBreakStatement()
 	 * @generated
 	 */
 	EReference getBreakStatement_Label();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.CastExpression <em>Cast Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.CastExpression <em>Cast Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cast Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CastExpression
+	 * @see org.eclipse.modisco.java.CastExpression
 	 * @generated
 	 */
 	EClass getCastExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.CastExpression#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.CastExpression#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CastExpression#getExpression()
+	 * @see org.eclipse.modisco.java.CastExpression#getExpression()
 	 * @see #getCastExpression()
 	 * @generated
 	 */
 	EReference getCastExpression_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.CastExpression#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.CastExpression#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CastExpression#getType()
+	 * @see org.eclipse.modisco.java.CastExpression#getType()
 	 * @see #getCastExpression()
 	 * @generated
 	 */
 	EReference getCastExpression_Type();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.CatchClause <em>Catch Clause</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.CatchClause <em>Catch Clause</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Catch Clause</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CatchClause
+	 * @see org.eclipse.modisco.java.CatchClause
 	 * @generated
 	 */
 	EClass getCatchClause();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.CatchClause#getException <em>Exception</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.CatchClause#getException <em>Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exception</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CatchClause#getException()
+	 * @see org.eclipse.modisco.java.CatchClause#getException()
 	 * @see #getCatchClause()
 	 * @generated
 	 */
 	EReference getCatchClause_Exception();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.CatchClause#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.CatchClause#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CatchClause#getBody()
+	 * @see org.eclipse.modisco.java.CatchClause#getBody()
 	 * @see #getCatchClause()
 	 * @generated
 	 */
 	EReference getCatchClause_Body();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.CharacterLiteral <em>Character Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.CharacterLiteral <em>Character Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Character Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CharacterLiteral
+	 * @see org.eclipse.modisco.java.CharacterLiteral
 	 * @generated
 	 */
 	EClass getCharacterLiteral();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.CharacterLiteral#getEscapedValue <em>Escaped Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.CharacterLiteral#getEscapedValue <em>Escaped Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Escaped Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CharacterLiteral#getEscapedValue()
+	 * @see org.eclipse.modisco.java.CharacterLiteral#getEscapedValue()
 	 * @see #getCharacterLiteral()
 	 * @generated
 	 */
 	EAttribute getCharacterLiteral_EscapedValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ClassFile <em>Class File</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ClassFile <em>Class File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Class File</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile
+	 * @see org.eclipse.modisco.java.ClassFile
 	 * @generated
 	 */
 	EClass getClassFile();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Original File Path</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile#getOriginalFilePath()
+	 * @see org.eclipse.modisco.java.ClassFile#getOriginalFilePath()
 	 * @see #getClassFile()
 	 * @generated
 	 */
 	EAttribute getClassFile_OriginalFilePath();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ClassFile#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ClassFile#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile#getType()
+	 * @see org.eclipse.modisco.java.ClassFile#getType()
 	 * @see #getClassFile()
 	 * @generated
 	 */
 	EReference getClassFile_Type();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Attached Source</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile#getAttachedSource()
+	 * @see org.eclipse.modisco.java.ClassFile#getAttachedSource()
 	 * @see #getClassFile()
 	 * @generated
 	 */
 	EReference getClassFile_AttachedSource();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ClassFile#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ClassFile#getPackage <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile#getPackage()
+	 * @see org.eclipse.modisco.java.ClassFile#getPackage()
 	 * @see #getClassFile()
 	 * @generated
 	 */
 	EReference getClassFile_Package();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ClassInstanceCreation <em>Class Instance Creation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ClassInstanceCreation <em>Class Instance Creation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Class Instance Creation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassInstanceCreation
+	 * @see org.eclipse.modisco.java.ClassInstanceCreation
 	 * @generated
 	 */
 	EClass getClassInstanceCreation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ClassInstanceCreation#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ClassInstanceCreation#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Anonymous Class Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassInstanceCreation#getAnonymousClassDeclaration()
+	 * @see org.eclipse.modisco.java.ClassInstanceCreation#getAnonymousClassDeclaration()
 	 * @see #getClassInstanceCreation()
 	 * @generated
 	 */
 	EReference getClassInstanceCreation_AnonymousClassDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ClassInstanceCreation#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ClassInstanceCreation#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassInstanceCreation#getExpression()
+	 * @see org.eclipse.modisco.java.ClassInstanceCreation#getExpression()
 	 * @see #getClassInstanceCreation()
 	 * @generated
 	 */
 	EReference getClassInstanceCreation_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ClassInstanceCreation#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ClassInstanceCreation#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassInstanceCreation#getType()
+	 * @see org.eclipse.modisco.java.ClassInstanceCreation#getType()
 	 * @see #getClassInstanceCreation()
 	 * @generated
 	 */
 	EReference getClassInstanceCreation_Type();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ConstructorDeclaration <em>Constructor Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ConstructorDeclaration <em>Constructor Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constructor Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConstructorDeclaration
+	 * @see org.eclipse.modisco.java.ConstructorDeclaration
 	 * @generated
 	 */
 	EClass getConstructorDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ConditionalExpression <em>Conditional Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ConditionalExpression <em>Conditional Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Conditional Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConditionalExpression
+	 * @see org.eclipse.modisco.java.ConditionalExpression
 	 * @generated
 	 */
 	EClass getConditionalExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Else Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConditionalExpression#getElseExpression()
+	 * @see org.eclipse.modisco.java.ConditionalExpression#getElseExpression()
 	 * @see #getConditionalExpression()
 	 * @generated
 	 */
 	EReference getConditionalExpression_ElseExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConditionalExpression#getExpression()
+	 * @see org.eclipse.modisco.java.ConditionalExpression#getExpression()
 	 * @see #getConditionalExpression()
 	 * @generated
 	 */
 	EReference getConditionalExpression_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Then Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConditionalExpression#getThenExpression()
+	 * @see org.eclipse.modisco.java.ConditionalExpression#getThenExpression()
 	 * @see #getConditionalExpression()
 	 * @generated
 	 */
 	EReference getConditionalExpression_ThenExpression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ConstructorInvocation <em>Constructor Invocation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ConstructorInvocation <em>Constructor Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Constructor Invocation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ConstructorInvocation
+	 * @see org.eclipse.modisco.java.ConstructorInvocation
 	 * @generated
 	 */
 	EClass getConstructorInvocation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ClassDeclaration <em>Class Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ClassDeclaration <em>Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Class Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassDeclaration
+	 * @see org.eclipse.modisco.java.ClassDeclaration
 	 * @generated
 	 */
 	EClass getClassDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ClassDeclaration#getSuperClass <em>Super Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Super Class</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ClassDeclaration#getSuperClass()
+	 * @see org.eclipse.modisco.java.ClassDeclaration#getSuperClass()
 	 * @see #getClassDeclaration()
 	 * @generated
 	 */
 	EReference getClassDeclaration_SuperClass();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Comment <em>Comment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Comment <em>Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Comment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Comment
+	 * @see org.eclipse.modisco.java.Comment
 	 * @generated
 	 */
 	EClass getComment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Comment#getContent <em>Content</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Comment#getContent <em>Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Content</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Comment#getContent()
+	 * @see org.eclipse.modisco.java.Comment#getContent()
 	 * @see #getComment()
 	 * @generated
 	 */
 	EAttribute getComment_Content();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Enclosed By Parent</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Comment#isEnclosedByParent()
+	 * @see org.eclipse.modisco.java.Comment#isEnclosedByParent()
 	 * @see #getComment()
 	 * @generated
 	 */
 	EAttribute getComment_EnclosedByParent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Prefix Of Parent</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Comment#isPrefixOfParent()
+	 * @see org.eclipse.modisco.java.Comment#isPrefixOfParent()
 	 * @see #getComment()
 	 * @generated
 	 */
 	EAttribute getComment_PrefixOfParent();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.CompilationUnit <em>Compilation Unit</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.CompilationUnit <em>Compilation Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Compilation Unit</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit
+	 * @see org.eclipse.modisco.java.CompilationUnit
 	 * @generated
 	 */
 	EClass getCompilationUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Original File Path</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit#getOriginalFilePath()
+	 * @see org.eclipse.modisco.java.CompilationUnit#getOriginalFilePath()
 	 * @see #getCompilationUnit()
 	 * @generated
 	 */
 	EAttribute getCompilationUnit_OriginalFilePath();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getCommentList <em>Comment List</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.CompilationUnit#getCommentList <em>Comment List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Comment List</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit#getCommentList()
+	 * @see org.eclipse.modisco.java.CompilationUnit#getCommentList()
 	 * @see #getCompilationUnit()
 	 * @generated
 	 */
 	EReference getCompilationUnit_CommentList();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getImports <em>Imports</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.CompilationUnit#getImports <em>Imports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Imports</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit#getImports()
+	 * @see org.eclipse.modisco.java.CompilationUnit#getImports()
 	 * @see #getCompilationUnit()
 	 * @generated
 	 */
 	EReference getCompilationUnit_Imports();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.CompilationUnit#getPackage <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit#getPackage()
+	 * @see org.eclipse.modisco.java.CompilationUnit#getPackage()
 	 * @see #getCompilationUnit()
 	 * @generated
 	 */
 	EReference getCompilationUnit_Package();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getTypes <em>Types</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.CompilationUnit#getTypes <em>Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Types</em>'.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit#getTypes()
+	 * @see org.eclipse.modisco.java.CompilationUnit#getTypes()
 	 * @see #getCompilationUnit()
 	 * @generated
 	 */
 	EReference getCompilationUnit_Types();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ContinueStatement <em>Continue Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ContinueStatement <em>Continue Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Continue Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ContinueStatement
+	 * @see org.eclipse.modisco.java.ContinueStatement
 	 * @generated
 	 */
 	EClass getContinueStatement();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ContinueStatement#getLabel <em>Label</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ContinueStatement#getLabel <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Label</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ContinueStatement#getLabel()
+	 * @see org.eclipse.modisco.java.ContinueStatement#getLabel()
 	 * @see #getContinueStatement()
 	 * @generated
 	 */
 	EReference getContinueStatement_Label();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.DoStatement <em>Do Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.DoStatement <em>Do Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Do Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.DoStatement
+	 * @see org.eclipse.modisco.java.DoStatement
 	 * @generated
 	 */
 	EClass getDoStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.DoStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.DoStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.DoStatement#getExpression()
+	 * @see org.eclipse.modisco.java.DoStatement#getExpression()
 	 * @see #getDoStatement()
 	 * @generated
 	 */
 	EReference getDoStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.DoStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.DoStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.DoStatement#getBody()
+	 * @see org.eclipse.modisco.java.DoStatement#getBody()
 	 * @see #getDoStatement()
 	 * @generated
 	 */
 	EReference getDoStatement_Body();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.EmptyStatement <em>Empty Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.EmptyStatement <em>Empty Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Empty Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EmptyStatement
+	 * @see org.eclipse.modisco.java.EmptyStatement
 	 * @generated
 	 */
 	EClass getEmptyStatement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.EnhancedForStatement <em>Enhanced For Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.EnhancedForStatement <em>Enhanced For Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enhanced For Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnhancedForStatement
+	 * @see org.eclipse.modisco.java.EnhancedForStatement
 	 * @generated
 	 */
 	EClass getEnhancedForStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.EnhancedForStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.EnhancedForStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnhancedForStatement#getBody()
+	 * @see org.eclipse.modisco.java.EnhancedForStatement#getBody()
 	 * @see #getEnhancedForStatement()
 	 * @generated
 	 */
 	EReference getEnhancedForStatement_Body();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.EnhancedForStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.EnhancedForStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnhancedForStatement#getExpression()
+	 * @see org.eclipse.modisco.java.EnhancedForStatement#getExpression()
 	 * @see #getEnhancedForStatement()
 	 * @generated
 	 */
 	EReference getEnhancedForStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.EnhancedForStatement#getParameter <em>Parameter</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.EnhancedForStatement#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Parameter</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnhancedForStatement#getParameter()
+	 * @see org.eclipse.modisco.java.EnhancedForStatement#getParameter()
 	 * @see #getEnhancedForStatement()
 	 * @generated
 	 */
 	EReference getEnhancedForStatement_Parameter();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration <em>Enum Constant Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.EnumConstantDeclaration <em>Enum Constant Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enum Constant Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnumConstantDeclaration
+	 * @see org.eclipse.modisco.java.EnumConstantDeclaration
 	 * @generated
 	 */
 	EClass getEnumConstantDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Anonymous Class Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration()
+	 * @see org.eclipse.modisco.java.EnumConstantDeclaration#getAnonymousClassDeclaration()
 	 * @see #getEnumConstantDeclaration()
 	 * @generated
 	 */
 	EReference getEnumConstantDeclaration_AnonymousClassDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getArguments <em>Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.EnumConstantDeclaration#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnumConstantDeclaration#getArguments()
+	 * @see org.eclipse.modisco.java.EnumConstantDeclaration#getArguments()
 	 * @see #getEnumConstantDeclaration()
 	 * @generated
 	 */
 	EReference getEnumConstantDeclaration_Arguments();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.EnumDeclaration <em>Enum Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.EnumDeclaration <em>Enum Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enum Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnumDeclaration
+	 * @see org.eclipse.modisco.java.EnumDeclaration
 	 * @generated
 	 */
 	EClass getEnumDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.EnumDeclaration#getEnumConstants <em>Enum Constants</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.EnumDeclaration#getEnumConstants <em>Enum Constants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Enum Constants</em>'.
-	 * @see org.eclipse.gmt.modisco.java.EnumDeclaration#getEnumConstants()
+	 * @see org.eclipse.modisco.java.EnumDeclaration#getEnumConstants()
 	 * @see #getEnumDeclaration()
 	 * @generated
 	 */
 	EReference getEnumDeclaration_EnumConstants();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Expression <em>Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Expression
+	 * @see org.eclipse.modisco.java.Expression
 	 * @generated
 	 */
 	EClass getExpression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ExpressionStatement <em>Expression Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ExpressionStatement <em>Expression Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Expression Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ExpressionStatement
+	 * @see org.eclipse.modisco.java.ExpressionStatement
 	 * @generated
 	 */
 	EClass getExpressionStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ExpressionStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ExpressionStatement#getExpression()
+	 * @see org.eclipse.modisco.java.ExpressionStatement#getExpression()
 	 * @see #getExpressionStatement()
 	 * @generated
 	 */
 	EReference getExpressionStatement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.FieldAccess <em>Field Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.FieldAccess <em>Field Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Field Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.FieldAccess
+	 * @see org.eclipse.modisco.java.FieldAccess
 	 * @generated
 	 */
 	EClass getFieldAccess();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.FieldAccess#getField <em>Field</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.FieldAccess#getField <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Field</em>'.
-	 * @see org.eclipse.gmt.modisco.java.FieldAccess#getField()
+	 * @see org.eclipse.modisco.java.FieldAccess#getField()
 	 * @see #getFieldAccess()
 	 * @generated
 	 */
 	EReference getFieldAccess_Field();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.FieldAccess#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.FieldAccess#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.FieldAccess#getExpression()
+	 * @see org.eclipse.modisco.java.FieldAccess#getExpression()
 	 * @see #getFieldAccess()
 	 * @generated
 	 */
 	EReference getFieldAccess_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.FieldDeclaration <em>Field Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.FieldDeclaration <em>Field Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Field Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.FieldDeclaration
+	 * @see org.eclipse.modisco.java.FieldDeclaration
 	 * @generated
 	 */
 	EClass getFieldDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ForStatement <em>For Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ForStatement <em>For Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>For Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement
+	 * @see org.eclipse.modisco.java.ForStatement
 	 * @generated
 	 */
 	EClass getForStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ForStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ForStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement#getExpression()
+	 * @see org.eclipse.modisco.java.ForStatement#getExpression()
 	 * @see #getForStatement()
 	 * @generated
 	 */
 	EReference getForStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ForStatement#getUpdaters <em>Updaters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ForStatement#getUpdaters <em>Updaters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Updaters</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement#getUpdaters()
+	 * @see org.eclipse.modisco.java.ForStatement#getUpdaters()
 	 * @see #getForStatement()
 	 * @generated
 	 */
 	EReference getForStatement_Updaters();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ForStatement#getInitializers <em>Initializers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ForStatement#getInitializers <em>Initializers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Initializers</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement#getInitializers()
+	 * @see org.eclipse.modisco.java.ForStatement#getInitializers()
 	 * @see #getForStatement()
 	 * @generated
 	 */
 	EReference getForStatement_Initializers();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ForStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ForStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement#getBody()
+	 * @see org.eclipse.modisco.java.ForStatement#getBody()
 	 * @see #getForStatement()
 	 * @generated
 	 */
 	EReference getForStatement_Body();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.IfStatement <em>If Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.IfStatement <em>If Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>If Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.IfStatement
+	 * @see org.eclipse.modisco.java.IfStatement
 	 * @generated
 	 */
 	EClass getIfStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.IfStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.IfStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.IfStatement#getExpression()
+	 * @see org.eclipse.modisco.java.IfStatement#getExpression()
 	 * @see #getIfStatement()
 	 * @generated
 	 */
 	EReference getIfStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.IfStatement#getThenStatement <em>Then Statement</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.IfStatement#getThenStatement <em>Then Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Then Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.IfStatement#getThenStatement()
+	 * @see org.eclipse.modisco.java.IfStatement#getThenStatement()
 	 * @see #getIfStatement()
 	 * @generated
 	 */
 	EReference getIfStatement_ThenStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.IfStatement#getElseStatement <em>Else Statement</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.IfStatement#getElseStatement <em>Else Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Else Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.IfStatement#getElseStatement()
+	 * @see org.eclipse.modisco.java.IfStatement#getElseStatement()
 	 * @see #getIfStatement()
 	 * @generated
 	 */
 	EReference getIfStatement_ElseStatement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ImportDeclaration <em>Import Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ImportDeclaration <em>Import Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Import Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ImportDeclaration
+	 * @see org.eclipse.modisco.java.ImportDeclaration
 	 * @generated
 	 */
 	EClass getImportDeclaration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ImportDeclaration#isStatic <em>Static</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ImportDeclaration#isStatic <em>Static</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Static</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ImportDeclaration#isStatic()
+	 * @see org.eclipse.modisco.java.ImportDeclaration#isStatic()
 	 * @see #getImportDeclaration()
 	 * @generated
 	 */
 	EAttribute getImportDeclaration_Static();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Imported Element</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ImportDeclaration#getImportedElement()
+	 * @see org.eclipse.modisco.java.ImportDeclaration#getImportedElement()
 	 * @see #getImportDeclaration()
 	 * @generated
 	 */
 	EReference getImportDeclaration_ImportedElement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.InfixExpression <em>Infix Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.InfixExpression <em>Infix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Infix Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression
+	 * @see org.eclipse.modisco.java.InfixExpression
 	 * @generated
 	 */
 	EClass getInfixExpression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.InfixExpression#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.InfixExpression#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression#getOperator()
+	 * @see org.eclipse.modisco.java.InfixExpression#getOperator()
 	 * @see #getInfixExpression()
 	 * @generated
 	 */
 	EAttribute getInfixExpression_Operator();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Right Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression#getRightOperand()
+	 * @see org.eclipse.modisco.java.InfixExpression#getRightOperand()
 	 * @see #getInfixExpression()
 	 * @generated
 	 */
 	EReference getInfixExpression_RightOperand();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Left Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression#getLeftOperand()
+	 * @see org.eclipse.modisco.java.InfixExpression#getLeftOperand()
 	 * @see #getInfixExpression()
 	 * @generated
 	 */
 	EReference getInfixExpression_LeftOperand();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.InfixExpression#getExtendedOperands <em>Extended Operands</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.InfixExpression#getExtendedOperands <em>Extended Operands</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Extended Operands</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression#getExtendedOperands()
+	 * @see org.eclipse.modisco.java.InfixExpression#getExtendedOperands()
 	 * @see #getInfixExpression()
 	 * @generated
 	 */
 	EReference getInfixExpression_ExtendedOperands();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Initializer <em>Initializer</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Initializer <em>Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Initializer</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Initializer
+	 * @see org.eclipse.modisco.java.Initializer
 	 * @generated
 	 */
 	EClass getInitializer();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.Initializer#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.Initializer#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Initializer#getBody()
+	 * @see org.eclipse.modisco.java.Initializer#getBody()
 	 * @see #getInitializer()
 	 * @generated
 	 */
 	EReference getInitializer_Body();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.InstanceofExpression <em>Instanceof Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.InstanceofExpression <em>Instanceof Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Instanceof Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InstanceofExpression
+	 * @see org.eclipse.modisco.java.InstanceofExpression
 	 * @generated
 	 */
 	EClass getInstanceofExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Right Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InstanceofExpression#getRightOperand()
+	 * @see org.eclipse.modisco.java.InstanceofExpression#getRightOperand()
 	 * @see #getInstanceofExpression()
 	 * @generated
 	 */
 	EReference getInstanceofExpression_RightOperand();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Left Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InstanceofExpression#getLeftOperand()
+	 * @see org.eclipse.modisco.java.InstanceofExpression#getLeftOperand()
 	 * @see #getInstanceofExpression()
 	 * @generated
 	 */
 	EReference getInstanceofExpression_LeftOperand();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.InterfaceDeclaration <em>Interface Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.InterfaceDeclaration <em>Interface Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Interface Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InterfaceDeclaration
+	 * @see org.eclipse.modisco.java.InterfaceDeclaration
 	 * @generated
 	 */
 	EClass getInterfaceDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Javadoc <em>Javadoc</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Javadoc <em>Javadoc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Javadoc</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Javadoc
+	 * @see org.eclipse.modisco.java.Javadoc
 	 * @generated
 	 */
 	EClass getJavadoc();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Javadoc#getTags <em>Tags</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Javadoc#getTags <em>Tags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Tags</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Javadoc#getTags()
+	 * @see org.eclipse.modisco.java.Javadoc#getTags()
 	 * @see #getJavadoc()
 	 * @generated
 	 */
 	EReference getJavadoc_Tags();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.LabeledStatement <em>Labeled Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.LabeledStatement <em>Labeled Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Labeled Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement
+	 * @see org.eclipse.modisco.java.LabeledStatement
 	 * @generated
 	 */
 	EClass getLabeledStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.LabeledStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.LabeledStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement#getBody()
+	 * @see org.eclipse.modisco.java.LabeledStatement#getBody()
 	 * @see #getLabeledStatement()
 	 * @generated
 	 */
 	EReference getLabeledStatement_Body();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Break Statements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInBreakStatements()
+	 * @see org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements()
 	 * @see #getLabeledStatement()
 	 * @generated
 	 */
 	EReference getLabeledStatement_UsagesInBreakStatements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Continue Statements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement#getUsagesInContinueStatements()
+	 * @see org.eclipse.modisco.java.LabeledStatement#getUsagesInContinueStatements()
 	 * @see #getLabeledStatement()
 	 * @generated
 	 */
 	EReference getLabeledStatement_UsagesInContinueStatements();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.LineComment <em>Line Comment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.LineComment <em>Line Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Line Comment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.LineComment
+	 * @see org.eclipse.modisco.java.LineComment
 	 * @generated
 	 */
 	EClass getLineComment();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Manifest <em>Manifest</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Manifest <em>Manifest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Manifest</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Manifest
+	 * @see org.eclipse.modisco.java.Manifest
 	 * @generated
 	 */
 	EClass getManifest();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Manifest#getMainAttributes <em>Main Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Manifest#getMainAttributes <em>Main Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Main Attributes</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Manifest#getMainAttributes()
+	 * @see org.eclipse.modisco.java.Manifest#getMainAttributes()
 	 * @see #getManifest()
 	 * @generated
 	 */
 	EReference getManifest_MainAttributes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Manifest#getEntryAttributes <em>Entry Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Manifest#getEntryAttributes <em>Entry Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Entry Attributes</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Manifest#getEntryAttributes()
+	 * @see org.eclipse.modisco.java.Manifest#getEntryAttributes()
 	 * @see #getManifest()
 	 * @generated
 	 */
 	EReference getManifest_EntryAttributes();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ManifestAttribute <em>Manifest Attribute</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ManifestAttribute <em>Manifest Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Manifest Attribute</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestAttribute
+	 * @see org.eclipse.modisco.java.ManifestAttribute
 	 * @generated
 	 */
 	EClass getManifestAttribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ManifestAttribute#getKey <em>Key</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ManifestAttribute#getKey <em>Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestAttribute#getKey()
+	 * @see org.eclipse.modisco.java.ManifestAttribute#getKey()
 	 * @see #getManifestAttribute()
 	 * @generated
 	 */
 	EAttribute getManifestAttribute_Key();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ManifestAttribute#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ManifestAttribute#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestAttribute#getValue()
+	 * @see org.eclipse.modisco.java.ManifestAttribute#getValue()
 	 * @see #getManifestAttribute()
 	 * @generated
 	 */
 	EAttribute getManifestAttribute_Value();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ManifestEntry <em>Manifest Entry</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ManifestEntry <em>Manifest Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Manifest Entry</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestEntry
+	 * @see org.eclipse.modisco.java.ManifestEntry
 	 * @generated
 	 */
 	EClass getManifestEntry();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.ManifestEntry#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.ManifestEntry#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestEntry#getName()
+	 * @see org.eclipse.modisco.java.ManifestEntry#getName()
 	 * @see #getManifestEntry()
 	 * @generated
 	 */
 	EAttribute getManifestEntry_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ManifestEntry#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ManifestEntry#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ManifestEntry#getAttributes()
+	 * @see org.eclipse.modisco.java.ManifestEntry#getAttributes()
 	 * @see #getManifestEntry()
 	 * @generated
 	 */
 	EReference getManifestEntry_Attributes();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.MemberRef <em>Member Ref</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MemberRef <em>Member Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Member Ref</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MemberRef
+	 * @see org.eclipse.modisco.java.MemberRef
 	 * @generated
 	 */
 	EClass getMemberRef();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.MemberRef#getMember <em>Member</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.MemberRef#getMember <em>Member</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Member</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MemberRef#getMember()
+	 * @see org.eclipse.modisco.java.MemberRef#getMember()
 	 * @see #getMemberRef()
 	 * @generated
 	 */
 	EReference getMemberRef_Member();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MemberRef#getQualifier()
+	 * @see org.eclipse.modisco.java.MemberRef#getQualifier()
 	 * @see #getMemberRef()
 	 * @generated
 	 */
 	EReference getMemberRef_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.MethodDeclaration <em>Method Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MethodDeclaration <em>Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Method Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration
+	 * @see org.eclipse.modisco.java.MethodDeclaration
 	 * @generated
 	 */
 	EClass getMethodDeclaration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Extra Array Dimensions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getExtraArrayDimensions()
 	 * @see #getMethodDeclaration()
 	 * @generated
 	 */
 	EAttribute getMethodDeclaration_ExtraArrayDimensions();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Return Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getReturnType()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getReturnType()
 	 * @see #getMethodDeclaration()
 	 * @generated
 	 */
 	EReference getMethodDeclaration_ReturnType();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Redefined Method Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration()
 	 * @see #getMethodDeclaration()
 	 * @generated
 	 */
 	EReference getMethodDeclaration_RedefinedMethodDeclaration();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Redefinitions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinitions()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getRedefinitions()
 	 * @see #getMethodDeclaration()
 	 * @generated
 	 */
 	EReference getMethodDeclaration_Redefinitions();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.MethodInvocation <em>Method Invocation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MethodInvocation <em>Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Method Invocation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodInvocation
+	 * @see org.eclipse.modisco.java.MethodInvocation
 	 * @generated
 	 */
 	EClass getMethodInvocation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.MethodInvocation#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.MethodInvocation#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodInvocation#getExpression()
+	 * @see org.eclipse.modisco.java.MethodInvocation#getExpression()
 	 * @see #getMethodInvocation()
 	 * @generated
 	 */
 	EReference getMethodInvocation_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.MethodRef <em>Method Ref</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MethodRef <em>Method Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Method Ref</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRef
+	 * @see org.eclipse.modisco.java.MethodRef
 	 * @generated
 	 */
 	EClass getMethodRef();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.MethodRef#getMethod <em>Method</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.MethodRef#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Method</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRef#getMethod()
+	 * @see org.eclipse.modisco.java.MethodRef#getMethod()
 	 * @see #getMethodRef()
 	 * @generated
 	 */
 	EReference getMethodRef_Method();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.MethodRef#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.MethodRef#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRef#getQualifier()
+	 * @see org.eclipse.modisco.java.MethodRef#getQualifier()
 	 * @see #getMethodRef()
 	 * @generated
 	 */
 	EReference getMethodRef_Qualifier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.MethodRef#getParameters <em>Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.MethodRef#getParameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRef#getParameters()
+	 * @see org.eclipse.modisco.java.MethodRef#getParameters()
 	 * @see #getMethodRef()
 	 * @generated
 	 */
 	EReference getMethodRef_Parameters();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.MethodRefParameter <em>Method Ref Parameter</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MethodRefParameter <em>Method Ref Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Method Ref Parameter</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRefParameter
+	 * @see org.eclipse.modisco.java.MethodRefParameter
 	 * @generated
 	 */
 	EClass getMethodRefParameter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.MethodRefParameter#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.MethodRefParameter#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRefParameter#getName()
+	 * @see org.eclipse.modisco.java.MethodRefParameter#getName()
 	 * @see #getMethodRefParameter()
 	 * @generated
 	 */
 	EAttribute getMethodRefParameter_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.MethodRefParameter#isVarargs <em>Varargs</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.MethodRefParameter#isVarargs <em>Varargs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Varargs</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRefParameter#isVarargs()
+	 * @see org.eclipse.modisco.java.MethodRefParameter#isVarargs()
 	 * @see #getMethodRefParameter()
 	 * @generated
 	 */
 	EAttribute getMethodRefParameter_Varargs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.MethodRefParameter#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.MethodRefParameter#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.MethodRefParameter#getType()
+	 * @see org.eclipse.modisco.java.MethodRefParameter#getType()
 	 * @see #getMethodRefParameter()
 	 * @generated
 	 */
 	EReference getMethodRefParameter_Type();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Model <em>Model</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Model</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model
+	 * @see org.eclipse.modisco.java.Model
 	 * @generated
 	 */
 	EClass getModel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Model#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Model#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getName()
+	 * @see org.eclipse.modisco.java.Model#getName()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EAttribute getModel_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getOwnedElements <em>Owned Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getOwnedElements <em>Owned Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Owned Elements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getOwnedElements()
+	 * @see org.eclipse.modisco.java.Model#getOwnedElements()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_OwnedElements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getOrphanTypes <em>Orphan Types</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getOrphanTypes <em>Orphan Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Orphan Types</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getOrphanTypes()
+	 * @see org.eclipse.modisco.java.Model#getOrphanTypes()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_OrphanTypes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getUnresolvedItems <em>Unresolved Items</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getUnresolvedItems <em>Unresolved Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Unresolved Items</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getUnresolvedItems()
+	 * @see org.eclipse.modisco.java.Model#getUnresolvedItems()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_UnresolvedItems();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getCompilationUnits <em>Compilation Units</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getCompilationUnits <em>Compilation Units</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Compilation Units</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getCompilationUnits()
+	 * @see org.eclipse.modisco.java.Model#getCompilationUnits()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_CompilationUnits();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getClassFiles <em>Class Files</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getClassFiles <em>Class Files</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Class Files</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getClassFiles()
+	 * @see org.eclipse.modisco.java.Model#getClassFiles()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_ClassFiles();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Model#getArchives <em>Archives</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Model#getArchives <em>Archives</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Archives</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Model#getArchives()
+	 * @see org.eclipse.modisco.java.Model#getArchives()
 	 * @see #getModel()
 	 * @generated
 	 */
 	EReference getModel_Archives();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Modifier <em>Modifier</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Modifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Modifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier
+	 * @see org.eclipse.modisco.java.Modifier
 	 * @generated
 	 */
 	EClass getModifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#getVisibility <em>Visibility</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#getVisibility <em>Visibility</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visibility</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getVisibility()
+	 * @see org.eclipse.modisco.java.Modifier#getVisibility()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Visibility();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#getInheritance <em>Inheritance</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#getInheritance <em>Inheritance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Inheritance</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getInheritance()
+	 * @see org.eclipse.modisco.java.Modifier#getInheritance()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Inheritance();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isStatic <em>Static</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isStatic <em>Static</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Static</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isStatic()
+	 * @see org.eclipse.modisco.java.Modifier#isStatic()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Static();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isTransient <em>Transient</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isTransient <em>Transient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Transient</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isTransient()
+	 * @see org.eclipse.modisco.java.Modifier#isTransient()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Transient();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isVolatile <em>Volatile</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isVolatile <em>Volatile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Volatile</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isVolatile()
+	 * @see org.eclipse.modisco.java.Modifier#isVolatile()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Volatile();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isNative <em>Native</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isNative <em>Native</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Native</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isNative()
+	 * @see org.eclipse.modisco.java.Modifier#isNative()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Native();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isStrictfp <em>Strictfp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Strictfp</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isStrictfp()
+	 * @see org.eclipse.modisco.java.Modifier#isStrictfp()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Strictfp();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.Modifier#isSynchronized <em>Synchronized</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Synchronized</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#isSynchronized()
+	 * @see org.eclipse.modisco.java.Modifier#isSynchronized()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EAttribute getModifier_Synchronized();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Modifier#getBodyDeclaration <em>Body Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Body Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getBodyDeclaration()
+	 * @see org.eclipse.modisco.java.Modifier#getBodyDeclaration()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EReference getModifier_BodyDeclaration();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Modifier#getSingleVariableDeclaration <em>Single Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Single Variable Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getSingleVariableDeclaration()
+	 * @see org.eclipse.modisco.java.Modifier#getSingleVariableDeclaration()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EReference getModifier_SingleVariableDeclaration();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variable Declaration Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement()
+	 * @see org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EReference getModifier_VariableDeclarationStatement();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variable Declaration Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationExpression()
+	 * @see org.eclipse.modisco.java.Modifier#getVariableDeclarationExpression()
 	 * @see #getModifier()
 	 * @generated
 	 */
 	EReference getModifier_VariableDeclarationExpression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.NamedElement <em>Named Element</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Element</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NamedElement
+	 * @see org.eclipse.modisco.java.NamedElement
 	 * @generated
 	 */
 	EClass getNamedElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.NamedElement#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.NamedElement#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NamedElement#getName()
+	 * @see org.eclipse.modisco.java.NamedElement#getName()
 	 * @see #getNamedElement()
 	 * @generated
 	 */
 	EAttribute getNamedElement_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.NamedElement#isProxy <em>Proxy</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.NamedElement#isProxy <em>Proxy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Proxy</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NamedElement#isProxy()
+	 * @see org.eclipse.modisco.java.NamedElement#isProxy()
 	 * @see #getNamedElement()
 	 * @generated
 	 */
 	EAttribute getNamedElement_Proxy();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Imports</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NamedElement#getUsagesInImports()
+	 * @see org.eclipse.modisco.java.NamedElement#getUsagesInImports()
 	 * @see #getNamedElement()
 	 * @generated
 	 */
 	EReference getNamedElement_UsagesInImports();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.NamespaceAccess <em>Namespace Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.NamespaceAccess <em>Namespace Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Namespace Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NamespaceAccess
+	 * @see org.eclipse.modisco.java.NamespaceAccess
 	 * @generated
 	 */
 	EClass getNamespaceAccess();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.NumberLiteral <em>Number Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.NumberLiteral <em>Number Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Number Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NumberLiteral
+	 * @see org.eclipse.modisco.java.NumberLiteral
 	 * @generated
 	 */
 	EClass getNumberLiteral();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.NumberLiteral#getTokenValue <em>Token Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.NumberLiteral#getTokenValue <em>Token Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Token Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NumberLiteral#getTokenValue()
+	 * @see org.eclipse.modisco.java.NumberLiteral#getTokenValue()
 	 * @see #getNumberLiteral()
 	 * @generated
 	 */
 	EAttribute getNumberLiteral_TokenValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.NullLiteral <em>Null Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.NullLiteral <em>Null Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Null Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.NullLiteral
+	 * @see org.eclipse.modisco.java.NullLiteral
 	 * @generated
 	 */
 	EClass getNullLiteral();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Package <em>Package</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Package <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package
+	 * @see org.eclipse.modisco.java.Package
 	 * @generated
 	 */
 	EClass getPackage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Package#getOwnedElements <em>Owned Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Package#getOwnedElements <em>Owned Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Owned Elements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package#getOwnedElements()
+	 * @see org.eclipse.modisco.java.Package#getOwnedElements()
 	 * @see #getPackage()
 	 * @generated
 	 */
 	EReference getPackage_OwnedElements();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Package#getModel <em>Model</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Package#getModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Model</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package#getModel()
+	 * @see org.eclipse.modisco.java.Package#getModel()
 	 * @see #getPackage()
 	 * @generated
 	 */
 	EReference getPackage_Model();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.Package#getOwnedPackages <em>Owned Packages</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.Package#getOwnedPackages <em>Owned Packages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Owned Packages</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package#getOwnedPackages()
+	 * @see org.eclipse.modisco.java.Package#getOwnedPackages()
 	 * @see #getPackage()
 	 * @generated
 	 */
 	EReference getPackage_OwnedPackages();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.Package#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.Package#getPackage <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package#getPackage()
+	 * @see org.eclipse.modisco.java.Package#getPackage()
 	 * @see #getPackage()
 	 * @generated
 	 */
 	EReference getPackage_Package();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.Package#getUsagesInPackageAccess <em>Usages In Package Access</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.Package#getUsagesInPackageAccess <em>Usages In Package Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Package Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Package#getUsagesInPackageAccess()
+	 * @see org.eclipse.modisco.java.Package#getUsagesInPackageAccess()
 	 * @see #getPackage()
 	 * @generated
 	 */
 	EReference getPackage_UsagesInPackageAccess();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PackageAccess <em>Package Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PackageAccess <em>Package Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Package Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PackageAccess
+	 * @see org.eclipse.modisco.java.PackageAccess
 	 * @generated
 	 */
 	EClass getPackageAccess();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.PackageAccess#getPackage <em>Package</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.PackageAccess#getPackage <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Package</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PackageAccess#getPackage()
+	 * @see org.eclipse.modisco.java.PackageAccess#getPackage()
 	 * @see #getPackageAccess()
 	 * @generated
 	 */
 	EReference getPackageAccess_Package();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.PackageAccess#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.PackageAccess#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PackageAccess#getQualifier()
+	 * @see org.eclipse.modisco.java.PackageAccess#getQualifier()
 	 * @see #getPackageAccess()
 	 * @generated
 	 */
 	EReference getPackageAccess_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ParameterizedType <em>Parameterized Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ParameterizedType <em>Parameterized Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameterized Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ParameterizedType
+	 * @see org.eclipse.modisco.java.ParameterizedType
 	 * @generated
 	 */
 	EClass getParameterizedType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ParameterizedType#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ParameterizedType#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ParameterizedType#getType()
+	 * @see org.eclipse.modisco.java.ParameterizedType#getType()
 	 * @see #getParameterizedType()
 	 * @generated
 	 */
 	EReference getParameterizedType_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.ParameterizedType#getTypeArguments <em>Type Arguments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.ParameterizedType#getTypeArguments <em>Type Arguments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Type Arguments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ParameterizedType#getTypeArguments()
+	 * @see org.eclipse.modisco.java.ParameterizedType#getTypeArguments()
 	 * @see #getParameterizedType()
 	 * @generated
 	 */
 	EReference getParameterizedType_TypeArguments();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ParenthesizedExpression <em>Parenthesized Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ParenthesizedExpression <em>Parenthesized Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parenthesized Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ParenthesizedExpression
+	 * @see org.eclipse.modisco.java.ParenthesizedExpression
 	 * @generated
 	 */
 	EClass getParenthesizedExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ParenthesizedExpression#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ParenthesizedExpression#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ParenthesizedExpression#getExpression()
+	 * @see org.eclipse.modisco.java.ParenthesizedExpression#getExpression()
 	 * @see #getParenthesizedExpression()
 	 * @generated
 	 */
 	EReference getParenthesizedExpression_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PostfixExpression <em>Postfix Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PostfixExpression <em>Postfix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Postfix Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpression
+	 * @see org.eclipse.modisco.java.PostfixExpression
 	 * @generated
 	 */
 	EClass getPostfixExpression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.PostfixExpression#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.PostfixExpression#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpression#getOperator()
+	 * @see org.eclipse.modisco.java.PostfixExpression#getOperator()
 	 * @see #getPostfixExpression()
 	 * @generated
 	 */
 	EAttribute getPostfixExpression_Operator();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.PostfixExpression#getOperand <em>Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.PostfixExpression#getOperand <em>Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpression#getOperand()
+	 * @see org.eclipse.modisco.java.PostfixExpression#getOperand()
 	 * @see #getPostfixExpression()
 	 * @generated
 	 */
 	EReference getPostfixExpression_Operand();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrefixExpression <em>Prefix Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrefixExpression <em>Prefix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Prefix Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpression
+	 * @see org.eclipse.modisco.java.PrefixExpression
 	 * @generated
 	 */
 	EClass getPrefixExpression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.PrefixExpression#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpression#getOperator()
+	 * @see org.eclipse.modisco.java.PrefixExpression#getOperator()
 	 * @see #getPrefixExpression()
 	 * @generated
 	 */
 	EAttribute getPrefixExpression_Operator();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.PrefixExpression#getOperand <em>Operand</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.PrefixExpression#getOperand <em>Operand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Operand</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpression#getOperand()
+	 * @see org.eclipse.modisco.java.PrefixExpression#getOperand()
 	 * @see #getPrefixExpression()
 	 * @generated
 	 */
 	EReference getPrefixExpression_Operand();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveType <em>Primitive Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveType <em>Primitive Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveType
+	 * @see org.eclipse.modisco.java.PrimitiveType
 	 * @generated
 	 */
 	EClass getPrimitiveType();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeBoolean <em>Primitive Type Boolean</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeBoolean <em>Primitive Type Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Boolean</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeBoolean
+	 * @see org.eclipse.modisco.java.PrimitiveTypeBoolean
 	 * @generated
 	 */
 	EClass getPrimitiveTypeBoolean();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeByte <em>Primitive Type Byte</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeByte <em>Primitive Type Byte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Byte</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeByte
+	 * @see org.eclipse.modisco.java.PrimitiveTypeByte
 	 * @generated
 	 */
 	EClass getPrimitiveTypeByte();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeChar <em>Primitive Type Char</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeChar <em>Primitive Type Char</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Char</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeChar
+	 * @see org.eclipse.modisco.java.PrimitiveTypeChar
 	 * @generated
 	 */
 	EClass getPrimitiveTypeChar();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeDouble <em>Primitive Type Double</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeDouble <em>Primitive Type Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Double</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeDouble
+	 * @see org.eclipse.modisco.java.PrimitiveTypeDouble
 	 * @generated
 	 */
 	EClass getPrimitiveTypeDouble();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeShort <em>Primitive Type Short</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeShort <em>Primitive Type Short</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Short</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeShort
+	 * @see org.eclipse.modisco.java.PrimitiveTypeShort
 	 * @generated
 	 */
 	EClass getPrimitiveTypeShort();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeFloat <em>Primitive Type Float</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeFloat <em>Primitive Type Float</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Float</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeFloat
+	 * @see org.eclipse.modisco.java.PrimitiveTypeFloat
 	 * @generated
 	 */
 	EClass getPrimitiveTypeFloat();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeInt <em>Primitive Type Int</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeInt <em>Primitive Type Int</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Int</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeInt
+	 * @see org.eclipse.modisco.java.PrimitiveTypeInt
 	 * @generated
 	 */
 	EClass getPrimitiveTypeInt();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeLong <em>Primitive Type Long</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeLong <em>Primitive Type Long</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Long</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeLong
+	 * @see org.eclipse.modisco.java.PrimitiveTypeLong
 	 * @generated
 	 */
 	EClass getPrimitiveTypeLong();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeVoid <em>Primitive Type Void</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.PrimitiveTypeVoid <em>Primitive Type Void</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Primitive Type Void</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeVoid
+	 * @see org.eclipse.modisco.java.PrimitiveTypeVoid
 	 * @generated
 	 */
 	EClass getPrimitiveTypeVoid();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ReturnStatement <em>Return Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ReturnStatement <em>Return Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Return Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ReturnStatement
+	 * @see org.eclipse.modisco.java.ReturnStatement
 	 * @generated
 	 */
 	EClass getReturnStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ReturnStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ReturnStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ReturnStatement#getExpression()
+	 * @see org.eclipse.modisco.java.ReturnStatement#getExpression()
 	 * @see #getReturnStatement()
 	 * @generated
 	 */
 	EReference getReturnStatement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SingleVariableAccess <em>Single Variable Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SingleVariableAccess <em>Single Variable Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Single Variable Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableAccess
+	 * @see org.eclipse.modisco.java.SingleVariableAccess
 	 * @generated
 	 */
 	EClass getSingleVariableAccess();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableAccess#getVariable()
+	 * @see org.eclipse.modisco.java.SingleVariableAccess#getVariable()
 	 * @see #getSingleVariableAccess()
 	 * @generated
 	 */
 	EReference getSingleVariableAccess_Variable();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SingleVariableAccess#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SingleVariableAccess#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableAccess#getQualifier()
+	 * @see org.eclipse.modisco.java.SingleVariableAccess#getQualifier()
 	 * @see #getSingleVariableAccess()
 	 * @generated
 	 */
 	EReference getSingleVariableAccess_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration <em>Single Variable Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SingleVariableDeclaration <em>Single Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Single Variable Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration
 	 * @generated
 	 */
 	EClass getSingleVariableDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getModifier <em>Modifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Modifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getModifier()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getModifier()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_Modifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#isVarargs <em>Varargs</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.SingleVariableDeclaration#isVarargs <em>Varargs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Varargs</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#isVarargs()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#isVarargs()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EAttribute getSingleVariableDeclaration_Varargs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getType()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getType()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getAnnotations <em>Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getAnnotations <em>Annotations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getAnnotations()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getAnnotations()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_Annotations();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getMethodDeclaration <em>Method Declaration</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getMethodDeclaration <em>Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Method Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getMethodDeclaration()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getMethodDeclaration()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_MethodDeclaration();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getCatchClause <em>Catch Clause</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getCatchClause <em>Catch Clause</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Catch Clause</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getCatchClause()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getCatchClause()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_CatchClause();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getEnhancedForStatement <em>Enhanced For Statement</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getEnhancedForStatement <em>Enhanced For Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Enhanced For Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getEnhancedForStatement()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getEnhancedForStatement()
 	 * @see #getSingleVariableDeclaration()
 	 * @generated
 	 */
 	EReference getSingleVariableDeclaration_EnhancedForStatement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Statement <em>Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Statement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Statement
+	 * @see org.eclipse.modisco.java.Statement
 	 * @generated
 	 */
 	EClass getStatement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.StringLiteral <em>String Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.StringLiteral <em>String Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>String Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.StringLiteral
+	 * @see org.eclipse.modisco.java.StringLiteral
 	 * @generated
 	 */
 	EClass getStringLiteral();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Escaped Value</em>'.
-	 * @see org.eclipse.gmt.modisco.java.StringLiteral#getEscapedValue()
+	 * @see org.eclipse.modisco.java.StringLiteral#getEscapedValue()
 	 * @see #getStringLiteral()
 	 * @generated
 	 */
 	EAttribute getStringLiteral_EscapedValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SuperConstructorInvocation <em>Super Constructor Invocation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SuperConstructorInvocation <em>Super Constructor Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Super Constructor Invocation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SuperConstructorInvocation
+	 * @see org.eclipse.modisco.java.SuperConstructorInvocation
 	 * @generated
 	 */
 	EClass getSuperConstructorInvocation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SuperConstructorInvocation#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SuperConstructorInvocation#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SuperConstructorInvocation#getExpression()
+	 * @see org.eclipse.modisco.java.SuperConstructorInvocation#getExpression()
 	 * @see #getSuperConstructorInvocation()
 	 * @generated
 	 */
 	EReference getSuperConstructorInvocation_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SuperFieldAccess <em>Super Field Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SuperFieldAccess <em>Super Field Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Super Field Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SuperFieldAccess
+	 * @see org.eclipse.modisco.java.SuperFieldAccess
 	 * @generated
 	 */
 	EClass getSuperFieldAccess();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SuperFieldAccess#getField <em>Field</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SuperFieldAccess#getField <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Field</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SuperFieldAccess#getField()
+	 * @see org.eclipse.modisco.java.SuperFieldAccess#getField()
 	 * @see #getSuperFieldAccess()
 	 * @generated
 	 */
 	EReference getSuperFieldAccess_Field();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SuperMethodInvocation <em>Super Method Invocation</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SuperMethodInvocation <em>Super Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Super Method Invocation</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SuperMethodInvocation
+	 * @see org.eclipse.modisco.java.SuperMethodInvocation
 	 * @generated
 	 */
 	EClass getSuperMethodInvocation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SwitchCase <em>Switch Case</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SwitchCase <em>Switch Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Switch Case</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchCase
+	 * @see org.eclipse.modisco.java.SwitchCase
 	 * @generated
 	 */
 	EClass getSwitchCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.SwitchCase#isDefault <em>Default</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.SwitchCase#isDefault <em>Default</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Default</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchCase#isDefault()
+	 * @see org.eclipse.modisco.java.SwitchCase#isDefault()
 	 * @see #getSwitchCase()
 	 * @generated
 	 */
 	EAttribute getSwitchCase_Default();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SwitchCase#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SwitchCase#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchCase#getExpression()
+	 * @see org.eclipse.modisco.java.SwitchCase#getExpression()
 	 * @see #getSwitchCase()
 	 * @generated
 	 */
 	EReference getSwitchCase_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SwitchStatement <em>Switch Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SwitchStatement <em>Switch Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Switch Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchStatement
+	 * @see org.eclipse.modisco.java.SwitchStatement
 	 * @generated
 	 */
 	EClass getSwitchStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SwitchStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SwitchStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchStatement#getExpression()
+	 * @see org.eclipse.modisco.java.SwitchStatement#getExpression()
 	 * @see #getSwitchStatement()
 	 * @generated
 	 */
 	EReference getSwitchStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.SwitchStatement#getStatements <em>Statements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.SwitchStatement#getStatements <em>Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Statements</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SwitchStatement#getStatements()
+	 * @see org.eclipse.modisco.java.SwitchStatement#getStatements()
 	 * @see #getSwitchStatement()
 	 * @generated
 	 */
 	EReference getSwitchStatement_Statements();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement <em>Synchronized Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.SynchronizedStatement <em>Synchronized Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Synchronized Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SynchronizedStatement
+	 * @see org.eclipse.modisco.java.SynchronizedStatement
 	 * @generated
 	 */
 	EClass getSynchronizedStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SynchronizedStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SynchronizedStatement#getBody()
+	 * @see org.eclipse.modisco.java.SynchronizedStatement#getBody()
 	 * @see #getSynchronizedStatement()
 	 * @generated
 	 */
 	EReference getSynchronizedStatement_Body();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.SynchronizedStatement#getExpression()
+	 * @see org.eclipse.modisco.java.SynchronizedStatement#getExpression()
 	 * @see #getSynchronizedStatement()
 	 * @generated
 	 */
 	EReference getSynchronizedStatement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TagElement <em>Tag Element</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TagElement <em>Tag Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Tag Element</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TagElement
+	 * @see org.eclipse.modisco.java.TagElement
 	 * @generated
 	 */
 	EClass getTagElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.TagElement#getTagName <em>Tag Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.TagElement#getTagName <em>Tag Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tag Name</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TagElement#getTagName()
+	 * @see org.eclipse.modisco.java.TagElement#getTagName()
 	 * @see #getTagElement()
 	 * @generated
 	 */
 	EAttribute getTagElement_TagName();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.TagElement#getFragments <em>Fragments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.TagElement#getFragments <em>Fragments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Fragments</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TagElement#getFragments()
+	 * @see org.eclipse.modisco.java.TagElement#getFragments()
 	 * @see #getTagElement()
 	 * @generated
 	 */
 	EReference getTagElement_Fragments();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TextElement <em>Text Element</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TextElement <em>Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Text Element</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TextElement
+	 * @see org.eclipse.modisco.java.TextElement
 	 * @generated
 	 */
 	EClass getTextElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.TextElement#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.TextElement#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TextElement#getText()
+	 * @see org.eclipse.modisco.java.TextElement#getText()
 	 * @see #getTextElement()
 	 * @generated
 	 */
 	EAttribute getTextElement_Text();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ThisExpression <em>This Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ThisExpression <em>This Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>This Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ThisExpression
+	 * @see org.eclipse.modisco.java.ThisExpression
 	 * @generated
 	 */
 	EClass getThisExpression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.ThrowStatement <em>Throw Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ThrowStatement <em>Throw Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Throw Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ThrowStatement
+	 * @see org.eclipse.modisco.java.ThrowStatement
 	 * @generated
 	 */
 	EClass getThrowStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.ThrowStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ThrowStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.ThrowStatement#getExpression()
+	 * @see org.eclipse.modisco.java.ThrowStatement#getExpression()
 	 * @see #getThrowStatement()
 	 * @generated
 	 */
 	EReference getThrowStatement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TryStatement <em>Try Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TryStatement <em>Try Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Try Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TryStatement
+	 * @see org.eclipse.modisco.java.TryStatement
 	 * @generated
 	 */
 	EClass getTryStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.TryStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.TryStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TryStatement#getBody()
+	 * @see org.eclipse.modisco.java.TryStatement#getBody()
 	 * @see #getTryStatement()
 	 * @generated
 	 */
 	EReference getTryStatement_Body();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.TryStatement#getFinally <em>Finally</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.TryStatement#getFinally <em>Finally</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Finally</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TryStatement#getFinally()
+	 * @see org.eclipse.modisco.java.TryStatement#getFinally()
 	 * @see #getTryStatement()
 	 * @generated
 	 */
 	EReference getTryStatement_Finally();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.TryStatement#getCatchClauses <em>Catch Clauses</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.TryStatement#getCatchClauses <em>Catch Clauses</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Catch Clauses</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TryStatement#getCatchClauses()
+	 * @see org.eclipse.modisco.java.TryStatement#getCatchClauses()
 	 * @see #getTryStatement()
 	 * @generated
 	 */
 	EReference getTryStatement_CatchClauses();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.Type <em>Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Type
+	 * @see org.eclipse.modisco.java.Type
 	 * @generated
 	 */
 	EClass getType();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usages In Type Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.Type#getUsagesInTypeAccess()
+	 * @see org.eclipse.modisco.java.Type#getUsagesInTypeAccess()
 	 * @see #getType()
 	 * @generated
 	 */
 	EReference getType_UsagesInTypeAccess();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TypeAccess <em>Type Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TypeAccess <em>Type Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeAccess
+	 * @see org.eclipse.modisco.java.TypeAccess
 	 * @generated
 	 */
 	EClass getTypeAccess();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.TypeAccess#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.TypeAccess#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeAccess#getType()
+	 * @see org.eclipse.modisco.java.TypeAccess#getType()
 	 * @see #getTypeAccess()
 	 * @generated
 	 */
 	EReference getTypeAccess_Type();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeAccess#getQualifier()
+	 * @see org.eclipse.modisco.java.TypeAccess#getQualifier()
 	 * @see #getTypeAccess()
 	 * @generated
 	 */
 	EReference getTypeAccess_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TypeDeclaration <em>Type Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TypeDeclaration <em>Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclaration
+	 * @see org.eclipse.modisco.java.TypeDeclaration
 	 * @generated
 	 */
 	EClass getTypeDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.TypeDeclaration#getTypeParameters <em>Type Parameters</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.TypeDeclaration#getTypeParameters <em>Type Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Type Parameters</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclaration#getTypeParameters()
+	 * @see org.eclipse.modisco.java.TypeDeclaration#getTypeParameters()
 	 * @see #getTypeDeclaration()
 	 * @generated
 	 */
 	EReference getTypeDeclaration_TypeParameters();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TypeDeclarationStatement <em>Type Declaration Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TypeDeclarationStatement <em>Type Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Declaration Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclarationStatement
+	 * @see org.eclipse.modisco.java.TypeDeclarationStatement
 	 * @generated
 	 */
 	EClass getTypeDeclarationStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclarationStatement#getDeclaration()
+	 * @see org.eclipse.modisco.java.TypeDeclarationStatement#getDeclaration()
 	 * @see #getTypeDeclarationStatement()
 	 * @generated
 	 */
 	EReference getTypeDeclarationStatement_Declaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TypeLiteral <em>Type Literal</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TypeLiteral <em>Type Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Literal</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeLiteral
+	 * @see org.eclipse.modisco.java.TypeLiteral
 	 * @generated
 	 */
 	EClass getTypeLiteral();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.TypeLiteral#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.TypeLiteral#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeLiteral#getType()
+	 * @see org.eclipse.modisco.java.TypeLiteral#getType()
 	 * @see #getTypeLiteral()
 	 * @generated
 	 */
 	EReference getTypeLiteral_Type();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.TypeParameter <em>Type Parameter</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.TypeParameter <em>Type Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Type Parameter</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeParameter
+	 * @see org.eclipse.modisco.java.TypeParameter
 	 * @generated
 	 */
 	EClass getTypeParameter();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.TypeParameter#getBounds <em>Bounds</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.TypeParameter#getBounds <em>Bounds</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Bounds</em>'.
-	 * @see org.eclipse.gmt.modisco.java.TypeParameter#getBounds()
+	 * @see org.eclipse.modisco.java.TypeParameter#getBounds()
 	 * @see #getTypeParameter()
 	 * @generated
 	 */
 	EReference getTypeParameter_Bounds();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedItem <em>Unresolved Item</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedItem <em>Unresolved Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Item</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItem
+	 * @see org.eclipse.modisco.java.UnresolvedItem
 	 * @generated
 	 */
 	EClass getUnresolvedItem();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess <em>Unresolved Item Access</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedItemAccess <em>Unresolved Item Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Item Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItemAccess
+	 * @see org.eclipse.modisco.java.UnresolvedItemAccess
 	 * @generated
 	 */
 	EClass getUnresolvedItemAccess();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Element</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getElement()
+	 * @see org.eclipse.modisco.java.UnresolvedItemAccess#getElement()
 	 * @see #getUnresolvedItemAccess()
 	 * @generated
 	 */
 	EReference getUnresolvedItemAccess_Element();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Qualifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getQualifier()
+	 * @see org.eclipse.modisco.java.UnresolvedItemAccess#getQualifier()
 	 * @see #getUnresolvedItemAccess()
 	 * @generated
 	 */
 	EReference getUnresolvedItemAccess_Qualifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedAnnotationDeclaration <em>Unresolved Annotation Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedAnnotationDeclaration <em>Unresolved Annotation Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Annotation Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedAnnotationDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedAnnotationDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedAnnotationDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedAnnotationTypeMemberDeclaration <em>Unresolved Annotation Type Member Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration <em>Unresolved Annotation Type Member Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Annotation Type Member Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedAnnotationTypeMemberDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedAnnotationTypeMemberDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedClassDeclaration <em>Unresolved Class Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedClassDeclaration <em>Unresolved Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Class Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedClassDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedClassDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedClassDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedEnumDeclaration <em>Unresolved Enum Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedEnumDeclaration <em>Unresolved Enum Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Enum Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedEnumDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedEnumDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedEnumDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedInterfaceDeclaration <em>Unresolved Interface Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedInterfaceDeclaration <em>Unresolved Interface Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Interface Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedInterfaceDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedInterfaceDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedInterfaceDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedLabeledStatement <em>Unresolved Labeled Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedLabeledStatement <em>Unresolved Labeled Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Labeled Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedLabeledStatement
+	 * @see org.eclipse.modisco.java.UnresolvedLabeledStatement
 	 * @generated
 	 */
 	EClass getUnresolvedLabeledStatement();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedMethodDeclaration <em>Unresolved Method Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedMethodDeclaration <em>Unresolved Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Method Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedMethodDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedMethodDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedMethodDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedSingleVariableDeclaration <em>Unresolved Single Variable Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration <em>Unresolved Single Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Single Variable Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedSingleVariableDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedSingleVariableDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedType <em>Unresolved Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedType <em>Unresolved Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedType
+	 * @see org.eclipse.modisco.java.UnresolvedType
 	 * @generated
 	 */
 	EClass getUnresolvedType();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedTypeDeclaration <em>Unresolved Type Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedTypeDeclaration <em>Unresolved Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Type Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedTypeDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedTypeDeclaration
 	 * @generated
 	 */
 	EClass getUnresolvedTypeDeclaration();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.UnresolvedVariableDeclarationFragment <em>Unresolved Variable Declaration Fragment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment <em>Unresolved Variable Declaration Fragment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unresolved Variable Declaration Fragment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedVariableDeclarationFragment
+	 * @see org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment
 	 * @generated
 	 */
 	EClass getUnresolvedVariableDeclarationFragment();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.VariableDeclaration <em>Variable Declaration</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.VariableDeclaration <em>Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Declaration</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclaration
+	 * @see org.eclipse.modisco.java.VariableDeclaration
 	 * @generated
 	 */
 	EClass getVariableDeclaration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Extra Array Dimensions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclaration#getExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.VariableDeclaration#getExtraArrayDimensions()
 	 * @see #getVariableDeclaration()
 	 * @generated
 	 */
 	EAttribute getVariableDeclaration_ExtraArrayDimensions();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Initializer</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclaration#getInitializer()
+	 * @see org.eclipse.modisco.java.VariableDeclaration#getInitializer()
 	 * @see #getVariableDeclaration()
 	 * @generated
 	 */
 	EReference getVariableDeclaration_Initializer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Usage In Variable Access</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclaration#getUsageInVariableAccess()
+	 * @see org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess()
 	 * @see #getVariableDeclaration()
 	 * @generated
 	 */
 	EReference getVariableDeclaration_UsageInVariableAccess();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.VariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Declaration Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationExpression
+	 * @see org.eclipse.modisco.java.VariableDeclarationExpression
 	 * @generated
 	 */
 	EClass getVariableDeclarationExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getModifier <em>Modifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.VariableDeclarationExpression#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Modifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getModifier()
+	 * @see org.eclipse.modisco.java.VariableDeclarationExpression#getModifier()
 	 * @see #getVariableDeclarationExpression()
 	 * @generated
 	 */
 	EReference getVariableDeclarationExpression_Modifier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getAnnotations <em>Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.VariableDeclarationExpression#getAnnotations <em>Annotations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationExpression#getAnnotations()
+	 * @see org.eclipse.modisco.java.VariableDeclarationExpression#getAnnotations()
 	 * @see #getVariableDeclarationExpression()
 	 * @generated
 	 */
 	EReference getVariableDeclarationExpression_Annotations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationFragment <em>Variable Declaration Fragment</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.VariableDeclarationFragment <em>Variable Declaration Fragment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Declaration Fragment</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationFragment
+	 * @see org.eclipse.modisco.java.VariableDeclarationFragment
 	 * @generated
 	 */
 	EClass getVariableDeclarationFragment();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.gmt.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Variables Container</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationFragment#getVariablesContainer()
+	 * @see org.eclipse.modisco.java.VariableDeclarationFragment#getVariablesContainer()
 	 * @see #getVariableDeclarationFragment()
 	 * @generated
 	 */
 	EReference getVariableDeclarationFragment_VariablesContainer();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.VariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable Declaration Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement
 	 * @generated
 	 */
 	EClass getVariableDeclarationStatement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Extra Array Dimensions</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions()
 	 * @see #getVariableDeclarationStatement()
 	 * @generated
 	 */
 	EAttribute getVariableDeclarationStatement_ExtraArrayDimensions();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Modifier</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier()
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement#getModifier()
 	 * @see #getVariableDeclarationStatement()
 	 * @generated
 	 */
 	EReference getVariableDeclarationStatement_Modifier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getAnnotations <em>Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getAnnotations <em>Annotations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getAnnotations()
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement#getAnnotations()
 	 * @see #getVariableDeclarationStatement()
 	 * @generated
 	 */
 	EReference getVariableDeclarationStatement_Annotations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.WildCardType <em>Wild Card Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.WildCardType <em>Wild Card Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Wild Card Type</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WildCardType
+	 * @see org.eclipse.modisco.java.WildCardType
 	 * @generated
 	 */
 	EClass getWildCardType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.gmt.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WildCardType#isUpperBound()
+	 * @see org.eclipse.modisco.java.WildCardType#isUpperBound()
 	 * @see #getWildCardType()
 	 * @generated
 	 */
 	EAttribute getWildCardType_UpperBound();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.WildCardType#getBound <em>Bound</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.WildCardType#getBound <em>Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Bound</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WildCardType#getBound()
+	 * @see org.eclipse.modisco.java.WildCardType#getBound()
 	 * @see #getWildCardType()
 	 * @generated
 	 */
 	EReference getWildCardType_Bound();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.gmt.modisco.java.WhileStatement <em>While Statement</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.WhileStatement <em>While Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>While Statement</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WhileStatement
+	 * @see org.eclipse.modisco.java.WhileStatement
 	 * @generated
 	 */
 	EClass getWhileStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.WhileStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.WhileStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WhileStatement#getExpression()
+	 * @see org.eclipse.modisco.java.WhileStatement#getExpression()
 	 * @see #getWhileStatement()
 	 * @generated
 	 */
 	EReference getWhileStatement_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.gmt.modisco.java.WhileStatement#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.WhileStatement#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see org.eclipse.gmt.modisco.java.WhileStatement#getBody()
+	 * @see org.eclipse.modisco.java.WhileStatement#getBody()
 	 * @see #getWhileStatement()
 	 * @generated
 	 */
 	EReference getWhileStatement_Body();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.AssignmentKind <em>Assignment Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.AssignmentKind <em>Assignment Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Assignment Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.AssignmentKind
+	 * @see org.eclipse.modisco.java.AssignmentKind
 	 * @generated
 	 */
 	EEnum getAssignmentKind();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.InfixExpressionKind <em>Infix Expression Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.InfixExpressionKind <em>Infix Expression Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Infix Expression Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpressionKind
+	 * @see org.eclipse.modisco.java.InfixExpressionKind
 	 * @generated
 	 */
 	EEnum getInfixExpressionKind();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.InheritanceKind <em>Inheritance Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.InheritanceKind <em>Inheritance Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Inheritance Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.InheritanceKind
+	 * @see org.eclipse.modisco.java.InheritanceKind
 	 * @generated
 	 */
 	EEnum getInheritanceKind();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.PostfixExpressionKind <em>Postfix Expression Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.PostfixExpressionKind <em>Postfix Expression Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Postfix Expression Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpressionKind
+	 * @see org.eclipse.modisco.java.PostfixExpressionKind
 	 * @generated
 	 */
 	EEnum getPostfixExpressionKind();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.PrefixExpressionKind <em>Prefix Expression Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.PrefixExpressionKind <em>Prefix Expression Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Prefix Expression Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpressionKind
+	 * @see org.eclipse.modisco.java.PrefixExpressionKind
 	 * @generated
 	 */
 	EEnum getPrefixExpressionKind();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.gmt.modisco.java.VisibilityKind <em>Visibility Kind</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.modisco.java.VisibilityKind <em>Visibility Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Visibility Kind</em>'.
-	 * @see org.eclipse.gmt.modisco.java.VisibilityKind
+	 * @see org.eclipse.modisco.java.VisibilityKind
 	 * @generated
 	 */
 	EEnum getVisibilityKind();

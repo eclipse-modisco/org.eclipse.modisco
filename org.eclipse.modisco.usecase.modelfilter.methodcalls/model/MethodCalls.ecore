@@ -26,7 +26,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="subMethods" upperBound="-1"
         eType="#//CallNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaMethod" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//AbstractMethodDeclaration"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//AbstractMethodDeclaration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

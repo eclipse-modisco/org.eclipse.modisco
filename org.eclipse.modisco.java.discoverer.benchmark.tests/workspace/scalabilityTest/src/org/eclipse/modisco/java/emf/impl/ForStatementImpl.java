@@ -48,10 +48,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl#getUpdaters <em>Updaters</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl#getInitializers <em>Initializers</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ForStatementImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getUpdaters <em>Updaters</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getInitializers <em>Initializers</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *

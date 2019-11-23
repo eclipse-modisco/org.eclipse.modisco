@@ -4798,7 +4798,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	protected void fixInstanceClass(EClassifier eClassifier) {
 		if (eClassifier.getInstanceClassName() == null) {
 			eClassifier
-					.setInstanceClassName("org.eclipse.gmt.modisco.java." + eClassifier.getName()); //$NON-NLS-1$
+					.setInstanceClassName("org.eclipse.modisco.java." + eClassifier.getName()); //$NON-NLS-1$
 			setGeneratedClassName(eClassifier);
 		}
 	}

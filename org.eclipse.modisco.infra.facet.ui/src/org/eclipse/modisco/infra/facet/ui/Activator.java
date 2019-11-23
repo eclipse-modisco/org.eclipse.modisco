@@ -22,9 +22,9 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.facet.ui"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.facet.ui"; //$NON-NLS-1$
 
-	public static final String FACET_EDITOR_ID = "org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetEditorID"; //$NON-NLS-1$
+	public static final String FACET_EDITOR_ID = "org.eclipse.modisco.infra.facet.editor.presentation.FacetEditorID"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

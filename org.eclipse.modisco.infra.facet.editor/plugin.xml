@@ -23,10 +23,10 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetModelWizardID"
+            id="org.eclipse.modisco.infra.facet.editor.presentation.FacetModelWizardID"
             name="%_UI_FacetModelWizard_label"
             class="org.eclipse.modisco.infra.facet.editor.presentation.FacetModelWizard"
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             icon="icons/full/wizban/NewFacet.gif">
          <description>%_UI_FacetModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -35,14 +35,14 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetEditorID"
+            id="org.eclipse.modisco.infra.facet.editor.presentation.FacetEditorID"
             name="%_UI_FacetEditor_label"
             icon="icons/full/obj16/Facet.gif"
             extensions="facetSet"
             class="org.eclipse.modisco.infra.facet.editor.presentation.FacetEditor"
             contributorClass="org.eclipse.modisco.infra.facet.editor.presentation.FacetActionBarContributor">
          <contentTypeBinding
-               contentTypeId="org.eclipse.gmt.modisco.infra.facet.contenttype">
+               contentTypeId="org.eclipse.modisco.infra.facet.contenttype">
          </contentTypeBinding>
       </editor>
    </extension>

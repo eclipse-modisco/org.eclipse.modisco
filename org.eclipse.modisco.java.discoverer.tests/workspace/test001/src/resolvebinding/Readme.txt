@@ -25,13 +25,13 @@ Wed Jul 15 12:26:49 CEST 2009
 Failed to compute qualifiedName:resolvebinding.p1.ResolveBindind1.m1(<<null>>) ; searchedQualifiedName= resolvebinding.p1.ResolveBindind1.SubResolveBinding1.SubResolveBinding1()
 
 java.lang.Exception
-	at org.eclipse.gmt.modisco.java.JavaDiscovererUtils.getNamedElementByQualifiedName(JavaDiscovererUtils.java:191)
-	at org.eclipse.gmt.modisco.java.io.java.binding.BindingManager.searchQNInModel(BindingManager.java:296)
-	at org.eclipse.gmt.modisco.java.io.java.binding.BindingManager.getTarget(BindingManager.java:199)
-	at org.eclipse.gmt.modisco.java.io.java.binding.BindingManager.resolveBindings(BindingManager.java:261)
-	at org.eclipse.gmt.modisco.java.discoverer.cdo.cdo2.JavaReaderCDO2.reset(JavaReaderCDO2.java:20)
+	at org.eclipse.modisco.java.JavaDiscovererUtils.getNamedElementByQualifiedName(JavaDiscovererUtils.java:191)
+	at org.eclipse.modisco.java.io.java.binding.BindingManager.searchQNInModel(BindingManager.java:296)
+	at org.eclipse.modisco.java.io.java.binding.BindingManager.getTarget(BindingManager.java:199)
+	at org.eclipse.modisco.java.io.java.binding.BindingManager.resolveBindings(BindingManager.java:261)
+	at org.eclipse.modisco.java.discoverer.cdo.cdo2.JavaReaderCDO2.reset(JavaReaderCDO2.java:20)
 	at org.eclipse.modisco.java.discoverer.tests.emfstat.JavaReaderEMFStat.readModel(JavaReaderEMFStat.java:89)
-	at org.eclipse.gmt.modisco.java.discoverer.cdo.cdo2.JavaDiscovererCDO2.getJ2SE5ModelFromJavaSource(JavaDiscovererCDO2.java:15)
+	at org.eclipse.modisco.java.discoverer.cdo.cdo2.JavaDiscovererCDO2.getJ2SE5ModelFromJavaSource(JavaDiscovererCDO2.java:15)
 	at org.eclipse.modisco.java.discoverer.tests.emfstat.DiscoverJ2se5ModelFromJavaProjectEMFStat$1.run(DiscoverJ2se5ModelFromJavaProjectEMFStat.java:66)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 

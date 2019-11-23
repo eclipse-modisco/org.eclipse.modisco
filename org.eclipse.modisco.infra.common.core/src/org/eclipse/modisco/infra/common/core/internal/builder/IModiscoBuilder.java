@@ -20,7 +20,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 /**
  * The MoDisco project builder delegates build behavior to a set of classes
  * implementing this interface. This set of classes is defined though the use of
- * the <tt>org.eclipse.gmt.modisco.infra.common.core.internal.builder.register</tt> extension
+ * the <tt>org.eclipse.modisco.infra.common.core.internal.builder.register</tt> extension
  * point.
  *
  * @author Gregoire DUPE (Mia-Software)

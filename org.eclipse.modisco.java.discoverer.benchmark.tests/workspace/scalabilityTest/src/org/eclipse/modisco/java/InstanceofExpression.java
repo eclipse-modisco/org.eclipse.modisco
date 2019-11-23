@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInstanceofExpression()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getInstanceofExpression()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface InstanceofExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Operand</em>' containment reference.
 	 * @see #setRightOperand(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInstanceofExpression_RightOperand()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInstanceofExpression_RightOperand()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getRightOperand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Operand</em>' containment reference.
@@ -75,14 +75,14 @@ public interface InstanceofExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left Operand</em>' containment reference.
 	 * @see #setLeftOperand(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInstanceofExpression_LeftOperand()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInstanceofExpression_LeftOperand()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getLeftOperand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left Operand</em>' containment reference.

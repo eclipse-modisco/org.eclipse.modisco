@@ -30,12 +30,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Annotation#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Annotation#getValues <em>Values</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Annotation#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Annotation#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAnnotation()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getAnnotation()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface Annotation extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAnnotation_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAnnotation_Type()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Annotation#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Annotation#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' containment reference.
@@ -68,7 +68,7 @@ public interface Annotation extends Expression {
 
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.AnnotationMemberValuePair}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.AnnotationMemberValuePair}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Values</em>' containment reference list isn't clear,
@@ -76,7 +76,7 @@ public interface Annotation extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAnnotation_Values()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAnnotation_Values()
 	 * @model containment="true"
 	 * @generated
 	 */

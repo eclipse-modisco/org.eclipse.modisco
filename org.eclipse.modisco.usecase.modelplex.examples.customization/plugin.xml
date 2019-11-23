@@ -2,25 +2,25 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.infra.facet.registration">
+         point="org.eclipse.modisco.infra.facet.registration">
       <facetset
             file="Modelplex.facetSet">
       </facetset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="Modelplex.querySet">
       </modelqueryset>
    </extension>
 	<extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="FilteringModelplex.querySet">
       </modelqueryset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+         point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization
             file="FilteringModelplex.uiCustom"
             loadByDefault="false">

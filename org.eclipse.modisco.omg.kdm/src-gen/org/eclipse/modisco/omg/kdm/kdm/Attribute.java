@@ -45,7 +45,7 @@ public interface Attribute extends Element {
 	 * @return the value of the '<em>Tag</em>' attribute.
 	 * @see #setTag(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAttribute_Tag()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getTag();
@@ -71,7 +71,7 @@ public interface Attribute extends Element {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAttribute_Value()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getValue();

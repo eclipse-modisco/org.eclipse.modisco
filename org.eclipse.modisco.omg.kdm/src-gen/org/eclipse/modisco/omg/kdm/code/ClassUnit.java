@@ -45,7 +45,7 @@ public interface ClassUnit extends Datatype {
 	 * @return the value of the '<em>Is Abstract</em>' attribute.
 	 * @see #setIsAbstract(Boolean)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getClassUnit_IsAbstract()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Boolean"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Boolean"
 	 * @generated
 	 */
 	Boolean getIsAbstract();

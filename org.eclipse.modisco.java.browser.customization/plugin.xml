@@ -12,20 +12,20 @@ Contributors:
 -->
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.infra.facet.registration">
+         point="org.eclipse.modisco.infra.facet.registration">
       <facetset
             file="javaTypesCustomizationFacet.facetSet">
       </facetset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+         point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization
             file="javaTypesCustomizationFacet.uiCustom"
             loadByDefault="false">
       </browserCustomization>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+         point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization
             file="java.uiCustom"
             loadByDefault="true">
@@ -34,14 +34,14 @@ Contributors:
    <extension point="org.eclipse.ui.newWizards">
       <wizard
             canFinishEarly="true"
-            category="org.eclipse.ui.Examples/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.category1"
+            category="org.eclipse.ui.Examples/org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
             class="org.eclipse.modisco.java.browser.customization.internal.ExampleWizard"
             hasPages="false"
             icon="icons/logoMoDiscoMini.gif"
-            id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.wizard1"
+            id="org.eclipse.modisco.infra.browser.custom.examples.uml.wizard1"
             name="%wizard.name"/>
       <category
-            id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.category1"
+            id="org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
             name="%category.name"
             parentCategory="org.eclipse.ui.Examples">
       </category>

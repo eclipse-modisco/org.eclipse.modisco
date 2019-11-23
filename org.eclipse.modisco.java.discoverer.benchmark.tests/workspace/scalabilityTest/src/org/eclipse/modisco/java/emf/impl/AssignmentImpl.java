@@ -41,9 +41,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AssignmentImpl#getLeftHandSide <em>Left Hand Side</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AssignmentImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AssignmentImpl#getRightHandSide <em>Right Hand Side</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AssignmentImpl#getLeftHandSide <em>Left Hand Side</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AssignmentImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AssignmentImpl#getRightHandSide <em>Right Hand Side</em>}</li>
  * </ul>
  * </p>
  *

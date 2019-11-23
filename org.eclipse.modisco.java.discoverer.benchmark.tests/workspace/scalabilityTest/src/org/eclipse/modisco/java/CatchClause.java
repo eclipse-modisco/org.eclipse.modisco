@@ -29,19 +29,19 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.CatchClause#getException <em>Exception</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CatchClause#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CatchClause#getException <em>Exception</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CatchClause#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCatchClause()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getCatchClause()
  * @model
  * @generated
  */
 public interface CatchClause extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Exception</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getCatchClause <em>Catch Clause</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.SingleVariableDeclaration#getCatchClause <em>Catch Clause</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exception</em>' containment reference isn't clear,
@@ -50,15 +50,15 @@ public interface CatchClause extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception</em>' containment reference.
 	 * @see #setException(SingleVariableDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCatchClause_Exception()
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration#getCatchClause
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCatchClause_Exception()
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration#getCatchClause
 	 * @model opposite="catchClause" containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	SingleVariableDeclaration getException();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CatchClause#getException <em>Exception</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CatchClause#getException <em>Exception</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exception</em>' containment reference.
@@ -77,14 +77,14 @@ public interface CatchClause extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(Block)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCatchClause_Body()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCatchClause_Body()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Block getBody();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CatchClause#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CatchClause#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body</em>' containment reference.

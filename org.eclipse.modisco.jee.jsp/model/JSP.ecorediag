@@ -19,7 +19,7 @@
           <styles xmi:type="notation:FilteringStyle" xmi:id="__nvnAzyZEd-cuMd7GU-iuw"/>
         </children>
         <styles xmi:type="notation:ShapeStyle" xmi:id="__nmdETyZEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Node"/>
+        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Node"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="__nmdEjyZEd-cuMd7GU-iuw" x="405" y="67"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_DfTucDyaEd-cuMd7GU-iuw" type="2003">
@@ -37,7 +37,7 @@
           <layoutConstraint xmi:type="notation:Ratio" xmi:id="_JMnPgTyaEd-cuMd7GU-iuw" value="0.3"/>
         </children>
         <styles xmi:type="notation:ShapeStyle" xmi:id="_DfTucTyaEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element"/>
+        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Element"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DfTucjyaEd-cuMd7GU-iuw" x="115" y="222"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_FJuo4DyaEd-cuMd7GU-iuw" type="2003">
@@ -53,7 +53,7 @@
           <styles xmi:type="notation:FilteringStyle" xmi:id="_FJuo6zyaEd-cuMd7GU-iuw"/>
         </children>
         <styles xmi:type="notation:ShapeStyle" xmi:id="_FJuo4TyaEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Attribute"/>
+        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Attribute"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FJuo4jyaEd-cuMd7GU-iuw" x="340" y="222"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Hw9J0DyaEd-cuMd7GU-iuw" type="2003">
@@ -69,7 +69,7 @@
           <styles xmi:type="notation:FilteringStyle" xmi:id="_Hw9J2zyaEd-cuMd7GU-iuw"/>
         </children>
         <styles xmi:type="notation:ShapeStyle" xmi:id="_Hw9J0TyaEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Text"/>
+        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Text"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hw9J0jyaEd-cuMd7GU-iuw" x="575" y="222"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_g-IHcDybEd-cuMd7GU-iuw" type="2003">
@@ -85,7 +85,7 @@
           <styles xmi:type="notation:FilteringStyle" xmi:id="_g-IHezybEd-cuMd7GU-iuw"/>
         </children>
         <styles xmi:type="notation:ShapeStyle" xmi:id="_g-IHcTybEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Comment"/>
+        <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Comment"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g-IHcjybEd-cuMd7GU-iuw" x="215" y="12"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_Scbf8TyYEd-cuMd7GU-iuw"/>
@@ -94,7 +94,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_ScSWATyYEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10" fillColor="13150135" lineColor="4210752"/>
     <styles xmi:type="notation:MultiDiagramLinkStyle" xmi:id="_ScSWAjyYEd-cuMd7GU-iuw"/>
-    <element xmi:type="ecore:EPackage" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#/"/>
+    <element xmi:type="ecore:EPackage" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#/"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ScSWAzyYEd-cuMd7GU-iuw" x="150" y="115" width="783" height="383"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_Ndz-8DyaEd-cuMd7GU-iuw" type="1001">
@@ -348,7 +348,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_DfmpYTyaEd-cuMd7GU-iuw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_DfmpYjyaEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Element/children"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Element/children"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DfmpYzyaEd-cuMd7GU-iuw" points="[0, -20, -297, 132]$[0, -152, -297, 0]$[240, -152, -57, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pVWbojycEd-cuMd7GU-iuw" id="(0.5,0.5)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pVWbozycEd-cuMd7GU-iuw" id="(0.5,0.5)"/>
@@ -368,7 +368,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_DfwaZTyaEd-cuMd7GU-iuw" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_DfwaZjyaEd-cuMd7GU-iuw" fontColor="4210752" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.gmt.modisco.xml/model/xml.ecore#//Node/parent"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.xml/model/xml.ecore#//Node/parent"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DfwaZzyaEd-cuMd7GU-iuw" points="[-57, 0, 240, -152]$[-297, 0, 0, -152]$[-297, 132, 0, -20]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DggBQDyaEd-cuMd7GU-iuw" id="(0.5,0.5)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DggBQTyaEd-cuMd7GU-iuw" id="(0.5,0.5)"/>

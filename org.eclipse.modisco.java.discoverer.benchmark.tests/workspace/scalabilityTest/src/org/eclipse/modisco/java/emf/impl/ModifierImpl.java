@@ -47,18 +47,18 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getVisibility <em>Visibility</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getInheritance <em>Inheritance</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isStatic <em>Static</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isTransient <em>Transient</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isVolatile <em>Volatile</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isNative <em>Native</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isStrictfp <em>Strictfp</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#isSynchronized <em>Synchronized</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getBodyDeclaration <em>Body Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getSingleVariableDeclaration <em>Single Variable Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getInheritance <em>Inheritance</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isStatic <em>Static</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isTransient <em>Transient</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isVolatile <em>Volatile</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isNative <em>Native</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isStrictfp <em>Strictfp</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#isSynchronized <em>Synchronized</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getBodyDeclaration <em>Body Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getSingleVariableDeclaration <em>Single Variable Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
  * </p>
  *

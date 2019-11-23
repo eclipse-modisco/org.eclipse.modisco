@@ -2,31 +2,31 @@
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="textJavaQueries">
   <associatedMetamodels href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
-  <queries xsi:type="query:JavaModelQuery" name="getMethodDeclarationText" description="returns the text of a MethodDeclaration" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetMethodDeclarationText">
+  <queries xsi:type="query:JavaModelQuery" name="getMethodDeclarationText" description="returns the text of a MethodDeclaration" implementationClassName="org.eclipse.modisco.java.queries.text.GetMethodDeclarationText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getFieldDeclarationText" description="returns the text of a FieldDeclaration" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetFieldDeclarationText">
+  <queries xsi:type="query:JavaModelQuery" name="getFieldDeclarationText" description="returns the text of a FieldDeclaration" implementationClassName="org.eclipse.modisco.java.queries.text.GetFieldDeclarationText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//FieldDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getAbstractMethodInvocationText" description="returns the text of an AbstractMethodInvocation" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetAbstractMethodInvocationText">
+  <queries xsi:type="query:JavaModelQuery" name="getAbstractMethodInvocationText" description="returns the text of an AbstractMethodInvocation" implementationClassName="org.eclipse.modisco.java.queries.text.GetAbstractMethodInvocationText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodInvocation"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getConstructorDeclarationText" description="returns the text of a ConstructorDeclaration" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetConstructorDeclarationText">
+  <queries xsi:type="query:JavaModelQuery" name="getConstructorDeclarationText" description="returns the text of a ConstructorDeclaration" implementationClassName="org.eclipse.modisco.java.queries.text.GetConstructorDeclarationText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ConstructorDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getMethodRefText" description="returns the text of a MethodRef" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetMethodRefText">
+  <queries xsi:type="query:JavaModelQuery" name="getMethodRefText" description="returns the text of a MethodRef" implementationClassName="org.eclipse.modisco.java.queries.text.GetMethodRefText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//MethodRef"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getSingleVariableAccessText" description="returns the text of a SingleVariableAccess" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetSingleVariableAccessText">
+  <queries xsi:type="query:JavaModelQuery" name="getSingleVariableAccessText" description="returns the text of a SingleVariableAccess" implementationClassName="org.eclipse.modisco.java.queries.text.GetSingleVariableAccessText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//SingleVariableAccess"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getAbstractMethodDeclarationText" description="returns the text of an AbstractMethodInvocation" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetAbstractMethodDeclarationText">
+  <queries xsi:type="query:JavaModelQuery" name="getAbstractMethodDeclarationText" description="returns the text of an AbstractMethodInvocation" implementationClassName="org.eclipse.modisco.java.queries.text.GetAbstractMethodDeclarationText">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
   </queries>
@@ -46,11 +46,11 @@
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclarationStatement"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Annotation"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getQualifiedName" description="returns the qualified name of the named element" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetQualifiedName">
+  <queries xsi:type="query:JavaModelQuery" name="getQualifiedName" description="returns the qualified name of the named element" implementationClassName="org.eclipse.modisco.java.queries.text.GetQualifiedName">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//NamedElement"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="getTypeRef" implementationClassName="org.eclipse.gmt.modisco.java.queries.text.GetTypeRef">
+  <queries xsi:type="query:JavaModelQuery" name="getTypeRef" implementationClassName="org.eclipse.modisco.java.queries.text.GetTypeRef">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Expression"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractVariablesContainer"/>

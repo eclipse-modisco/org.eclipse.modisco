@@ -7,7 +7,7 @@
     editorPluginClass="org.eclipse.modisco.java.composition.javaapplication.presentation.JavaApplicationEditorPlugin"
     nonNLSMarkers="true" testSuiteClass="org.eclipse.modisco.java.composition.javaapplication.tests.JavaApplicationAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    usedGenPackages="platform:/plugin/org.eclipse.gmt.modisco.java/model/java.genmodel#//java platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.genmodel#//kdm platform:/plugin/org.eclipse.modisco.kdm.source.extension/model/kdmSourceExtension.genmodel#//kdm">
+    usedGenPackages="platform:/plugin/org.eclipse.modisco.java/model/java.genmodel#//java platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.genmodel#//kdm platform:/plugin/org.eclipse.modisco.kdm.source.extension/model/kdmSourceExtension.genmodel#//kdm">
   <foreignModel>javaApplication.ecore</foreignModel>
   <genPackages prefix="Javaapplication" basePackage="org.eclipse.modisco.java.composition"
       disposableProviderFactory="true" ecorePackage="javaApplication.ecore#/">

@@ -30,14 +30,14 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMethodDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getMethodDeclaration()
  * @model
  * @generated
  */
@@ -52,14 +52,14 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra Array Dimensions</em>' attribute.
 	 * @see #setExtraArrayDimensions(int)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMethodDeclaration_ExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMethodDeclaration_ExtraArrayDimensions()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	int getExtraArrayDimensions();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.MethodDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Extra Array Dimensions</em>' attribute.
@@ -78,14 +78,14 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Return Type</em>' containment reference.
 	 * @see #setReturnType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMethodDeclaration_ReturnType()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMethodDeclaration_ReturnType()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getReturnType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.MethodDeclaration#getReturnType <em>Return Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Return Type</em>' containment reference.
@@ -96,7 +96,7 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Redefined Method Declaration</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinitions <em>Redefinitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Redefined Method Declaration</em>' reference isn't clear,
@@ -105,15 +105,15 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Redefined Method Declaration</em>' reference.
 	 * @see #setRedefinedMethodDeclaration(MethodDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMethodDeclaration_RedefinedMethodDeclaration()
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinitions
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMethodDeclaration_RedefinedMethodDeclaration()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getRedefinitions
 	 * @model opposite="redefinitions" ordered="false"
 	 * @generated
 	 */
 	MethodDeclaration getRedefinedMethodDeclaration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Redefined Method Declaration</em>' reference.
@@ -124,8 +124,8 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 
 	/**
 	 * Returns the value of the '<em><b>Redefinitions</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.MethodDeclaration}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.MethodDeclaration}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Redefinitions</em>' reference list isn't clear,
@@ -133,8 +133,8 @@ public interface MethodDeclaration extends AbstractMethodDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Redefinitions</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getMethodDeclaration_Redefinitions()
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getMethodDeclaration_Redefinitions()
+	 * @see org.eclipse.modisco.java.MethodDeclaration#getRedefinedMethodDeclaration
 	 * @model opposite="redefinedMethodDeclaration" ordered="false"
 	 * @generated
 	 */

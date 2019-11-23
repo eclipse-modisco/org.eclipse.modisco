@@ -30,20 +30,20 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodInvocation()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodInvocation()
  * @model abstract="true"
  * @generated
  */
 public interface AbstractMethodInvocation extends ASTNode {
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Method</em>' reference isn't clear,
@@ -52,15 +52,15 @@ public interface AbstractMethodInvocation extends ASTNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' reference.
 	 * @see #setMethod(AbstractMethodDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_Method()
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration#getUsages
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_Method()
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages
 	 * @model opposite="usages" required="true" ordered="false"
 	 * @generated
 	 */
 	AbstractMethodDeclaration getMethod();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Method</em>' reference.
@@ -71,7 +71,7 @@ public interface AbstractMethodInvocation extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Expression}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
@@ -79,7 +79,7 @@ public interface AbstractMethodInvocation extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_Arguments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_Arguments()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface AbstractMethodInvocation extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Type Arguments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeAccess}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeAccess}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type Arguments</em>' containment reference list isn't clear,
@@ -95,7 +95,7 @@ public interface AbstractMethodInvocation extends ASTNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Arguments</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_TypeArguments()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodInvocation_TypeArguments()
 	 * @model containment="true"
 	 * @generated
 	 */

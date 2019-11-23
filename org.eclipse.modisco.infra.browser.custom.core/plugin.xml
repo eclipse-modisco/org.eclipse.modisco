@@ -11,30 +11,30 @@
  -->
 
 <plugin>
-   <extension-point id="registration" name="%extension-point.name" schema="schema/org.eclipse.gmt.modisco.infra.browser.custom.registration.exsd"/>
+   <extension-point id="registration" name="%extension-point.name" schema="schema/org.eclipse.modisco.infra.browser.custom.registration.exsd"/>
    <extension
-         id="org.eclipse.gmt.modisco.infra.browser.custom.core.CustomizationsBuilder"
+         id="org.eclipse.modisco.infra.browser.custom.core.CustomizationsBuilder"
          name="%extension.name"
-         point="org.eclipse.gmt.modisco.common.core.builder.register">
+         point="org.eclipse.modisco.common.core.builder.register">
       <builder
             class="org.eclipse.modisco.infra.browser.custom.core.CustomizationsBuilder">
          <depends
-               builder="org.eclipse.gmt.modisco.infra.query.core.QueryBuilder">
+               builder="org.eclipse.modisco.infra.query.core.QueryBuilder">
          </depends>
          <depends
-               builder="org.eclipse.gmt.modisco.infra.facet.manager.facetBuilder">
+               builder="org.eclipse.modisco.infra.facet.manager.facetBuilder">
          </depends>
       </builder>
    </extension>
    
    <extension
-         id="org.eclipse.gmt.modisco.infra.browser.custom.problem"
+         id="org.eclipse.modisco.infra.browser.custom.problem"
          point="org.eclipse.core.resources.markers">
       <super type="org.eclipse.core.resources.problemmarker"/>
       <persistent value="true"/>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.common.core.protocolext">
+         point="org.eclipse.modisco.common.core.protocolext">
       <scheme-specific-part
             class="org.eclipse.modisco.infra.browser.custom.core.CustomizationProtocolExt">
       </scheme-specific-part>

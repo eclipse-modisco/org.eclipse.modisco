@@ -48,9 +48,9 @@ Functional components:
 ==== Model Query Set Catalog ====
 
 '''Implementation classes:'''
-* org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog
-* org.eclipse.gmt.modisco.infra.query.core.internal.QueryBuilder
-* org.eclipse.gmt.modisco.infra.query.ui.dialogs.QuerySelectionDialog extends Dialog
+* org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog
+* org.eclipse.modisco.infra.query.core.internal.QueryBuilder
+* org.eclipse.modisco.infra.query.ui.dialogs.QuerySelectionDialog extends Dialog
 ** Implements the query catalog graphical representation.
 
 === org.eclipe.gmt.modisco.infra.query.editor  ===
@@ -59,7 +59,7 @@ Functional components:
 
 '''Scope:''' This wizard can be called using a popup menu on ''the main menu, package explorer, navigator, etc.''. If a project was selected, it is automatically chosen in the wizard. This wizard can also be called from the query panel of the "Query Execution" view
 
-'''Implementation classes:''' org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryModelWizard
+'''Implementation classes:''' org.eclipse.modisco.infra.query.editor.presentation.QueryModelWizard
 
 ====Properties view====
 
@@ -82,7 +82,7 @@ Functional components:
 ==== Query execution view ====
 
 '''Uses''': 
-* org.eclipse.gmt.modisco.infra.query.ui.dialogs.QuerySelectionDialog (query catalog ui)
+* org.eclipse.modisco.infra.query.ui.dialogs.QuerySelectionDialog (query catalog ui)
 
 === Summary ===
 

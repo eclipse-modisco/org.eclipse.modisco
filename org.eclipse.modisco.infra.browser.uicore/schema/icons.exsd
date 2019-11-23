@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.browser.uicore" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.browser.uicore" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.browser.uicore" id="icons" name="Icons for model elements"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.browser.uicore" id="icons" name="Icons for model elements"/>
       </appinfo>
       <documentation>
          Used to provide icons for model elements.
@@ -83,7 +83,7 @@
                   Specify a class that will provide an icon for model elements.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.common.editor.extensions.icons.IconProvider"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.common.editor.extensions.icons.IconProvider"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -138,12 +138,12 @@
 &lt;p&gt;
 &lt;pre&gt;
 &lt;extension
-    id=&quot;org.eclipse.gmt.modisco.infra.browser.extension.java.icons&quot;
-    point=&quot;org.eclipse.gmt.modisco.infra.browser.uicore.icons&quot;&gt;
+    id=&quot;org.eclipse.modisco.infra.browser.extension.java.icons&quot;
+    point=&quot;org.eclipse.modisco.infra.browser.uicore.icons&quot;&gt;
   &lt;metamodel
       id=&quot;http://www.eclipse.org/MoDisco/Java/0.2.incubation/java&quot;&gt;
     &lt;iconProvider
-        class=&quot;org.eclipse.gmt.modisco.java.browser.extension.IconProvider&quot;&gt;
+        class=&quot;org.eclipse.modisco.java.browser.extension.IconProvider&quot;&gt;
     &lt;/iconProvider&gt;
   &lt;/metamodel&gt;
 &lt;/extension&gt;
@@ -166,7 +166,7 @@
          <meta.section type="implementation"/>
       </appinfo>
       <documentation>
-         See plugin project &quot;org.eclipse.gmt.modisco.java.browser.extension&quot;, available at  https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.java.browser.extension
+         See plugin project &quot;org.eclipse.modisco.java.browser.extension&quot;, available at  https://dev.eclipse.org/svnroot/modeling/org.eclipse.modisco/deprecated/plugins/org.eclipse.modisco.java.browser.extension
       </documentation>
    </annotation>
 

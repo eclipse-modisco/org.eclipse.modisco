@@ -12,10 +12,10 @@ Contributors:
 <uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/modisco/examples/uml/umlFacetSet.facetSet">
   <types metaclassName="_example_umlFacets.Query">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml/icons/query16x16.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.uml/icons/query16x16.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml/icons/query8x8.png:BottomRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.uml/icons/query8x8.png:BottomRight"/>
     </customizedFeatures>
   </types>
 </uicustom:MetamodelView>

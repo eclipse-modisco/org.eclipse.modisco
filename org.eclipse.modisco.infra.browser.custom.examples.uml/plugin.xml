@@ -12,19 +12,19 @@ Contributors:
 -->
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="_example_uml.querySet">
       </modelqueryset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.facet.registration">
+         point="org.eclipse.modisco.infra.facet.registration">
       <facetset
             file="_example_umlFacets.facetSet">
       </facetset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.facet.registration">
+         point="org.eclipse.modisco.infra.facet.registration">
       <facetset
             file="_example_umlFacets2.facetSet">
       </facetset>
@@ -32,15 +32,15 @@ Contributors:
    <extension point="org.eclipse.ui.newWizards">
       <wizard
             canFinishEarly="true"
-            category="org.eclipse.ui.Examples/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.category1"
+            category="org.eclipse.ui.Examples/org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
             class="org.eclipse.modisco.infra.browser.custom.examples.uml.internal.wizard.NewWizard"
             hasPages="false"
             icon="icons/logoMoDiscoMini.gif"
-            id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.wizard1"
+            id="org.eclipse.modisco.infra.browser.custom.examples.uml.wizard1"
             name="%wizard.name">
       </wizard>
       <category
-            id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.category1"
+            id="org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
             name="%category.name"
             parentCategory="org.eclipse.ui.Examples">
       </category>

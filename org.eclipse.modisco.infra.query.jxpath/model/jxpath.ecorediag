@@ -47,7 +47,7 @@ Contributors:
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Kq4v26EUEd6tWORKbf9Iow"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_Kq4v0aEUEd6tWORKbf9Iow" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+    <element xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kq4v0qEUEd6tWORKbf9Iow" x="100" y="50"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_IaDVoaEUEd6tWORKbf9Iow"/>

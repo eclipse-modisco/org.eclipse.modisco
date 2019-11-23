@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.common.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.common.ui;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.common.core,
+ org.eclipse.modisco.infra.common.core,
  org.eclipse.ui.ide,
  org.eclipse.core.resources,
  org.eclipse.jdt.core,
@@ -23,26 +23,26 @@ Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Export-Package: org.eclipse.modisco.infra.common.ui.internal.actions;x-internal:=true,
  org.eclipse.modisco.infra.common.ui.internal.controls;
-  x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor,
-   org.eclipse.gmt.modisco.infra.browser.custom.ui,
-   org.eclipse.gmt.modisco.infra.browser,
-   org.eclipse.gmt.modisco.infra.query.ui,
-   org.eclipse.gmt.modisco.infra.facet.editor,
-   org.eclipse.gmt.modisco.infra.query.editor,
+  x-friends:="org.eclipse.modisco.infra.browser.custom.editor,
+   org.eclipse.modisco.infra.browser.custom.ui,
+   org.eclipse.modisco.infra.browser,
+   org.eclipse.modisco.infra.query.ui,
+   org.eclipse.modisco.infra.facet.editor,
+   org.eclipse.modisco.infra.query.editor,
    org.eclipse.modisco.infra.discovery.ui",
- org.eclipse.modisco.infra.common.ui.internal.dialogs;x-friends:="org.eclipse.gmt.modisco.infra.query.ui,org.eclipse.gmt.modisco.infra.facet.editor",
+ org.eclipse.modisco.infra.common.ui.internal.dialogs;x-friends:="org.eclipse.modisco.infra.query.ui,org.eclipse.modisco.infra.facet.editor",
  org.eclipse.modisco.infra.common.ui.internal.editorInputs;
-  x-friends:="org.eclipse.gmt.modisco.infra.browser,
-   org.eclipse.gmt.modisco.infra.common.ui,
+  x-friends:="org.eclipse.modisco.infra.browser,
+   org.eclipse.modisco.infra.common.ui,
    org.eclipse.modisco.jee,
    org.eclipse.modisco.infra.discovery.ui",
  org.eclipse.modisco.infra.common.ui.internal.preferences;x-internal:=true,
  org.eclipse.modisco.infra.common.ui.internal.util;
-  x-friends:="org.eclipse.gmt.modisco.infra.facet.editor,
-   org.eclipse.gmt.modisco.infra.query.editor,
-   org.eclipse.gmt.modisco.infra.browser,
-   org.eclipse.gmt.modisco.infra.query.ui,
-   org.eclipse.gmt.modisco.infra.facet.ui,
+  x-friends:="org.eclipse.modisco.infra.facet.editor,
+   org.eclipse.modisco.infra.query.editor,
+   org.eclipse.modisco.infra.browser,
+   org.eclipse.modisco.infra.query.ui,
+   org.eclipse.modisco.infra.facet.ui,
    org.eclipse.modisco.infra.discovery.ui",
- org.eclipse.modisco.infra.common.ui.internal.wizards;x-friends:="org.eclipse.gmt.modisco.java.browser.customization"
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.common.ui
+ org.eclipse.modisco.infra.common.ui.internal.wizards;x-friends:="org.eclipse.modisco.java.browser.customization"
+Automatic-Module-Name: org.eclipse.modisco.infra.common.ui

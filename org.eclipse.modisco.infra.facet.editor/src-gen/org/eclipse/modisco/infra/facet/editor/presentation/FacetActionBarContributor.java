@@ -198,7 +198,7 @@ public class FacetActionBarContributor extends
 
 		IMenuManager submenuManager = new MenuManager(
 				FacetEditorPlugin.INSTANCE.getString("_UI_FacetEditor_menu"), //$NON-NLS-1$
-				"org.eclipse.gmt.modisco.infra.facetMenuID"); //$NON-NLS-1$
+				"org.eclipse.modisco.infra.facetMenuID"); //$NON-NLS-1$
 		menuManager.insertAfter("additions", submenuManager); //$NON-NLS-1$
 		submenuManager.add(new Separator("settings")); //$NON-NLS-1$
 		submenuManager.add(new Separator("actions")); //$NON-NLS-1$

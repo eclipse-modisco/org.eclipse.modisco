@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.browser.custom.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.browser.custom.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.browser.custom.core" id="registration" name="Customization registration"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.browser.custom.core" id="registration" name="Customization registration"/>
       </appinfo>
       <documentation>
          Allows the registration of a MoDisco Browser customization.
@@ -90,7 +90,7 @@
       <documentation>
          The following extension registers two customizations (uiCustom files), which are contained at the root of the plugin defining the extension:
 &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.browser.custom.core.registration&quot;&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.browser.custom.core.registration&quot;&gt;
   &lt;browserCustomization file=&quot;first.uiCustom&quot;/&gt;
   &lt;browserCustomization file=&quot;second.uiCustom&quot;/&gt;
 &lt;/extension&gt;

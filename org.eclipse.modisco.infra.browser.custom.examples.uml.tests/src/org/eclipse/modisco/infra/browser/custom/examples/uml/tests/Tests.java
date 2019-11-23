@@ -60,7 +60,7 @@ import org.junit.Test;
 @SuppressWarnings({ "boxing", "nls" })
 public class Tests {
 
-	private static final String PLUGIN_URI = "platform:/plugin/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml";
+	private static final String PLUGIN_URI = "platform:/plugin/org.eclipse.modisco.infra.browser.custom.examples.uml";
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
 	@BeforeClass
@@ -369,11 +369,11 @@ public class Tests {
 			}
 		};
 		ILog log = Platform.getLog(Platform
-				.getBundle("org.eclipse.gmt.modisco.infra.common.core"));
+				.getBundle("org.eclipse.modisco.infra.common.core"));
 		log.addLogListener(listener);
 		ProjectUtils
 				.importPlugin(
-						Platform.getBundle("org.eclipse.gmt.modisco.infra.browser.custom.examples.uml"),
+						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"),
 						new IFilter() {
 							public boolean filter(final Object object) {
 								boolean result = true;
@@ -389,7 +389,7 @@ public class Tests {
 							}
 						});
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(
-				"org.eclipse.gmt.modisco.infra.browser.custom.examples.uml");
+				"org.eclipse.modisco.infra.browser.custom.examples.uml");
 		ProjectUtils.refresh(project);
 		log.removeLogListener(listener);
 		if (!statusList.isEmpty()) {

@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.SuperFieldAccess#getField <em>Field</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.SuperFieldAccess#getField <em>Field</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getSuperFieldAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getSuperFieldAccess()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface SuperFieldAccess extends AbstractTypeQualifiedExpression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Field</em>' containment reference.
 	 * @see #setField(SingleVariableAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getSuperFieldAccess_Field()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getSuperFieldAccess_Field()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	SingleVariableAccess getField();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.SuperFieldAccess#getField <em>Field</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.SuperFieldAccess#getField <em>Field</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Field</em>' containment reference.

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.common.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.common.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.common.core" id="org.eclipse.modisco.common.core.protocolext" name="org.eclipse.modisco.common.core.protocolext"/>
+         <meta.schema plugin="org.eclipse.modisco.common.core" id="org.eclipse.modisco.common.core.protocolext" name="org.eclipse.modisco.common.core.protocolext"/>
       </appinfo>
       <documentation>
-         This extension point allows to register MoDisco protocol variants (classes implementing the org.eclipse.gmt.modisco.common.core.internal.protocol.IModiscoProtocolExtension).
+         This extension point allows to register MoDisco protocol variants (classes implementing the org.eclipse.modisco.common.core.internal.protocol.IModiscoProtocolExtension).
       </documentation>
    </annotation>
 
@@ -52,10 +52,10 @@
          <attribute name="class" type="string">
             <annotation>
                <documentation>
-                  A class implementing org.eclipse.gmt.modisco.common.core.internal.protocol.IModiscoProtocolExtension
+                  A class implementing org.eclipse.modisco.common.core.internal.protocol.IModiscoProtocolExtension
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.common.core.internal.protocol.IModiscoProtocolExtension"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.common.core.internal.protocol.IModiscoProtocolExtension"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -78,9 +78,9 @@
       <documentation>
          &lt;pre&gt; 
    &lt;extension
-         point=&quot;org.eclipse.gmt.modisco.common.core.protocolext&quot;&gt;
+         point=&quot;org.eclipse.modisco.common.core.protocolext&quot;&gt;
       &lt;scheme-specific-part
-            class=&quot;org.eclipse.gmt.modisco.infra.query.manager.ModelQuerySetCatalog&quot;&gt;
+            class=&quot;org.eclipse.modisco.infra.query.manager.ModelQuerySetCatalog&quot;&gt;
       &lt;/scheme-specific-part&gt;
    &lt;/extension&gt;
 &lt;/pre&gt;

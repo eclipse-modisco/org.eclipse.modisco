@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeDeclarationStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeDeclarationStatement()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface TypeDeclarationStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declaration</em>' containment reference.
 	 * @see #setDeclaration(AbstractTypeDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeDeclarationStatement_Declaration()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeDeclarationStatement_Declaration()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	AbstractTypeDeclaration getDeclaration();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Declaration</em>' containment reference.

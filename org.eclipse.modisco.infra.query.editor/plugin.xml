@@ -19,10 +19,10 @@ Contributors:
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.eclipse.gmt.modisco.infra.query.emf.presentation.queryModelWizardID"
+            id="org.eclipse.modisco.infra.query.emf.presentation.queryModelWizardID"
             name="%_UI_queryModelWizard_label"
             class="org.eclipse.modisco.infra.query.editor.presentation.QueryModelWizard"
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             icon="icons/full/wizban/NewQuery.gif">
          <description>%_UI_queryModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -31,14 +31,14 @@ Contributors:
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="org.eclipse.gmt.modisco.infra.query.emf.presentation.queryEditorID"
+            id="org.eclipse.modisco.infra.query.emf.presentation.queryEditorID"
             name="%_UI_queryEditor_label"
             icon="icons/full/obj16/ModelQuerySet.gif"
             extensions="querySet"
             class="org.eclipse.modisco.infra.query.editor.presentation.QueryEditor"
             contributorClass="org.eclipse.modisco.infra.query.editor.presentation.QueryActionBarContributor">
          <contentTypeBinding
-               contentTypeId="org.eclipse.gmt.modisco.infra.query.contenttype">
+               contentTypeId="org.eclipse.modisco.infra.query.contenttype">
          </contentTypeBinding>
       </editor>
    </extension>

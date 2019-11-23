@@ -8,7 +8,7 @@
  * Contributors:
  *    Gregoire DUPE (Mia-Software)
  *    Nicolas Bros (Mia-Software)
- *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.modisco.infra.query.tests;
 
@@ -573,14 +573,14 @@ public class UnitTests {
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		FileUtils.checkNoMarkerOn(file);
 		ModelQuerySet mqs = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
-		EClass mqsEClass = getMqsMetaClass("platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore"); //$NON-NLS-1$
+		EClass mqsEClass = getMqsMetaClass("platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore"); //$NON-NLS-1$
 		Assert.assertNotNull(mqs);
 		Assert.assertNotSame("", mqs.eClass(), mqsEClass); //$NON-NLS-1$
 	}
 
 	@Test
 	public void resourceSet3() {
-		EClass mqsEClass = getMqsMetaClass("platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore"); //$NON-NLS-1$
+		EClass mqsEClass = getMqsMetaClass("platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore"); //$NON-NLS-1$
 		EClass mqsEClass2 = getMqsMetaClass("http://www.eclipse.org/MoDisco/infra/query/0.8.incubation"); //$NON-NLS-1$
 		Assert.assertNotSame("", mqsEClass, mqsEClass2); //$NON-NLS-1$
 	}

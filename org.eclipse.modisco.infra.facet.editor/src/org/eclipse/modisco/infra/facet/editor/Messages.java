@@ -17,7 +17,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.facet.editor.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.facet.editor.messages"; //$NON-NLS-1$
 	public static String FacetEditor_Edition;
 	public static String FacetEditor_refreshErrorMarkersJobName;
 	public static String FacetModelWizard_facetInNonMoDiscoProject;

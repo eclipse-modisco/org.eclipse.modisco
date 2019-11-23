@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.facet.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.facet.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.facet.core" id="org.eclipse.gmt.modisco.infra.facet.registration" name="org.eclipse.gmt.modisco.infra.facet.registration"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.facet.core" id="org.eclipse.modisco.infra.facet.registration" name="org.eclipse.modisco.infra.facet.registration"/>
       </appinfo>
       <documentation>
          Allows the registration of a FacetSet, so that it is available in the FacetSet catalog at runtime.
@@ -79,7 +79,7 @@
          &lt;p&gt;
 The following extension registers a FacetSet, which is contained at the root of the plugin defining the extension:
 &lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.facet.registration&quot;&gt;
+&lt;extension point=&quot;org.eclipse.modisco.infra.facet.registration&quot;&gt;
   &lt;facetset file=&quot;_example_jdkAndEclipseFacets.facetSet&quot;/&gt;
 &lt;/extension&gt;
 &lt;/pre&gt;
@@ -93,7 +93,7 @@ The following extension registers a FacetSet, which is contained at the root of 
       </appinfo>
       <documentation>
          &lt;p&gt;
-Use org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog to retrieve the FacetSets that were registered.
+Use org.eclipse.modisco.infra.facet.core.FacetSetCatalog to retrieve the FacetSets that were registered.
 &lt;/p&gt;
       </documentation>
    </annotation>
@@ -105,7 +105,7 @@ Use org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog to retrieve the Fac
       <documentation>
          &lt;p&gt;
 See how this plug-in registers a FacetSet:&lt;br&gt;
-&lt;a href=&quot;https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/examples/trunk/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/plugin.xml&quot;&gt;org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk&lt;/a&gt;.
+&lt;a href=&quot;https://dev.eclipse.org/svnroot/modeling/org.eclipse.modisco/examples/trunk/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/plugin.xml&quot;&gt;org.eclipse.modisco.infra.browser.custom.examples.java.jdk&lt;/a&gt;.
 &lt;/p&gt;
       </documentation>
    </annotation>

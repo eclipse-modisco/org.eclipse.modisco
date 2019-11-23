@@ -11,48 +11,48 @@ Contributors:
     Gregoire DUPE (Mia-Software) - initial API and implementation
 -->
 <plugin>
-   <extension-point id="org.eclipse.gmt.modisco.infra.query.registration" name="%extension-point.name.1" schema="schema/org.eclipse.gmt.modisco.infra.query.registration.exsd"/>
-   <extension-point id="org.eclipse.gmt.modisco.infra.query.factory" name="%extension-point.name.2" schema="schema/org.eclipse.gmt.modisco.infra.query.factory.exsd"/>
+   <extension-point id="org.eclipse.modisco.infra.query.registration" name="%extension-point.name.1" schema="schema/org.eclipse.modisco.infra.query.registration.exsd"/>
+   <extension-point id="org.eclipse.modisco.infra.query.factory" name="%extension-point.name.2" schema="schema/org.eclipse.modisco.infra.query.factory.exsd"/>
    <extension-point id="querySetProvider" name="%extension-point.name.3" schema="schema/querySetProvider.exsd"/>
    <extension
-         id="org.eclipse.gmt.modisco.infra.query.core.QueryBuilder"
+         id="org.eclipse.modisco.infra.query.core.QueryBuilder"
          name="%extension.name"
-         point="org.eclipse.gmt.modisco.common.core.builder.register">
+         point="org.eclipse.modisco.common.core.builder.register">
       <builder
-            class="org.eclipse.gmt.modisco.infra.query.core.internal.QueryBuilder">
+            class="org.eclipse.modisco.infra.query.core.internal.QueryBuilder">
          <depends
-               builder="org.eclipse.gmt.modisco.infra.common.core.EcoreBuilder">
+               builder="org.eclipse.modisco.infra.common.core.EcoreBuilder">
          </depends>
       </builder>
    </extension>
     <extension
-         id="org.eclipse.gmt.modisco.infra.query.core.java.builder"
+         id="org.eclipse.modisco.infra.query.core.java.builder"
          name="%extension.name.0"
-         point="org.eclipse.gmt.modisco.common.core.builder.register">
+         point="org.eclipse.modisco.common.core.builder.register">
       <builder
-            class="org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaValidationQueryBuilder">
+            class="org.eclipse.modisco.infra.query.core.java.internal.JavaValidationQueryBuilder">
          <depends
-               builder="org.eclipse.gmt.modisco.infra.common.core.EcoreBuilder">
+               builder="org.eclipse.modisco.infra.common.core.EcoreBuilder">
          </depends>
       </builder>
    </extension>
    
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.factory">
+         point="org.eclipse.modisco.infra.query.factory">
       <factory
             class="org.eclipse.modisco.infra.query.core.java.internal.JavaModelQueryFactory">
       </factory>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.factory">
+         point="org.eclipse.modisco.infra.query.factory">
       <factory
             class="org.eclipse.modisco.infra.query.core.ocl.OclModelQueryFactory">
       </factory>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.common.core.protocolext">
+         point="org.eclipse.modisco.common.core.protocolext">
       <scheme-specific-part
-            class="org.eclipse.gmt.modisco.infra.query.core.internal.QueryProtocolExtension">
+            class="org.eclipse.modisco.infra.query.core.internal.QueryProtocolExtension">
       </scheme-specific-part>
    </extension>
    
@@ -61,21 +61,21 @@ Contributors:
       <extension
          point="org.eclipse.emf.validation.constraintProviders">
       <category
-            id="org.eclipse.gmt.modisco.infra.query.validation"
+            id="org.eclipse.modisco.infra.query.validation"
             mandatory="false"
             name="%category.name"/>
       <constraintProvider
             cache="true"
             mode="Batch">
          <package namespaceUri="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation"/>
-         <constraints categories="org.eclipse.gmt.modisco.infra.query.validation">
+         <constraints categories="org.eclipse.modisco.infra.query.validation">
             <constraint
                   lang="Java"
                   class="org.eclipse.modisco.infra.query.core.internal.validation.NonEmptyName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.nonemptyname"
+                  id="org.eclipse.modisco.infra.query.validation.nonemptyname"
                   statusCode="1">
                <description>
                   %constraint.description
@@ -93,7 +93,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.0"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ModelQuerySetRoot"
+                  id="org.eclipse.modisco.infra.query.validation.ModelQuerySetRoot"
                   statusCode="1">
                <description>
                   %constraint.description.0
@@ -109,7 +109,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.1"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ScopeValidation"
+                  id="org.eclipse.modisco.infra.query.validation.ScopeValidation"
                   statusCode="1">
                <description>
                   %constraint.description.1 
@@ -125,7 +125,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.2"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ModelQuerySetName"
+                  id="org.eclipse.modisco.infra.query.validation.ModelQuerySetName"
                   statusCode="1">
                <description>
                   %constraint.description.2
@@ -141,7 +141,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.3"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ReturnTypeValidation"
+                  id="org.eclipse.modisco.infra.query.validation.ReturnTypeValidation"
                   statusCode="1">
                <description>
                   %constraint.description.3 
@@ -157,7 +157,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.4"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.UniqueName"
+                  id="org.eclipse.modisco.infra.query.validation.UniqueName"
                   statusCode="1">
                <description>
                   %constraint.description.4
@@ -173,7 +173,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.5"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ParameterUniqueName"
+                  id="org.eclipse.modisco.infra.query.validation.ParameterUniqueName"
                   statusCode="1">
                <description>
                   %constraint.description.5
@@ -189,7 +189,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.6"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ImplementationClassName"
+                  id="org.eclipse.modisco.infra.query.validation.ImplementationClassName"
                   statusCode="1">
                <description>
                   %constraint.description.6
@@ -205,7 +205,7 @@ Contributors:
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.7"
-                  id="org.eclipse.gmt.modisco.infra.query.validation.ImplementationClassInterface"
+                  id="org.eclipse.modisco.infra.query.validation.ImplementationClassInterface"
                   statusCode="1">
                <description>
                   %constraint.description.7
@@ -222,15 +222,15 @@ Contributors:
          point="org.eclipse.emf.validation.constraintBindings">
       <clientContext
             default="false"
-            id="org.eclipse.gmt.modisco.infra.query.clientcontext">
+            id="org.eclipse.modisco.infra.query.clientcontext">
          <enablement></enablement>
       </clientContext>
       <binding
-            context="org.eclipse.gmt.modisco.infra.query.clientcontext"
-            category="org.eclipse.gmt.modisco.infra.query.validation"/>
+            context="org.eclipse.modisco.infra.query.clientcontext"
+            category="org.eclipse.modisco.infra.query.validation"/>
    </extension> 
    <extension
-         id="org.eclipse.gmt.modisco.infra.query.problem"
+         id="org.eclipse.modisco.infra.query.problem"
          point="org.eclipse.core.resources.markers">
       <super
             type="org.eclipse.core.resources.problemmarker">
@@ -244,8 +244,8 @@ Contributors:
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
             class="org.eclipse.modisco.infra.query.core.propertyTesters.QueryPropertyTester"
-            id="org.eclipse.gmt.modisco.infra.query.core.queryPropertyTester"
-            namespace="org.eclipse.gmt.modisco.infra.query.core"
+            id="org.eclipse.modisco.infra.query.core.queryPropertyTester"
+            namespace="org.eclipse.modisco.infra.query.core"
             properties="isMoDiscoQuery,isMoDiscoQuerySet,isWorkspaceQuery,isWorkspaceQuerySet"
             type="org.eclipse.emf.ecore.EObject">
       </propertyTester>

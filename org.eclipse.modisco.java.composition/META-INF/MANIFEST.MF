@@ -5,9 +5,9 @@ Export-Package: org.eclipse.modisco.java.composition.javaapplication,
  org.eclipse.modisco.java.composition.javaapplication.queries;x-friends:="org.eclipse.modisco.java.composition.ui",
  org.eclipse.modisco.java.composition.javaapplication.util;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
- ity:=reexport,org.eclipse.gmt.modisco.java;visibility:=reexport,org.e
- clipse.gmt.modisco.omg.kdm;visibility:=reexport,org.eclipse.modisco.k
- dm.source.extension;bundle-version="0.9.0",org.eclipse.gmt.modisco.in
+ ity:=reexport,org.eclipse.modisco.java;visibility:=reexport,org.e
+ clipse.modisco.omg.kdm;visibility:=reexport,org.eclipse.modisco.k
+ dm.source.extension;bundle-version="0.9.0",org.eclipse.modisco.in
  fra.query.core;bundle-version="0.9.0"
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ClassPath: .

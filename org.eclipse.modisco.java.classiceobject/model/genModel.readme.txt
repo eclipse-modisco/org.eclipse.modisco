@@ -6,5 +6,5 @@ If ecore definition from "org.eclipse.gtm.modisco.java" is modified, please foll
 - fix the EPackage nsURI in .Ecore with : "http://www.eclipse.org/MoDisco/Java/x.x.x/java-classicEObject"
 - launch "generate model" on .genmodel
 - delete interfaces package (reuse those from "org.eclipse.gtm.modisco.java")
-- modify extends of JavaFactory to extend org.eclipse.gmt.modisco.java.emf.JavaFactory
-- modify extends of JavaPackage to extend org.eclipse.gmt.modisco.java.emf.JavaPackage
+- modify extends of JavaFactory to extend org.eclipse.modisco.java.emf.JavaFactory
+- modify extends of JavaPackage to extend org.eclipse.modisco.java.emf.JavaPackage

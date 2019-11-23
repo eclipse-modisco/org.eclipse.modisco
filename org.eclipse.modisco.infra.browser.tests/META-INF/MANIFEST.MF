@@ -13,8 +13,8 @@ Require-Bundle: org.eclipse.swtbot.swt.finder;resolution:=optional,
  org.eclipse.core.resources;bundle-version="[3.4.0,4.0.0)",
  org.eclipse.ui.ide;bundle-version="[3.4.0,4.0.0)",
  org.eclipse.swt;bundle-version="[3.4.0,4.0.0)",
- org.eclipse.gmt.modisco.infra.browser,
- org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser,
+ org.eclipse.modisco.infra.browser.uicore;bundle-version="0.8.0",
  org.eclipse.modisco.facet.util.emf.ui;bundle-version="0.1.0",
  org.eclipse.modisco.facet.util.tests.swtbot;bundle-version="0.2.0"
 Bundle-Vendor: %Bundle-Vendor

@@ -14,7 +14,7 @@ Contributors:
       label="MoDisco Java Discoverer Benchmark feature"
       version="1.5.0.qualifier"
       provider-name="%providerName"
-      plugin="org.eclipse.gmt.modisco.java.discoverer.benchmark"
+      plugin="org.eclipse.modisco.java.discoverer.benchmark"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -43,21 +43,21 @@ http://www.eclipse.org/legal/epl-v10.html
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.nousages"
+         id="org.eclipse.modisco.java.nousages"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.nousages.cdo"
+         id="org.eclipse.modisco.java.nousages.cdo"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.gmt.modisco.java.classiceobject"
+         id="org.eclipse.modisco.java.classiceobject"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -22,7 +22,7 @@ Prerequisites:
     		* org.eclipse.gmt.am3.dsls.km3
     		* org.eclipse.gmt.am3.tools.ant
     		
-2) Import the "org.eclipse.gmt.modisco.usecase.birtsampledb" project into your development workspace:
+2) Import the "org.eclipse.modisco.usecase.birtsampledb" project into your development workspace:
 
 	--> Right-click anywhere on the "Navigator" view and choose "Import...", the "Import" 
 		wizard is now opened.
@@ -30,12 +30,12 @@ Prerequisites:
 	--> Select "General/Existing Projects into Workspace" and click on "Next" button.
 	
 	--> Click on "Select archive file" and "Browse..." to open the 
-		"org.eclipse.gmt.modisco.usecase.birtsampledb-incubation.zip" archive file.
+		"org.eclipse.modisco.usecase.birtsampledb-incubation.zip" archive file.
 		
-	--> Check that the "org.eclipse.gmt.modisco.usecase.birtsampledb" project is selected and
+	--> Check that the "org.eclipse.modisco.usecase.birtsampledb" project is selected and
 		click on the "Finish" button.
 		
-	--> The "org.eclipse.gmt.modisco.usecase.birtsampledb" project is now opened into your
+	--> The "org.eclipse.modisco.usecase.birtsampledb" project is now opened into your
 		development workspace. 
 	
 

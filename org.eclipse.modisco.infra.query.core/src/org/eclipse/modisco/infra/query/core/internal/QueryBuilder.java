@@ -23,7 +23,7 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 public class QueryBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "querySet"; //$NON-NLS-1$
-	private static final String MARKER_TYPE = "org.eclipse.gmt.modisco.infra.query.problem"; //$NON-NLS-1$
+	private static final String MARKER_TYPE = "org.eclipse.modisco.infra.query.problem"; //$NON-NLS-1$
 
 	@Override
 	protected AbstractMoDiscoCatalog getCatalog() {

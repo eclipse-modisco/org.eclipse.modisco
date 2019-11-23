@@ -43,7 +43,7 @@ public interface Directory extends InventoryContainer {
 	 * @return the value of the '<em>Path</em>' attribute.
 	 * @see #setPath(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getDirectory_Path()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getPath();

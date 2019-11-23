@@ -45,7 +45,7 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 /**
  * A catalog of customization files found in the Workspace and registered
  * through the extension point
- * <code>org.eclipse.gmt.modisco.infra.browser.custom.registration</code>. It is
+ * <code>org.eclipse.modisco.infra.browser.custom.registration</code>. It is
  * updated by the {@link CustomizationsBuilder}, which is responsible for adding
  * and removing customization files in response to changes in the Workspace.
  * @deprecated Will be replaced by EMF Facet,
@@ -54,7 +54,7 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 @Deprecated
 public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 
-	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.browser.custom.core.registration"; //$NON-NLS-1$
+	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.modisco.infra.browser.custom.core.registration"; //$NON-NLS-1$
 	public static final String FILE_EXTENSION = "uiCustom"; //$NON-NLS-1$
 	private static CustomizationsCatalog instance = null;
 
@@ -136,7 +136,7 @@ public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * org.eclipse.gmt.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
+	 * org.eclipse.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
 	 * getActivator()
 	 */
 	@Override

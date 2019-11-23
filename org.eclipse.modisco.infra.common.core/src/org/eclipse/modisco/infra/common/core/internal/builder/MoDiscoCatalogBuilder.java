@@ -35,7 +35,7 @@ import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 
-	private static final String DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/MoDiscoCatalogBuilder/debug"; //$NON-NLS-1$
+	private static final String DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/MoDiscoCatalogBuilder/debug"; //$NON-NLS-1$
 	static final boolean DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(MoDiscoCatalogBuilder.DEBUG_ID));
 

@@ -3,7 +3,7 @@
   <types metaclassName="java.ClassDeclaration">
     <customizedFeatures customizedFeature="icon">
       <valueCases>
-        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/toggle_breadcrumb.gif"/>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.usecase.modelplex.examples.customization/resources/toggle_breadcrumb.gif"/>
         <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasMainMethod"/>
       </valueCases>
     </customizedFeatures>
@@ -11,11 +11,11 @@
   <types metaclassName="java.VariableDeclaration">
     <customizedFeatures customizedFeature="icon">
       <valueCases>
-        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithFilteredPotentialTypes.gif"/>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithFilteredPotentialTypes.gif"/>
         <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasFilteredPotentialTypes"/>
       </valueCases>
       <valueCases>
-        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithPotentialTypes.gif"/>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.usecase.modelplex.examples.customization/resources/variableDeclarationWithPotentialTypes.gif"/>
         <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasPotentialTypes"/>
       </valueCases>
     </customizedFeatures>
@@ -23,7 +23,7 @@
   <types metaclassName="java.Type">
     <customizedFeatures customizedFeature="icon">
       <valueCases>
-        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.usecase.modelplex.examples.customization/resources/typeUsingOtherTypes.gif"/>
+        <value xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.usecase.modelplex.examples.customization/resources/typeUsingOtherTypes.gif"/>
         <condition xsi:type="query:JavaModelQuery" href="modisco:/query/FilteringModelplex#HasUsedTypes"/>
       </valueCases>
     </customizedFeatures>

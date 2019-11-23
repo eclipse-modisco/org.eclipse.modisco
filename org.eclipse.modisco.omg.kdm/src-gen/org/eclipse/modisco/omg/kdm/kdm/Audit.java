@@ -46,7 +46,7 @@ public interface Audit extends Element {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAudit_Description()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getDescription();
@@ -72,7 +72,7 @@ public interface Audit extends Element {
 	 * @return the value of the '<em>Author</em>' attribute.
 	 * @see #setAuthor(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAudit_Author()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getAuthor();
@@ -98,7 +98,7 @@ public interface Audit extends Element {
 	 * @return the value of the '<em>Date</em>' attribute.
 	 * @see #setDate(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAudit_Date()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getDate();

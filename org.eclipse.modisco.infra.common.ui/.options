@@ -1,3 +1,3 @@
 #master switch  
-org.eclipse.gmt.modisco.infra.common.ui/debug=false
-org.eclipse.gmt.modisco.infra.common.ui/debug/PackageRegistryView/event_debug=false
+org.eclipse.modisco.infra.common.ui/debug=false
+org.eclipse.modisco.infra.common.ui/debug/PackageRegistryView/event_debug=false

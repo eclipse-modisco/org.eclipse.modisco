@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.java;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.java;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
@@ -10,7 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.5.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
- org.eclipse.gmt.modisco.infra.common.core
+ org.eclipse.modisco.infra.common.core
 Bundle-ActivationPolicy: lazy
 Export-Package: 
  org.eclipse.modisco.java,
@@ -18,11 +18,11 @@ Export-Package:
  org.eclipse.modisco.java.emf.impl;x-internal:=true,
  org.eclipse.modisco.java.emf.util;x-internal:=true,
  org.eclipse.modisco.java.internal.util;
-  x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk,
-   org.eclipse.gmt.modisco.java.queries,
+  x-friends:="org.eclipse.modisco.infra.browser.custom.examples.java.jdk,
+   org.eclipse.modisco.java.queries,
    org.eclipse.modisco.java.composition.discoverer,
    org.eclipse.modisco.java.discoverer,
    org.eclipse.modisco.usecase.modelfilter.dependencies.ui,
    org.eclipse.modisco.java.discoverer.tests"
 Bundle-Activator: org.eclipse.modisco.java.plugin.JavaPlugin
-Automatic-Module-Name: org.eclipse.gmt.modisco.java
+Automatic-Module-Name: org.eclipse.modisco.java

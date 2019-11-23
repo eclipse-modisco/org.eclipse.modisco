@@ -50,7 +50,7 @@ public class TextJavaQueriesTest {
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
 	/**
-	 * Call a unit test which imports org.eclipse.gmt.modisco.java.queries
+	 * Call a unit test which imports org.eclipse.modisco.java.queries
 	 * before to call the test textJavaQueriesTest().
 	 *
 	 * @throws Exception

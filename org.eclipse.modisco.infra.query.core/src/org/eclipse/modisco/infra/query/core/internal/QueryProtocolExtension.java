@@ -23,7 +23,7 @@ public class QueryProtocolExtension implements IModiscoProtocolExtension {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see org.eclipse.gmt.modisco.infra.common.core.IModiscoResourceFactoryExt#
+	 * @see org.eclipse.modisco.infra.common.core.IModiscoResourceFactoryExt#
 	 * getSchemeSpecificPart()
 	 */
 	public String getSchemeSpecificPart() {
@@ -34,7 +34,7 @@ public class QueryProtocolExtension implements IModiscoProtocolExtension {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * org.eclipse.gmt.modisco.infra.common.core.internal.IModiscoResourceFactoryExt
+	 * org.eclipse.modisco.infra.common.core.internal.IModiscoResourceFactoryExt
 	 * #getURI (java.lang.String)
 	 */
 	public URI getURI(final String name) {

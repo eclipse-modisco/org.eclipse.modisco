@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TypeLiteral#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TypeLiteral#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeLiteral()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeLiteral()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface TypeLiteral extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeLiteral_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeLiteral_Type()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TypeLiteral#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TypeLiteral#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' containment reference.

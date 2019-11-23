@@ -23,7 +23,7 @@ public class LoadingDepthRegistry extends AbstractRegistry {
 	public static final int INFINITE = -1;
 	public static final int UNDEFINED = -2;
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.browser"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.infra.browser"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "loadingDepth"; //$NON-NLS-1$
 
 	private static final String LOADING_DEPTH_ELEMENT = "loadingDepth"; //$NON-NLS-1$

@@ -992,7 +992,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#eNS_URI
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -4612,7 +4612,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	@Override
 	protected void fixInstanceClass(EClassifier eClassifier) {
 		if (eClassifier.getInstanceClassName() == null) {
-			eClassifier.setInstanceClassName("org.eclipse.gmt.modisco.java." + eClassifier.getName()); //$NON-NLS-1$
+			eClassifier.setInstanceClassName(org.eclipse.modisco.java." + eClassifier.getName()); //$NON-NLS-1$
 			setGeneratedClassName(eClassifier);
 		}
 	}

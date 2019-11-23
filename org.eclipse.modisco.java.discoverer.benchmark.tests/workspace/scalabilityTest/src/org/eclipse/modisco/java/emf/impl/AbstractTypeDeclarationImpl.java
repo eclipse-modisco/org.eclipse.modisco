@@ -46,12 +46,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getCommentsBeforeBody <em>Comments Before Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getCommentsAfterBody <em>Comments After Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getCommentsBeforeBody <em>Comments Before Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getCommentsAfterBody <em>Comments After Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
  * </p>
  *
@@ -181,9 +181,9 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package getPackage() {
+	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE) return null;
-		return (org.eclipse.gmt.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eContainer();
 	}
 
 	/**
@@ -191,7 +191,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPackage(org.eclipse.gmt.modisco.java.Package newPackage, NotificationChain msgs) {
+	public NotificationChain basicSetPackage(org.eclipse.modisco.java.Package newPackage, NotificationChain msgs) {
 		msgs = eBasicSetContainer((InternalEObject)newPackage, JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE, msgs);
 		return msgs;
 	}
@@ -201,7 +201,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(org.eclipse.gmt.modisco.java.Package newPackage) {
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
@@ -209,7 +209,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newPackage != null)
-				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__OWNED_ELEMENTS, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__OWNED_ELEMENTS, org.eclipse.modisco.java.Package.class, msgs);
 			msgs = basicSetPackage(newPackage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -245,7 +245,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetPackage((org.eclipse.gmt.modisco.java.Package)otherEnd, msgs);
+				return basicSetPackage((org.eclipse.modisco.java.Package)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -283,7 +283,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE:
-				return eInternalContainer().eInverseRemove(this, JavaPackage.PACKAGE__OWNED_ELEMENTS, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				return eInternalContainer().eInverseRemove(this, JavaPackage.PACKAGE__OWNED_ELEMENTS, org.eclipse.modisco.java.Package.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -338,7 +338,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 				getCommentsAfterBody().addAll((Collection<? extends Comment>)newValue);
 				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)newValue);
+				setPackage((org.eclipse.modisco.java.Package)newValue);
 				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES:
 				getSuperInterfaces().clear();
@@ -369,7 +369,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 				getCommentsAfterBody().clear();
 				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)null);
+				setPackage((org.eclipse.modisco.java.Package)null);
 				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES:
 				getSuperInterfaces().clear();

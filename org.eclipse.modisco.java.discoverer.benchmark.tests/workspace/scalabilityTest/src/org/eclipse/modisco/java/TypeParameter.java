@@ -30,18 +30,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TypeParameter#getBounds <em>Bounds</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TypeParameter#getBounds <em>Bounds</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeParameter()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeParameter()
  * @model
  * @generated
  */
 public interface TypeParameter extends Type {
 	/**
 	 * Returns the value of the '<em><b>Bounds</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TypeAccess}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TypeAccess}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bounds</em>' containment reference list isn't clear,
@@ -49,7 +49,7 @@ public interface TypeParameter extends Type {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bounds</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeParameter_Bounds()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeParameter_Bounds()
 	 * @model containment="true"
 	 * @generated
 	 */

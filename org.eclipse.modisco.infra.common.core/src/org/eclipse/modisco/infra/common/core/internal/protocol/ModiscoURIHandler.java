@@ -28,7 +28,7 @@ import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
  */
 public class ModiscoURIHandler implements URIHandler {
 
-	private static final String DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/ModiscoURIHandler/debug"; //$NON-NLS-1$
+	private static final String DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/ModiscoURIHandler/debug"; //$NON-NLS-1$
 	public static final boolean DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(ModiscoURIHandler.DEBUG_ID));
 

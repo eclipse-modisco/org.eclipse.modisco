@@ -64,6 +64,6 @@ Note that these metamodels are also available in other varied graphical and text
 
 All of the source code is stored in a public source repository, which you can access at: 
 
-[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/ https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/]
+[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.modisco.tool.metricsvisualizationbuilder/ https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/org.eclipse.modisco.tool.metricsvisualizationbuilder/]
 
-You can also browse it [http://dev.eclipse.org/viewsvn/index.cgi/plugins/trunk/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/?root=Modeling_MODISCO through the Web interface].
+You can also browse it [http://dev.eclipse.org/viewsvn/index.cgi/plugins/trunk/org.eclipse.modisco.tool.metricsvisualizationbuilder/?root=Modeling_MODISCO through the Web interface].

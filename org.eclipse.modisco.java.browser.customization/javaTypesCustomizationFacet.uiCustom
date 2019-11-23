@@ -12,180 +12,180 @@ Contributors:
 <uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/examples/java/javaTypesCustomizationFacet" allQuerySetsAvailable="false">
   <types metaclassName="javaTypesCustomizationFacet.AbstractBodyDeclaration" appliesToSubInstances="false">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/abstract.png:TopRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/abstract.png:TopRight"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.StaticBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/static.png:TopMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/static.png:TopMiddle"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/static_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/static_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PrivateMethodDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/private.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/private.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/private.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/private.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PublicMethodDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/public.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/public.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/public.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/public.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.FinalBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/final.png:TopRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/final.png:TopRight"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/final_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/final_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.ProtectedMethodDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/protected.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/protected.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/protected.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/protected.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.ProtectedFieldDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/protected.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/protected.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/protected.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/protected.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PrivateFieldDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/private.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/private.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/private.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/private.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PublicFieldDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/public.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/public.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/public.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/public.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.DefaultMethodDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/default.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/default.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/default.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/default.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.DefaultFieldDeclaration">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/default.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/default.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/default.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/default.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.UnresolvedElement">
     <customizedFeatures customizedFeature="facetMainIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/unresolved_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/unresolved_B.png"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/unresolved.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/unresolved.png:BottomMiddle"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/unresolved_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/unresolved_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.AccessElement">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/access.png:BottomRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/access.png:BottomRight"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/access_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/access_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.TransientBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/transient.gif:BottomRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/transient.gif:BottomRight"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/transient_B.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/transient_B.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.NativeBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/native.gif:BottomRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/native.gif:BottomRight"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/native_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/native_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.VolatileBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/volatile.gif:TopRight"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/volatile.gif:TopRight"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/volatile_B.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/volatile_B.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.SynchronizedBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/synchronized.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/synchronized.png:BottomMiddle"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/synchronized_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/synchronized_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.StaticImport">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/static.png:TopMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/static.png:TopMiddle"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/importStatic.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/importStatic.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.SuppressWarningsBodyDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/warning.png:BottomLeft"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/warning.png:BottomLeft"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/warning_B.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/warning_B.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PrivateClassDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/private_visibility.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/private_visibility.png:BottomMiddle"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/class.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/class.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.PrivateConstructorDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/private_visibility.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/private_visibility.png:BottomMiddle"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.ProtectedClassDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/class.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/class.gif"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/protected_visibility.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/protected_visibility.png:BottomMiddle"/>
     </customizedFeatures>
   </types>
   <types metaclassName="javaTypesCustomizationFacet.ProtectedConstructorDeclaration">
     <customizedFeatures customizedFeature="facetOverlayIcon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/protected_visibility.png:BottomMiddle"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/protected_visibility.png:BottomMiddle"/>
     </customizedFeatures>
   </types>
   <availableQuerySets>javaQueries</availableQuerySets>

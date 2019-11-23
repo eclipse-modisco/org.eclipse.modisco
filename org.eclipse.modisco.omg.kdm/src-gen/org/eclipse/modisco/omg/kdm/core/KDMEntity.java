@@ -65,7 +65,7 @@ public interface KDMEntity extends ModelElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.modisco.omg.kdm.core.CorePackage#getKDMEntity_Name()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getName();

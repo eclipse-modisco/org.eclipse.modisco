@@ -48,9 +48,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.TryStatementImpl#getBody <em>Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.TryStatementImpl#getFinally <em>Finally</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.TryStatementImpl#getCatchClauses <em>Catch Clauses</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.TryStatementImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.TryStatementImpl#getFinally <em>Finally</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.TryStatementImpl#getCatchClauses <em>Catch Clauses</em>}</li>
  * </ul>
  * </p>
  *

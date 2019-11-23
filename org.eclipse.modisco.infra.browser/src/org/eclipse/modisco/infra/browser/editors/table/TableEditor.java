@@ -105,7 +105,7 @@ public class TableEditor extends EditorPart implements ISelectionProvider, IMenu
 	private static final int LABEL_COLUMN_WIDTH = 125;
 	private static final int DEFAULT_COLUMN_WIDTH = 100;
 	private static final int MAX_INITIAL_COLUMN_WIDTH = 300;
-	public static final String EDITOR_ID = "org.eclipse.gmt.modisco.infra.browser.table.editorID"; //$NON-NLS-1$
+	public static final String EDITOR_ID = "org.eclipse.modisco.infra.browser.table.editorID"; //$NON-NLS-1$
 	/**
 	 * The number of items above which a virtual table is used. The virtual
 	 * style is not always used because it prevents correct packing of columns

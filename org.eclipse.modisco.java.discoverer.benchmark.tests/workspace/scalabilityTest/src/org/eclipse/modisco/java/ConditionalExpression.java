@@ -29,13 +29,13 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getConditionalExpression()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getConditionalExpression()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface ConditionalExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Else Expression</em>' containment reference.
 	 * @see #setElseExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getConditionalExpression_ElseExpression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getConditionalExpression_ElseExpression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getElseExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Else Expression</em>' containment reference.
@@ -76,14 +76,14 @@ public interface ConditionalExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getConditionalExpression_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getConditionalExpression_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.
@@ -102,14 +102,14 @@ public interface ConditionalExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Then Expression</em>' containment reference.
 	 * @see #setThenExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getConditionalExpression_ThenExpression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getConditionalExpression_ThenExpression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getThenExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Then Expression</em>' containment reference.

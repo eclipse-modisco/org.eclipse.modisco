@@ -18,7 +18,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.query.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.query.messages"; //$NON-NLS-1$
 	public static String ReturnTypeValidation_0;
 	public static String ReturnTypeValidation_noReturnType;
 	public static String ReturnTypeValidation_wrongReturnType;

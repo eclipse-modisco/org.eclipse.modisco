@@ -52,11 +52,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl#getFragments <em>Fragments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl#getModifier <em>Modifier</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationStatementImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl#getFragments <em>Fragments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl#getModifier <em>Modifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationStatementImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *

@@ -30,20 +30,20 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayCreation#getDimensions <em>Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayCreation#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getDimensions <em>Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayCreation()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayCreation()
  * @model
  * @generated
  */
 public interface ArrayCreation extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Dimensions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Expression}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Dimensions</em>' containment reference list isn't clear,
@@ -51,7 +51,7 @@ public interface ArrayCreation extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dimensions</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayCreation_Dimensions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayCreation_Dimensions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,14 +67,14 @@ public interface ArrayCreation extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initializer</em>' containment reference.
 	 * @see #setInitializer(ArrayInitializer)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayCreation_Initializer()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayCreation_Initializer()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	ArrayInitializer getInitializer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initializer</em>' containment reference.
@@ -93,14 +93,14 @@ public interface ArrayCreation extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayCreation_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayCreation_Type()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayCreation#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayCreation#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' containment reference.

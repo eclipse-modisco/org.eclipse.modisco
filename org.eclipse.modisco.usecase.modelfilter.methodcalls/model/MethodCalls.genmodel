@@ -9,7 +9,7 @@
     testSuiteClass="org.eclipse.modisco.usecase.methodcalls.model.methodcalls.tests.MethodCallsAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
     editPluginID="org.eclipse.modisco.usecase.modelfilter.methodcalls.edit" editorPluginID="org.eclipse.modisco.usecase.modelfilter.methodcalls.editor"
-    runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.gmt.modisco.java/model/java.genmodel#//java">
+    runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.modisco.java/model/java.genmodel#//java">
   <foreignModel>MethodCalls.ecore</foreignModel>
   <genPackages prefix="Methodcalls" basePackage="org.eclipse.modisco.usecase.modelfilter.methodcalls"
       disposableProviderFactory="true" ecorePackage="MethodCalls.ecore#/">

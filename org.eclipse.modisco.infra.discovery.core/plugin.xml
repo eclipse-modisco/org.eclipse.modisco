@@ -33,7 +33,7 @@
             value="true">
       </persistent>
       <super
-            type="org.eclipse.gmt.modisco.infra.common.core.problemmarker">
+            type="org.eclipse.modisco.infra.common.core.problemmarker">
       </super>
    </extension>
    <extension

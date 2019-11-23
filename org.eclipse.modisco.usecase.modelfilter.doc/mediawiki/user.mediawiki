@@ -37,7 +37,7 @@ To illustrate the ModelFilter plugin and its features, we will use a sample insp
 
 ==Get and install use case==
 
-The models are available from the [http://wiki.eclipse.org/MoDisco/SVN MoDisco SVN] in subdirectory "examples/trunk/org.eclipse.gmt.modisco.usecase.modelfilter.sample" or from a downloadable archive. If you use a SVN client in Eclipse (Subversive or Subclipse), the project will be immediately available in your Eclipse workspace.
+The models are available from the [http://wiki.eclipse.org/MoDisco/SVN MoDisco SVN] in subdirectory "examples/trunk/org.eclipse.modisco.usecase.modelfilter.sample" or from a downloadable archive. If you use a SVN client in Eclipse (Subversive or Subclipse), the project will be immediately available in your Eclipse workspace.
 
 Sources of the Pet Store application are  available here: http://www.oracle.com/technetwork/java/petstore1-3-1-02-139690.html
 

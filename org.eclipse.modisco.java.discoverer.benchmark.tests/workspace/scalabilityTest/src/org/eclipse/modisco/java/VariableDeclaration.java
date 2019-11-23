@@ -30,13 +30,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclaration()
  * @model abstract="true"
  * @generated
  */
@@ -51,14 +51,14 @@ public interface VariableDeclaration extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra Array Dimensions</em>' attribute.
 	 * @see #setExtraArrayDimensions(int)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclaration_ExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclaration_ExtraArrayDimensions()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	int getExtraArrayDimensions();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Extra Array Dimensions</em>' attribute.
@@ -77,14 +77,14 @@ public interface VariableDeclaration extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initializer</em>' containment reference.
 	 * @see #setInitializer(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclaration_Initializer()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclaration_Initializer()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	Expression getInitializer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Initializer</em>' containment reference.
@@ -95,8 +95,8 @@ public interface VariableDeclaration extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Usage In Variable Access</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.SingleVariableAccess}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}'.
+	 * The list contents are of type {@link org.eclipse.modisco.java.SingleVariableAccess}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usage In Variable Access</em>' reference list isn't clear,
@@ -104,8 +104,8 @@ public interface VariableDeclaration extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usage In Variable Access</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclaration_UsageInVariableAccess()
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableAccess#getVariable
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclaration_UsageInVariableAccess()
+	 * @see org.eclipse.modisco.java.SingleVariableAccess#getVariable
 	 * @model opposite="variable" ordered="false"
 	 * @generated
 	 */

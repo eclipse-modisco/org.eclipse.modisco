@@ -54,13 +54,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getOwnedElements <em>Owned Elements</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getOrphanTypes <em>Orphan Types</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getUnresolvedItems <em>Unresolved Items</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getCompilationUnits <em>Compilation Units</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getClassFiles <em>Class Files</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ModelImpl#getArchives <em>Archives</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getOwnedElements <em>Owned Elements</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getOrphanTypes <em>Orphan Types</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getUnresolvedItems <em>Unresolved Items</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getCompilationUnits <em>Compilation Units</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getClassFiles <em>Class Files</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ModelImpl#getArchives <em>Archives</em>}</li>
  * </ul>
  * </p>
  *
@@ -95,7 +95,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<org.eclipse.gmt.modisco.java.Package> ownedElements;
+	protected EList<org.eclipse.modisco.java.Package> ownedElements;
 
 	/**
 	 * The cached value of the '{@link #getOrphanTypes() <em>Orphan Types</em>}' containment reference list.
@@ -192,9 +192,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<org.eclipse.gmt.modisco.java.Package> getOwnedElements() {
+	public EList<org.eclipse.modisco.java.Package> getOwnedElements() {
 		if (ownedElements == null) {
-			ownedElements = new EObjectContainmentWithInverseEList<org.eclipse.gmt.modisco.java.Package>(org.eclipse.gmt.modisco.java.Package.class, this, JavaPackage.MODEL__OWNED_ELEMENTS, JavaPackage.PACKAGE__MODEL);
+			ownedElements = new EObjectContainmentWithInverseEList<org.eclipse.modisco.java.Package>(org.eclipse.modisco.java.Package.class, this, JavaPackage.MODEL__OWNED_ELEMENTS, JavaPackage.PACKAGE__MODEL);
 		}
 		return ownedElements;
 	}
@@ -338,7 +338,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 				return;
 			case JavaPackage.MODEL__OWNED_ELEMENTS:
 				getOwnedElements().clear();
-				getOwnedElements().addAll((Collection<? extends org.eclipse.gmt.modisco.java.Package>)newValue);
+				getOwnedElements().addAll((Collection<? extends org.eclipse.modisco.java.Package>)newValue);
 				return;
 			case JavaPackage.MODEL__ORPHAN_TYPES:
 				getOrphanTypes().clear();

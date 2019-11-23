@@ -42,7 +42,7 @@ public class H2CDOServer extends AbstractCDOServer {
 			project.create(new NullProgressMonitor());
 			if (!project.exists()) {
 				throw new CoreException(new Status(IStatus.ERROR,
-						"org.eclipse.gmt.modisco.infra.common.cdo.h2", "Failed to create the DB project")); //$NON-NLS-1$  //$NON-NLS-2$
+						"org.eclipse.modisco.infra.common.cdo.h2", "Failed to create the DB project")); //$NON-NLS-1$  //$NON-NLS-2$
 			}
 
 			dataSource.setURL("jdbc:h2:file:" + project.getLocation().toString() + "/h2DB"); //$NON-NLS-1$ //$NON-NLS-2$

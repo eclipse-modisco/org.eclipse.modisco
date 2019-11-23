@@ -39,8 +39,8 @@ import org.osgi.framework.Bundle;
 @Deprecated
 public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 
-	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.query.registration"; //$NON-NLS-1$
-	public static final String FACTORY_EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.infra.query.factory"; //$NON-NLS-1$
+	public static final String REGISTRATION_EXTENSION_POINT_ID = "org.eclipse.modisco.infra.query.registration"; //$NON-NLS-1$
+	public static final String FACTORY_EXTENSION_POINT_ID = "org.eclipse.modisco.infra.query.factory"; //$NON-NLS-1$
 	public static final String FILE_EXTENSION = "querySet"; //$NON-NLS-1$
 
 	private static ModelQuerySetCatalog singleton = null;
@@ -222,7 +222,7 @@ public final class ModelQuerySetCatalog extends AbstractMoDiscoCatalog {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * org.eclipse.gmt.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
+	 * org.eclipse.modisco.infra.common.core.builder.AbstractMoDiscoCatalog#
 	 * getActivator()
 	 */
 	@Override

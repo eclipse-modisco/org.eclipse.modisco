@@ -114,8 +114,8 @@ public final class ProjectUtils {
 					.append("Bundle-Activator: " + ProjectUtils.bundleActivatorQualifiedName(packageName) + "\n"); //$NON-NLS-1$ //$NON-NLS-2$
 			//manifestSB.append("Bundle-Vendor: bundle vendor\n"); //$NON-NLS-1$
 			manifestSB.append("Require-Bundle: org.eclipse.core.runtime,\n"); //$NON-NLS-1$
-			manifestSB.append(" org.eclipse.gmt.modisco.infra.common.core,\n"); //$NON-NLS-1$
-			manifestSB.append(" org.eclipse.gmt.modisco.infra.query.core\n"); //$NON-NLS-1$
+			manifestSB.append(" org.eclipse.modisco.infra.common.core,\n"); //$NON-NLS-1$
+			manifestSB.append(" org.eclipse.modisco.infra.query.core\n"); //$NON-NLS-1$
 			manifestSB.append("Bundle-RequiredExecutionEnvironment: " //$NON-NLS-1$
 					+ ProjectUtils.JAVA_VERSION + "\n"); //$NON-NLS-1$
 			manifestSB.append("Bundle-ActivationPolicy: lazy\n"); //$NON-NLS-1$

@@ -44,7 +44,7 @@ public interface ContentRestriction extends AbstractContentElement {
 	 * @return the value of the '<em>Kind</em>' attribute.
 	 * @see #setKind(String)
 	 * @see org.eclipse.modisco.omg.kdm.data.DataPackage#getContentRestriction_Kind()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getKind();
@@ -70,7 +70,7 @@ public interface ContentRestriction extends AbstractContentElement {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see org.eclipse.modisco.omg.kdm.data.DataPackage#getContentRestriction_Value()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getValue();

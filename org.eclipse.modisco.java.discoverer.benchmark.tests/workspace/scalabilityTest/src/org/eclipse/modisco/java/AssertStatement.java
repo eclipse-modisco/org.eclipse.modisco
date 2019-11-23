@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.AssertStatement#getMessage <em>Message</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.AssertStatement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AssertStatement#getMessage <em>Message</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AssertStatement#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssertStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getAssertStatement()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface AssertStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Message</em>' containment reference.
 	 * @see #setMessage(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssertStatement_Message()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAssertStatement_Message()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	Expression getMessage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.AssertStatement#getMessage <em>Message</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.AssertStatement#getMessage <em>Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Message</em>' containment reference.
@@ -75,14 +75,14 @@ public interface AssertStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssertStatement_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAssertStatement_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.AssertStatement#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.AssertStatement#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.

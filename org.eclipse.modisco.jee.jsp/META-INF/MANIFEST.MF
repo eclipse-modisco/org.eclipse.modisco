@@ -13,6 +13,6 @@ Export-Package: org.eclipse.modisco.jee.jsp,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.resources;bundle-version="3.6.0",
- org.eclipse.gmt.modisco.xml;bundle-version="0.8.0"
+ org.eclipse.modisco.xml;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: org.eclipse.modisco.jee.jsp

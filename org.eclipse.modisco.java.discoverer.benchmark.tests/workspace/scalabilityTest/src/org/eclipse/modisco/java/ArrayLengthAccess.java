@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayLengthAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayLengthAccess()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface ArrayLengthAccess extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Array</em>' containment reference.
 	 * @see #setArray(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArrayLengthAccess_Array()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayLengthAccess_Array()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getArray();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ArrayLengthAccess#getArray <em>Array</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Array</em>' containment reference.

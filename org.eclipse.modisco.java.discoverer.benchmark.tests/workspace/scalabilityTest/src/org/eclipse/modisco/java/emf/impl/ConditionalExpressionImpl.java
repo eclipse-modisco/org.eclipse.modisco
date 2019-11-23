@@ -40,9 +40,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConditionalExpressionImpl#getElseExpression <em>Else Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConditionalExpressionImpl#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConditionalExpressionImpl#getThenExpression <em>Then Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getElseExpression <em>Else Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getThenExpression <em>Then Expression</em>}</li>
  * </ul>
  * </p>
  *

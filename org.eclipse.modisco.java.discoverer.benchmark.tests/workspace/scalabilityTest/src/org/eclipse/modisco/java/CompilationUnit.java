@@ -30,15 +30,15 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CompilationUnit#getCommentList <em>Comment List</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CompilationUnit#getImports <em>Imports</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CompilationUnit#getPackage <em>Package</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CompilationUnit#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getCommentList <em>Comment List</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getImports <em>Imports</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getTypes <em>Types</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit()
  * @model
  * @generated
  */
@@ -53,14 +53,14 @@ public interface CompilationUnit extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Original File Path</em>' attribute.
 	 * @see #setOriginalFilePath(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit_OriginalFilePath()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit_OriginalFilePath()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getOriginalFilePath();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Original File Path</em>' attribute.
@@ -71,7 +71,7 @@ public interface CompilationUnit extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Comment List</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Comment}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Comment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Comment List</em>' reference list isn't clear,
@@ -79,7 +79,7 @@ public interface CompilationUnit extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Comment List</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit_CommentList()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit_CommentList()
 	 * @model
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface CompilationUnit extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ImportDeclaration}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ImportDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
@@ -95,7 +95,7 @@ public interface CompilationUnit extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Imports</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit_Imports()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit_Imports()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -110,26 +110,26 @@ public interface CompilationUnit extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Package</em>' reference.
-	 * @see #setPackage(org.eclipse.gmt.modisco.java.Package)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit_Package()
+	 * @see #setPackage(org.eclipse.modisco.java.Package)
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit_Package()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	org.eclipse.gmt.modisco.java.Package getPackage();
+	org.eclipse.modisco.java.Package getPackage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CompilationUnit#getPackage <em>Package</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CompilationUnit#getPackage <em>Package</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Package</em>' reference.
 	 * @see #getPackage()
 	 * @generated
 	 */
-	void setPackage(org.eclipse.gmt.modisco.java.Package value);
+	void setPackage(org.eclipse.modisco.java.Package value);
 
 	/**
 	 * Returns the value of the '<em><b>Types</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.AbstractTypeDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Types</em>' reference list isn't clear,
@@ -137,7 +137,7 @@ public interface CompilationUnit extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types</em>' reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCompilationUnit_Types()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit_Types()
 	 * @model
 	 * @generated
 	 */

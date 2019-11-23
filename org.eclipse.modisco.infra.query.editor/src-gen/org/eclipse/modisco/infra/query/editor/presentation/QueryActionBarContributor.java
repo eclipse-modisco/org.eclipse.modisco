@@ -192,7 +192,7 @@ public class QueryActionBarContributor
 	public void contributeToMenu(final IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(QueryEditorPlugin.INSTANCE.getString("_UI_QueryEditor_menu"), "org.eclipse.gmt.modisco.infra.queryMenuID"); //$NON-NLS-1$ //$NON-NLS-2$
+		IMenuManager submenuManager = new MenuManager(QueryEditorPlugin.INSTANCE.getString("_UI_QueryEditor_menu"), "org.eclipse.modisco.infra.queryMenuID"); //$NON-NLS-1$ //$NON-NLS-2$
 		menuManager.insertAfter("additions", submenuManager); //$NON-NLS-1$
 		submenuManager.add(new Separator("settings")); //$NON-NLS-1$
 		submenuManager.add(new Separator("actions")); //$NON-NLS-1$

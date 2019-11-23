@@ -4,8 +4,8 @@ Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.usecase.java.samplerefactoring;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.common.core,
- org.eclipse.gmt.modisco.infra.query.core
+ org.eclipse.modisco.infra.common.core,
+ org.eclipse.modisco.infra.query.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: .,bin
 Bundle-Vendor: %Bundle-Vendor

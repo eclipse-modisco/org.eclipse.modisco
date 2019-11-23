@@ -21,7 +21,7 @@ import org.osgi.framework.Bundle;
 
 public class BundleTest {
 
-	private static final String BUNDLE_ID_REGEX = "org\\.eclipse(\\.gmt)?\\.modisco\\..*"; //$NON-NLS-1$
+	private static final String BUNDLE_ID_REGEX = "org\\.eclipse\\.modisco\\..*"; //$NON-NLS-1$
 	private final Bundle testBundle = Platform.getBundle("org.eclipse.modisco.tests"); //$NON-NLS-1$
 
 	@Test

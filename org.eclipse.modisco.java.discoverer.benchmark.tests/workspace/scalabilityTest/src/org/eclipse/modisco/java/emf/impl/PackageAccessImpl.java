@@ -39,8 +39,8 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageAccessImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.PackageAccessImpl#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageAccessImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,7 +55,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.gmt.modisco.java.Package package_;
+	protected org.eclipse.modisco.java.Package package_;
 
 	/**
 	 * The cached value of the '{@link #getQualifier() <em>Qualifier</em>}' containment reference.
@@ -91,10 +91,10 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package getPackage() {
+	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
-			package_ = (org.eclipse.gmt.modisco.java.Package)eResolveProxy(oldPackage);
+			package_ = (org.eclipse.modisco.java.Package)eResolveProxy(oldPackage);
 			if (package_ != oldPackage) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.PACKAGE_ACCESS__PACKAGE, oldPackage, package_));
@@ -108,7 +108,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package basicGetPackage() {
+	public org.eclipse.modisco.java.Package basicGetPackage() {
 		return package_;
 	}
 
@@ -117,8 +117,8 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPackage(org.eclipse.gmt.modisco.java.Package newPackage, NotificationChain msgs) {
-		org.eclipse.gmt.modisco.java.Package oldPackage = package_;
+	public NotificationChain basicSetPackage(org.eclipse.modisco.java.Package newPackage, NotificationChain msgs) {
+		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.PACKAGE_ACCESS__PACKAGE, oldPackage, newPackage);
@@ -132,13 +132,13 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(org.eclipse.gmt.modisco.java.Package newPackage) {
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != package_) {
 			NotificationChain msgs = null;
 			if (package_ != null)
-				msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
 			if (newPackage != null)
-				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.gmt.modisco.java.Package.class, msgs);
+				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
 			msgs = basicSetPackage(newPackage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -199,8 +199,8 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 		switch (featureID) {
 			case JavaPackage.PACKAGE_ACCESS__PACKAGE:
 				if (package_ != null)
-					msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.gmt.modisco.java.Package.class, msgs);
-				return basicSetPackage((org.eclipse.gmt.modisco.java.Package)otherEnd, msgs);
+					msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
+				return basicSetPackage((org.eclipse.modisco.java.Package)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -247,7 +247,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case JavaPackage.PACKAGE_ACCESS__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)newValue);
+				setPackage((org.eclipse.modisco.java.Package)newValue);
 				return;
 			case JavaPackage.PACKAGE_ACCESS__QUALIFIER:
 				setQualifier((PackageAccess)newValue);
@@ -265,7 +265,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case JavaPackage.PACKAGE_ACCESS__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)null);
+				setPackage((org.eclipse.modisco.java.Package)null);
 				return;
 			case JavaPackage.PACKAGE_ACCESS__QUALIFIER:
 				setQualifier((PackageAccess)null);

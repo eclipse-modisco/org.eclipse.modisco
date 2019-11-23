@@ -12,20 +12,20 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package class="org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage" genModel="model/javaApplication.genmodel" uri="http://www.eclipse.org/MoDisco/Java/Composition/0.1.incubation/javaApplication"/>
    </extension>  
-   <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+   <extension point="org.eclipse.modisco.infra.facet.registration">
       <facetset file="javaToKdmShortcuts.facetSet"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="javaCompositionShortcuts.querySet"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+   <extension point="org.eclipse.modisco.infra.facet.registration">
       <facetset file="kdmToJavaShortcuts.facetSet"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.browser.loadingDepth">
+   <extension point="org.eclipse.modisco.infra.browser.loadingDepth">
       <loadingDepth depth="1" metamodel="http://www.eclipse.org/MoDisco/Java/Composition/0.1.incubation/javaApplication">
       </loadingDepth>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+   <extension point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization
             file="filterJavaComposition.uiCustom"
             loadByDefault="true"/>

@@ -29,7 +29,7 @@ import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSe
  * <li>&lt;model_name&gt; is the name of the referred model.
  * <li>&lt;sub-protocol&gt; represents the kind of model that the URI refers to.
  * The values of &lt;sub-protocol&gt; are defined through the
- * <tt>org.eclipse.gmt.modisco.common.core.protocolext</tt> extension point.
+ * <tt>org.eclipse.modisco.common.core.protocolext</tt> extension point.
  * </ul>
  *
  * @author Gregoire DUPE (Mia-Software)

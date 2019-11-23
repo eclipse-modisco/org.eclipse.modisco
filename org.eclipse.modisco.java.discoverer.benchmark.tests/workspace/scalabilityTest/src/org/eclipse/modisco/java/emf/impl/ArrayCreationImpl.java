@@ -49,9 +49,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayCreationImpl#getDimensions <em>Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayCreationImpl#getInitializer <em>Initializer</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArrayCreationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayCreationImpl#getDimensions <em>Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayCreationImpl#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayCreationImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *

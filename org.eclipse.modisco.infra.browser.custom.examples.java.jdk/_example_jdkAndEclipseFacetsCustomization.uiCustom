@@ -13,37 +13,37 @@ Contributors:
 <uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/examples/jdkAndEclipseFacets" allQuerySetsAvailable="false">
   <types metaclassName="_example_jdkAndEclipseFacets.Collection">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/collection.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/collection.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.Throwable">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/Throwable.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/Throwable.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.EObject">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/EObject.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/EObject.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.Runnable">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/Runnable.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/Runnable.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.Plugin">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/Plugin.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/Plugin.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.NotJavaModelProxy">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/javaProject.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/javaProject.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="_example_jdkAndEclipseFacets.EclipseUI">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/icons/EclipseUI.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.infra.browser.custom.examples.java.jdk/icons/EclipseUI.gif"/>
     </customizedFeatures>
   </types>
   <availableQuerySets>javaQueries</availableQuerySets>

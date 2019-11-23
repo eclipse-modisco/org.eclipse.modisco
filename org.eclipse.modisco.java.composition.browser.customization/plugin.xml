@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+   <extension point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization file="javaApplication.uiCustom" loadByDefault="true">
       </browserCustomization>
    </extension>
 
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="javaComposition.querySet"/>
    </extension>
 </plugin>

@@ -44,7 +44,7 @@ public interface Annotation extends Element {
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getAnnotation_Text()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getText();

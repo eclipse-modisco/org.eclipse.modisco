@@ -21,9 +21,9 @@ Contributors:
             genModel="model/jxpath.genmodel"/>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.factory">
+         point="org.eclipse.modisco.infra.query.factory">
       <factory
-            class="org.eclipse.gmt.modisco.infra.query.jxpath.query.JXPathModelQueryFactory">
+            class="org.eclipse.modisco.infra.query.jxpath.query.JXPathModelQueryFactory">
       </factory>
    </extension>
 

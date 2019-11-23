@@ -73,7 +73,7 @@ public interface ParameterUnit extends DataElement {
 	 * @return the value of the '<em>Pos</em>' attribute.
 	 * @see #setPos(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.code.CodePackage#getParameterUnit_Pos()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getPos();

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="FilteringModelplex">
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
-  <queries xsi:type="query:JavaModelQuery" name="HasPotentialTypes" description="Indicates if the selected type has potential sub types." implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.custom.HasPotentialTypes">
+  <queries xsi:type="query:JavaModelQuery" name="HasPotentialTypes" description="Indicates if the selected type has potential sub types." implementationClassName="org.eclipse.modisco.examples.modelplex.custom.HasPotentialTypes">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="HasFilteredPotentialTypes" description="Indicates if the selected type has a filtered list of potential sub types." implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.custom.HasFilteredPotentialTypes">
+  <queries xsi:type="query:JavaModelQuery" name="HasFilteredPotentialTypes" description="Indicates if the selected type has a filtered list of potential sub types." implementationClassName="org.eclipse.modisco.examples.modelplex.custom.HasFilteredPotentialTypes">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="HasMainMethod" description="Returns whether the Class defines a main method." implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.custom.HasMainMethod">
+  <queries xsi:type="query:JavaModelQuery" name="HasMainMethod" description="Returns whether the Class defines a main method." implementationClassName="org.eclipse.modisco.examples.modelplex.custom.HasMainMethod">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="HasUsedTypes" description="To find classes which have a link to other classes." implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.custom.HasUsedTypes">
+  <queries xsi:type="query:JavaModelQuery" name="HasUsedTypes" description="To find classes which have a link to other classes." implementationClassName="org.eclipse.modisco.examples.modelplex.custom.HasUsedTypes">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
   </queries>

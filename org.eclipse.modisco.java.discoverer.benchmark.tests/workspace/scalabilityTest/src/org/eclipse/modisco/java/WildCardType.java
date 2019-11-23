@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.WildCardType#getBound <em>Bound</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.WildCardType#getBound <em>Bound</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getWildCardType()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getWildCardType()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface WildCardType extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(boolean)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getWildCardType_UpperBound()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getWildCardType_UpperBound()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isUpperBound();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Upper Bound</em>' attribute.
@@ -75,14 +75,14 @@ public interface WildCardType extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bound</em>' containment reference.
 	 * @see #setBound(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getWildCardType_Bound()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getWildCardType_Bound()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getBound();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.WildCardType#getBound <em>Bound</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.WildCardType#getBound <em>Bound</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bound</em>' containment reference.

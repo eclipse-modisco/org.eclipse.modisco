@@ -2,72 +2,72 @@
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="modifierJavaQueries">
   <associatedMetamodels href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
-  <queries xsi:type="query:JavaModelQuery" name="isAccess" description="Return true if the EObject is an Access one" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsAccess">
+  <queries xsi:type="query:JavaModelQuery" name="isAccess" description="Return true if the EObject is an Access one" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsAccess">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ASTNode"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isNative" description="Return true if the EObject is native" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsNative">
+  <queries xsi:type="query:JavaModelQuery" name="isNative" description="Return true if the EObject is native" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsNative">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isTransient" description="Return true if the EObject is transient" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsTransient">
+  <queries xsi:type="query:JavaModelQuery" name="isTransient" description="Return true if the EObject is transient" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsTransient">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isSynchronized" description="Return true if the EObject is synchronized" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsSynchronized">
+  <queries xsi:type="query:JavaModelQuery" name="isSynchronized" description="Return true if the EObject is synchronized" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsSynchronized">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isVolatile" description="Return true if the EObject is volatile" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsVolatile">
+  <queries xsi:type="query:JavaModelQuery" name="isVolatile" description="Return true if the EObject is volatile" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsVolatile">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isUnresolved" description="Return true if the EObject is an unresolved one" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsUnresolved">
+  <queries xsi:type="query:JavaModelQuery" name="isUnresolved" description="Return true if the EObject is an unresolved one" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsUnresolved">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ASTNode"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isStatic" description="Return true if the ClassDeclaration is Static" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsStatic">
+  <queries xsi:type="query:JavaModelQuery" name="isStatic" description="Return true if the ClassDeclaration is Static" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsStatic">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ImportDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isPublic" description="Return true if the ClassDeclaration is Public" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsPublic">
+  <queries xsi:type="query:JavaModelQuery" name="isPublic" description="Return true if the ClassDeclaration is Public" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsPublic">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isFinal" description="Return true if the ClassDeclaration is Final" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsFinal">
+  <queries xsi:type="query:JavaModelQuery" name="isFinal" description="Return true if the ClassDeclaration is Final" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsFinal">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isProtected" description="Return true if the ClassDeclaration is Protected" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsProtected">
+  <queries xsi:type="query:JavaModelQuery" name="isProtected" description="Return true if the ClassDeclaration is Protected" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsProtected">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isPrivate" description="Return true if the ClassDeclaration is Private" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsPrivate">
+  <queries xsi:type="query:JavaModelQuery" name="isPrivate" description="Return true if the ClassDeclaration is Private" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsPrivate">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isDefault" description="Return true if the BodyDeclaration is kind of Default visibility" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsDefault">
+  <queries xsi:type="query:JavaModelQuery" name="isDefault" description="Return true if the BodyDeclaration is kind of Default visibility" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsDefault">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isDeprecated" description="Return true if the BodyDeclaration is annotated with @Deprecated" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsDeprecated">
+  <queries xsi:type="query:JavaModelQuery" name="isDeprecated" description="Return true if the BodyDeclaration is annotated with @Deprecated" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsDeprecated">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isAbstract" description="Return true if the EObject is an Access one" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsAbstract">
+  <queries xsi:type="query:JavaModelQuery" name="isAbstract" description="Return true if the EObject is an Access one" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsAbstract">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isGenerated" description="Return true if the BodyDeclaration is Annotated with @Generated" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsGenerated">
+  <queries xsi:type="query:JavaModelQuery" name="isGenerated" description="Return true if the BodyDeclaration is Annotated with @Generated" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsGenerated">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isOverridden" description="Return true if the BodyDeclaration is Annotated with @Override" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsOverridden">
+  <queries xsi:type="query:JavaModelQuery" name="isOverridden" description="Return true if the BodyDeclaration is Annotated with @Override" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsOverridden">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isSuppressWarnings" description="Return true if the BodyDeclaration is Annotated with @SuppressWarnings" implementationClassName="org.eclipse.gmt.modisco.java.queries.modifiers.IsSuppressWarnings">
+  <queries xsi:type="query:JavaModelQuery" name="isSuppressWarnings" description="Return true if the BodyDeclaration is Annotated with @SuppressWarnings" implementationClassName="org.eclipse.modisco.java.queries.modifiers.IsSuppressWarnings">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//BodyDeclaration"/>
   </queries>

@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.facet.core;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.facet.core;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.facet.core.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
- org.eclipse.gmt.modisco.infra.common.core,
- org.eclipse.gmt.modisco.infra.facet,
- org.eclipse.gmt.modisco.infra.query.core,
+ org.eclipse.modisco.infra.common.core,
+ org.eclipse.modisco.infra.facet,
+ org.eclipse.modisco.infra.query.core,
  org.eclipse.modisco.util.emf.core;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.facet.core,
- org.eclipse.modisco.infra.facet.core.adapters.instances;x-friends:="org.eclipse.gmt.modisco.infra.browser",
+ org.eclipse.modisco.infra.facet.core.adapters.instances;x-friends:="org.eclipse.modisco.infra.browser",
  org.eclipse.modisco.infra.facet.core.exception,
  org.eclipse.modisco.infra.facet.core.extensions
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.facet.core
+Automatic-Module-Name: org.eclipse.modisco.infra.facet.core

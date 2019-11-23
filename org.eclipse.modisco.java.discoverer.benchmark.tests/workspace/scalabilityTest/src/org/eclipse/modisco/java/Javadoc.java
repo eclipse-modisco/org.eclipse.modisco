@@ -30,18 +30,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Javadoc#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Javadoc#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getJavadoc()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getJavadoc()
  * @model
  * @generated
  */
 public interface Javadoc extends Comment {
 	/**
 	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.TagElement}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.TagElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tags</em>' containment reference list isn't clear,
@@ -49,7 +49,7 @@ public interface Javadoc extends Comment {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tags</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getJavadoc_Tags()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getJavadoc_Tags()
 	 * @model containment="true"
 	 * @generated
 	 */

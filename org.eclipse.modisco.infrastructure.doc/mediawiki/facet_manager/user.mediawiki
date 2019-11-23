@@ -124,8 +124,8 @@ facets. For each facet set the location of its description model is pointed out.
 *Nicolas Bros ([http://www.mia-software.com Mia-Software]) 
 
 == Included Plug-ins ==
-* metamodel: org.eclipse.gmt.modisco.infra.facet
-* metamodel edit plug-in : org.eclipse.gmt.modisco.infra.facet.edit
-* metamodel editor plug-in : org.eclipse.gmt.modisco.infra.facet.editor
-* core plug-in: org.eclipse.gmt.modisco.infra.facet.core
-* UI plug-in : org.eclipse.gmt.modisco.infra.facet.ui
+* metamodel: org.eclipse.modisco.infra.facet
+* metamodel edit plug-in : org.eclipse.modisco.infra.facet.edit
+* metamodel editor plug-in : org.eclipse.modisco.infra.facet.editor
+* core plug-in: org.eclipse.modisco.infra.facet.core
+* UI plug-in : org.eclipse.modisco.infra.facet.ui

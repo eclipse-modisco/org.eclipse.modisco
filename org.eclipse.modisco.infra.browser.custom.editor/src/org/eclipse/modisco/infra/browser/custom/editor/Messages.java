@@ -13,7 +13,7 @@ package org.eclipse.modisco.infra.browser.custom.editor;
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.browser.custom.editor.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.browser.custom.editor.messages"; //$NON-NLS-1$
 
 	public static String CustomizationEditor_add;
 	public static String CustomizationEditor_appliesToSubInstances;

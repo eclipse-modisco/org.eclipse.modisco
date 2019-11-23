@@ -43,7 +43,7 @@ public interface UIEvent extends AbstractUIElement {
 	 * @return the value of the '<em>Kind</em>' attribute.
 	 * @see #setKind(String)
 	 * @see org.eclipse.modisco.omg.kdm.ui.UiPackage#getUIEvent_Kind()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getKind();

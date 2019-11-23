@@ -15,7 +15,7 @@
     <extension
          point="org.eclipse.ui.navigator.navigatorContent">
       <navigatorContent 
-            id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.modelContents" 
+            id="org.eclipse.modisco.infra.browser.uicore.examples.cnf.modelContents" 
             name="%navigatorContent.name"
             contentProvider="org.eclipse.modisco.infra.browser.uicore.examples.cnf.MoDiscoContentProvider"
             labelProvider="org.eclipse.modisco.infra.browser.uicore.examples.cnf.MoDiscoLabelProvider" 
@@ -32,17 +32,17 @@
 			          property="org.eclipse.core.resources.contentTypeId"
 			          value="org.eclipse.emf.ecore.xmi"/>
 	            </and>
-				<instanceof value="org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ITreeElement"/>
+				<instanceof value="org.eclipse.modisco.infra.browser.uicore.internal.model.ITreeElement"/>
 			</or>
          </triggerPoints>
          <possibleChildren>
             <or>
-               <instanceof value="org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ModelElementItem"/> 
+               <instanceof value="org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem"/> 
             </or>
          </possibleChildren>
          <actionProvider
                class="org.eclipse.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"
-               id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"/>
+               id="org.eclipse.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"/>
       </navigatorContent>
    </extension>
    
@@ -51,15 +51,15 @@
          point="org.eclipse.ui.navigator.linkHelper">
       <linkHelper
             class="org.eclipse.modisco.infra.browser.uicore.examples.cnf.LinkHelper"
-            id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.linkHelper">
+            id="org.eclipse.modisco.infra.browser.uicore.examples.cnf.linkHelper">
          <editorInputEnablement>
             <instanceof
-                  value="org.eclipse.gmt.modisco.infra.common.ui.internal.editorInputs.IResourceEditorInput">
+                  value="org.eclipse.modisco.infra.common.ui.internal.editorInputs.IResourceEditorInput">
             </instanceof>
          </editorInputEnablement>
          <selectionEnablement>
             <instanceof
-                  value="org.eclipse.gmt.modisco.infra.browser.uicore.internal.model.ITreeElement">
+                  value="org.eclipse.modisco.infra.browser.uicore.internal.model.ITreeElement">
             </instanceof>
          </selectionEnablement>
       </linkHelper>
@@ -71,8 +71,8 @@
       <viewer viewerId="org.eclipse.ui.navigator.ProjectExplorer"/>
       <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
          <includes>
-            <contentExtension pattern="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.linkHelper"/>
-            <contentExtension pattern="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.modelContents"/>
+            <contentExtension pattern="org.eclipse.modisco.infra.browser.uicore.examples.cnf.linkHelper"/>
+            <contentExtension pattern="org.eclipse.modisco.infra.browser.uicore.examples.cnf.modelContents"/>
          </includes>
       </viewerContentBinding>
    </extension>

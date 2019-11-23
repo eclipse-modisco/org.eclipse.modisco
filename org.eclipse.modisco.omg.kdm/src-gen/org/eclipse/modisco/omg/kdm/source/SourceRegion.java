@@ -76,7 +76,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>Start Line</em>' attribute.
 	 * @see #setStartLine(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_StartLine()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getStartLine();
@@ -102,7 +102,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>Start Position</em>' attribute.
 	 * @see #setStartPosition(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_StartPosition()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getStartPosition();
@@ -128,7 +128,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>End Line</em>' attribute.
 	 * @see #setEndLine(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_EndLine()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getEndLine();
@@ -154,7 +154,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>End Position</em>' attribute.
 	 * @see #setEndPosition(Integer)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_EndPosition()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.Integer"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.Integer"
 	 * @generated
 	 */
 	Integer getEndPosition();
@@ -180,7 +180,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>Language</em>' attribute.
 	 * @see #setLanguage(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_Language()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getLanguage();
@@ -206,7 +206,7 @@ public interface SourceRegion extends Element {
 	 * @return the value of the '<em>Path</em>' attribute.
 	 * @see #setPath(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceRegion_Path()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getPath();

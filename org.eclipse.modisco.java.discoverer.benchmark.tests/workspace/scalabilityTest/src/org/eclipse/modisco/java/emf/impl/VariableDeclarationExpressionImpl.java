@@ -52,10 +52,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getFragments <em>Fragments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getModifier <em>Modifier</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getFragments <em>Fragments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getModifier <em>Modifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *

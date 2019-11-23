@@ -77,7 +77,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
         eType="#//CustomViewFeature" changeable="false" eOpposite="#//CustomViewFeature/valueCases"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureValue" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//CustomViewFeature"
@@ -90,6 +90,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DerivedFeatureValue" eSuperTypes="#//FeatureValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueCalculator" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery"/>
   </eClassifiers>
 </ecore:EPackage>

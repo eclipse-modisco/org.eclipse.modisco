@@ -8,7 +8,7 @@
  * Contributors:
  *     Gregoire DUPE (Mia-Software)
  *     Nicolas Bros (Mia-Software)
- *     Nicolas Guyomar (Mia-Software) - Bug 344243 - illegal API use in org.eclipse.gmt.modisco.infra.query.ui.wizards.NewQueryClassWizardPage
+ *     Nicolas Guyomar (Mia-Software) - Bug 344243 - illegal API use in org.eclipse.modisco.infra.query.ui.wizards.NewQueryClassWizardPage
  *******************************************************************************/
 package org.eclipse.modisco.infra.query.ui.wizards;
 
@@ -203,7 +203,7 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 			for (String requiredBundle : requiredBundles) {
 				missingRequiredBundles.add(requiredBundle);
 			}
-			missingRequiredBundles.add("org.eclipse.gmt.modisco.infra.query.core"); //$NON-NLS-1$
+			missingRequiredBundles.add("org.eclipse.modisco.infra.query.core"); //$NON-NLS-1$
 
 			IFile manifestResource = (IFile) project.findMember(new Path("/META-INF/MANIFEST.MF")); //$NON-NLS-1$
 			manifestResource.refreshLocal(IResource.DEPTH_ONE, new NullProgressMonitor());

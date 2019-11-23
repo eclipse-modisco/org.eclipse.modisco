@@ -30,13 +30,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TryStatement#getBody <em>Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.TryStatement#getFinally <em>Finally</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.TryStatement#getCatchClauses <em>Catch Clauses</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TryStatement#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TryStatement#getFinally <em>Finally</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TryStatement#getCatchClauses <em>Catch Clauses</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTryStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTryStatement()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface TryStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(Block)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTryStatement_Body()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTryStatement_Body()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Block getBody();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TryStatement#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TryStatement#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body</em>' containment reference.
@@ -77,14 +77,14 @@ public interface TryStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Finally</em>' containment reference.
 	 * @see #setFinally(Block)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTryStatement_Finally()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTryStatement_Finally()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	Block getFinally();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TryStatement#getFinally <em>Finally</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TryStatement#getFinally <em>Finally</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Finally</em>' containment reference.
@@ -95,7 +95,7 @@ public interface TryStatement extends Statement {
 
 	/**
 	 * Returns the value of the '<em><b>Catch Clauses</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.CatchClause}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.CatchClause}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Catch Clauses</em>' containment reference list isn't clear,
@@ -103,7 +103,7 @@ public interface TryStatement extends Statement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Catch Clauses</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTryStatement_CatchClauses()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTryStatement_CatchClauses()
 	 * @model containment="true"
 	 * @generated
 	 */

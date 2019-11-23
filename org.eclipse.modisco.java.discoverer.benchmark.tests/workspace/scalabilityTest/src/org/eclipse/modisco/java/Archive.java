@@ -30,13 +30,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Archive#getClassFiles <em>Class Files</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Archive#getManifest <em>Manifest</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Archive#getClassFiles <em>Class Files</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Archive#getManifest <em>Manifest</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArchive()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getArchive()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface Archive extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Original File Path</em>' attribute.
 	 * @see #setOriginalFilePath(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArchive_OriginalFilePath()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArchive_OriginalFilePath()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getOriginalFilePath();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Original File Path</em>' attribute.
@@ -69,7 +69,7 @@ public interface Archive extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Class Files</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.ClassFile}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ClassFile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Class Files</em>' containment reference list isn't clear,
@@ -77,7 +77,7 @@ public interface Archive extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Class Files</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArchive_ClassFiles()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArchive_ClassFiles()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
@@ -93,14 +93,14 @@ public interface Archive extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Manifest</em>' containment reference.
 	 * @see #setManifest(Manifest)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getArchive_Manifest()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getArchive_Manifest()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	Manifest getManifest();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Archive#getManifest <em>Manifest</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Archive#getManifest <em>Manifest</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Manifest</em>' containment reference.

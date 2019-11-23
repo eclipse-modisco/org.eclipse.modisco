@@ -16,7 +16,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_IojDSKEuEd-B9aUF18Um_g"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_IoZ5UaEuEd-B9aUF18Um_g" fontColor="4210752" fontHeight="10" fillColor="10011046" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceFile"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/SourceFile"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IoZ5UqEuEd-B9aUF18Um_g" x="105" y="175"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_KSe1gKEuEd-B9aUF18Um_g" type="1001">
@@ -35,7 +35,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_KSe1i6EuEd-B9aUF18Um_g"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_KSe1gaEuEd-B9aUF18Um_g" fontColor="4210752" fontHeight="10" fillColor="10011046" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/InventoryItem"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/InventoryItem"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KSe1gqEuEd-B9aUF18Um_g" x="75" y="35" width="193"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_KSe1jqEuEd-B9aUF18Um_g" type="1001">
@@ -54,7 +54,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_KSe1maEuEd-B9aUF18Um_g"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_KSe1j6EuEd-B9aUF18Um_g" fontColor="4210752" fontHeight="10" fillColor="10011046" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KSe1kKEuEd-B9aUF18Um_g" x="110" y="330"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_hlBScKEvEd-B9aUF18Um_g" type="1001">
@@ -145,7 +145,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_KS66YaEuEd-B9aUF18Um_g" routing="Rectilinear" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_KS66YqEuEd-B9aUF18Um_g" fontColor="4210752" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion/file"/>
+    <element xmi:type="ecore:EReference" href="platform:/resource/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/SourceRegion/file"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KS66Y6EuEd-B9aUF18Um_g" points="[-11, 0, 6, 126]$[-11, -126, 6, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KUj5IqEuEd-B9aUF18Um_g" id="(0.4967741935483871,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KUj5I6EuEd-B9aUF18Um_g" id="(0.4961832061068702,1.0)"/>

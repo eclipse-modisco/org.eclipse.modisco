@@ -14,7 +14,7 @@ package org.eclipse.modisco.infra.common.ui.internal;
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.common.ui.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.common.ui.internal.messages"; //$NON-NLS-1$
 	public static String IContainerCellEditor_0;
 	public static String IContainerCellEditor_1;
 	public static String IFileCellEditor_0;

@@ -42,7 +42,7 @@ import org.eclipse.swt.widgets.TreeItem;
 public final class FacetTooltip {
 
 	// TODO: extend
-	// org.eclipse.gmt.modisco.infra.common.ui.internal.controls.Tooltip
+	// org.eclipse.modisco.infra.common.ui.internal.controls.Tooltip
 
 	private static final String TREEITEM_DATA_KEY = "_TREEITEM"; //$NON-NLS-1$
 

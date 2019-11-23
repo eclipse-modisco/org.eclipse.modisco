@@ -7,7 +7,7 @@
          point="org.eclipse.ui.newWizards">
       <wizard
             canFinishEarly="false"
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.discovery.ui.internal.wizards.NewDiscovererWizard"
             hasPages="true"
             icon="icons/new_discoverer.png"
@@ -20,11 +20,11 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.gmt.modisco"
+            id="org.eclipse.modisco"
             name="%category.name">
       </category>
       <view
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.discovery.ui.internal.views.DiscoverersView"
             icon="icons/discoverer16x16.png"
             id="org.eclipse.modisco.infra.discovery.ui.views.discoverersview"

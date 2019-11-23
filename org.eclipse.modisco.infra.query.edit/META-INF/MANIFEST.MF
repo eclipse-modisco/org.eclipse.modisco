@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.query.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.query.edit;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.modisco.infra.query.edit.provider.QueryEditPlugin$Implementation
@@ -9,11 +9,11 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.query;visibility:=reexport,
+ org.eclipse.modisco.infra.query;visibility:=reexport,
  org.eclipse.emf.edit;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.emf.ecore;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.emf.ecore.edit;bundle-version="2.5.0";visibility:=reexport,
- org.eclipse.gmt.modisco.infra.query.core
+ org.eclipse.modisco.infra.query.core
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.modisco.infra.query.edit.provider;x-friends:="org.eclipse.gmt.modisco.infra.query.editor,org.eclipse.gmt.modisco.infra.facet.editor,org.eclipse.gmt.modisco.infra.facet.edit"
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.query.edit
+Export-Package: org.eclipse.modisco.infra.query.edit.provider;x-friends:="org.eclipse.modisco.infra.query.editor,org.eclipse.modisco.infra.facet.editor,org.eclipse.modisco.infra.facet.edit"
+Automatic-Module-Name: org.eclipse.modisco.infra.query.edit

@@ -12,35 +12,35 @@
 
 	<target name="launchVisualizationsBuilding">
 		<!-- Generate the Excel visualizations from the Metrics model -->
-		<ant dir="${basedir}/../org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
+		<ant dir="${basedir}/../org.eclipse.modisco.tool.metricsvisualizationbuilder"
 					 antfile="build-Excel.xml">
 			<property name="metricsName" value="Bugs_GMT-Metrics"/>
-			<property name="metricsModelPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
-			<property name="outputFilesDirectoryPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs"/>
+			<property name="metricsModelPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
+			<property name="outputFilesDirectoryPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs"/>
 		</ant>
 
 		<!-- Generate the HTML visualizations from the Metrics model -->
-		<ant dir="${basedir}/../org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
+		<ant dir="${basedir}/../org.eclipse.modisco.tool.metricsvisualizationbuilder"
 					 antfile="build-HTML.xml">
 			<property name="metricsName" value="Bugs_GMT-Metrics"/>
-			<property name="metricsModelPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
-			<property name="outputFilesDirectoryPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs"/>
+			<property name="metricsModelPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
+			<property name="outputFilesDirectoryPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs"/>
 		</ant>
 
 		<!-- Generate the SVG Bar Chart visualizations from the Metrics model -->
-		<ant dir="${basedir}/../org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
+		<ant dir="${basedir}/../org.eclipse.modisco.tool.metricsvisualizationbuilder"
 					 antfile="build-SVGBarChart.xml">
 			<property name="metricsName" value="Bugs_GMT-Metrics"/>
-			<property name="metricsModelPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
-			<property name="outputFilesDirectoryPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs"/>
+			<property name="metricsModelPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
+			<property name="outputFilesDirectoryPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs"/>
 		</ant>
 
 		<!-- Generate the SVG Pie Chart visualizations from the Metrics model -->
-		<ant dir="${basedir}/../org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder"
+		<ant dir="${basedir}/../org.eclipse.modisco.tool.metricsvisualizationbuilder"
 					 antfile="build-SVGPieChart.xml">
 			<property name="metricsName" value="Bugs_GMT-Metrics"/>
-			<property name="metricsModelPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
-			<property name="outputFilesDirectoryPath" value="/org.eclipse.gmt.modisco.usecase.bugzillametrics/Outputs"/>
+			<property name="metricsModelPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs/Metrics/Bugs_GMT-Metrics.xmi"/>
+			<property name="outputFilesDirectoryPath" value="/org.eclipse.modisco.usecase.bugzillametrics/Outputs"/>
 		</ant>
 	</target>
 

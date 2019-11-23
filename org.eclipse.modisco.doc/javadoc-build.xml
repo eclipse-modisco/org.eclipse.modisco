@@ -19,7 +19,7 @@ Contributors:
 		  <fileset dir="./javadoc" includes="**/*" />
 		</delete>
 		
-		<available file="../org.eclipse.gmt.modisco.infra.common.core" type="dir" property="plugins.path" value="../"/>
+		<available file="../org.eclipse.modisco.infra.common.core" type="dir" property="plugins.path" value="../"/>
 		<!-- with the sourceTree containing plugins, doc, etc. subdirs -->
 		<available file="../../plugins/" type="dir" property="plugins.path" value="../../plugins/"/>
 	

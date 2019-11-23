@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getUnresolvedItemAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getUnresolvedItemAccess()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface UnresolvedItemAccess extends Expression, NamespaceAccess {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element</em>' reference.
 	 * @see #setElement(UnresolvedItem)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getUnresolvedItemAccess_Element()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getUnresolvedItemAccess_Element()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	UnresolvedItem getElement();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.UnresolvedItemAccess#getElement <em>Element</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Element</em>' reference.
@@ -75,14 +75,14 @@ public interface UnresolvedItemAccess extends Expression, NamespaceAccess {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Qualifier</em>' containment reference.
 	 * @see #setQualifier(ASTNode)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getUnresolvedItemAccess_Qualifier()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getUnresolvedItemAccess_Qualifier()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	ASTNode getQualifier();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.UnresolvedItemAccess#getQualifier <em>Qualifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Qualifier</em>' containment reference.

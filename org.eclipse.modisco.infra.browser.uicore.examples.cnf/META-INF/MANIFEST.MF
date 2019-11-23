@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.browser.uicore.examples.cnf;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.browser.uicore.examples.cnf.Activator
 Bundle-Vendor: %Bundle-Vendor
@@ -10,16 +10,16 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.navigator,
  org.eclipse.core.resources;bundle-version="3.6.0",
  org.eclipse.emf.ecore;bundle-version="2.6.0",
- org.eclipse.gmt.modisco.infra.browser.uicore;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.browser.custom.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.browser.custom;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.uicore;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.custom.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.custom;bundle-version="0.8.0",
  org.eclipse.ui.ide;bundle-version="3.6.0",
- org.eclipse.gmt.modisco.infra.browser;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.common.ui;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.facet.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.facet;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.ui;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.facet.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.facet;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.core;bundle-version="0.8.0",
  org.eclipse.ui.navigator.resources;bundle-version="3.4.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf
+Automatic-Module-Name: org.eclipse.modisco.infra.browser.uicore.examples.cnf

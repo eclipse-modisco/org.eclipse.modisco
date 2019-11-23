@@ -11,11 +11,11 @@
        Nicolas Bros (Mia-Software) - initial API and implementation
  -->
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+   <extension point="org.eclipse.modisco.infra.facet.registration">
       <facetset file="lineCount.facetSet"/>
    </extension>
 
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="lineCount.querySet"/>
    </extension>
 </plugin>

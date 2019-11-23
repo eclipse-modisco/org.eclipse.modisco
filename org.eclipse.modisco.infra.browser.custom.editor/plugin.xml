@@ -19,10 +19,10 @@
             default="false"
             extensions="uiCustom"
             icon="icons/logoMoDiscoMini.gif"
-            id="org.eclipse.gmt.modisco.infra.browser.custom.editor"
+            id="org.eclipse.modisco.infra.browser.custom.editor"
             name="%editor.name">
          <contentTypeBinding
-               contentTypeId="org.eclipse.gmt.modisco.infra.browser.custom.contenttype">
+               contentTypeId="org.eclipse.modisco.infra.browser.custom.contenttype">
          </contentTypeBinding>
       </editor>
    </extension>

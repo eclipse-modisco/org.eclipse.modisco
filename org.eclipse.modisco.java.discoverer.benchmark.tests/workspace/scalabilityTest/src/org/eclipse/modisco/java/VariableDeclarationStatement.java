@@ -30,13 +30,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationStatement()
  * @model
  * @generated
  */
@@ -51,14 +51,14 @@ public interface VariableDeclarationStatement extends Statement, AbstractVariabl
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra Array Dimensions</em>' attribute.
 	 * @see #setExtraArrayDimensions(int)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_ExtraArrayDimensions()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_ExtraArrayDimensions()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	int getExtraArrayDimensions();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Extra Array Dimensions</em>' attribute.
@@ -69,7 +69,7 @@ public interface VariableDeclarationStatement extends Statement, AbstractVariabl
 
 	/**
 	 * Returns the value of the '<em><b>Modifier</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Modifier</em>' containment reference isn't clear,
@@ -78,15 +78,15 @@ public interface VariableDeclarationStatement extends Statement, AbstractVariabl
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modifier</em>' containment reference.
 	 * @see #setModifier(Modifier)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_Modifier()
-	 * @see org.eclipse.gmt.modisco.java.Modifier#getVariableDeclarationStatement
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_Modifier()
+	 * @see org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement
 	 * @model opposite="variableDeclarationStatement" containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Modifier getModifier();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Modifier</em>' containment reference.
@@ -97,7 +97,7 @@ public interface VariableDeclarationStatement extends Statement, AbstractVariabl
 
 	/**
 	 * Returns the value of the '<em><b>Annotations</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Annotation}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Annotation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Annotations</em>' containment reference list isn't clear,
@@ -105,7 +105,7 @@ public interface VariableDeclarationStatement extends Statement, AbstractVariabl
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Annotations</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_Annotations()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationStatement_Annotations()
 	 * @model containment="true"
 	 * @generated
 	 */

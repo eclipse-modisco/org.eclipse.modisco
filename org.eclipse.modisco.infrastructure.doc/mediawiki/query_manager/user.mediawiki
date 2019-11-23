@@ -93,7 +93,7 @@ applicable.
 [[Image:../../img/query_manager/MoDisco_PropertiesScopeKDMEntity.png]]
 
 A MoDisco project is also a "Plug-in project". To be able to
-refer to the API of the used meta-model, we have to add the "org.eclipse.gmt.modisco.infra.query.core" plug-in and the meta-model
+refer to the API of the used meta-model, we have to add the "org.eclipse.modisco.infra.query.core" plug-in and the meta-model
 implementation plug-in to the plug-in dependencies.
 
 [[Image:../../img/query_manager/MoDisco_QueryPluginDependencies.png]]
@@ -103,7 +103,7 @@ Create the query's implementation class.
 [[Image:../../img/query_manager/MoDisco_NewJavaQueryClass.png]]
 
 The Java Query implementation class must implement
-org.eclipse.gmt.modisco.query.core.java.IJavaModelQuery.
+org.eclipse.modisco.query.core.java.IJavaModelQuery.
 
 [[Image:../../img/query_manager/MoDisco_NewJavaQueryClassWizard.png]]
 
@@ -136,9 +136,9 @@ The JXPath expressions are stored into the JXPathModelQuery::query attribure.
 
 === Example ===
 
-The '''[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet jxpathQueryTest.querySet]'''
+The '''[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet jxpathQueryTest.querySet]'''
 model provides an example of a JXPath query. The JXPathQuery stored into
-'''[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.gmt.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet jxpathQueryTest.querySet]''' returns the name of the EPackage passed in the query
+'''[https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/deprecated/plugins/org.eclipse.modisco.infra.query.doc/doc/resources/jxpathQueryTest.querySet jxpathQueryTest.querySet]''' returns the name of the EPackage passed in the query
 context.
 
 == How to log in a Java query ==
@@ -158,9 +158,9 @@ If you want to log errors or messages in a Java query, you can use the MoDisco l
 *Nicolas Bros ([http://www.mia-software.com Mia-Software]) 
 
 == Included Plug-ins ==
-* metamodel: org.eclipse.gmt.modisco.infra.query
-* metamodel edit plug-in : org.eclipse.gmt.modisco.infra.query.edit
-* metamodel editor plug-in : org.eclipse.gmt.modisco.infra.query.editor
-* core plug-in: org.eclipse.gmt.modisco.infra.query.core
-* UI plug-in : org.eclipse.gmt.modisco.infra.query.ui
-* query implementation for jxpath : org.eclipse.gmt.modisco.infra.query.jxpath
+* metamodel: org.eclipse.modisco.infra.query
+* metamodel edit plug-in : org.eclipse.modisco.infra.query.edit
+* metamodel editor plug-in : org.eclipse.modisco.infra.query.editor
+* core plug-in: org.eclipse.modisco.infra.query.core
+* UI plug-in : org.eclipse.modisco.infra.query.ui
+* query implementation for jxpath : org.eclipse.modisco.infra.query.jxpath

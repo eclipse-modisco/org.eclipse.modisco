@@ -10,8 +10,8 @@
  *   Fabien Giquel (Mia-Software) - Bug 342856 - [Java Discovery] improve Discoverers implementation
  *******************************************************************************/
 
-	org.eclipse.gmt.modisco.infra.common.cdo.server
-  x-friends:="org.eclipse.gmt.modisco.infra.common.cdo.derby,
+	org.eclipse.modisco.infra.common.cdo.server
+  x-friends:="org.eclipse.modisco.infra.common.cdo.derby,
    org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.cdo,
    org.eclipse.modisco.java.discoverer.cdo.tests"

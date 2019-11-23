@@ -4,8 +4,8 @@ Bundle-Name: bug307095v3
 Bundle-SymbolicName: bug307095v3;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.common.core,
- org.eclipse.gmt.modisco.infra.query.core, 
+ org.eclipse.modisco.infra.common.core,
+ org.eclipse.modisco.infra.query.core, 
  bug307095v3helper
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

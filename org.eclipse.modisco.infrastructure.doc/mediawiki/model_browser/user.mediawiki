@@ -163,9 +163,9 @@ The first button makes the font larger, the second one smaller, and the third on
 *Nicolas Guyomar ([http://www.mia-software.com Mia-Software])
 
 == Included Plug-ins ==
-* the main browser component : org.eclipse.gmt.modisco.infra.browser
-* re-usable browser components : org.eclipse.gmt.modisco.infra.browser.uicore
-* customization metamodel : org.eclipse.gmt.modisco.infra.browser.custom
-* customization core : org.eclipse.gmt.modisco.infra.browser.custom.core
-* customization metamodel editor : org.eclipse.gmt.modisco.infra.browser.custom.editor
-* customization UI components : org.eclipse.gmt.modisco.infra.browser.custom.ui
+* the main browser component : org.eclipse.modisco.infra.browser
+* re-usable browser components : org.eclipse.modisco.infra.browser.uicore
+* customization metamodel : org.eclipse.modisco.infra.browser.custom
+* customization core : org.eclipse.modisco.infra.browser.custom.core
+* customization metamodel editor : org.eclipse.modisco.infra.browser.custom.editor
+* customization UI components : org.eclipse.modisco.infra.browser.custom.ui

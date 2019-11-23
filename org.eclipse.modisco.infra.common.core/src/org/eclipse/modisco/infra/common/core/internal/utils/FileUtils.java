@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.gmt.modisco.infra.query
+ *    Grégoire Dupé (Mia-Software) - Bug 470578 - [Depercated] org.eclipse.modisco.infra.query
  *******************************************************************************/
 package org.eclipse.modisco.infra.common.core.internal.utils;
 

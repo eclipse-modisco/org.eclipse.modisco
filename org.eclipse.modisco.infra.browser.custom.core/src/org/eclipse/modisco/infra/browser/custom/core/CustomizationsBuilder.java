@@ -24,7 +24,7 @@ import org.eclipse.modisco.infra.common.core.internal.builder.MoDiscoCatalogBuil
 public class CustomizationsBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "uiCustom"; //$NON-NLS-1$
-	private static final String MARKER_TYPE = "org.eclipse.gmt.modisco.infra.browser.custom.problem"; //$NON-NLS-1$
+	private static final String MARKER_TYPE = "org.eclipse.modisco.infra.browser.custom.problem"; //$NON-NLS-1$
 
 	@Override
 	protected AbstractMoDiscoCatalog getCatalog() {

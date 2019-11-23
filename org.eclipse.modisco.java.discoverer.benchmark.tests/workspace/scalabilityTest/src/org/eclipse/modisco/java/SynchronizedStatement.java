@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getBody <em>Body</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.SynchronizedStatement#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getSynchronizedStatement()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getSynchronizedStatement()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface SynchronizedStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(Block)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getSynchronizedStatement_Body()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getSynchronizedStatement_Body()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Block getBody();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.SynchronizedStatement#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body</em>' containment reference.
@@ -75,14 +75,14 @@ public interface SynchronizedStatement extends Statement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getSynchronizedStatement_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getSynchronizedStatement_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.SynchronizedStatement#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.

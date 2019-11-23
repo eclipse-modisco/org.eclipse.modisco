@@ -2,10 +2,10 @@
 <?eclipse version="3.4"?>
 
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+   <extension point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization file="JSP.uiCustom" loadByDefault="true"/>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="jspQueries.querySet"/>
    </extension>
 </plugin>

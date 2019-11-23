@@ -27,7 +27,7 @@ package org.eclipse.modisco.java;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getUnresolvedEnumDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getUnresolvedEnumDeclaration()
  * @model
  * @generated
  */

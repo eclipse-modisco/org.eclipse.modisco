@@ -12,13 +12,13 @@ Contributors:
 -->
 <plugin>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="modifierJavaQueries.querySet">
       </modelqueryset>
    </extension>
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="textJavaQueries.querySet">
       </modelqueryset>

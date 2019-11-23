@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
-<stringAttribute key="ATL File Name" value="/org.eclipse.gmt.modisco.usecase.travelagency/resources/XIRUPCopy2004.atl"/>
+<stringAttribute key="ATL File Name" value="/org.eclipse.modisco.usecase.travelagency/resources/XIRUPCopy2004.atl"/>
 <stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
 <booleanAttribute key="AllowInterModelReferences" value="true"/>
 <mapAttribute key="Input">
@@ -20,13 +20,13 @@
 <mapEntry key="OUT" value="Xirup"/>
 </mapAttribute>
 <mapAttribute key="Path">
-<mapEntry key="IN" value="/org.eclipse.gmt.modisco.usecase.travelagency/TravelAgency_MySQL_Oracle.xsm"/>
-<mapEntry key="Xirup" value="/org.eclipse.gmt.modisco.usecase.travelagency/resources/momocs.ecore"/>
-<mapEntry key="OUT" value="/org.eclipse.gmt.modisco.usecase.travelagency/FinalModel/TravelAgency_Oracle.xsm"/>
+<mapEntry key="IN" value="/org.eclipse.modisco.usecase.travelagency/TravelAgency_MySQL_Oracle.xsm"/>
+<mapEntry key="Xirup" value="/org.eclipse.modisco.usecase.travelagency/resources/momocs.ecore"/>
+<mapEntry key="OUT" value="/org.eclipse.modisco.usecase.travelagency/FinalModel/TravelAgency_Oracle.xsm"/>
 </mapAttribute>
 <stringAttribute key="Project Name" value="TravelAgency"/>
 <listAttribute key="Superimpose">
-<listEntry value="/org.eclipse.gmt.modisco.usecase.travelagency/ComponentTypeReplacement_superimp.asm"/>
+<listEntry value="/org.eclipse.modisco.usecase.travelagency/ComponentTypeReplacement_superimp.asm"/>
 </listAttribute>
 <booleanAttribute key="continueAfterError" value="false"/>
 <booleanAttribute key="disableAttributeHelperCache" value="false"/>

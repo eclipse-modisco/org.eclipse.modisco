@@ -30,21 +30,21 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.InfixExpression#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.InfixExpression#getExtendedOperands <em>Extended Operands</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InfixExpression#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.InfixExpression#getExtendedOperands <em>Extended Operands</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInfixExpression()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression()
  * @model
  * @generated
  */
 public interface InfixExpression extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.gmt.modisco.java.InfixExpressionKind}.
+	 * The literals are from the enumeration {@link org.eclipse.modisco.java.InfixExpressionKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -52,20 +52,20 @@ public interface InfixExpression extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpressionKind
+	 * @see org.eclipse.modisco.java.InfixExpressionKind
 	 * @see #setOperator(InfixExpressionKind)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInfixExpression_Operator()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression_Operator()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	InfixExpressionKind getOperator();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.InfixExpression#getOperator <em>Operator</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.InfixExpression#getOperator <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpressionKind
+	 * @see org.eclipse.modisco.java.InfixExpressionKind
 	 * @see #getOperator()
 	 * @generated
 	 */
@@ -81,14 +81,14 @@ public interface InfixExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Operand</em>' containment reference.
 	 * @see #setRightOperand(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInfixExpression_RightOperand()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression_RightOperand()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getRightOperand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Operand</em>' containment reference.
@@ -107,14 +107,14 @@ public interface InfixExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left Operand</em>' containment reference.
 	 * @see #setLeftOperand(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInfixExpression_LeftOperand()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression_LeftOperand()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getLeftOperand();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left Operand</em>' containment reference.
@@ -125,7 +125,7 @@ public interface InfixExpression extends Expression {
 
 	/**
 	 * Returns the value of the '<em><b>Extended Operands</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.Expression}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Extended Operands</em>' containment reference list isn't clear,
@@ -133,7 +133,7 @@ public interface InfixExpression extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extended Operands</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getInfixExpression_ExtendedOperands()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression_ExtendedOperands()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -1,27 +1,27 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.query.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.query.ui;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.query.ui.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.query.core,
- org.eclipse.gmt.modisco.infra.common.core,
- org.eclipse.gmt.modisco.infra.common.ui,
+ org.eclipse.modisco.infra.query.core,
+ org.eclipse.modisco.infra.common.core,
+ org.eclipse.modisco.infra.common.ui,
  org.eclipse.jdt.ui,
  org.eclipse.jdt.core,
- org.eclipse.gmt.modisco.infra.query.editor,
+ org.eclipse.modisco.infra.query.editor,
  org.eclipse.emf.codegen.ecore;bundle-version="2.6.0",
  org.eclipse.modisco.facet.common.ui;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.query.ui.actions,
- org.eclipse.modisco.infra.query.ui.controls;x-friends:="org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.custom.editor",
- org.eclipse.modisco.infra.query.ui.dialogs;x-friends:="org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.custom.editor",
+ org.eclipse.modisco.infra.query.ui.controls;x-friends:="org.eclipse.modisco.infra.browser,org.eclipse.modisco.infra.browser.custom.editor",
+ org.eclipse.modisco.infra.query.ui.dialogs;x-friends:="org.eclipse.modisco.infra.browser,org.eclipse.modisco.infra.browser.custom.editor",
  org.eclipse.modisco.infra.query.ui.extensions;x-internal:=true,
- org.eclipse.modisco.infra.query.ui.filters;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor,org.eclipse.gmt.modisco.infra.browser",
+ org.eclipse.modisco.infra.query.ui.filters;x-friends:="org.eclipse.modisco.infra.browser.custom.editor,org.eclipse.modisco.infra.browser",
  org.eclipse.modisco.infra.query.ui.handlers;x-internal:=true,
  org.eclipse.modisco.infra.query.ui.views.queryExecution,
  org.eclipse.modisco.infra.query.ui.views.queryExecution.internal;x-internal:=true
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.query.ui
+Automatic-Module-Name: org.eclipse.modisco.infra.query.ui

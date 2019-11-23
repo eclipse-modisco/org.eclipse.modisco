@@ -8,11 +8,11 @@
 		<h2 id="How_to_programmatically_use_the_MoDisco_facet_set_catalog">How to programmatically use the MoDisco facet set catalog</h2>
 		<p>Here is an example of using the MoDisco facet API. For more information please refer to the JavaDoc.</p>
 		<pre>import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryException;
-import org.eclipse.gmt.modisco.infra.facet.Facet;
-import org.eclipse.gmt.modisco.infra.facet.FacetSet;
-import org.eclipse.gmt.modisco.infra.facet.core.FacetSetCatalog;
-import org.eclipse.gmt.modisco.infra.facet.core.exception.ModiscoFacetException;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryException;
+import org.eclipse.modisco.infra.facet.Facet;
+import org.eclipse.modisco.infra.facet.FacetSet;
+import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
+import org.eclipse.modisco.infra.facet.core.exception.ModiscoFacetException;
 </pre>
 		<pre>public class Example {
 </pre>
@@ -35,11 +35,11 @@ import org.eclipse.gmt.modisco.infra.facet.core.exception.ModiscoFacetException;
 }
 </pre>
 		<h2 id="How_to_package_a_facet_set_in_a_plug-in">How to package a facet set in a plug-in</h2>
-		<p>To package a facet set in a plug-in, an extension must be added in the plugin.xml file (contained by the facet set's project). The extension point to use is: org.eclipse.gmt.modisco.infra.facet.registration.
+		<p>To package a facet set in a plug-in, an extension must be added in the plugin.xml file (contained by the facet set's project). The extension point to use is: org.eclipse.modisco.infra.facet.registration.
 			Here is an example of a facet set declaration:</p>
 		<pre> &lt;plugin&gt;
       &lt;extension
-          point="org.eclipse.gmt.modisco.infra.facet.registration"&gt;
+          point="org.eclipse.modisco.infra.facet.registration"&gt;
        &lt;facetset
              file="_example_jdkAndEclipseFacets.facetSet"&gt;
        &lt;/facetset&gt;

@@ -23,7 +23,7 @@ import org.junit.BeforeClass;
 /** Abstract test class: factorize test scaffolding */
 public abstract class AbstractTest {
 
-	protected static final String MODEL_FILENAME = "org.eclipse.gmt.modisco.infra.browser.javaxmi";
+	protected static final String MODEL_FILENAME = "org.eclipse.modisco.infra.browser.javaxmi";
 
 	/** The main tree (instances) */
 	protected static SWTBotTree tree;

@@ -28,14 +28,14 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ClassFile#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.ClassFile#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ClassFile#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.ClassFile#getPackage <em>Package</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassFile()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getClassFile()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface ClassFile extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Original File Path</em>' attribute.
 	 * @see #setOriginalFilePath(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassFile_OriginalFilePath()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getClassFile_OriginalFilePath()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getOriginalFilePath();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Original File Path</em>' attribute.
@@ -76,14 +76,14 @@ public interface ClassFile extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(AbstractTypeDeclaration)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassFile_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getClassFile_Type()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	AbstractTypeDeclaration getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ClassFile#getType <em>Type</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ClassFile#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' reference.
@@ -102,14 +102,14 @@ public interface ClassFile extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attached Source</em>' reference.
 	 * @see #setAttachedSource(CompilationUnit)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassFile_AttachedSource()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getClassFile_AttachedSource()
 	 * @model ordered="false"
 	 * @generated
 	 */
 	CompilationUnit getAttachedSource();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Attached Source</em>' reference.
@@ -127,21 +127,21 @@ public interface ClassFile extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Package</em>' reference.
-	 * @see #setPackage(org.eclipse.gmt.modisco.java.Package)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getClassFile_Package()
+	 * @see #setPackage(org.eclipse.modisco.java.Package)
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getClassFile_Package()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	org.eclipse.gmt.modisco.java.Package getPackage();
+	org.eclipse.modisco.java.Package getPackage();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.ClassFile#getPackage <em>Package</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.ClassFile#getPackage <em>Package</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Package</em>' reference.
 	 * @see #getPackage()
 	 * @generated
 	 */
-	void setPackage(org.eclipse.gmt.modisco.java.Package value);
+	void setPackage(org.eclipse.modisco.java.Package value);
 
 } // ClassFile

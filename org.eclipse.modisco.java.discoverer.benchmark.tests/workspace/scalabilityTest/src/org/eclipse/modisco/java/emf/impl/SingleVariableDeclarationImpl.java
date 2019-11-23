@@ -53,13 +53,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getModifier <em>Modifier</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#isVarargs <em>Varargs</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getAnnotations <em>Annotations</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getMethodDeclaration <em>Method Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getCatchClause <em>Catch Clause</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.SingleVariableDeclarationImpl#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getModifier <em>Modifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#isVarargs <em>Varargs</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getMethodDeclaration <em>Method Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getCatchClause <em>Catch Clause</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
  * </ul>
  * </p>
  *

@@ -29,18 +29,18 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationFragment()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationFragment()
  * @model
  * @generated
  */
 public interface VariableDeclarationFragment extends VariableDeclaration {
 	/**
 	 * Returns the value of the '<em><b>Variables Container</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getFragments <em>Fragments</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractVariablesContainer#getFragments <em>Fragments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variables Container</em>' container reference isn't clear,
@@ -49,15 +49,15 @@ public interface VariableDeclarationFragment extends VariableDeclaration {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables Container</em>' container reference.
 	 * @see #setVariablesContainer(AbstractVariablesContainer)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getVariableDeclarationFragment_VariablesContainer()
-	 * @see org.eclipse.gmt.modisco.java.AbstractVariablesContainer#getFragments
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getVariableDeclarationFragment_VariablesContainer()
+	 * @see org.eclipse.modisco.java.AbstractVariablesContainer#getFragments
 	 * @model opposite="fragments" transient="false" ordered="false"
 	 * @generated
 	 */
 	AbstractVariablesContainer getVariablesContainer();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}' container reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.VariableDeclarationFragment#getVariablesContainer <em>Variables Container</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variables Container</em>' container reference.

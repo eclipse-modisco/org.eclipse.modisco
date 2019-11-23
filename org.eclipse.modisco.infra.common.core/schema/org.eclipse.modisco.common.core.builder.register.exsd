@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.common.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.query.core" id="org.eclipse.gmt.modisco.infra.query.registration" name="org.eclipse.gmt.modisco.infra.query.registration"/>
+         <meta.schema plugin="org.eclipse.modisco.common.core" id="org.eclipse.modisco.common.core.builder.register" name="org.eclipse.modisco.common.core.builder.register"/>
       </appinfo>
       <documentation>
-         Allows the registration of a QuerySet, so that it is available in the QuerySet catalog at runtime.
+         This extension point allows to register sub MoDisco builders (classes implementing the org.eclipse.modisco.common.core.builder.IModiscoBuilder) into the main MoDisco builder.
       </documentation>
    </annotation>
 
@@ -18,7 +18,7 @@
       </annotation>
       <complexType>
          <choice>
-            <element ref="modelqueryset"/>
+            <element ref="builder"/>
          </choice>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,16 +47,31 @@
       </complexType>
    </element>
 
-   <element name="modelqueryset">
+   <element name="builder">
       <complexType>
-         <attribute name="file" type="string" use="required">
+         <choice minOccurs="0" maxOccurs="unbounded">
+            <element ref="depends"/>
+         </choice>
+         <attribute name="class" type="string" use="required">
             <annotation>
                <documentation>
-                  The file with extension &quot;.querySet&quot; that you want to register.
+                  A class implementing org.eclipse.modisco.common.core.builder.IModiscoBuilder
                </documentation>
                <appinfo>
-                  <meta.attribute kind="resource"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.common.core.internal.builder.IModiscoBuilder"/>
                </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="depends">
+      <complexType>
+         <attribute name="builder" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Id of MoDisco builder from which this MoDisco builder is dependent.
+               </documentation>
             </annotation>
          </attribute>
       </complexType>
@@ -67,7 +82,7 @@
          <meta.section type="since"/>
       </appinfo>
       <documentation>
-         0.8
+         0.8.0
       </documentation>
    </annotation>
 
@@ -76,39 +91,23 @@
          <meta.section type="examples"/>
       </appinfo>
       <documentation>
-         &lt;p&gt;
-The following extension registers a QuerySet, which is contained at the root of the plugin defining the extension:
-&lt;pre&gt;
-&lt;extension point=&quot;org.eclipse.gmt.modisco.infra.query.registration&quot;&gt;
-  &lt;modelqueryset file=&quot;myUMLQueries.querySet&quot;/&gt;
-&lt;/extension&gt;
+         &lt;pre&gt;
+  &lt;extension
+         id=&quot;org.eclipse.modisco.infra.browser.custom.manager.CustomizationsBuilder&quot;
+         name=&quot;CustomizationsBuilder&quot;
+         point=&quot;org.eclipse.modisco.common.core.builder.register&quot;&gt;
+      &lt;builder
+            class=&quot;org.eclipse.modisco.infra.browser.custom.manager.CustomizationsBuilder&quot;&gt;
+         &lt;depends
+               builder=&quot;org.eclipse.modisco.infra.query.manager.QueryBuilder&quot;&gt;
+         &lt;/depends&gt;
+      &lt;/builder&gt;
+   &lt;/extension&gt;
 &lt;/pre&gt;
-&lt;/p&gt;
       </documentation>
    </annotation>
 
-   <annotation>
-      <appinfo>
-         <meta.section type="apiinfo"/>
-      </appinfo>
-      <documentation>
-         &lt;p&gt;
-Use org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog to retrieve the QuerySets that were registered.
-&lt;/p&gt;
-      </documentation>
-   </annotation>
 
-   <annotation>
-      <appinfo>
-         <meta.section type="implementation"/>
-      </appinfo>
-      <documentation>
-         &lt;p&gt;
-See how this plug-in registers a QuerySet:
-&lt;a href=&quot;https://dev.eclipse.org/svnroot/modeling/org.eclipse.gmt.modisco/examples/trunk/org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk/plugin.xml&quot;&gt;org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk&lt;/a&gt;
-&lt;/p&gt;
-      </documentation>
-   </annotation>
 
    <annotation>
       <appinfo>
@@ -119,10 +118,10 @@ See how this plug-in registers a QuerySet:
 All rights reserved. This program and the accompanying materials
 are made available under the terms of the Eclipse Public License v1.0
 which accompanies this distribution, and is available at
-http://www.eclipse.org/legal/epl-v10.html
-
+&lt;a 
+href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
 Contributors:
-    Gregoire DUPE (Mia-Software) - initial API and implementation
+    Gregoire DUPE (Mia-Software)
       </documentation>
    </annotation>
 

@@ -14,7 +14,7 @@ Contributors:
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jxpath"
     nsURI="http://www.eclipse.org/MoDisco/infra/query/jxpath/0.8.incubation" nsPrefix="jxpath">
-  <eClassifiers xsi:type="ecore:EClass" name="JXPathModelQuery" eSuperTypes="platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery">
+  <eClassifiers xsi:type="ecore:EClass" name="JXPathModelQuery" eSuperTypes="platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="An JXPathModelQuery is a ModelQuery describing a JXPath expression.&#xD;&#xA;&#xD;&#xA;The JXPath expression are stored into the JXPathModelQuery::query attribure."/>
     </eAnnotations>

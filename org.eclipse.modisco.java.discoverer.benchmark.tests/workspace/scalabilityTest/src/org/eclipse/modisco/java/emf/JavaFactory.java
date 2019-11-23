@@ -138,7 +138,7 @@ import org.eclipse.modisco.java.WildCardType;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage
+ * @see org.eclipse.modisco.java.emf.JavaPackage
  * @generated
  */
 public interface JavaFactory extends EFactory {
@@ -148,7 +148,7 @@ public interface JavaFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	JavaFactory eINSTANCE = org.eclipse.gmt.modisco.java.emf.impl.JavaFactoryImpl.init();
+	JavaFactory eINSTANCE = org.eclipse.modisco.java.emf.impl.JavaFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Annotation</em>'.
@@ -679,7 +679,7 @@ public interface JavaFactory extends EFactory {
 	 * @return a new object of class '<em>Package</em>'.
 	 * @generated
 	 */
-	org.eclipse.gmt.modisco.java.Package createPackage();
+	org.eclipse.modisco.java.Package createPackage();
 
 	/**
 	 * Returns a new object of class '<em>Package Access</em>'.

@@ -16,22 +16,22 @@ Contributors:
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="org.eclipse.gmt.modisco"
+            id="org.eclipse.modisco"
             name="%category.name">
       </category>
       <view
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.query.ui.views.ModelQueryView"
             icon="icons/ModelQuerySet.gif"
-            id="org.eclipse.gmt.modisco.infra.query.ui.catalogView"
+            id="org.eclipse.modisco.infra.query.ui.catalogView"
             name="%catalogView.name"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.gmt.modisco"
+            category="org.eclipse.modisco"
             class="org.eclipse.modisco.infra.query.ui.views.queryExecution.internal.QueryExecutionView"
             icon="icons/queryRun.png"
-            id="org.eclipse.gmt.modisco.infra.query.ui.queryExecutionView"
+            id="org.eclipse.modisco.infra.query.ui.queryExecutionView"
             name="%queryExecutionView.name"
             restorable="true">
       </view>
@@ -41,7 +41,7 @@ Contributors:
          point="org.eclipse.ui.commands">
       <command
             description="%executeQuery.command.description"
-            id="org.eclipse.gmt.modisco.infra.query.ui.commands.executeQueryCommand"
+            id="org.eclipse.modisco.infra.query.ui.commands.executeQueryCommand"
             name="%executeQuery.command.name">
       </command>
    </extension>
@@ -49,7 +49,7 @@ Contributors:
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.modisco.infra.query.ui.handlers.ExecuteQueryHandler"
-            commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.executeQueryCommand">
+            commandId="org.eclipse.modisco.infra.query.ui.commands.executeQueryCommand">
          <enabledWhen>
             <with
                   variable="selection">
@@ -61,12 +61,12 @@ Contributors:
                   </instanceof>
                   <test
                         forcePluginActivation="true"
-                        property="org.eclipse.gmt.modisco.infra.query.core.isMoDiscoQuery"
+                        property="org.eclipse.modisco.infra.query.core.isMoDiscoQuery"
                         value="false">
                   </test>
                   <test
                         forcePluginActivation="true"
-                        property="org.eclipse.gmt.modisco.infra.query.core.isMoDiscoQuerySet"
+                        property="org.eclipse.modisco.infra.query.core.isMoDiscoQuerySet"
                         value="false">
                   </test>
                </iterate>
@@ -80,7 +80,7 @@ Contributors:
             allPopups="true"
             locationURI="popup:org.eclipse.ui.popup.any">
          <command
-               commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.executeQueryCommand"
+               commandId="org.eclipse.modisco.infra.query.ui.commands.executeQueryCommand"
                label="%executeQuery.command.label"
                style="push">
             <visibleWhen
@@ -94,7 +94,7 @@ Contributors:
          point="org.eclipse.ui.commands">
       <command
             description="%createJavaQueryClass.command.description"
-            id="org.eclipse.gmt.modisco.infra.query.ui.commands.createJavaQueryClassCommand"
+            id="org.eclipse.modisco.infra.query.ui.commands.createJavaQueryClassCommand"
             name="%createJavaQueryClass.command.name">
       </command>
    </extension>
@@ -102,7 +102,7 @@ Contributors:
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.modisco.infra.query.ui.handlers.CreateJavaQueryClassHandler"
-            commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createJavaQueryClassCommand">
+            commandId="org.eclipse.modisco.infra.query.ui.commands.createJavaQueryClassCommand">
          <enabledWhen>
             <with
                   variable="selection">
@@ -110,11 +110,11 @@ Contributors:
                      ifEmpty="false"
                      operator="and">
                   <instanceof
-                        value="org.eclipse.gmt.modisco.infra.query.JavaModelQuery">
+                        value="org.eclipse.modisco.infra.query.JavaModelQuery">
                   </instanceof>
                   <test
                         forcePluginActivation="true"
-                        property="org.eclipse.gmt.modisco.infra.query.core.isWorkspaceQuery"
+                        property="org.eclipse.modisco.infra.query.core.isWorkspaceQuery"
                         value="true">
                   </test>
                </iterate>
@@ -128,7 +128,7 @@ Contributors:
             allPopups="false"
             locationURI="popup:org.eclipse.ui.popup.any">
          <command
-               commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createJavaQueryClassCommand"
+               commandId="org.eclipse.modisco.infra.query.ui.commands.createJavaQueryClassCommand"
                label="%createJavaQueryClass.command.label"
                style="push">
             <visibleWhen
@@ -142,7 +142,7 @@ Contributors:
          point="org.eclipse.ui.commands">
       <command
             description="%createQuery.command.description"
-            id="org.eclipse.gmt.modisco.infra.query.ui.commands.createQueryCommand"
+            id="org.eclipse.modisco.infra.query.ui.commands.createQueryCommand"
             name="%createQuery.command.name">
       </command>
    </extension>
@@ -150,7 +150,7 @@ Contributors:
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.modisco.infra.query.ui.handlers.CreateQueryHandler"
-            commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createQueryCommand">
+            commandId="org.eclipse.modisco.infra.query.ui.commands.createQueryCommand">
          <enabledWhen>
             <with
                   variable="selection">
@@ -162,12 +162,12 @@ Contributors:
                   </instanceof>
                   <test
                         forcePluginActivation="true"
-                        property="org.eclipse.gmt.modisco.infra.query.core.isMoDiscoQuery"
+                        property="org.eclipse.modisco.infra.query.core.isMoDiscoQuery"
                         value="false">
                   </test>
                   <test
                         forcePluginActivation="true"
-                        property="org.eclipse.gmt.modisco.infra.query.core.isWorkspaceQuerySet"
+                        property="org.eclipse.modisco.infra.query.core.isWorkspaceQuerySet"
                         value="true">
                   </test>
                </iterate>
@@ -181,7 +181,7 @@ Contributors:
             allPopups="false"
             locationURI="popup:org.eclipse.ui.popup.any">
          <command
-               commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createQueryCommand"
+               commandId="org.eclipse.modisco.infra.query.ui.commands.createQueryCommand"
                label="%createQuery.command.label"
                style="push">
             <visibleWhen

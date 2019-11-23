@@ -2,7 +2,7 @@
 
 First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
 * org.eclipse.modisco.infra.discovery.core
-* org.eclipse.gmt.modisco.xml
+* org.eclipse.modisco.xml
 * org.eclipse.modisco.xml.discoverer
 
 You can launch the discovery of a XML model from a file programmatically, and get the resulting model:

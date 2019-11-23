@@ -45,7 +45,7 @@ public final class PrefuseGraphContainerForJava extends PrefuseGraphContainer {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * org.eclipse.gmt.modisco.infra.prefuse.PrefuseGraphContainer#initializeTreeViewContainer(prefuse
+	 * org.eclipse.modisco.infra.prefuse.PrefuseGraphContainer#initializeTreeViewContainer(prefuse
 	 * .data.Graph, java.lang.String)
 	 */
 	@Override

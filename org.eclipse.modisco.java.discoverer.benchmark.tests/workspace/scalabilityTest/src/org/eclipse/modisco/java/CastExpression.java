@@ -29,12 +29,12 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.CastExpression#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.CastExpression#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CastExpression#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.CastExpression#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCastExpression()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getCastExpression()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public interface CastExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCastExpression_Expression()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCastExpression_Expression()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CastExpression#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CastExpression#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.
@@ -75,14 +75,14 @@ public interface CastExpression extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(TypeAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getCastExpression_Type()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getCastExpression_Type()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	TypeAccess getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.CastExpression#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.CastExpression#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' containment reference.

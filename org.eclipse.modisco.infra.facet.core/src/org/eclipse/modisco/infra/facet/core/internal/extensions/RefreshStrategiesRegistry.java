@@ -30,7 +30,7 @@ import org.eclipse.modisco.infra.facet.core.internal.Activator;
 @Deprecated
 public class RefreshStrategiesRegistry extends AbstractRegistry {
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.facet.core"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.infra.facet.core"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "facetRefreshStrategy"; //$NON-NLS-1$
 
 	private static final String REFRESH_STRATEGY_ELEMENT = "refreshStrategy"; //$NON-NLS-1$

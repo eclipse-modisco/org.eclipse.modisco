@@ -62,7 +62,7 @@ public interface BuildDescription extends BuildResource {
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
 	 * @see org.eclipse.modisco.omg.kdm.build.BuildPackage#getBuildDescription_Text()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getText();

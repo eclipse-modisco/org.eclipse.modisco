@@ -47,10 +47,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl#getReturnType <em>Return Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinitions <em>Redefinitions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinitions <em>Redefinitions</em>}</li>
  * </ul>
  * </p>
  *

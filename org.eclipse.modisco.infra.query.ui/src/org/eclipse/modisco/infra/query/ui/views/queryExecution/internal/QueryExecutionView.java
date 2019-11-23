@@ -101,9 +101,9 @@ import org.eclipse.ui.part.ViewPart;
 @SuppressWarnings("synthetic-access")
 public class QueryExecutionView extends ViewPart {
 
-	private static final String QUERY_SET_PROVIDER_EXTENSION_POINT = "org.eclipse.gmt.modisco.infra.query.core.querySetProvider"; //$NON-NLS-1$
+	private static final String QUERY_SET_PROVIDER_EXTENSION_POINT = "org.eclipse.modisco.infra.query.core.querySetProvider"; //$NON-NLS-1$
 	private static final int EXECUTE_BUTTON_MIN_WIDTH = 100;
-	public static final String ID = "org.eclipse.gmt.modisco.infra.query.ui.queryExecutionView"; //$NON-NLS-1$
+	public static final String ID = "org.eclipse.modisco.infra.query.ui.queryExecutionView"; //$NON-NLS-1$
 
 	private TreeViewer contextViewer;
 	private Composite mainComposite;

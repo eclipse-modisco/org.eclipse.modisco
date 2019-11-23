@@ -12,52 +12,52 @@ Contributors:
 <uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML">
   <types metaclassName="xml.Attribute">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/attribute.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/attribute.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Root">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/root.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/root.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.CDATA">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/cData.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/cData.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Comment">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/comment.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/comment.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.DocumentTypeDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/documentTypeDeclaration.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/documentTypeDeclaration.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Element">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/element.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/element.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Namespace">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/namespace.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/namespace.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Node">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/node.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/node.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.ProcessingInstruction">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/processingInstruction.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/processingInstruction.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="xml.Text">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.xml.browser.customization/icons/text.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/text.gif"/>
     </customizedFeatures>
   </types>
 </uicustom:MetamodelView>

@@ -47,9 +47,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
  * </ul>
  * </p>
  *

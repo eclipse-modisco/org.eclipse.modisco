@@ -72,10 +72,10 @@ import org.osgi.framework.Bundle;
 public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener,
 		IResourceChangeListener {
 
-	private static final String SCHEDULING_DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/scheduling_debug"; //$NON-NLS-1$
+	private static final String SCHEDULING_DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/scheduling_debug"; //$NON-NLS-1$
 	static final boolean SCHEDULING_DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(AbstractMoDiscoCatalog.SCHEDULING_DEBUG_ID));
-	private static final String BUNDLE_DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/bundle_debug"; //$NON-NLS-1$
+	private static final String BUNDLE_DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/AbstractMoDiscoCatalog/bundle_debug"; //$NON-NLS-1$
 	private static final boolean DEBUG_BUNDLE = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(AbstractMoDiscoCatalog.BUNDLE_DEBUG_ID));
 	public static final String PROBLEM_MARKER = CommonModiscoActivator.getDefault().getBundle()

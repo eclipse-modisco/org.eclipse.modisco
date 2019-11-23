@@ -21,7 +21,7 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.gmt.modisco.common.core.builder</name>
+			<name>org.eclipse.modisco.common.core.builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -32,7 +32,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.gmt.modisco.common.ProjectNature</nature>
+		<nature>org.eclipse.modisco.common.ProjectNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>net.sf.eclipsecs.core.CheckstyleNature</nature>

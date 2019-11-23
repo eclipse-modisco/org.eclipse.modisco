@@ -31,7 +31,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage
+ * @see org.eclipse.modisco.java.emf.JavaPackage
  * @generated
  */
 public class JavaAdapterFactory extends AdapterFactoryImpl {
@@ -359,7 +359,7 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createNullLiteralAdapter();
 			}
 			@Override
-			public Adapter casePackage(org.eclipse.gmt.modisco.java.Package object) {
+			public Adapter casePackage(org.eclipse.modisco.java.Package object) {
 				return createPackageAdapter();
 			}
 			@Override
@@ -607,13 +607,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ASTNode <em>AST Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ASTNode <em>AST Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ASTNode
+	 * @see org.eclipse.modisco.java.ASTNode
 	 * @generated
 	 */
 	public Adapter createASTNodeAdapter() {
@@ -621,13 +621,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.CompilationUnit <em>Compilation Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CompilationUnit <em>Compilation Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.CompilationUnit
+	 * @see org.eclipse.modisco.java.CompilationUnit
 	 * @generated
 	 */
 	public Adapter createCompilationUnitAdapter() {
@@ -635,13 +635,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ImportDeclaration <em>Import Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ImportDeclaration <em>Import Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ImportDeclaration
+	 * @see org.eclipse.modisco.java.ImportDeclaration
 	 * @generated
 	 */
 	public Adapter createImportDeclarationAdapter() {
@@ -649,13 +649,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Model <em>Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Model
+	 * @see org.eclipse.modisco.java.Model
 	 * @generated
 	 */
 	public Adapter createModelAdapter() {
@@ -663,13 +663,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Modifier <em>Modifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Modifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Modifier
+	 * @see org.eclipse.modisco.java.Modifier
 	 * @generated
 	 */
 	public Adapter createModifierAdapter() {
@@ -677,13 +677,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Package <em>Package</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Package <em>Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Package
+	 * @see org.eclipse.modisco.java.Package
 	 * @generated
 	 */
 	public Adapter createPackageAdapter() {
@@ -691,13 +691,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.NamedElement <em>Named Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.NamedElement
+	 * @see org.eclipse.modisco.java.NamedElement
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
@@ -705,13 +705,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.NamespaceAccess <em>Namespace Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NamespaceAccess <em>Namespace Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.NamespaceAccess
+	 * @see org.eclipse.modisco.java.NamespaceAccess
 	 * @generated
 	 */
 	public Adapter createNamespaceAccessAdapter() {
@@ -719,13 +719,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedItem <em>Unresolved Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedItem <em>Unresolved Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItem
+	 * @see org.eclipse.modisco.java.UnresolvedItem
 	 * @generated
 	 */
 	public Adapter createUnresolvedItemAdapter() {
@@ -733,13 +733,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedItemAccess <em>Unresolved Item Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedItemAccess <em>Unresolved Item Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedItemAccess
+	 * @see org.eclipse.modisco.java.UnresolvedItemAccess
 	 * @generated
 	 */
 	public Adapter createUnresolvedItemAccessAdapter() {
@@ -747,13 +747,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Comment <em>Comment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Comment <em>Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Comment
+	 * @see org.eclipse.modisco.java.Comment
 	 * @generated
 	 */
 	public Adapter createCommentAdapter() {
@@ -761,13 +761,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.BlockComment <em>Block Comment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.BlockComment <em>Block Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.BlockComment
+	 * @see org.eclipse.modisco.java.BlockComment
 	 * @generated
 	 */
 	public Adapter createBlockCommentAdapter() {
@@ -775,13 +775,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Javadoc <em>Javadoc</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Javadoc <em>Javadoc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Javadoc
+	 * @see org.eclipse.modisco.java.Javadoc
 	 * @generated
 	 */
 	public Adapter createJavadocAdapter() {
@@ -789,13 +789,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.LineComment <em>Line Comment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.LineComment <em>Line Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.LineComment
+	 * @see org.eclipse.modisco.java.LineComment
 	 * @generated
 	 */
 	public Adapter createLineCommentAdapter() {
@@ -803,13 +803,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Manifest <em>Manifest</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Manifest <em>Manifest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Manifest
+	 * @see org.eclipse.modisco.java.Manifest
 	 * @generated
 	 */
 	public Adapter createManifestAdapter() {
@@ -817,13 +817,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ManifestAttribute <em>Manifest Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ManifestAttribute <em>Manifest Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ManifestAttribute
+	 * @see org.eclipse.modisco.java.ManifestAttribute
 	 * @generated
 	 */
 	public Adapter createManifestAttributeAdapter() {
@@ -831,13 +831,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ManifestEntry <em>Manifest Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ManifestEntry <em>Manifest Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ManifestEntry
+	 * @see org.eclipse.modisco.java.ManifestEntry
 	 * @generated
 	 */
 	public Adapter createManifestEntryAdapter() {
@@ -845,13 +845,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.MemberRef <em>Member Ref</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MemberRef <em>Member Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.MemberRef
+	 * @see org.eclipse.modisco.java.MemberRef
 	 * @generated
 	 */
 	public Adapter createMemberRefAdapter() {
@@ -859,13 +859,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.MethodRef <em>Method Ref</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MethodRef <em>Method Ref</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.MethodRef
+	 * @see org.eclipse.modisco.java.MethodRef
 	 * @generated
 	 */
 	public Adapter createMethodRefAdapter() {
@@ -873,13 +873,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.MethodRefParameter <em>Method Ref Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MethodRefParameter <em>Method Ref Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.MethodRefParameter
+	 * @see org.eclipse.modisco.java.MethodRefParameter
 	 * @generated
 	 */
 	public Adapter createMethodRefParameterAdapter() {
@@ -887,13 +887,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TagElement <em>Tag Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TagElement <em>Tag Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TagElement
+	 * @see org.eclipse.modisco.java.TagElement
 	 * @generated
 	 */
 	public Adapter createTagElementAdapter() {
@@ -901,13 +901,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TextElement <em>Text Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TextElement <em>Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TextElement
+	 * @see org.eclipse.modisco.java.TextElement
 	 * @generated
 	 */
 	public Adapter createTextElementAdapter() {
@@ -915,13 +915,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractTypeDeclaration <em>Abstract Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeDeclaration
+	 * @see org.eclipse.modisco.java.AbstractTypeDeclaration
 	 * @generated
 	 */
 	public Adapter createAbstractTypeDeclarationAdapter() {
@@ -929,13 +929,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AnnotationTypeDeclaration <em>Annotation Type Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AnnotationTypeDeclaration <em>Annotation Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeDeclaration
+	 * @see org.eclipse.modisco.java.AnnotationTypeDeclaration
 	 * @generated
 	 */
 	public Adapter createAnnotationTypeDeclarationAdapter() {
@@ -943,13 +943,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AnonymousClassDeclaration <em>Anonymous Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AnonymousClassDeclaration
+	 * @see org.eclipse.modisco.java.AnonymousClassDeclaration
 	 * @generated
 	 */
 	public Adapter createAnonymousClassDeclarationAdapter() {
@@ -957,13 +957,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ArrayType <em>Array Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ArrayType <em>Array Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ArrayType
+	 * @see org.eclipse.modisco.java.ArrayType
 	 * @generated
 	 */
 	public Adapter createArrayTypeAdapter() {
@@ -971,13 +971,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ClassDeclaration <em>Class Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ClassDeclaration <em>Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ClassDeclaration
+	 * @see org.eclipse.modisco.java.ClassDeclaration
 	 * @generated
 	 */
 	public Adapter createClassDeclarationAdapter() {
@@ -985,13 +985,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.EnumDeclaration <em>Enum Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EnumDeclaration <em>Enum Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.EnumDeclaration
+	 * @see org.eclipse.modisco.java.EnumDeclaration
 	 * @generated
 	 */
 	public Adapter createEnumDeclarationAdapter() {
@@ -999,13 +999,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.InterfaceDeclaration <em>Interface Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.InterfaceDeclaration <em>Interface Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.InterfaceDeclaration
+	 * @see org.eclipse.modisco.java.InterfaceDeclaration
 	 * @generated
 	 */
 	public Adapter createInterfaceDeclarationAdapter() {
@@ -1013,13 +1013,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ParameterizedType <em>Parameterized Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ParameterizedType <em>Parameterized Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ParameterizedType
+	 * @see org.eclipse.modisco.java.ParameterizedType
 	 * @generated
 	 */
 	public Adapter createParameterizedTypeAdapter() {
@@ -1027,13 +1027,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveType <em>Primitive Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveType <em>Primitive Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveType
+	 * @see org.eclipse.modisco.java.PrimitiveType
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeAdapter() {
@@ -1041,13 +1041,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeBoolean <em>Primitive Type Boolean</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeBoolean <em>Primitive Type Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeBoolean
+	 * @see org.eclipse.modisco.java.PrimitiveTypeBoolean
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeBooleanAdapter() {
@@ -1055,13 +1055,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeByte <em>Primitive Type Byte</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeByte <em>Primitive Type Byte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeByte
+	 * @see org.eclipse.modisco.java.PrimitiveTypeByte
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeByteAdapter() {
@@ -1069,13 +1069,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeChar <em>Primitive Type Char</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeChar <em>Primitive Type Char</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeChar
+	 * @see org.eclipse.modisco.java.PrimitiveTypeChar
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeCharAdapter() {
@@ -1083,13 +1083,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeDouble <em>Primitive Type Double</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeDouble <em>Primitive Type Double</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeDouble
+	 * @see org.eclipse.modisco.java.PrimitiveTypeDouble
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeDoubleAdapter() {
@@ -1097,13 +1097,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeShort <em>Primitive Type Short</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeShort <em>Primitive Type Short</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeShort
+	 * @see org.eclipse.modisco.java.PrimitiveTypeShort
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeShortAdapter() {
@@ -1111,13 +1111,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeFloat <em>Primitive Type Float</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeFloat <em>Primitive Type Float</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeFloat
+	 * @see org.eclipse.modisco.java.PrimitiveTypeFloat
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeFloatAdapter() {
@@ -1125,13 +1125,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeInt <em>Primitive Type Int</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeInt <em>Primitive Type Int</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeInt
+	 * @see org.eclipse.modisco.java.PrimitiveTypeInt
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeIntAdapter() {
@@ -1139,13 +1139,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeLong <em>Primitive Type Long</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeLong <em>Primitive Type Long</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeLong
+	 * @see org.eclipse.modisco.java.PrimitiveTypeLong
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeLongAdapter() {
@@ -1153,13 +1153,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrimitiveTypeVoid <em>Primitive Type Void</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrimitiveTypeVoid <em>Primitive Type Void</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrimitiveTypeVoid
+	 * @see org.eclipse.modisco.java.PrimitiveTypeVoid
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeVoidAdapter() {
@@ -1167,13 +1167,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Type <em>Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Type
+	 * @see org.eclipse.modisco.java.Type
 	 * @generated
 	 */
 	public Adapter createTypeAdapter() {
@@ -1181,13 +1181,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TypeDeclaration <em>Type Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeDeclaration <em>Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclaration
+	 * @see org.eclipse.modisco.java.TypeDeclaration
 	 * @generated
 	 */
 	public Adapter createTypeDeclarationAdapter() {
@@ -1195,13 +1195,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TypeParameter <em>Type Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeParameter <em>Type Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TypeParameter
+	 * @see org.eclipse.modisco.java.TypeParameter
 	 * @generated
 	 */
 	public Adapter createTypeParameterAdapter() {
@@ -1209,13 +1209,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedAnnotationDeclaration <em>Unresolved Annotation Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedAnnotationDeclaration <em>Unresolved Annotation Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedAnnotationDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedAnnotationDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedAnnotationDeclarationAdapter() {
@@ -1223,13 +1223,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedClassDeclaration <em>Unresolved Class Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedClassDeclaration <em>Unresolved Class Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedClassDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedClassDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedClassDeclarationAdapter() {
@@ -1237,13 +1237,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedEnumDeclaration <em>Unresolved Enum Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedEnumDeclaration <em>Unresolved Enum Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedEnumDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedEnumDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedEnumDeclarationAdapter() {
@@ -1251,13 +1251,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedInterfaceDeclaration <em>Unresolved Interface Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedInterfaceDeclaration <em>Unresolved Interface Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedInterfaceDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedInterfaceDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedInterfaceDeclarationAdapter() {
@@ -1265,13 +1265,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedType <em>Unresolved Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedType <em>Unresolved Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedType
+	 * @see org.eclipse.modisco.java.UnresolvedType
 	 * @generated
 	 */
 	public Adapter createUnresolvedTypeAdapter() {
@@ -1279,13 +1279,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedTypeDeclaration <em>Unresolved Type Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedTypeDeclaration <em>Unresolved Type Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedTypeDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedTypeDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedTypeDeclarationAdapter() {
@@ -1293,13 +1293,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.WildCardType <em>Wild Card Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.WildCardType <em>Wild Card Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.WildCardType
+	 * @see org.eclipse.modisco.java.WildCardType
 	 * @generated
 	 */
 	public Adapter createWildCardTypeAdapter() {
@@ -1307,13 +1307,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AbstractMethodDeclaration <em>Abstract Method Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractMethodDeclaration <em>Abstract Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodDeclaration
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration
 	 * @generated
 	 */
 	public Adapter createAbstractMethodDeclarationAdapter() {
@@ -1321,13 +1321,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AbstractMethodInvocation <em>Abstract Method Invocation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractMethodInvocation <em>Abstract Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AbstractMethodInvocation
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation
 	 * @generated
 	 */
 	public Adapter createAbstractMethodInvocationAdapter() {
@@ -1335,13 +1335,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AbstractVariablesContainer <em>Abstract Variables Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractVariablesContainer <em>Abstract Variables Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AbstractVariablesContainer
+	 * @see org.eclipse.modisco.java.AbstractVariablesContainer
 	 * @generated
 	 */
 	public Adapter createAbstractVariablesContainerAdapter() {
@@ -1349,13 +1349,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AnnotationMemberValuePair <em>Annotation Member Value Pair</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AnnotationMemberValuePair <em>Annotation Member Value Pair</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationMemberValuePair
+	 * @see org.eclipse.modisco.java.AnnotationMemberValuePair
 	 * @generated
 	 */
 	public Adapter createAnnotationMemberValuePairAdapter() {
@@ -1363,13 +1363,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration <em>Annotation Type Member Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration <em>Annotation Type Member Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration
 	 * @generated
 	 */
 	public Adapter createAnnotationTypeMemberDeclarationAdapter() {
@@ -1377,13 +1377,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.BodyDeclaration <em>Body Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.BodyDeclaration <em>Body Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.BodyDeclaration
+	 * @see org.eclipse.modisco.java.BodyDeclaration
 	 * @generated
 	 */
 	public Adapter createBodyDeclarationAdapter() {
@@ -1391,13 +1391,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ConstructorDeclaration <em>Constructor Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ConstructorDeclaration <em>Constructor Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ConstructorDeclaration
+	 * @see org.eclipse.modisco.java.ConstructorDeclaration
 	 * @generated
 	 */
 	public Adapter createConstructorDeclarationAdapter() {
@@ -1405,13 +1405,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration <em>Enum Constant Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EnumConstantDeclaration <em>Enum Constant Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.EnumConstantDeclaration
+	 * @see org.eclipse.modisco.java.EnumConstantDeclaration
 	 * @generated
 	 */
 	public Adapter createEnumConstantDeclarationAdapter() {
@@ -1419,13 +1419,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.FieldDeclaration <em>Field Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.FieldDeclaration <em>Field Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.FieldDeclaration
+	 * @see org.eclipse.modisco.java.FieldDeclaration
 	 * @generated
 	 */
 	public Adapter createFieldDeclarationAdapter() {
@@ -1433,13 +1433,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Initializer <em>Initializer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Initializer <em>Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Initializer
+	 * @see org.eclipse.modisco.java.Initializer
 	 * @generated
 	 */
 	public Adapter createInitializerAdapter() {
@@ -1447,13 +1447,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.MethodDeclaration <em>Method Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MethodDeclaration <em>Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.MethodDeclaration
+	 * @see org.eclipse.modisco.java.MethodDeclaration
 	 * @generated
 	 */
 	public Adapter createMethodDeclarationAdapter() {
@@ -1461,13 +1461,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SingleVariableDeclaration <em>Single Variable Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SingleVariableDeclaration <em>Single Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableDeclaration
+	 * @see org.eclipse.modisco.java.SingleVariableDeclaration
 	 * @generated
 	 */
 	public Adapter createSingleVariableDeclarationAdapter() {
@@ -1475,13 +1475,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedAnnotationTypeMemberDeclaration <em>Unresolved Annotation Type Member Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration <em>Unresolved Annotation Type Member Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedAnnotationTypeMemberDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedAnnotationTypeMemberDeclarationAdapter() {
@@ -1489,13 +1489,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedMethodDeclaration <em>Unresolved Method Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedMethodDeclaration <em>Unresolved Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedMethodDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedMethodDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedMethodDeclarationAdapter() {
@@ -1503,13 +1503,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedVariableDeclarationFragment <em>Unresolved Variable Declaration Fragment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment <em>Unresolved Variable Declaration Fragment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedVariableDeclarationFragment
+	 * @see org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment
 	 * @generated
 	 */
 	public Adapter createUnresolvedVariableDeclarationFragmentAdapter() {
@@ -1517,13 +1517,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedSingleVariableDeclaration <em>Unresolved Single Variable Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration <em>Unresolved Single Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedSingleVariableDeclaration
+	 * @see org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration
 	 * @generated
 	 */
 	public Adapter createUnresolvedSingleVariableDeclarationAdapter() {
@@ -1531,13 +1531,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.VariableDeclaration <em>Variable Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.VariableDeclaration <em>Variable Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclaration
+	 * @see org.eclipse.modisco.java.VariableDeclaration
 	 * @generated
 	 */
 	public Adapter createVariableDeclarationAdapter() {
@@ -1545,13 +1545,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationFragment <em>Variable Declaration Fragment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.VariableDeclarationFragment <em>Variable Declaration Fragment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationFragment
+	 * @see org.eclipse.modisco.java.VariableDeclarationFragment
 	 * @generated
 	 */
 	public Adapter createVariableDeclarationFragmentAdapter() {
@@ -1559,13 +1559,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression <em>Abstract Type Qualified Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractTypeQualifiedExpression <em>Abstract Type Qualified Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AbstractTypeQualifiedExpression
+	 * @see org.eclipse.modisco.java.AbstractTypeQualifiedExpression
 	 * @generated
 	 */
 	public Adapter createAbstractTypeQualifiedExpressionAdapter() {
@@ -1573,13 +1573,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Annotation <em>Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Annotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Annotation
+	 * @see org.eclipse.modisco.java.Annotation
 	 * @generated
 	 */
 	public Adapter createAnnotationAdapter() {
@@ -1587,13 +1587,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Archive <em>Archive</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Archive <em>Archive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Archive
+	 * @see org.eclipse.modisco.java.Archive
 	 * @generated
 	 */
 	public Adapter createArchiveAdapter() {
@@ -1601,13 +1601,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ArrayAccess <em>Array Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ArrayAccess <em>Array Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ArrayAccess
+	 * @see org.eclipse.modisco.java.ArrayAccess
 	 * @generated
 	 */
 	public Adapter createArrayAccessAdapter() {
@@ -1615,13 +1615,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ArrayCreation <em>Array Creation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ArrayCreation <em>Array Creation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ArrayCreation
+	 * @see org.eclipse.modisco.java.ArrayCreation
 	 * @generated
 	 */
 	public Adapter createArrayCreationAdapter() {
@@ -1629,13 +1629,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ArrayInitializer <em>Array Initializer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ArrayInitializer <em>Array Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ArrayInitializer
+	 * @see org.eclipse.modisco.java.ArrayInitializer
 	 * @generated
 	 */
 	public Adapter createArrayInitializerAdapter() {
@@ -1643,13 +1643,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ArrayLengthAccess <em>Array Length Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ArrayLengthAccess <em>Array Length Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ArrayLengthAccess
+	 * @see org.eclipse.modisco.java.ArrayLengthAccess
 	 * @generated
 	 */
 	public Adapter createArrayLengthAccessAdapter() {
@@ -1657,13 +1657,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Assignment <em>Assignment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Assignment <em>Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Assignment
+	 * @see org.eclipse.modisco.java.Assignment
 	 * @generated
 	 */
 	public Adapter createAssignmentAdapter() {
@@ -1671,13 +1671,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.BooleanLiteral <em>Boolean Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.BooleanLiteral <em>Boolean Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.BooleanLiteral
+	 * @see org.eclipse.modisco.java.BooleanLiteral
 	 * @generated
 	 */
 	public Adapter createBooleanLiteralAdapter() {
@@ -1685,13 +1685,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.CastExpression <em>Cast Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CastExpression <em>Cast Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.CastExpression
+	 * @see org.eclipse.modisco.java.CastExpression
 	 * @generated
 	 */
 	public Adapter createCastExpressionAdapter() {
@@ -1699,13 +1699,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.CharacterLiteral <em>Character Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CharacterLiteral <em>Character Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.CharacterLiteral
+	 * @see org.eclipse.modisco.java.CharacterLiteral
 	 * @generated
 	 */
 	public Adapter createCharacterLiteralAdapter() {
@@ -1713,13 +1713,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ClassFile <em>Class File</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ClassFile <em>Class File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ClassFile
+	 * @see org.eclipse.modisco.java.ClassFile
 	 * @generated
 	 */
 	public Adapter createClassFileAdapter() {
@@ -1727,13 +1727,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ClassInstanceCreation <em>Class Instance Creation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ClassInstanceCreation <em>Class Instance Creation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ClassInstanceCreation
+	 * @see org.eclipse.modisco.java.ClassInstanceCreation
 	 * @generated
 	 */
 	public Adapter createClassInstanceCreationAdapter() {
@@ -1741,13 +1741,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ConditionalExpression <em>Conditional Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ConditionalExpression <em>Conditional Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ConditionalExpression
+	 * @see org.eclipse.modisco.java.ConditionalExpression
 	 * @generated
 	 */
 	public Adapter createConditionalExpressionAdapter() {
@@ -1755,13 +1755,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Expression <em>Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Expression
+	 * @see org.eclipse.modisco.java.Expression
 	 * @generated
 	 */
 	public Adapter createExpressionAdapter() {
@@ -1769,13 +1769,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.FieldAccess <em>Field Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.FieldAccess <em>Field Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.FieldAccess
+	 * @see org.eclipse.modisco.java.FieldAccess
 	 * @generated
 	 */
 	public Adapter createFieldAccessAdapter() {
@@ -1783,13 +1783,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.InfixExpression <em>Infix Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.InfixExpression <em>Infix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.InfixExpression
+	 * @see org.eclipse.modisco.java.InfixExpression
 	 * @generated
 	 */
 	public Adapter createInfixExpressionAdapter() {
@@ -1797,13 +1797,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.InstanceofExpression <em>Instanceof Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.InstanceofExpression <em>Instanceof Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.InstanceofExpression
+	 * @see org.eclipse.modisco.java.InstanceofExpression
 	 * @generated
 	 */
 	public Adapter createInstanceofExpressionAdapter() {
@@ -1811,13 +1811,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.MethodInvocation <em>Method Invocation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MethodInvocation <em>Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.MethodInvocation
+	 * @see org.eclipse.modisco.java.MethodInvocation
 	 * @generated
 	 */
 	public Adapter createMethodInvocationAdapter() {
@@ -1825,13 +1825,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.NumberLiteral <em>Number Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NumberLiteral <em>Number Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.NumberLiteral
+	 * @see org.eclipse.modisco.java.NumberLiteral
 	 * @generated
 	 */
 	public Adapter createNumberLiteralAdapter() {
@@ -1839,13 +1839,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.NullLiteral <em>Null Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NullLiteral <em>Null Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.NullLiteral
+	 * @see org.eclipse.modisco.java.NullLiteral
 	 * @generated
 	 */
 	public Adapter createNullLiteralAdapter() {
@@ -1853,13 +1853,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ParenthesizedExpression <em>Parenthesized Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ParenthesizedExpression <em>Parenthesized Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ParenthesizedExpression
+	 * @see org.eclipse.modisco.java.ParenthesizedExpression
 	 * @generated
 	 */
 	public Adapter createParenthesizedExpressionAdapter() {
@@ -1867,13 +1867,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PostfixExpression <em>Postfix Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PostfixExpression <em>Postfix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PostfixExpression
+	 * @see org.eclipse.modisco.java.PostfixExpression
 	 * @generated
 	 */
 	public Adapter createPostfixExpressionAdapter() {
@@ -1881,13 +1881,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PrefixExpression <em>Prefix Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PrefixExpression <em>Prefix Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PrefixExpression
+	 * @see org.eclipse.modisco.java.PrefixExpression
 	 * @generated
 	 */
 	public Adapter createPrefixExpressionAdapter() {
@@ -1895,13 +1895,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.PackageAccess <em>Package Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PackageAccess <em>Package Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.PackageAccess
+	 * @see org.eclipse.modisco.java.PackageAccess
 	 * @generated
 	 */
 	public Adapter createPackageAccessAdapter() {
@@ -1909,13 +1909,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SingleVariableAccess <em>Single Variable Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SingleVariableAccess <em>Single Variable Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SingleVariableAccess
+	 * @see org.eclipse.modisco.java.SingleVariableAccess
 	 * @generated
 	 */
 	public Adapter createSingleVariableAccessAdapter() {
@@ -1923,13 +1923,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.StringLiteral <em>String Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.StringLiteral <em>String Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.StringLiteral
+	 * @see org.eclipse.modisco.java.StringLiteral
 	 * @generated
 	 */
 	public Adapter createStringLiteralAdapter() {
@@ -1937,13 +1937,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SuperFieldAccess <em>Super Field Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SuperFieldAccess <em>Super Field Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SuperFieldAccess
+	 * @see org.eclipse.modisco.java.SuperFieldAccess
 	 * @generated
 	 */
 	public Adapter createSuperFieldAccessAdapter() {
@@ -1951,13 +1951,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SuperMethodInvocation <em>Super Method Invocation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SuperMethodInvocation <em>Super Method Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SuperMethodInvocation
+	 * @see org.eclipse.modisco.java.SuperMethodInvocation
 	 * @generated
 	 */
 	public Adapter createSuperMethodInvocationAdapter() {
@@ -1965,13 +1965,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ThisExpression <em>This Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ThisExpression <em>This Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ThisExpression
+	 * @see org.eclipse.modisco.java.ThisExpression
 	 * @generated
 	 */
 	public Adapter createThisExpressionAdapter() {
@@ -1979,13 +1979,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TypeLiteral <em>Type Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeLiteral <em>Type Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TypeLiteral
+	 * @see org.eclipse.modisco.java.TypeLiteral
 	 * @generated
 	 */
 	public Adapter createTypeLiteralAdapter() {
@@ -1993,13 +1993,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TypeAccess <em>Type Access</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeAccess <em>Type Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TypeAccess
+	 * @see org.eclipse.modisco.java.TypeAccess
 	 * @generated
 	 */
 	public Adapter createTypeAccessAdapter() {
@@ -2007,13 +2007,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.VariableDeclarationExpression <em>Variable Declaration Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationExpression
+	 * @see org.eclipse.modisco.java.VariableDeclarationExpression
 	 * @generated
 	 */
 	public Adapter createVariableDeclarationExpressionAdapter() {
@@ -2021,13 +2021,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.AssertStatement <em>Assert Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AssertStatement <em>Assert Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.AssertStatement
+	 * @see org.eclipse.modisco.java.AssertStatement
 	 * @generated
 	 */
 	public Adapter createAssertStatementAdapter() {
@@ -2035,13 +2035,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Block <em>Block</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Block <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Block
+	 * @see org.eclipse.modisco.java.Block
 	 * @generated
 	 */
 	public Adapter createBlockAdapter() {
@@ -2049,13 +2049,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.BreakStatement <em>Break Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.BreakStatement <em>Break Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.BreakStatement
+	 * @see org.eclipse.modisco.java.BreakStatement
 	 * @generated
 	 */
 	public Adapter createBreakStatementAdapter() {
@@ -2063,13 +2063,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.CatchClause <em>Catch Clause</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CatchClause <em>Catch Clause</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.CatchClause
+	 * @see org.eclipse.modisco.java.CatchClause
 	 * @generated
 	 */
 	public Adapter createCatchClauseAdapter() {
@@ -2077,13 +2077,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ConstructorInvocation <em>Constructor Invocation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ConstructorInvocation <em>Constructor Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ConstructorInvocation
+	 * @see org.eclipse.modisco.java.ConstructorInvocation
 	 * @generated
 	 */
 	public Adapter createConstructorInvocationAdapter() {
@@ -2091,13 +2091,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ContinueStatement <em>Continue Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ContinueStatement <em>Continue Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ContinueStatement
+	 * @see org.eclipse.modisco.java.ContinueStatement
 	 * @generated
 	 */
 	public Adapter createContinueStatementAdapter() {
@@ -2105,13 +2105,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.DoStatement <em>Do Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.DoStatement <em>Do Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.DoStatement
+	 * @see org.eclipse.modisco.java.DoStatement
 	 * @generated
 	 */
 	public Adapter createDoStatementAdapter() {
@@ -2119,13 +2119,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.EmptyStatement <em>Empty Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EmptyStatement <em>Empty Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.EmptyStatement
+	 * @see org.eclipse.modisco.java.EmptyStatement
 	 * @generated
 	 */
 	public Adapter createEmptyStatementAdapter() {
@@ -2133,13 +2133,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.EnhancedForStatement <em>Enhanced For Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EnhancedForStatement <em>Enhanced For Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.EnhancedForStatement
+	 * @see org.eclipse.modisco.java.EnhancedForStatement
 	 * @generated
 	 */
 	public Adapter createEnhancedForStatementAdapter() {
@@ -2147,13 +2147,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ExpressionStatement <em>Expression Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ExpressionStatement <em>Expression Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ExpressionStatement
+	 * @see org.eclipse.modisco.java.ExpressionStatement
 	 * @generated
 	 */
 	public Adapter createExpressionStatementAdapter() {
@@ -2161,13 +2161,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ForStatement <em>For Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ForStatement <em>For Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ForStatement
+	 * @see org.eclipse.modisco.java.ForStatement
 	 * @generated
 	 */
 	public Adapter createForStatementAdapter() {
@@ -2175,13 +2175,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.IfStatement <em>If Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.IfStatement <em>If Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.IfStatement
+	 * @see org.eclipse.modisco.java.IfStatement
 	 * @generated
 	 */
 	public Adapter createIfStatementAdapter() {
@@ -2189,13 +2189,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.LabeledStatement <em>Labeled Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.LabeledStatement <em>Labeled Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.LabeledStatement
+	 * @see org.eclipse.modisco.java.LabeledStatement
 	 * @generated
 	 */
 	public Adapter createLabeledStatementAdapter() {
@@ -2203,13 +2203,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ReturnStatement <em>Return Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ReturnStatement <em>Return Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ReturnStatement
+	 * @see org.eclipse.modisco.java.ReturnStatement
 	 * @generated
 	 */
 	public Adapter createReturnStatementAdapter() {
@@ -2217,13 +2217,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.Statement <em>Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Statement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.Statement
+	 * @see org.eclipse.modisco.java.Statement
 	 * @generated
 	 */
 	public Adapter createStatementAdapter() {
@@ -2231,13 +2231,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SuperConstructorInvocation <em>Super Constructor Invocation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SuperConstructorInvocation <em>Super Constructor Invocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SuperConstructorInvocation
+	 * @see org.eclipse.modisco.java.SuperConstructorInvocation
 	 * @generated
 	 */
 	public Adapter createSuperConstructorInvocationAdapter() {
@@ -2245,13 +2245,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SwitchCase <em>Switch Case</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SwitchCase <em>Switch Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SwitchCase
+	 * @see org.eclipse.modisco.java.SwitchCase
 	 * @generated
 	 */
 	public Adapter createSwitchCaseAdapter() {
@@ -2259,13 +2259,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SwitchStatement <em>Switch Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SwitchStatement <em>Switch Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SwitchStatement
+	 * @see org.eclipse.modisco.java.SwitchStatement
 	 * @generated
 	 */
 	public Adapter createSwitchStatementAdapter() {
@@ -2273,13 +2273,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.SynchronizedStatement <em>Synchronized Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SynchronizedStatement <em>Synchronized Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.SynchronizedStatement
+	 * @see org.eclipse.modisco.java.SynchronizedStatement
 	 * @generated
 	 */
 	public Adapter createSynchronizedStatementAdapter() {
@@ -2287,13 +2287,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.ThrowStatement <em>Throw Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ThrowStatement <em>Throw Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.ThrowStatement
+	 * @see org.eclipse.modisco.java.ThrowStatement
 	 * @generated
 	 */
 	public Adapter createThrowStatementAdapter() {
@@ -2301,13 +2301,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TypeDeclarationStatement <em>Type Declaration Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeDeclarationStatement <em>Type Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TypeDeclarationStatement
+	 * @see org.eclipse.modisco.java.TypeDeclarationStatement
 	 * @generated
 	 */
 	public Adapter createTypeDeclarationStatementAdapter() {
@@ -2315,13 +2315,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.TryStatement <em>Try Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TryStatement <em>Try Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.TryStatement
+	 * @see org.eclipse.modisco.java.TryStatement
 	 * @generated
 	 */
 	public Adapter createTryStatementAdapter() {
@@ -2329,13 +2329,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.UnresolvedLabeledStatement <em>Unresolved Labeled Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnresolvedLabeledStatement <em>Unresolved Labeled Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.UnresolvedLabeledStatement
+	 * @see org.eclipse.modisco.java.UnresolvedLabeledStatement
 	 * @generated
 	 */
 	public Adapter createUnresolvedLabeledStatementAdapter() {
@@ -2343,13 +2343,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.VariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.VariableDeclarationStatement <em>Variable Declaration Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.VariableDeclarationStatement
+	 * @see org.eclipse.modisco.java.VariableDeclarationStatement
 	 * @generated
 	 */
 	public Adapter createVariableDeclarationStatementAdapter() {
@@ -2357,13 +2357,13 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.java.WhileStatement <em>While Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.WhileStatement <em>While Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.java.WhileStatement
+	 * @see org.eclipse.modisco.java.WhileStatement
 	 * @generated
 	 */
 	public Adapter createWhileStatementAdapter() {

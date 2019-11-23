@@ -84,7 +84,7 @@ import org.eclipse.ui.IWorkbenchActionConstants;
 public class BrowserActionBarContributor extends EditingDomainActionBarContributor implements
 		IBrowserSelectionChangedListener, IBrowserActionBarContributor {
 
-	private static final String EDIT_MENU_ID = "org.eclipse.gmt.modisco.infra.browser.editMenu"; //$NON-NLS-1$
+	private static final String EDIT_MENU_ID = "org.eclipse.modisco.infra.browser.editMenu"; //$NON-NLS-1$
 
 	/** This keeps track of the active editor. */
 	private IEditorPart fActiveEditor;

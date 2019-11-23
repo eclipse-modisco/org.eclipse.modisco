@@ -21,9 +21,9 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.infra.query.ui"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.infra.query.ui"; //$NON-NLS-1$
 
-	public static final String QUERY_EDITOR_ID = "org.eclipse.gmt.modisco.infra.query.emf.presentation.queryEditorID"; //$NON-NLS-1$
+	public static final String QUERY_EDITOR_ID = "org.eclipse.modisco.infra.query.emf.presentation.queryEditorID"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

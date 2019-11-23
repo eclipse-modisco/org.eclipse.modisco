@@ -29,7 +29,7 @@
       <content-type
             base-type="org.eclipse.emf.ecore.xmi"
             file-extensions="jspxmi"
-            id="org.eclipse.gmt.modisco.jsp.contenttype"
+            id="org.eclipse.modisco.jsp.contenttype"
             name="%content-type.name"
             priority="normal">
       </content-type>

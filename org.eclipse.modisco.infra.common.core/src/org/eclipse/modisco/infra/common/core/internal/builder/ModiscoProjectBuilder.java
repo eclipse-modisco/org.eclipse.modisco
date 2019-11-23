@@ -34,11 +34,11 @@ import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
  */
 public class ModiscoProjectBuilder extends IncrementalProjectBuilder {
 
-	private static final String EXTENSION_POINT_ID = "org.eclipse.gmt.modisco.common.core.builder.register"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_ID = "org.eclipse.modisco.common.core.builder.register"; //$NON-NLS-1$
 	/**
 	 * The MoDisco builder id
 	 */
-	public static final String BUILDER_NAME = "org.eclipse.gmt.modisco.common.core.builder"; //$NON-NLS-1$
+	public static final String BUILDER_NAME = "org.eclipse.modisco.common.core.builder"; //$NON-NLS-1$
 	private static ArrayList<BuilderDescriptor> modiscoBuilders = null;
 	private static Object modiscoBuildersLock = new Object();
 

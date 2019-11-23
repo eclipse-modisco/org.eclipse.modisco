@@ -21,7 +21,7 @@ import org.osgi.framework.BundleContext;
 public class XmlActivator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.gmt.modisco.xml"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.xml"; //$NON-NLS-1$
 
 	// The shared instance
 	private static XmlActivator plugin;

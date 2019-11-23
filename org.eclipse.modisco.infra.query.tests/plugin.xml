@@ -12,27 +12,27 @@ Contributors:
     Gregoire DUPE (Mia-Software) - initial API and implementation
 -->
 <plugin>
-   <extension id="querySet.01" point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension id="querySet.01" point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="modisco/modisco.infra.query.tests.01.querySet">
       </modelqueryset>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="modisco/modisco.infra.query.tests.02.querySet">
       </modelqueryset>
    </extension>
    <!-- If this extension is activated an error must be found in the error log.
    <extension
-         point="org.eclipse.gmt.modisco.infra.query.registration">
+         point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset
             file="modisco/modisco.infra.query.tests.03.querySet">
       </modelqueryset>
    </extension>
    -->
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="modisco/Bug303036.querySet">
       </modelqueryset>
    </extension>
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="modisco/bug310269.querySet"/>
    </extension>
 </plugin>

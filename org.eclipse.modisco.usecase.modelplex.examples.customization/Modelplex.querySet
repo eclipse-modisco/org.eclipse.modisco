@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="Modelplex">
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#/"/>
-  <queries xsi:type="query:JavaModelQuery" name="GetImplementations" description="To retrieve all implementation classes of selected interface" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetImplementations">
+  <queries xsi:type="query:JavaModelQuery" name="GetImplementations" description="To retrieve all implementation classes of selected interface" upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetImplementations">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//ClassDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//InterfaceDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="ComputeInvocationOrder" description="From a method invocation, we compute the order in caller block. If we have a method declaration, which contains two invocations, we would like to know which is first for instance." implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.ComputeInvocationOrder">
+  <queries xsi:type="query:JavaModelQuery" name="ComputeInvocationOrder" description="From a method invocation, we compute the order in caller block. If we have a method declaration, which contains two invocations, we would like to know which is first for instance." implementationClassName="org.eclipse.modisco.examples.modelplex.ComputeInvocationOrder">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodInvocation"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetCallerFromInvocation" description="From a method invocation, we would like to be able to retrieve caller (ie the method declaration which contains this invocation)" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetCallerFromInvocation">
+  <queries xsi:type="query:JavaModelQuery" name="GetCallerFromInvocation" description="From a method invocation, we would like to be able to retrieve caller (ie the method declaration which contains this invocation)" implementationClassName="org.eclipse.modisco.examples.modelplex.GetCallerFromInvocation">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodInvocation"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetCalledMethods" description="Get the methods called from selected method." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetCalledMethods">
+  <queries xsi:type="query:JavaModelQuery" name="GetCalledMethods" description="Get the methods called from selected method." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetCalledMethods">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetSubMethods" description="Get the methods which overrides the selected method." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetSubMethods">
+  <queries xsi:type="query:JavaModelQuery" name="GetSubMethods" description="Get the methods which overrides the selected method." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetSubMethods">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//AbstractMethodDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetAllSubTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetAllSubTypes">
+  <queries xsi:type="query:JavaModelQuery" name="GetAllSubTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetAllSubTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetAllPotentialTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetAllPotentialTypes">
+  <queries xsi:type="query:JavaModelQuery" name="GetAllPotentialTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetAllPotentialTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetFilteredPotentialTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetFilteredPotentialTypes">
+  <queries xsi:type="query:JavaModelQuery" name="GetFilteredPotentialTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetFilteredPotentialTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//VariableDeclaration"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetSubTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetSubTypes">
+  <queries xsi:type="query:JavaModelQuery" name="GetSubTypes" description="Get all sub types of selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetSubTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetUsedTypes" description="Get all types used by the selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetUsedTypes">
+  <queries xsi:type="query:JavaModelQuery" name="GetUsedTypes" description="Get all types used by the selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetUsedTypes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Type"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="GetUsedPackages" description="Get all types used by the selected type." upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.examples.modelplex.GetUsedPackages">
+  <queries xsi:type="query:JavaModelQuery" name="GetUsedPackages" description="Get all types used by the selected type." upperBound="-1" implementationClassName="org.eclipse.modisco.examples.modelplex.GetUsedPackages">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Package"/>
     <scope href="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java#//Package"/>
   </queries>

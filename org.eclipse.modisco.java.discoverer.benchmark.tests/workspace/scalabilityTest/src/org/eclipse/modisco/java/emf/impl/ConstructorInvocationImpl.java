@@ -50,9 +50,9 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConstructorInvocationImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getMethod <em>Method</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
  * </p>
  *

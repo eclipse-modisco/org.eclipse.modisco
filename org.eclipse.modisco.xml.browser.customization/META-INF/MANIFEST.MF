@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.xml.browser.customization;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.xml.browser.customization;singleton:=true
 Bundle-Version: 1.5.0.qualifier
-Require-Bundle: org.eclipse.gmt.modisco.infra.query.core
+Require-Bundle: org.eclipse.modisco.infra.query.core
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %Bundle-Vendor

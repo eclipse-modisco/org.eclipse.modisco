@@ -6,7 +6,7 @@ wizard named "Install Modeling Components", as available from the workbench icon
 The org.eclipse.m2m.atl.projectors.xml plugin also has to be installed, sources available from:
 	- https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/incubation/trunk/am3/plugins/trunk/
 	(use the "anonymous" repository login, no password required)
-Note that the org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder project also has 
+Note that the org.eclipse.modisco.tool.metricsvisualizationbuilder project also has 
 to be checkout or imported into your workspace from:
 	- https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/
 	(use the "anonymous" repository login, no password required)

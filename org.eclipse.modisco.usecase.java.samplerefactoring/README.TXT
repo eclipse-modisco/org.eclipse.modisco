@@ -3,7 +3,7 @@ USEFUL INFORMATION TO USE AND RUN THIS SAMPLE JAVA REFACTORING WORKFLOW
 
 MoDisco, ATL & Acceleo have to be previously installed. This can be done via a dedicated 
 wizard named "Install Modeling Components", as available from the workbench icon bar.
-Note that the org.eclipse.gmt.modisco.java.generation project also has to be checkout or
+Note that the org.eclipse.modisco.java.generation project also has to be checkout or
 imported into your workspace from:
 	- https://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.modisco/plugins/trunk/
 	(use the "anonymous" repository login, no password required)

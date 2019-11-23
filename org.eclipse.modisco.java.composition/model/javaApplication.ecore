@@ -6,21 +6,21 @@
     nsPrefix="javaapplication">
   <eClassifiers xsi:type="ecore:EClass" name="JavaNodeSourceRegion" eSuperTypes="platform:/plugin/org.eclipse.modisco.kdm.source.extension/model/kdmSourceExtension.ecore#//source/extension/ASTNodeSourceRegion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaNode" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//ASTNode"
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//ASTNode"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Java2File" eSuperTypes="platform:/plugin/org.eclipse.modisco.kdm.source.extension/model/kdmSourceExtension.ecore#//source/extension/CodeUnit2File">
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaUnit" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//CompilationUnit"
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//CompilationUnit"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//Java2Directory" eOpposite="#//Java2Directory/java2FileChildren"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavaApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaModel" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//Model"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//Model"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deploymentModel" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/InventoryModel"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/InventoryModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="java2DirectoryChildren"
         upperBound="-1" eType="#//Java2Directory" eOpposite="#//Java2Directory/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jar2FileChildren" upperBound="-1"
@@ -28,9 +28,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Java2Directory">
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaPackage" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//Package"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//Package"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="directory" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/Directory"/>
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/Directory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//JavaApplication" eOpposite="#//JavaApplication/java2DirectoryChildren"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="java2FileChildren" upperBound="-1"
@@ -38,8 +38,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavaJar2File">
     <eStructuralFeatures xsi:type="ecore:EReference" name="javaArchive" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.java/model/java.ecore#//Archive"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="file" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.omg.kdm/model/kdm.ecore#//source/BinaryFile"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.java/model/java.ecore#//Archive"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="file" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.omg.kdm/model/kdm.ecore#//source/BinaryFile"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//JavaApplication" eOpposite="#//JavaApplication/jar2FileChildren"/>
   </eClassifiers>

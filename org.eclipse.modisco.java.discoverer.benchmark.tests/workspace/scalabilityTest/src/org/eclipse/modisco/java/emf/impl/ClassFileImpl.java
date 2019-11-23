@@ -46,10 +46,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,7 +104,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.gmt.modisco.java.Package package_;
+	protected org.eclipse.modisco.java.Package package_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,10 +227,10 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package getPackage() {
+	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
-			package_ = (org.eclipse.gmt.modisco.java.Package)eResolveProxy(oldPackage);
+			package_ = (org.eclipse.modisco.java.Package)eResolveProxy(oldPackage);
 			if (package_ != oldPackage) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.CLASS_FILE__PACKAGE, oldPackage, package_));
@@ -244,7 +244,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package basicGetPackage() {
+	public org.eclipse.modisco.java.Package basicGetPackage() {
 		return package_;
 	}
 
@@ -253,8 +253,8 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(org.eclipse.gmt.modisco.java.Package newPackage) {
-		org.eclipse.gmt.modisco.java.Package oldPackage = package_;
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
+		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CLASS_FILE__PACKAGE, oldPackage, package_));
@@ -301,7 +301,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 				setAttachedSource((CompilationUnit)newValue);
 				return;
 			case JavaPackage.CLASS_FILE__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)newValue);
+				setPackage((org.eclipse.modisco.java.Package)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -325,7 +325,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 				setAttachedSource((CompilationUnit)null);
 				return;
 			case JavaPackage.CLASS_FILE__PACKAGE:
-				setPackage((org.eclipse.gmt.modisco.java.Package)null);
+				setPackage((org.eclipse.modisco.java.Package)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -60,11 +60,11 @@ import org.eclipse.modisco.java.plugin.JavaPlugin;
  */
 public class JavaUtil {
 
-	private static final String TRACEID_GETQNAME = "org.eclipse.gmt.modisco.java/debug/JavaUtil/getQualifiedNames"; //$NON-NLS-1$
+	private static final String TRACEID_GETQNAME = "org.eclipse.modisco.java/debug/JavaUtil/getQualifiedNames"; //$NON-NLS-1$
 	private static final boolean TRACE_GETQNAME = JavaPlugin.getDefault()
 			.isDebugging()
 			&& new Boolean(Platform.getDebugOption(TRACEID_GETQNAME));
-	private static final String TRACEID_NE_BY_QN = "org.eclipse.gmt.modisco.java/debug/JavaUtil/getNamedElementByQualifiedName"; //$NON-NLS-1$
+	private static final String TRACEID_NE_BY_QN = org.eclipse.modisco.java/debug/JavaUtil/getNamedElementByQualifiedName"; //$NON-NLS-1$
 	private static final boolean TRACE_NE_BY_QN = JavaPlugin.getDefault()
 			.isDebugging()
 			&& new Boolean(Platform.getDebugOption(TRACEID_NE_BY_QN));

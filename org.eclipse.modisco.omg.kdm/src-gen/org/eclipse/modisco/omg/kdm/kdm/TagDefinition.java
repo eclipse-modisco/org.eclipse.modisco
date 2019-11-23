@@ -45,7 +45,7 @@ public interface TagDefinition extends Element {
 	 * @return the value of the '<em>Tag</em>' attribute.
 	 * @see #setTag(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getTagDefinition_Tag()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getTag();
@@ -71,7 +71,7 @@ public interface TagDefinition extends Element {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see org.eclipse.modisco.omg.kdm.kdm.KdmPackage#getTagDefinition_Type()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getType();

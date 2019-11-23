@@ -30,18 +30,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.EnumDeclaration#getEnumConstants <em>Enum Constants</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.EnumDeclaration#getEnumConstants <em>Enum Constants</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getEnumDeclaration()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getEnumDeclaration()
  * @model
  * @generated
  */
 public interface EnumDeclaration extends AbstractTypeDeclaration {
 	/**
 	 * Returns the value of the '<em><b>Enum Constants</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.java.EnumConstantDeclaration}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.EnumConstantDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Enum Constants</em>' containment reference list isn't clear,
@@ -49,7 +49,7 @@ public interface EnumDeclaration extends AbstractTypeDeclaration {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enum Constants</em>' containment reference list.
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getEnumDeclaration_EnumConstants()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getEnumDeclaration_EnumConstants()
 	 * @model containment="true"
 	 * @generated
 	 */

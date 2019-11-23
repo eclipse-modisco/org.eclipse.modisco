@@ -3,7 +3,7 @@
 Each MoDisco discoverer responds to a normalized interface and can be called programmatically (see org.eclipse.modisco.infra.discovery.core.IDiscoverer<T>).
 
 First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
-* org.eclipse.gmt.modisco.omg.kdm
+* org.eclipse.modisco.omg.kdm
 * org.eclipse.modisco.kdm.source.discoverer
 * org.eclipse.modisco.infra.discovery.core
 

@@ -29,19 +29,19 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.TypeAccess#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TypeAccess#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeAccess()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeAccess()
  * @model
  * @generated
  */
 public interface TypeAccess extends Expression, NamespaceAccess {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.gmt.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' reference isn't clear,
@@ -50,15 +50,15 @@ public interface TypeAccess extends Expression, NamespaceAccess {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(Type)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeAccess_Type()
-	 * @see org.eclipse.gmt.modisco.java.Type#getUsagesInTypeAccess
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeAccess_Type()
+	 * @see org.eclipse.modisco.java.Type#getUsagesInTypeAccess
 	 * @model opposite="usagesInTypeAccess" required="true" ordered="false"
 	 * @generated
 	 */
 	Type getType();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TypeAccess#getType <em>Type</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TypeAccess#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' reference.
@@ -77,14 +77,14 @@ public interface TypeAccess extends Expression, NamespaceAccess {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Qualifier</em>' containment reference.
 	 * @see #setQualifier(NamespaceAccess)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getTypeAccess_Qualifier()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeAccess_Qualifier()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	NamespaceAccess getQualifier();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Qualifier</em>' containment reference.

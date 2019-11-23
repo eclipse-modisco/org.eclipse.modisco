@@ -2,25 +2,25 @@
 <?eclipse version="3.4"?>
 
 <plugin>
-   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+   <extension point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization file="testCustomization.uiCustom" loadByDefault="false"/>
       <browserCustomization file="testBug304018.uiCustom" loadByDefault="false"/>
       <browserCustomization file="bug341222.uiCustom" loadByDefault="false"/>
    </extension>
    
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="testCustomization.querySet"/>
    </extension>
    
-   <extension point="org.eclipse.gmt.modisco.infra.query.registration">
+   <extension point="org.eclipse.modisco.infra.query.registration">
       <modelqueryset file="org.eclipse.modisco.infra.browser.custom.tests.querySet"/>
    </extension>
 
-   <extension point="org.eclipse.gmt.modisco.infra.facet.registration">
+   <extension point="org.eclipse.modisco.infra.facet.registration">
       <facetset file="bug336502.facetSet"/>
    </extension>
    
-   <extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+   <extension point="org.eclipse.modisco.infra.browser.custom.core.registration">
       <browserCustomization file="bug336502.uiCustom"/>
    </extension>
 </plugin>

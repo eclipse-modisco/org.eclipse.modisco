@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.java.queries;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.java.queries;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
-Require-Bundle: org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.java;bundle-version="0.6.0"
+Require-Bundle: org.eclipse.modisco.infra.query.core;bundle-version="0.8.0",
+ org.eclipse.modisco.java;bundle-version="0.6.0"
 Export-Package: org.eclipse.modisco.java.queries.modifiers,
  org.eclipse.modisco.java.queries.text
-Automatic-Module-Name: org.eclipse.gmt.modisco.java.queries
+Automatic-Module-Name: org.eclipse.modisco.java.queries

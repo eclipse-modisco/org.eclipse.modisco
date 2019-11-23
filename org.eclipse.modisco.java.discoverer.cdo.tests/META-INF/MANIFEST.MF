@@ -8,21 +8,21 @@ Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui;bundle-version="3.5.0",
  org.eclipse.jdt.core;bundle-version="3.5.0",
  org.eclipse.emf.cdo.server.db;bundle-version="2.0.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.7.0",
+ org.eclipse.modisco.infra.common.core;bundle-version="0.7.0",
  org.eclipse.core.runtime;bundle-version="3.5.0",
  org.eclipse.emf.cdo.server.net4j;bundle-version="3.0.0",
  org.eclipse.emf.cdo.net4j;bundle-version="3.0.0",
- org.eclipse.gmt.modisco.infra.common.cdo;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.cdo;bundle-version="0.8.0",
  org.junit;bundle-version="4.7.0",
  org.eclipse.core.resources;bundle-version="3.6.0",
- org.eclipse.gmt.modisco.infra.common.cdo.derby;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.cdo.derby;bundle-version="0.8.0",
  org.eclipse.modisco.kdm.source.extension;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery.core;bundle-version="0.9.0",
  org.eclipse.modisco.java.discoverer.cdo;bundle-version="0.9.0",
  org.eclipse.modisco.infra.discovery;bundle-version="0.9.0",
  org.eclipse.modisco.java.discoverer;bundle-version="0.9.0",
  org.eclipse.modisco.java.discoverer.tests;bundle-version="0.9.0",
- org.eclipse.gmt.modisco.java;bundle-version="0.9.0"
+ org.eclipse.modisco.java;bundle-version="0.9.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.java.discoverer.cdo.tests;x-internal:=true

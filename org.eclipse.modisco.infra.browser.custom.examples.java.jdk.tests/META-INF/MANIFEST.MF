@@ -8,14 +8,14 @@ Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit;bundle-version="4.7.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.browser.custom;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.browser.custom.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.facet;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.facet.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.query;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0",
- org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk;bundle-version="0.0.1"
+ org.eclipse.modisco.infra.common.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.custom;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.custom.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.facet;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.facet.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.query;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.query.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.browser.custom.examples.java.jdk;bundle-version="0.0.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests

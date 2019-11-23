@@ -29,11 +29,11 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getStringLiteral()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getStringLiteral()
  * @model
  * @generated
  */
@@ -48,14 +48,14 @@ public interface StringLiteral extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Escaped Value</em>' attribute.
 	 * @see #setEscapedValue(String)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getStringLiteral_EscapedValue()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getStringLiteral_EscapedValue()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	String getEscapedValue();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.StringLiteral#getEscapedValue <em>Escaped Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Escaped Value</em>' attribute.

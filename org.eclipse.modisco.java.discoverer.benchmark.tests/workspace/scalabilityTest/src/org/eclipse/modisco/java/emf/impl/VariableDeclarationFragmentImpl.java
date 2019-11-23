@@ -36,7 +36,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
  * </ul>
  * </p>
  *

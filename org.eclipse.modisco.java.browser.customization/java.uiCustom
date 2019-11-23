@@ -12,7 +12,7 @@ Contributors:
 <uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java">
   <types metaclassName="java.ClassDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/class.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/class.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Annotation">
@@ -22,7 +22,7 @@ Contributors:
       </defaultValue>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/annotation.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/annotation.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.CastExpression">
@@ -32,7 +32,7 @@ Contributors:
       </defaultValue>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/cast.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/cast.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.FieldDeclaration">
@@ -42,7 +42,7 @@ Contributors:
       </defaultValue>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/fieldDeclaration.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/fieldDeclaration.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ArrayCreation">
@@ -52,7 +52,7 @@ Contributors:
       </defaultValue>
     </customizedFeatures>
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.VariableDeclarationStatement">
@@ -64,62 +64,62 @@ Contributors:
   </types>
   <types metaclassName="java.ArrayInitializer">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/arrayInitializer.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/arrayInitializer.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ArrayType">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Assignment">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/assignment.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/assignment.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.BooleanLiteral">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/boolean.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/boolean.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.CharacterLiteral">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/character.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/character.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ConditionalExpression">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/conditional_expr.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/conditional_expr.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Expression">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/expression.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/expression.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.InfixExpression">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/infix.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/infix.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.NullLiteral">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/nullLiteral.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/nullLiteral.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.NumberLiteral">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/numberLiteral.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/numberLiteral.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ParenthesizedExpression">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/parenthesis.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/parenthesis.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Package">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/package.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/package.gif"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="label">
       <defaultValue xsi:type="uicustom:DerivedFeatureValue">
@@ -129,7 +129,7 @@ Contributors:
   </types>
   <types metaclassName="java.AbstractMethodDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/methodDeclaration.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/methodDeclaration.gif"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="label">
       <defaultValue xsi:type="uicustom:DerivedFeatureValue">
@@ -139,27 +139,27 @@ Contributors:
   </types>
   <types metaclassName="java.Javadoc">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/comment/javadoc.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/comment/javadoc.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ClassFile">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/classFile.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/classFile.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Comment">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/comment/comment.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/comment/comment.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.LineComment">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/comment/line_comment.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/comment/line_comment.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.BlockComment">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/comment/block_comment.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/comment/block_comment.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.MethodRef">
@@ -171,7 +171,7 @@ Contributors:
   </types>
   <types metaclassName="java.ImportDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/import.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/import.gif"/>
     </customizedFeatures>
     <customizedFeatures customizedFeature="label">
       <defaultValue xsi:type="uicustom:DerivedFeatureValue">
@@ -181,147 +181,147 @@ Contributors:
   </types>
   <types metaclassName="java.Initializer">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/initializer.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/initializer.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Manifest">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/manifest.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/manifest.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ManifestAttribute">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/manifestAttribute.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/manifestAttribute.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ManifestEntry">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/manifestEntry.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/manifestEntry.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Model">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/model.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/model.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.PackageAccess">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/package.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/package.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Archive">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/archive.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/archive.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ArrayLengthAccess">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Block">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/block.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/block.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.CatchClause">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/catch_clause.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/catch_clause.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ContinueStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/continue.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/continue.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.DoStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/do.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/do.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.EmptyStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/empty.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/empty.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ForStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/for.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/for.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.IfStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/if.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/if.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.TryStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/try.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/try.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ReturnStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/return.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/return.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.SwitchStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/switch_statement.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/switch_statement.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.SynchronizedStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/synchronisedStatement.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/synchronisedStatement.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ThrowStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/throw.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/throw.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.TypeDeclarationStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/typeDeclarationStatement.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/typeDeclarationStatement.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.WhileStatement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/statements/while.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/statements/while.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Type">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/type.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/type.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.InterfaceDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/interfaces/defaultInterface.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/interfaces/defaultInterface.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.CompilationUnit">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/compilationUnit.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/compilationUnit.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.EnumDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/enum.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/enum.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.EnumConstantDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/enumConstant.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/enumConstant.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.FieldAccess">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/field/fieldDeclaration.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/field/fieldDeclaration.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.MethodInvocation">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/methods/default.png"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/methods/default.png"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.Modifier">
@@ -333,58 +333,58 @@ Contributors:
     </customizedFeatures>
     <attributes attributeName="inheritance">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/inheritance.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/inheritance.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="native">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/native.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/native.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="synchronized">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/synchronised.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/synchronised.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="transient">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/transient.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/transient.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="visibility">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/visibility.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/visibility.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="volatile">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/volatile.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/volatile.gif"/>
       </customizedFeatures>
     </attributes>
     <attributes attributeName="static">
       <customizedFeatures customizedFeature="icon">
-        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/overlays/16x16/static.gif"/>
+        <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/overlays/16x16/static.gif"/>
       </customizedFeatures>
     </attributes>
   </types>
   <types metaclassName="java.SuperConstructorInvocation">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/classCreation.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/classCreation.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.TextElement">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/text.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/text.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.AnonymousClassDeclaration">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/class/anonymousClass.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/class/anonymousClass.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.ArrayAccess">
     <customizedFeatures customizedFeature="icon">
-      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.gmt.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
+      <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.java.browser.customization/icons/expression/arrayType.gif"/>
     </customizedFeatures>
   </types>
   <types metaclassName="java.AbstractMethodInvocation">

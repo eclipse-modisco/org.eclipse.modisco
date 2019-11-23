@@ -250,7 +250,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	private static final int RIGHT_PANE_SASH_WEIGHT = 65;
 	private static final int LEFT_PANE_SASH_WEIGHT = 35;
 	private static final int SASH_WIDTH = 4;
-	public static final String EDITOR_ID = "org.eclipse.gmt.modisco.infra.browser.editorID"; //$NON-NLS-1$
+	public static final String EDITOR_ID = "org.eclipse.modisco.infra.browser.editorID"; //$NON-NLS-1$
 	private static final String PROPERTY_VIEW_ID = "org.eclipse.ui.views.PropertySheet"; //$NON-NLS-1$
 
 	private ResourceSet fResourceSet;
@@ -1275,7 +1275,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 								// doubleClickListener extension point
 								IExtensionRegistry registry = Platform.getExtensionRegistry();
 								IExtensionPoint extPointDblClick = registry
-										.getExtensionPoint("org.eclipse.gmt.modisco.infra.browser.doubleClickListener"); //$NON-NLS-1$
+										.getExtensionPoint("org.eclipse.modisco.infra.browser.doubleClickListener"); //$NON-NLS-1$
 
 								if (extPointDblClick != null) {
 									for (IExtension ext : extPointDblClick.getExtensions()) {
@@ -3187,7 +3187,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 			public void focusGained(final FocusEvent event) {
 				this.contextActivation = contextService
-						.activateContext("org.eclipse.gmt.modisco.infra.browser.dummyContext"); //$NON-NLS-1$
+						.activateContext("org.eclipse.modisco.infra.browser.dummyContext"); //$NON-NLS-1$
 			}
 
 			public void focusLost(final FocusEvent event) {

@@ -45,7 +45,7 @@ public interface PlatformAction extends AbstractPlatformElement {
 	 * @return the value of the '<em>Kind</em>' attribute.
 	 * @see #setKind(String)
 	 * @see org.eclipse.modisco.omg.kdm.platform.PlatformPackage#getPlatformAction_Kind()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getKind();

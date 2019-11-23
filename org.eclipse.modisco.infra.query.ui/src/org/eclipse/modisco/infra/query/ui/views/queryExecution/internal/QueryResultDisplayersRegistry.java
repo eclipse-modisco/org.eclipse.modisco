@@ -31,7 +31,7 @@ import org.eclipse.osgi.util.NLS;
 @Deprecated
 public class QueryResultDisplayersRegistry extends AbstractRegistry {
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.gmt.modisco.infra.query.ui"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.infra.query.ui"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "queryResultDisplay"; //$NON-NLS-1$
 	private static final String ELEMENT_QUERY_RESULT_DISPLAYER = "queryResultDisplayer"; //$NON-NLS-1$
 	private static final String ATTRIBUTE_CLASS = "class"; //$NON-NLS-1$

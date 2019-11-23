@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.URI;
 
 /**
  * An implementation of the interface must be provided through the
- * org.eclipse.gmt.modisco.common.core.protocolext extension point to register a
+ * org.eclipse.modisco.common.core.protocolext extension point to register a
  * MoDisco sub-protocol.
  *
  * @author Gregoire DUPE (Mia-Software)

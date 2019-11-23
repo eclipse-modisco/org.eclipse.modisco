@@ -19,7 +19,7 @@ import org.eclipse.osgi.util.NLS;
  */
 @Deprecated
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.gmt.modisco.infra.browser.uicore.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.infra.browser.uicore.internal.messages"; //$NON-NLS-1$
 
 	static {
 		NLS.initializeMessages(Messages.BUNDLE_NAME, Messages.class);

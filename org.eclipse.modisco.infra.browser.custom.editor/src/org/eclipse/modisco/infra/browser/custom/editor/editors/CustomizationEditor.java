@@ -145,7 +145,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 	private static final int VERTICAL_SPACE_BEFORE_FIRST_BUTTON = 10;
 	private static final int TOP_PANE_MARGIN_HEIGHT = 4;
 	private static final int TOP_PANE_MARGIN_WIDTH = 5;
-	public static final String ID = "org.eclipse.gmt.modisco.infra.browser.custom.editor"; //$NON-NLS-1$
+	public static final String ID = "org.eclipse.modisco.infra.browser.custom.editor"; //$NON-NLS-1$
 	private static final int MAIN_FORM_MARGIN_WIDTH = 4;
 	private static final int MAIN_FORM_MARGIN_HEIGHT = 6;
 	private static final int LEFT_PANE_SASH_WEIGHT = 30;

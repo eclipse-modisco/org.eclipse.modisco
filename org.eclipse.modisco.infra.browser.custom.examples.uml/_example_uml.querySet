@@ -5,27 +5,27 @@
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Element"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="allAttributes" description="returns all the attributes of the Classifier" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.AllAttributes">
+  <queries xsi:type="query:JavaModelQuery" name="allAttributes" description="returns all the attributes of the Classifier" upperBound="-1" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.AllAttributes">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Property"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="allParents" description="returns all the Classifiers directly or indirectly referenced by a Generalization link from this Classifier" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.AllParents">
+  <queries xsi:type="query:JavaModelQuery" name="allParents" description="returns all the Classifiers directly or indirectly referenced by a Generalization link from this Classifier" upperBound="-1" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.AllParents">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isAssociationEnd" description="returns whether the given Property has an Association" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.IsAssociationEnd">
+  <queries xsi:type="query:JavaModelQuery" name="isAssociationEnd" description="returns whether the given Property has an Association" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.IsAssociationEnd">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Property"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="parents" description="returns all the Classifiers directly referenced by a Generalization link from this Classifier" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.Parents">
+  <queries xsi:type="query:JavaModelQuery" name="parents" description="returns all the Classifiers directly referenced by a Generalization link from this Classifier" upperBound="-1" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.Parents">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="isStringProperty" description="returns true if the Property has type &quot;String&quot;" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.IsStringProperty">
+  <queries xsi:type="query:JavaModelQuery" name="isStringProperty" description="returns true if the Property has type &quot;String&quot;" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.IsStringProperty">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Property"/>
   </queries>
-  <queries xsi:type="query:JavaModelQuery" name="subClassifiers" description="returns the Classifiers that are children through Generalizations of this Classifier" upperBound="-1" implementationClassName="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.SubClassifiers">
+  <queries xsi:type="query:JavaModelQuery" name="subClassifiers" description="returns the Classifiers that are children through Generalizations of this Classifier" upperBound="-1" implementationClassName="org.eclipse.modisco.infra.browser.custom.examples.uml.SubClassifiers">
     <returnType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
     <scope href="http://www.eclipse.org/uml2/3.0.0/UML#//Classifier"/>
   </queries>

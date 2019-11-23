@@ -41,8 +41,8 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.InstanceofExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.emf.impl.InstanceofExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
  * </p>
  *

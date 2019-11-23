@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.facet.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.facet.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.facet.core" id="facetRefreshStrategy" name="Facet refresh strategy"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.facet.core" id="facetRefreshStrategy" name="Facet refresh strategy"/>
       </appinfo>
       <documentation>
          This extension point can be used to provide strategies to refresh Facets when model elements are modified.
@@ -56,7 +56,7 @@ If a Facet should be applied to an element if this element has a certain propert
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.facet.core.extensions.RefreshStrategy"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.infra.facet.core.extensions.RefreshStrategy"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -78,7 +78,7 @@ If a Facet should be applied to an element if this element has a certain propert
       </appinfo>
       <documentation>
          &lt;pre&gt;
-   &lt;extension point=&quot;org.eclipse.gmt.modisco.infra.facet.core.facetRefreshStrategy&quot;&gt;
+   &lt;extension point=&quot;org.eclipse.modisco.infra.facet.core.facetRefreshStrategy&quot;&gt;
       &lt;refreshStrategy class=&quot;com.example.RefreshStrategy1&quot;/&gt;
    &lt;/extension&gt;
 &lt;/pre&gt;

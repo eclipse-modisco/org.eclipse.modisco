@@ -34,7 +34,7 @@ public class ExampleWizard extends AbstractExampleWizard {
 		try {
 			// Bug 309021 - Example import wizards import non-example classes
 			project.getFile(
-					"src/org/eclipse/gmt/modisco/java/browser/customization/internal/ExampleWizard.java") //$NON-NLS-1$
+					"src/org/eclipse/modisco/java/browser/customization/internal/ExampleWizard.java") //$NON-NLS-1$
 					.delete(IResource.FORCE, new NullProgressMonitor());
 			// Bug 309976 - Remove the folder org from the MoDisco examples
 			project.getFolder("org").delete(true, new NullProgressMonitor()); //$NON-NLS-1$

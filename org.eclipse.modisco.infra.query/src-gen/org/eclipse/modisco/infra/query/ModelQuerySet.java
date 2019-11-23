@@ -73,7 +73,7 @@ public interface ModelQuerySet extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * ModelQuerySet::name must be unique (in the Eclipse platform) and equal to the containing file name. We recommend to use a name prefix with a name space, for example: org.eclipse.gmt.modisco.example1.querySet1.
+	 * ModelQuerySet::name must be unique (in the Eclipse platform) and equal to the containing file name. We recommend to use a name prefix with a name space, for example: org.eclipse.modisco.example1.querySet1.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)

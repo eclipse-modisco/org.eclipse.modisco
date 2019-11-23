@@ -39,7 +39,7 @@
 <mapAttribute key="Path">
 <mapEntry key="IN" value="/org.eclipse.modisco.usecase.java.samplemetrics/Models/org.eclipse.persistence.example.jpa.20.employee.annotations_java.xmi"/>
 <mapEntry key="Java" value="uri:http://www.eclipse.org/MoDisco/Java/0.2.incubation/java"/>
-<mapEntry key="Metrics" value="/org.eclipse.gmt.modisco.tool.metricsvisualizationbuilder/Metamodels/Metrics.ecore"/>
+<mapEntry key="Metrics" value="/org.eclipse.modisco.tool.metricsvisualizationbuilder/Metamodels/Metrics.ecore"/>
 <mapEntry key="OUT" value="/org.eclipse.modisco.usecase.java.samplemetrics/Models/metricsA.xmi"/>
 </mapAttribute>
 <listAttribute key="Superimpose"/>

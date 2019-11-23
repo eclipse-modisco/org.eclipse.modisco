@@ -23,7 +23,7 @@ import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 public class FacetBuilder extends MoDiscoCatalogBuilder {
 
 	protected static final String FILE_EXTENSION = "facetSet"; //$NON-NLS-1$
-	private static final String MARKER_TYPE = "org.eclipse.gmt.modisco.infra.facet.problem"; //$NON-NLS-1$
+	private static final String MARKER_TYPE = "org.eclipse.modisco.infra.facet.problem"; //$NON-NLS-1$
 
 	@Override
 	protected AbstractMoDiscoCatalog getCatalog() {

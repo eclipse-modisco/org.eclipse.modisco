@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- * 	Nicolas Guyomar (Mia-Software) - Bug 344243 - illegal API use in org.eclipse.gmt.modisco.infra.query.ui.wizards.NewQueryClassWizardPage
+ * 	Nicolas Guyomar (Mia-Software) - Bug 344243 - illegal API use in org.eclipse.modisco.infra.query.ui.wizards.NewQueryClassWizardPage
  */
 package org.eclipse.modisco.infra.query.ui.wizards;
 

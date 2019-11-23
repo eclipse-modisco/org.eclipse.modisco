@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Nicolas Bros (Mia-Software) - Bug 356368 - [Unit Test Failure] junit.framework.TestSuite.org.eclipse.gmt.modisco.infra.browser.tests.*
+ *     Nicolas Bros (Mia-Software) - Bug 356368 - [Unit Test Failure] junit.framework.TestSuite.org.eclipse.modisco.infra.browser.tests.*
  *     Nicolas Guyomar (Mia-Software)
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.tests.swtbot.internal;

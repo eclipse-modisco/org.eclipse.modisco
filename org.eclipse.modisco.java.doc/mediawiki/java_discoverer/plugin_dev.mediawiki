@@ -1,7 +1,7 @@
 = Java Discoverer API =
 
 First, add the following plug-in dependencies to your project ('''Require-Bundle''' in your Manifest.MF):
-* org.eclipse.gmt.modisco.java
+* org.eclipse.modisco.java
 * org.eclipse.modisco.java.discoverer
 * org.eclipse.modisco.infra.discovery.core
 

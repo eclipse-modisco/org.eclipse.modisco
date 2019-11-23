@@ -44,7 +44,7 @@ public interface SourceFile extends InventoryItem {
 	 * @return the value of the '<em>Language</em>' attribute.
 	 * @see #setLanguage(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceFile_Language()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getLanguage();
@@ -70,7 +70,7 @@ public interface SourceFile extends InventoryItem {
 	 * @return the value of the '<em>Encoding</em>' attribute.
 	 * @see #setEncoding(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getSourceFile_Encoding()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getEncoding();

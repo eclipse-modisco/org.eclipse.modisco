@@ -7,8 +7,8 @@ Bundle-Activator: org.eclipse.modisco.kdm.uml2converter.internal.KdmToUml2Activa
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.gmt.modisco.infra.common.core;visibility:=reexport,
- org.eclipse.gmt.modisco.omg.kdm,
+ org.eclipse.modisco.infra.common.core;visibility:=reexport,
+ org.eclipse.modisco.omg.kdm,
  org.eclipse.m2m.atl.common;bundle-version="3.0.0";visibility:=reexport,
  org.eclipse.m2m.atl.drivers.emf4atl;bundle-version="3.0.0",
  org.eclipse.m2m.atl.core.ui.vm;bundle-version="3.0.0",

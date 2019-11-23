@@ -36,7 +36,7 @@ import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSe
  * @author Gregoire DUPE
  */
 public class EcoreCatalog extends AbstractMoDiscoCatalog {
-	private static final String DEBUG_ID = "org.eclipse.gmt.modisco.infra.common.core/debug/EcoreCatalog/debug"; //$NON-NLS-1$
+	private static final String DEBUG_ID = "org.eclipse.modisco.infra.common.core/debug/EcoreCatalog/debug"; //$NON-NLS-1$
 	static final boolean DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(EcoreCatalog.DEBUG_ID));
 

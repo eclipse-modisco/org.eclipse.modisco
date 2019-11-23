@@ -19,7 +19,7 @@ A Java model contains the full abstract syntax tree of a Java program: each stat
 
 = Included Plug-ins  =
 
-* Java metamodel : org.eclipse.gmt.modisco.java
+* Java metamodel : org.eclipse.modisco.java
 * Java discoverer : org.eclipse.modisco.java.discoverer
 * KDM to UML discoverer : org.eclipse.modisco.kdm.uml2converter
 

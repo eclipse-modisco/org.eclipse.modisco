@@ -44,7 +44,7 @@ public interface InventoryItem extends AbstractInventoryElement {
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getInventoryItem_Version()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getVersion();
@@ -70,7 +70,7 @@ public interface InventoryItem extends AbstractInventoryElement {
 	 * @return the value of the '<em>Path</em>' attribute.
 	 * @see #setPath(String)
 	 * @see org.eclipse.modisco.omg.kdm.source.SourcePackage#getInventoryItem_Path()
-	 * @model dataType="org.eclipse.gmt.modisco.omg.kdm.core.String"
+	 * @model dataType=org.eclipse.modisco.omg.kdm.core.String"
 	 * @generated
 	 */
 	String getPath();

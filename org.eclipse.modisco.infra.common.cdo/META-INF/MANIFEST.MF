@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.common.cdo;singleton:=true
+Bundle-SymbolicName: org.eclipse.modisco.infra.common.cdo;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.eclipse.modisco.infra.common.cdo.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
@@ -13,13 +13,13 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.cdo.server.db;bundle-version="3.0.0",
  org.eclipse.net4j.tcp;bundle-version="3.0.0",
  org.eclipse.emf.cdo.server.net4j;bundle-version="3.0.0",
- org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
+ org.eclipse.modisco.infra.common.core;bundle-version="0.8.0",
  org.eclipse.core.resources;bundle-version="3.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.common.cdo.server;
-  x-friends:="org.eclipse.gmt.modisco.infra.common.cdo.derby,
+  x-friends:="org.eclipse.modisco.infra.common.cdo.derby,
    org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.cdo,
    org.eclipse.modisco.java.discoverer.cdo.tests"
-Automatic-Module-Name: org.eclipse.gmt.modisco.infra.common.cdo
+Automatic-Module-Name: org.eclipse.modisco.infra.common.cdo

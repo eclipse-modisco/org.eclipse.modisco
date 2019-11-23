@@ -7,7 +7,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="context Facet inv: self.conditionQuery.scope->exists(e|self.extendedClass.isSuperTypeOf(self.superType))&#xD;&#xA;&#xD;&#xA;context Facet inv: self.conditionQuery.retrunType.name == &quot;EBoolean&quot;&#xD;&#xA;&#xD;&#xA;context Facet inv: self.eStructuralFeature.isKindOf(FacetStructuralFeature)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionQuery" eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionQuery" eType="ecore:EClass platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="facetSet" eType="#//FacetSet"
         changeable="false" volatile="true" transient="true" derived="true" eOpposite="#//FacetSet/facets"/>
   </eClassifiers>
@@ -23,7 +23,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetStructuralFeature" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueQuery" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/org.eclipse.gmt.modisco.infra.query/model/query.ecore#//ModelQuery"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore#//ModelQuery"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetSet" eSuperTypes="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage">
     <eOperations name="getFacet" eType="#//Facet">

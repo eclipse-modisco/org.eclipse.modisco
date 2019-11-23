@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.gmt.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.modisco.infra.query.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.eclipse.gmt.modisco.infra.query.core" id="querySetProvider" name="QuerySet Provider"/>
+         <meta.schema plugin="org.eclipse.modisco.infra.query.core" id="querySetProvider" name="QuerySet Provider"/>
       </appinfo>
       <documentation>
          Use this extension point to dynamically provide QuerySets at runtime.
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.gmt.modisco.infra.query.core.IQuerySetProvider"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.modisco.infra.query.core.IQuerySetProvider"/>
                </appinfo>
             </annotation>
          </attribute>

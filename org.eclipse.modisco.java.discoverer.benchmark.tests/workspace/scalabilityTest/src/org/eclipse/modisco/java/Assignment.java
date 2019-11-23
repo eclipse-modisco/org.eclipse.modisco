@@ -29,13 +29,13 @@ package org.eclipse.modisco.java;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Assignment#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.eclipse.gmt.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Assignment#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssignment()
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getAssignment()
  * @model
  * @generated
  */
@@ -50,14 +50,14 @@ public interface Assignment extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left Hand Side</em>' containment reference.
 	 * @see #setLeftHandSide(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssignment_LeftHandSide()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAssignment_LeftHandSide()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getLeftHandSide();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left Hand Side</em>' containment reference.
@@ -68,7 +68,7 @@ public interface Assignment extends Expression {
 
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.gmt.modisco.java.AssignmentKind}.
+	 * The literals are from the enumeration {@link org.eclipse.modisco.java.AssignmentKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -76,20 +76,20 @@ public interface Assignment extends Expression {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.AssignmentKind
+	 * @see org.eclipse.modisco.java.AssignmentKind
 	 * @see #setOperator(AssignmentKind)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssignment_Operator()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAssignment_Operator()
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
 	AssignmentKind getOperator();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Assignment#getOperator <em>Operator</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Assignment#getOperator <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operator</em>' attribute.
-	 * @see org.eclipse.gmt.modisco.java.AssignmentKind
+	 * @see org.eclipse.modisco.java.AssignmentKind
 	 * @see #getOperator()
 	 * @generated
 	 */
@@ -105,14 +105,14 @@ public interface Assignment extends Expression {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Hand Side</em>' containment reference.
 	 * @see #setRightHandSide(Expression)
-	 * @see org.eclipse.gmt.modisco.java.emf.JavaPackage#getAssignment_RightHandSide()
+	 * @see org.eclipse.modisco.java.emf.JavaPackage#getAssignment_RightHandSide()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Expression getRightHandSide();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.gmt.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right Hand Side</em>' containment reference.

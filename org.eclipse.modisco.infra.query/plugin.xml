@@ -28,7 +28,7 @@ Contributors:
       <content-type
             base-type="org.eclipse.emf.ecore.xmi"
             file-extensions="querySet"
-            id="org.eclipse.gmt.modisco.infra.query.contenttype"
+            id="org.eclipse.modisco.infra.query.contenttype"
             name="%content-type.name"
             priority="normal">
       </content-type>
