@@ -11,11 +11,11 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.cdo.net4j;bundle-version="3.0.0",
  org.eclipse.emf.cdo.server;bundle-version="3.0.0",
  org.eclipse.emf.cdo.server.db;bundle-version="3.0.0",
- org.eclipse.net4j.db.derby;bundle-version="3.0.0",
+ org.eclipse.net4j.db.derby;bundle-version="3.0.0";resolution:=optional,
  org.eclipse.net4j.tcp;bundle-version="3.0.0",
  org.eclipse.emf.cdo.server.net4j;bundle-version="3.0.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0",
- org.apache.derby;bundle-version="10.1.2",
+ org.apache.derby;bundle-version="10.1.2";resolution:=optional,
  org.eclipse.core.resources;bundle-version="3.6.0",
  org.eclipse.gmt.modisco.infra.common.cdo;bundle-version="0.8.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

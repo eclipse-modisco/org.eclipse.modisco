@@ -28,7 +28,6 @@ import org.eclipse.emf.cdo.server.db.mapping.IMappingStrategy;
 import org.eclipse.gmt.modisco.infra.common.cdo.derby.internal.Activator;
 import org.eclipse.gmt.modisco.infra.common.cdo.server.AbstractCDOServer;
 import org.eclipse.net4j.db.IDBAdapter;
-import org.eclipse.net4j.db.derby.EmbeddedDerbyAdapter;
 
 public class DerbyCDOServer extends AbstractCDOServer {
 
@@ -89,7 +88,18 @@ public class DerbyCDOServer extends AbstractCDOServer {
 
 	@Override
 	protected IDBAdapter getDBAdapter() {
-		return new EmbeddedDerbyAdapter();
+		Throwable t = null;
+		try {
+			Class<?> embeddedDerbyAdapterClass = getClass().getClassLoader().loadClass("org.eclipse.net4j.db.derby.EmbeddedDerbyAdapter");
+			return (IDBAdapter) embeddedDerbyAdapterClass.newInstance();
+		} catch (ClassNotFoundException e) {
+			  throw new UnsupportedOperationException("Net4j DB Framework Derby Adapter has not been installed\nInstall from https://www.eclipse.org/cdo/downloads");
+		} catch (RuntimeException e) {
+			throw e;
+		} catch (Throwable e) {
+			t = e;
+		}
+		throw new IllegalStateException("Failed to create EmbeddedDerbyAdapter", t);
 	}
 
 }
