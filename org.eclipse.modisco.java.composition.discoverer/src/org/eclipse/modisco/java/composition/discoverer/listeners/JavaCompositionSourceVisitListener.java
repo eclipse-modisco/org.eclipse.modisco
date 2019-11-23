@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.java.ASTNode;
-import org.eclipse.gmt.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.CompilationUnit;
 import org.eclipse.modisco.java.composition.javaapplication.JavaNodeSourceRegion;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationFactory;
 import org.eclipse.modisco.kdm.source.extension.discovery.SourceVisitListener;

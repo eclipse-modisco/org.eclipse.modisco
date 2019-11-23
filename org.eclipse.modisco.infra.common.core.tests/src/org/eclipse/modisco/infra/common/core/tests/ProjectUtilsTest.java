@@ -14,7 +14,7 @@ import java.io.IOException;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

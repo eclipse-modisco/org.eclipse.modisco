@@ -19,16 +19,16 @@ package org.eclipse.modisco.java.discoverer.internal.io.java;
 
 import java.util.Iterator;
 
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
-import org.eclipse.gmt.modisco.java.ClassInstanceCreation;
-import org.eclipse.gmt.modisco.java.MethodDeclaration;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.emf.JavaFactory;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 
 /**
  * The aim of this class is to bind method with the method overriden of a super

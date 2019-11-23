@@ -11,11 +11,11 @@
  */
 package org.eclipse.modisco.jee.jsp.browser.customization;
 
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
-import org.eclipse.gmt.modisco.xml.Element;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 import org.eclipse.modisco.jee.jsp.JSPScript;
+import org.eclipse.modisco.xml.Element;
 
 public class GetName implements IJavaModelQuery<Element, String> {
 	public String evaluate(final Element context,

@@ -21,7 +21,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation"
-            class="org.eclipse.gmt.modisco.infra.facet.edit.provider.FacetItemProviderAdapterFactory"
+            class="org.eclipse.modisco.infra.facet.edit.provider.FacetItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

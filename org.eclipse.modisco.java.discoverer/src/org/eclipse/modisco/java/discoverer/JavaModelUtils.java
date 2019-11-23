@@ -13,8 +13,8 @@ package org.eclipse.modisco.java.discoverer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.content.IContentDescription;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.IJavaConstants;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.IJavaConstants;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
 public final class JavaModelUtils {

@@ -27,12 +27,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-
-import org.eclipse.gmt.modisco.xml.Node;
 import org.eclipse.modisco.jee.jsp.JspPackage;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
+import org.eclipse.modisco.xml.Node;
 
 /**
  * <!-- begin-user-doc -->

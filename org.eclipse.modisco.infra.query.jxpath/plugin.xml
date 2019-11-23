@@ -17,7 +17,7 @@ Contributors:
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/infra/query/jxpath/0.8.incubation"
-            class="org.eclipse.gmt.modisco.infra.query.jxpath.JxpathPackage"
+            class="org.eclipse.modisco.infra.query.jxpath.JxpathPackage"
             genModel="model/jxpath.genmodel"/>
    </extension>
    <extension

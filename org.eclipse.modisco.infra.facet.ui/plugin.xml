@@ -19,7 +19,7 @@ Contributors:
       </category>
       <view
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.facet.ui.views.FacetView"
+            class="org.eclipse.modisco.infra.facet.ui.views.FacetView"
             icon="icons/Facet.gif"
             id="org.eclipse.gmt.modisco.infra.facet.ui.view"
             name="%catalogView.name"

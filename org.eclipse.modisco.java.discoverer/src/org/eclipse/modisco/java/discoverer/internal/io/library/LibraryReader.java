@@ -20,22 +20,22 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Archive;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
 import org.eclipse.modisco.java.discoverer.internal.io.java.MethodRedefinitionManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /**
  * A {@code LibraryReader} reads the contents of .class files and builds the

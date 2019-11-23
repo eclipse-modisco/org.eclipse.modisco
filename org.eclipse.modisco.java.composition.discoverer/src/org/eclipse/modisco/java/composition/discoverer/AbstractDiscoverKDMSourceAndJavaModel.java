@@ -25,22 +25,13 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.Archive;
-import org.eclipse.gmt.modisco.java.CompilationUnit;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.Package;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KDMModel;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.Segment;
-import org.eclipse.gmt.modisco.omg.kdm.source.AbstractInventoryElement;
-import org.eclipse.gmt.modisco.omg.kdm.source.BinaryFile;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryContainer;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryModel;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceFile;
-import org.eclipse.gmt.modisco.omg.kdm.source.util.KDMSourceUtils;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.composition.discoverer.listeners.JavaCompositionSourceVisitListener;
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2File;
@@ -51,9 +42,18 @@ import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationFacto
 import org.eclipse.modisco.java.discoverer.AbstractDiscoverJavaModelFromProject;
 import org.eclipse.modisco.java.discoverer.ElementsToAnalyze;
 import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 import org.eclipse.modisco.kdm.source.extension.discovery.AbstractComposedKDMSourceDiscoverer2;
 import org.eclipse.modisco.kdm.source.extension.discovery.SourceVisitListener;
+import org.eclipse.modisco.omg.kdm.kdm.KDMModel;
+import org.eclipse.modisco.omg.kdm.kdm.Segment;
+import org.eclipse.modisco.omg.kdm.source.AbstractInventoryElement;
+import org.eclipse.modisco.omg.kdm.source.BinaryFile;
+import org.eclipse.modisco.omg.kdm.source.InventoryContainer;
+import org.eclipse.modisco.omg.kdm.source.InventoryModel;
+import org.eclipse.modisco.omg.kdm.source.SourceFile;
+import org.eclipse.modisco.omg.kdm.source.util.KDMSourceUtils;
 
 /**
  *

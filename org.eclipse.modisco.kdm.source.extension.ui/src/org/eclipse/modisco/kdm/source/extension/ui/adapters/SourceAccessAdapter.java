@@ -19,13 +19,13 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.ui.Activator;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.RevealingStrategy;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.SourceStrategy;
 import org.eclipse.modisco.kdm.source.extension.ui.utils.Utils;
+import org.eclipse.modisco.omg.kdm.source.SourceRegion;
 
 /**
  * A new instance of this class is added to every eObject we want to synchronize

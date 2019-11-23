@@ -20,7 +20,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/core"
-            class="org.eclipse.gmt.modisco.omg.kdm.core.provider.CoreItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.core.provider.CoreItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -33,7 +33,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/kdm"
-            class="org.eclipse.gmt.modisco.omg.kdm.kdm.provider.KdmItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.kdm.provider.KdmItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -46,7 +46,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/source"
-            class="org.eclipse.gmt.modisco.omg.kdm.source.provider.SourceItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.source.provider.SourceItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -59,7 +59,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/code"
-            class="org.eclipse.gmt.modisco.omg.kdm.code.provider.CodeItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.code.provider.CodeItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -72,7 +72,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/action"
-            class="org.eclipse.gmt.modisco.omg.kdm.action.provider.ActionItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.action.provider.ActionItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -85,7 +85,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/platform"
-            class="org.eclipse.gmt.modisco.omg.kdm.platform.provider.PlatformItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.platform.provider.PlatformItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -98,7 +98,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/build"
-            class="org.eclipse.gmt.modisco.omg.kdm.build.provider.BuildItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.build.provider.BuildItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -111,7 +111,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/conceptual"
-            class="org.eclipse.gmt.modisco.omg.kdm.conceptual.provider.ConceptualItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.conceptual.provider.ConceptualItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -124,7 +124,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/data"
-            class="org.eclipse.gmt.modisco.omg.kdm.data.provider.DataItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.data.provider.DataItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -137,7 +137,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/event"
-            class="org.eclipse.gmt.modisco.omg.kdm.event.provider.EventItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.event.provider.EventItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -150,7 +150,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/structure"
-            class="org.eclipse.gmt.modisco.omg.kdm.structure.provider.StructureItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.structure.provider.StructureItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -163,7 +163,7 @@
       <!-- @generated kdm -->
       <factory
             uri="http://www.eclipse.org/MoDisco/kdm/ui"
-            class="org.eclipse.gmt.modisco.omg.kdm.ui.provider.UiItemProviderAdapterFactory"
+            class="org.eclipse.modisco.omg.kdm.ui.provider.UiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

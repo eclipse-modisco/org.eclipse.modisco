@@ -23,7 +23,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkConstants;
 import org.eclipse.modisco.infra.discovery.core.AbstractDiscoverer;

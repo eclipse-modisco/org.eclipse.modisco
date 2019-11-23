@@ -20,7 +20,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8"
-            class="org.eclipse.gmt.modisco.infra.browser.custom.emf.UicustomPackage"
+            class="org.eclipse.modisco.infra.browser.custom.emf.UicustomPackage"
             genModel="models/uiCustom.genmodel"/>
    </extension>
    
@@ -36,7 +36,7 @@
          <constraints categories="org.eclipse.gmt.modisco.infra.browser.custom.validation">
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.NameValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.NameValidation"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name"
@@ -53,7 +53,7 @@
                <target class="ReferenceView"/>
             </constraint>
             <constraint
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.ColorsValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.ColorsValidation"
                   id="org.eclipse.gmt.modisco.infra.browser.custom.validation.colors"
                   lang="Java"
                   mode="Batch"
@@ -71,7 +71,7 @@
                </target>
             </constraint>
             <constraint
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.IconsValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.IconsValidation"
                   id="org.eclipse.gmt.modisco.infra.browser.custom.validation.icons"
                   lang="Java"
                   mode="Batch"
@@ -89,7 +89,7 @@
                </target>
             </constraint>
             <constraint
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.FontsValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.FontsValidation"
                   id="org.eclipse.gmt.modisco.infra.browser.custom.validation.fonts"
                   lang="Java"
                   mode="Batch"
@@ -107,7 +107,7 @@
                </target>
             </constraint>
             <constraint
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.MetaclassValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.MetaclassValidation"
                   id="org.eclipse.gmt.modisco.infra.browser.custom.validation.metaclass"
                   lang="Java"
                   mode="Batch"
@@ -125,7 +125,7 @@
                </target>
             </constraint>
             <constraint
-                  class="org.eclipse.gmt.modisco.infra.browser.custom.validation.constraints.MetamodelValidation"
+                  class="org.eclipse.modisco.infra.browser.custom.validation.constraints.MetamodelValidation"
                   id="org.eclipse.gmt.modisco.infra.browser.custom.validation.metamodel"
                   lang="Java"
                   mode="Batch"
@@ -150,7 +150,7 @@
       <clientContext
             default="false"
             id="org.eclipse.gmt.modisco.infra.browser.custom.clientcontext">
-         <selector class="org.eclipse.gmt.modisco.infra.browser.custom.validation.ValidationDelegateClientSelector"/>
+         <selector class="org.eclipse.modisco.infra.browser.custom.validation.ValidationDelegateClientSelector"/>
       </clientContext>
       <binding
             context="org.eclipse.gmt.modisco.infra.browser.custom.clientcontext"

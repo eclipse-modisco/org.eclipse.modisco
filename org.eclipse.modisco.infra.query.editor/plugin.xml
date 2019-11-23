@@ -21,7 +21,7 @@ Contributors:
       <wizard
             id="org.eclipse.gmt.modisco.infra.query.emf.presentation.queryModelWizardID"
             name="%_UI_queryModelWizard_label"
-            class="org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryModelWizard"
+            class="org.eclipse.modisco.infra.query.editor.presentation.QueryModelWizard"
             category="org.eclipse.gmt.modisco"
             icon="icons/full/wizban/NewQuery.gif">
          <description>%_UI_queryModelWizard_description</description>
@@ -35,8 +35,8 @@ Contributors:
             name="%_UI_queryEditor_label"
             icon="icons/full/obj16/ModelQuerySet.gif"
             extensions="querySet"
-            class="org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryEditor"
-            contributorClass="org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryActionBarContributor">
+            class="org.eclipse.modisco.infra.query.editor.presentation.QueryEditor"
+            contributorClass="org.eclipse.modisco.infra.query.editor.presentation.QueryActionBarContributor">
          <contentTypeBinding
                contentTypeId="org.eclipse.gmt.modisco.infra.query.contenttype">
          </contentTypeBinding>

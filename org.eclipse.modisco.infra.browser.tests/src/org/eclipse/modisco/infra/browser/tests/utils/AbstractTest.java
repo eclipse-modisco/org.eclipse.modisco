@@ -10,8 +10,8 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.browser.tests.utils;
 
-import org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser;
-import org.eclipse.gmt.modisco.infra.browser.editors.MetaclassViewer;
+import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
+import org.eclipse.modisco.infra.browser.editors.MetaclassViewer;
 import org.eclipse.modisco.infra.browser.tests.project.WorkspaceSetup;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;

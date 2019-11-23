@@ -21,7 +21,7 @@ Contributors:
       </category>
       <view
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.query.ui.views.ModelQueryView"
+            class="org.eclipse.modisco.infra.query.ui.views.ModelQueryView"
             icon="icons/ModelQuerySet.gif"
             id="org.eclipse.gmt.modisco.infra.query.ui.catalogView"
             name="%catalogView.name"
@@ -29,7 +29,7 @@ Contributors:
       </view>
       <view
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.query.ui.views.queryExecution.internal.QueryExecutionView"
+            class="org.eclipse.modisco.infra.query.ui.views.queryExecution.internal.QueryExecutionView"
             icon="icons/queryRun.png"
             id="org.eclipse.gmt.modisco.infra.query.ui.queryExecutionView"
             name="%queryExecutionView.name"
@@ -48,7 +48,7 @@ Contributors:
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.gmt.modisco.infra.query.ui.handlers.ExecuteQueryHandler"
+            class="org.eclipse.modisco.infra.query.ui.handlers.ExecuteQueryHandler"
             commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.executeQueryCommand">
          <enabledWhen>
             <with
@@ -101,7 +101,7 @@ Contributors:
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.gmt.modisco.infra.query.ui.handlers.CreateJavaQueryClassHandler"
+            class="org.eclipse.modisco.infra.query.ui.handlers.CreateJavaQueryClassHandler"
             commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createJavaQueryClassCommand">
          <enabledWhen>
             <with
@@ -149,7 +149,7 @@ Contributors:
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="org.eclipse.gmt.modisco.infra.query.ui.handlers.CreateQueryHandler"
+            class="org.eclipse.modisco.infra.query.ui.handlers.CreateQueryHandler"
             commandId="org.eclipse.gmt.modisco.infra.query.ui.commands.createQueryCommand">
          <enabledWhen>
             <with

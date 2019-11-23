@@ -30,10 +30,9 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-
-import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
-import org.eclipse.gmt.modisco.infra.query.QueryFactory;
-import org.eclipse.gmt.modisco.infra.query.QueryPackage;
+import org.eclipse.modisco.infra.query.ModelQuerySet;
+import org.eclipse.modisco.infra.query.QueryFactory;
+import org.eclipse.modisco.infra.query.QueryPackage;
 
 /**
  * <!-- begin-user-doc -->

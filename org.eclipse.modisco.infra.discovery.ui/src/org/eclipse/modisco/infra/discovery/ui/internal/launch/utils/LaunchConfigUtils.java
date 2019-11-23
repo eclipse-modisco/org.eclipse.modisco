@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.modisco.infra.discovery.ui.internal.util.LaunchModelUtils;

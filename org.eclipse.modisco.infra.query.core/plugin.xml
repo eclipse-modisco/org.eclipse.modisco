@@ -40,13 +40,13 @@ Contributors:
    <extension
          point="org.eclipse.gmt.modisco.infra.query.factory">
       <factory
-            class="org.eclipse.gmt.modisco.infra.query.core.java.internal.JavaModelQueryFactory">
+            class="org.eclipse.modisco.infra.query.core.java.internal.JavaModelQueryFactory">
       </factory>
    </extension>
    <extension
          point="org.eclipse.gmt.modisco.infra.query.factory">
       <factory
-            class="org.eclipse.gmt.modisco.infra.query.core.ocl.OclModelQueryFactory">
+            class="org.eclipse.modisco.infra.query.core.ocl.OclModelQueryFactory">
       </factory>
    </extension>
    <extension
@@ -71,7 +71,7 @@ Contributors:
          <constraints categories="org.eclipse.gmt.modisco.infra.query.validation">
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.NonEmptyName"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.NonEmptyName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name"
@@ -89,7 +89,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ModelQuerySetRoot"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ModelQuerySetRoot"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.0"
@@ -105,7 +105,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ScopeValidation"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ScopeValidation"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.1"
@@ -121,7 +121,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ModelQuerySetName"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ModelQuerySetName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.2"
@@ -137,7 +137,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ReturnTypeValidation"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ReturnTypeValidation"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.3"
@@ -153,7 +153,7 @@ Contributors:
             </constraint> 
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.UniqueName"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.UniqueName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.4"
@@ -169,7 +169,7 @@ Contributors:
             </constraint>   
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ParameterUniqueName"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ParameterUniqueName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.5"
@@ -185,7 +185,7 @@ Contributors:
             </constraint>  
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ImplementationClassName"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ImplementationClassName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.6"
@@ -201,7 +201,7 @@ Contributors:
             </constraint>  
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.query.core.internal.validation.ImplementationClassInterface"
+                  class="org.eclipse.modisco.infra.query.core.internal.validation.ImplementationClassInterface"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.7"
@@ -243,7 +243,7 @@ Contributors:
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="org.eclipse.gmt.modisco.infra.query.core.propertyTesters.QueryPropertyTester"
+            class="org.eclipse.modisco.infra.query.core.propertyTesters.QueryPropertyTester"
             id="org.eclipse.gmt.modisco.infra.query.core.queryPropertyTester"
             namespace="org.eclipse.gmt.modisco.infra.query.core"
             properties="isMoDiscoQuery,isMoDiscoQuerySet,isWorkspaceQuery,isWorkspaceQuerySet"

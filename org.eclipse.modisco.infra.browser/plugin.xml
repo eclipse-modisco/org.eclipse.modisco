@@ -16,8 +16,8 @@
    <extension-point id="doubleClickListener" name="%extension-point.name.0" schema="schema/doubleClickListener.exsd"/>
    <extension point="org.eclipse.ui.editors">
       <editor
-            class="org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser"
-            contributorClass="org.eclipse.gmt.modisco.infra.browser.editors.BrowserActionBarContributor"
+            class="org.eclipse.modisco.infra.browser.editors.EcoreBrowser"
+            contributorClass="org.eclipse.modisco.infra.browser.editors.BrowserActionBarContributor"
             default="true"
             icon="icons/full/obj16/MoDiscoModelIcon.gif"
             id="org.eclipse.gmt.modisco.infra.browser.editorID"
@@ -27,7 +27,7 @@
          </contentTypeBinding>
       </editor>
       <editor
-            class="org.eclipse.gmt.modisco.infra.browser.editors.table.TableEditor"
+            class="org.eclipse.modisco.infra.browser.editors.table.TableEditor"
             default="false"
             icon="icons/full/obj16/MoDiscoModelIcon.gif"
             id="org.eclipse.gmt.modisco.infra.browser.table.editorID"
@@ -60,21 +60,21 @@
    <extension
          point="org.eclipse.gmt.modisco.infra.query.ui.queryResultDisplay">
       <queryResultDisplayer
-            class="org.eclipse.gmt.modisco.infra.browser.queryResultDisplayers.TableQueryResultDisplayer"
+            class="org.eclipse.modisco.infra.browser.queryResultDisplayers.TableQueryResultDisplayer"
             name="Table">
       </queryResultDisplayer>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.gmt.modisco.infra.browser.preferences.PreferenceInitializer">
+            class="org.eclipse.modisco.infra.browser.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.gmt.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
-            class="org.eclipse.gmt.modisco.infra.browser.preferences.BrowserPreferencePage"
+            class="org.eclipse.modisco.infra.browser.preferences.BrowserPreferencePage"
             id="org.eclipse.gmt.modisco.infra.browser.preferencePage"
             name="%preferencePage.name">
       </page>
@@ -87,7 +87,7 @@
             id="org.eclipse.gmt.modisco.infra.browser.openResourceInMoDiscoBrowser"
             objectClass="org.eclipse.emf.ecore.resource.Resource">
          <action
-               class="org.eclipse.gmt.modisco.infra.browser.actions.OpenResourceInMoDiscoBrowserAction"
+               class="org.eclipse.modisco.infra.browser.actions.OpenResourceInMoDiscoBrowserAction"
                enablesFor="1"
                id="org.eclipse.gmt.modisco.infra.browser.actions.openResourceInMoDiscoBrowserAction"
                label="%OpenResourceInMoDiscoBrowserAction"
@@ -143,13 +143,13 @@
   <extension
         point="org.eclipse.modisco.facet.util.emf.core.modelViewer">
      <resourceViewer
-           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+           class="org.eclipse.modisco.infra.browser.opener.BrowserOpener">
      </resourceViewer>
      <eObjectViewer
-           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+           class="org.eclipse.modisco.infra.browser.opener.BrowserOpener">
      </eObjectViewer>
      <ePackageViewer
-           class="org.eclipse.gmt.modisco.infra.browser.opener.BrowserOpener">
+           class="org.eclipse.modisco.infra.browser.opener.BrowserOpener">
      </ePackageViewer>
   </extension>   
 </plugin>

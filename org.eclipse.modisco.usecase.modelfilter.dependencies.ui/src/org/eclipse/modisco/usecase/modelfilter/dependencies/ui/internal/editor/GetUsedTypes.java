@@ -18,8 +18,8 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.java.Type;
-import org.eclipse.gmt.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
 
 public class GetUsedTypes {
 

@@ -12,11 +12,9 @@
 package org.eclipse.modisco.jee.jsp.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-
-import org.eclipse.gmt.modisco.xml.emf.impl.ElementImpl;
 import org.eclipse.modisco.jee.jsp.JSPDirective;
 import org.eclipse.modisco.jee.jsp.JspPackage;
+import org.eclipse.modisco.xml.emf.impl.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->

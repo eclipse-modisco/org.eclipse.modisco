@@ -15,11 +15,9 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
-
-import org.eclipse.gmt.modisco.xml.Element;
-import org.eclipse.gmt.modisco.xml.Node;
 import org.eclipse.modisco.jee.jsp.*;
+import org.eclipse.modisco.xml.Element;
+import org.eclipse.modisco.xml.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -16,7 +16,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java-noopposites"
-            class="org.eclipse.gmt.modisco.java.nousages.meta.JavaPackage"
+            class="org.eclipse.modisco.java.nousages.meta.JavaPackage"
             genModel="model/java.genmodel"/>
    </extension>
 

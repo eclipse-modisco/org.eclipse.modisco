@@ -12,7 +12,7 @@
 package org.eclipse.modisco.java.discoverer.internal;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.gmt.modisco.java.Model;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 
 /**

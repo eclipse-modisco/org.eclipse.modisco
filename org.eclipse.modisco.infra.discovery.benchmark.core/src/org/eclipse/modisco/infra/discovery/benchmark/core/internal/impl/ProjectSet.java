@@ -28,7 +28,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
 
 /**

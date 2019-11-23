@@ -23,37 +23,37 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-import org.eclipse.gmt.modisco.java.AbstractMethodInvocation;
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.AnonymousClassDeclaration;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
-import org.eclipse.gmt.modisco.java.ClassInstanceCreation;
-import org.eclipse.gmt.modisco.java.CompilationUnit;
-import org.eclipse.gmt.modisco.java.FieldDeclaration;
-import org.eclipse.gmt.modisco.java.ImportDeclaration;
-import org.eclipse.gmt.modisco.java.Initializer;
-import org.eclipse.gmt.modisco.java.InterfaceDeclaration;
-import org.eclipse.gmt.modisco.java.MemberRef;
-import org.eclipse.gmt.modisco.java.MethodDeclaration;
-import org.eclipse.gmt.modisco.java.MethodRef;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.NamedElement;
-import org.eclipse.gmt.modisco.java.Package;
-import org.eclipse.gmt.modisco.java.PackageAccess;
-import org.eclipse.gmt.modisco.java.PrimitiveType;
-import org.eclipse.gmt.modisco.java.SingleVariableAccess;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
-import org.eclipse.gmt.modisco.java.TagElement;
-import org.eclipse.gmt.modisco.java.Type;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.UnresolvedItem;
-import org.eclipse.gmt.modisco.java.UnresolvedItemAccess;
-import org.eclipse.gmt.modisco.java.VariableDeclarationExpression;
-import org.eclipse.gmt.modisco.java.VariableDeclarationFragment;
-import org.eclipse.gmt.modisco.java.VariableDeclarationStatement;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.AbstractMethodInvocation;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.AnonymousClassDeclaration;
+import org.eclipse.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.Initializer;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.MemberRef;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodRef;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.Package;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 
 public class JavaValidation {
 
@@ -228,7 +228,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.InterfaceDeclaration interfaceDeclaration) {
+			final org.eclipse.modisco.java.InterfaceDeclaration interfaceDeclaration) {
 		EObject container = interfaceDeclaration.eContainer();
 		if ((!isOrphanType(interfaceDeclaration))
 				&& (!interfaceDeclaration.isProxy())
@@ -240,7 +240,7 @@ public class JavaValidation {
 		}
 	}
 
-	private static void validate(final org.eclipse.gmt.modisco.java.Package aPackage) {
+	private static void validate(final org.eclipse.modisco.java.Package aPackage) {
 		if (aPackage.getName() == null) {
 			throw new ValidationException("Null package name: " //$NON-NLS-1$
 					+ JavaUtil.getQualifiedName(aPackage));
@@ -270,7 +270,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.BodyDeclaration bodyDeclaration) {
+			final org.eclipse.modisco.java.BodyDeclaration bodyDeclaration) {
 		if (!(bodyDeclaration instanceof FieldDeclaration)
 				&& !(bodyDeclaration instanceof Initializer)) {
 			if (bodyDeclaration.getName() == null) {
@@ -302,7 +302,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.CompilationUnit compilationUnit) {
+			final org.eclipse.modisco.java.CompilationUnit compilationUnit) {
 		if (compilationUnit.getName() == null) {
 			throw new ValidationException("Null compilation unit name"); //$NON-NLS-1$
 		}
@@ -312,7 +312,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.FieldDeclaration fieldDeclaration) {
+			final org.eclipse.modisco.java.FieldDeclaration fieldDeclaration) {
 		if (fieldDeclaration.getFragments().size() == 0) {
 			throw new ValidationException(
 					"FieldDeclaration must have one or more fragment"); //$NON-NLS-1$
@@ -320,7 +320,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.VariableDeclarationFragment variableDeclarationFragment) {
+			final org.eclipse.modisco.java.VariableDeclarationFragment variableDeclarationFragment) {
 		if (variableDeclarationFragment.getName() == null) {
 			throw new ValidationException("Null FieldDeclaration name: " //$NON-NLS-1$
 					+ JavaUtil.getQualifiedName(variableDeclarationFragment));
@@ -332,7 +332,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.NamedElement namedElement) {
+			final org.eclipse.modisco.java.NamedElement namedElement) {
 		if (!namedElement.isProxy()) {
 			EObject container = namedElement.eContainer();
 			while (container != null) {
@@ -370,7 +370,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.AbstractMethodDeclaration abstractMethodDeclaration) {
+			final org.eclipse.modisco.java.AbstractMethodDeclaration abstractMethodDeclaration) {
 		if (abstractMethodDeclaration.getName().indexOf('>') != -1
 				|| abstractMethodDeclaration.getName().indexOf('<') != -1) {
 			throw new ValidationException("Invalide methode name " //$NON-NLS-1$
@@ -379,28 +379,28 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.AbstractMethodInvocation abstractMethodInvocation) {
+			final org.eclipse.modisco.java.AbstractMethodInvocation abstractMethodInvocation) {
 		if (abstractMethodInvocation.getMethod() == null) {
 			throw new ValidationException(
 					"null method on method invocation : " + abstractMethodInvocation); //$NON-NLS-1$
 		}
 	}
 
-	private static void validate(final org.eclipse.gmt.modisco.java.MethodRef methodref) {
+	private static void validate(final org.eclipse.modisco.java.MethodRef methodref) {
 		if (methodref.getMethod() == null) {
 			throw new ValidationException(
 					"null method on method ref : " + methodref); //$NON-NLS-1$
 		}
 	}
 
-	private static void validate(final org.eclipse.gmt.modisco.java.MemberRef memberref) {
+	private static void validate(final org.eclipse.modisco.java.MemberRef memberref) {
 		if (memberref.getMember() == null) {
 			throw new ValidationException(
 					"null member on member ref : " + memberref); //$NON-NLS-1$
 		}
 	}
 
-	private static void validate(final org.eclipse.gmt.modisco.java.TagElement tag) {
+	private static void validate(final org.eclipse.modisco.java.TagElement tag) {
 		if (tag.getFragments().size() == 0) {
 			throw new ValidationException(
 					"tag element should have at least one element : " + tag); //$NON-NLS-1$
@@ -408,7 +408,7 @@ public class JavaValidation {
 	}
 
 	private static void validate(
-			final org.eclipse.gmt.modisco.java.MethodDeclaration methodDeclaration) {
+			final org.eclipse.modisco.java.MethodDeclaration methodDeclaration) {
 		String classDeclarationName;
 		if (methodDeclaration.eContainer() instanceof AbstractTypeDeclaration) {
 			AbstractTypeDeclaration abstractTypeDeclaration = (AbstractTypeDeclaration) methodDeclaration

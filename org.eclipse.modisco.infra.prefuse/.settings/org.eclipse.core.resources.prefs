@@ -1,6 +1,5 @@
-#Mon Oct 04 10:37:34 CEST 2010
 eclipse.preferences.version=1
-encoding//src/org/eclipse/gmt/modisco/infra/prefuse/examples/graphview/messages.properties=ISO-8859-1
-encoding//src/org/eclipse/gmt/modisco/infra/prefuse/examples/treeview/messages.properties=ISO-8859-1
-encoding//src/org/eclipse/gmt/modisco/infra/prefuse/messages.properties=ISO-8859-1
+encoding//src/org/eclipse/modisco/infra/prefuse/examples/graphview/messages.properties=ISO-8859-1
+encoding//src/org/eclipse/modisco/infra/prefuse/examples/treeview/messages.properties=ISO-8859-1
+encoding//src/org/eclipse/modisco/infra/prefuse/messages.properties=ISO-8859-1
 encoding/<project>=UTF-8

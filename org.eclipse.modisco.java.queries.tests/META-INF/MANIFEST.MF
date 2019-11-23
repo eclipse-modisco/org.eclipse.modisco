@@ -13,6 +13,6 @@ Require-Bundle: org.eclipse.ui,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.modisco.java.queries.tests
-Import-Package: org.eclipse.gmt.modisco.java
+Import-Package: org.eclipse.modisco.java
 Bundle-Vendor: %Bundle-Vendor
 Automatic-Module-Name: org.eclipse.modisco.java.queries.tests

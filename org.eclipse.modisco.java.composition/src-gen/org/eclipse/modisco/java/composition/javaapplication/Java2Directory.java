@@ -15,8 +15,7 @@ package org.eclipse.modisco.java.composition.javaapplication;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.Directory;
+import org.eclipse.modisco.omg.kdm.source.Directory;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,12 +46,12 @@ public interface Java2Directory extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Java Package</em>' reference.
-	 * @see #setJavaPackage(org.eclipse.gmt.modisco.java.Package)
+	 * @see #setJavaPackage(org.eclipse.modisco.java.Package)
 	 * @see org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage#getJava2Directory_JavaPackage()
 	 * @model required="true"
 	 * @generated
 	 */
-	org.eclipse.gmt.modisco.java.Package getJavaPackage();
+	org.eclipse.modisco.java.Package getJavaPackage();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.modisco.java.composition.javaapplication.Java2Directory#getJavaPackage <em>Java Package</em>}' reference.
@@ -62,11 +61,11 @@ public interface Java2Directory extends EObject {
 	 * @see #getJavaPackage()
 	 * @generated
 	 */
-	void setJavaPackage(org.eclipse.gmt.modisco.java.Package value);
+	void setJavaPackage(org.eclipse.modisco.java.Package value);
 
 	/**
 	 * Returns the value of the '<em><b>Directory</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.omg.kdm.source.Directory}.
+	 * The list contents are of type {@link org.eclipse.modisco.omg.kdm.source.Directory}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Directory</em>' reference list isn't clear,

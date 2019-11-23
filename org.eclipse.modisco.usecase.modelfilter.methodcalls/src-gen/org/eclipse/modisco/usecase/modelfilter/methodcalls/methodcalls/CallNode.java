@@ -14,8 +14,7 @@ package org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
 
 /**
  * <!-- begin-user-doc -->

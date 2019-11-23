@@ -25,13 +25,13 @@ import org.eclipse.emf.cdo.util.CommitException;
 import org.eclipse.emf.cdo.view.CDOView;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.Messages;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFromJavaProjectEMFStat;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.JavaReaderEMFStat;
 import org.eclipse.modisco.java.discoverer.cdo.JavaDiscovererCDO;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 public class BenchmarkJavaDiscovererCDO extends DiscoverJavaModelFromJavaProjectEMFStat {
 
@@ -96,8 +96,8 @@ public class BenchmarkJavaDiscovererCDO extends DiscoverJavaModelFromJavaProject
 
 	@Override
 	public JavaFactory getEFactory() {
-		org.eclipse.gmt.modisco.java.cdo.impl.JavaPackageImpl.init();
-		return org.eclipse.gmt.modisco.java.cdo.meta.JavaFactory.eINSTANCE;
+		org.eclipse.modisco.java.cdo.impl.JavaPackageImpl.init();
+		return org.eclipse.modisco.java.cdo.meta.JavaFactory.eINSTANCE;
 	}
 
 	private void dbInit(final CDOResource resource) {

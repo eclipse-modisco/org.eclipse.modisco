@@ -16,11 +16,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-
-import org.eclipse.gmt.modisco.xml.emf.impl.ElementImpl;
 import org.eclipse.modisco.jee.jsp.JSPAction;
 import org.eclipse.modisco.jee.jsp.JspPackage;
+import org.eclipse.modisco.xml.emf.impl.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->

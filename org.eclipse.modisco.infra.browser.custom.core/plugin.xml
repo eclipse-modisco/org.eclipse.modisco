@@ -17,7 +17,7 @@
          name="%extension.name"
          point="org.eclipse.gmt.modisco.common.core.builder.register">
       <builder
-            class="org.eclipse.gmt.modisco.infra.browser.custom.core.CustomizationsBuilder">
+            class="org.eclipse.modisco.infra.browser.custom.core.CustomizationsBuilder">
          <depends
                builder="org.eclipse.gmt.modisco.infra.query.core.QueryBuilder">
          </depends>
@@ -36,7 +36,7 @@
    <extension
          point="org.eclipse.gmt.modisco.common.core.protocolext">
       <scheme-specific-part
-            class="org.eclipse.gmt.modisco.infra.browser.custom.core.CustomizationProtocolExt">
+            class="org.eclipse.modisco.infra.browser.custom.core.CustomizationProtocolExt">
       </scheme-specific-part>
    </extension>
    

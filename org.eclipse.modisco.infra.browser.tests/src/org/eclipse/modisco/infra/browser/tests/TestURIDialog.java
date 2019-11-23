@@ -17,7 +17,7 @@ import static org.junit.Assert.fail;
 
 import java.io.IOException;
 
-import org.eclipse.gmt.modisco.infra.browser.editors.EcoreBrowser;
+import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
 import org.eclipse.modisco.infra.browser.tests.project.WorkspaceSetup;
 import org.eclipse.modisco.infra.browser.tests.utils.TestUtils;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;

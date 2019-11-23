@@ -14,8 +14,9 @@
 package org.eclipse.modisco.jee.queries.annotations.internal;
 
 import java.util.List;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
+
+import org.eclipse.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.java.ClassDeclaration;
 
 public class ResolveInheritance {
 

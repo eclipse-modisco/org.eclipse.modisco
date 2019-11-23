@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.gmt.modisco.java;bundle-version="0.7.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.gmt.modisco.java.emf.classic,
- org.eclipse.gmt.modisco.java.emf.classic.impl;x-internal:=true,
- org.eclipse.gmt.modisco.java.emf.classic.util;x-internal:=true
+Export-Package: org.eclipse.modisco.java.emf.classic,
+ org.eclipse.modisco.java.emf.classic.impl;x-internal:=true,
+ org.eclipse.modisco.java.emf.classic.util;x-internal:=true
 Automatic-Module-Name: org.eclipse.gmt.modisco.java.classiceobject

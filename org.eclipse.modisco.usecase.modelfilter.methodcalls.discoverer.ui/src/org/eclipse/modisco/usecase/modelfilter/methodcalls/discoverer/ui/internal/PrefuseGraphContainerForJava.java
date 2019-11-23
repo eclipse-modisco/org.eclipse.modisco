@@ -17,9 +17,9 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.infra.prefuse.PrefuseGraphContainer;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.prefuse.PrefuseGraphContainer;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
 
 import prefuse.controls.ControlAdapter;
 import prefuse.data.Graph;

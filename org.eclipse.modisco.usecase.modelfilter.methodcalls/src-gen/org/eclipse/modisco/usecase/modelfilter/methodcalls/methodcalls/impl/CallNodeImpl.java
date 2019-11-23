@@ -27,9 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.CallNode;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.MethodCall;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.MethodcallsPackage;

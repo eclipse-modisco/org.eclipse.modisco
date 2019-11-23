@@ -28,13 +28,11 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-
-import org.eclipse.gmt.modisco.omg.kdm.source.Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;
+import org.eclipse.modisco.omg.kdm.source.Directory;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,7 +59,7 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.gmt.modisco.java.Package javaPackage;
+	protected org.eclipse.modisco.java.Package javaPackage;
 
 	/**
 	 * The cached value of the '{@link #getDirectory() <em>Directory</em>}' reference list.
@@ -117,10 +115,10 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package getJavaPackage() {
+	public org.eclipse.modisco.java.Package getJavaPackage() {
 		if (javaPackage != null && javaPackage.eIsProxy()) {
 			InternalEObject oldJavaPackage = (InternalEObject)javaPackage;
-			javaPackage = (org.eclipse.gmt.modisco.java.Package)eResolveProxy(oldJavaPackage);
+			javaPackage = (org.eclipse.modisco.java.Package)eResolveProxy(oldJavaPackage);
 			if (javaPackage != oldJavaPackage) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaapplicationPackage.JAVA2_DIRECTORY__JAVA_PACKAGE, oldJavaPackage, javaPackage));
@@ -134,7 +132,7 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.gmt.modisco.java.Package basicGetJavaPackage() {
+	public org.eclipse.modisco.java.Package basicGetJavaPackage() {
 		return javaPackage;
 	}
 
@@ -143,8 +141,8 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setJavaPackage(org.eclipse.gmt.modisco.java.Package newJavaPackage) {
-		org.eclipse.gmt.modisco.java.Package oldJavaPackage = javaPackage;
+	public void setJavaPackage(org.eclipse.modisco.java.Package newJavaPackage) {
+		org.eclipse.modisco.java.Package oldJavaPackage = javaPackage;
 		javaPackage = newJavaPackage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, JavaapplicationPackage.JAVA2_DIRECTORY__JAVA_PACKAGE, oldJavaPackage, javaPackage));
@@ -301,7 +299,7 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case JavaapplicationPackage.JAVA2_DIRECTORY__JAVA_PACKAGE:
-				setJavaPackage((org.eclipse.gmt.modisco.java.Package)newValue);
+				setJavaPackage((org.eclipse.modisco.java.Package)newValue);
 				return;
 			case JavaapplicationPackage.JAVA2_DIRECTORY__DIRECTORY:
 				getDirectory().clear();
@@ -327,7 +325,7 @@ public class Java2DirectoryImpl extends EObjectImpl implements Java2Directory {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case JavaapplicationPackage.JAVA2_DIRECTORY__JAVA_PACKAGE:
-				setJavaPackage((org.eclipse.gmt.modisco.java.Package)null);
+				setJavaPackage((org.eclipse.modisco.java.Package)null);
 				return;
 			case JavaapplicationPackage.JAVA2_DIRECTORY__DIRECTORY:
 				getDirectory().clear();

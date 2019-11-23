@@ -21,22 +21,6 @@ import java.util.Iterator;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.ASTNode;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-import org.eclipse.gmt.modisco.java.ArrayType;
-import org.eclipse.gmt.modisco.java.Expression;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.NamedElement;
-import org.eclipse.gmt.modisco.java.NamespaceAccess;
-import org.eclipse.gmt.modisco.java.PackageAccess;
-import org.eclipse.gmt.modisco.java.ParameterizedType;
-import org.eclipse.gmt.modisco.java.PrimitiveType;
-import org.eclipse.gmt.modisco.java.SingleVariableAccess;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.UnresolvedItemAccess;
-import org.eclipse.gmt.modisco.java.WildCardType;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.dom.AbstractTypeDeclaration;
 import org.eclipse.jdt.core.dom.AnnotationTypeMemberDeclaration;
 import org.eclipse.jdt.core.dom.EnumConstantDeclaration;
@@ -46,11 +30,27 @@ import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.PackageDeclaration;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.NamespaceAccess;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.ParameterizedType;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.WildCardType;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.Binding;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.JDTDelegateBindingFactory;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /**
  * The class provides tools for the JDTVisitor.
@@ -345,7 +345,7 @@ public final class JDTVisitorUtils {
 	 */
 	public static void initializePrimitiveTypes(final JavaFactory factory, final Model model,
 			final BindingManager globalBindings) {
-		org.eclipse.gmt.modisco.java.PrimitiveType primitiveType;
+		org.eclipse.modisco.java.PrimitiveType primitiveType;
 		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString()) == null) {
 			primitiveType = factory.createPrimitiveTypeInt();
 			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString());

@@ -18,14 +18,14 @@ import java.net.URL;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper;
 
 public class TranslateJavaModelToKdm {
 
 	// resources location
-	private static final String KDM_MM_URI = org.eclipse.gmt.modisco.omg.kdm.action.ActionPackage.eNS_URI;
-	private static final String JAVA_MM_URI = org.eclipse.gmt.modisco.java.emf.JavaPackage.eNS_URI;
+	private static final String KDM_MM_URI = org.eclipse.modisco.omg.kdm.action.ActionPackage.eNS_URI;
+	private static final String JAVA_MM_URI = org.eclipse.modisco.java.emf.JavaPackage.eNS_URI;
 
 	private String pathToTransformation;
 	private static final String PATH_TO_TRANSFORMATION_DEFAULT = "resources/transformations/javaToKdm.asm"; //$NON-NLS-1$

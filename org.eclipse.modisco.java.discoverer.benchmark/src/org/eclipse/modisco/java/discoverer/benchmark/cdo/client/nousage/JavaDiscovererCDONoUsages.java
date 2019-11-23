@@ -13,17 +13,17 @@ package org.eclipse.modisco.java.discoverer.benchmark.cdo.client.nousage;
 
 import java.util.Properties;
 
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.modisco.java.discoverer.benchmark.Messages;
 import org.eclipse.modisco.java.discoverer.benchmark.cdo.client.BenchmarkJavaDiscovererCDO;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFromJavaProjectEMFStat;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 public class JavaDiscovererCDONoUsages extends BenchmarkJavaDiscovererCDO {
 
 	@Override
 	public JavaFactory getEFactory() {
-		org.eclipse.gmt.modisco.java.nousages.cdo.impl.JavaPackageImpl.init();
-		return org.eclipse.gmt.modisco.java.nousages.cdo.meta.JavaFactory.eINSTANCE;
+		org.eclipse.modisco.java.nousages.cdo.impl.JavaPackageImpl.init();
+		return org.eclipse.modisco.java.nousages.cdo.meta.JavaFactory.eINSTANCE;
 	}
 
 	@Override

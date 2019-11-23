@@ -17,15 +17,15 @@ package org.eclipse.modisco.kdm.source.extension.ui.actions;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.kdm.source.extension.ui.Activator;
 import org.eclipse.modisco.kdm.source.extension.ui.adapters.SourceAccessAdapter;
 import org.eclipse.modisco.kdm.source.extension.ui.adapters.SourceAccessAdapterFactory;
 import org.eclipse.modisco.kdm.source.extension.ui.utils.BrowseCodeUtils;
+import org.eclipse.modisco.omg.kdm.source.SourceRegion;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.PlatformUI;
 

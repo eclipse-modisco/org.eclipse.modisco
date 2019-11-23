@@ -16,7 +16,7 @@ Contributors:
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/infra/facet/0.8.incubation"
-            class="org.eclipse.gmt.modisco.infra.facet.FacetPackage"
+            class="org.eclipse.modisco.infra.facet.FacetPackage"
             genModel="model/facet.genmodel"/>
    </extension>
       <extension
@@ -31,7 +31,7 @@ Contributors:
          <constraints categories="org.eclipse.gmt.modisco.infra.facet.validation">
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.facet.validation.NonEmptyName"
+                  class="org.eclipse.modisco.infra.facet.validation.NonEmptyName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name"
@@ -52,7 +52,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.facet.validation.FacetSetRoot"
+                  class="org.eclipse.modisco.infra.facet.validation.FacetSetRoot"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.0"
@@ -71,7 +71,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.facet.validation.FacetSetName"
+                  class="org.eclipse.modisco.infra.facet.validation.FacetSetName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.1"
@@ -87,7 +87,7 @@ Contributors:
             </constraint>
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.facet.validation.ExtendedClassValidation"
+                  class="org.eclipse.modisco.infra.facet.validation.ExtendedClassValidation"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.2"
@@ -103,7 +103,7 @@ Contributors:
             </constraint> 
             <constraint
                   lang="Java"
-                  class="org.eclipse.gmt.modisco.infra.facet.validation.UniqueName"
+                  class="org.eclipse.modisco.infra.facet.validation.UniqueName"
                   severity="ERROR"
                   mode="Batch"
                   name="%constraint.name.3"

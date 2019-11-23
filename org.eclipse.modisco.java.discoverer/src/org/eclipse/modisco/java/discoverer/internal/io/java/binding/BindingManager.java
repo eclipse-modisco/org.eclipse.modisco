@@ -24,29 +24,29 @@ import java.util.Map;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.gmt.modisco.java.ASTNode;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.AnnotationTypeMemberDeclaration;
-import org.eclipse.gmt.modisco.java.ArrayType;
-import org.eclipse.gmt.modisco.java.ClassDeclaration;
-import org.eclipse.gmt.modisco.java.EnumConstantDeclaration;
-import org.eclipse.gmt.modisco.java.EnumDeclaration;
-import org.eclipse.gmt.modisco.java.FieldDeclaration;
-import org.eclipse.gmt.modisco.java.InterfaceDeclaration;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.NamedElement;
-import org.eclipse.gmt.modisco.java.Package;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
-import org.eclipse.gmt.modisco.java.Type;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.TypeDeclaration;
-import org.eclipse.gmt.modisco.java.TypeParameter;
-import org.eclipse.gmt.modisco.java.UnresolvedItem;
-import org.eclipse.gmt.modisco.java.VariableDeclarationFragment;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.AnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.Package;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.TypeDeclaration;
+import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
+import org.eclipse.modisco.java.emf.JavaFactory;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 
 /**
  * Class used to store and resolves pending references between Java
@@ -60,7 +60,7 @@ import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
  * complete references.
  * <p>
  * After resolving pending references, the targets of the remaining references
- * are created as {@link org.eclipse.gmt.modisco.java.NamedElement#isProxy()
+ * are created as {@link org.eclipse.modisco.java.NamedElement#isProxy()
  * proxies}.
  *
  * @see #resolveBindings(Model)

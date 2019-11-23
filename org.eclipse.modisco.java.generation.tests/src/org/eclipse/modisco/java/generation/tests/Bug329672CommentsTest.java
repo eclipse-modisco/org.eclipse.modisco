@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Ignore;

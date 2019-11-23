@@ -17,40 +17,24 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.gmt.modisco.java.emf.JavaPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.action.ActionPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.build.BuildPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.code.CodePackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.conceptual.ConceptualPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.core.CorePackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.data.DataPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.event.EventPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.platform.PlatformPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourcePackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.structure.StructurePackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.ui.UiPackage;
-
-import org.eclipse.gmt.modisco.xml.emf.MoDiscoXMLPackage;
-
 import org.eclipse.modisco.eclipseplugin.EclipsePlugin;
 import org.eclipse.modisco.eclipseplugin.EclipsepluginFactory;
 import org.eclipse.modisco.eclipseplugin.EclipsepluginPackage;
-
+import org.eclipse.modisco.java.emf.JavaPackage;
 import org.eclipse.modisco.manifest.ManifestPackage;
+import org.eclipse.modisco.omg.kdm.action.ActionPackage;
+import org.eclipse.modisco.omg.kdm.build.BuildPackage;
+import org.eclipse.modisco.omg.kdm.code.CodePackage;
+import org.eclipse.modisco.omg.kdm.conceptual.ConceptualPackage;
+import org.eclipse.modisco.omg.kdm.core.CorePackage;
+import org.eclipse.modisco.omg.kdm.data.DataPackage;
+import org.eclipse.modisco.omg.kdm.event.EventPackage;
+import org.eclipse.modisco.omg.kdm.kdm.KdmPackage;
+import org.eclipse.modisco.omg.kdm.platform.PlatformPackage;
+import org.eclipse.modisco.omg.kdm.source.SourcePackage;
+import org.eclipse.modisco.omg.kdm.structure.StructurePackage;
+import org.eclipse.modisco.omg.kdm.ui.UiPackage;
+import org.eclipse.modisco.xml.emf.MoDiscoXMLPackage;
 
 /**
  * <!-- begin-user-doc -->

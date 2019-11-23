@@ -17,7 +17,7 @@ import java.util.Map;
 import org.eclipse.emf.cdo.server.IRepository;
 import org.eclipse.emf.cdo.server.db.CDODBUtil;
 import org.eclipse.emf.cdo.server.db.mapping.IMappingStrategy;
-import org.eclipse.gmt.modisco.infra.common.cdo.derby.DerbyCDOServer;
+import org.eclipse.modisco.infra.common.cdo.derby.DerbyCDOServer;
 
 public class DerbyCDOServerNoAudits extends DerbyCDOServer {
 

@@ -29,19 +29,19 @@ import java.util.Set;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 import org.eclipse.modisco.kdm.source.extension.discovery.AbstractRegionDiscoverer2;
 
 /**
@@ -69,7 +69,7 @@ public abstract class AbstractDiscoverJavaModelFromProject<T> extends AbstractRe
 	 * when there are some missing libraries in the Java project classpath. Such
 	 * java bindings problems will result in missing information in the
 	 * resulting Java model (occurrences of
-	 * {@link org.eclipse.gmt.modisco.java.UnresolvedItem})
+	 * {@link org.eclipse.modisco.java.UnresolvedItem})
 	 */
 	private boolean fLogJavaAnalysisWarnings = false;
 
@@ -128,7 +128,7 @@ public abstract class AbstractDiscoverJavaModelFromProject<T> extends AbstractRe
 
 	@SuppressWarnings("static-method") /* designed for overridability */
 	public JavaFactory getEFactory() {
-		return org.eclipse.gmt.modisco.java.emf.JavaFactory.eINSTANCE;
+		return org.eclipse.modisco.java.emf.JavaFactory.eINSTANCE;
 	}
 
 	protected void analyzeJavaProject(final IJavaProject source, final IProgressMonitor monitor) {

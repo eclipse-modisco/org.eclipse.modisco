@@ -13,13 +13,13 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML"
-            class="org.eclipse.gmt.modisco.xml.emf.MoDiscoXMLPackage"
+            class="org.eclipse.modisco.xml.emf.MoDiscoXMLPackage"
             genModel="model/xml.genmodel"/>
    </extension>
    <extension
          point="org.eclipse.emf.ecore.extension_parser">
       <parser
-            class="org.eclipse.gmt.modisco.xml.resource.GenericXMLResourceFactoryImpl"
+            class="org.eclipse.modisco.xml.resource.GenericXMLResourceFactoryImpl"
             type="xml">
       </parser>
    </extension>

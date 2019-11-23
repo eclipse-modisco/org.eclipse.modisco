@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
+import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 
 public class TestModelUtils {
 	/**

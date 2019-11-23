@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.gmt.modisco.omg.kdm.source.impl.SourceRegionImpl;
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.CodeUnit2File;
 import org.eclipse.modisco.kdm.source.extension.ExtensionPackage;
+import org.eclipse.modisco.omg.kdm.source.impl.SourceRegionImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

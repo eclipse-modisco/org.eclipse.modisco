@@ -13,8 +13,8 @@
  * 
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
-  import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-  import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
+  import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
 
 
 import org.antlr.runtime.*;

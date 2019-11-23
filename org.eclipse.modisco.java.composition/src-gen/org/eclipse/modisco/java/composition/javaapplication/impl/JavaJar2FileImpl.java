@@ -22,14 +22,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.eclipse.gmt.modisco.java.Archive;
-
-
-import org.eclipse.gmt.modisco.omg.kdm.source.BinaryFile;
+import org.eclipse.modisco.java.Archive;
 import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
 import org.eclipse.modisco.java.composition.javaapplication.JavaJar2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;
+import org.eclipse.modisco.omg.kdm.source.BinaryFile;
 
 /**
  * <!-- begin-user-doc -->

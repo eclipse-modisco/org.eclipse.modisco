@@ -14,8 +14,7 @@ package org.eclipse.modisco.kdm.source.extension;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceFile;
+import org.eclipse.modisco.omg.kdm.source.SourceFile;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

@@ -14,8 +14,7 @@ package org.eclipse.modisco.kdm.source.extension;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourcePackage;
+import org.eclipse.modisco.omg.kdm.source.SourcePackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Package</b> for the model. It contains

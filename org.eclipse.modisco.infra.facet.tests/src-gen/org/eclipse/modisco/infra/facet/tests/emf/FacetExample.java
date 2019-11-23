@@ -21,9 +21,9 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.gmt.modisco.infra.facet.Facet;
-import org.eclipse.gmt.modisco.infra.facet.FacetFactory;
-import org.eclipse.gmt.modisco.infra.facet.FacetPackage;
+import org.eclipse.modisco.infra.facet.Facet;
+import org.eclipse.modisco.infra.facet.FacetFactory;
+import org.eclipse.modisco.infra.facet.FacetPackage;
 
 /**
  * <!-- begin-user-doc -->

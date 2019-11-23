@@ -14,10 +14,10 @@ package org.eclipse.modisco.java.discoverer.internal.serialization;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializer;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
 public class JavaProjectSerializer implements ISerializer<IJavaProject> {

@@ -18,8 +18,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.catalog.CatalogFactory;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;

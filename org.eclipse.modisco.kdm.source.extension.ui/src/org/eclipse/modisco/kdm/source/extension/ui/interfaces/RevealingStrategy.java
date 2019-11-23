@@ -16,7 +16,7 @@ package org.eclipse.modisco.kdm.source.extension.ui.interfaces;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion;
+import org.eclipse.modisco.omg.kdm.source.SourceRegion;
 import org.eclipse.ui.IEditorPart;
 
 public interface RevealingStrategy {

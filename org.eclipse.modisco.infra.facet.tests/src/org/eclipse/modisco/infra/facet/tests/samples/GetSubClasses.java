@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class GetSubClasses implements IJavaModelQuery<EClass, EList<EClass>> {
 

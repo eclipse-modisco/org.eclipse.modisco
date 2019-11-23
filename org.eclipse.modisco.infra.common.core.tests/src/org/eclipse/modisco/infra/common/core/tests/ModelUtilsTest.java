@@ -14,9 +14,9 @@ import java.util.Set;
 
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.gmt.modisco.infra.facet.FacetPackage;
-import org.eclipse.gmt.modisco.infra.query.QueryPackage;
+import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
+import org.eclipse.modisco.infra.facet.FacetPackage;
+import org.eclipse.modisco.infra.query.QueryPackage;
 import org.junit.Assert;
 import org.junit.Test;
 

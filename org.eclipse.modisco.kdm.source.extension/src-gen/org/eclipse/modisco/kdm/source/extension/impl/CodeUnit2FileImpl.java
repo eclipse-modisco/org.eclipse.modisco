@@ -27,12 +27,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceFile;
-
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.CodeUnit2File;
 import org.eclipse.modisco.kdm.source.extension.ExtensionPackage;
+import org.eclipse.modisco.omg.kdm.source.SourceFile;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

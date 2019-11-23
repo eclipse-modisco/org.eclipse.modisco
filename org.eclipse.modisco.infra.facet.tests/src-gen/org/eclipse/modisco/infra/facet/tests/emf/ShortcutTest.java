@@ -14,12 +14,12 @@
  */
 package org.eclipse.modisco.infra.facet.tests.emf;
 
+import org.eclipse.modisco.infra.facet.FacetFactory;
+import org.eclipse.modisco.infra.facet.Shortcut;
+
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.gmt.modisco.infra.facet.FacetFactory;
-import org.eclipse.gmt.modisco.infra.facet.Shortcut;
 
 /**
  * <!-- begin-user-doc -->

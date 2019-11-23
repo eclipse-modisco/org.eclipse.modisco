@@ -1,0 +1,404 @@
+/**
+ * *******************************************************************************
+ * Copyright (c) 2009 Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * 
+ *     Fabien Giquel (Mia-Software) - initial API and implementation
+ *     Gregoire DUPE (Mia-Software) - initial API and implementation
+ * *******************************************************************************
+ *
+ * $Id$
+ */
+package org.eclipse.modisco.java.nousages.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.nousages.meta.JavaPackage;
+
+/**
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Package</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ * <li>
+ * {@link org.eclipse.modisco.java.nousages.impl.PackageImpl#getOwnedElements
+ * <em>Owned Elements</em>}</li>
+ * <li>{@link org.eclipse.modisco.java.nousages.impl.PackageImpl#getModel
+ * <em>Model</em>}</li>
+ * <li>
+ * {@link org.eclipse.modisco.java.nousages.impl.PackageImpl#getOwnedPackages
+ * <em>Owned Packages</em>}</li>
+ * <li>{@link org.eclipse.modisco.java.nousages.impl.PackageImpl#getPackage
+ * <em>Package</em>}</li>
+ * </ul>
+ * </p>
+ * 
+ * @generated
+ */
+public class PackageImpl extends NamedElementImpl implements
+		org.eclipse.modisco.java.Package {
+	/**
+	 * The cached value of the '{@link #getOwnedElements()
+	 * <em>Owned Elements</em>}' containment reference list. <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
+	 * 
+	 * @see #getOwnedElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AbstractTypeDeclaration> ownedElements;
+
+	/**
+	 * The cached value of the '{@link #getOwnedPackages()
+	 * <em>Owned Packages</em>}' containment reference list. <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
+	 * 
+	 * @see #getOwnedPackages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<org.eclipse.modisco.java.Package> ownedPackages;
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	protected PackageImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return JavaPackage.eINSTANCE.getPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public EList<AbstractTypeDeclaration> getOwnedElements() {
+		if (ownedElements == null) {
+			ownedElements = new EObjectContainmentWithInverseEList<AbstractTypeDeclaration>(
+					AbstractTypeDeclaration.class, this,
+					JavaPackage.PACKAGE__OWNED_ELEMENTS,
+					JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE);
+		}
+		return ownedElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public Model getModel() {
+		if (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL)
+			return null;
+		return (Model) eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public NotificationChain basicSetModel(Model newModel,
+			NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newModel,
+				JavaPackage.PACKAGE__MODEL, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public void setModel(Model newModel) {
+		if (newModel != eInternalContainer()
+				|| (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL && newModel != null)) {
+			if (EcoreUtil.isAncestor(this, newModel))
+				throw new IllegalArgumentException(
+						"Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newModel != null)
+				msgs = ((InternalEObject) newModel).eInverseAdd(this,
+						JavaPackage.MODEL__OWNED_ELEMENTS, Model.class, msgs);
+			msgs = basicSetModel(newModel, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					JavaPackage.PACKAGE__MODEL, newModel, newModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public EList<org.eclipse.modisco.java.Package> getOwnedPackages() {
+		if (ownedPackages == null) {
+			ownedPackages = new EObjectContainmentWithInverseEList<org.eclipse.modisco.java.Package>(
+					org.eclipse.modisco.java.Package.class, this,
+					JavaPackage.PACKAGE__OWNED_PACKAGES,
+					JavaPackage.PACKAGE__PACKAGE);
+		}
+		return ownedPackages;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public org.eclipse.modisco.java.Package getPackage() {
+		if (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE)
+			return null;
+		return (org.eclipse.modisco.java.Package) eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public NotificationChain basicSetPackage(
+			org.eclipse.modisco.java.Package newPackage,
+			NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newPackage,
+				JavaPackage.PACKAGE__PACKAGE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
+		if (newPackage != eInternalContainer()
+				|| (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE && newPackage != null)) {
+			if (EcoreUtil.isAncestor(this, newPackage))
+				throw new IllegalArgumentException(
+						"Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newPackage != null)
+				msgs = ((InternalEObject) newPackage).eInverseAdd(this,
+						JavaPackage.PACKAGE__OWNED_PACKAGES,
+						org.eclipse.modisco.java.Package.class, msgs);
+			msgs = basicSetPackage(newPackage, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					JavaPackage.PACKAGE__PACKAGE, newPackage, newPackage));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedElements())
+					.basicAdd(otherEnd, msgs);
+		case JavaPackage.PACKAGE__MODEL:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetModel((Model) otherEnd, msgs);
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedPackages())
+					.basicAdd(otherEnd, msgs);
+		case JavaPackage.PACKAGE__PACKAGE:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetPackage(
+					(org.eclipse.modisco.java.Package) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			return ((InternalEList<?>) getOwnedElements()).basicRemove(
+					otherEnd, msgs);
+		case JavaPackage.PACKAGE__MODEL:
+			return basicSetModel(null, msgs);
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			return ((InternalEList<?>) getOwnedPackages()).basicRemove(
+					otherEnd, msgs);
+		case JavaPackage.PACKAGE__PACKAGE:
+			return basicSetPackage(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(
+			NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case JavaPackage.PACKAGE__MODEL:
+			return eInternalContainer().eInverseRemove(this,
+					JavaPackage.MODEL__OWNED_ELEMENTS, Model.class, msgs);
+		case JavaPackage.PACKAGE__PACKAGE:
+			return eInternalContainer().eInverseRemove(this,
+					JavaPackage.PACKAGE__OWNED_PACKAGES,
+					org.eclipse.modisco.java.Package.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			return getOwnedElements();
+		case JavaPackage.PACKAGE__MODEL:
+			return getModel();
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			return getOwnedPackages();
+		case JavaPackage.PACKAGE__PACKAGE:
+			return getPackage();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			getOwnedElements().clear();
+			getOwnedElements().addAll(
+					(Collection<? extends AbstractTypeDeclaration>) newValue);
+			return;
+		case JavaPackage.PACKAGE__MODEL:
+			setModel((Model) newValue);
+			return;
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			getOwnedPackages().clear();
+			getOwnedPackages()
+					.addAll((Collection<? extends org.eclipse.modisco.java.Package>) newValue);
+			return;
+		case JavaPackage.PACKAGE__PACKAGE:
+			setPackage((org.eclipse.modisco.java.Package) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			getOwnedElements().clear();
+			return;
+		case JavaPackage.PACKAGE__MODEL:
+			setModel((Model) null);
+			return;
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			getOwnedPackages().clear();
+			return;
+		case JavaPackage.PACKAGE__PACKAGE:
+			setPackage((org.eclipse.modisco.java.Package) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case JavaPackage.PACKAGE__OWNED_ELEMENTS:
+			return ownedElements != null && !ownedElements.isEmpty();
+		case JavaPackage.PACKAGE__MODEL:
+			return getModel() != null;
+		case JavaPackage.PACKAGE__OWNED_PACKAGES:
+			return ownedPackages != null && !ownedPackages.isEmpty();
+		case JavaPackage.PACKAGE__PACKAGE:
+			return getPackage() != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	public EList<PackageAccess> getUsagesInPackageAccess() {
+		// no usage references
+		return null;
+	}
+
+	public EList<ImportDeclaration> getUsagesInImports() {
+		// no usage references
+		return null;
+	}
+
+} // PackageImpl

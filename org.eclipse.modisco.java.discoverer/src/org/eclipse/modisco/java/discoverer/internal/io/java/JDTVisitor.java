@@ -32,10 +32,6 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.*;
-import org.eclipse.gmt.modisco.java.Package;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.ITypeRoot;
@@ -46,6 +42,9 @@ import org.eclipse.jdt.core.dom.IExtendedModifier;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.QualifiedName;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.*;
+import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BijectiveMap;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.Binding;
@@ -53,6 +52,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManag
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.JDTDelegateBindingFactory;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /**
  * The main class for populating the Java model from the JDT model.

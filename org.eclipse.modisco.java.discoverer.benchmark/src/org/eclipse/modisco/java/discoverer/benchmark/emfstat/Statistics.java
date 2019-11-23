@@ -46,9 +46,9 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.ITypeRoot;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 
 import com.ibm.icu.text.SimpleDateFormat;

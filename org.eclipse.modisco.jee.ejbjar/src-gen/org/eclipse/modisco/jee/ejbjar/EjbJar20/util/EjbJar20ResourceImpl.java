@@ -16,7 +16,7 @@
 package org.eclipse.modisco.jee.ejbjar.EjbJar20.util;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.gmt.modisco.infra.common.core.internal.resource.NoExternalLoadXmlResourceImpl;
+import org.eclipse.modisco.infra.common.core.internal.resource.NoExternalLoadXmlResourceImpl;
 
 /**
  * <!-- begin-user-doc -->

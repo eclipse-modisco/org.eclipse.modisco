@@ -22,29 +22,29 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.omg.kdm.code.CompilationUnit;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KDMModel;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.Segment;
-import org.eclipse.gmt.modisco.omg.kdm.source.AbstractInventoryElement;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryModel;
-import org.eclipse.gmt.modisco.omg.kdm.source.Project;
-import org.eclipse.gmt.modisco.xml.Element;
-import org.eclipse.gmt.modisco.xml.Node;
-import org.eclipse.gmt.modisco.xml.Root;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.eclipseplugin.EclipsePlugin;
 import org.eclipse.modisco.eclipseplugin.EclipsepluginFactory;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
 import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
 import org.eclipse.modisco.kdm.source.discoverer.DiscoverSourceModelFromJavaElement;
 import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 import org.eclipse.modisco.manifest.Bundle;
 import org.eclipse.modisco.manifest.discoverer.ManifestModelDiscoverer2;
+import org.eclipse.modisco.omg.kdm.code.CompilationUnit;
+import org.eclipse.modisco.omg.kdm.kdm.KDMModel;
+import org.eclipse.modisco.omg.kdm.kdm.Segment;
+import org.eclipse.modisco.omg.kdm.source.AbstractInventoryElement;
+import org.eclipse.modisco.omg.kdm.source.InventoryModel;
+import org.eclipse.modisco.omg.kdm.source.Project;
 import org.eclipse.modisco.properties.discoverer.PropertiesModelDiscoverer2;
+import org.eclipse.modisco.xml.Element;
+import org.eclipse.modisco.xml.Node;
+import org.eclipse.modisco.xml.Root;
 import org.eclipse.modisco.xml.discoverer.XMLModelDiscoverer;
 import org.eclipse.pde.core.project.IBundleProjectDescription;
 
@@ -256,8 +256,8 @@ public class DiscoverEclipsePluginFromJavaProject2 extends AbstractModelDiscover
 				Element element = (Element) eo;
 				if (element.getName().equals("classpathentry")) { //$NON-NLS-1$
 					for (Node children : element.getChildren()) {
-						if (children instanceof org.eclipse.gmt.modisco.xml.Attribute) {
-							org.eclipse.gmt.modisco.xml.Attribute attribute = (org.eclipse.gmt.modisco.xml.Attribute) children;
+						if (children instanceof org.eclipse.modisco.xml.Attribute) {
+							org.eclipse.modisco.xml.Attribute attribute = (org.eclipse.modisco.xml.Attribute) children;
 							if (attribute.getName().equals("kind")) { //$NON-NLS-1$
 								kind = attribute.getValue();
 							}

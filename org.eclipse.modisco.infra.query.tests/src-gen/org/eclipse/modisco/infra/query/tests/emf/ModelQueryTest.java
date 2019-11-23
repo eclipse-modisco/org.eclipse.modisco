@@ -14,9 +14,9 @@
  */
 package org.eclipse.modisco.infra.query.tests.emf;
 
-import junit.framework.TestCase;
+import org.eclipse.modisco.infra.query.ModelQuery;
 
-import org.eclipse.gmt.modisco.infra.query.ModelQuery;
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->

@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit,
  org.eclipse.jdt.apt.core,
  com.ibm.icu;bundle-version="4.2.1"
-Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
+Export-Package: org.eclipse.modisco.infra.common.core.internal;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -109,7 +109,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc,
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source",
- org.eclipse.gmt.modisco.infra.common.core.internal.amwpropparser;
+ org.eclipse.modisco.infra.common.core.internal.amwpropparser;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -202,7 +202,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc,
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source",
- org.eclipse.gmt.modisco.infra.common.core.internal.builder;
+ org.eclipse.modisco.infra.common.core.internal.builder;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -296,7 +296,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source,
    org.eclipse.gmt.modisco.infra.browser.uicore",
- org.eclipse.gmt.modisco.infra.common.core.internal.extensions;
+ org.eclipse.modisco.infra.common.core.internal.extensions;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -391,7 +391,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.source,
    org.eclipse.gmt.modisco.infra.browser.uicore,
    org.eclipse.modisco.infra.discovery.ui",
- org.eclipse.gmt.modisco.infra.common.core.internal.logging;
+ org.eclipse.modisco.infra.common.core.internal.logging;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -485,7 +485,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source,
    org.eclipse.modisco.usecase.simpletransformationschain",
- org.eclipse.gmt.modisco.infra.common.core.internal.preferences;
+ org.eclipse.modisco.infra.common.core.internal.preferences;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -578,7 +578,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc,
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source",
- org.eclipse.gmt.modisco.infra.common.core.internal.protocol;
+ org.eclipse.modisco.infra.common.core.internal.protocol;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -671,7 +671,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.doc,
    org.eclipse.gmt.modisco.xml.doc.source,
    org.eclipse.gmt.modisco.xml.source",
- org.eclipse.gmt.modisco.infra.common.core.internal.resource;
+ org.eclipse.modisco.infra.common.core.internal.resource;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -766,7 +766,7 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.gmt.modisco.xml.source,
    org.eclipse.modisco.jee.ejbjar,
    org.eclipse.modisco.jee.webapp",
- org.eclipse.gmt.modisco.infra.common.core.internal.utils;
+ org.eclipse.modisco.infra.common.core.internal.utils;
   x-friends:="org.eclipse.gmt.modisco.dev.core,
    org.eclipse.gmt.modisco.doc,
    org.eclipse.gmt.modisco.doc.source,
@@ -872,14 +872,14 @@ Export-Package: org.eclipse.gmt.modisco.infra.common.core.internal;
    org.eclipse.modisco.java.discoverer.benchmark.tests,
    org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.tests",
- org.eclipse.gmt.modisco.infra.common.core.internal.validation;
+ org.eclipse.modisco.infra.common.core.internal.validation;
   x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.core,
    org.eclipse.gmt.modisco.infra.facet.tests,
    org.eclipse.gmt.modisco.infra.query.tests,
    org.eclipse.gmt.modisco.infra.query.core,
    org.eclipse.gmt.modisco.infra.facet.core",
- org.eclipse.gmt.modisco.infra.common.core.logging
+ org.eclipse.modisco.infra.common.core.logging
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.gmt.modisco.infra.common.core.internal.CommonModiscoActivator
+Bundle-Activator: org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator
 Automatic-Module-Name: org.eclipse.gmt.modisco.infra.common.core
 

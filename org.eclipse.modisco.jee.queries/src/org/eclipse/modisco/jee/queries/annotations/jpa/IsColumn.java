@@ -11,10 +11,10 @@
  */
 package org.eclipse.modisco.jee.queries.annotations.jpa;
 
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.java.BodyDeclaration;
 import org.eclipse.modisco.jee.queries.annotations.internal.EvaluateAnnotation;
 
 public class IsColumn implements IJavaModelQuery<BodyDeclaration, Boolean> {

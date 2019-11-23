@@ -14,8 +14,8 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="org.eclipse.gmt.modisco.infra.browser.custom.editor.editors.CustomizationEditor"
-            contributorClass="org.eclipse.gmt.modisco.infra.browser.custom.editor.editors.CustomizationEditorActionBarContributor"
+            class="org.eclipse.modisco.infra.browser.custom.editor.editors.CustomizationEditor"
+            contributorClass="org.eclipse.modisco.infra.browser.custom.editor.editors.CustomizationEditorActionBarContributor"
             default="false"
             extensions="uiCustom"
             icon="icons/logoMoDiscoMini.gif"

@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.query.editor;singleton:=true
 Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.gmt.modisco.infra.query.editor.presentation.QueryEditorPlugin$Implementation
+Bundle-Activator: org.eclipse.modisco.infra.query.editor.presentation.QueryEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.gmt.modisco.infra.query.editor.presentation
+Export-Package: org.eclipse.modisco.infra.query.editor.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.eclipse.gmt.modisco.infra.query.edit;visibility:=reexport,

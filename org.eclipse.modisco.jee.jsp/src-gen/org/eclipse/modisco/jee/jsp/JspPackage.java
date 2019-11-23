@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.gmt.modisco.xml.emf.MoDiscoXMLPackage;
+import org.eclipse.modisco.xml.emf.MoDiscoXMLPackage;
 
 /**
  * <!-- begin-user-doc -->

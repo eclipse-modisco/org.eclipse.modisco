@@ -10,9 +10,9 @@
  */
 package org.eclipse.modisco.java.composition.browser.customization.queries;
 
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 import org.eclipse.modisco.java.composition.javaapplication.JavaNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 

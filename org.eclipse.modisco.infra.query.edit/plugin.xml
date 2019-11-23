@@ -17,7 +17,7 @@ Contributors:
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation"
-            class="org.eclipse.gmt.modisco.infra.query.edit.provider.QueryItemProviderAdapterFactory"
+            class="org.eclipse.modisco.infra.query.edit.provider.QueryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

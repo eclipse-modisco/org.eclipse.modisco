@@ -11,10 +11,10 @@
  */
 package org.eclipse.modisco.java.composition.javaapplication.queries;
 
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceFile;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.omg.kdm.source.SourceFile;
 
 public class IsJavaSourceFile implements
 IJavaModelQuery<SourceFile, Boolean>{

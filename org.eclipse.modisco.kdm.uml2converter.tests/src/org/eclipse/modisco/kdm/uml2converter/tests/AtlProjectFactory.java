@@ -24,8 +24,8 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.m2m.atl.adt.AtlNature;
+import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 
 public class AtlProjectFactory {
 

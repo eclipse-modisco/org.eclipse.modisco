@@ -17,8 +17,8 @@
       <navigatorContent 
             id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.modelContents" 
             name="%navigatorContent.name"
-            contentProvider="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.MoDiscoContentProvider"
-            labelProvider="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.MoDiscoLabelProvider" 
+            contentProvider="org.eclipse.modisco.infra.browser.uicore.examples.cnf.MoDiscoContentProvider"
+            labelProvider="org.eclipse.modisco.infra.browser.uicore.examples.cnf.MoDiscoLabelProvider" 
             activeByDefault="true"
             icon="logoMoDiscoMini.gif"
             priority="normal" >
@@ -41,7 +41,7 @@
             </or>
          </possibleChildren>
          <actionProvider
-               class="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"
+               class="org.eclipse.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"
                id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.actions.OpenProvider"/>
       </navigatorContent>
    </extension>
@@ -50,7 +50,7 @@
    <extension
          point="org.eclipse.ui.navigator.linkHelper">
       <linkHelper
-            class="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.LinkHelper"
+            class="org.eclipse.modisco.infra.browser.uicore.examples.cnf.LinkHelper"
             id="org.eclipse.gmt.modisco.infra.browser.uicore.examples.cnf.linkHelper">
          <editorInputEnablement>
             <instanceof

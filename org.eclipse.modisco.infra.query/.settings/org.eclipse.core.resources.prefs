@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 encoding//model/query.ecore=UTF-8
 encoding//model/query.ecorediag=UTF-8
-encoding//src-gen/org/eclipse/gmt/modisco/infra/query/messages.properties=ISO-8859-1
+encoding//src-gen/org/eclipse/modisco/infra/query/messages.properties=ISO-8859-1
 encoding/<project>=UTF-8

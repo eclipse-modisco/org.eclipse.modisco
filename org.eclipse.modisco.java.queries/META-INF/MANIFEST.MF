@@ -9,6 +9,6 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,bin
 Require-Bundle: org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0",
  org.eclipse.gmt.modisco.java;bundle-version="0.6.0"
-Export-Package: org.eclipse.gmt.modisco.java.queries.modifiers,
- org.eclipse.gmt.modisco.java.queries.text
+Export-Package: org.eclipse.modisco.java.queries.modifiers,
+ org.eclipse.modisco.java.queries.text
 Automatic-Module-Name: org.eclipse.gmt.modisco.java.queries

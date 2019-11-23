@@ -10,11 +10,11 @@
  */
 package org.eclipse.modisco.infra.facet.tests.emf;
 
+import org.eclipse.modisco.infra.facet.FacetFactory;
+import org.eclipse.modisco.infra.facet.FacetSet;
+
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
-
-import org.eclipse.gmt.modisco.infra.facet.FacetFactory;
-import org.eclipse.gmt.modisco.infra.facet.FacetSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,13 +23,13 @@ import org.eclipse.gmt.modisco.infra.facet.FacetSet;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacets() <em>Facets</em>}</li>
+ *   <li>{@link org.eclipse.modisco.infra.facet.FacetSet#getFacets() <em>Facets</em>}</li>
  * </ul>
  * </p>
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacet(java.lang.String) <em>Get Facet</em>}</li>
+ *   <li>{@link org.eclipse.modisco.infra.facet.FacetSet#getFacet(java.lang.String) <em>Get Facet</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -106,10 +106,10 @@ public class FacetSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacets() <em>Facets</em>}' feature getter.
+	 * Tests the '{@link org.eclipse.modisco.infra.facet.FacetSet#getFacets() <em>Facets</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacets()
+	 * @see org.eclipse.modisco.infra.facet.FacetSet#getFacets()
 	 * @generated
 	 */
 	public void testGetFacets() {
@@ -119,10 +119,10 @@ public class FacetSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#unsetFacets() <em>unsetFacets()</em>}' method.
+	 * Tests the '{@link org.eclipse.modisco.infra.facet.FacetSet#unsetFacets() <em>unsetFacets()</em>}' method.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.infra.facet.FacetSet#unsetFacets()
+	 * @see org.eclipse.modisco.infra.facet.FacetSet#unsetFacets()
 	 * @generated
 	 */
 	public void testUnsetFacets() {
@@ -132,10 +132,10 @@ public class FacetSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#isSetFacets() <em>isSetFacets()</em>}' method.
+	 * Tests the '{@link org.eclipse.modisco.infra.facet.FacetSet#isSetFacets() <em>isSetFacets()</em>}' method.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.infra.facet.FacetSet#isSetFacets()
+	 * @see org.eclipse.modisco.infra.facet.FacetSet#isSetFacets()
 	 * @generated
 	 */
 	public void testIsSetFacets() {
@@ -145,10 +145,10 @@ public class FacetSetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacet(java.lang.String) <em>Get Facet</em>}' operation.
+	 * Tests the '{@link org.eclipse.modisco.infra.facet.FacetSet#getFacet(java.lang.String) <em>Get Facet</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.infra.facet.FacetSet#getFacet(java.lang.String)
+	 * @see org.eclipse.modisco.infra.facet.FacetSet#getFacet(java.lang.String)
 	 * @generated
 	 */
 	public void testGetFacet__String() {

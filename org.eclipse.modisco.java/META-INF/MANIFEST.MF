@@ -13,16 +13,16 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmt.modisco.infra.common.core
 Bundle-ActivationPolicy: lazy
 Export-Package: 
- org.eclipse.gmt.modisco.java,
- org.eclipse.gmt.modisco.java.emf,
- org.eclipse.gmt.modisco.java.emf.impl;x-internal:=true,
- org.eclipse.gmt.modisco.java.emf.util;x-internal:=true,
- org.eclipse.gmt.modisco.java.internal.util;
+ org.eclipse.modisco.java,
+ org.eclipse.modisco.java.emf,
+ org.eclipse.modisco.java.emf.impl;x-internal:=true,
+ org.eclipse.modisco.java.emf.util;x-internal:=true,
+ org.eclipse.modisco.java.internal.util;
   x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk,
    org.eclipse.gmt.modisco.java.queries,
    org.eclipse.modisco.java.composition.discoverer,
    org.eclipse.modisco.java.discoverer,
    org.eclipse.modisco.usecase.modelfilter.dependencies.ui,
    org.eclipse.modisco.java.discoverer.tests"
-Bundle-Activator: org.eclipse.gmt.modisco.java.plugin.JavaPlugin
+Bundle-Activator: org.eclipse.modisco.java.plugin.JavaPlugin
 Automatic-Module-Name: org.eclipse.gmt.modisco.java

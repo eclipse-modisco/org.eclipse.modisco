@@ -13,13 +13,15 @@
  * 
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
-  import org.eclipse.modisco.jee.jsp.*;
+  import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.jee.jsp.*;
   import org.eclipse.modisco.jee.jsp.impl.*;
-  import java.util.HashMap;
-  import org.eclipse.gmt.modisco.xml.*;
-  import org.eclipse.gmt.modisco.xml.emf.MoDiscoXMLFactory;
-  import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-  import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
+import org.eclipse.modisco.xml.*;
+import org.eclipse.modisco.xml.emf.MoDiscoXMLFactory;
+
+import java.util.HashMap;
+
+import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
 
 
 import org.antlr.runtime.*;

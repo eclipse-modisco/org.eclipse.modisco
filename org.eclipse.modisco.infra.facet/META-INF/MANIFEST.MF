@@ -15,8 +15,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.validation.ocl;bundle-version="1.4.0",
  org.eclipse.gmt.modisco.infra.common.core;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.gmt.modisco.infra.facet,
- org.eclipse.gmt.modisco.infra.facet.util;x-friends:="org.eclipse.gmt.modisco.infra.facet.edit",
- org.eclipse.gmt.modisco.infra.facet.validation;x-friends:="org.eclipse.gmt.modisco.infra.facet.core"
-Bundle-Activator: org.eclipse.gmt.modisco.infra.facet.plugin.FacetPlugin
+Export-Package: org.eclipse.modisco.infra.facet,
+ org.eclipse.modisco.infra.facet.util;x-friends:="org.eclipse.gmt.modisco.infra.facet.edit",
+ org.eclipse.modisco.infra.facet.validation;x-friends:="org.eclipse.gmt.modisco.infra.facet.core"
+Bundle-Activator: org.eclipse.modisco.infra.facet.plugin.FacetPlugin
 Automatic-Module-Name: org.eclipse.gmt.modisco.infra.facet

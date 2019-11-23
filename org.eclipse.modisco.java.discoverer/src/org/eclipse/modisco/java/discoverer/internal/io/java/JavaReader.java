@@ -30,9 +30,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.IJavaProject;
@@ -44,11 +41,14 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 import org.eclipse.modisco.kdm.source.extension.discovery.ISourceRegionNotifier;
 
 /**

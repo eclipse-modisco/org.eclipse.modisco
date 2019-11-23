@@ -13,10 +13,8 @@
 package org.eclipse.modisco.java.composition.javaapplication;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.java.Archive;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.BinaryFile;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.omg.kdm.source.BinaryFile;
 
 /**
  * <!-- begin-user-doc -->

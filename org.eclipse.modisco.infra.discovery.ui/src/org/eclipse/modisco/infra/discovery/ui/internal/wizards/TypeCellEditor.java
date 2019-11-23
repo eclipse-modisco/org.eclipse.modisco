@@ -12,11 +12,11 @@ package org.eclipse.modisco.infra.discovery.ui.internal.wizards;
 
 import java.util.ArrayList;
 
-import org.eclipse.gmt.modisco.infra.common.ui.internal.util.JavaUtils;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.ui.IJavaElementSearchConstants;
 import org.eclipse.jface.viewers.DialogCellEditor;
+import org.eclipse.modisco.infra.common.ui.internal.util.JavaUtils;
 import org.eclipse.modisco.infra.discovery.ui.Messages;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;

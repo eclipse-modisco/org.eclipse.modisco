@@ -14,13 +14,13 @@
 package org.eclipse.modisco.java.discoverer.benchmark.emfstat;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.ITypeRoot;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 public class JavaReaderEMFStat extends JavaReader {
 

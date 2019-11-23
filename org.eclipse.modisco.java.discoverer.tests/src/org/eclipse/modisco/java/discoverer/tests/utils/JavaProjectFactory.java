@@ -26,14 +26,14 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
+import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * @author Gabriel Barbier

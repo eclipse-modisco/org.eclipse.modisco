@@ -27,7 +27,7 @@ Contributors:
       <wizard
             canFinishEarly="true"
             category="org.eclipse.ui.Examples/org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.category1"
-            class="org.eclipse.gmt.modisco.infra.browser.custom.examples.java.jdk.internal.ExampleWizard"
+            class="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.internal.ExampleWizard"
             hasPages="false"
             icon="icons/logoMoDiscoMini.gif"
             id="org.eclipse.gmt.modisco.infra.browser.custom.examples.uml.wizard1"

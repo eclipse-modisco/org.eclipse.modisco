@@ -25,7 +25,7 @@
    <extension
          point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="org.eclipse.gmt.modisco.java.emf.JavaPackage"
+            class="org.eclipse.modisco.java.emf.JavaPackage"
             genModel="model/java.genmodel"
             uri="http://www.eclipse.org/MoDisco/Java/0.2.incubation/java">
       </package>

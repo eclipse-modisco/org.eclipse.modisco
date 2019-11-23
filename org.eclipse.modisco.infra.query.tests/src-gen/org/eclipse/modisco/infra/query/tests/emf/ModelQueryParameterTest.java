@@ -14,12 +14,12 @@
  */
 package org.eclipse.modisco.infra.query.tests.emf;
 
+import org.eclipse.modisco.infra.query.ModelQueryParameter;
+import org.eclipse.modisco.infra.query.QueryFactory;
+
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.gmt.modisco.infra.query.ModelQueryParameter;
-import org.eclipse.gmt.modisco.infra.query.QueryFactory;
 
 /**
  * <!-- begin-user-doc -->

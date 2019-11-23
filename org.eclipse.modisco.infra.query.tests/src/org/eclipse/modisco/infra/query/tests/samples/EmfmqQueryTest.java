@@ -20,9 +20,9 @@ import org.eclipse.emf.query.conditions.strings.SubStringValue;
 import org.eclipse.emf.query.statements.FROM;
 import org.eclipse.emf.query.statements.SELECT;
 import org.eclipse.emf.query.statements.WHERE;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class EmfmqQueryTest implements
 		IJavaModelQuery<EPackage, Set<? extends EObject>> {

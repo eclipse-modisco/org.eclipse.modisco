@@ -17,7 +17,7 @@ Contributors:
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation"
-            class="org.eclipse.gmt.modisco.infra.query.QueryPackage"
+            class="org.eclipse.modisco.infra.query.QueryPackage"
             genModel="model/query.genmodel"/>
    </extension>
 

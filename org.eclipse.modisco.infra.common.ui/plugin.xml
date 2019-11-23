@@ -23,7 +23,7 @@
       </category>
       <wizard
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.common.ui.internal.wizards.NewProjectWizard"
+            class="org.eclipse.modisco.infra.common.ui.internal.wizards.NewProjectWizard"
             icon="icons/modisconewproject.gif"
             id="org.eclipse.gmt.modisco.NewProjectWizard"
             name="%new.moDiscoProject.name"
@@ -44,7 +44,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="org.eclipse.gmt.modisco.infra.common.ui.internal.preferences.MoDiscoRootPreferencePage"
+            class="org.eclipse.modisco.infra.common.ui.internal.preferences.MoDiscoRootPreferencePage"
             id="org.eclipse.gmt.modisco.infra.common.ui.preferences.MoDiscoRootPreferencePage"
             name="%modisco.preferencepage.name">
       </page>
@@ -70,7 +70,7 @@
        	 </visibility>
 
          <action
-               class="org.eclipse.gmt.modisco.infra.common.ui.internal.actions.ConvertToMoDiscoProjectAction"
+               class="org.eclipse.modisco.infra.common.ui.internal.actions.ConvertToMoDiscoProjectAction"
                enablesFor="+"
                icon="icons/logoMoDiscoMini.gif"
                id="org.eclipse.gmt.modisco.infra.common.ui.convertToMoDiscoProject"

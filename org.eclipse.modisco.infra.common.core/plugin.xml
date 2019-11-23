@@ -25,7 +25,7 @@
             hasNature="true"
             isConfigurable="false">
          <run
-               class="org.eclipse.gmt.modisco.infra.common.core.internal.builder.ModiscoProjectBuilder">
+               class="org.eclipse.modisco.infra.common.core.internal.builder.ModiscoProjectBuilder">
          </run>
       </builder>
    </extension>
@@ -35,7 +35,7 @@
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="org.eclipse.gmt.modisco.infra.common.core.internal.MoDiscoProject">
+               class="org.eclipse.modisco.infra.common.core.internal.MoDiscoProject">
          </run>
       </runtime>
       <builder
@@ -47,7 +47,7 @@
    <extension
          point="org.eclipse.emf.ecore.protocol_parser">
       <parser
-            class="org.eclipse.gmt.modisco.infra.common.core.internal.protocol.ModiscoResourceFactoryImpl"
+            class="org.eclipse.modisco.infra.common.core.internal.protocol.ModiscoResourceFactoryImpl"
             protocolName="modisco">
       </parser>
    </extension>
@@ -56,13 +56,13 @@
          name="%extension.name.0"
          point="org.eclipse.gmt.modisco.common.core.builder.register">
       <builder
-            class="org.eclipse.gmt.modisco.infra.common.core.internal.builder.EcoreBuilder">
+            class="org.eclipse.modisco.infra.common.core.internal.builder.EcoreBuilder">
       </builder>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="org.eclipse.gmt.modisco.infra.common.core.internal.preferences.PreferenceInitializer">
+            class="org.eclipse.modisco.infra.common.core.internal.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    

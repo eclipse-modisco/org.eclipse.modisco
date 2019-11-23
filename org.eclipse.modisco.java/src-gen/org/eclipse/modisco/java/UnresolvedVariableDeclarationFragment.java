@@ -1,0 +1,37 @@
+/**
+ * *******************************************************************************
+ * Copyright (c) 2009 Mia-Software.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * 
+ *     Sebastien Minguet (Mia-Software) - initial API and implementation
+ *     Frederic Madiot (Mia-Software) - initial API and implementation
+ *     Fabien Giquel (Mia-Software) - initial API and implementation
+ *     Gabriel Barbier (Mia-Software) - initial API and implementation
+ *     Erwan Breton (Sodifrance) - initial API and implementation
+ *     Romain Dervaux (Mia-Software) - initial API and implementation
+ * *******************************************************************************
+ *
+ * $Id$
+ */
+package org.eclipse.modisco.java;
+
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Unresolved Variable Declaration Fragment</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see org.eclipse.modisco.java.emf.JavaPackage#getUnresolvedVariableDeclarationFragment()
+ * @model
+ * @generated
+ */
+public interface UnresolvedVariableDeclarationFragment extends VariableDeclarationFragment, UnresolvedItem {
+} // UnresolvedVariableDeclarationFragment

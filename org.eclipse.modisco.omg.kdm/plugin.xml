@@ -21,84 +21,84 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/action"
-            class="org.eclipse.gmt.modisco.omg.kdm.action.ActionPackage"
+            class="org.eclipse.modisco.omg.kdm.action.ActionPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/build"
-            class="org.eclipse.gmt.modisco.omg.kdm.build.BuildPackage"
+            class="org.eclipse.modisco.omg.kdm.build.BuildPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/code"
-            class="org.eclipse.gmt.modisco.omg.kdm.code.CodePackage"
+            class="org.eclipse.modisco.omg.kdm.code.CodePackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/conceptual"
-            class="org.eclipse.gmt.modisco.omg.kdm.conceptual.ConceptualPackage"
+            class="org.eclipse.modisco.omg.kdm.conceptual.ConceptualPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/core"
-            class="org.eclipse.gmt.modisco.omg.kdm.core.CorePackage"
+            class="org.eclipse.modisco.omg.kdm.core.CorePackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/data"
-            class="org.eclipse.gmt.modisco.omg.kdm.data.DataPackage"
+            class="org.eclipse.modisco.omg.kdm.data.DataPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/event"
-            class="org.eclipse.gmt.modisco.omg.kdm.event.EventPackage"
+            class="org.eclipse.modisco.omg.kdm.event.EventPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/source"
-            class="org.eclipse.gmt.modisco.omg.kdm.source.SourcePackage"
+            class="org.eclipse.modisco.omg.kdm.source.SourcePackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/platform"
-            class="org.eclipse.gmt.modisco.omg.kdm.platform.PlatformPackage"
+            class="org.eclipse.modisco.omg.kdm.platform.PlatformPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/structure"
-            class="org.eclipse.gmt.modisco.omg.kdm.structure.StructurePackage"
+            class="org.eclipse.modisco.omg.kdm.structure.StructurePackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/kdm"
-            class="org.eclipse.gmt.modisco.omg.kdm.kdm.KdmPackage"
+            class="org.eclipse.modisco.omg.kdm.kdm.KdmPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.eclipse.org/MoDisco/kdm/ui"
-            class="org.eclipse.gmt.modisco.omg.kdm.ui.UiPackage"
+            class="org.eclipse.modisco.omg.kdm.ui.UiPackage"
             genModel="model/kdm.genmodel"/>
    </extension>
    

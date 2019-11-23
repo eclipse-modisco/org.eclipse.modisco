@@ -20,9 +20,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.java.Annotation;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.java.Annotation;
+import org.eclipse.modisco.java.BodyDeclaration;
 import org.eclipse.modisco.jee.queries.JEEQueriesActivator;
 
 public final class EvaluateAnnotation {

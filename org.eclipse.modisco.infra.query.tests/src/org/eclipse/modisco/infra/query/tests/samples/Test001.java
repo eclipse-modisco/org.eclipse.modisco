@@ -10,9 +10,9 @@ package org.eclipse.modisco.infra.query.tests.samples;
  *     Gregoire DUPE (Mia-Software) - initial API and implementation
  */
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class Test001 implements IJavaModelQuery<EObject, String> {
 

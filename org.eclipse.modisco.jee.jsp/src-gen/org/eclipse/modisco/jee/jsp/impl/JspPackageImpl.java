@@ -17,9 +17,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-
-import org.eclipse.gmt.modisco.xml.emf.MoDiscoXMLPackage;
 import org.eclipse.modisco.jee.jsp.ComposedAttribute;
 import org.eclipse.modisco.jee.jsp.JSPAction;
 import org.eclipse.modisco.jee.jsp.JSPComment;
@@ -35,6 +32,7 @@ import org.eclipse.modisco.jee.jsp.JspFactory;
 import org.eclipse.modisco.jee.jsp.JspPackage;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
+import org.eclipse.modisco.xml.emf.MoDiscoXMLPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--

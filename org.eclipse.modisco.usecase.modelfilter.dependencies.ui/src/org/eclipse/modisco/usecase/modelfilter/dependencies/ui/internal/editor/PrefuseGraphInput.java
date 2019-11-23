@@ -16,10 +16,10 @@ package org.eclipse.modisco.usecase.modelfilter.dependencies.ui.internal.editor;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.java.Package;
-import org.eclipse.gmt.modisco.java.Type;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.java.Package;
+import org.eclipse.modisco.java.Type;
 import org.eclipse.modisco.usecase.modelfilter.dependencies.ui.internal.Messages;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IPersistableElement;

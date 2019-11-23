@@ -11,7 +11,7 @@
  */
 package org.eclipse.modisco.jee.jsp;
 
-import org.eclipse.gmt.modisco.xml.Element;
+import org.eclipse.modisco.xml.Element;
 
 /**
  * <!-- begin-user-doc -->

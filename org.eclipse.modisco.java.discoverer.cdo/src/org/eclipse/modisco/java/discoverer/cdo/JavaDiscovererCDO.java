@@ -29,12 +29,12 @@ import org.eclipse.emf.cdo.util.CommitException;
 import org.eclipse.emf.cdo.view.CDOView;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.cdo.server.AbstractCDOServer;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
+import org.eclipse.modisco.infra.common.cdo.server.AbstractCDOServer;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 import org.eclipse.net4j.Net4jUtil;
 import org.eclipse.net4j.tcp.ITCPConnector;
 import org.eclipse.net4j.tcp.TCPUtil;
@@ -171,8 +171,8 @@ public class JavaDiscovererCDO extends DiscoverJavaModelFromJavaProject {
 
 	@Override
 	public JavaFactory getEFactory() {
-		org.eclipse.gmt.modisco.java.cdo.impl.JavaPackageImpl.init();
-		return org.eclipse.gmt.modisco.java.cdo.meta.JavaFactory.eINSTANCE;
+		org.eclipse.modisco.java.cdo.impl.JavaPackageImpl.init();
+		return org.eclipse.modisco.java.cdo.meta.JavaFactory.eINSTANCE;
 	}
 
 	private static void dbInit(final CDOResource resource) {

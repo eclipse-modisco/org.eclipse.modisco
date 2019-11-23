@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.common.cdo;singleton:=true
 Bundle-Version: 1.5.0.qualifier
-Bundle-Activator: org.eclipse.gmt.modisco.infra.common.cdo.internal.Activator
+Bundle-Activator: org.eclipse.modisco.infra.common.cdo.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -17,7 +17,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources;bundle-version="3.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.gmt.modisco.infra.common.cdo.server;
+Export-Package: org.eclipse.modisco.infra.common.cdo.server;
   x-friends:="org.eclipse.gmt.modisco.infra.common.cdo.derby,
    org.eclipse.modisco.java.discoverer.benchmark,
    org.eclipse.modisco.java.discoverer.cdo,

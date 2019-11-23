@@ -20,14 +20,14 @@ import org.eclipse.core.runtime.content.IContentDescription;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.omg.kdm.IKDMConstants;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.kdm.source.discoverer.IKDMDiscoveryConstants;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUml2Activator;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
+import org.eclipse.modisco.omg.kdm.IKDMConstants;
 
 /**
  * @author Gabriel Barbier

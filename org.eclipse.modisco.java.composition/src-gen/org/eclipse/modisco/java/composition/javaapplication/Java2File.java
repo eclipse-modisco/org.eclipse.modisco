@@ -12,8 +12,7 @@
  */
 package org.eclipse.modisco.java.composition.javaapplication;
 
-import org.eclipse.gmt.modisco.java.CompilationUnit;
-
+import org.eclipse.modisco.java.CompilationUnit;
 import org.eclipse.modisco.kdm.source.extension.CodeUnit2File;
 
 /**

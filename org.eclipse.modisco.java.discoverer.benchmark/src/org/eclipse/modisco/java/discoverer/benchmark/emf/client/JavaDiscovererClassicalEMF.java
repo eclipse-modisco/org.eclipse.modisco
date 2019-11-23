@@ -14,8 +14,8 @@ package org.eclipse.modisco.java.discoverer.benchmark.emf.client;
 
 import java.util.Properties;
 
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFromJavaProjectEMFStat;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 public class JavaDiscovererClassicalEMF extends DiscoverJavaModelFromJavaProjectEMFStat {
 	@Override
@@ -27,6 +27,6 @@ public class JavaDiscovererClassicalEMF extends DiscoverJavaModelFromJavaProject
 
 	@Override
 	public JavaFactory getEFactory() {
-		return org.eclipse.gmt.modisco.java.emf.classic.JavaFactory.eINSTANCE;
+		return org.eclipse.modisco.java.emf.classic.JavaFactory.eINSTANCE;
 	}
 }

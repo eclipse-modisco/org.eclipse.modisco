@@ -17,12 +17,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-
-import org.eclipse.gmt.modisco.java.emf.JavaPackage;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourcePackage;
-
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
@@ -30,7 +24,9 @@ import org.eclipse.modisco.java.composition.javaapplication.JavaJar2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaNodeSourceRegion;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationFactory;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;
+import org.eclipse.modisco.java.emf.JavaPackage;
 import org.eclipse.modisco.kdm.source.extension.ExtensionPackage;
+import org.eclipse.modisco.omg.kdm.source.SourcePackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -17,7 +17,7 @@ import java.util.Properties;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.cdo.server.Server;
+import org.eclipse.modisco.infra.common.cdo.server.Server;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.Messages;
 import org.eclipse.modisco.java.discoverer.benchmark.cdo.server.DerbyCDOServerNoAudits;

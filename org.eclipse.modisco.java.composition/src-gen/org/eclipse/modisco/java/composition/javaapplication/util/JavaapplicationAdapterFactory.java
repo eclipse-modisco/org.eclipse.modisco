@@ -18,15 +18,11 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
-
-import org.eclipse.gmt.modisco.omg.kdm.core.Element;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion;
-
 import org.eclipse.modisco.java.composition.javaapplication.*;
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.CodeUnit2File;
+import org.eclipse.modisco.omg.kdm.core.Element;
+import org.eclipse.modisco.omg.kdm.source.SourceRegion;
 
 /**
  * <!-- begin-user-doc -->
@@ -211,13 +207,13 @@ public class JavaapplicationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.omg.kdm.core.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.omg.kdm.core.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.omg.kdm.core.Element
+	 * @see org.eclipse.modisco.omg.kdm.core.Element
 	 * @generated
 	 */
 	public Adapter createElementAdapter() {
@@ -225,13 +221,13 @@ public class JavaapplicationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion <em>Region</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.omg.kdm.source.SourceRegion <em>Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion
+	 * @see org.eclipse.modisco.omg.kdm.source.SourceRegion
 	 * @generated
 	 */
 	public Adapter createSourceRegionAdapter() {

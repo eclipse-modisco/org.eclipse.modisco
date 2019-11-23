@@ -14,8 +14,7 @@ package org.eclipse.modisco.jee.jsp;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.xml.Node;
+import org.eclipse.modisco.xml.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -119,7 +118,7 @@ public interface Page extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Owned Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.gmt.modisco.xml.Node}.
+	 * The list contents are of type {@link org.eclipse.modisco.xml.Node}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Owned Elements</em>' containment reference list isn't clear,

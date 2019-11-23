@@ -20,14 +20,14 @@ package org.eclipse.modisco.java.discoverer;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /** Discover a Java model from a Java class file. */
 public class DiscoverJavaModelFromClassFile extends AbstractModelDiscoverer<IClassFile> {
@@ -39,7 +39,7 @@ public class DiscoverJavaModelFromClassFile extends AbstractModelDiscoverer<ICla
 	}
 
 	protected static JavaFactory getEFactory() {
-		return org.eclipse.gmt.modisco.java.emf.JavaFactory.eINSTANCE;
+		return org.eclipse.modisco.java.emf.JavaFactory.eINSTANCE;
 	}
 
 	protected static IModelReader getClassReader() {

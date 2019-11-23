@@ -25,7 +25,7 @@
       <wizard
             id="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetModelWizardID"
             name="%_UI_FacetModelWizard_label"
-            class="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetModelWizard"
+            class="org.eclipse.modisco.infra.facet.editor.presentation.FacetModelWizard"
             category="org.eclipse.gmt.modisco"
             icon="icons/full/wizban/NewFacet.gif">
          <description>%_UI_FacetModelWizard_description</description>
@@ -39,8 +39,8 @@
             name="%_UI_FacetEditor_label"
             icon="icons/full/obj16/Facet.gif"
             extensions="facetSet"
-            class="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetEditor"
-            contributorClass="org.eclipse.gmt.modisco.infra.facet.editor.presentation.FacetActionBarContributor">
+            class="org.eclipse.modisco.infra.facet.editor.presentation.FacetEditor"
+            contributorClass="org.eclipse.modisco.infra.facet.editor.presentation.FacetActionBarContributor">
          <contentTypeBinding
                contentTypeId="org.eclipse.gmt.modisco.infra.facet.contenttype">
          </contentTypeBinding>

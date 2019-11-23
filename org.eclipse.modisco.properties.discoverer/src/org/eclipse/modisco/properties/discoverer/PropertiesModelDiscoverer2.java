@@ -18,12 +18,12 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.omg.kdm.code.CodeFactory;
-import org.eclipse.gmt.modisco.omg.kdm.code.CompilationUnit;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.Attribute;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmFactory;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+import org.eclipse.modisco.omg.kdm.code.CodeFactory;
+import org.eclipse.modisco.omg.kdm.code.CompilationUnit;
+import org.eclipse.modisco.omg.kdm.kdm.Attribute;
+import org.eclipse.modisco.omg.kdm.kdm.KdmFactory;
 
 public class PropertiesModelDiscoverer2 extends AbstractModelDiscoverer<IFile> {
 

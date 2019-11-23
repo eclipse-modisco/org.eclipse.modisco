@@ -25,12 +25,12 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.gmt.modisco.java.ASTNode;
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.Comment;
-import org.eclipse.gmt.modisco.java.Javadoc;
-import org.eclipse.gmt.modisco.java.Package;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.Comment;
+import org.eclipse.modisco.java.Javadoc;
+import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
 
 /**
@@ -47,7 +47,7 @@ public final class CommentsManager {
 
 	public static void resolveCommentPositions(final JDTVisitor visitor) {
 		org.eclipse.jdt.core.dom.CompilationUnit cuJdtNode = visitor.getCuNode();
-		org.eclipse.gmt.modisco.java.CompilationUnit moDiscoCuNode = (org.eclipse.gmt.modisco.java.CompilationUnit) visitor
+		org.eclipse.modisco.java.CompilationUnit moDiscoCuNode = (org.eclipse.modisco.java.CompilationUnit) visitor
 				.getBijectiveMap().getValue(cuJdtNode);
 		List<Comment> commentsList = new ArrayList<Comment>(visitor.getCommentsBinding()
 				.getValues());
@@ -123,7 +123,7 @@ public final class CommentsManager {
 	 */
 	private List<Comment> jdtLocationSearch(final JDTVisitor visitor,
 			final org.eclipse.jdt.core.dom.CompilationUnit cuJdtNode,
-			final org.eclipse.gmt.modisco.java.CompilationUnit moDiscoCuNode,
+			final org.eclipse.modisco.java.CompilationUnit moDiscoCuNode,
 			final List<Comment> commentsList) {
 		List<Comment> localCommentList = new ArrayList<Comment>(commentsList);
 		SortedMap<Integer, org.eclipse.jdt.core.dom.ASTNode> nodesMap = new TreeMap<Integer, org.eclipse.jdt.core.dom.ASTNode>(
@@ -423,7 +423,7 @@ public final class CommentsManager {
 	 * @param visitor
 	 */
 	private static boolean alternateLocationSearch(final Comment comment, final JDTVisitor visitor,
-			final org.eclipse.gmt.modisco.java.CompilationUnit moDiscoCuNode) {
+			final org.eclipse.modisco.java.CompilationUnit moDiscoCuNode) {
 		ASTNode bestParent = null;
 		org.eclipse.jdt.core.dom.ASTNode jdtComment = visitor.getCommentsBinding().getKey(comment);
 

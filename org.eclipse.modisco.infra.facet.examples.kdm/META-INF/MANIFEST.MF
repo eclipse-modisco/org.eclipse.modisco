@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: %Bundle-Name
 Bundle-ClassPath: .,bin
-Bundle-Activator: org.eclipse.gmt.modisco.infra.facet.examples.kdm.Activator
+Bundle-Activator: org.eclipse.modisco.infra.facet.examples.kdm.Activator
 Bundle-Vendor: %Bundle-Vendor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ManifestVersion: 2

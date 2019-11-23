@@ -12,16 +12,11 @@
 package org.eclipse.modisco.eclipseplugin;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.java.Model;
-
-import org.eclipse.gmt.modisco.omg.kdm.code.CompilationUnit;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.Project;
-
-import org.eclipse.gmt.modisco.xml.Root;
-
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.manifest.Bundle;
+import org.eclipse.modisco.omg.kdm.code.CompilationUnit;
+import org.eclipse.modisco.omg.kdm.source.Project;
+import org.eclipse.modisco.xml.Root;
 
 /**
  * <!-- begin-user-doc -->

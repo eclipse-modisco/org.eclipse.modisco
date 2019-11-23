@@ -9,9 +9,9 @@
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *******************************************************************************/
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class Bug310279 implements IJavaModelQuery<EClass, Boolean> {
 	public Boolean evaluate(final EClass context, final ParameterValueList parameterValues)

@@ -10,9 +10,9 @@
  */
 package org.eclipse.modisco.infra.facet.tests.emf;
 
-import junit.framework.TestCase;
+import org.eclipse.modisco.infra.facet.FacetStructuralFeature;
 
-import org.eclipse.gmt.modisco.infra.facet.FacetStructuralFeature;
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->

@@ -21,13 +21,13 @@ import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.core.runtime.content.IContentTypeManager;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmFactory;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.Segment;
-import org.eclipse.gmt.modisco.omg.kdm.source.Directory;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryContainer;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryItem;
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryModel;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceFactory;
+import org.eclipse.modisco.omg.kdm.kdm.KdmFactory;
+import org.eclipse.modisco.omg.kdm.kdm.Segment;
+import org.eclipse.modisco.omg.kdm.source.Directory;
+import org.eclipse.modisco.omg.kdm.source.InventoryContainer;
+import org.eclipse.modisco.omg.kdm.source.InventoryItem;
+import org.eclipse.modisco.omg.kdm.source.InventoryModel;
+import org.eclipse.modisco.omg.kdm.source.SourceFactory;
 
 /**
  * Services for building a basic file system representation, based on the Source

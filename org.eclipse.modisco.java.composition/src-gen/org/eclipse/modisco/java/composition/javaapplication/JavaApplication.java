@@ -15,10 +15,8 @@ package org.eclipse.modisco.java.composition.javaapplication;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.gmt.modisco.java.Model;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryModel;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.omg.kdm.source.InventoryModel;
 
 /**
  * <!-- begin-user-doc -->

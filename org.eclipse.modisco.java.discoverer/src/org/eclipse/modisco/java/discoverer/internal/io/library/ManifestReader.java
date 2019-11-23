@@ -16,14 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Archive;
-import org.eclipse.gmt.modisco.java.Manifest;
-import org.eclipse.gmt.modisco.java.ManifestAttribute;
-import org.eclipse.gmt.modisco.java.ManifestEntry;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.Manifest;
+import org.eclipse.modisco.java.ManifestAttribute;
+import org.eclipse.modisco.java.ManifestEntry;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 public final class ManifestReader {
 

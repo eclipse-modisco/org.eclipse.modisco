@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;

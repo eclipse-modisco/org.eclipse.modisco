@@ -20,17 +20,17 @@ package org.eclipse.modisco.java.discoverer;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /** Discover a Java model from a jar file. */
 public class DiscoverJavaModelFromLibrary extends AbstractModelDiscoverer<IPackageFragmentRoot> {
@@ -47,7 +47,7 @@ public class DiscoverJavaModelFromLibrary extends AbstractModelDiscoverer<IPacka
 	}
 
 	protected static JavaFactory getEFactory() {
-		return org.eclipse.gmt.modisco.java.emf.JavaFactory.eINSTANCE;
+		return org.eclipse.modisco.java.emf.JavaFactory.eINSTANCE;
 	}
 
 	protected static LibraryReader getLibraryReader() {

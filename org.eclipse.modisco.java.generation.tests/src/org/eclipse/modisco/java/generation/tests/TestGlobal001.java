@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.gmt.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Ignore;

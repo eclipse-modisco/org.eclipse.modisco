@@ -14,12 +14,12 @@
  */
 package org.eclipse.modisco.infra.query.tests.emf;
 
+import org.eclipse.modisco.infra.query.ModelQuerySet;
+import org.eclipse.modisco.infra.query.QueryFactory;
+
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
-import org.eclipse.gmt.modisco.infra.query.QueryFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.gmt.modisco.infra.query.QueryFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link org.eclipse.gmt.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String) <em>Get Query</em>}</li>
+ *   <li>{@link org.eclipse.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String) <em>Get Query</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -105,10 +105,10 @@ public class ModelQuerySetTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.gmt.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String) <em>Get Query</em>}' operation.
+	 * Tests the '{@link org.eclipse.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String) <em>Get Query</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.gmt.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String)
+	 * @see org.eclipse.modisco.infra.query.ModelQuerySet#getQuery(java.lang.String)
 	 * @generated
 	 */
 	public void testGetQuery__String() {

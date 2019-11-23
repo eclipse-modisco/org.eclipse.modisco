@@ -14,23 +14,6 @@ package org.eclipse.modisco.java.discoverer.internal.core;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-import org.eclipse.gmt.modisco.java.AbstractTypeDeclaration;
-import org.eclipse.gmt.modisco.java.BodyDeclaration;
-import org.eclipse.gmt.modisco.java.EnumConstantDeclaration;
-import org.eclipse.gmt.modisco.java.EnumDeclaration;
-import org.eclipse.gmt.modisco.java.FieldDeclaration;
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.NamedElement;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
-import org.eclipse.gmt.modisco.java.Type;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.VariableDeclaration;
-import org.eclipse.gmt.modisco.java.VariableDeclarationExpression;
-import org.eclipse.gmt.modisco.java.VariableDeclarationFragment;
-import org.eclipse.gmt.modisco.java.VariableDeclarationStatement;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
 import org.eclipse.jdt.core.IField;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.IJavaProject;
@@ -38,8 +21,25 @@ import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.VariableDeclaration;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 
 /** @author Gabriel Barbier */
 public class JavaJdtBridge {
@@ -314,9 +314,9 @@ public class JavaJdtBridge {
 	 * @return the Package instance which corresponds to the IPackageFragment
 	 *         instance
 	 */
-	public final org.eclipse.gmt.modisco.java.Package getJavaPackage(final Resource resource,
+	public final org.eclipse.modisco.java.Package getJavaPackage(final Resource resource,
 			final IPackageFragment jdtFragment) {
-		org.eclipse.gmt.modisco.java.Package result = null;
+		org.eclipse.modisco.java.Package result = null;
 		/*
 		 * first step retrieve the model
 		 */
@@ -337,8 +337,8 @@ public class JavaJdtBridge {
 			if (this.debug) {
 				System.out.println(Messages.JavaJdtBridge_0 + element.getName());
 			}
-			if (element instanceof org.eclipse.gmt.modisco.java.Package) {
-				result = (org.eclipse.gmt.modisco.java.Package) element;
+			if (element instanceof org.eclipse.modisco.java.Package) {
+				result = (org.eclipse.modisco.java.Package) element;
 			}
 		}
 		return result;

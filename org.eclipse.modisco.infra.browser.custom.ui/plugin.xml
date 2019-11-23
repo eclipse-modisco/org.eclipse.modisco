@@ -19,7 +19,7 @@
       </category>
       <view
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.browser.custom.ui.views.CustomizationsView"
+            class="org.eclipse.modisco.infra.browser.custom.ui.views.CustomizationsView"
             icon="icons/uiCustom.gif"
             id="org.eclipse.gmt.modisco.infra.browser.custom.view"
             name="%customizations.view.name"
@@ -30,7 +30,7 @@
          point="org.eclipse.ui.newWizards">
       <wizard
             category="org.eclipse.gmt.modisco"
-            class="org.eclipse.gmt.modisco.infra.browser.custom.ui.wizards.NewCustomizationWizard"
+            class="org.eclipse.modisco.infra.browser.custom.ui.wizards.NewCustomizationWizard"
             hasPages="true"
             icon="icons/modisco_new_customization.gif"
             id="org.eclipse.gmt.modisco.infra.ui.browser.custom.ui.newCustomizationWizard"

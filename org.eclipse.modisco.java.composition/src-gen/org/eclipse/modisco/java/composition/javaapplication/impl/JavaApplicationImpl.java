@@ -28,15 +28,12 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.eclipse.gmt.modisco.java.Model;
-
-
-import org.eclipse.gmt.modisco.omg.kdm.source.InventoryModel;
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
 import org.eclipse.modisco.java.composition.javaapplication.JavaJar2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;
+import org.eclipse.modisco.omg.kdm.source.InventoryModel;
 
 /**
  * <!-- begin-user-doc -->

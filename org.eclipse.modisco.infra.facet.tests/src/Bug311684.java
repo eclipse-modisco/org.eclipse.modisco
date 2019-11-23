@@ -10,9 +10,9 @@
  *******************************************************************************/
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class Bug311684 implements IJavaModelQuery<EObject, Boolean> {
 	public Boolean evaluate(final EObject context, final ParameterValueList parameterValues)

@@ -17,11 +17,9 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
-
-import org.eclipse.gmt.modisco.xml.Element;
-import org.eclipse.gmt.modisco.xml.Node;
 import org.eclipse.modisco.jee.jsp.*;
+import org.eclipse.modisco.xml.Element;
+import org.eclipse.modisco.xml.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -342,13 +340,13 @@ public class JspAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.xml.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.xml.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.xml.Node
+	 * @see org.eclipse.modisco.xml.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -356,13 +354,13 @@ public class JspAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.gmt.modisco.xml.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.xml.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.gmt.modisco.xml.Element
+	 * @see org.eclipse.modisco.xml.Element
 	 * @generated
 	 */
 	public Adapter createElementAdapter() {

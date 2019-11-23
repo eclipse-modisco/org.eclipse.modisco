@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.gmt.modisco.infra.browser.custom.core;singleton:=true
 Bundle-Version: 1.5.0.qualifier
-Bundle-Activator: org.eclipse.gmt.modisco.infra.browser.custom.core.Activator
+Bundle-Activator: org.eclipse.modisco.infra.browser.custom.core.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -15,7 +15,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.gmt.modisco.infra.query.core;bundle-version="0.8.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.gmt.modisco.infra.browser.custom.core;
+Export-Package: org.eclipse.modisco.infra.browser.custom.core;
   x-friends:="org.eclipse.gmt.modisco.infra.browser,
    org.eclipse.gmt.modisco.infra.browser.custom.ui,
    org.eclipse.gmt.modisco.infra.browser.custom.tests,

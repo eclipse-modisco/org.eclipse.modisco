@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.xmi.XMLLoad;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
-import org.eclipse.gmt.modisco.infra.common.core.internal.resource.NoExternalLoadXmlResourceImpl;
+import org.eclipse.modisco.infra.common.core.internal.resource.NoExternalLoadXmlResourceImpl;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**

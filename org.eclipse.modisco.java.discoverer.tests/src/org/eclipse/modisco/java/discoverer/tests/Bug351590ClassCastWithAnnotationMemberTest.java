@@ -11,14 +11,14 @@
 
 package org.eclipse.modisco.java.discoverer.tests;
 
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
-import org.eclipse.gmt.modisco.java.Expression;
-import org.eclipse.gmt.modisco.java.MethodDeclaration;
-import org.eclipse.gmt.modisco.java.MethodInvocation;
-import org.eclipse.gmt.modisco.java.Statement;
-import org.eclipse.gmt.modisco.java.VariableDeclarationStatement;
-import org.eclipse.gmt.modisco.java.internal.util.JavaUtil;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodInvocation;
+import org.eclipse.modisco.java.Statement;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
 import org.eclipse.modisco.java.discoverer.tests.utils.AbstractDiscoverTest;
+import org.eclipse.modisco.java.internal.util.JavaUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

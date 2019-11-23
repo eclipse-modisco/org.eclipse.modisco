@@ -16,8 +16,8 @@ import java.util.Map;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.gmt.modisco.infra.common.core.internal.extensions.AbstractRegistry;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.infra.common.core.internal.extensions.AbstractRegistry;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
 import org.eclipse.swt.graphics.Image;
 import org.osgi.framework.Bundle;

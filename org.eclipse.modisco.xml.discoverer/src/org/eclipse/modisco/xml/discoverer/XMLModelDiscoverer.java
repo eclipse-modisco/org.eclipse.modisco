@@ -29,15 +29,15 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.gmt.modisco.xml.internal.resource.GenericXMLHandler;
-import org.eclipse.gmt.modisco.xml.resource.GenericXMLResourceFactoryImpl;
-import org.eclipse.gmt.modisco.xml.resource.GenericXMLResourceImpl;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.Messages;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.xml.discoverer.internal.XmlActivator;
+import org.eclipse.modisco.xml.internal.resource.GenericXMLHandler;
+import org.eclipse.modisco.xml.resource.GenericXMLResourceFactoryImpl;
+import org.eclipse.modisco.xml.resource.GenericXMLResourceImpl;
 
 /**
  * Discover generic XML model action.

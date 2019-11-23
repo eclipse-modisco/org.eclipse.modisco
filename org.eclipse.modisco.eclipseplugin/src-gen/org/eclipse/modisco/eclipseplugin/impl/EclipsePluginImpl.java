@@ -18,19 +18,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
-import org.eclipse.gmt.modisco.java.Model;
-
-import org.eclipse.gmt.modisco.omg.kdm.code.CompilationUnit;
-
-import org.eclipse.gmt.modisco.omg.kdm.source.Project;
-
-import org.eclipse.gmt.modisco.xml.Root;
-
 import org.eclipse.modisco.eclipseplugin.EclipsePlugin;
 import org.eclipse.modisco.eclipseplugin.EclipsepluginPackage;
-
+import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.manifest.Bundle;
+import org.eclipse.modisco.omg.kdm.code.CompilationUnit;
+import org.eclipse.modisco.omg.kdm.source.Project;
+import org.eclipse.modisco.xml.Root;
 
 /**
  * <!-- begin-user-doc -->

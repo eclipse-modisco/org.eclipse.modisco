@@ -16,7 +16,7 @@
 		point="org.eclipse.core.runtime.applications"
 		name="%extension.name">
 		<application cardinality="1" thread="main">
-			<run class="org.eclipse.gmt.modisco.infra.common.cdo.derby.DerbyCDOServer"/>
+			<run class="org.eclipse.modisco.infra.common.cdo.derby.DerbyCDOServer"/>
  		</application>
 	</extension>
 </plugin>

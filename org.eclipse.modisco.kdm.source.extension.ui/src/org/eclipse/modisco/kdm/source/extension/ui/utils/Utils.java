@@ -17,8 +17,8 @@ package org.eclipse.modisco.kdm.source.extension.ui.utils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.gmt.modisco.omg.kdm.source.SourceRegion;
 import org.eclipse.modisco.kdm.source.extension.CodeUnit2File;
+import org.eclipse.modisco.omg.kdm.source.SourceRegion;
 
 public final class Utils {
 

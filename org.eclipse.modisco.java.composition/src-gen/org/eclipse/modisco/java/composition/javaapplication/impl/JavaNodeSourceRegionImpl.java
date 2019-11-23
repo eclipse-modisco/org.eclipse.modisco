@@ -14,10 +14,7 @@ package org.eclipse.modisco.java.composition.javaapplication.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.gmt.modisco.java.ASTNode;
-
-
+import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.composition.javaapplication.JavaNodeSourceRegion;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;
 import org.eclipse.modisco.kdm.source.extension.impl.ASTNodeSourceRegionImpl;

@@ -37,7 +37,6 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.core.runtime.jobs.JobChangeAdapter;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.m2m.atl.common.ATLLaunchConstants;
 import org.eclipse.m2m.atl.core.ATLCoreException;
 import org.eclipse.m2m.atl.core.IExtractor;
@@ -49,6 +48,7 @@ import org.eclipse.m2m.atl.core.emf.EMFModel;
 import org.eclipse.m2m.atl.core.launch.ILauncher;
 import org.eclipse.m2m.atl.core.service.CoreService;
 import org.eclipse.m2m.atl.engine.parser.AtlParser;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper.ModelInfo;
 import org.eclipse.swt.widgets.Display;
@@ -60,7 +60,7 @@ public class KdmToUmlConverter {
 
 	public static final String MM_LOCATION = "resources/metamodels"; //$NON-NLS-1$
 	public static final String TRANSFO_LOCATION = "resources/transformations"; //$NON-NLS-1$
-	public static final String KDM_MM_URI = org.eclipse.gmt.modisco.omg.kdm.action.ActionPackage.eNS_URI;
+	public static final String KDM_MM_URI = org.eclipse.modisco.omg.kdm.action.ActionPackage.eNS_URI;
 	//public static final String UML_MM_URI = "http://www.eclipse.org/uml2/2.1.0/UML"; //$NON-NLS-1$
 	public static final String UML_MM_URI = "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"; //$NON-NLS-1$
 	private static final String ATL_MM_PATH = "http://www.eclipse.org/gmt/2005/ATL"; //$NON-NLS-1$

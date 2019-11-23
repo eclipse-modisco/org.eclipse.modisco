@@ -7,11 +7,11 @@ Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.eclipse.gmt.modisco.infra.browser.custom,
- org.eclipse.gmt.modisco.infra.browser.custom.emf,
- org.eclipse.gmt.modisco.infra.browser.custom.emf.util,
- org.eclipse.gmt.modisco.infra.browser.custom.util;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor,org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.uicore",
- org.eclipse.gmt.modisco.infra.browser.custom.validation;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.core"
+Export-Package: org.eclipse.modisco.infra.browser.custom,
+ org.eclipse.modisco.infra.browser.custom.emf,
+ org.eclipse.modisco.infra.browser.custom.emf.util,
+ org.eclipse.modisco.infra.browser.custom.util;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.editor,org.eclipse.gmt.modisco.infra.browser,org.eclipse.gmt.modisco.infra.browser.uicore",
+ org.eclipse.modisco.infra.browser.custom.validation;x-friends:="org.eclipse.gmt.modisco.infra.browser.custom.core"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.swt,

@@ -27,7 +27,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.cdo.server.IRepository;
 import org.eclipse.emf.cdo.server.db.CDODBUtil;
 import org.eclipse.emf.cdo.server.db.mapping.IMappingStrategy;
-import org.eclipse.gmt.modisco.infra.common.cdo.server.AbstractCDOServer;
+import org.eclipse.modisco.infra.common.cdo.server.AbstractCDOServer;
 import org.eclipse.net4j.db.IDBAdapter;
 import org.eclipse.net4j.db.h2.H2Adapter;
 

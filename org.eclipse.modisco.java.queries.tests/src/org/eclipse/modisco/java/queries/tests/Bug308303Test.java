@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.gmt.modisco.infra.query.ModelQuery;
-import org.eclipse.gmt.modisco.infra.query.ModelQuerySet;
-import org.eclipse.gmt.modisco.infra.query.core.AbstractModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.ModelQuerySetCatalog;
-import org.eclipse.gmt.modisco.java.CatchClause;
-import org.eclipse.gmt.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.infra.query.ModelQuery;
+import org.eclipse.modisco.infra.query.ModelQuerySet;
+import org.eclipse.modisco.infra.query.core.AbstractModelQuery;
+import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
+import org.eclipse.modisco.java.CatchClause;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
 import org.junit.Assert;
 import org.junit.Test;
 

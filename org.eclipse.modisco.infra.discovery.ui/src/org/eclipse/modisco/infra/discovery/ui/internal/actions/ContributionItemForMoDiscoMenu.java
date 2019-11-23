@@ -19,10 +19,10 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.gmt.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.jface.action.ContributionItem;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
 import org.eclipse.modisco.infra.discovery.ui.Activator;

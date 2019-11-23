@@ -14,8 +14,8 @@
 package org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal;
 
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.jdt.core.IMethod;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.discoverer.internal.core.JavaJdtBridge;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.CallNode;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.methodcalls.CallsModel;

@@ -19,10 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.gmt.modisco.java.CompilationUnit;
-
-
+import org.eclipse.modisco.java.CompilationUnit;
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2File;
 import org.eclipse.modisco.java.composition.javaapplication.JavaapplicationPackage;

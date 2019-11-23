@@ -11,9 +11,9 @@
 package org.eclipse.modisco.infra.query.tests.samples;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
 
 public class ReturnType implements IJavaModelQuery<EObject, Integer> {
 	public Integer evaluate(final EObject context, final ParameterValueList parameterValues)

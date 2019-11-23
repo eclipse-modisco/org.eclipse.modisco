@@ -11,16 +11,16 @@
 
 package org.eclipse.modisco.java.discoverer.internal.io.library;
 
-import org.eclipse.gmt.modisco.java.Model;
-import org.eclipse.gmt.modisco.java.NamedElement;
-import org.eclipse.gmt.modisco.java.Type;
-import org.eclipse.gmt.modisco.java.TypeAccess;
-import org.eclipse.gmt.modisco.java.emf.JavaFactory;
 import org.eclipse.jdt.core.IJavaElement;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.Binding;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
 import org.eclipse.modisco.java.discoverer.internal.io.library.binding.JavaModelDelegateBindingFactory;
+import org.eclipse.modisco.java.emf.JavaFactory;
 
 /**
  * The class provides tools for the ClassFileParser.
@@ -96,7 +96,7 @@ public final class ClassFileParserUtils {
 	 */
 	public static void initializePrimitiveTypes(final JavaFactory factory, final Model model,
 			final BindingManager globalBindings) {
-		org.eclipse.gmt.modisco.java.PrimitiveType primitiveType;
+		org.eclipse.modisco.java.PrimitiveType primitiveType;
 		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString()) == null) {
 			primitiveType = factory.createPrimitiveTypeInt();
 			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString());

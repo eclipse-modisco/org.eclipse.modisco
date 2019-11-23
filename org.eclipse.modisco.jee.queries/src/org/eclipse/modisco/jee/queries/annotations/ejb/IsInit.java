@@ -11,10 +11,10 @@
  */
 package org.eclipse.modisco.jee.queries.annotations.ejb;
 
-import org.eclipse.gmt.modisco.infra.query.core.exception.ModelQueryExecutionException;
-import org.eclipse.gmt.modisco.infra.query.core.java.IJavaModelQuery;
-import org.eclipse.gmt.modisco.infra.query.core.java.ParameterValueList;
-import org.eclipse.gmt.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
+import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
+import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
+import org.eclipse.modisco.java.MethodDeclaration;
 import org.eclipse.modisco.jee.queries.annotations.internal.EvaluateAnnotation;
 
 public class IsInit implements IJavaModelQuery<MethodDeclaration, Boolean> {
