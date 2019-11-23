@@ -1146,7 +1146,7 @@ org/eclipse/gmt/am3/tools/ant/toolkit/AM3BuildListener.java
 The AM3BuildListener class listens to Ant builds and cleans up the models after Ant finishes.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -1158,7 +1158,7 @@ org/eclipse/gmt/am3/tools/ant/tasks/LoadModelTask.java
 Updated version of the LoadModelTask class that registers an AM3BuildListener for each model that is loaded.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -1170,7 +1170,7 @@ Patch to integrate AM3BuildListener
 This patch is done against the latest source zip from CVS. Please note that merging local changes is very difficult if the source is committed as a zipfile. Can you please consider committing the ant task source directly?
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -1182,7 +1182,7 @@ Patch to integrate AM3BuildListener
 Added addConfiguredSuperimpose() method and refactored addition of superimposed asm files.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
       
@@ -2762,7 +2762,7 @@ A solution would be to use the Eclipse workspace for file I/O, just like all oth
 Patch for resolving writeTo() filenames against the Eclipse workspace
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -2791,7 +2791,7 @@ Patch for resolving writeTo() filenames against the Eclipse workspace
 Eclipse 3.2 jars cause NoClassDefFoundError to be thrown on trying to resolve files against the Eclipse workspace. This was not caught by the previous patch.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10054,7 +10054,7 @@ to class TypeMapper.
 Fixed version of ATLModelTransformationTask.java
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.
 
 This version also fixes &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=143215&quot;&gt;Bug 143215&lt;/a&gt; for AM3.</thetext>
@@ -10066,7 +10066,7 @@ This version also fixes &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.
 Fixed version of OutModel.java
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.
 
 This version also fixes Bug 143215 for AM3.</thetext>
@@ -10163,7 +10163,7 @@ Patch for multiple-file meta-models
 
 This patch fixes loading of meta-models (extent) including referenced meta-models (referencedExtents). It also implements name-based lookup for both the main extent and all of the referencedExtents.
 
-Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or any later version.</thetext>
+Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
             <who>dennis.wagelaar@vub.ac.be</who>
@@ -10179,7 +10179,7 @@ It also does an extent.unload() within the dispose() method and dispose() is cal
 http://groups.yahoo.com/group/atl_discussion/message/976
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10198,7 +10198,7 @@ called by the finalize() method. This code needs testing against this issue:
 http://groups.yahoo.com/group/atl_discussion/message/976
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10213,7 +10213,7 @@ any later version.</thetext>
 Updated patch that prevents StackOverflowError in ASMEMFModel.addReferencedExtentsFor()
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10238,7 +10238,7 @@ Additional patch that searches referenced superclasses
 This patch extends the addReferencedExtentsFor() method to navigate the superclasses as well in the search for referenced Resources.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10251,7 +10251,7 @@ This patch extends the addReferencedExtentsFor() method to navigate the
 referenced data types as well in the search for referenced Resources.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10402,7 +10402,7 @@ Patch for fully qualified meta-class names
 This patch allows the use of fully qualified meta-class names, separated by &apos;::&apos;. The behaviour should be the same as in EMF4ATL.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10504,7 +10504,7 @@ Since the real model URI is always known before the transformation, the proposal
 This patch creates new models with URI
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10514,7 +10514,7 @@ any later version.</thetext>
 This patch creates new models with URI
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10524,7 +10524,7 @@ any later version.</thetext>
 This patch creates new models with URI
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -10534,7 +10534,7 @@ any later version.</thetext>
 This patch creates new models with URI
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11157,7 +11157,7 @@ So... I&apos;ve fixed the wrong problem, since the finalization should never occ
 &gt; 
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11181,7 +11181,7 @@ This patch always registers a meta-model, even if there&apos;s already a registr
 This patch also includes the code for postponed loading of registered meta-models for which the Eclipse plugin has not yet been loaded by OSGI. See also Bug # 156103.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11193,7 +11193,7 @@ Patch for safe unloading of EMF Resources and postponed loading of uninitialised
 The previous version of this patch would cause ATL to always use the default XMI resource factory. The original &quot;init()&quot; method has been restored, which registers the fallback resource factory in the global registry instead of the local (overriding) registry.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11298,7 +11298,7 @@ any later version.</thetext>
 Patch for supporting wrapped meta-models
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11373,7 +11373,7 @@ EMF uses the FeatureMapEntry data type to represent mixed content. EMF4ATL does 
 Patch for supporting assignment of FeatureMapEntry attributes
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11448,7 +11448,7 @@ The patch requires the root module to be specified as the main transformation an
 This isn&apos;t optimal, since the order in which the child modules override the rules is unspecified. The user is currently responsible for avoiding conflicts between child modules. In the future, the AtlLauncher and the Eclipse user interface should support a special run configuration field for specifying a sorted list of child modules (or similar).
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11460,7 +11460,7 @@ New version of AtlModuleInheritance.java, supporting attribute helpers
 This version allows child modules to add their own attribute helpers.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11481,7 +11481,7 @@ Patch for supporting module superimposition
 This patch uses the term &quot;superimposition&quot; instead of inheritance. It also creates a special parameter in the AtlLauncher for superimposed modules. Superimposed modules are no longer in the same map as libraries, which means that libraries are treated the original way and superimposed modules are now configured in a separate, sorted list.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11493,7 +11493,7 @@ Patch that introduces an Advanced tab in the launch configuration with support f
 This patch adds module superimposition support to the launch configuration interface. It also fixes a minor bug in the MainAtlTab in which the selected model transformation field is emptied after returning to the main tab from another tab.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11505,7 +11505,7 @@ Updated version of ATLModelTransformationTask.java that supports module superimp
 Could not make a patch, because source code is not properly checked into CVS (zipped).
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11517,7 +11517,7 @@ org/eclipse/gmt/am3/tools/ant/tasks/nestedelement/Superimpose.java
 New Java file that implements the nested &lt;superimpose path=&quot;xyz&quot;/&gt; element.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11527,7 +11527,7 @@ any later version.</thetext>
 Updated AtlSuperimposeModule.java that supports atl2006 asm code
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11751,7 +11751,7 @@ I&apos;ll submit a bug report for this...</thetext>
 Patch that adds saveModel(ASMModel, OutputStream) to AtlModelHandler and AtlEMFModelHandler
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11761,7 +11761,7 @@ any later version.</thetext>
 Patch that adds saveModel(ASMModel, OutputStream) to AtlMDRModelHandler
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11773,7 +11773,7 @@ Patch that provides a fallback method for saving to URI outside Eclipse
 Changing the AtlModelHandler interface was a bad idea: it breaks other model handler implementations. This patch simply fixes the existing saveModel(ASMModel, String) method.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11975,7 +11975,7 @@ This patch ensures that ASMEMFModelElement.emf2ASM() resolves the real ASMEMFMod
 Unfortunately, this patch also includes the changes for bug nr 156094. These changes haven&apos;t yet been committed to CVS.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -11996,7 +11996,7 @@ ASMEMFModel when converting an EObject to an ASMEMFModelElement. It
 does not give an error when it can&apos;t find the real ASMEMFModel, but uses the ASMEMFModel containing the model element referring to the EObject as a &quot;proxy&quot; (i.e. fall back to the old behaviour). Unfortunately, this patch also includes the changes for bug nr 156094. These changes haven&apos;t yet been committed to CVS.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -12071,7 +12071,7 @@ Patch to ASMEMFModelElement that resolves the real ASMModel for each EObject
 Updated patch against current CVS.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -12211,7 +12211,7 @@ From the console exception, it becomes clear that the ATL VM LocalObjectReferenc
 Patch against LocalObjectReference that passes a stackframe to ASMModelElement.get()
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -13222,7 +13222,7 @@ This patch used the local registry to register the &quot;*&quot; fallback resour
 This patch also removes the call to addAllReferencedExtents() in the constructor, since the extent may not have been loaded yet.
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">
@@ -16467,7 +16467,7 @@ This patch checks if Platform.getExtensionRegistry() returns null and throws a R
 &gt; 
 
 Signed off by Dennis Wagelaar &lt;dennis.wagelaar@vub.ac.be&gt; to be published under
-the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v10.html) or
+the Eclipse Public License v.1.0 (http://www.eclipse.org/legal/epl-v20.html) or
 any later version.</thetext>
           </long_desc>
           <long_desc isprivate="0">

@@ -1,9 +1,9 @@
 /*******************************************************************************
  * Copyright (c) 2013, 2017 Soft-Maint, and Mia-Software.
  * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
+ * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+ * http://www.eclipse.org/legal/epl-v20.html
  *
  * Contributors:
  *    David Couvrand (Soft-Maint) - Bug 418418 - [Customization] Overlay icons not implemented

@@ -27,7 +27,7 @@
    </vm>
 
    <license>
-        <url>http://www.eclipse.org/legal/epl-v10.html</url>
+        <url>http://www.eclipse.org/legal/epl-v20.html</url>
         <text>
    Eclipse Foundation Software User Agreement
 February 1, 2011
@@ -51,7 +51,7 @@ Applicable Licenses
 Unless otherwise indicated, all Content made available by the
 Eclipse Foundation is provided to you under the terms and conditions of
 the Eclipse Public License Version 1.0 (&quot;EPL&quot;). A copy of the EPL is
-provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html.
+provided with this Content and is also available at http://www.eclipse.org/legal/epl-v20.html.
 For purposes of the EPL, &quot;Program&quot; will mean the Content.
 
 Content includes, but is not limited to, source code, object code,
