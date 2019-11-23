@@ -139,7 +139,7 @@
               <requirement>
                 <type>eclipse-plugin</type>
                 <id>org.antlr.runtime</id>
-                <versionRange>[3.0.0,3.1.0)</versionRange>
+                <versionRange>[3.2.0,3.3.0)</versionRange>
               </requirement>
               <requirement>
                 <type>eclipse-plugin</type>
