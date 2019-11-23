@@ -73,7 +73,7 @@
     <module>org.eclipse.modisco.java.queries</module>
     <module>org.eclipse.modisco.omg.kdm</module>
     <module>org.eclipse.modisco.omg.kdm.edit</module>
-    <module>org.eclipse.gmt.modisco.omg.smm</module>
+    <!--module>See Bug 553387 org.eclipse.gmt.modisco.omg.smm</module-->
     <module>org.eclipse.modisco.tool.metricsvisualizationbuilder</module>
     <module>org.eclipse.modisco.xml</module>
     <module>org.eclipse.modisco.xml.browser.customization</module>
@@ -177,9 +177,9 @@
     <module>org.eclipse.modisco.infra.discovery.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</module>
-    <module>org.eclipse.gmt.modisco.java.nousages</module>
-    <module>org.eclipse.gmt.modisco.java.nousages.cdo</module>
-    <module>org.eclipse.gmt.modisco.java.classiceobject</module>
+    <module>org.eclipse.modisco.java.nousages</module>
+    <module>org.eclipse.modisco.java.nousages.cdo</module>
+    <module>org.eclipse.modisco.java.classiceobject</module>
     <module>org.eclipse.modisco.infra.facet.tests</module>
 
     <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests</module>
