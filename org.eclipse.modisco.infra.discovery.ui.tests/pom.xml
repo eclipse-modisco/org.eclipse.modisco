@@ -27,6 +27,11 @@
                         <id>org.eclipse.modisco.sdk.feature.feature.group</id>
                         <versionRange>0.0.0</versionRange>
                      </requirement>
+                      <requirement>
+                        <type>eclipse-plugin</type>
+                        <id>org.eclipse.osgi.compatibility.state</id>
+                        <versionRange>[1.1.0,2.0.0)</versionRange>
+                     </requirement>
                   </extraRequirements>
                </dependency-resolution>
             </configuration>
