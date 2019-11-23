@@ -24,7 +24,7 @@ public interface ICommandFactory extends
 		org.eclipse.modisco.facet.util.emf.core.internal.exported.ICommandFactory {
 
 	// The content of this interface ha been moved to
-	// org.eclipse.emf.facet.util.emf.core.internal.exported.ICommandFactory to
+	// org.eclipse.modisco.facet.util.emf.core.internal.exported.ICommandFactory to
 	// solve a cyclic
-	// dependency issue (with the plug-in org.eclipse.emf.facet.custom.ui)
+	// dependency issue (with the plug-in org.eclipse.modisco.facet.custom.ui)
 }

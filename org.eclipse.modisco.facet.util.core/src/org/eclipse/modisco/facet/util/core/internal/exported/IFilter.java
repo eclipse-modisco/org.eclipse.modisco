@@ -17,7 +17,7 @@ package org.eclipse.modisco.facet.util.core.internal.exported;
  * @since 0.2
  */
 public interface IFilter<T> {
-	// This class has been copied from org.eclipse.emf.facet.infra.common.core.internal.utils.IFilter
+	// This class has been copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.IFilter
 	
 	/**
 	 * @param object

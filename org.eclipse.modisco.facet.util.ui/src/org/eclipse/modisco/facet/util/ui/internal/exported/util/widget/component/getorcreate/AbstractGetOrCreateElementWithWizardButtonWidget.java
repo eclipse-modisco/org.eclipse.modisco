@@ -45,7 +45,7 @@ public abstract class AbstractGetOrCreateElementWithWizardButtonWidget<T extends
 				// TODO The wizard closing events must be cached by the use of
 				// call back pattern. The use of this pattern must be done in
 				// the subclass of this class, like in
-				// org.eclipse.emf.facet.util.ui.internal.exported.util.widget.component.getorcreate.AbstractGetOrCreateElementWithWizardButtonWidget<ETypedElement>
+				// org.eclipse.modisco.facet.util.ui.internal.exported.util.widget.component.getorcreate.AbstractGetOrCreateElementWithWizardButtonWidget<ETypedElement>
 				// The following if statement and the methods 'onWizardCommited'
 				// 'onWizardCanceled' must be removed (replaced by the use of
 				// call backs)

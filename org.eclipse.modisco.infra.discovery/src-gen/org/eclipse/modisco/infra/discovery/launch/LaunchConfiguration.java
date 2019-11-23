@@ -48,7 +48,7 @@ public interface LaunchConfiguration extends EObject {
 	 * @return the value of the '<em>Source</em>' attribute.
 	 * @see #setSource(Object)
 	 * @see org.eclipse.modisco.infra.discovery.launch.LaunchPackage#getLaunchConfiguration_Source()
-	 * @model dataType="org.eclipse.emf.facet.util.emf.core.serialization.model.serialization.ExtensibleSerializableJavaObject"
+	 * @model dataType="org.eclipse.modisco.facet.util.emf.core.serialization.model.serialization.ExtensibleSerializableJavaObject"
 	 * @generated
 	 */
 	Object getSource();

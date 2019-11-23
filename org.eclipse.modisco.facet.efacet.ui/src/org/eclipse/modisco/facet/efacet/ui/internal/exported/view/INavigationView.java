@@ -106,7 +106,7 @@ public interface INavigationView {
 
 	/**
 	 * This method returns the list of {@link IETypedElementResultDisplayerOpener} which have
-	 * been resisted using the org.eclipse.emf.facet.efacet.ui.displayeropener extension point.
+	 * been resisted using the org.eclipse.modisco.facet.efacet.ui.displayeropener extension point.
 	 * 
 	 * @return a list of {@link IETypedElementResultDisplayerOpener}
 	 */

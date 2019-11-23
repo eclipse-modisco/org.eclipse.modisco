@@ -8,8 +8,8 @@
  *
  * Contributors:
  *    Gregoire Dupe (Mia-Software) - Bug 366804 - [Restructuring] Table widget upgrade
- *    Grégoire Dupé (Mia-Software) - Bug 365843 - [Unit Test Failure][0.2/3.8][0.2/4.2] org.eclipse.emf.facet.widgets.nattable.tests.swtbot.Bug344925Test.testBug344925
- *    Grégoire Dupé (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
+ *    Grégoire Dupé (Mia-Software) - Bug 365843 - [Unit Test Failure][0.2/3.8][0.2/4.2] org.eclipse.modisco.facet.widgets.nattable.tests.swtbot.Bug344925Test.testBug344925
+ *    Grégoire Dupé (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.modisco.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
  *    Grégoire Dupé (Mia-Software) - Bug 373078 - API Cleaning
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.emf.core;

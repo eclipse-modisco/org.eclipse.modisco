@@ -31,7 +31,7 @@ import org.eclipse.modisco.facet.util.emf.core.ICatalogSetManagerFactory;
 import org.osgi.framework.Bundle;
 
 public class QueryImplementationFactoryRegistry {
-	private static final String EXT_ID = "org.eclipse.emf.facet.efacet.core.queryImplementationRegistration"; //$NON-NLS-1$
+	private static final String EXT_ID = "org.eclipse.modisco.facet.efacet.core.queryImplementationRegistration"; //$NON-NLS-1$
 	private static final String CLASS = "class"; //$NON-NLS-1$
 	public static final QueryImplementationFactoryRegistry INSTANCE = new QueryImplementationFactoryRegistry();
 

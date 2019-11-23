@@ -66,7 +66,7 @@ public final class ModelUtils {
 	 * Computes a list of {@link EObject}s from the same {@link ResourceSet} as
 	 * <code>source</code> that can be assigned to the given feature.
 	 */
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.computeAssignableElements(EStructuralFeature, EObject)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.computeAssignableElements(EStructuralFeature, EObject)
 	public static List<EObject> computeAssignableElements(final EStructuralFeature feature,
 			final EObject source) {
 		EClassifier eType = feature.getEType();
@@ -104,7 +104,7 @@ public final class ModelUtils {
 	 *            the metaclass whose subclasses must be found
 	 * @return all the subclasses
 	 */
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.allSubClasses(final EClass context)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.allSubClasses(final EClass context)
 	public static List<EClass> allSubClasses(final EClass context) {
 		List<EClass> result = new ArrayList<EClass>();
 		// Set<Resource> resources = new HashSet<Resource>();
@@ -128,13 +128,13 @@ public final class ModelUtils {
 		return result;
 	}
 	
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.isSuperTypeOf(final EClass self, final EClass typeDeclaration)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.isSuperTypeOf(final EClass self, final EClass typeDeclaration)
 	public static boolean isSuperTypeOf(final EClass self, final EClass typeDeclaration) {
 		return typeDeclaration.getEAllSuperTypes().contains(self);
 	}
 	
 	/** @return the qualified name of the given metaclass */
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.getMetaclassQualifiedName(final EClassifier eClass)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.getMetaclassQualifiedName(final EClassifier eClass)
 	public static String getMetaclassQualifiedName(final EClassifier eClass) {
 		final ArrayList<String> qualifiedNameParts = new ArrayList<String>();
 		final StringBuilder builder = new StringBuilder();
@@ -160,7 +160,7 @@ public final class ModelUtils {
 	 * 
 	 * @return a name for the given element
 	 */
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.getName(EObject)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.getName(EObject)
 	public static String getName(final EObject eObject) {
 		IItemLabelProvider itemLabelProvider = (IItemLabelProvider) new ComposedAdapterFactory(
 				ComposedAdapterFactory.Descriptor.Registry.INSTANCE).adapt(eObject, IItemLabelProvider.class);
@@ -174,7 +174,7 @@ public final class ModelUtils {
 	 * @return a default name based on a string feature of the given
 	 *         {@link EObject}
 	 */
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.getDefaultName(EObject)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.getDefaultName(EObject)
 	public static String getDefaultName(final EObject eObject) {
 		// find a feature that can be used as a name
 		final EStructuralFeature feature = ModelUtils.getLabelFeature(eObject.eClass());
@@ -188,7 +188,7 @@ public final class ModelUtils {
 	}
 	
 	//Copied from ReflectiveItemProvider class
-	//Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils.getLabelFeature(EClass)
+	//Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils.getLabelFeature(EClass)
 	private static EStructuralFeature getLabelFeature(final EClass eClass) {
 		EAttribute result = null;
 		for (final EAttribute eAttribute : eClass.getEAllAttributes()) {

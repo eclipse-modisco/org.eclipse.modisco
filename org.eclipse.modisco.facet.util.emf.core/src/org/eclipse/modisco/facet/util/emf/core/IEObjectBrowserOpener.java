@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * This class is used to register a Browser (typically an Eclipse editor or view), that can be
  * opened from a given EObject. The registration is done through the
- * "org.eclipse.emf.facet.util.emf.core.modelViewer" extension point.
+ * "org.eclipse.modisco.facet.util.emf.core.modelViewer" extension point.
  */
 public interface IEObjectBrowserOpener {
 

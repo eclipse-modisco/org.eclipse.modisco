@@ -27,7 +27,7 @@ import org.eclipse.osgi.util.NLS;
  * The singleton registry of {@link IETypedElementResultDisplayer}s, which initializes
  * the registry by reading extensions when first accessed.
  */
-//Copied from org.eclipse.emf.facet.infra.query.ui.views.queryExecution.internal.QueryResultDisplayersRegistry
+//Copied from org.eclipse.modisco.facet.infra.query.ui.views.queryExecution.internal.QueryResultDisplayersRegistry
 public class QueryResultDisplayersRegistry extends AbstractRegistry {
 
 	private static final String EXTENSION_POINT_NAME = "eTypedElementResultDisplay"; //$NON-NLS-1$

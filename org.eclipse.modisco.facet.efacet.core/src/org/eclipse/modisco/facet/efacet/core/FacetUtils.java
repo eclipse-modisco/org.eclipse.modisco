@@ -405,7 +405,7 @@ public final class FacetUtils {
 	}
 
 	// Moved from
-	// org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.impl.FacetSetImpl
+	// org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.impl.FacetSetImpl
 	public static EPackage getExtendedEPackage(final FacetSet facetSet) {
 		final List<Facet> facets = FacetUtils.getFacets(facetSet);
 		EPackage result = null;
@@ -426,7 +426,7 @@ public final class FacetUtils {
 	}
 
 	// Copied (and refactored) from
-	// org.eclipse.emf.facet.efacet.core.internal.FacetManager
+	// org.eclipse.modisco.facet.efacet.core.internal.FacetManager
 	public static <T extends ETypedElement> Set<T> getETypedElements(
 			final EObject eObject, final Class<T> classs,
 			final IFacetManager facetManager) throws FacetManagerException {
@@ -439,7 +439,7 @@ public final class FacetUtils {
 	}
 
 	// Copied (and refactored) from
-	// org.eclipse.emf.facet.efacet.core.internal.FacetManager
+	// org.eclipse.modisco.facet.efacet.core.internal.FacetManager
 	private static <T extends ETypedElement> Set<T> getETypedElements(
 			final EObject eObject, final FacetSet facetSet,
 			final Class<T> classs, final IFacetManager manager)
@@ -491,7 +491,7 @@ public final class FacetUtils {
 	}
 
 	// Copied (and refactored) from
-	// org.eclipse.emf.facet.efacet.core.internal.FacetManager
+	// org.eclipse.modisco.facet.efacet.core.internal.FacetManager
 	private static List<ETypedElement> getAllETypedElements(
 			final Facet facet) {
 		final List<ETypedElement> structFeatures = new LinkedList<ETypedElement>();
@@ -563,7 +563,7 @@ public final class FacetUtils {
 	 * 
 	 */
 	// Copied from
-	// org.eclipse.emf.facet.efacet.core.internal.FacetManagerContext
+	// org.eclipse.modisco.facet.efacet.core.internal.FacetManagerContext
 	// * Contributors:
 	// * Olivier Remaud (Soft-Maint) - Bug 361794 - [Restructuring] EMF Facet
 	// customization meta-model

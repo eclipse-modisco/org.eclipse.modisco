@@ -21,7 +21,7 @@ import org.eclipse.modisco.facet.efacet.core.internal.exception.DerivedTypedElem
 public class DerivedTypedElementException extends Exception {
 
 	// This class is a copy of :
-	// org.eclipse.emf.facet.infra.query.core.exception.ModelQueryException
+	// org.eclipse.modisco.facet.infra.query.core.exception.ModelQueryException
 
 	private static final long serialVersionUID = -3203874059325745157L;
 

@@ -23,7 +23,7 @@ import com.ibm.icu.lang.UCharacter;
  * @author Gabriel Barbier
  * @since 0.2
  */
-// Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.StringUtils
+// Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.StringUtils
 public final class StringUtils {
 	public static final String ELLIPSIS = Messages.StringUtils_ellipsis;
 	private static final int TRUNCATE_AFTER = 150;

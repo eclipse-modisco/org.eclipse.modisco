@@ -18,7 +18,7 @@ import org.eclipse.ui.IPersistableElement;
 
 /**
  * A default implementation of {@link IResourceEditorInput}. For editors that
- * can take a {@link Resource} as an input (supported by the EmfFacet model
+ * can take a {@link Resource} as an input (supported by the MoDisco Facet model
  * browser)
  */
 public class ResourceEditorInput implements IEditorInput {

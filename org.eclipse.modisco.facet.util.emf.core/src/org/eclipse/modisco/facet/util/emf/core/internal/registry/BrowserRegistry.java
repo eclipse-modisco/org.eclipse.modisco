@@ -45,7 +45,7 @@ public class BrowserRegistry implements IBrowserRegistry {
 	private final List<IEObjectBrowserOpener> eobjectBrowserOpeners;
 	private final List<IResourceBrowserOpener> resourceBrowserOpeners;
 
-	public static final String EXTENSION_POINT_MODEL_VIEWER_ID = "org.eclipse.emf.facet.util.emf.core.modelViewer"; //$NON-NLS-1$
+	public static final String EXTENSION_POINT_MODEL_VIEWER_ID = "org.eclipse.modisco.facet.util.emf.core.modelViewer"; //$NON-NLS-1$
 
 	public static final String CLASS = "class"; //$NON-NLS-1$
 
@@ -155,7 +155,7 @@ public class BrowserRegistry implements IBrowserRegistry {
 			}
 		}
 		// By default return the first editor registered through the extension
-		// point org.eclipse.emf.facet.util.emf.core.modelViewer
+		// point org.eclipse.modisco.facet.util.emf.core.modelViewer
 		if (!this.epackageBrowserOpeners.isEmpty()) {
 			return this.epackageBrowserOpeners.get(0);
 		}
@@ -178,7 +178,7 @@ public class BrowserRegistry implements IBrowserRegistry {
 			}
 		}
 		// By default return the first editor registered through the extension
-		// point org.eclipse.emf.facet.util.emf.core.modelViewer
+		// point org.eclipse.modisco.facet.util.emf.core.modelViewer
 		if (!this.eobjectBrowserOpeners.isEmpty()) {
 			return this.eobjectBrowserOpeners.get(0);
 		}
@@ -201,7 +201,7 @@ public class BrowserRegistry implements IBrowserRegistry {
 			}
 		}
 		// By default return the first editor registered through the extension
-		// point org.eclipse.emf.facet.util.emf.core.modelViewer
+		// point org.eclipse.modisco.facet.util.emf.core.modelViewer
 		if (!this.resourceBrowserOpeners.isEmpty()) {
 			return this.resourceBrowserOpeners.get(0);
 		}

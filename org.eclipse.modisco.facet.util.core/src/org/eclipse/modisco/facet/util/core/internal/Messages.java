@@ -15,7 +15,7 @@ package org.eclipse.modisco.facet.util.core.internal;
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {
-	private static String BUNDLE_NAME = "org.eclipse.emf.facet.util.core.internal.messages"; //$NON-NLS-1$
+	private static String BUNDLE_NAME = "org.eclipse.modisco.facet.util.core.internal.messages"; //$NON-NLS-1$
 	public static String AbstractRegistry_id;
 	public static String AbstractRegistry_colon;
 	public static String AbstractRegistry_requiredAttributeNotDefined;

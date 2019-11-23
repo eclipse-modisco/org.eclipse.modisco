@@ -23,7 +23,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
  * @author Grégoire Dupé (Mia-Software)
  */
 @Deprecated
-//Copied from org.eclipse.emf.facet.infra.query.ui.ImageProvider
+//Copied from org.eclipse.modisco.facet.infra.query.ui.ImageProvider
 public final class ImageProvider {
 	//	private static final String MODEL_QUERY = "icons/modelQuery.png"; //$NON-NLS-1$
 	private static final String REMOVE = "icons/remove.gif"; //$NON-NLS-1$

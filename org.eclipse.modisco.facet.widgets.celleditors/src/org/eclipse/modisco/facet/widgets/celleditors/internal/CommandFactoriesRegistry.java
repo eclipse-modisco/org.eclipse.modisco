@@ -8,7 +8,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
  *******************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.internal;
@@ -27,7 +27,7 @@ import org.eclipse.modisco.facet.widgets.celleditors.ICommandFactory;
 /** Registry for the "loadingDepth" extension point */
 public class CommandFactoriesRegistry extends AbstractRegistry implements ICommandFactoriesRegistry {
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.emf.facet.widgets.celleditors"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.facet.widgets.celleditors"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "commandFactories"; //$NON-NLS-1$
 
 	private static final String COMMAND_FACTORY_ELEMENT = "commandFactory"; //$NON-NLS-1$

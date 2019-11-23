@@ -13,7 +13,7 @@ package org.eclipse.modisco.facet.common.ui.internal;
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.common.ui.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.common.ui.internal.messages"; //$NON-NLS-1$
 	public static String ElementsView_refreshJobTitle;
 	static {
 		// initialize resource bundle

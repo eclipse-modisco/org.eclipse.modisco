@@ -8,8 +8,8 @@
  * Contributors:
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software)
- *    Nicolas Bros (Mia-Software) - Bug 339657 - Move Logger to org.eclipse.emf.facet.util.core
- *    Nicolas Bros (Mia-Software) - Bug 340031 - NPE in org.eclipse.emf.facet.util.core.Logger#log
+ *    Nicolas Bros (Mia-Software) - Bug 339657 - Move Logger to org.eclipse.modisco.facet.util.core
+ *    Nicolas Bros (Mia-Software) - Bug 340031 - NPE in org.eclipse.modisco.facet.util.core.Logger#log
  *    Grégoire Dupé (Mia-Software) - Bug 483451 - Logger and DebugUtils : Add "String.format" API
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.core;

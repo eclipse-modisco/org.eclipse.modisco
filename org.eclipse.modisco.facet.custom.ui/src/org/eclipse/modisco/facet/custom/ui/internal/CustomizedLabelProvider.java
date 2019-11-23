@@ -9,7 +9,7 @@
  *  Contributors:
  *  	Gregoire Dupe (Mia-Software) - Bug 361794 - [Restructuring] New customization meta-model
  *      Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
- *      Nicolas Bros (Mia-Software) - Bug 372198 - resource leak in org.eclipse.emf.facet.custom.ui.internal.CustomizedLabelProvider
+ *      Nicolas Bros (Mia-Software) - Bug 372198 - resource leak in org.eclipse.modisco.facet.custom.ui.internal.CustomizedLabelProvider
  *      Vincent Lorenzo (CEA-LIST) - Bug 372644 - Create Customizable tooltips for the TreeViewer using a CustomizableLabelProvider
  *      Gregoire Dupe (Mia-Software) - Bug 373078 - API Cleaning
  *      Nicolas Bros (Mia-Software) - Bug 374941 - To be able to customize overlay icons on EClass

@@ -31,7 +31,7 @@ import org.eclipse.osgi.util.NLS;
  * @since 0.2
  */
 public abstract class AbstractRegistry {
-// copy of org.eclipse.emf.facet.infra.common.core.internal.extensions.AbstractRegistry
+// copy of org.eclipse.modisco.facet.infra.common.core.internal.extensions.AbstractRegistry
 	/**
 	 * Initialize the registry by reading the extension point to discover
 	 * extensions. This method calls

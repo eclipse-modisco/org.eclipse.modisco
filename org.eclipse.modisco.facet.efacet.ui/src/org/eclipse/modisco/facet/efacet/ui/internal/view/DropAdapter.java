@@ -27,7 +27,7 @@ import org.eclipse.swt.dnd.DropTargetListener;
  * transferred locally (i.e. through {@link LocalTransfer}), and calls the given
  * {@link DropAction} with the dropped {@link EObject}s.
  */
-//Copied from org.eclipse.emf.facet.infra.query.ui.views.queryExecution.internal.DropAdapter
+//Copied from org.eclipse.modisco.facet.infra.query.ui.views.queryExecution.internal.DropAdapter
 public class DropAdapter implements DropTargetListener {
 
 	private final DropAction dropAction;

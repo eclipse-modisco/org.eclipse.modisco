@@ -66,7 +66,7 @@ import org.eclipse.modisco.facet.util.emf.core.ModelUtils;
  */
 class FacetManagerContext implements List<FacetSet> {
 
-	private static final String SILENT_OPTION = "org.eclipse.emf.facet.efacet.core.internal.FacetManagerContext.getOverrideCandidateFeatures.silent"; //$NON-NLS-1$
+	private static final String SILENT_OPTION = "org.eclipse.modisco.facet.efacet.core.internal.FacetManagerContext.getOverrideCandidateFeatures.silent"; //$NON-NLS-1$
 	private static final boolean SILENT = Boolean
 			.getBoolean(FacetManagerContext.SILENT_OPTION);
 	private static final boolean DEBUG = DebugUtils.getDebugStatus(Activator.getDefault());

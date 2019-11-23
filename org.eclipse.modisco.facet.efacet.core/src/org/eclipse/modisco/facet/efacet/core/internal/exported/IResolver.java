@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * The interface has to be implemented to contribute to the extension point
- * 'org.eclipse.emf.facet.efacet.core.internal.resolver'.
+ * 'org.eclipse.modisco.facet.efacet.core.internal.resolver'.
  */
 public interface IResolver {
 

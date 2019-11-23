@@ -9,12 +9,12 @@
  * Contributors:
  * 	  Grégoire Dupé (Mia-Software) - Bug 334000 Simple catalog manager
  *    Nicolas Guyomar (Mia-Software) - Bug 334000 Simple catalog manager
- *    Nicolas Guyomar (Mia-Software) - Bug 334529 - ICatalogManager should be exposed in org.eclipse.emf.facet.common.core
+ *    Nicolas Guyomar (Mia-Software) - Bug 334529 - ICatalogManager should be exposed in org.eclipse.modisco.facet.common.core
  *    Nicolas Guyomar (Mia-Software) - Bug 338811 - A model registration method in the interface ICatalogSetManager
  *    Grégoire Dupé (Mia-Software) - Bug 338811 - A model registration method in the interface ICatalogSetManager
  *    Emmanuelle Rouillé (Mia-Software) - Bug 352618 - To be able to use non derived facet structural features and save them values.
  *    Grégoire Dupé (Mia-Software) - Bug 362084 - Get the instance of a catalog manager
- *    Grégoire Dupé (Mia-Software) - Bug 362087 - [Deprecated] org.eclipse.emf.facet.util.emf.core.ICatalogSetManager
+ *    Grégoire Dupé (Mia-Software) - Bug 362087 - [Deprecated] org.eclipse.modisco.facet.util.emf.core.ICatalogSetManager
  *    Grégoire Dupé (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model
  */
 package org.eclipse.modisco.facet.util.emf.core.internal.catalog;
@@ -52,8 +52,8 @@ import org.osgi.framework.Bundle;
 @Deprecated
 public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 
-	private static final String CATALOG_MGR_EXTENSION_POINT_ID = "org.eclipse.emf.facet.util.emf.core.catalogmanager"; //$NON-NLS-1$
-	private static final String MODEL_DECLARATION_EXTENSION_POINT_ID = "org.eclipse.emf.facet.util.emf.core.modeldeclaration"; //$NON-NLS-1$
+	private static final String CATALOG_MGR_EXTENSION_POINT_ID = "org.eclipse.modisco.facet.util.emf.core.catalogmanager"; //$NON-NLS-1$
+	private static final String MODEL_DECLARATION_EXTENSION_POINT_ID = "org.eclipse.modisco.facet.util.emf.core.modeldeclaration"; //$NON-NLS-1$
 	private static final String CLASS = "class"; //$NON-NLS-1$
 	private static final String FILE = "file"; //$NON-NLS-1$
 

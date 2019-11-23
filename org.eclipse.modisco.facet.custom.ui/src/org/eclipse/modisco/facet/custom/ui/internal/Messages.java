@@ -17,7 +17,7 @@ package org.eclipse.modisco.facet.custom.ui.internal;
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.custom.ui.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.custom.ui.internal.messages"; //$NON-NLS-1$
 	public static String CustomizationsCatalogView_title;
 	public static String CustomizationsView_allQuerySets;
 	public static String CustomizationsView_jobName_RefreshCustomizationsView;

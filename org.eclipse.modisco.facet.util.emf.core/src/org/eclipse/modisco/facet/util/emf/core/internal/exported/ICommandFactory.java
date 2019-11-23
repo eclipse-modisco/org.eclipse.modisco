@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
  * 
  * @since 0.2
  */
-// Copied from org.eclipse.emf.facet.widgets.celleditors.ICommandFactory
+// Copied from org.eclipse.modisco.facet.widgets.celleditors.ICommandFactory
 public interface ICommandFactory {
 	/**
 	 * Whether this command factory should be used for the given {@link EditingDomain}

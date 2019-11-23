@@ -21,7 +21,7 @@ import org.eclipse.modisco.facet.util.core.internal.ErrorHandlingUtils;
  */
 public class DerivedTypedElementEvaluationException extends DerivedTypedElementException {
 	// This class is a copy of
-	// org.eclipse.emf.facet.infra.query.core.ModelQueryExecutionException
+	// org.eclipse.modisco.facet.infra.query.core.ModelQueryExecutionException
 
 	private static final long serialVersionUID = -8464252257666617685L;
 

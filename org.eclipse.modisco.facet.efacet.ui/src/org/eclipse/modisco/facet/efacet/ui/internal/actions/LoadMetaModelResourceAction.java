@@ -31,7 +31,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
-// This class has been copied from org.eclipse.emf.facet.infra.facet.editor.presentation.LoadMetaModelResourceAction
+// This class has been copied from org.eclipse.modisco.facet.infra.facet.editor.presentation.LoadMetaModelResourceAction
 
 /**
  * @author Gregoire Dupe

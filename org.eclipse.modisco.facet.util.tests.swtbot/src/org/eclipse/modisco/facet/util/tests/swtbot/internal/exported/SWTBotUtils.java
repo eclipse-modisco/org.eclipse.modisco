@@ -8,7 +8,7 @@
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - Bug 343811 - EMF Facet Regression : Created elements in a table are not serialized
  *   Nicolas Guyomar (Mia-Software) - Bug 342154 - EMF Facet API should be covered with Unit tests
- *   Gregoire Dupe (Mia-Software) - Bug 368030 - [Unit Test Failure] org.eclipse.emf.facet.widgets.table.tests.internal.v0_1.swtbot.NatTableUITests.testAddQueryColumn
+ *   Gregoire Dupe (Mia-Software) - Bug 368030 - [Unit Test Failure] org.eclipse.modisco.facet.widgets.table.tests.internal.v0_1.swtbot.NatTableUITests.testAddQueryColumn
  *   Gregoire Dupe (Mia-Software) - Bug 382109 - [Unit Test Failure] Timeout after: 5000 ms.: Timed out waiting for Shell {Resource - } to close
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.tests.swtbot.internal.exported;

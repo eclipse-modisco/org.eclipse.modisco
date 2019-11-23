@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Nicolas Bros (Mia-Software) - Bug 339653 - org.eclipse.emf.facet.widgets API Cleaning
+ *    Nicolas Bros (Mia-Software) - Bug 339653 - org.eclipse.modisco.facet.widgets API Cleaning
  *    Vincent Lorenzo (CEA-LIST) - bug 341192 - Add the method to get the image for Select Columns To Hide in the ImageManager
  *******************************************************************************/
 package org.eclipse.modisco.facet.widgets.internal;

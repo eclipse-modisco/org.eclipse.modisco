@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *    Gregoire Dupe (Mia-Software) - Bug 417789 - org.eclipse.emf.facet.util.core should not so much dependencies
+ *    Gregoire Dupe (Mia-Software) - Bug 417789 - org.eclipse.modisco.facet.util.core should not so much dependencies
  */
  package org.eclipse.modisco.facet.util.pde.core.internal;
 

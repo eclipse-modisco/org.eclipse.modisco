@@ -32,7 +32,7 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.query.Navigation
 public class NavigationQueryImplementation implements IQueryImplementation {
 
 	// This class is a modified copy of :
-	// org.eclipse.emf.facet.infra.query.core.java.internal.JavaModelQueryAdapter
+	// org.eclipse.modisco.facet.infra.query.core.java.internal.JavaModelQueryAdapter
 
 	private boolean checkResultType = false;
 

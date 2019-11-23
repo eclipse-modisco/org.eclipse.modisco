@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Laurent Pichierri (Soft-Maint) - Bug 371204 - Compatibility with Helios (copied from org.eclipse.emf.facet.util.core.internal.BuildPropertiesUtils.getBuildModel(IPluginModelBase))
+ *    Laurent Pichierri (Soft-Maint) - Bug 371204 - Compatibility with Helios (copied from org.eclipse.modisco.facet.util.core.internal.BuildPropertiesUtils.getBuildModel(IPluginModelBase))
  *    Gregoire Dupe (Mia-Software) - Bug 382359 - Compatibility with Helios
  *******************************************************************************/
 package org.eclipse.gmt.modisco.infra.common.core.internal.utils;
@@ -45,7 +45,7 @@ public final class BuildPropertiesUtils {
 	 *         does not exist
 	 * @throws CoreException
 	 */
-	//Copied from org.eclipse.emf.facet.util.core.internal.BuildPropertiesUtils.getBuildModel(IPluginModelBase) (EPL)
+	//Copied from org.eclipse.modisco.facet.util.core.internal.BuildPropertiesUtils.getBuildModel(IPluginModelBase) (EPL)
 	public static IBuildModel getBuildModel(final IPluginModelBase model) throws CoreException {
 		IProject project = model.getUnderlyingResource().getProject();
 		IPluginModelBase pluginModelBase = PluginRegistry.findModel(project);

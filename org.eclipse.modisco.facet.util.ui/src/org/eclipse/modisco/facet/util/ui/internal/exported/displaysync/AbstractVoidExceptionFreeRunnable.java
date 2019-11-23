@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    Gr�goire Dup� (Mia-Software) - Bug 365808 - [Unit Test Failure][0.2/4.2][0.2/3.8] org.eclipse.emf.facet.widgets.nattable.tests.NatTableAPITests
+ *    Gr�goire Dup� (Mia-Software) - Bug 365808 - [Unit Test Failure][0.2/4.2][0.2/3.8] org.eclipse.modisco.facet.widgets.nattable.tests.NatTableAPITests
  *    Gr�goire Dup� (Mia-Software) - Bug 367153 - synchronization utilities
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.ui.internal.exported.displaysync;

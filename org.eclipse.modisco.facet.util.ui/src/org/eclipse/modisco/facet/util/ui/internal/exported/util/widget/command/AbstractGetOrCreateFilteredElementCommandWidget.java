@@ -104,7 +104,7 @@ public abstract class AbstractGetOrCreateFilteredElementCommandWidget<T extends 
 	}
 
 	/* (non-Javadoc)
-	 * @see org.eclipse.emf.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#getElementSelected()
+	 * @see org.eclipse.modisco.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#getElementSelected()
 	 */
 	public T getElementSelected() {
 		T result = null;
@@ -118,7 +118,7 @@ public abstract class AbstractGetOrCreateFilteredElementCommandWidget<T extends 
 	}
 
 	/* (non-Javadoc)
-	 * @see org.eclipse.emf.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#selectElement(T)
+	 * @see org.eclipse.modisco.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#selectElement(T)
 	 */
 	public void selectElement(final T element) {
 		Object[] selectionsParam = new Object[1];
@@ -138,7 +138,7 @@ public abstract class AbstractGetOrCreateFilteredElementCommandWidget<T extends 
 	}
 
 	/* (non-Javadoc)
-	 * @see org.eclipse.emf.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#pressNewButton()
+	 * @see org.eclipse.modisco.facet.util.ui.internal.exported.util.widget.command.IGetOrCreateFilteredElementCommmandWidget#pressNewButton()
 	 */
 	public IDialog<W> pressNewButton() {
 		return new SynchronizedAbstractDialog<W>(

@@ -9,7 +9,7 @@
  *    Fabien Giquel (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - Bug 338437 - compositeEditors extension point cannot be used to register user types
  *    Nicolas Guyomar (Mia-Software) - Bug 338826 - CompositeEditorFactoriesRegistry.getCompositeEditorFactory() should be parameterized 
- *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *    Nicolas Bros (Mia-Software) - Bug 341369 - CompositeEditorFactoriesRegistry : inverted type comparison
  *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
  *******************************************************************************/
@@ -33,7 +33,7 @@ public class CompositeEditorFactoriesRegistry extends AbstractRegistry
 
 	private static final String CLASS_ATTRIBUTE = "class"; //$NON-NLS-1$
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.emf.facet.widgets.celleditors"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.facet.widgets.celleditors"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "compositeEditorFactories"; //$NON-NLS-1$
 	private final List<ICompositeEditorFactory<?>> compositeFactories;
 

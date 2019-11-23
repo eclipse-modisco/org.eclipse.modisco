@@ -24,7 +24,7 @@ import org.eclipse.modisco.facet.query.java.core.IParameterValueList2;
 
 public class ParameterValueList2 extends ArrayList<ParameterValue> implements IParameterValueList2 {
 	// This class is a copy of
-	// org.eclipse.emf.facet.infra.query.core.java.ParameterValueList
+	// org.eclipse.modisco.facet.infra.query.core.java.ParameterValueList
 
 	private static final long serialVersionUID = 1L;
 

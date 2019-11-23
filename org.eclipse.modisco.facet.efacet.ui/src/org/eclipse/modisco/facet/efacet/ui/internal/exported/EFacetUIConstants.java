@@ -12,7 +12,7 @@ package org.eclipse.modisco.facet.efacet.ui.internal.exported;
 
 public final class EFacetUIConstants {
 
-	private static final String CATALOG_VIEW_ID = "org.eclipse.emf.facet.efacet.ui.view.catalog"; //$NON-NLS-1$
+	private static final String CATALOG_VIEW_ID = "org.eclipse.modisco.facet.efacet.ui.view.catalog"; //$NON-NLS-1$
 
 	private EFacetUIConstants() {
 		// utility class

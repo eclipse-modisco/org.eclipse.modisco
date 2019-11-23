@@ -53,7 +53,7 @@ public abstract class AbstractCommandWidget extends AbstractWidget implements IC
 	}
 
 	/* (non-Javadoc)
-	 * @see org.eclipse.emf.facet.util.ui.internal.exported.util.widget.command.ICommandWidget#getCommand()
+	 * @see org.eclipse.modisco.facet.util.ui.internal.exported.util.widget.command.ICommandWidget#getCommand()
 	 */
 	public abstract Object getCommand();
 

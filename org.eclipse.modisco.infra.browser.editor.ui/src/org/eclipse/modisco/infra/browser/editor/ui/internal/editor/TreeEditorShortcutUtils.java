@@ -39,13 +39,13 @@ public final class TreeEditorShortcutUtils {
 			final ResourceSet resourceSet) {
 		final List<ICustomShortcut> shortcuts = new ArrayList<ICustomShortcut>();
 		addShortcut(resourceSet, shortcuts,
-				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideDerivedReferences.custom", //$NON-NLS-1$
+				"platform:/plugin/org.eclipse.modisco.facet.ecore.ui/custom/hideDerivedReferences.custom", //$NON-NLS-1$
 				Messages.TreeEditorShortcutUtils_CustomHideDerivedReferences);
 		addShortcut(resourceSet, shortcuts,
-				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/hideEmptyReferences.custom", //$NON-NLS-1$
+				"platform:/plugin/org.eclipse.modisco.facet.ecore.ui/custom/hideEmptyReferences.custom", //$NON-NLS-1$
 				Messages.TreeEditorShortcutUtils_CustomHideEmptyReferences);
 		addShortcut(resourceSet, shortcuts,
-				"platform:/plugin/org.eclipse.emf.facet.ecore.ui/custom/linksCount.custom", //$NON-NLS-1$
+				"platform:/plugin/org.eclipse.modisco.facet.ecore.ui/custom/linksCount.custom", //$NON-NLS-1$
 				Messages.TreeEditorShortcutUtils_CustomShowLinksCount);
 		return shortcuts;
 	}

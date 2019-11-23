@@ -25,7 +25,7 @@ import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
 
 @SuppressWarnings("synthetic-access")
-//Copied from org.eclipse.emf.facet.infra.query.ui.views.queryExecution.internal.ContextPaneMenuManager
+//Copied from org.eclipse.modisco.facet.infra.query.ui.views.queryExecution.internal.ContextPaneMenuManager
 public class ContextPaneMenuManager extends MenuManager implements IMenuListener {
 
 	private final EditableContext context;

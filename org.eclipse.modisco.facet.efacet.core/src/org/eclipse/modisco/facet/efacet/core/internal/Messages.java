@@ -15,7 +15,7 @@ import org.eclipse.osgi.util.NLS;
 
 @SuppressWarnings("PMD")
 public final class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.efacet.core.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.efacet.core.internal.messages"; //$NON-NLS-1$
 	public static String EFacetCatalogManager_FacetSetCatalogName;
 	public static String EFacetCatalogManager_QuerySetCatalogName;
 	static {

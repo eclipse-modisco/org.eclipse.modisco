@@ -27,7 +27,7 @@ public class PropertiesHandlerFactory implements
 
 	/**
 	 * @deprecated must be replaced by
-	 *             org.eclipse.emf.facet.custom.ui.internal.PropertiesHandlerFactory
+	 *             org.eclipse.modisco.facet.custom.ui.internal.PropertiesHandlerFactory
 	 *             .createIContentPropertiesHandler(ICustomizationManager)
 	 */
 	@Deprecated

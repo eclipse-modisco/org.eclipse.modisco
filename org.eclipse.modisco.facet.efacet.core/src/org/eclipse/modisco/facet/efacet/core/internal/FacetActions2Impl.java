@@ -9,7 +9,7 @@
  * Contributors:
  * 	Nicolas Guyomar (Mia-Software) - Bug 338813 - [EMF Facet Framework] basic Facet actions
  *  Nicolas Bros (Mia-Software) - Bug 361612 - New core for new version of the Facet metamodel
- *  Gregoire Dupe (Mia-Software) - Bug 362087 - [Deprecated] org.eclipse.emf.facet.util.emf.core.ICatalogSetManager
+ *  Gregoire Dupe (Mia-Software) - Bug 362087 - [Deprecated] org.eclipse.modisco.facet.util.emf.core.ICatalogSetManager
  */
 package org.eclipse.modisco.facet.efacet.core.internal;
 

@@ -8,7 +8,7 @@
  *
  * Contributors:
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
- *   Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *   Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *****************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.internal;
 
@@ -20,7 +20,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.emf.facet.widgets.celleditors"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.facet.widgets.celleditors"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

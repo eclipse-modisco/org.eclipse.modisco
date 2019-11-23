@@ -109,7 +109,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.part.WorkbenchPart;
 
-//Copied from org.eclipse.emf.facet.infra.query.ui.views.queryExecution.internal.QueryExecutionView
+//Copied from org.eclipse.modisco.facet.infra.query.ui.views.queryExecution.internal.QueryExecutionView
 public class NavigationView extends ViewPart implements INavigationView {
 
 	/**

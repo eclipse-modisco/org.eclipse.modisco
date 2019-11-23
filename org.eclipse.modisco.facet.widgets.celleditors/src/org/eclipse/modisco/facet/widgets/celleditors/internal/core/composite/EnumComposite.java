@@ -8,7 +8,7 @@
  *
  * Contributors:
  *   Gregoire Dupe (Mia-Software) - initial API and implementation
- *   Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *   Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *   Nicolas Bros (Mia-Software) - Bug 334539 - [celleditors] change listener
  *   Gregoire Dupe (Mia-Software) - Bug 344563 - NPE with Enum Editor
  *   Nicolas Guyomar (Mia-Software) - Bug 344563 - NPE with Enum Editor 

@@ -25,7 +25,7 @@ import org.eclipse.modisco.facet.util.core.Logger;
 public class ResolverManager implements IResolverManager {
 
 	private static final String ATT_NAME = "class"; //$NON-NLS-1$
-	private static final String EXT_POINT_ID = "org.eclipse.emf.facet.efacet.core.internal.resolver"; //$NON-NLS-1$
+	private static final String EXT_POINT_ID = "org.eclipse.modisco.facet.efacet.core.internal.resolver"; //$NON-NLS-1$
 	private final List<IResolver> resolvers = new ArrayList<IResolver>();
 
 	public ResolverManager() {

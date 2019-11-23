@@ -14,7 +14,7 @@ package org.eclipse.modisco.facet.widgets.celleditors.ecore;
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.widgets.celleditors.ecore.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.widgets.celleditors.ecore.messages"; //$NON-NLS-1$
 	public static String MultiLineDialog_enterAValue;
 	static {
 		// initialize resource bundle

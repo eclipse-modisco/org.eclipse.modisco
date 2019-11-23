@@ -91,7 +91,7 @@ public class LabelQuery implements IJavaQuery2<EObject, String> {
 	 * @return a default name based on a string feature of the given
 	 *         {@link EObject}
 	 */
-	// from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils
+	// from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils
 	public static String getDefaultName(final EObject eObject) {
 		String result = ""; //$NON-NLS-1$
 		// find a feature that can be used as a name
@@ -111,8 +111,8 @@ public class LabelQuery implements IJavaQuery2<EObject, String> {
 	 *            a name
 	 * @return an EStructuralFeature
 	 */
-	// Copied from org.eclipse.emf.edit.provider.ReflectiveItemProvider to org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils
-	// Copied from org.eclipse.emf.facet.infra.common.core.internal.utils.ModelUtils
+	// Copied from org.eclipse.emf.edit.provider.ReflectiveItemProvider to org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils
+	// Copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.ModelUtils
 	private static EStructuralFeature getLabelFeature(final EClass eClass) {
 		EAttribute result = null;
 		for (final EAttribute eAttribute : eClass.getEAllAttributes()) {

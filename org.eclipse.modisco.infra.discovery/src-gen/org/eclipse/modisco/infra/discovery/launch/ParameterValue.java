@@ -70,7 +70,7 @@ public interface ParameterValue extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Object)
 	 * @see org.eclipse.modisco.infra.discovery.launch.LaunchPackage#getParameterValue_Value()
-	 * @model dataType="org.eclipse.emf.facet.util.emf.core.serialization.model.serialization.ExtensibleSerializableJavaObject"
+	 * @model dataType="org.eclipse.modisco.facet.util.emf.core.serialization.model.serialization.ExtensibleSerializableJavaObject"
 	 * @generated
 	 */
 	Object getValue();

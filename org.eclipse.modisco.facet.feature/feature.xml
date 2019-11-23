@@ -24,161 +24,161 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.eclipse.emf.facet.common.core"
+         id="org.eclipse.modisco.facet.common.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.common.ui"
+         id="org.eclipse.modisco.facet.common.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.custom.core"
+         id="org.eclipse.modisco.facet.custom.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.custom.metamodel"
+         id="org.eclipse.modisco.facet.custom.metamodel"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.custom.ui"
+         id="org.eclipse.modisco.facet.custom.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.efacet.core"
+         id="org.eclipse.modisco.facet.efacet.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.efacet.edit.core"
+         id="org.eclipse.modisco.facet.efacet.edit.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.efacet.metamodel"
+         id="org.eclipse.modisco.facet.efacet.metamodel"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.efacet.ui"
+         id="org.eclipse.modisco.facet.efacet.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.query.java.core"
+         id="org.eclipse.modisco.facet.query.java.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.query.java.metamodel"
+         id="org.eclipse.modisco.facet.query.java.metamodel"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.core"
+         id="org.eclipse.modisco.facet.util.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.emf.catalog"
+         id="org.eclipse.modisco.facet.util.emf.catalog"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.emf.catalog.metamodel"
+         id="org.eclipse.modisco.facet.util.emf.catalog.metamodel"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.emf.core"
+         id="org.eclipse.modisco.facet.util.emf.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.emf.ui"
+         id="org.eclipse.modisco.facet.util.emf.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.jface.ui"
+         id="org.eclipse.modisco.facet.util.jface.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.pde.core"
+         id="org.eclipse.modisco.facet.util.pde.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.swt"
+         id="org.eclipse.modisco.facet.util.swt"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.util.ui"
+         id="org.eclipse.modisco.facet.util.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.widgets"
+         id="org.eclipse.modisco.facet.widgets"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.widgets.celleditors"
+         id="org.eclipse.modisco.facet.widgets.celleditors"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.emf.facet.widgets.celleditors.ecore"
+         id="org.eclipse.modisco.facet.widgets.celleditors.ecore"
          download-size="0"
          install-size="0"
          version="0.0.0"

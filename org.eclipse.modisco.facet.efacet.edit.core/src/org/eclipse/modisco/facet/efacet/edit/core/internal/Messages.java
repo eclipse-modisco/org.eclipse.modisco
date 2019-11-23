@@ -14,7 +14,7 @@ package org.eclipse.modisco.facet.efacet.edit.core.internal;
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.efacet.edit.core.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.efacet.edit.core.internal.messages"; //$NON-NLS-1$
 	public static String FacetAddAllCommand_Descriptor;
 	public static String FacetAddAllCommand_Label;
 	public static String FacetAddCommand_Description;

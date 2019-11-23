@@ -27,7 +27,7 @@ import org.eclipse.ui.PlatformUI;
 
 public class NavigationViewFactory implements INavigationViewFactory {
 
-	public static final String VIEW_ID = "org.eclipse.emf.facet.efacet.ui.view.navigation"; //$NON-NLS-1$
+	public static final String VIEW_ID = "org.eclipse.modisco.facet.efacet.ui.view.navigation"; //$NON-NLS-1$
 
 	/*
 	 * FIXME gdupe> It would be better if that method would be able to throw an

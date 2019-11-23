@@ -28,7 +28,7 @@ import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementExcept
  */
 public interface IJavaQuery2<T extends EObject, R> {
 	// This interface is a copy of
-	// org.eclipse.emf.facet.infra.query.core.java.IJavaModelQuery<T, R>
+	// org.eclipse.modisco.facet.infra.query.core.java.IJavaModelQuery<T, R>
 
 	/**
 	 * This method must be implemented by each sub class to implement query

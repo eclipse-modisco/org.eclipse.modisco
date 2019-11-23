@@ -9,7 +9,7 @@
  *    Nicolas Bros (Mia-Software) - Bug 374758 - [Table] repair the table
  *    Gregoire Dupe (Mia-Software) - Bug 372626 - Aggregates
  *    Thomas Cicognani (Soft-Maint) - Bug 420192 - UnsupportedOperationException in a usefull method 
- *    Thomas Cicognani (Soft-Maint) - Bug 435882 - org.eclipse.emf.facet.custom.core.internal.CustomizationsDelegatingList not fully implemented
+ *    Thomas Cicognani (Soft-Maint) - Bug 435882 - org.eclipse.modisco.facet.custom.core.internal.CustomizationsDelegatingList not fully implemented
  *    Thomas Cicognani (Soft-Maint) - Bug 441317 - Clearing a CustomizationsDelegatingList doesn't notify listeners
  *    Grégoire Dupé (Mia-Software) - Bug 476141 - Facet manger can fail with ConcurrentModificationException
  *******************************************************************************/

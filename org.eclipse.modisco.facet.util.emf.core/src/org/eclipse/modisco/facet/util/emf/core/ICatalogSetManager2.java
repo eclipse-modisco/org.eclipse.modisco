@@ -9,7 +9,7 @@
  * Contributors:
  * 	 Grégoire Dupé (Mia-Software) - Bug 334000 Simple catalog manager
  *   Nicolas Guyomar (Mia-Software) - Bug 334000 Simple catalog manager
- *   Nicolas Guyomar (Mia-Software) - Bug 334529 ICatalogManager should be exposed in org.eclipse.emf.facet.common.core
+ *   Nicolas Guyomar (Mia-Software) - Bug 334529 ICatalogManager should be exposed in org.eclipse.modisco.facet.common.core
  *   Nicolas Guyomar (Mia-Software) - Bug 338811 - A model registration method in the interface ICatalogSetManager
  *   Grégoire Dupé (Mia-Software) - Bug 362084 - Get the instance of a catalog manager
  */

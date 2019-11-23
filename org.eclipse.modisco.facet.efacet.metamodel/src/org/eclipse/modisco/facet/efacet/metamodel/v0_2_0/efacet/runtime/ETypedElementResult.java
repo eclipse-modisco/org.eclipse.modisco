@@ -125,7 +125,7 @@ public interface ETypedElementResult extends EObject {
 	 * @return the value of the '<em>Exception</em>' attribute.
 	 * @see #setException(Throwable)
 	 * @see org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.RuntimePackage#getETypedElementResult_Exception()
-	 * @model dataType="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.JavaException" transient="true"
+	 * @model dataType="org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.JavaException" transient="true"
 	 * @generated
 	 */
 	Throwable getException();

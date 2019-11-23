@@ -9,7 +9,7 @@
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Nicolas Guyomar (Mia-Software) - Bug 334546 - [celleditors] no border on Text field
  *    Nicolas Bros (Mia-Software) - Bug 338437 - compositeEditors extension point cannot be used to register user types
- *    Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *    Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *******************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite;
 

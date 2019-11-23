@@ -7,10 +7,10 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Nicolas Bros (Mia-Software) - Bug 339991 - don't use internal APIs in org.eclipse.emf.facet.util.core.internal.BuildPropertiesUtils
+ *    Nicolas Bros (Mia-Software) - Bug 339991 - don't use internal APIs in org.eclipse.modisco.facet.util.core.internal.BuildPropertiesUtils
  *    Laurent Pichierri (Soft-Maint) - Bug 371204 - Compatibility with Helios
  *    Gregoire Dupe (Mia-Software) - Bug 371204 - Compatibility with Helios
- *    Gregoire Dupe (Mia-Software) - Bug 417789 - org.eclipse.emf.facet.util.core should not so much dependencies
+ *    Gregoire Dupe (Mia-Software) - Bug 417789 - org.eclipse.modisco.facet.util.core should not so much dependencies
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.pde.core.internal;
 
@@ -34,7 +34,7 @@ import org.eclipse.pde.core.plugin.PluginRegistry;
 
 public final class BuildPropertiesUtils {
 
-	// This class has been copied from org.eclipse.emf.facet.infra.common.core.internal.utils.BuildPropertiesUtils
+	// This class has been copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.BuildPropertiesUtils
 	
 	private BuildPropertiesUtils() {
 		// utilities class

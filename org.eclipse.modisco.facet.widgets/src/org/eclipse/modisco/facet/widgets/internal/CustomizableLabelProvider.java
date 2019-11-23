@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
- *    Nicolas Bros (Mia-Software) - Bug 339653 - org.eclipse.emf.facet.widgets API Cleaning
+ *    Nicolas Bros (Mia-Software) - Bug 339653 - org.eclipse.modisco.facet.widgets API Cleaning
  *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
  *******************************************************************************/
 

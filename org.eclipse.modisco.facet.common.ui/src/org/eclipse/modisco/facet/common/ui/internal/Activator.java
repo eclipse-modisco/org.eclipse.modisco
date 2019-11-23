@@ -19,7 +19,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
 
-	public static final String PLUGIN_ID = "org.eclipse.emf.facet.common.ui"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.facet.common.ui"; //$NON-NLS-1$
 
 	private static Activator plugin;
 

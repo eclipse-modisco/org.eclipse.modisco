@@ -119,7 +119,7 @@ public interface IQueryCreationPagePart2 {
 	public Query performFinish();
 
 	/**
-	 * This method is called by the {@link org.eclipse.emf.facet.efacet.ui.internal.wizards.pages.CreateQueryWizardPage}.
+	 * This method is called by the {@link org.eclipse.modisco.facet.efacet.ui.internal.wizards.pages.CreateQueryWizardPage}.
 	 * 
 	 * @param parent
 	 *            the Wizard's composite to be completed with specific widget for this {@link Query} creation.

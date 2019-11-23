@@ -79,7 +79,7 @@ public class PropertiesHandler implements IContentPropertiesHandler,
 	/**
 	 * 
 	 * @deprecated Must be replaced by
-	 *             org.eclipse.emf.facet.custom.ui.internal.PropertiesHandler
+	 *             org.eclipse.modisco.facet.custom.ui.internal.PropertiesHandler
 	 *             .PropertiesHandler(ICustomizationManager)
 	 */
 	@Deprecated

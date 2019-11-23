@@ -44,7 +44,7 @@ import org.osgi.framework.Bundle;
 
 final class CatalogManager implements ICatalogManager, Adapter {
 
-	private static final String MODEL_DECL_EXT_PT = "org.eclipse.emf.facet.util.emf.core.modeldeclaration"; //$NON-NLS-1$
+	private static final String MODEL_DECL_EXT_PT = "org.eclipse.modisco.facet.util.emf.core.modeldeclaration"; //$NON-NLS-1$
 	private static final String FILE = "file"; //$NON-NLS-1$
 	private final Map<Resource, Bundle> resourceToBundle = new HashMap<Resource, Bundle>();
 	private final ICatalogManagerConfiguration catalogMgrconfig;

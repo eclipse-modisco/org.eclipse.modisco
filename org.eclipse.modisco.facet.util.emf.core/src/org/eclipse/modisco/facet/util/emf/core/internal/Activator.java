@@ -17,7 +17,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator extends Plugin {
 
-	public static final String PLUGIN_ID = "org.eclipse.emf.facet.util.emf.core"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.eclipse.modisco.facet.util.emf.core"; //$NON-NLS-1$
 
 	private static BundleContext context;
 	private static Activator plugin;

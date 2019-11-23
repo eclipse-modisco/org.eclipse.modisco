@@ -14,7 +14,7 @@ package org.eclipse.modisco.facet.util.emf.core.internal;
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "org.eclipse.emf.facet.util.emf.core.internal.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.eclipse.modisco.facet.util.emf.core.internal.messages"; //$NON-NLS-1$
 	public static String AddResourceContentCommand_Description;
 	public static String AddResourceContentCommand_Label;
 	public static String SetResourceContentCommand_Description;

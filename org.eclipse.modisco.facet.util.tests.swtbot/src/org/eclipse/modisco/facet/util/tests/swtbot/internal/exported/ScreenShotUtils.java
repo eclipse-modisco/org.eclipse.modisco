@@ -6,9 +6,9 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *   Gregoire Dupe (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
- *   Gregoire Dupe (Mia-Software) - Bug 368006 - [Unit Test Failure][0.2/3.8] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.swtbot.TableEditabilityTest.testSingleLineStringEditability
- *   Gregoire Dupe (Mia-Software) - Bug 368030 - [Unit Test Failure] org.eclipse.emf.facet.widgets.table.tests.internal.v0_1.swtbot.NatTableUITests.testAddQueryColumn
+ *   Gregoire Dupe (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.modisco.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
+ *   Gregoire Dupe (Mia-Software) - Bug 368006 - [Unit Test Failure][0.2/3.8] org.eclipse.modisco.facet.widgets.table.tests.internal.v0_2.swtbot.TableEditabilityTest.testSingleLineStringEditability
+ *   Gregoire Dupe (Mia-Software) - Bug 368030 - [Unit Test Failure] org.eclipse.modisco.facet.widgets.table.tests.internal.v0_1.swtbot.NatTableUITests.testAddQueryColumn
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.tests.swtbot.internal.exported;
 

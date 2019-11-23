@@ -18,9 +18,9 @@ import org.eclipse.ui.IWorkbenchPart;
 
 
 /**
- * This method must be implemented and referenced by the extension point org.eclipse.emf.facet.efacet.ui.displayeropener
+ * This method must be implemented and referenced by the extension point org.eclipse.modisco.facet.efacet.ui.displayeropener
  * 
- * This is a new version of the org.eclipse.emf.facet.infra.query.ui.views.queryExecution.QueryResultDisplayer.
+ * This is a new version of the org.eclipse.modisco.facet.infra.query.ui.views.queryExecution.QueryResultDisplayer.
  * @author Gregoire Dupe
  *
  */

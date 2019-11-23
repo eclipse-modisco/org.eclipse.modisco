@@ -31,7 +31,7 @@ import org.eclipse.modisco.facet.util.emf.core.catalog.ICatalogManagerFactory;
 
 /**
  * Customization catalog implementation using the catalog manager features
- * provided by the plug-in org.eclipse.emf.facet.util.emf.core
+ * provided by the plug-in org.eclipse.modisco.facet.util.emf.core
  * 
  * @author Gregoire Dupe
  * 

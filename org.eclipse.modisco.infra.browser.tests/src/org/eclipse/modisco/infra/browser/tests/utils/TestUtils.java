@@ -466,7 +466,7 @@ public class TestUtils {
 		bot.menu("Window").menu("Preferences").click();
 		SWTBotShell shell = bot.shell("Preferences");
 		shell.activate();
-		bot.tree().getTreeItem("EMF Facet").expand().getNode("Default Browser").select();
+		bot.tree().getTreeItem("MoDisco Facet").expand().getNode("Default Browser").select();
 
 		SWTBotCombo combo = bot
 				.comboBoxWithLabel("Default EPackage Model Viewer");

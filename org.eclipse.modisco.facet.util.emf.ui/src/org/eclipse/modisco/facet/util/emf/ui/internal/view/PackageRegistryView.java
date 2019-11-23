@@ -57,7 +57,7 @@ public class PackageRegistryView extends AbstractTreeView implements IMenuListen
 
 	private static final int COLUMN_WIDTH = 200;
 
-	private static final String DEBUG_ID = "org.eclipse.emf.facet.infra.common.ui/debug/PackageRegistryView/event_debug"; //$NON-NLS-1$
+	private static final String DEBUG_ID = "org.eclipse.modisco.facet.infra.common.ui/debug/PackageRegistryView/event_debug"; //$NON-NLS-1$
 	private static final boolean DEBUG = Activator.getDefault().isDebugging()
 			&& new Boolean(Platform.getDebugOption(PackageRegistryView.DEBUG_ID)).booleanValue();
 

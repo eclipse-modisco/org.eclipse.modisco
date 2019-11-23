@@ -86,7 +86,7 @@ public class TestURIDialog {
 		SWTBotShell shell = TestURIDialog.bot.shell("Show View");
 		shell.activate();
 		TestURIDialog.bot.tree().setFocus();
-		TestURIDialog.bot.tree().expandNode("EMF Facet").select("EPackage Registry");
+		TestURIDialog.bot.tree().expandNode("MoDisco Facet").select("EPackage Registry");
 		TestURIDialog.bot.button("OK").click();
 
 		final SWTBotView view = TestURIDialog.bot.viewByTitle("EPackage Registry");

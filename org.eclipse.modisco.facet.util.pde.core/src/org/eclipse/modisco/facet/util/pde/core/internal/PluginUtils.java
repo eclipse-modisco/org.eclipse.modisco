@@ -86,7 +86,7 @@ import com.ibm.icu.lang.UCharacter;
 public final class PluginUtils {
 
 	// This class has been copied from
-	// org.eclipse.emf.facet.infra.common.core.internal.utils.PluginUtils
+	// org.eclipse.modisco.facet.infra.common.core.internal.utils.PluginUtils
 
 	private PluginUtils() {
 		// utilities class

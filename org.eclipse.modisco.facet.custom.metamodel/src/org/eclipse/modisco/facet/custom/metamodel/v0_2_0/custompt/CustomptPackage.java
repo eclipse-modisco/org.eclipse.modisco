@@ -131,7 +131,7 @@ public interface CustomptPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Image</em>'.
 	 * @see org.eclipse.modisco.facet.custom.metamodel.custompt.IImage
-	 * @model instanceClass="org.eclipse.emf.facet.custom.metamodel.custompt.IImage"
+	 * @model instanceClass="org.eclipse.modisco.facet.custom.metamodel.custompt.IImage"
 	 * @generated
 	 */
 	EDataType getImage();
@@ -142,7 +142,7 @@ public interface CustomptPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Color</em>'.
 	 * @see org.eclipse.modisco.facet.custom.metamodel.custompt.IColor
-	 * @model instanceClass="org.eclipse.emf.facet.custom.metamodel.custompt.IColor"
+	 * @model instanceClass="org.eclipse.modisco.facet.custom.metamodel.custompt.IColor"
 	 * @generated
 	 */
 	EDataType getColor();

@@ -7,7 +7,7 @@
  *
  * Contributors:
  *    Nicolas Bros (Mia-Software) - Bug 372865 - FacetSet selection dialog
- *    Grégoire Dupé (Mia-Software) - Bug 470191 - [Unit Test Failure] org.eclipse.emf.facet.aggregate.tests.internal.CustomizationsCatalogViewTests.testCustomizationsView
+ *    Grégoire Dupé (Mia-Software) - Bug 470191 - [Unit Test Failure] org.eclipse.modisco.facet.aggregate.tests.internal.CustomizationsCatalogViewTests.testCustomizationsView
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.swt.internal.exported;
 

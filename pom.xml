@@ -15,29 +15,30 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>org.eclipse.emf.facet.common.core</module>
-    <module>org.eclipse.emf.facet.common.ui</module>
-    <module>org.eclipse.emf.facet.custom.core</module>
-    <module>org.eclipse.emf.facet.custom.metamodel</module>
-    <module>org.eclipse.emf.facet.custom.ui</module>
-    <module>org.eclipse.emf.facet.efacet.core</module>
-    <module>org.eclipse.emf.facet.efacet.edit.core</module>
-    <module>org.eclipse.emf.facet.efacet.metamodel</module>
-    <module>org.eclipse.emf.facet.efacet.ui</module>
-    <module>org.eclipse.emf.facet.query.java.core</module>
-    <module>org.eclipse.emf.facet.query.java.metamodel</module>
-    <module>org.eclipse.emf.facet.util.core</module>
-    <module>org.eclipse.emf.facet.util.emf.catalog</module>
-    <module>org.eclipse.emf.facet.util.emf.catalog.metamodel</module>
-    <module>org.eclipse.emf.facet.util.emf.core</module>
-    <module>org.eclipse.emf.facet.util.emf.ui</module>
-    <module>org.eclipse.emf.facet.util.jface.ui</module>
-    <module>org.eclipse.emf.facet.util.pde.core</module>
-    <module>org.eclipse.emf.facet.util.swt</module>
-    <module>org.eclipse.emf.facet.util.ui</module>
-    <module>org.eclipse.emf.facet.widgets</module>
-    <module>org.eclipse.emf.facet.widgets.celleditors</module>
-    <module>org.eclipse.emf.facet.widgets.celleditors.ecore</module>
+    <module>org.eclipse.modisco.facet.common.core</module>
+    <module>org.eclipse.modisco.facet.common.ui</module>
+    <module>org.eclipse.modisco.facet.custom.core</module>
+    <module>org.eclipse.modisco.facet.custom.metamodel</module>
+    <module>org.eclipse.modisco.facet.custom.ui</module>
+    <module>org.eclipse.modisco.facet.efacet.core</module>
+    <module>org.eclipse.modisco.facet.efacet.edit.core</module>
+    <module>org.eclipse.modisco.facet.efacet.metamodel</module>
+    <module>org.eclipse.modisco.facet.efacet.ui</module>
+    <module>org.eclipse.modisco.facet.query.java.core</module>
+    <module>org.eclipse.modisco.facet.query.java.metamodel</module>
+    <module>org.eclipse.modisco.facet.util.core</module>
+    <module>org.eclipse.modisco.facet.util.emf.catalog</module>
+    <module>org.eclipse.modisco.facet.util.emf.catalog.metamodel</module>
+    <module>org.eclipse.modisco.facet.util.emf.core</module>
+    <module>org.eclipse.modisco.facet.util.emf.ui</module>
+    <module>org.eclipse.modisco.facet.util.jface.ui</module>
+    <module>org.eclipse.modisco.facet.util.pde.core</module>
+    <module>org.eclipse.modisco.facet.util.swt</module>
+    <module>org.eclipse.modisco.facet.util.ui</module>
+    <module>org.eclipse.modisco.facet.widgets</module>
+    <module>org.eclipse.modisco.facet.widgets.celleditors</module>
+    <module>org.eclipse.modisco.facet.widgets.celleditors.ecore</module>
+    
     <module>org.eclipse.gmt.modisco.examples</module>
     <module>org.eclipse.gmt.modisco.infra.browser</module>
     <module>org.eclipse.gmt.modisco.infra.browser.custom</module>

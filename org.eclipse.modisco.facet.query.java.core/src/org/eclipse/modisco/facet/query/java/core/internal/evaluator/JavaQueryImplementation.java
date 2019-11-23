@@ -32,7 +32,7 @@ import org.eclipse.modisco.facet.query.java.core.IParameterValueListFactory2;
 public class JavaQueryImplementation implements IQueryImplementation {
 
 	// This class is a modified copy of :
-	// org.eclipse.emf.facet.infra.query.core.java.internal.JavaModelQueryAdapter
+	// org.eclipse.modisco.facet.infra.query.core.java.internal.JavaModelQueryAdapter
 
 	private final IJavaQuery2<EObject, ?> javaQuery2;
 	private final IJavaQuery3<EObject, ?> javaQuery3;

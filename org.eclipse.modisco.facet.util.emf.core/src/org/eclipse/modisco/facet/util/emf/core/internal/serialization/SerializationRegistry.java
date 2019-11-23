@@ -26,7 +26,7 @@ import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializer;
 /** Registry for the "serialization" extension point */
 public class SerializationRegistry extends AbstractRegistry implements ISerializationRegistry {
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.emf.facet.util.emf.core"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.facet.util.emf.core"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "serialization"; //$NON-NLS-1$
 
 	private static final String SERIALIZER_ELEMENT = "serializer"; //$NON-NLS-1$

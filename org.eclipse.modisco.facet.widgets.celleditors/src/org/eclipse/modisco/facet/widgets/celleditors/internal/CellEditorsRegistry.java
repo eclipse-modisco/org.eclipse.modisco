@@ -9,7 +9,7 @@
  * Contributors:
  *    Nicolas Bros (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software) - Bug 338437 - compositeEditors extension point cannot be used to register user types
- *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *    Nicolas Bros (Mia-Software) - Bug 339855 - ModelCellEditor class should not be exposed
  *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
  *******************************************************************************/
@@ -45,7 +45,7 @@ import org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.UnaryRefere
 /** Registry for the "loadingDepth" extension point */
 public class CellEditorsRegistry extends AbstractRegistry implements ICellEditorsRegistry {
 
-	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.emf.facet.widgets.celleditors"; //$NON-NLS-1$
+	private static final String EXTENSION_POINT_NAMESPACE = "org.eclipse.modisco.facet.widgets.celleditors"; //$NON-NLS-1$
 	private static final String EXTENSION_POINT_NAME = "celleditors"; //$NON-NLS-1$
 
 	private static final String CELL_EDITORS_MODEL_ELEMENT = "cellEditorsModel"; //$NON-NLS-1$
@@ -79,7 +79,7 @@ public class CellEditorsRegistry extends AbstractRegistry implements ICellEditor
 	/**
 	 * Returns a cell editor wrapper for the given type, or <code>null</code> if none was found.
 	 * Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor wrapper
@@ -94,7 +94,7 @@ public class CellEditorsRegistry extends AbstractRegistry implements ICellEditor
 	/**
 	 * Returns a cell editor to edit a single value of the given type, or <code>null</code> if none
 	 * was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -111,7 +111,7 @@ public class CellEditorsRegistry extends AbstractRegistry implements ICellEditor
 	/**
 	 * Returns a cell editor wrapper to edit a list of values of the given type, or
 	 * <code>null</code> if none was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -147,7 +147,7 @@ public class CellEditorsRegistry extends AbstractRegistry implements ICellEditor
 
 	/**
 	 * Returns a cell editor for the given type, or <code>null</code> if none was found. Custom cell
-	 * editors override the default ones (from "org.eclipse.emf.facet.widgets.celleditors").
+	 * editors override the default ones (from "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -195,9 +195,9 @@ public class CellEditorsRegistry extends AbstractRegistry implements ICellEditor
 				boolean skippedDefault = false;
 				for (ModelCellEditor cellEditor : cellEditors) {
 					// lower priority for
-					// org.eclipse.emf.facet.widgets.celleditors.*
+					// org.eclipse.modisco.facet.widgets.celleditors.*
 					if (cellEditor.getBundleName().startsWith(
-							"org.eclipse.emf.facet.widgets.celleditors")) { //$NON-NLS-1$
+							"org.eclipse.modisco.facet.widgets.celleditors")) { //$NON-NLS-1$
 						if (skippedDefault) {
 							Logger.logError(
 									"Several default cell editors are defined in EMF Facet for type: " //$NON-NLS-1$

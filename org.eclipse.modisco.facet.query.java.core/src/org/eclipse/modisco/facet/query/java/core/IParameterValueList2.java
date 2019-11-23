@@ -25,7 +25,7 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.ParameterValue;
  */
 public interface IParameterValueList2 extends List<ParameterValue> {
 	// This interface is a rewrite of
-		// org.eclipse.emf.facet.infra.query.core.java.ParameterValueList
+		// org.eclipse.modisco.facet.infra.query.core.java.ParameterValueList
 
 		/**
 		 * Return the value of the parameter with the specified name.

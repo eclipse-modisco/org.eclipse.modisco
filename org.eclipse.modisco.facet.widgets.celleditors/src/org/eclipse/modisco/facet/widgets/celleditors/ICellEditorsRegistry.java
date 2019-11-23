@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- * 	Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ * 	Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *  Nicolas Bros (Mia-Software) - Bug 339855 - ModelCellEditor class should not be exposed
  *******************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors;
@@ -32,7 +32,7 @@ public interface ICellEditorsRegistry {
 	/**
 	 * Returns a cell editor to edit a single value of the given type, or <code>null</code> if none
 	 * was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -43,7 +43,7 @@ public interface ICellEditorsRegistry {
 	/**
 	 * Returns a cell editor to edit a list of values of the given type, or <code>null</code> if
 	 * none was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -54,7 +54,7 @@ public interface ICellEditorsRegistry {
 	/**
 	 * Returns a cell editor to edit a single value of the given type, or <code>null</code> if none
 	 * was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor
@@ -69,7 +69,7 @@ public interface ICellEditorsRegistry {
 	/**
 	 * Returns a cell editor to edit a list of values of the given type, or <code>null</code> if
 	 * none was found. Custom cell editors override the default ones (from
-	 * "org.eclipse.emf.facet.widgets.celleditors").
+	 * "org.eclipse.modisco.facet.widgets.celleditors").
 	 * 
 	 * @param type
 	 *            the type for which to get a cell editor

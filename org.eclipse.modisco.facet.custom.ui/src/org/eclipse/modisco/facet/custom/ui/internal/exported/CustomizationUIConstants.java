@@ -15,7 +15,7 @@ package org.eclipse.modisco.facet.custom.ui.internal.exported;
  */
 public final class CustomizationUIConstants {
 
-	private static final String CATALOG_VIEW_ID = "org.eclipse.emf.facet.custom.ui.view.catalog"; //$NON-NLS-1$
+	private static final String CATALOG_VIEW_ID = "org.eclipse.modisco.facet.custom.ui.view.catalog"; //$NON-NLS-1$
 
 	private CustomizationUIConstants() {
 		// utility class
