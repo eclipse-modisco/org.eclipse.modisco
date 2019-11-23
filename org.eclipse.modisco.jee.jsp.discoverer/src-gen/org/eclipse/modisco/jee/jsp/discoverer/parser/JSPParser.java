@@ -1,7 +1,7 @@
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 JSP.g 2019-11-14 15:50:28
  
 /**
- *  Copyright (c) 2010 Mia-Software.
+ *  Copyright (c) 2010, 2019 Mia-Software.
  *  All rights reserved. This program and the accompanying materials
  *  are made available under the terms of the Eclipse Public License v2.0
  *  which accompanies this distribution, and is available at
