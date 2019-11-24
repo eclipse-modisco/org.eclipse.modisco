@@ -271,9 +271,9 @@ public class GenerateJsp extends AbstractAcceleoGenerator {
 	 * @return The name of the module that is to be launched.
 	 * @generated NOT
 	 */
-	@Override	// Overridden to use frozen ok version; not dynamically generated fragile version
+	@Override	// See Bug 553058 - Overridden to use frozen ok version; not dynamically generated fragile version
 	public String getModuleName() {
-        return "emtl/" + MODULE_FILE_NAME + "." + IAcceleoConstants.EMTL_FILE_EXTENSION;
+        return "/emtl" + MODULE_FILE_NAME + "." + IAcceleoConstants.EMTL_FILE_EXTENSION;
     }
 
 	/**

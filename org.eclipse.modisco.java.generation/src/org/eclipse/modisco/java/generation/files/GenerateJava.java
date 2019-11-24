@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.acceleo.common.IAcceleoConstants;
 import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
@@ -253,11 +254,11 @@ public class GenerateJava extends AbstractAcceleoGenerator {
 	 * We expect this name not to contain file extension, and the module to be located beside the launcher.
 	 *
 	 * @return The name of the module that is to be launched.
-	 * @generated
+	 * @generated NOT
 	 */
-	@Override
+	@Override	// See Bug 553058 - Overridden to use frozen ok version; not dynamically generated fragile version
 	public String getModuleName() {
-        return MODULE_FILE_NAME;
+        return "/emtl" + MODULE_FILE_NAME + "." + IAcceleoConstants.EMTL_FILE_EXTENSION;
     }
 
 	/**
