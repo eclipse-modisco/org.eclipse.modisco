@@ -55,8 +55,8 @@ public class TestJavaApp {
 	private static JavaApplication model;
 
 	private final int int13 = 13;
-	private final int int522 = 522;
-	private final int int549 = 549;
+	private final int int539 = 539;		// Beware - these drift as the copyright evolves in 
+	private final int int566 = 566;		// org.eclipse.modisco.java.discoverer.tests/workspace/test001/src/annotations/MyAnnotatedClass2.java
 	private IProject project = null;
 
 	@Before
@@ -150,11 +150,11 @@ public class TestJavaApp {
 		Assert.assertTrue(javaNodeSourceRegion.getStartLine().equals(
 				new Integer(this.int13)));
 		Assert.assertTrue(javaNodeSourceRegion.getStartPosition().equals(
-				new Integer(this.int522)));
+				new Integer(this.int539)));
 		Assert.assertTrue(javaNodeSourceRegion.getEndLine().equals(
 				new Integer(this.int13)));
 		Assert.assertTrue(javaNodeSourceRegion.getEndPosition().equals(
-				new Integer(this.int549)));
+				new Integer(this.int566)));
 
 	}
 
