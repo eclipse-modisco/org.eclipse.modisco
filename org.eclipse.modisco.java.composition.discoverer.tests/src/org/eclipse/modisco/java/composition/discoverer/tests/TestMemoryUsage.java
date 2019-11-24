@@ -44,7 +44,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 public class TestMemoryUsage {
 

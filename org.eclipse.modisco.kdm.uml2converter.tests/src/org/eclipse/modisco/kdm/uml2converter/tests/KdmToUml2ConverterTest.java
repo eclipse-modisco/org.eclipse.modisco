@@ -16,7 +16,7 @@ package org.eclipse.modisco.kdm.uml2converter.tests;
 
 import java.io.IOException;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.URI;

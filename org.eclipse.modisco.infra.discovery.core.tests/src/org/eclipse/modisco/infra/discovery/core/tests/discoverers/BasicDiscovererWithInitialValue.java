@@ -11,7 +11,7 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core.tests.discoverers;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;

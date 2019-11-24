@@ -10,7 +10,7 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.ui.tests;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.modisco.infra.discovery.ui.internal.registry.DiscovererUI;
 import org.eclipse.modisco.infra.discovery.ui.internal.registry.DiscovererUIRegistry;

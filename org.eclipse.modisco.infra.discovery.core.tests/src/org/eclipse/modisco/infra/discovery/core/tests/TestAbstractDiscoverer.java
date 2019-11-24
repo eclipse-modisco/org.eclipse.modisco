@@ -13,7 +13,7 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.discovery.core.tests;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;

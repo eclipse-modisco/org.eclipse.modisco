@@ -12,7 +12,7 @@ package org.eclipse.modisco.infra.doc.tests;
 
 import java.net.URL;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.core.runtime.Platform;
 import org.junit.Test;

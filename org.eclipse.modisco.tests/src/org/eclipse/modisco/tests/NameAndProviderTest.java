@@ -13,7 +13,7 @@ package org.eclipse.modisco.tests;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.core.runtime.Platform;
 import org.junit.Test;

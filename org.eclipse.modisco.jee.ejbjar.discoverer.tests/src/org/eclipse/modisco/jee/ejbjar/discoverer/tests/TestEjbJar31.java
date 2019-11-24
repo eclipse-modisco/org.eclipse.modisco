@@ -13,7 +13,7 @@ package org.eclipse.modisco.jee.ejbjar.discoverer.tests;
 
 import java.io.File;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
