@@ -8,7 +8,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.0" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
           <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0">
             <annotation text="annotation"/>
@@ -117,7 +117,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.1" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:StorableUnit" name="monAttributNormal" type="/0/@model.0/@codeElement.22/@codeElement.4">
             <attribute tag="export" value="none"/>
             <source language="java">
@@ -143,7 +143,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.2" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.2">
             <annotation text="annotation"/>
           </codeRelation>
@@ -259,7 +259,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.4" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.2/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.2/@codeElement.0/@codeElement.0"/>
             <codeElement xsi:type="code:StorableUnit" name="if2" type="/0/@model.0/@codeElement.2/@codeElement.1/@codeElement.0">
               <attribute tag="export" value="none"/>
@@ -276,7 +276,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.5" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.2/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.2/@codeElement.1/@codeElement.0"/>
             <codeElement xsi:type="code:StorableUnit" name="if1" type="/0/@model.0/@codeElement.2/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="none"/>
@@ -296,7 +296,7 @@
           </source>
           <comment text="/** &#xA; * This class doesn't subclass {@link java.lang.String}&#xA; * @author me&#xA; * @see java.lang.String#toString()&#xA; */&#xA;"/>
           <comment text="/*&#xD;&#xA; * after class&#xD;&#xA; */"/>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:StorableUnit" name="s" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.8">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -332,7 +332,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.7" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.0/@codeElement.4/@codeElement.0"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.4/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
@@ -381,7 +381,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.8" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.0/@codeElement.4/@codeElement.1"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
@@ -430,7 +430,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.9" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.0/@codeElement.4/@codeElement.2"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.4/@codeElement.2/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
@@ -482,7 +482,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.10" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.48" from="/0/@model.0/@codeElement.5/@codeElement.0/@codeElement.0"/>
             <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.5/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
@@ -526,7 +526,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.11" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.5/@codeElement.0/@codeElement.1"/>
             <value name="enum literal" type="/0/@model.0/@codeElement.5/@codeElement.0/@codeElement.1" ext="MA_CONSTANTE_ENUM1">
               <attribute tag="export" value="none"/>
@@ -584,7 +584,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.12" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:ControlElement">
             <attribute tag="export" value="none"/>
             <source language="java">
@@ -615,7 +615,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.13" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:ClassUnit" name="InnerClass2" isAbstract="false">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -664,7 +664,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.14" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.7/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.7/@codeElement.1"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.7/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.7/@codeElement.1"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.7/@codeElement.1/@codeElement.0/@codeElement.0">
@@ -793,7 +793,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.15" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.8/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -886,7 +886,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.16" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:StorableUnit" name="f" type="/0/@model.0/@codeElement.22/@codeElement.0" kind="static">
             <attribute tag="export" value="private"/>
             <source language="java">
@@ -914,7 +914,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.17" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.10/@codeElement.0"/>
         </codeElement>
       </codeElement>
@@ -927,7 +927,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.18" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Fabien Giquel (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.0/@codeElement.11/@codeElement.0"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.11/@codeElement.0"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.6" from="/0/@model.0/@codeElement.11/@codeElement.0"/>
@@ -1019,7 +1019,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.19" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.49" from="/0/@model.0/@codeElement.11/@codeElement.1"/>
             <codeElement xsi:type="code:TemplateUnit" name="first">
               <codeElement xsi:type="code:TemplateParameter" name="X"/>
@@ -1154,7 +1154,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.20" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.7" from="/0/@model.0/@codeElement.12/@codeElement.0"/>
           <codeElement xsi:type="code:TemplateUnit" name="accept">
             <codeElement xsi:type="code:TemplateParameter" name="R"/>
@@ -1220,7 +1220,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.21" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.13/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.13/@codeElement.0/@codeElement.0"/>
             <codeElement xsi:type="code:StorableUnit" name="s1" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.8">
               <source language="java">
@@ -1326,7 +1326,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.22" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.13/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.13/@codeElement.1/@codeElement.0"/>
             <codeElement xsi:type="code:StorableUnit" name="a1" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.8">
               <source language="java">
@@ -1456,7 +1456,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.23" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.14/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.14/@codeElement.0/@codeElement.0"/>
             <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.14/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
@@ -1535,7 +1535,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.24" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeElement xsi:type="code:MethodUnit" name="test" type="/0/@model.0/@codeElement.14/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
               <source language="java">
@@ -1575,7 +1575,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.25" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.15/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
               <source language="java">
@@ -1670,7 +1670,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.26" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.16/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.16/@codeElement.0/@codeElement.0"/>
             <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.16/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
@@ -1728,7 +1728,7 @@
             <source language="java">
               <region file="/0/@model.2/@inventoryElement.27" language="java"/>
             </source>
-            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+            <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
             <codeRelation xsi:type="code:Imports" to="/0/@model.0/@codeElement.16/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.16/@codeElement.1/@codeElement.0"/>
             <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.16/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0">
               <attribute tag="export" value="public"/>
@@ -1787,7 +1787,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.28" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.17/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -1874,7 +1874,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.29" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.17/@codeElement.1/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -1963,7 +1963,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.30" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.18/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -2033,7 +2033,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.31" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.19/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -2094,7 +2094,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.32" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.46" from="/0/@model.0/@codeElement.20/@codeElement.0"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.20/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
@@ -2195,7 +2195,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.33" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.21/@codeElement.0/@codeElement.0/@codeElement.0">
             <attribute tag="export" value="public"/>
             <source language="java">
@@ -2384,7 +2384,7 @@
           <source language="java">
             <region file="/0/@model.2/@inventoryElement.34" language="java"/>
           </source>
-          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
+          <comment text="/** &#xA; * Copyright (c) 2009 Mia-Software and others.&#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v2.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v20.html&#xA; * Contributors:&#xA; * Gregoire DUPE (Mia-Software)&#xA; * Romain Dervaux (Mia-Software)&#xA; */&#xA;"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.3/@codeElement.0" from="/0/@model.0/@codeElement.21/@codeElement.1"/>
           <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.11" from="/0/@model.0/@codeElement.21/@codeElement.1"/>
           <codeElement xsi:type="code:MethodUnit" name="main" type="/0/@model.0/@codeElement.21/@codeElement.1/@codeElement.0/@codeElement.0">

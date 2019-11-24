@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2012, 2019 Mia-Software.
+ * Copyright (c) 2012, 2019 Mia-Software and others.
  *  
  * All rights reserved.
  * 

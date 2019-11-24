@@ -1,6 +1,6 @@
 grammar JSP;
 /*
- * Copyright (c) 2010 Mia-Software.
+ * Copyright (c) 2010 Mia-Software and others.
  *    All rights reserved. This program and the accompanying materials
  *   are made available under the terms of the Eclipse Public License v2.0
  *   which accompanies this distribution, and is available at
@@ -27,7 +27,7 @@ options {
 }
 @lexer::header {
 /**
- *  Copyright (c) 2010 Mia-Software.
+ *  Copyright (c) 2010 Mia-Software and others.
  *  All rights reserved. This program and the accompanying materials
  *  are made available under the terms of the Eclipse Public License v2.0
  *  which accompanies this distribution, and is available at
@@ -44,7 +44,7 @@ options {
 } 
 @header { 
 /**
- *  Copyright (c) 2010 Mia-Software.
+ *  Copyright (c) 2010 Mia-Software and others.
  *  All rights reserved. This program and the accompanying materials
  *  are made available under the terms of the Eclipse Public License v2.0
  *  which accompanies this distribution, and is available at
