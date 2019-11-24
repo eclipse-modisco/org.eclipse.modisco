@@ -35,19 +35,126 @@
             <artifactId>target-platform-configuration</artifactId>
             <configuration>
                <dependency-resolution>
-                  <extraRequirements xmlns="">
+                 <extraRequirements xmlns="">
+                     <!--requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.swtbot.eclipse.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.swtbot.ide.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.swtbot.eclipse.test.junit.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.swtbot.forms.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.swtbot.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement-->
                      <requirement>
                         <type>p2-installable-unit</type>
                         <id>org.eclipse.modisco.sdk.feature.feature.group</id>
                         <versionRange>0.0.0</versionRange>
                      </requirement>
+                     <!--requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.jdt.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.pde.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement-->
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.rcp.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.emf.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <!--requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.uml2.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.ocl.all.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.emf.transaction.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.emf.query.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.emf.validation.sdk.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
+                     <-requirement>
+                        <type>p2-installable-unit</type>
+                        <id>org.eclipse.emf.facet.sdk.feature.feature.group</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement>
                      <requirement>
                         <type>eclipse-plugin</type>
-                        <id>org.eclipse.osgi.compatibility.state</id>
-                        <versionRange>[1.1.0,2.0.0)</versionRange>
-                     </requirement>
+                        <id>org.hamcrest</id>
+                        <versionRange>0.0.0</versionRange>
+                     </requirement-->
                   </extraRequirements>
                </dependency-resolution>
+	          <environments>
+	            <!--environment>
+	              <os>win32</os>
+	              <ws>win32</ws>
+	              <arch>x86</arch>
+	            </environment-->
+	            <environment>
+	              <os>win32</os>
+	              <ws>win32</ws>
+	              <arch>x86_64</arch>
+	            </environment>
+	            <!--environment>
+	              <os>linux</os>
+	              <ws>gtk</ws>
+	              <arch>x86</arch>
+	            </environment-->
+	            <environment>
+	              <os>linux</os>
+	              <ws>gtk</ws>
+	              <arch>x86_64</arch>
+	            </environment>
+	            <!--environment>
+	              <os>macosx</os>
+	              <ws>cocoa</ws>
+	              <arch>x86_64</arch>
+	            </environment-->
+	          </environments>
             </configuration>
             <executions>
                <execution>

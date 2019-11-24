@@ -15,7 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.pde.core,
  org.eclipse.emf.edit,
  org.eclipse.jdt.apt.core,
- com.ibm.icu;bundle-version="4.2.1"
+ com.ibm.icu;bundle-version="4.2.1",
+ org.eclipse.ui.workbench,
+ org.eclipse.swt
 Export-Package: org.eclipse.modisco.infra.common.core.internal;
   x-friends:="org.eclipse.modisco.dev.core,
    org.eclipse.modisco.doc,

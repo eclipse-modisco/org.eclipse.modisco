@@ -47,7 +47,10 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.IWorkbench;
 import org.osgi.framework.Bundle;
+import org.eclipse.ui.PlatformUI;
 
 public final class FileUtils {
 
@@ -183,9 +186,51 @@ public final class FileUtils {
 				IStatus status = new Status(IStatus.ERROR, CommonModiscoActivator.PLUGIN_ID,
 						message);
 				multiStatus.add(status);
+				System.out.println("bad: " + file + " - " + message);
 			}
+			wait(100000);
 			throw new CoreException(multiStatus);
 		}
+		else {
+			for (IMarker marker : markers) {
+				String message = (String) marker.getAttribute(IMarker.MESSAGE);
+				System.out.println("ok: " + file + " - " + message);
+			}
+			
+		}
+	}
+
+	public static void wait(int delayTimeInMilliseconds) {
+		for (int i = 0; i < delayTimeInMilliseconds; i += 100) {
+			flushEvents();
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public static void flushEvents() {
+		IWorkbench workbench = PlatformUI.getWorkbench();
+		Display display = workbench.getDisplay();
+		for (int i = 0; i < 10; i++) {
+			while (display.readAndDispatch());
+		}
+		/*		for (int i = 0; i < 10; i++) {
+			IWorkbench workbench = PlatformUI.getWorkbench();
+			try {
+				while (workbench.getDisplay().readAndDispatch())
+					;
+			}
+//			catch (InterruptedException e) {
+//				throw e;
+//			}
+			catch (Throwable e) {
+				if (e instanceof InterruptedException) {
+					throw (InterruptedException)e;
+				}
+				e.printStackTrace();
+			}
+		} */
 	}
 
 	/**
