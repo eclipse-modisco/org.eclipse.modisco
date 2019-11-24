@@ -48,7 +48,7 @@ import org.junit.Assert;
 
 public class TestMemoryUsage {
 
-	private static final long MAX_MEM_AWAITED = 180;
+	private static final long MAX_MEM_AWAITED = 360;	// See Bug 553390
 	private static final int KILO = 1024;
 	private static final String PROJECT_NAME = JUnitPlugin.PLUGIN_ID
 			+ "_test001"; //$NON-NLS-1$
@@ -62,7 +62,9 @@ public class TestMemoryUsage {
 	@Before
 	public void initResource() throws CoreException, IOException,
 			InterruptedException, DiscoveryException {
-		final long totalMemory = Runtime.getRuntime().totalMemory();
+		Runtime runtime = Runtime.getRuntime();
+		runtime.gc();
+		long oldTotalMemory = runtime.totalMemory();
 		this.project = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject(TestMemoryUsage.PROJECT_NAME);
 		if (this.project.exists()) {
@@ -88,8 +90,11 @@ public class TestMemoryUsage {
 				TestMemoryUsage.model = (JavaApplication) eobject;
 			}
 		}
-		final long deltaMem = Runtime.getRuntime().totalMemory() - totalMemory;
+		runtime.gc();
+		long newTotalMemory = runtime.totalMemory();
+		final long deltaMem = newTotalMemory - oldTotalMemory;
 		this.memoryUsed = deltaMem / KILO / KILO;
+		System.out.println("Memory used: " + deltaMem + " = " + newTotalMemory + " - " + oldTotalMemory);
 	}
 
 	@After

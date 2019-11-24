@@ -29,11 +29,13 @@ import org.osgi.framework.Bundle;
 public class TestMemory {
 
 	private static final String RESOURCES_TEST_MEMORY = "/resources/memory.jsp"; //$NON-NLS-1$
-	private static final long EXPECTED_MEM_MAXIMUM = 200;
+	private static final long EXPECTED_MEM_MAXIMUM = 360;	// See Bug 553390
 
 	@Test
 	public void memoryTest() throws Exception {
-		final long totalMemory = Runtime.getRuntime().totalMemory();
+		Runtime runtime = Runtime.getRuntime();
+		runtime.gc();
+		long oldTotalMemory = runtime.totalMemory();
 
 		IProject oldProject = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject(Activator.PLUGIN_ID);
@@ -60,9 +62,12 @@ public class TestMemory {
 		Resource targetModel = discoverer.getTargetModel();
 		assertNotNull(targetModel);
 
-		final long memoryUsed = (Runtime.getRuntime().totalMemory() - totalMemory) / 1024 / 1024;
+		runtime.gc();
+		long newTotalMemory = runtime.totalMemory();
+		final long deltaMem = newTotalMemory - oldTotalMemory;
+		final long memoryUsed = deltaMem / 1024 / 1024;
 
-		System.out.println("Memory Used :" + memoryUsed);
+		System.out.println("Memory used: " + deltaMem + " = " + newTotalMemory + " - " + oldTotalMemory);
 
 		Assert.assertTrue(
 				"Abnormal memory use for TestMemory.java\n " + memoryUsed //$NON-NLS-1$
