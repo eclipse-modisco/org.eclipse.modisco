@@ -8,10 +8,9 @@
  *  Contributors:
  *     Fabien Giquel (Mia-Software) - initial API and implementation
  *     Nicolas Bros (Mia-Software) - Bug 368698 - GenerateJsp.emtl is missing in org.eclipse.modisco.jee.jsp.generation
+ *     Fabien Giquel (Mia-Software) - Bug 552989 - [tests] Migrate to life support
  */
 package org.eclipse.modisco.jee.jsp.generation.tests;
-
-import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -20,8 +19,6 @@ import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Enumeration;
-
-import org.junit.Assert;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -39,7 +36,7 @@ import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp;
-import org.junit.Ignore;
+import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -64,12 +61,6 @@ public class DiffGeneratedJspTest {
 					.indexOf("svn") == -1) || fileName.toLowerCase().endsWith(//$NON-NLS-1$
 					".jsp")); //$NON-NLS-1$
 		}
-	}
-
-	/** Bug 368698 - GenerateJsp.emtl is missing in org.eclipse.modisco.jee.jsp.generation */
-	@Test
-	public void testEmtlFilePresent() {
-		assertNotNull(GenerateJsp.class.getResource(DiffGeneratedJspTest.GENERATE_JSP_EMTL_FILE));
 	}
 
 	/**
