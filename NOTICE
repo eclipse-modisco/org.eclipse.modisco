@@ -1,0 +1,86 @@
+# Notices for Eclipse MoDisco
+
+This content is produced and maintained by the Eclipse MoDisco project.
+
+* Project home: https://projects.eclipse.org/projects/modeling.mdt.modisco
+
+## Trademarks
+
+ Eclipse MoDisco is a trademark of the Eclipse Foundation.
+
+## Copyright
+
+All content is the property of the respective authors or their employers. For
+more information regarding authorship of content, please consult the listed
+source code repository logs.
+
+## Declared Project Licenses
+
+This program and the accompanying materials are made available under the terms
+of the Eclipse Public License v. 2.0 which is available at
+http://www.eclipse.org/legal/epl-2.0.
+
+SPDX-License-Identifier: EPL-2.0
+
+## Source Code
+
+The project maintains the following source code repositories:
+
+* http://git.eclipse.org/c/modisco/org.eclipse.modisco.git
+
+## Third-party Content
+
+This project leverages the following third party content.
+
+Add JEE Schemas and DTDs to XML Version: Catalog (n/a)
+
+* License: Common Development and Distribution License
+
+ANTLR runtime (3.0)
+
+* License: New BSD license
+
+ANTLR Runtime only: (3.2)
+
+* License: New BSD license
+
+Apache Commons JXPath (1.2)
+
+* License: Apache License, 2.0
+
+Apache Commons JXPath 1.3 (1.3)
+
+* License: Apache License, 2.0 
+
+Apache Derby (10.1.2.1)
+
+* License: Apache License, 2.0
+
+Java EE 6 XML Schemas Version: 6 (n/a)
+
+* License: Common Development and Distribution License
+* Project: http://java.sun.com/xml/ns/javaee/
+* Source: http://java.sun.com/xml/ns/javaee/javaee_6.xsd
+
+Lucene Core (3.5.0)
+
+* License: Apache License, 2.0
+
+NatTable (2.1.0)
+
+* License: Eclipse Public License
+* Project: http://www.nattable.org
+
+Prefuse Version: beta (release (2007.10.21)
+
+* License: New BSD license, Modified NTP License
+* Project: http://prefuse.org/
+
+## Cryptography
+
+Content may contain encryption software. The country in which you are currently
+may have restrictions on the import, possession, and use, and/or re-export to
+another country, of encryption software. BEFORE using any encryption software,
+please check the country's laws, regulations and policies concerning the import,
+possession, or use, and re-export of encryption software, to see if this is
+permitted.

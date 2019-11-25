@@ -1,54 +1,67 @@
-Contributing to MoDisco
-=======================
+# Contributing to Eclipse MoDisco
 
 Thanks for your interest in this project.
 
-Project description:
---------------------
+## Project description
 
-MoDisco provides an extensible framework to elaborate on model-driven solutions supporting software reverse engineering and modernization use cases such as technical migration, software improvement, documentation generation, quality insurance, etc.
+Eclipse MoDisco provides an extensible framework to elaborate on model-driven
+solutions supporting software reverse engineering and modernization use cases
+such as technical migration, software improvement, documentation generation,
+quality insurance, etc. Legacy systems embrace a large number of technologies,
+making the development of tools to cope with legacy systems evolution a tedious
+and time consuming task. As modernization projects face with both technologies
+combination and various modernization situations, model-driven approaches and
+tools offer the requisite abstraction level to build up mature and flexible
+modernization solutions. Quality Assurance: verifying whether an existing system
+meets the required qualities (detection of anti-patterns in existing code and
+computation of metrics.) Documentation: extraction of information from an
+existing system to help understanding one aspect of this system (structure,
+behaviour, persistence, data-flow, change impact , etc). Improvement:
+transformation of an existing system to integrate better coding norms or design
+patterns. Migration: transformation of an existing system to change a component,
+the framework, the language, or its architecture   more about MoDisco »    
 
-Legacy systems embrace a large number of technologies, making the development of tools to cope with legacy systems evolution a tedious and time consuming task. As modernization projects face with both technologies combination and various modernization situations, model-driven approaches and tools offer the requisite abstraction level to build up mature and flexible modernization solutions.
- - Quality Assurance: verifying whether an existing system meets the required qualities (detection of anti-patterns in existing code and computation of metrics.)
- - Documentation: extraction of information from an existing system to help understanding one aspect of this system (structure, behaviour, persistence, data-flow, change impact , etc).
- - Improvement: transformation of an existing system to integrate better coding norms or design patterns.
- - Migration: transformation of an existing system to change a component, the framework, the language, or its architecture more about MoDisco
+* https://projects.eclipse.org/projects/modeling.mdt.modisco
 
-- https://projects.eclipse.org/projects/modeling.mdt.modisco
+## Developer resources
 
-Developer resources:
---------------------
+Information regarding source code management, builds, coding standards, and
+more.
 
-Information regarding source code management, builds, coding standards, and more.
+* https://projects.eclipse.org/projects/modeling.mdt.modisco/developer
 
-- https://projects.eclipse.org/projects/modeling.mdt.modisco/developer
-- https://wiki.eclipse.org/MoDisco#Getting_involved
+The project maintains the following source code repositories
 
-Contributor License Agreement:
-------------------------------
-
-Before your contribution can be accepted by the project, you need to create and electronically sign the Eclipse Foundation Contributor License Agreement (CLA).
-
-- http://www.eclipse.org/legal/CLA.php
-
-Contact:
---------
-
-Contact the project developers via the project's "dev" list.
-
-- https://dev.eclipse.org/mailman/listinfo/mdt.dev
-
-Search for bugs:
-----------------
+* http://git.eclipse.org/c/modisco/org.eclipse.modisco.git
 
 This project uses Bugzilla to track ongoing development and issues.
 
-- https://bugs.eclipse.org/bugs/buglist.cgi?product=MDT.MoDisco
+* Search for issues:
+   https://bugs.eclipse.org/bugs/buglist.cgi?product=MDT.MoDisco
+* Create a new report:
+   https://bugs.eclipse.org/bugs/enter_bug.cgi?product=MDT.MoDisco
 
-Create a new bug:
------------------
+Be sure to search for existing bugs before you create another one. Remember that
+contributions are always welcome!
 
-Be sure to search for existing bugs before you create another one. Remember that contributions are always welcome!
+## Eclipse Contributor Agreement
 
-- https://bugs.eclipse.org/bugs/enter_bug.cgi?product=MDT.MoDisco
+Before your contribution can be accepted by the project team contributors must
+electronically sign the Eclipse Contributor Agreement (ECA).
 
+* http://www.eclipse.org/legal/ECA.php
+
+Commits that are provided by non-committers must have a Signed-off-by field in
+the footer indicating that the author is aware of the terms by which the
+contribution has been provided to the project. The non-committer must
+additionally have an Eclipse Foundation account and must have a signed Eclipse
+Contributor Agreement (ECA) on file.
+
+For more information, please see the Eclipse Committer Handbook:
+https://www.eclipse.org/projects/handbook/#resources-commit
+
+## Contact
+
+Contact the project developers via the project's "dev" list.
+
+* https://dev.eclipse.org/mailman/listinfo/modisco-dev
