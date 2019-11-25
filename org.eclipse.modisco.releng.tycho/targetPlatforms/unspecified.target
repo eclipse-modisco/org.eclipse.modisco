@@ -2,6 +2,9 @@
 <?pde version="3.8"?><target includeMode="feature" name="Eclipse QVTd Stable Build Target Platform" sequenceNumber="16">
 <locations>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.pde.feature.group" version="0.0.0"/>
+    <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>  
     <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
 
     <unit id="org.eclipse.acceleo.runtime.feature.group" version="0.0.0"/>

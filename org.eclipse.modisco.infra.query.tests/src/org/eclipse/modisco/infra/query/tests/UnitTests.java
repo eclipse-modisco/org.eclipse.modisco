@@ -80,7 +80,6 @@ public class UnitTests {
 //		TargetPlatformUtils.loadTargetPlatform();
 	}
 	
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
@@ -121,7 +120,6 @@ public class UnitTests {
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$
 	}
 
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void simpleEval() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
@@ -229,7 +227,6 @@ public class UnitTests {
 	 * Tests that when the implementation of a Java query is modified, the new
 	 * implementation is used instead of the old
 	 */
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void osgiReload() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
@@ -337,7 +334,6 @@ public class UnitTests {
 
 	private static final int EMFMQQUERYTEST_EXPECTED_RESULT = 5;
 
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void emfmqQueryTest() throws Exception {
 		String name = "emfmqQueryTest"; //$NON-NLS-1$
@@ -543,7 +539,6 @@ public class UnitTests {
 		Assert.assertEquals(null, catalog.getModelQuerySet("modisco.infra.query.tests.03.querySet")); //$NON-NLS-1$
 	}
 
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void resourceSet() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
@@ -722,7 +717,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug307095() throws Exception {
 		final String name = "bug307095"; //$NON-NLS-1$
@@ -751,7 +745,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug307095v2() throws Exception {
 		final String name = "bug307095v2"; //$NON-NLS-1$
@@ -791,7 +784,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug307095v3() throws Exception {
 		final String name = "bug307095v3"; //$NON-NLS-1$

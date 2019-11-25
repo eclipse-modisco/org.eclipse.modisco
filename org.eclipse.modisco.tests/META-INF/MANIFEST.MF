@@ -35,8 +35,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.pde.junit.runtime;bundle-version="3.4.100",
  org.eclipse.jdt.junit4.runtime;bundle-version="1.1.100",
  org.eclipse.modisco.java.discoverer.benchmark.tests;bundle-version="0.13.1",
- org.eclipse.ui.ide;bundle-version="3.16.100",
- org.eclipse.ui.workbench;bundle-version="3.117.0",
+ org.eclipse.ui.ide,
+ org.eclipse.ui.workbench,
  org.eclipse.debug.core,
  org.eclipse.jface
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

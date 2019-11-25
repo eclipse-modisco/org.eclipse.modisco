@@ -15,6 +15,7 @@
   <packaging>pom</packaging>
 
   <modules>
+	<!-- EMF Facet Plugins -->
     <module>org.eclipse.modisco.facet.common.core</module>
     <module>org.eclipse.modisco.facet.common.ui</module>
     <module>org.eclipse.modisco.facet.custom.core</module>
@@ -37,8 +38,8 @@
     <module>org.eclipse.modisco.facet.util.ui</module>
     <module>org.eclipse.modisco.facet.widgets</module>
     <module>org.eclipse.modisco.facet.widgets.celleditors</module>
-    <module>org.eclipse.modisco.facet.widgets.celleditors.ecore</module>
-    
+    <module>org.eclipse.modisco.facet.widgets.celleditors.ecore</module>    
+	<!-- GMT MoDisco Plugins -->
     <module>org.eclipse.modisco.examples</module>
     <module>org.eclipse.modisco.infra.browser</module>
     <module>org.eclipse.modisco.infra.browser.custom</module>
@@ -78,6 +79,7 @@
     <module>org.eclipse.modisco.xml</module>
     <module>org.eclipse.modisco.xml.browser.customization</module>
     
+	<!-- MoDisco Plugins -->
     <module>org.eclipse.modisco.doc</module>
     <!--module>org.eclipse.modisco.doc.api.report</module>
     <module>org.eclipse.modisco.doc.metric.report</module>
@@ -153,7 +155,7 @@
     <module>org.eclipse.modisco.xml.discoverer</module>
     <module>org.eclipse.modisco.xml.discoverer.ui</module>
     <module>org.eclipse.modisco.xml.doc</module>
-
+	<!-- Features -->
     <module>org.eclipse.modisco.all.feature</module>
     <module>org.eclipse.modisco.eclipse.feature</module>
     <module>org.eclipse.modisco.examples.feature</module>
@@ -172,24 +174,25 @@
     <module>org.eclipse.modisco.usecase.simpletransformationschain.feature</module>
     <module>org.eclipse.modisco.utils.chart.feature</module>
     <module>org.eclipse.modisco.xml.feature</module>
-    
+	<!-- Test Support Plugins -->
     <module>org.eclipse.modisco.common.tests</module>
+    <module>org.eclipse.modisco.facet.util.tests.swtbot</module>
     <module>org.eclipse.modisco.infra.discovery.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</module>
     <module>org.eclipse.modisco.java.nousages</module>
     <module>org.eclipse.modisco.java.nousages.cdo</module>
     <module>org.eclipse.modisco.java.classiceobject</module>
-    <module>org.eclipse.modisco.infra.facet.tests</module>
-
+	<!-- Unit Test Plugins -->
     <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests</module>
     <module>org.eclipse.modisco.infra.browser.custom.examples.uml.tests</module>
     <module>org.eclipse.modisco.infra.browser.custom.tests</module>
+    <module>org.eclipse.modisco.infra.browser.tests</module>
     <module>org.eclipse.modisco.infra.common.core.tests</module>
     <module>org.eclipse.modisco.infra.discovery.core.tests</module>
     <module>org.eclipse.modisco.infra.discovery.ui.tests</module>
-    <!--module>org.eclipse.modisco.infra.doc.tests</module>
-    <module>BAD org.eclipse.modisco.infra.facet.tests</module-->
+    <module>org.eclipse.modisco.infra.doc.tests</module>
+    <module>org.eclipse.modisco.infra.facet.tests</module>
     <module>org.eclipse.modisco.infra.query.tests</module>
     <module>org.eclipse.modisco.java.browser.customization.tests</module>
     <module>org.eclipse.modisco.java.composition.discoverer.tests</module>
@@ -202,10 +205,12 @@
     <module>org.eclipse.modisco.jee.jsp.discoverer.tests</module>
     <module>org.eclipse.modisco.jee.jsp.generation.tests</module>
     <module>org.eclipse.modisco.jee.queries.tests</module>
+    <module>org.eclipse.modisco.jee.webapp.discoverer.tests</module>
     <module>org.eclipse.modisco.kdm.uml2converter.tests</module>
-    <!--module>org.eclipse.modisco.tests</module-->
+    <module>org.eclipse.modisco.tests</module>
+    <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
     <module>org.eclipse.modisco.xml.discoverer.tests</module>
-
+	<!-- Update Site -->
     <module>org.eclipse.modisco.updatesite</module>
   </modules>
   

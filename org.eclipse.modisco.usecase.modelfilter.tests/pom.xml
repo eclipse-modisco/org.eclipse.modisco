@@ -25,7 +25,7 @@
     <relativePath>../org.eclipse.modisco.releng.tycho</relativePath>
   </parent>
   <groupId>org.eclipse.modisco</groupId>
-  <artifactId>org.eclipse.modisco.infra.facet.tests</artifactId>
+  <artifactId>org.eclipse.modisco.usecase.modelfilter.tests</artifactId>
   <version>1.5.0-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
    <build>
@@ -41,7 +41,7 @@
                         <id>org.eclipse.modisco.sdk.feature.feature.group</id>
                         <versionRange>0.0.0</versionRange>
                      </requirement>
-                      <requirement>
+                     <requirement>
                         <type>eclipse-plugin</type>
                         <id>org.eclipse.osgi.compatibility.state</id>
                         <versionRange>[1.1.0,2.0.0)</versionRange>
