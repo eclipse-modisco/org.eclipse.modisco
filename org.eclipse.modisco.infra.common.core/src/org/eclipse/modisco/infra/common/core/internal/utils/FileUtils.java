@@ -188,7 +188,7 @@ public final class FileUtils {
 				multiStatus.add(status);
 				System.out.println("bad: " + file + " - " + message);
 			}
-			wait(100000);
+//			wait(100000);
 			throw new CoreException(multiStatus);
 		}
 		else {
