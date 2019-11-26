@@ -22,14 +22,13 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
 public class TestMemory {
 
 	private static final String RESOURCES_TEST_MEMORY = "/resources/memory.jsp"; //$NON-NLS-1$
-	private static final long EXPECTED_MEM_MAXIMUM = 360;	// See Bug 553390
+	private static final long EXPECTED_MEM_MAXIMUM = 540;	// See Bug 553390
 
 	@Test
 	public void memoryTest() throws Exception {

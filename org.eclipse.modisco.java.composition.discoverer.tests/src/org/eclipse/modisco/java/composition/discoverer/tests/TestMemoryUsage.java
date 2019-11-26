@@ -40,7 +40,6 @@ import org.eclipse.modisco.java.composition.javaapplication.JavaApplication;
 import org.eclipse.modisco.java.discoverer.tests.Activator;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -48,7 +47,7 @@ import org.junit.Assert;
 
 public class TestMemoryUsage {
 
-	private static final long MAX_MEM_AWAITED = 360;	// See Bug 553390
+	private static final long MAX_MEM_AWAITED = 540;	// See Bug 553390
 	private static final int KILO = 1024;
 	private static final String PROJECT_NAME = JUnitPlugin.PLUGIN_ID
 			+ "_test001"; //$NON-NLS-1$
