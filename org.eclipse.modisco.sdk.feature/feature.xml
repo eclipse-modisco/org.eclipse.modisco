@@ -15,6 +15,7 @@
       label="MoDisco SDK"
       version="1.5.0.qualifier"
       provider-name="%providerName"
+      plugin="org.eclipse.modisco.infra.capabilities"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 

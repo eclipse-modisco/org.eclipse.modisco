@@ -14,6 +14,7 @@
       label="MoDisco OMG meta-models implementations and tools"
       version="1.5.0.qualifier"
       provider-name="%providerName"
+      plugin="org.eclipse.modisco.util.atl.core"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 

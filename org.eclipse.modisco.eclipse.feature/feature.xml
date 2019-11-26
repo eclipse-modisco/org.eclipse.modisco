@@ -14,6 +14,7 @@
       label="%featureName"
       version="1.5.0.qualifier"
       provider-name="%providerName"
+      plugin="org.eclipse.modisco.eclipseplugin"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
 
@@ -34,10 +35,7 @@ http://www.eclipse.org/legal/epl-v20.html
    </license>
 
    <requires>
-      <import
-         feature="org.eclipse.modisco.java.feature"
-         version="1.0.0"
-         match="greaterOrEqual"/>
+      <import feature="org.eclipse.modisco.java.feature" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
