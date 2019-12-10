@@ -12,7 +12,7 @@ Contributors:
 <feature
       id="org.eclipse.modisco.java.discoverer.benchmark.feature"
       label="MoDisco Java Discoverer Benchmark feature"
-      version="1.5.0.qualifier"
+      version="1.5.1.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.modisco.java.discoverer.benchmark"
       license-feature="org.eclipse.license"
