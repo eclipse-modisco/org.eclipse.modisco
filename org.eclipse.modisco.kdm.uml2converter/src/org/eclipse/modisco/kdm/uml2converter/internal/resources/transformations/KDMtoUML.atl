@@ -467,14 +467,26 @@ rule EnumeratedTypeToEnumeration extends KDMEntityToNamedElement {
 }
 
 
-abstract rule TemplateUnitToTemplateableElement {
+abstract rule TemplateUnitToRedefinableTemplateableElement {
 	from src :kdm!TemplateUnit
 	to tgt :uml!TemplateableElement (
 		ownedTemplateSignature <- signature
 	)
 	, signature :uml!RedefinableTemplateSignature (
-		name <- src.name
-		,ownedParameter <- src.codeElement->select(e | e.oclIsTypeOf(kdm!TemplateParameter))
+		name <- src.name,
+		ownedParameter <- src.codeElement->select(e | e.oclIsTypeOf(kdm!TemplateParameter))
+								->collect(parameter | thisModule->TemplateParameterToClassifierTemplateParameter(parameter))
+	)
+}
+
+abstract rule TemplateUnitToTemplateableElement {
+	from src :kdm!TemplateUnit
+	to tgt :uml!TemplateableElement (
+		ownedTemplateSignature <- signature
+	)
+	, signature :uml!TemplateSignature (
+--		name <- src.name,
+		ownedParameter <- src.codeElement->select(e | e.oclIsTypeOf(kdm!TemplateParameter))
 								->collect(parameter | thisModule->TemplateParameterToClassifierTemplateParameter(parameter))
 	)
 }
@@ -490,7 +502,7 @@ lazy rule TemplateParameterToClassifierTemplateParameter {
 	)
 }
 
-rule TemplateUnitToClass extends TemplateUnitToTemplateableElement {
+rule TemplateUnitToClass extends TemplateUnitToRedefinableTemplateableElement {
 	from src :kdm!TemplateUnit (
 		src->getRealType().oclIsTypeOf(kdm!ClassUnit)
 		)
@@ -510,7 +522,7 @@ rule TemplateUnitToClass extends TemplateUnitToTemplateableElement {
 	)
 }
 
-rule TemplateUnitToInterface extends TemplateUnitToTemplateableElement {
+rule TemplateUnitToInterface extends TemplateUnitToRedefinableTemplateableElement {
 	from src :kdm!TemplateUnit (
 		src->getRealType().oclIsTypeOf(kdm!InterfaceUnit)
 		)

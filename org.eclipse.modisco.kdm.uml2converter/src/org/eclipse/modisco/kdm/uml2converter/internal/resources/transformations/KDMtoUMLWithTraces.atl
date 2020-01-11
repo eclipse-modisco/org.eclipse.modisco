@@ -846,7 +846,7 @@ rule EnumeratedTypeToEnumeration extends KDMEntityToNamedElement {
   )
 }
 
-abstract rule TemplateUnitToTemplateableElement {
+abstract rule TemplateUnitToRedefinableTemplateableElement {
  from
   src : kdm!TemplateUnit
  to
@@ -855,6 +855,50 @@ abstract rule TemplateUnitToTemplateableElement {
   ),
   signature : uml!RedefinableTemplateSignature (
    name <- src.name,
+   ownedParameter <- src.codeElement->select(e |
+    e.oclIsTypeOf(kdm!TemplateParameter)
+   )->collect(parameter |
+    thisModule->TemplateParameterToClassifierTemplateParameter(parameter)
+   )
+  ),
+  __traceLink : Trace!TraceLink (
+   name <- 'TemplateUnitToRedefinableTemplateableElement',
+   sourceElements <- Sequence {__LinkEnd_src},
+   targetElements <- Sequence {__LinkEnd_tgt, __LinkEnd_signature},
+   model <- thisModule.__wmodel
+  ),
+  __LinkEnd_src : Trace!TraceLinkEnd (
+   element <- __elementRef_src
+  ),
+  __elementRef_src : Trace!ElementRef (
+   ref <- src.__xmiID__,
+   modelRef <- thisModule.__model_kdmInput
+  ),
+  __LinkEnd_tgt : Trace!TraceLinkEnd (
+   element <- __elementRef_tgt
+  ),
+  __elementRef_tgt : Trace!ElementRef (
+   ref <- tgt.__xmiID__,
+   modelRef <- thisModule.__model_umlOutput
+  ),
+  __LinkEnd_signature : Trace!TraceLinkEnd (
+   element <- __elementRef_signature
+  ),
+  __elementRef_signature : Trace!ElementRef (
+   ref <- signature.__xmiID__,
+   modelRef <- thisModule.__model_umlOutput
+  )
+}
+
+abstract rule TemplateUnitToTemplateableElement {
+ from
+  src : kdm!TemplateUnit
+ to
+  tgt : uml!TemplateableElement (
+   ownedTemplateSignature <- signature
+  ),
+  signature : uml!TemplateSignature (
+--   name <- src.name,
    ownedParameter <- src.codeElement->select(e |
     e.oclIsTypeOf(kdm!TemplateParameter)
    )->collect(parameter |
@@ -930,7 +974,7 @@ lazy rule TemplateParameterToClassifierTemplateParameter {
   )
 }
 
-rule TemplateUnitToClass extends TemplateUnitToTemplateableElement {
+rule TemplateUnitToClass extends TemplateUnitToRedefinableTemplateableElement {
  from
   src : kdm!TemplateUnit
   (
@@ -990,7 +1034,7 @@ rule TemplateUnitToClass extends TemplateUnitToTemplateableElement {
   )
 }
 
-rule TemplateUnitToInterface extends TemplateUnitToTemplateableElement {
+rule TemplateUnitToInterface extends TemplateUnitToRedefinableTemplateableElement {
  from
   src : kdm!TemplateUnit
   (

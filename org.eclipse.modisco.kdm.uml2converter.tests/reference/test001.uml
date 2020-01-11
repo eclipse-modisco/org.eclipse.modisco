@@ -988,7 +988,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a684" value="*"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a685"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a686" name="MaMethodeParametree" parameter="a687">
+    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a686" name="MaMethodeParametree" parameter="a687">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a687" parameteredElement="a688">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a688" name="T3" templateParameter="a687"/>
       </ownedParameter>
@@ -1003,7 +1003,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a694" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a695"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a696" name="first" parameter="a697">
+    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a696" name="first" parameter="a697">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a697" parameteredElement="a698">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a698" name="X" templateParameter="a697"/>
       </ownedParameter>
@@ -1018,7 +1018,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a704" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a705"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a706" name="first" parameter="a707">
+    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a706" name="first" parameter="a707">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a707" parameteredElement="a708">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a708" name="X" templateParameter="a707"/>
       </ownedParameter>
@@ -1033,7 +1033,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a714" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a715"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a716" name="second" parameter="a717 a719">
+    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a716" name="second" parameter="a717 a719">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a717" parameteredElement="a718">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a718" name="X" templateParameter="a717"/>
       </ownedParameter>
@@ -1055,7 +1055,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a729" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a730"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a731" name="accept" parameter="a732 a734">
+    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a731" name="accept" parameter="a732 a734">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a732" parameteredElement="a733">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a733" name="R" templateParameter="a732"/>
       </ownedParameter>
