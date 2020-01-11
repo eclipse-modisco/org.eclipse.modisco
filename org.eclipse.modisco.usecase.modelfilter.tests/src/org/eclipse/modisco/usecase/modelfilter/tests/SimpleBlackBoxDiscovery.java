@@ -71,7 +71,6 @@ public class SimpleBlackBoxDiscovery {
 		}
 	}
 
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474705
 	@Test
 	public void testUmlModelDiscoveryFromJavaProject() throws CoreException,
 			IOException, DiscoveryException {
@@ -101,7 +100,6 @@ public class SimpleBlackBoxDiscovery {
 		}
 	}
 
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468346
 	@Test
 	public void testUmlModelFromJavaProjectWithReferenceModel()
 			throws CoreException, IOException, InterruptedException,
@@ -135,13 +133,11 @@ public class SimpleBlackBoxDiscovery {
 		Assert.assertNotNull(referenceUri);
 		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
-		final boolean result = TestModelUtils.compareModels(output,
-				referenceModel, true);
+		final boolean result = TestModelUtils.compareModels(referenceModel, output);
 		Assert.assertTrue(
 				"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
 	}
 
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=474705
 	@Test
 	public void testValidationOfUmlModelDiscoveryFromJavaProject()
 			throws DiscoveryException, CoreException {

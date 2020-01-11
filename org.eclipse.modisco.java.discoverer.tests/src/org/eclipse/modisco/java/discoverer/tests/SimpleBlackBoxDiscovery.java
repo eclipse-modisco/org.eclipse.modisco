@@ -131,8 +131,7 @@ public class SimpleBlackBoxDiscovery {
 		Assert.assertNotNull(referenceUri);
 		Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
-		boolean result = TestModelUtils.compareModels(output, referenceModel,
-				true);
+		boolean result = TestModelUtils.compareModels(referenceModel, output);
 		Assert.assertTrue("Comparison of Java models has failed !", result); //$NON-NLS-1$
 	}
 

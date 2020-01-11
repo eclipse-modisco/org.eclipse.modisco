@@ -67,8 +67,6 @@ public class SimpleBlackBoxConverter {
 	}
 
 	@Test
-	@Ignore
-	// @Ignore : FIXME TestModelUtils#compareModels must be rewritten for EMF Compare 2.0
 	public void testConversionOfJavaModelToKdmModel() throws Exception {
 		/*
 		 * prepare the target ... we have to create an empty project into the
@@ -107,8 +105,7 @@ public class SimpleBlackBoxConverter {
 		Assert.assertNotNull(referenceUri);
 		Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
-		boolean result = TestModelUtils.compareModels(output, referenceModel,
-				true);
+		boolean result = TestModelUtils.compareModels(referenceModel, output);
 
 		if (this.export) {
 			output.setURI(URI
@@ -121,8 +118,6 @@ public class SimpleBlackBoxConverter {
 	}
 
 	@Test
-	@Ignore
-	// @Ignore : FIXME TestModelUtils#compareModels must be rewritten for EMF Compare 2.0
 	public void testValidationOfKdmModelConvertedFromJavaModel()
 			throws Exception {
 		/*

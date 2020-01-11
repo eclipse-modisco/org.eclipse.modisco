@@ -263,7 +263,7 @@ rule ClassDeclarationToClassUnit extends AbstractTypeDeclarationToDatatype {
 		isAbstract <- if src.modifier.oclIsUndefined() then
 						OclUndefined
 					else
-						src.modifier.inheritance = #"abstract"
+						src.modifier.inheritance = #_abstract
 					endif
 		-- attributes
 		,codeElement <- javaAttributes
