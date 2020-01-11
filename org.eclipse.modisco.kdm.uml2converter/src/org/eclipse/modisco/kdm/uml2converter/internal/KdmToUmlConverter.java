@@ -55,14 +55,14 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
+import org.eclipse.uml2.uml.internal.impl.UMLPackageImpl;
 
 public class KdmToUmlConverter {
 
 	public static final String MM_LOCATION = "resources/metamodels"; //$NON-NLS-1$
 	public static final String TRANSFO_LOCATION = "resources/transformations"; //$NON-NLS-1$
 	public static final String KDM_MM_URI = org.eclipse.modisco.omg.kdm.action.ActionPackage.eNS_URI;
-	//public static final String UML_MM_URI = "http://www.eclipse.org/uml2/2.1.0/UML"; //$NON-NLS-1$
-	public static final String UML_MM_URI = "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"; //$NON-NLS-1$
+	public static final String UML_MM_URI = UMLPackageImpl.eNS_URI; //$NON-NLS-1$
 	private static final String ATL_MM_PATH = "http://www.eclipse.org/gmt/2005/ATL"; //$NON-NLS-1$
 
 	public Resource[] getUML2ModelFromKDMModel(final Resource kdmModel, final boolean generateTraces)
