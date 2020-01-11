@@ -64,8 +64,6 @@ public class KdmToUml2WithTracesConverterTest {
 	}
 
 	@Test
-	@Ignore
-	// @Ignore : FIXME TestModelUtils#compareModels must be rewritten for EMF Compare 2.0
 	public void testKdmToUmlConverter() throws Exception {
 		/*
 		 * prepare the target ... we have to create an empty project into the
@@ -115,7 +113,7 @@ public class KdmToUml2WithTracesConverterTest {
 		}
 		output = ModelUtils.loadModel(output.getURI());
 
-		Assert.assertTrue(TestModelUtils.compareModels(output, referenceModel, true));
+		Assert.assertTrue(TestModelUtils.compareModels(referenceModel, output));
 
 		if (this.export) {
 			output.setURI(URI.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$
@@ -152,8 +150,6 @@ public class KdmToUml2WithTracesConverterTest {
 	// }
 
 	@Test
-	@Ignore
-	// @Ignore : FIXME TestModelUtils#compareModels must be rewritten for EMF Compare 2.0
 	public void testKdmSourceToUmlConverter_bug315355() throws Exception {
 		/*
 		 * prepare the target ... we have to create an empty project into the
@@ -207,7 +203,7 @@ public class KdmToUml2WithTracesConverterTest {
 		output = ModelUtils.loadModel(output.getURI());
 		// end temporary
 
-		Assert.assertTrue(TestModelUtils.compareModels(output, referenceModel, true));
+		Assert.assertTrue(TestModelUtils.compareModels(referenceModel, output));
 
 		if (this.export) {
 			output.setURI(URI.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$
@@ -238,7 +234,6 @@ public class KdmToUml2WithTracesConverterTest {
 		return output;
 	}
 
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=469150
 	@Test
 	public void testValidationOfConvertedSourceUmlModel() throws Exception {
 
@@ -265,8 +260,6 @@ public class KdmToUml2WithTracesConverterTest {
 	}
 
 	@Test
-	@Ignore
-	// @Ignore : FIXME TestModelUtils#compareModels must be rewritten for EMF Compare 2.0
 	public void testKdmToUmlConverter_bug318638() throws Exception {
 		/*
 		 * prepare the target ... we have to create an empty project into the
@@ -309,7 +302,7 @@ public class KdmToUml2WithTracesConverterTest {
 		}
 		output = ModelUtils.loadModel(output.getURI());
 
-		Assert.assertTrue(TestModelUtils.compareModels(output, referenceModel, true));
+		Assert.assertTrue(TestModelUtils.compareModels(referenceModel, output));
 
 		if (this.export) {
 			output.setURI(URI.createFileURI("c:/referenceModel" + this.umlModelExtension)); //$NON-NLS-1$

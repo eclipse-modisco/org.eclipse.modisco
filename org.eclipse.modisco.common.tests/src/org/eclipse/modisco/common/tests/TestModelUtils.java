@@ -11,11 +11,16 @@
  *******************************************************************************/
 package org.eclipse.modisco.common.tests;
 
-import java.io.File;
 import java.io.IOException;
 
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
+import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.uml2.uml.PackageableElement;
+import org.eclipse.uml2.uml.VisibilityKind;
+
+import junit.framework.TestCase;
 
 public class TestModelUtils {
 	/**
@@ -31,7 +36,7 @@ public class TestModelUtils {
 	 *            if <code>true</code>, delete the right file after comparison
 	 * @throws IOException
 	 * @throws InterruptedException
-	 */
+	 *
 	public static boolean compareModels(final File leftUri, final File rightUri,
 			final boolean ignoreIds, final boolean delete) throws IOException, InterruptedException {
 		boolean result = true;
@@ -44,7 +49,7 @@ public class TestModelUtils {
 			leftUri.delete();
 		}
 		return result;
-	}
+	} */
 
 	/**
 	 * Compare two ecore files as models.
@@ -60,49 +65,30 @@ public class TestModelUtils {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	public static boolean compareModels(final Resource leftModel, final Resource rightModel,
-			final boolean ignoreIds) throws IOException, InterruptedException {
-		throw new UnsupportedOperationException("Must be rewritten with EMF Compare 2.0");
-//
-//		boolean result = true;
-//
-//		Map<String, Object> options = new HashMap<String, Object>();
-//		if (ignoreIds) {
-//			options.put("match.ignore.xmi.id", Boolean.TRUE); //$NON-NLS-1$
-//		}
-//		final MatchModel inputMatch = MatchService.doResourceMatch(leftModel, rightModel, options);
-//		final DiffModel inputDiff = DiffService.doDiff(inputMatch);
-//
-//		if (((DiffGroup) inputDiff.getOwnedElements().get(0)).getSubchanges() != 0) {
-//			result = false;
-//			ComparisonResourceSnapshot snapshot = DiffFactory.eINSTANCE
-//					.createComparisonResourceSnapshot();
-//			snapshot.setDiff(inputDiff);
-//			snapshot.setMatch(inputMatch);
-//			saveModel(snapshot, leftModel.getURI().appendFileExtension("emfdiff")); //$NON-NLS-1$
-//			//throw new RuntimeException("There are differences between models " + leftUri + " and " + rightUri); //$NON-NLS-1$ //$NON-NLS-2$
-//		}
-//		return result;
+	public static boolean compareModels(final Resource expectedResource, final Resource actualResource) throws IOException, InterruptedException {
+		XMLResource xmlExpectedResource = (XMLResource)expectedResource;
+		for (TreeIterator<EObject> tit = xmlExpectedResource.getAllContents(); tit.hasNext(); ) {
+			EObject eObject = tit.next();
+			xmlExpectedResource.setID(eObject, null);
+			if (eObject instanceof PackageableElement) {
+				PackageableElement packageableElement = (PackageableElement)eObject;
+				VisibilityKind visibility = packageableElement.getVisibility();
+				packageableElement.setVisibility(visibility);
+			}
+		}
+		XMLResource xmlActualResource = (XMLResource)actualResource;
+		for (TreeIterator<EObject> tit = xmlActualResource.getAllContents(); tit.hasNext(); ) {
+			EObject eObject = tit.next();
+			xmlActualResource.setID(eObject, null);
+			if (eObject instanceof PackageableElement) {
+				PackageableElement packageableElement = (PackageableElement)eObject;
+				VisibilityKind visibility = packageableElement.getVisibility();
+				packageableElement.setVisibility(visibility);
+			}
+		};
+		String expected = EmfFormatter.listToStr(expectedResource.getContents());//.replaceAll("attr VisibilityKind visibility 'public'", "");
+		String actual = EmfFormatter.listToStr(actualResource.getContents())/*.replaceAll(" : ", ": ")*/;
+		TestCase.assertEquals(expected, actual);
+		return true;
 	}
-
-//	/**
-//	 * Saves a model as a file to the given uri.
-//	 *
-//	 * @param root
-//	 *            Root of the objects to be serialized in a file.
-//	 * @param path
-//	 *            File where the objects have to be saved.
-//	 * @throws IOException
-//	 *             Thrown if an I/O operation has failed or been interrupted
-//	 *             during the saving process.
-//	 */
-//	private static void saveModel(final EObject root, final URI modelURI) throws IOException {
-//		ResourceSet resourceSet = new ResourceSetImpl();
-//		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
-//				.put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-//		final Resource newModelResource = resourceSet.createResource(modelURI);
-//		newModelResource.getContents().add(root);
-//		newModelResource.save(null);
-//	}
-
 }
