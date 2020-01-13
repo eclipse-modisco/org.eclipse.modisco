@@ -80,7 +80,7 @@ rule createDependencyForRealType(source :uml!Association, target :kdm!Datatype) 
 		}
 		
 		-- and we have to initialize opposite property
-		source.clientDependency <- tgt;
+		-- source.clientDependency <- tgt;
 	}
 }
 
