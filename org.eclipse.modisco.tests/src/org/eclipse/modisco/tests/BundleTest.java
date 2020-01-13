@@ -36,12 +36,13 @@ public class BundleTest {
 
 	@Test
 	public void version() {
-		testManifestProperty("Bundle-Version", "1\\.5\\.0\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
+		testManifestProperty("Bundle-Version", "1\\.5\\.\\d+\\..*"); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 
 	@Test
 	public void about() {
 		List<Bundle> wrongBundle = test(new RunnableTest() {
+			@Override
 			public void run(final Bundle bundle) {
 				URL url = bundle.getResource("/about.html"); //$NON-NLS-1$
 				Assert.assertNotNull(url);
@@ -58,6 +59,7 @@ public class BundleTest {
 
 	private void testManifestProperty(final String property, final String regex) {
 		List<Bundle> wrongBundle = test(new RunnableTest() {
+			@Override
 			public void run(final Bundle bundle) {
 				Assert.assertTrue(bundle.getHeaders().get(property).toString().matches(regex));
 			}
