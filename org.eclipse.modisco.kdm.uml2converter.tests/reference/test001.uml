@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="a1" name="root model">
     <packagedElement xmi:type="uml:Model" xmi:id="a2" name="test001">
       <packagedElement xmi:type="uml:Package" xmi:id="a3" name="annotations">
         <packagedElement xmi:type="uml:Interface" xmi:id="a4" name="MyAnnotation">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a5" name="monAttributNormal" visibility="public" type="a377">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a6" value="1"/>
+          <ownedAttribute xmi:id="a5" name="monAttributNormal" visibility="public" type="a377">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a7"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a6" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a8" name="numero" visibility="public" type="a373">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a9" value="1"/>
+          <ownedAttribute xmi:id="a8" name="numero" visibility="public" type="a373">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a10"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a9" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a11" name="valeur" visibility="public" type="a404">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a12" value="1"/>
+          <ownedAttribute xmi:id="a11" name="valeur" visibility="public" type="a404">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a13"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a12" value="1"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a14" name="MyAnnotatedClass2" clientDependency="a45 a46 a47">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a15" name="j" visibility="public" type="a373">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a16" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a14" name="MyAnnotatedClass2">
+          <ownedAttribute xmi:id="a15" name="j" visibility="public" type="a373">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a17"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a16" value="1"/>
           </ownedAttribute>
+          <ownedOperation xmi:id="a25" name="MaMethode" visibility="public">
+            <ownedParameter xmi:id="a26" visibility="public" type="a378" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a28"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a27" value="1"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="a29" name="aFile" visibility="public" type="a473">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a31"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a30" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
           <nestedClassifier xmi:type="uml:Interface" xmi:id="a18" name="MonInnerAnnotation">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a19" name="maV" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a20" value="1"/>
+            <ownedAttribute xmi:id="a19" name="maV" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a21"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a20" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a22" name="value" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a23" value="1"/>
+            <ownedAttribute xmi:id="a22" name="value" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a24"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a23" value="1"/>
             </ownedAttribute>
           </nestedClassifier>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a25" name="MaMethode" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a26" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a27" value="1"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a28"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a29" name="aFile" visibility="public" type="a473">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a30" value="1"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a31"/>
-            </ownedParameter>
-          </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a32" name="MyAnnotatedClass" clientDependency="a48">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a33" name="myMethod" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a34" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a35" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a32" name="MyAnnotatedClass">
+          <ownedOperation xmi:id="a33" name="myMethod" visibility="public">
+            <ownedParameter xmi:id="a34" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a36"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a35" value="1"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a37" name="returnRawList" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a38" visibility="public" type="a526" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a39" value="1"/>
+          <ownedOperation xmi:id="a37" name="returnRawList" visibility="public">
+            <ownedParameter xmi:id="a38" visibility="public" type="a526" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a40"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a39" value="1"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a41" name="toString" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a42" visibility="public" type="a404" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a43" value="1"/>
+          <ownedOperation xmi:id="a41" name="toString" visibility="public">
+            <ownedParameter xmi:id="a42" visibility="public" type="a404" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a44"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a43" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a45" supplier="a499" client="a14"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a46" supplier="a526" client="a14"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a47" supplier="a532" client="a14"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a48" supplier="a526" client="a32"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a45" client="a14" supplier="a499"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a46" client="a14" supplier="a526"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a47" client="a14" supplier="a532"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a48" client="a32" supplier="a526"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a49" name="classorifaceproxy">
         <packagedElement xmi:type="uml:Package" xmi:id="a50" name="p1">
-          <packagedElement xmi:type="uml:Interface" xmi:id="a51" name="Iface1" clientDependency="a55">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a52" name="if2" visibility="public" type="a59" association="a56">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a53" value="1"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="a51" name="Iface1">
+            <ownedAttribute xmi:id="a52" name="if2" visibility="public" type="a59" association="a56">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a54"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a53" value="1"/>
             </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a55" supplier="a59" client="a51"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a55" client="a51" supplier="a59"/>
           <packagedElement xmi:type="uml:Association" xmi:id="a56" memberEnd="a52 a57">
-            <ownedEnd xmi:type="uml:Property" xmi:id="a57" type="a51" association="a56"/>
+            <ownedEnd xmi:id="a57" type="a51" association="a56"/>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a58" name="p2">
-          <packagedElement xmi:type="uml:Interface" xmi:id="a59" name="Iface2" clientDependency="a63">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a60" name="if1" visibility="public" type="a51" association="a64">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a61" value="1"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="a59" name="Iface2">
+            <ownedAttribute xmi:id="a60" name="if1" visibility="public" type="a51" association="a64">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a62"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a61" value="1"/>
             </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a63" supplier="a51" client="a59"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a63" client="a59" supplier="a51"/>
           <packagedElement xmi:type="uml:Association" xmi:id="a64" memberEnd="a60 a65">
-            <ownedEnd xmi:type="uml:Property" xmi:id="a65" type="a59" association="a64"/>
+            <ownedEnd xmi:id="a65" type="a59" association="a64"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a66" name="comments">
         <packagedElement xmi:type="uml:Class" xmi:id="a67" name="Comments">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a68" name="s" visibility="public" type="a404">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a69" value="1"/>
+          <ownedAttribute xmi:id="a68" name="s" visibility="public" type="a404">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a70"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a69" value="1"/>
           </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a71" name="method" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a72" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a73" value="1"/>
+          <ownedOperation xmi:id="a71" name="method" visibility="public">
+            <ownedParameter xmi:id="a72" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a74"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a73" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a75" name="duplicateproxy">
-        <packagedElement xmi:type="uml:Class" xmi:id="a76" name="DuplicateProxy2" clientDependency="a100">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a77" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a78" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a79" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a76" name="DuplicateProxy2">
+          <ownedOperation xmi:id="a77" name="main" visibility="public">
+            <ownedParameter xmi:id="a78" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a80"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a79" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a81" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a82" value="*"/>
+            <ownedParameter xmi:id="a81" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a83"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a82" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a84" name="DuplicateProxy1" clientDependency="a101">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a85" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a86" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a87" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a84" name="DuplicateProxy1">
+          <ownedOperation xmi:id="a85" name="main" visibility="public">
+            <ownedParameter xmi:id="a86" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a88"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a87" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a89" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a90" value="*"/>
+            <ownedParameter xmi:id="a89" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a91"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a90" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a92" name="DuplicateProxy3" clientDependency="a102">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a93" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a94" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a95" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a92" name="DuplicateProxy3">
+          <ownedOperation xmi:id="a93" name="main" visibility="public">
+            <ownedParameter xmi:id="a94" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a96"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a95" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a97" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a98" value="*"/>
+            <ownedParameter xmi:id="a97" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a99"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a98" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a100" supplier="a499" client="a76"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a101" supplier="a499" client="a84"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a102" supplier="a499" client="a92"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a100" client="a76" supplier="a499"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a101" client="a84" supplier="a499"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a102" client="a92" supplier="a499"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a103" name="enumerations">
         <packagedElement xmi:type="uml:Package" xmi:id="a104" name="p1">
-          <packagedElement xmi:type="uml:Enumeration" xmi:id="a105" name="MyEnumeration" clientDependency="a110">
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="a106" name="enum literal"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="a107" name="enum literal"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="a108" name="enum literal"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="a109" name="enum literal"/>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="a105" name="MyEnumeration">
+            <ownedLiteral xmi:id="a106" name="enum literal"/>
+            <ownedLiteral xmi:id="a107" name="enum literal"/>
+            <ownedLiteral xmi:id="a108" name="enum literal"/>
+            <ownedLiteral xmi:id="a109" name="enum literal"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a110" supplier="a498" client="a105"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a110" client="a105" supplier="a498"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a111" name="initializer">
@@ -165,67 +165,67 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a113" name="innerclass">
         <packagedElement xmi:type="uml:Class" xmi:id="a114" name="InnerClass">
+          <ownedOperation xmi:id="a121" name="InnerClass" visibility="public"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="a115" name="InnerClass2">
+            <ownedOperation xmi:id="a120" name="InnerClass2" visibility="public"/>
             <nestedClassifier xmi:type="uml:Class" xmi:id="a116" name="InnerClass3">
+              <ownedOperation xmi:id="a119" name="InnerClass3" visibility="public"/>
               <nestedClassifier xmi:type="uml:Class" xmi:id="a117" name="InnerClass4">
                 <nestedClassifier xmi:type="uml:Class" xmi:id="a118" name="InnerClass5"/>
               </nestedClassifier>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="a119" name="InnerClass3" visibility="public"/>
             </nestedClassifier>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a120" name="InnerClass2" visibility="public"/>
           </nestedClassifier>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a121" name="InnerClass" visibility="public"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a122" name="InnerClassB" clientDependency="a130 a131">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a123" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a124" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a125" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a122" name="InnerClassB">
+          <ownedOperation xmi:id="a123" name="main" visibility="public">
+            <ownedParameter xmi:id="a124" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a126"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a125" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a127" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a128" value="*"/>
+            <ownedParameter xmi:id="a127" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a129"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a128" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a130" supplier="a115" client="a122"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a131" supplier="a116" client="a122"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a130" client="a122" supplier="a115"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a131" client="a122" supplier="a116"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a132" name="methodefromanonymousclassdeclaration">
         <packagedElement xmi:type="uml:Class" xmi:id="a133" name="AnonymousClass">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a134" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a135" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a136" value="1"/>
+          <ownedOperation xmi:id="a134" name="main" visibility="public">
+            <ownedParameter xmi:id="a135" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a137"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a136" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a138" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a139" value="*"/>
+            <ownedParameter xmi:id="a138" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a140"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a139" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a141" name="modifiers">
         <packagedElement xmi:type="uml:Class" xmi:id="a142" name="Modifiers">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a143" name="f" visibility="public" isStatic="true" type="a373">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a144" value="1"/>
+          <ownedAttribute xmi:id="a143" name="f" visibility="public" isStatic="true" type="a373">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a145"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a144" value="1"/>
           </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a146" name="method" visibility="protected">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a147" visibility="public" type="a373" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a148" value="1"/>
+          <ownedOperation xmi:id="a146" name="method" visibility="protected">
+            <ownedParameter xmi:id="a147" visibility="public" type="a373" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a149"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a148" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a150" name="packageaccess">
-        <packagedElement xmi:type="uml:Class" xmi:id="a151" name="PackageAccess" clientDependency="a152">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a152" supplier="a627" client="a151" contract="a627"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a151" name="PackageAccess">
+          <interfaceRealization xmi:id="a152" client="a151" supplier="a627" contract="a627"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a153" name="parameterizedtype">
-        <packagedElement xmi:type="uml:Class" xmi:id="a154" name="ParameterizedType2" clientDependency="a176 a177 a178">
+        <packagedElement xmi:type="uml:Class" xmi:id="a154" name="ParameterizedType2">
           <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a155" name="ParameterizedType2&lt;T1, T2>" parameter="a156 a158">
             <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a156" parameteredElement="a157">
               <ownedParameteredElement xmi:type="uml:Class" xmi:id="a157" name="T1" templateParameter="a156"/>
@@ -234,315 +234,315 @@
               <ownedParameteredElement xmi:type="uml:Class" xmi:id="a159" name="T2" templateParameter="a158"/>
             </ownedParameter>
           </ownedTemplateSignature>
-          <generalization xmi:type="uml:Generalization" xmi:id="a160" general="a499"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="a161" name="aMap" visibility="public" association="a180">
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a162" value="*"/>
+          <generalization xmi:id="a160" general="a499"/>
+          <ownedAttribute xmi:id="a161" name="aMap" visibility="public" association="a180">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a163"/>
-            <qualifier xmi:type="uml:Property" xmi:id="a164" name="qualifier" type="a404"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a162" value="*"/>
+            <qualifier xmi:id="a164" name="qualifier" type="a404"/>
           </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a165" name="MaMethodeParametree2" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a166" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a167" value="1"/>
+          <ownedOperation xmi:id="a165" name="MaMethodeParametree2" visibility="public">
+            <ownedParameter xmi:id="a166" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a168"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a167" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a169" name="aP" visibility="public">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a170" value="*"/>
+            <ownedParameter xmi:id="a169" name="aP" visibility="public">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a171"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a170" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a172" name="ParameterizedType" clientDependency="a179">
+        <packagedElement xmi:type="uml:Class" xmi:id="a172" name="ParameterizedType">
           <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a173" name="ParameterizedType&lt;P>" parameter="a174">
             <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a174" parameteredElement="a175">
               <ownedParameteredElement xmi:type="uml:Class" xmi:id="a175" name="P" templateParameter="a174"/>
             </ownedParameter>
           </ownedTemplateSignature>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a176" supplier="a499" client="a154"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a177" supplier="a526" client="a154"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a178" supplier="a532" client="a154"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a179" supplier="a631" client="a172"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a176" client="a154" supplier="a499"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a177" client="a154" supplier="a526"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a178" client="a154" supplier="a532"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a179" client="a172" supplier="a631"/>
         <packagedElement xmi:type="uml:Association" xmi:id="a180" memberEnd="a161 a181">
-          <ownedEnd xmi:type="uml:Property" xmi:id="a181" association="a180"/>
+          <ownedEnd xmi:id="a181" association="a180"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a182" name="parameterizedtypeinmethoddecl">
-        <packagedElement xmi:type="uml:Class" xmi:id="a183" name="Class1" clientDependency="a184"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a184" supplier="a538" client="a183"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a183" name="Class1"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a184" client="a183" supplier="a538"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a185" name="proxyField">
         <packagedElement xmi:type="uml:Package" xmi:id="a186" name="p1">
-          <packagedElement xmi:type="uml:Class" xmi:id="a187" name="PFClass1" clientDependency="a202">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a188" name="s1" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a189" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a187" name="PFClass1">
+            <ownedAttribute xmi:id="a188" name="s1" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a190"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a189" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a191" name="s2" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a192" value="1"/>
+            <ownedAttribute xmi:id="a191" name="s2" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a193"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a192" value="1"/>
             </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a194" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a195" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a196" value="1"/>
+            <ownedOperation xmi:id="a194" name="main" visibility="public">
+              <ownedParameter xmi:id="a195" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a197"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a196" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a198" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a199" value="*"/>
+              <ownedParameter xmi:id="a198" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a200"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a199" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a201" name="PFClass1" visibility="public"/>
+            <ownedOperation xmi:id="a201" name="PFClass1" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a202" supplier="a204" client="a187"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a202" client="a187" supplier="a204"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a203" name="p2">
-          <packagedElement xmi:type="uml:Class" xmi:id="a204" name="PFClass2" clientDependency="a231">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a205" name="a1" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a206" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a204" name="PFClass2">
+            <ownedAttribute xmi:id="a205" name="a1" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a207"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a206" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a208" name="a2" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a209" value="1"/>
+            <ownedAttribute xmi:id="a208" name="a2" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a210"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a209" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a211" name="b1" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a212" value="1"/>
+            <ownedAttribute xmi:id="a211" name="b1" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a213"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a212" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a214" name="b2" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a215" value="1"/>
+            <ownedAttribute xmi:id="a214" name="b2" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a216"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a215" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a217" name="c1" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a218" value="1"/>
+            <ownedAttribute xmi:id="a217" name="c1" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a219"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a218" value="1"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a220" name="c2" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a221" value="1"/>
+            <ownedAttribute xmi:id="a220" name="c2" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a222"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a221" value="1"/>
             </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a223" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a224" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a225" value="1"/>
+            <ownedOperation xmi:id="a223" name="main" visibility="public">
+              <ownedParameter xmi:id="a224" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a226"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a225" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a227" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a228" value="*"/>
+              <ownedParameter xmi:id="a227" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a229"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a228" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a230" name="PFClass2" visibility="public"/>
+            <ownedOperation xmi:id="a230" name="PFClass2" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a231" supplier="a187" client="a204"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a231" client="a204" supplier="a187"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a232" name="proxyparameters">
         <packagedElement xmi:type="uml:Package" xmi:id="a233" name="p1">
-          <packagedElement xmi:type="uml:Class" xmi:id="a234" name="ProxyParameters1" clientDependency="a249">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a235" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a236" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a237" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a234" name="ProxyParameters1">
+            <ownedOperation xmi:id="a235" name="main" visibility="public">
+              <ownedParameter xmi:id="a236" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a238"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a237" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a239" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a240" value="*"/>
+              <ownedParameter xmi:id="a239" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a241"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a240" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a242" name="test" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a243" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a244" value="1"/>
+            <ownedOperation xmi:id="a242" name="test" visibility="public">
+              <ownedParameter xmi:id="a243" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a245"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a244" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a246" name="param1" visibility="public" type="a373">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a247" value="1"/>
+              <ownedParameter xmi:id="a246" name="param1" visibility="public" type="a373">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a248"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a247" value="1"/>
               </ownedParameter>
             </ownedOperation>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a249" supplier="a251" client="a234"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a249" client="a234" supplier="a251"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a250" name="p2">
           <packagedElement xmi:type="uml:Class" xmi:id="a251" name="ProxyParameters2">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a252" name="test" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a253" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a254" value="1"/>
+            <ownedOperation xmi:id="a252" name="test" visibility="public">
+              <ownedParameter xmi:id="a253" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a255"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a254" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a256" name="param1" visibility="public" type="a373">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a257" value="1"/>
+              <ownedParameter xmi:id="a256" name="param1" visibility="public" type="a373">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a258"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a257" value="1"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a259" name="ProxyParameters2" visibility="public"/>
+            <ownedOperation xmi:id="a259" name="ProxyParameters2" visibility="public"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a260" name="resolvebinding">
         <packagedElement xmi:type="uml:Package" xmi:id="a261" name="p1">
           <packagedElement xmi:type="uml:Class" xmi:id="a262" name="ResolveBindind1">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="a263" name="SubResolveBinding1">
-              <ownedOperation xmi:type="uml:Operation" xmi:id="a264" name="SubResolveBinding1" visibility="public"/>
-            </nestedClassifier>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a265" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a266" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a267" value="1"/>
+            <ownedOperation xmi:id="a265" name="main" visibility="public">
+              <ownedParameter xmi:id="a266" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a268"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a267" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a269" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a270" value="*"/>
+              <ownedParameter xmi:id="a269" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a271"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a270" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a272" name="m1" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a273" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a274" value="1"/>
+            <ownedOperation xmi:id="a272" name="m1" visibility="public">
+              <ownedParameter xmi:id="a273" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a275"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a274" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a276" name="rb2" visibility="public" type="a262">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a277" value="1"/>
+              <ownedParameter xmi:id="a276" name="rb2" visibility="public" type="a262">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a278"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a277" value="1"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a279" name="ResolveBindind1" visibility="public"/>
+            <ownedOperation xmi:id="a279" name="ResolveBindind1" visibility="public"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="a263" name="SubResolveBinding1">
+              <ownedOperation xmi:id="a264" name="SubResolveBinding1" visibility="public"/>
+            </nestedClassifier>
           </packagedElement>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a280" name="test001">
         <packagedElement xmi:type="uml:Package" xmi:id="a281" name="p1">
-          <packagedElement xmi:type="uml:Class" xmi:id="a282" name="Class1" clientDependency="a291">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a283" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a284" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a285" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a282" name="Class1">
+            <ownedOperation xmi:id="a283" name="main" visibility="public">
+              <ownedParameter xmi:id="a284" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a286"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a285" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a287" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a288" value="*"/>
+              <ownedParameter xmi:id="a287" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a289"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a288" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a290" name="Class1" visibility="public"/>
+            <ownedOperation xmi:id="a290" name="Class1" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a291" supplier="a293" client="a282"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a291" client="a282" supplier="a293"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a292" name="p2">
-          <packagedElement xmi:type="uml:Class" xmi:id="a293" name="Class2" clientDependency="a302">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a294" name="main" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a295" visibility="public" type="a378" direction="return">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a296" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a293" name="Class2">
+            <ownedOperation xmi:id="a294" name="main" visibility="public">
+              <ownedParameter xmi:id="a295" visibility="public" type="a378" direction="return">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a297"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a296" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a298" name="args" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a299" value="*"/>
+              <ownedParameter xmi:id="a298" name="args" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a300"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a299" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a301" name="Class2" visibility="public"/>
+            <ownedOperation xmi:id="a301" name="Class2" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="a302" supplier="a282" client="a293"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="a302" client="a293" supplier="a282"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a303" name="test002">
-        <packagedElement xmi:type="uml:Class" xmi:id="a304" name="Class2" clientDependency="a326">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="a305" name="Class3">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a306" name="Class3" visibility="public"/>
-          </nestedClassifier>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a307" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a308" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a309" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a304" name="Class2">
+          <ownedOperation xmi:id="a307" name="main" visibility="public">
+            <ownedParameter xmi:id="a308" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a310"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a309" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a311" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a312" value="*"/>
+            <ownedParameter xmi:id="a311" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a313"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a312" value="*"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a314" name="Class2" visibility="public"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="a315" name="Class1" clientDependency="a327">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="a316" name="Class4">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a317" name="Class4" visibility="public"/>
+          <ownedOperation xmi:id="a314" name="Class2" visibility="public"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="a305" name="Class3">
+            <ownedOperation xmi:id="a306" name="Class3" visibility="public"/>
           </nestedClassifier>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a318" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a319" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a320" value="1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="a315" name="Class1">
+          <ownedOperation xmi:id="a318" name="main" visibility="public">
+            <ownedParameter xmi:id="a319" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a321"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a320" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a322" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a323" value="*"/>
+            <ownedParameter xmi:id="a322" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a324"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a323" value="*"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a325" name="Class1" visibility="public"/>
+          <ownedOperation xmi:id="a325" name="Class1" visibility="public"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="a316" name="Class4">
+            <ownedOperation xmi:id="a317" name="Class4" visibility="public"/>
+          </nestedClassifier>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a326" supplier="a316" client="a304"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a327" supplier="a305" client="a315"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a326" client="a304" supplier="a316"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a327" client="a315" supplier="a305"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a328" name="test003">
         <packagedElement xmi:type="uml:Class" xmi:id="a329" name="Test003">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a330" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a331" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a332" value="1"/>
+          <ownedOperation xmi:id="a330" name="main" visibility="public">
+            <ownedParameter xmi:id="a331" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a333"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a332" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a334" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a335" value="*"/>
+            <ownedParameter xmi:id="a334" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a336"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a335" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a337" name="test004">
         <packagedElement xmi:type="uml:Class" xmi:id="a338" name="Test004">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a339" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a340" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a341" value="1"/>
+          <ownedOperation xmi:id="a339" name="main" visibility="public">
+            <ownedParameter xmi:id="a340" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a342"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a341" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a343" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a344" value="*"/>
+            <ownedParameter xmi:id="a343" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a345"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a344" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a346" name="varargs">
-        <packagedElement xmi:type="uml:Class" xmi:id="a347" name="VarArgs2" clientDependency="a370 a371">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a348" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a349" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a350" value="1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a347" name="VarArgs2">
+          <ownedOperation xmi:id="a348" name="main" visibility="public">
+            <ownedParameter xmi:id="a349" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a351"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a350" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a352" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a353" value="*"/>
+            <ownedParameter xmi:id="a352" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a354"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a353" value="*"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a355" name="m1" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a356" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a357" value="1"/>
+          <ownedOperation xmi:id="a355" name="m1" visibility="public">
+            <ownedParameter xmi:id="a356" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a358"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a357" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a359" name="objects" visibility="public" type="a442">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a360" value="1"/>
+            <ownedParameter xmi:id="a359" name="objects" visibility="public" type="a442">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a361"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a360" value="1"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="a362" name="VarArgs1">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="a363" name="main" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a364" visibility="public" type="a378" direction="return">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a365" value="1"/>
+          <ownedOperation xmi:id="a363" name="main" visibility="public">
+            <ownedParameter xmi:id="a364" visibility="public" type="a378" direction="return">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a366"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a365" value="1"/>
             </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="a367" name="args" visibility="public" type="a404">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a368" value="*"/>
+            <ownedParameter xmi:id="a367" name="args" visibility="public" type="a404">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a369"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a368" value="*"/>
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a370" supplier="a610" client="a347"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="a371" supplier="a568" client="a347"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a370" client="a347" supplier="a610"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="a371" client="a347" supplier="a568"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="a372" name="Common Java datatypes">
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="a373" name="int"/>
@@ -564,32 +564,32 @@
             <packagedElement xmi:type="uml:Interface" xmi:id="a387" name="GenericDeclaration"/>
             <packagedElement xmi:type="uml:Interface" xmi:id="a388" name="Type"/>
             <packagedElement xmi:type="uml:Interface" xmi:id="a389" name="AnnotatedElement"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="a390" name="Method" clientDependency="a392 a393">
-              <generalization xmi:type="uml:Generalization" xmi:id="a391" general="a401"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a392" supplier="a387" client="a390" contract="a387"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a393" supplier="a403" client="a390" contract="a403"/>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="a394" name="invoke" visibility="public">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="a395" name="arg0" visibility="public" type="a442">
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a396" value="1"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="a390" name="Method">
+              <generalization xmi:id="a391" general="a401"/>
+              <interfaceRealization xmi:id="a392" client="a390" supplier="a387" contract="a387"/>
+              <interfaceRealization xmi:id="a393" client="a390" supplier="a403" contract="a403"/>
+              <ownedOperation xmi:id="a394" name="invoke" visibility="public">
+                <ownedParameter xmi:id="a395" name="arg0" visibility="public" type="a442">
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a397"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a396" value="1"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="a398" name="arg1" visibility="public" type="a442">
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a399" value="*"/>
+                <ownedParameter xmi:id="a398" name="arg1" visibility="public" type="a442">
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a400"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a399" value="*"/>
                 </ownedParameter>
               </ownedOperation>
             </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="a401" name="AccessibleObject" clientDependency="a402">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a402" supplier="a389" client="a401" contract="a389"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="a401" name="AccessibleObject">
+              <interfaceRealization xmi:id="a402" client="a401" supplier="a389" contract="a389"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="a403" name="Member"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a404" name="String" clientDependency="a405 a406 a407">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a405" supplier="a472" client="a404" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a406" supplier="a410" client="a404" contract="a410"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a407" supplier="a414" client="a404" contract="a414"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a408" name="toString" visibility="public"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a409" name="String" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a404" name="String">
+            <interfaceRealization xmi:id="a405" client="a404" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a406" client="a404" supplier="a410" contract="a410"/>
+            <interfaceRealization xmi:id="a407" client="a404" supplier="a414" contract="a414"/>
+            <ownedOperation xmi:id="a408" name="toString" visibility="public"/>
+            <ownedOperation xmi:id="a409" name="String" visibility="public"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a410" name="Comparable">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a411" name="Comparable&lt;T>" parameter="a412">
@@ -609,144 +609,144 @@
           <packagedElement xmi:type="uml:Interface" xmi:id="a419" name="Cloneable"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="a420" name="Deprecated"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="a421" name="SuppressWarnings"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="a422" name="Integer" clientDependency="a424">
-            <generalization xmi:type="uml:Generalization" xmi:id="a423" general="a425"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a424" supplier="a410" client="a422" contract="a410"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a422" name="Integer">
+            <generalization xmi:id="a423" general="a425"/>
+            <interfaceRealization xmi:id="a424" client="a422" supplier="a410" contract="a410"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a425" name="Number" clientDependency="a426">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a426" supplier="a472" client="a425" contract="a472"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a425" name="Number">
+            <interfaceRealization xmi:id="a426" client="a425" supplier="a472" contract="a472"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a427" name="Override"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="a428" name="Long" clientDependency="a430">
-            <generalization xmi:type="uml:Generalization" xmi:id="a429" general="a425"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a430" supplier="a410" client="a428" contract="a410"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a428" name="Long">
+            <generalization xmi:id="a429" general="a425"/>
+            <interfaceRealization xmi:id="a430" client="a428" supplier="a410" contract="a410"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a431" name="Thread" clientDependency="a432">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a432" supplier="a433" client="a431" contract="a433"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a431" name="Thread">
+            <interfaceRealization xmi:id="a432" client="a431" supplier="a433" contract="a433"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a433" name="Runnable"/>
           <packagedElement xmi:type="uml:Class" xmi:id="a434" name="System">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="a435" name="out" visibility="public">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a436" value="1"/>
+            <ownedAttribute xmi:id="a435" name="out" visibility="public">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a437"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a436" value="1"/>
             </ownedAttribute>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a438" name="Appendable"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="a439" name="Boolean" clientDependency="a440 a441">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a440" supplier="a472" client="a439" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a441" supplier="a410" client="a439" contract="a410"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a439" name="Boolean">
+            <interfaceRealization xmi:id="a440" client="a439" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a441" client="a439" supplier="a410" contract="a410"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a442" name="Object">
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a443" name="toString" visibility="public"/>
+            <ownedOperation xmi:id="a443" name="toString" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a444" name="Class" clientDependency="a448 a449 a450 a451">
+          <packagedElement xmi:type="uml:Class" xmi:id="a444" name="Class">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a445" name="Class&lt;T>" parameter="a446">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a446" parameteredElement="a447">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a447" name="T" templateParameter="a446"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a448" supplier="a472" client="a444" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a449" supplier="a387" client="a444" contract="a387"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a450" supplier="a388" client="a444" contract="a388"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a451" supplier="a389" client="a444" contract="a389"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a452" name="forName" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a453" name="arg0" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a454" value="1"/>
+            <interfaceRealization xmi:id="a448" client="a444" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a449" client="a444" supplier="a387" contract="a387"/>
+            <interfaceRealization xmi:id="a450" client="a444" supplier="a388" contract="a388"/>
+            <interfaceRealization xmi:id="a451" client="a444" supplier="a389" contract="a389"/>
+            <ownedOperation xmi:id="a452" name="forName" visibility="public">
+              <ownedParameter xmi:id="a453" name="arg0" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a455"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a454" value="1"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a456" name="getMethod" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a457" name="arg0" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a458" value="1"/>
+            <ownedOperation xmi:id="a456" name="getMethod" visibility="public">
+              <ownedParameter xmi:id="a457" name="arg0" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a459"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a458" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a460" name="arg1" visibility="public" type="a444">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a461" value="*"/>
+              <ownedParameter xmi:id="a460" name="arg1" visibility="public" type="a444">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a462"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a461" value="*"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a463" name="newInstance" visibility="public"/>
+            <ownedOperation xmi:id="a463" name="newInstance" visibility="public"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a464" name="Exception">
-            <generalization xmi:type="uml:Generalization" xmi:id="a465" general="a466"/>
+            <generalization xmi:id="a465" general="a466"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a466" name="Throwable" clientDependency="a467">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a467" supplier="a472" client="a466" contract="a472"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a466" name="Throwable">
+            <interfaceRealization xmi:id="a467" client="a466" supplier="a472" contract="a472"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a468" name="java.lang.Iterable&lt;? extends java.io.File>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a469" signature="a416">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a470" formal="a417"/>
+            <templateBinding xmi:id="a469" signature="a416">
+              <parameterSubstitution xmi:id="a470" formal="a417"/>
             </templateBinding>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a471" name="io">
           <packagedElement xmi:type="uml:Interface" xmi:id="a472" name="Serializable"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="a473" name="File" clientDependency="a474 a475">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a474" supplier="a472" client="a473" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a475" supplier="a410" client="a473" contract="a410"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a473" name="File">
+            <interfaceRealization xmi:id="a474" client="a473" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a475" client="a473" supplier="a410" contract="a410"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a476" name="PrintStream" clientDependency="a478 a479">
-            <generalization xmi:type="uml:Generalization" xmi:id="a477" general="a491"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a478" supplier="a438" client="a476" contract="a438"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a479" supplier="a496" client="a476" contract="a496"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a480" name="println" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a481" name="arg0" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a482" value="1"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a476" name="PrintStream">
+            <generalization xmi:id="a477" general="a491"/>
+            <interfaceRealization xmi:id="a478" client="a476" supplier="a438" contract="a438"/>
+            <interfaceRealization xmi:id="a479" client="a476" supplier="a496" contract="a496"/>
+            <ownedOperation xmi:id="a480" name="println" visibility="public">
+              <ownedParameter xmi:id="a481" name="arg0" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a483"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a482" value="1"/>
               </ownedParameter>
             </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a484" name="printf" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a485" name="arg0" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a486" value="1"/>
+            <ownedOperation xmi:id="a484" name="printf" visibility="public">
+              <ownedParameter xmi:id="a485" name="arg0" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a487"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a486" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a488" name="arg1" visibility="public" type="a442">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a489" value="*"/>
+              <ownedParameter xmi:id="a488" name="arg1" visibility="public" type="a442">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a490"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a489" value="*"/>
               </ownedParameter>
             </ownedOperation>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a491" name="FilterOutputStream">
-            <generalization xmi:type="uml:Generalization" xmi:id="a492" general="a493"/>
+            <generalization xmi:id="a492" general="a493"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a493" name="OutputStream" clientDependency="a494 a495">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a494" supplier="a496" client="a493" contract="a496"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a495" supplier="a497" client="a493" contract="a497"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a493" name="OutputStream">
+            <interfaceRealization xmi:id="a494" client="a493" supplier="a496" contract="a496"/>
+            <interfaceRealization xmi:id="a495" client="a493" supplier="a497" contract="a497"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a496" name="Closeable"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="a497" name="Flushable"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a498" name="util">
-          <packagedElement xmi:type="uml:Class" xmi:id="a499" name="ArrayList" clientDependency="a504 a505 a506 a507">
+          <packagedElement xmi:type="uml:Class" xmi:id="a499" name="ArrayList">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a500" name="ArrayList&lt;E>" parameter="a501">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a501" parameteredElement="a502">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a502" name="E" templateParameter="a501"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a503" general="a510"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a504" supplier="a526" client="a499" contract="a526"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a505" supplier="a531" client="a499" contract="a531"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a506" supplier="a419" client="a499" contract="a419"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a507" supplier="a472" client="a499" contract="a472"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a508" name="ArrayList" visibility="public"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a509" name="size" visibility="public"/>
+            <generalization xmi:id="a503" general="a510"/>
+            <interfaceRealization xmi:id="a504" client="a499" supplier="a526" contract="a526"/>
+            <interfaceRealization xmi:id="a505" client="a499" supplier="a531" contract="a531"/>
+            <interfaceRealization xmi:id="a506" client="a499" supplier="a419" contract="a419"/>
+            <interfaceRealization xmi:id="a507" client="a499" supplier="a472" contract="a472"/>
+            <ownedOperation xmi:id="a508" name="ArrayList" visibility="public"/>
+            <ownedOperation xmi:id="a509" name="size" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a510" name="AbstractList" clientDependency="a515">
+          <packagedElement xmi:type="uml:Class" xmi:id="a510" name="AbstractList">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a511" name="AbstractList&lt;E>" parameter="a512">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a512" parameteredElement="a513">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a513" name="E" templateParameter="a512"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a514" general="a516"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a515" supplier="a526" client="a510" contract="a526"/>
+            <generalization xmi:id="a514" general="a516"/>
+            <interfaceRealization xmi:id="a515" client="a510" supplier="a526" contract="a526"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a516" name="AbstractCollection" clientDependency="a520">
+          <packagedElement xmi:type="uml:Class" xmi:id="a516" name="AbstractCollection">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a517" name="AbstractCollection&lt;E>" parameter="a518">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a518" parameteredElement="a519">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a519" name="E" templateParameter="a518"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a520" supplier="a521" client="a516" contract="a521"/>
+            <interfaceRealization xmi:id="a520" client="a516" supplier="a521" contract="a521"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a521" name="Collection">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a522" name="Collection&lt;E>" parameter="a523">
@@ -754,7 +754,7 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a524" name="E" templateParameter="a523"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a525" general="a415"/>
+            <generalization xmi:id="a525" general="a415"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a526" name="List">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a527" name="List&lt;E>" parameter="a528">
@@ -762,7 +762,7 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a529" name="E" templateParameter="a528"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a530" general="a521"/>
+            <generalization xmi:id="a530" general="a521"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a531" name="RandomAccess"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="a532" name="Map">
@@ -775,7 +775,7 @@
               </ownedParameter>
             </ownedTemplateSignature>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a538" name="HashMap" clientDependency="a545 a546 a547">
+          <packagedElement xmi:type="uml:Class" xmi:id="a538" name="HashMap">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a539" name="HashMap&lt;K, V>" parameter="a540 a542">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a540" parameteredElement="a541">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a541" name="K" templateParameter="a540"/>
@@ -784,14 +784,14 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a543" name="V" templateParameter="a542"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a544" general="a550"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a545" supplier="a532" client="a538" contract="a532"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a546" supplier="a419" client="a538" contract="a419"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a547" supplier="a472" client="a538" contract="a472"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a548" name="keySet" visibility="public"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a549" name="HashMap" visibility="public"/>
+            <generalization xmi:id="a544" general="a550"/>
+            <interfaceRealization xmi:id="a545" client="a538" supplier="a532" contract="a532"/>
+            <interfaceRealization xmi:id="a546" client="a538" supplier="a419" contract="a419"/>
+            <interfaceRealization xmi:id="a547" client="a538" supplier="a472" contract="a472"/>
+            <ownedOperation xmi:id="a548" name="keySet" visibility="public"/>
+            <ownedOperation xmi:id="a549" name="HashMap" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a550" name="AbstractMap" clientDependency="a556">
+          <packagedElement xmi:type="uml:Class" xmi:id="a550" name="AbstractMap">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a551" name="AbstractMap&lt;K, V>" parameter="a552 a554">
               <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a552" parameteredElement="a553">
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a553" name="K" templateParameter="a552"/>
@@ -800,7 +800,7 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a555" name="V" templateParameter="a554"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a556" supplier="a532" client="a550" contract="a532"/>
+            <interfaceRealization xmi:id="a556" client="a550" supplier="a532" contract="a532"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a557" name="Set">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a558" name="Set&lt;E>" parameter="a559">
@@ -808,8 +808,8 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a560" name="E" templateParameter="a559"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <generalization xmi:type="uml:Generalization" xmi:id="a561" general="a521"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a562" name="iterator" visibility="public"/>
+            <generalization xmi:id="a561" general="a521"/>
+            <ownedOperation xmi:id="a562" name="iterator" visibility="public"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a563" name="Iterator">
             <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a564" name="Iterator&lt;E>" parameter="a565">
@@ -817,91 +817,91 @@
                 <ownedParameteredElement xmi:type="uml:Class" xmi:id="a566" name="E" templateParameter="a565"/>
               </ownedParameter>
             </ownedTemplateSignature>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a567" name="next" visibility="public"/>
+            <ownedOperation xmi:id="a567" name="next" visibility="public"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a568" name="Date" clientDependency="a569 a570 a571">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a569" supplier="a472" client="a568" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a570" supplier="a419" client="a568" contract="a419"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a571" supplier="a410" client="a568" contract="a410"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a572" name="Date" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a568" name="Date">
+            <interfaceRealization xmi:id="a569" client="a568" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a570" client="a568" supplier="a419" contract="a419"/>
+            <interfaceRealization xmi:id="a571" client="a568" supplier="a410" contract="a410"/>
+            <ownedOperation xmi:id="a572" name="Date" visibility="public"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a573" name="java.util.List&lt;java.lang.Integer>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a574" signature="a527">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a575" formal="a528" actual="a422"/>
+            <templateBinding xmi:id="a574" signature="a527">
+              <parameterSubstitution xmi:id="a575" actual="a422" formal="a528"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a576" name="java.util.List&lt;? extends java.lang.Boolean>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a577" signature="a527">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a578" formal="a528"/>
+            <templateBinding xmi:id="a577" signature="a527">
+              <parameterSubstitution xmi:id="a578" formal="a528"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a579" name="java.util.Map&lt;java.lang.String,? super java.lang.String>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a580" signature="a533">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a581" formal="a534" actual="a404"/>
+            <templateBinding xmi:id="a580" signature="a533">
+              <parameterSubstitution xmi:id="a581" actual="a404" formal="a534"/>
             </templateBinding>
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a582" signature="a533">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a583" formal="a536"/>
+            <templateBinding xmi:id="a582" signature="a533">
+              <parameterSubstitution xmi:id="a583" formal="a536"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a584" name="java.util.List&lt;? extends T1>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a585" signature="a527">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a586" formal="a528"/>
+            <templateBinding xmi:id="a585" signature="a527">
+              <parameterSubstitution xmi:id="a586" formal="a528"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="a587" name="java.util.List&lt;?>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a588" signature="a527">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a589" formal="a528"/>
+            <templateBinding xmi:id="a588" signature="a527">
+              <parameterSubstitution xmi:id="a589" formal="a528"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a590" name="java.util.ArrayList&lt;java.lang.Integer>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a591" signature="a500">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a592" formal="a501" actual="a422"/>
+            <templateBinding xmi:id="a591" signature="a500">
+              <parameterSubstitution xmi:id="a592" actual="a422" formal="a501"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a593" name="java.util.ArrayList&lt;java.lang.String>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a594" signature="a500">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a595" formal="a501" actual="a404"/>
+            <templateBinding xmi:id="a594" signature="a500">
+              <parameterSubstitution xmi:id="a595" actual="a404" formal="a501"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a596" name="java.util.ArrayList&lt;java.lang.Long>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a597" signature="a500">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a598" formal="a501" actual="a428"/>
+            <templateBinding xmi:id="a597" signature="a500">
+              <parameterSubstitution xmi:id="a598" actual="a428" formal="a501"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a599" name="java.util.HashMap&lt;R,P>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a600" signature="a539">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a601" formal="a540"/>
+            <templateBinding xmi:id="a600" signature="a539">
+              <parameterSubstitution xmi:id="a601" formal="a540"/>
             </templateBinding>
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a602" signature="a539">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a603" formal="a542"/>
+            <templateBinding xmi:id="a602" signature="a539">
+              <parameterSubstitution xmi:id="a603" formal="a542"/>
             </templateBinding>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="a604" name="java.util.HashMap&lt;java.lang.String,java.lang.Iterable&lt;? extends java.io.File>>">
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a605" signature="a539">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a606" formal="a540" actual="a404"/>
+            <templateBinding xmi:id="a605" signature="a539">
+              <parameterSubstitution xmi:id="a606" actual="a404" formal="a540"/>
             </templateBinding>
-            <templateBinding xmi:type="uml:TemplateBinding" xmi:id="a607" signature="a539">
-              <parameterSubstitution xmi:type="uml:TemplateParameterSubstitution" xmi:id="a608" formal="a542" actual="a468"/>
+            <templateBinding xmi:id="a607" signature="a539">
+              <parameterSubstitution xmi:id="a608" actual="a468" formal="a542"/>
             </templateBinding>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="a609" name="text">
           <packagedElement xmi:type="uml:Class" xmi:id="a610" name="MessageFormat">
-            <generalization xmi:type="uml:Generalization" xmi:id="a611" general="a619"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="a612" name="format" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a613" name="arg0" visibility="public" type="a404">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a614" value="1"/>
+            <generalization xmi:id="a611" general="a619"/>
+            <ownedOperation xmi:id="a612" name="format" visibility="public">
+              <ownedParameter xmi:id="a613" name="arg0" visibility="public" type="a404">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a615"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a614" value="1"/>
               </ownedParameter>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="a616" name="arg1" visibility="public" type="a442">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a617" value="*"/>
+              <ownedParameter xmi:id="a616" name="arg1" visibility="public" type="a442">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a618"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a617" value="*"/>
               </ownedParameter>
             </ownedOperation>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="a619" name="Format" clientDependency="a620 a621">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a620" supplier="a472" client="a619" contract="a472"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="a621" supplier="a419" client="a619" contract="a419"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="a619" name="Format">
+            <interfaceRealization xmi:id="a620" client="a619" supplier="a472" contract="a472"/>
+            <interfaceRealization xmi:id="a621" client="a619" supplier="a419" contract="a419"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
@@ -919,10 +919,10 @@
           <packagedElement xmi:type="uml:Package" xmi:id="a629" name="model">
             <packagedElement xmi:type="uml:Package" xmi:id="a630" name="type">
               <packagedElement xmi:type="uml:Interface" xmi:id="a631" name="ArrayType">
-                <generalization xmi:type="uml:Generalization" xmi:id="a632" general="a633"/>
+                <generalization xmi:id="a632" general="a633"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Interface" xmi:id="a633" name="ReferenceType">
-                <generalization xmi:type="uml:Generalization" xmi:id="a634" general="a635"/>
+                <generalization xmi:id="a634" general="a635"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Interface" xmi:id="a635" name="TypeMirror"/>
             </packagedElement>
@@ -966,74 +966,74 @@
     </packagedElement>
   </uml:Model>
   <uml:Operation xmi:id="a669" name="MyEnumeration" visibility="private">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a670" name="code" visibility="public" type="a404">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a671" value="1"/>
+    <ownedParameter xmi:id="a670" name="code" visibility="public" type="a404">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a672"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a671" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a673" name="libelle" visibility="public" type="a404">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a674" value="1"/>
+    <ownedParameter xmi:id="a673" name="libelle" visibility="public" type="a404">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a675"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a674" value="1"/>
     </ownedParameter>
   </uml:Operation>
   <uml:Operation xmi:id="a676" name="MaMethodeParametree" visibility="public">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a677" visibility="public" type="a378" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a678" value="1"/>
+    <ownedParameter xmi:id="a677" visibility="public" type="a378" direction="return">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a679"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a678" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a680" name="aT" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a681" value="1"/>
+    <ownedParameter xmi:id="a680" name="aT" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a682"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a681" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a683" name="aP" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a684" value="*"/>
+    <ownedParameter xmi:id="a683" name="aP" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a685"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a684" value="*"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a686" name="MaMethodeParametree" parameter="a687">
+    <ownedTemplateSignature xmi:id="a686" parameter="a687" name="MaMethodeParametree">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a687" parameteredElement="a688">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a688" name="T3" templateParameter="a687"/>
       </ownedParameter>
     </ownedTemplateSignature>
   </uml:Operation>
   <uml:Operation xmi:id="a689" name="first" visibility="public">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a690" visibility="public" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a691" value="1"/>
+    <ownedParameter xmi:id="a690" visibility="public" direction="return">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a692"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a691" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a693" name="x" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a694" value="1"/>
+    <ownedParameter xmi:id="a693" name="x" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a695"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a694" value="1"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a696" name="first" parameter="a697">
+    <ownedTemplateSignature xmi:id="a696" parameter="a697" name="first">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a697" parameteredElement="a698">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a698" name="X" templateParameter="a697"/>
       </ownedParameter>
     </ownedTemplateSignature>
   </uml:Operation>
   <uml:Operation xmi:id="a699" name="first" visibility="public">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a700" visibility="public" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a701" value="1"/>
+    <ownedParameter xmi:id="a700" visibility="public" direction="return">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a702"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a701" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a703" name="x" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a704" value="1"/>
+    <ownedParameter xmi:id="a703" name="x" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a705"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a704" value="1"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a706" name="first" parameter="a707">
+    <ownedTemplateSignature xmi:id="a706" parameter="a707" name="first">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a707" parameteredElement="a708">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a708" name="X" templateParameter="a707"/>
       </ownedParameter>
     </ownedTemplateSignature>
   </uml:Operation>
   <uml:Operation xmi:id="a709" name="second" visibility="public">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a710" visibility="public" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a711" value="1"/>
+    <ownedParameter xmi:id="a710" visibility="public" direction="return">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a712"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a711" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a713" name="x" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a714" value="1"/>
+    <ownedParameter xmi:id="a713" name="x" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a715"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a714" value="1"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a716" name="second" parameter="a717 a719">
+    <ownedTemplateSignature xmi:id="a716" parameter="a717 a719" name="second">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a717" parameteredElement="a718">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a718" name="X" templateParameter="a717"/>
       </ownedParameter>
@@ -1043,19 +1043,19 @@
     </ownedTemplateSignature>
   </uml:Operation>
   <uml:Operation xmi:id="a721" name="accept" visibility="public">
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a722" visibility="public" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a723" value="1"/>
+    <ownedParameter xmi:id="a722" visibility="public" direction="return">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a724"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a723" value="1"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a725" name="v" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a726" value="*"/>
+    <ownedParameter xmi:id="a725" name="v" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a727"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a726" value="*"/>
     </ownedParameter>
-    <ownedParameter xmi:type="uml:Parameter" xmi:id="a728" name="p" visibility="public">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a729" value="1"/>
+    <ownedParameter xmi:id="a728" name="p" visibility="public">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a730"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a729" value="1"/>
     </ownedParameter>
-    <ownedTemplateSignature xmi:type="uml:TemplateSignature" xmi:id="a731" name="accept" parameter="a732 a734">
+    <ownedTemplateSignature xmi:id="a731" parameter="a732 a734" name="accept">
       <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="a732" parameteredElement="a733">
         <ownedParameteredElement xmi:type="uml:Class" xmi:id="a733" name="R" templateParameter="a732"/>
       </ownedParameter>
@@ -1064,4 +1064,19 @@
       </ownedParameter>
     </ownedTemplateSignature>
   </uml:Operation>
+  <ecore:EAnnotation xmi:id="_4m0DgDX7Eeqv9Kto62ZGUA" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="a686">
+    <contents xmi:id="_4m0DgTX7Eeqv9Kto62ZGUA" name="MaMethodeParametree"/>
+  </ecore:EAnnotation>
+  <ecore:EAnnotation xmi:id="_4m0qkDX7Eeqv9Kto62ZGUA" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="a696">
+    <contents xmi:id="_4m0qkTX7Eeqv9Kto62ZGUA" name="first"/>
+  </ecore:EAnnotation>
+  <ecore:EAnnotation xmi:id="_4m1RoDX7Eeqv9Kto62ZGUA" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="a706">
+    <contents xmi:id="_4m1RoTX7Eeqv9Kto62ZGUA" name="first"/>
+  </ecore:EAnnotation>
+  <ecore:EAnnotation xmi:id="_4m14sDX7Eeqv9Kto62ZGUA" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="a716">
+    <contents xmi:id="_4m14sTX7Eeqv9Kto62ZGUA" name="second"/>
+  </ecore:EAnnotation>
+  <ecore:EAnnotation xmi:id="_4m2fwDX7Eeqv9Kto62ZGUA" source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData" references="a731">
+    <contents xmi:id="_4m2fwTX7Eeqv9Kto62ZGUA" name="accept"/>
+  </ecore:EAnnotation>
 </xmi:XMI>

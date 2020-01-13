@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="a1" name="root model">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="a1" name="root model">
   <packagedElement xmi:type="uml:Model" xmi:id="a2" name="RealTypesExample">
     <packagedElement xmi:type="uml:Package" xmi:id="a3" name="org">
       <packagedElement xmi:type="uml:Package" xmi:id="a4" name="eclipse">
         <packagedElement xmi:type="uml:Package" xmi:id="a5" name="modisco">
           <packagedElement xmi:type="uml:Package" xmi:id="a6" name="realtypes">
             <packagedElement xmi:type="uml:Package" xmi:id="a7" name="example">
-              <packagedElement xmi:type="uml:Class" xmi:id="a8" name="YourImpl" clientDependency="a9">
-                <interfaceRealization xmi:id="a9" supplier="a11" client="a8" contract="a11"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="a8" name="YourImpl">
+                <interfaceRealization xmi:id="a9" client="a8" supplier="a11" contract="a11"/>
                 <ownedOperation xmi:id="a10" name="YourImpl" visibility="public"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Interface" xmi:id="a11" name="YourInterface"/>
               <packagedElement xmi:type="uml:Class" xmi:id="a12" name="Princ">
                 <ownedAttribute xmi:id="a13" name="yourField" visibility="public" type="a11" association="a23">
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a14" value="1"/>
                   <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a15"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a14" value="1"/>
                 </ownedAttribute>
                 <ownedOperation xmi:id="a16" name="main" visibility="public">
                   <ownedParameter xmi:id="a17" visibility="public" type="a32" direction="return" effect="create">
-                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a18" value="1"/>
                     <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a19"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a18" value="1"/>
                   </ownedParameter>
                   <ownedParameter xmi:id="a20" name="args" visibility="public" type="a40" effect="create">
-                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a21" value="*"/>
                     <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a22"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a21" value="*"/>
                   </ownedParameter>
                 </ownedOperation>
               </packagedElement>
-              <packagedElement xmi:type="uml:Association" xmi:id="a23" clientDependency="a25" memberEnd="a24 a13">
+              <packagedElement xmi:type="uml:Association" xmi:id="a23" memberEnd="a24 a13">
                 <ownedEnd xmi:id="a24" visibility="public" type="a12" association="a23"/>
               </packagedElement>
-              <packagedElement xmi:type="uml:Dependency" xmi:id="a25" name="real type" supplier="a8" client="a23"/>
+              <packagedElement xmi:type="uml:Dependency" xmi:id="a25" name="real type" client="a23" supplier="a8"/>
             </packagedElement>
           </packagedElement>
         </packagedElement>
@@ -52,10 +52,10 @@
   <packagedElement xmi:type="uml:Model" xmi:id="a37" name="externals">
     <packagedElement xmi:type="uml:Package" xmi:id="a38" name="java">
       <packagedElement xmi:type="uml:Package" xmi:id="a39" name="lang">
-        <packagedElement xmi:type="uml:Class" xmi:id="a40" name="String" clientDependency="a41 a42 _Qx2JcKqhEd-4JLA3ImWVqA">
-          <interfaceRealization xmi:id="a41" supplier="a50" client="a40" contract="a50"/>
-          <interfaceRealization xmi:id="a42" supplier="a44" client="a40" contract="a44"/>
-          <interfaceRealization xmi:id="_Qx2JcKqhEd-4JLA3ImWVqA" supplier="a48" client="a40" contract="a48"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="a40" name="String">
+          <interfaceRealization xmi:id="a41" client="a40" supplier="a50" contract="a50"/>
+          <interfaceRealization xmi:id="a42" client="a40" supplier="a44" contract="a44"/>
+          <interfaceRealization xmi:id="_Qx2JcKqhEd-4JLA3ImWVqA" client="a40" supplier="a48" contract="a48"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="a44" name="Comparable">
           <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="a45" name="Comparable&lt;T>" visibility="public" parameter="a46">
