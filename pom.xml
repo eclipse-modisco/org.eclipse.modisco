@@ -208,7 +208,7 @@
     <module>org.eclipse.modisco.jee.webapp.discoverer.tests</module>
     <module>org.eclipse.modisco.kdm.uml2converter.tests</module>
     <module>org.eclipse.modisco.tests</module>
-    <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
+    <!-- FIXME BUG 559115 module>org.eclipse.modisco.usecase.modelfilter.tests</module -->
     <module>org.eclipse.modisco.xml.discoverer.tests</module>
 	<!-- Update Site -->
     <module>org.eclipse.modisco.updatesite</module>
