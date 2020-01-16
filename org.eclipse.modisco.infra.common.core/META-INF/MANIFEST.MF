@@ -470,8 +470,7 @@ Export-Package: org.eclipse.modisco.infra.common.core.internal;
    org.eclipse.modisco.xml,
    org.eclipse.modisco.xml.doc,
    org.eclipse.modisco.xml.doc.source,
-   org.eclipse.modisco.xml.source,
-   org.eclipse.modisco.usecase.simpletransformationschain",
+   org.eclipse.modisco.xml.source",
  org.eclipse.modisco.infra.common.core.internal.preferences;
   x-friends:="org.eclipse.modisco.dev.core,
    org.eclipse.modisco.doc,

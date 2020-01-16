@@ -74,12 +74,6 @@
    <feature id="org.eclipse.modisco.usecase.modelfilter.feature.source" version="0.0.0">
       <category name="org.eclipse.modisco.updatesite.usecases"/>
    </feature>
-   <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature" version="0.0.0">
-      <category name="org.eclipse.modisco.updatesite.usecases"/>
-   </feature>
-   <feature id="org.eclipse.modisco.usecase.simpletransformationschain.feature.source" version="0.0.0">
-      <category name="org.eclipse.modisco.updatesite.usecases"/>
-   </feature>
    <feature id="org.eclipse.modisco.xml.feature" version="0.0.0">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>

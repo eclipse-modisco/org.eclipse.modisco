@@ -46,7 +46,6 @@
     <module>org.eclipse.modisco.infra.browser.custom.core</module>
     <module>org.eclipse.modisco.infra.browser.custom.editor</module>
     <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk</module>
-    <module>org.eclipse.modisco.infra.browser.custom.examples.uml</module>
     <module>org.eclipse.modisco.infra.browser.custom.ui</module>
     <module>org.eclipse.modisco.infra.browser.uicore</module>
     <module>org.eclipse.modisco.infra.browser.uicore.examples.cnf</module>
@@ -125,8 +124,6 @@
     <module>org.eclipse.modisco.kdm.source.discoverer.ui</module>
     <module>org.eclipse.modisco.kdm.source.extension</module>
     <module>org.eclipse.modisco.kdm.source.extension.ui</module>
-    <module>org.eclipse.modisco.kdm.uml2converter</module>
-    <module>org.eclipse.modisco.kdm.uml2converter.ui</module>
     <module>org.eclipse.modisco.manifest</module>
     <module>org.eclipse.modisco.manifest.discoverer</module>
     <module>org.eclipse.modisco.manifest.discoverer.ui</module>
@@ -134,16 +131,12 @@
     <module>org.eclipse.modisco.omg.smm</module>
     <module>org.eclipse.modisco.properties.discoverer</module>
     <module>org.eclipse.modisco.properties.discoverer.ui</module>
-    <module>org.eclipse.modisco.usecase.modelfilter</module>
     <module>org.eclipse.modisco.usecase.modelfilter.dependencies.ui</module>
     <module>org.eclipse.modisco.usecase.modelfilter.doc</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui</module>
     <module>org.eclipse.modisco.usecase.modelfilter.ui</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationchain.doc</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationschain</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationschain.ui</module>
     <module>org.eclipse.modisco.util.atl.core</module>
     <module>org.eclipse.modisco.util.emf.core</module>
     <module>org.eclipse.modisco.utils.chart.birt.core</module>
@@ -171,7 +164,6 @@
     <module>org.eclipse.modisco.sdk.feature</module>
     <module>org.eclipse.modisco.thirdparties.feature</module>
     <module>org.eclipse.modisco.usecase.modelfilter.feature</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationschain.feature</module>
     <module>org.eclipse.modisco.utils.chart.feature</module>
     <module>org.eclipse.modisco.xml.feature</module>
 	<!-- Test Support Plugins -->
@@ -185,7 +177,6 @@
     <module>org.eclipse.modisco.java.classiceobject</module>
 	<!-- Unit Test Plugins -->
     <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests</module>
-    <module>org.eclipse.modisco.infra.browser.custom.examples.uml.tests</module>
     <module>org.eclipse.modisco.infra.browser.custom.tests</module>
     <module>org.eclipse.modisco.infra.browser.tests</module>
     <module>org.eclipse.modisco.infra.common.core.tests</module>
@@ -206,9 +197,7 @@
     <module>org.eclipse.modisco.jee.jsp.generation.tests</module>
     <module>org.eclipse.modisco.jee.queries.tests</module>
     <module>org.eclipse.modisco.jee.webapp.discoverer.tests</module>
-    <module>org.eclipse.modisco.kdm.uml2converter.tests</module>
     <module>org.eclipse.modisco.tests</module>
-    <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
     <module>org.eclipse.modisco.xml.discoverer.tests</module>
 	<!-- Update Site -->
     <module>org.eclipse.modisco.updatesite</module>
