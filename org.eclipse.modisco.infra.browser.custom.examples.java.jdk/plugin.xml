@@ -23,20 +23,4 @@ Contributors:
             file="_example_jdkAndEclipseQuerySet.querySet">
       </modelqueryset>
    </extension>
-   <extension point="org.eclipse.ui.newWizards">
-      <wizard
-            canFinishEarly="true"
-            category="org.eclipse.ui.Examples/org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
-            class="org.eclipse.modisco.infra.browser.custom.examples.java.jdk.internal.ExampleWizard"
-            hasPages="false"
-            icon="icons/logoMoDiscoMini.gif"
-            id="org.eclipse.modisco.infra.browser.custom.examples.uml.wizard1"
-            name="%wizard.name"/>
-      <category
-            id="org.eclipse.modisco.infra.browser.custom.examples.uml.category1"
-            name="%category.name"
-            parentCategory="org.eclipse.ui.Examples">
-      </category>
-      
-	</extension>
 </plugin>

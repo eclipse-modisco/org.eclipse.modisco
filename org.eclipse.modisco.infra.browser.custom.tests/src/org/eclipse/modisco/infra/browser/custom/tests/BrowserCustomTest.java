@@ -554,22 +554,4 @@ public class BrowserCustomTest {
 				"The element should appear directly in its own children with 'collapse links' on a FacetReference with the 'identity' query",
 				foundSelf);
 	}
-
-	/** Bug 341222 - customization on feature defined in another metamodel */
-	@Test
-	public void bug341222() throws Exception {
-		final String umlPackageURI = "http://www.eclipse.org/uml2/3.0.0/UML";
-		CustomizationEngine customizationEngine = new CustomizationEngine();
-		customizationEngine
-				.registerCustomization(getCustomization("bug341222"));
-		customizationEngine.registerMetamodel(umlPackageURI);
-		customizationEngine.loadCustomizations();
-		EPackage umlPackage = EPackage.Registry.INSTANCE
-				.getEPackage(umlPackageURI);
-		EClass anEclass = (EClass) umlPackage.getEClassifier("Class");
-		assertTrue(
-				"customization defined on ecore.EModelElement should also apply to uml.Class",
-				customizationEngine.isReferenceUnderlined(anEclass,
-						"eAnnotations", null));
-	}
 }

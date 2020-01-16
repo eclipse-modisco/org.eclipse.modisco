@@ -17,7 +17,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ MetaclassInstancesTest.class, EcoreCatalogTest.class, ProjectUtilsTest.class,
-		ModelUtilsTest.class, Bug336903Test.class })
+		ModelUtilsTest.class })
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }

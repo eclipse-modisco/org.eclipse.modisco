@@ -97,48 +97,4 @@ public class Tests {
 		Facet facet25 = facetSet.getFacet("ProtectedClassDeclaration"); //$NON-NLS-1$
 		Assert.assertNotNull(facet25);
 	}
-
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470350
-	@Test
-	public void bug308991() throws CoreException, IOException,
-			InterruptedException {
-		final List<IStatus> statusList = new ArrayList<IStatus>();
-		ILogListener listener = new ILogListener() {
-			public void logging(final IStatus status, final String plugin) {
-				statusList.add(status);
-			}
-		};
-		ILog log = Platform.getLog(Platform
-				.getBundle("org.eclipse.modisco.infra.common.core")); //$NON-NLS-1$
-		log.addLogListener(listener);
-		ProjectUtils
-				.importPlugin(
-						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"), //$NON-NLS-1$
-						new IFilter() {
-							public boolean filter(final Object object) {
-								boolean result = true;
-								if (object instanceof File) {
-									File file = (File) object;
-									result = !file.getName().equals(
-											".checkstyle"); //$NON-NLS-1$
-								} else if (object instanceof String) {
-									String str = (String) object;
-									result = !str.equals(".checkstyle"); //$NON-NLS-1$
-								}
-								return result;
-							}
-						});
-		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(
-				"org.eclipse.modisco.java.browser.customization"); //$NON-NLS-1$
-		ProjectUtils.refresh(project);
-		log.removeLogListener(listener);
-		if (!statusList.isEmpty()) {
-			MultiStatus status = new MultiStatus(Activator.getDefault()
-					.getBundle().getSymbolicName(), IStatus.ERROR, statusList
-					.toArray(new IStatus[] {}), "Test failed.", new Exception()); //$NON-NLS-1$
-			CoreException e = new CoreException(status);
-			MoDiscoLogger.logError(e, Activator.getDefault());
-			throw e;
-		}
-	}
 }

@@ -17,8 +17,6 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-import org.eclipse.uml2.uml.PackageableElement;
-import org.eclipse.uml2.uml.VisibilityKind;
 
 import junit.framework.TestCase;
 
@@ -70,21 +68,21 @@ public class TestModelUtils {
 		for (TreeIterator<EObject> tit = xmlExpectedResource.getAllContents(); tit.hasNext(); ) {
 			EObject eObject = tit.next();
 			xmlExpectedResource.setID(eObject, null);
-			if (eObject instanceof PackageableElement) {
+			/* if (eObject instanceof PackageableElement) {
 				PackageableElement packageableElement = (PackageableElement)eObject;
 				VisibilityKind visibility = packageableElement.getVisibility();
 				packageableElement.setVisibility(visibility);
-			}
+			} */
 		}
 		XMLResource xmlActualResource = (XMLResource)actualResource;
 		for (TreeIterator<EObject> tit = xmlActualResource.getAllContents(); tit.hasNext(); ) {
 			EObject eObject = tit.next();
 			xmlActualResource.setID(eObject, null);
-			if (eObject instanceof PackageableElement) {
+			/* if (eObject instanceof PackageableElement) {
 				PackageableElement packageableElement = (PackageableElement)eObject;
 				VisibilityKind visibility = packageableElement.getVisibility();
 				packageableElement.setVisibility(visibility);
-			}
+			} */
 		};
 		String expected = EmfFormatter.listToStr(expectedResource.getContents());//.replaceAll("attr VisibilityKind visibility 'public'", "");
 		String actual = EmfFormatter.listToStr(actualResource.getContents())/*.replaceAll(" : ", ": ")*/;
