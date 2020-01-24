@@ -78,9 +78,6 @@ rule createDependencyForRealType(source :uml!Association, target :kdm!Datatype) 
 		if (source.namespace.oclIsUndefined() = false) {
 			source.namespace.packagedElement <- tgt;
 		}
-		
-		-- and we have to initialize opposite property
-		source.clientDependency <- tgt;
 	}
 }
 
