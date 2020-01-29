@@ -9,12 +9,14 @@
  *    Gabriel Barbier (Mia-Software) - initial API and implementation
  *    Grégoire Dupé (Mia-Software) - Bug 468346 - [Unit Test Failure] org.eclipse.modisco.usecase.modelfilter.tests.SimpleBlackBoxDiscovery.testUmlModelFromJavaProjectWithReferenceModel
  *    Grégoire Dupé (Mia-Software) - Bug 470806 - [Deprecated] org.eclipse.modisco.usecase.modelfilter
+ *    Fabien Giquel (Mia-Software) - Bug 559115 - Maintain currency with UML 2.5
  */
 
 package org.eclipse.modisco.usecase.modelfilter.tests;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
@@ -31,10 +33,10 @@ import org.eclipse.modisco.common.tests.TestModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.usecase.modelfilter.DiscoverUmlModelWithRealTypesFromJavaProject;
+import org.eclipse.uml2.uml.Artifact;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -124,18 +126,28 @@ public class SimpleBlackBoxDiscovery {
 		 * reference (checked manually)
 		 *
 		 * Warning, because the java model store the "filepath" of
-		 * discovered java code, the compilation units elements could not be
-		 * the same !!!!
+		 * discovered java code, we have to unset them before comparison
 		 */
+		unsetFilenames(output);
 		final String referencePath = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$
 				+ "RealTypes" + UML_MODEL_EXT; //$NON-NLS-1$
 		final URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
 		Assert.assertNotNull(referenceUri);
 		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
+		unsetFilenames(referenceModel);
 		final boolean result = TestModelUtils.compareModels(referenceModel, output);
 		Assert.assertTrue(
 				"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
+	}
+
+	private void unsetFilenames(final Resource model) {
+		for (Iterator<EObject> i = model.getAllContents(); i.hasNext();) {
+			final EObject childEObject = i.next();
+			if (childEObject instanceof Artifact) {
+				((Artifact) childEObject).unsetFileName();
+			}
+		}
 	}
 
 	@Test
