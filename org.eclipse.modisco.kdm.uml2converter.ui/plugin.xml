@@ -17,10 +17,10 @@
 <plugin>
    
    <extension point="org.eclipse.modisco.infra.discovery.ui.discoverer">
-      <discoverer
+      <!-- see Bug 559506 - - discoverer
             discovererID="org.eclipse.modisco.kdm.uml2converter.discoverUmlModelFromKdmModel"
             label="%discoverer.name">
-      </discoverer>
+      </discoverer-->
    </extension>
 
 </plugin>
