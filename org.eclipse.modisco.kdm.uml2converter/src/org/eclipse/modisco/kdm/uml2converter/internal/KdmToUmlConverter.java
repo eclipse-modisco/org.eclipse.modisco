@@ -57,6 +57,10 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.uml2.uml.internal.impl.UMLPackageImpl;
 
+/**
+ * @deprecated See Bug 559506- the KDMtoUML transformation has not been revised for UML2 5.0.0.
+ */
+@Deprecated
 public class KdmToUmlConverter {
 
 	public static final String MM_LOCATION = "resources/metamodels"; //$NON-NLS-1$

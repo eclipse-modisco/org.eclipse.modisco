@@ -22,6 +22,10 @@ import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.usecase.simpletransformationschain.internal.Activator;
 
+/**
+ * @deprecated See Bug 559506- the KDMtoUML transformation has not been revised for UML2 5.0.0.
+ */
+@Deprecated
 public class DiscoverUmlModelWithBidirectionalAssociationsFromProject extends
 		AbstractModelDiscoverer<IProject> {
 
@@ -36,6 +40,7 @@ public class DiscoverUmlModelWithBidirectionalAssociationsFromProject extends
 		return this.customTransformation;
 	}
 
+	@Override
 	public boolean isApplicableTo(final IProject source) {
 		try {
 			return source.isAccessible() && source.getNature(JavaCore.NATURE_ID) != null;

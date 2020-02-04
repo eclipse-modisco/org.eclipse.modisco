@@ -29,6 +29,10 @@ import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.DiscoverKDMModelFromJavaProject;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
 
+/**
+ * @deprecated See Bug 559506- the KDMtoUML transformation has not been revised for UML2 5.0.0.
+ */
+@Deprecated
 public class DiscoverUmlModelFromJavaProject extends AbstractModelDiscoverer<IJavaProject> {
 
 	private static final String MODEL_FILE_SUFFIX = ".uml"; //$NON-NLS-1$
@@ -44,6 +48,7 @@ public class DiscoverUmlModelFromJavaProject extends AbstractModelDiscoverer<IJa
 		return this.customTransformation;
 	}
 
+	@Override
 	public boolean isApplicableTo(final IJavaProject source) {
 		return source.getProject().isAccessible();
 	}

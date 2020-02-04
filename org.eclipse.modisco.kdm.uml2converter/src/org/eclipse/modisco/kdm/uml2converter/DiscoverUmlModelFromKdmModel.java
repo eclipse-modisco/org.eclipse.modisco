@@ -32,7 +32,9 @@ import org.eclipse.modisco.omg.kdm.IKDMConstants;
 /**
  * @author Gabriel Barbier
  *
+ * @deprecated See Bug 559506- the KDMtoUML transformation has not been revised for UML2 5.0.0.
  */
+@Deprecated
 public class DiscoverUmlModelFromKdmModel extends AbstractModelDiscoverer<IFile> {
 
 	private static final String TARGET_EXTENSION = "uml"; //$NON-NLS-1$
