@@ -14,25 +14,25 @@
 
 <plugin>
    <extension point="org.eclipse.modisco.infra.discovery.ui.discoverer">
-      <discoverer
+      <!-- see Bug 559506 - - discoverer
             discovererID="org.eclipse.modisco.usecase.simpletransformationschain.discovererUMLModelFromJavaProject"
             icon="icons/UMLModelFile.gif"
             label="%discoverer.name">
-      </discoverer>
-      <discoverer
+      </discoverer-->
+      <!-- see Bug 559506 - - discoverer
             discovererID="org.eclipse.modisco.usecase.simpletransformationschain.discovererUmlModelWithBidirectionalAssociationsFromJavaProject"
             icon="icons/UMLModelFile.gif"
             label="%discoverer.name.1">
-      </discoverer>
-      <discoverer
+      </discoverer-->
+      <!-- see Bug 559506 - - discoverer
             discovererID="org.eclipse.modisco.usecase.simpletransformationschain.discovererUMLModelFromProject"
             icon="icons/UMLModelFile.gif"
             label="%discoverer.name">
-      </discoverer>
-      <discoverer
+      </discoverer-->
+      <!-- see Bug 559506 - - discoverer
             discovererID="org.eclipse.modisco.usecase.simpletransformationschain.discovererUmlModelWithBidirectionalAssociationsFromProject"
             icon="icons/UMLModelFile.gif"
             label="%discoverer.name.1">
-      </discoverer>
+      </discoverer-->
    </extension>
 </plugin>
