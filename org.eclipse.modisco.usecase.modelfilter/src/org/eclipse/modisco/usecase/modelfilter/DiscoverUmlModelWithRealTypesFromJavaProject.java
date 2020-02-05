@@ -23,6 +23,10 @@ import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.usecase.simpletransformationschain.DiscoverUmlModelWithBidirectionalAssociationsFromJavaProject;
 
+/**
+ * @deprecated See Bug 559506- the KDMtoUML transformation has not been revised for UML2 5.0.0.
+ */
+@Deprecated
 public class DiscoverUmlModelWithRealTypesFromJavaProject extends
 		AbstractModelDiscoverer<IJavaProject> {
 
