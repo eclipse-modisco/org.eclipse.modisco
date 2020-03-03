@@ -1,2 +1,2 @@
-org.eclipse.emf.facet.efacet.core/debug=false
-org.eclipse.emf.facet.efacet.core/debug/FacetManagerContext=false
+org.eclipse.modisco.facet.efacet.core/debug=false
+org.eclipse.modisco.facet.efacet.core/debug/FacetManagerContext=false
