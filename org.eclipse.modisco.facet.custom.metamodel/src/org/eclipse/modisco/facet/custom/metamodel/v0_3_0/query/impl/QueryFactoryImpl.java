@@ -36,7 +36,7 @@ public class QueryFactoryImpl extends EFactoryImpl implements QueryFactory {
 	 */
 	public static QueryFactory init() {
 		try {
-			QueryFactory theQueryFactory = (QueryFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/emf/facet/custom/0.3.incubation/query"); 
+			QueryFactory theQueryFactory = (QueryFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/modisco/facet/custom/0.3.incubation/query"); 
 			if (theQueryFactory != null) {
 				return theQueryFactory;
 			}

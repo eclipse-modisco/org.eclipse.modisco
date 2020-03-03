@@ -14,8 +14,8 @@ Contributors:
 	xmlns:xmi="http://www.omg.org/XMI"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-	xmlns:efacet="http://www.eclipse.org/emf/facet/efacet/0.2.incubation/efacet"
-	xmlns:javaQuery="http://www.eclipse.org/emf/facet/query/java/0.2.incubation/javaquery"
+	xmlns:efacet="http://www.eclipse.org/modisco/facet/efacet/0.2.incubation/efacet"
+	xmlns:javaQuery="http://www.eclipse.org/modisco/facet/query/java/0.2.incubation/javaquery"
 	name="org.eclipse.modisco.infra.browser.ecore.core.hierarchicalEClass.facet"
 	nsURI="http://www.eclipse.org/MoDisco/infra/browser/ecore/0.13.0.incubation/hierarchicalEClass/"
 	nsPrefix="hierarchicalEClass">

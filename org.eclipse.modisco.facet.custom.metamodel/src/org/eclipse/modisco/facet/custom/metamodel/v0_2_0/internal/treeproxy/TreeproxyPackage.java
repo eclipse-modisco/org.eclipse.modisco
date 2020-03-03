@@ -47,7 +47,7 @@ public interface TreeproxyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/emf/facet/custom/0.2.incubation/internal/treeproxy";
+	String eNS_URI = "http://www.eclipse.org/modisco/facet/custom/0.2.incubation/internal/treeproxy";
 
 	/**
 	 * The package namespace name.

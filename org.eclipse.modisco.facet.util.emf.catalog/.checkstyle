@@ -16,6 +16,6 @@ Contributors:
     <file-match-pattern match-pattern="Messages.java" include-pattern="false"/>
   </fileset>
   <filter name="FilesFromPackage" enabled="true">
-     <filter-data value="src/org/eclipse/emf/facet/util/emf/catalog"/>       
+     <filter-data value="src/org/eclipse/modisco/facet/util/emf/catalog"/>       
   </filter>
 </fileset-config>

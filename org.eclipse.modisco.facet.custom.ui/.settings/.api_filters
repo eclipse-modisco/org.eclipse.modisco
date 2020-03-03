@@ -16,7 +16,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/emf/facet/custom/ui/internal/exported/dialog/ILoadCustomizationsDialog.java" type="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialog">
+    <resource path="src/org/eclipse/modisco/facet/custom/ui/internal/exported/dialog/ILoadCustomizationsDialog.java" type="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialog">
         <filter comment="This is an internal API." id="405901410">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialog"/>
@@ -24,7 +24,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/emf/facet/custom/ui/internal/exported/dialog/ILoadCustomizationsDialogFactory.java" type="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialogFactory">
+    <resource path="src/org/eclipse/modisco/facet/custom/ui/internal/exported/dialog/ILoadCustomizationsDialogFactory.java" type="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialogFactory">
         <filter comment="This an insternal API." id="405901410">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.custom.ui.internal.exported.dialog.ILoadCustomizationsDialogFactory"/>
