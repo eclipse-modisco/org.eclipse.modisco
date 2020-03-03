@@ -12,7 +12,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML"
+            uri="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML"
             class="org.eclipse.modisco.xml.emf.MoDiscoXMLPackage"
             genModel="model/xml.genmodel"/>
    </extension>

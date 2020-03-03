@@ -9,7 +9,7 @@ http://www.eclipse.org/legal/epl-v20.html
 Contributors:
     Nicolas Guyomar (Mia-Software) - initial API and implementation
 -->
-<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML">
+<uicustom:MetamodelView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uicustom="http://www.eclipse.org/MoDisco/infra/browser/custom/0.8" metamodelURI="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML">
   <types metaclassName="xml.Attribute">
     <customizedFeatures customizedFeature="icon">
       <defaultValue xsi:type="uicustom:StaticFeatureValue" value="/org.eclipse.modisco.xml.browser.customization/icons/attribute.png"/>

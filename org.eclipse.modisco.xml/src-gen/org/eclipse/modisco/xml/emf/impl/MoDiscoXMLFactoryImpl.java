@@ -39,7 +39,7 @@ public class MoDiscoXMLFactoryImpl extends EFactoryImpl implements MoDiscoXMLFac
 	 */
 	public static MoDiscoXMLFactory init() {
 		try {
-			MoDiscoXMLFactory theMoDiscoXMLFactory = (MoDiscoXMLFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML");  //$NON-NLS-1$
+			MoDiscoXMLFactory theMoDiscoXMLFactory = (MoDiscoXMLFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML");  //$NON-NLS-1$
 			if (theMoDiscoXMLFactory != null) {
 				return theMoDiscoXMLFactory;
 			}

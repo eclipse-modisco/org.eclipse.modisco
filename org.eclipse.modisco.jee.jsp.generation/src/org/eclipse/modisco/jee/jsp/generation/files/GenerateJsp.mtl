@@ -10,7 +10,7 @@
     
 [comment encoding = UTF-8 /]
 [module GenerateJsp('http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp'
-,'http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML')/]
+,'http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML')/]
 
   
 [comment  This method generates one file per Page in the Model/]

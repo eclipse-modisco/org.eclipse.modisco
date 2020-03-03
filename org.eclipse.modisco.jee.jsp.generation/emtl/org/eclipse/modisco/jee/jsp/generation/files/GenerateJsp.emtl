@@ -5,7 +5,7 @@
       <takesTypesFrom href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#/"/>
     </input>
     <input>
-      <takesTypesFrom href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#/"/>
+      <takesTypesFrom href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
@@ -105,12 +105,12 @@
           <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/write/@body.0/@body.2/i">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </argument>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
           <loopVariable name="i">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/write/p">
@@ -135,33 +135,33 @@
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.1/o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="=&quot;"/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.1/o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute/value"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute/value"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;"/>
       <parameter name="o">
-        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public">
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.2/o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <parameter name="o">
-        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public">
@@ -170,24 +170,24 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.3/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="=&quot;"/>
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.3/@body.2/n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </argument>
         </body>
         <loopVariable name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </loopVariable>
         <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.3/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
           </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
         </iterSet>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;"/>
@@ -201,9 +201,9 @@
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="mtl:IfBlock">
@@ -211,7 +211,7 @@
             <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </argument>
             </body>
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -219,7 +219,7 @@
               <source xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -229,10 +229,10 @@
               <argument xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                 </argument>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
               </argument>
@@ -244,7 +244,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -254,7 +254,7 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                       <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -272,7 +272,7 @@
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                 <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -285,7 +285,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -295,7 +295,7 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                       <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -313,7 +313,7 @@
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@body.2/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                 <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -322,13 +322,13 @@
             </ifExpr>
           </body>
           <loopVariable name="n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
@@ -339,7 +339,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
@@ -350,7 +350,7 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                       <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -368,7 +368,7 @@
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                 <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -381,7 +381,7 @@
                 <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </argument>
                 </body>
                 <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
@@ -392,7 +392,7 @@
                     <source xsi:type="ocl.ecore:OperationCallExp">
                       <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                       <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                       </source>
                       <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                         <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -410,7 +410,7 @@
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -423,7 +423,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
@@ -434,7 +434,7 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                       <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -448,10 +448,10 @@
                   <source xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/write.4/@body.0/@body.4/c">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                     </argument>
                     <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
                   </source>
@@ -462,22 +462,22 @@
             </elseIf>
           </body>
           <loopVariable name="c">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/"/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
         <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -490,9 +490,9 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                 <source xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
               </source>
@@ -501,22 +501,22 @@
                 <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/13/OrderedSet(Node)">
                   <source xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
                     <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
                     </source>
-                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                   </source>
                   <body xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@ifExpr/@source/@source/@argument.0/select/n">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                     </argument>
                     <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                   </body>
                   <iterator xsi:type="ocl.ecore:Variable" name="n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </iterator>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -528,14 +528,14 @@
               <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/13/OrderedSet(Node)">
                 <source xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <body xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@ifExpr/@source/@argument.0/select/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -543,7 +543,7 @@
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </body>
                 <iterator xsi:type="ocl.ecore:Variable" name="n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </iterator>
               </source>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -560,9 +560,9 @@
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
           </body>
           <body xsi:type="mtl:ForBlock">
             <body xsi:type="mtl:IfBlock">
@@ -570,7 +570,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -578,7 +578,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -588,10 +588,10 @@
                 <argument xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                   </argument>
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </argument>
@@ -603,7 +603,7 @@
                 <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </argument>
                 </body>
                 <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -613,7 +613,7 @@
                     <source xsi:type="ocl.ecore:OperationCallExp">
                       <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
                       <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                       </source>
                       <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                         <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -631,7 +631,7 @@
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPScript">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScript"/>
@@ -644,7 +644,7 @@
                 <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </argument>
                 </body>
                 <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -654,7 +654,7 @@
                     <source xsi:type="ocl.ecore:OperationCallExp">
                       <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                       <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                       </source>
                       <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                         <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -672,7 +672,7 @@
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.4/@body.0/@else/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/JSPAction">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -681,20 +681,20 @@
               </ifExpr>
             </body>
             <loopVariable name="n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </loopVariable>
             <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
               <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.4/o">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
               </source>
-              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
             </iterSet>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" />"/>
         </else>
       </body>
       <parameter name="o">
-        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public">
@@ -704,7 +704,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.5/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JavaScript"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" >&#xA;"/>
       <body xsi:type="mtl:ForBlock">
@@ -713,7 +713,7 @@
           <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.5/@body.3/n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </argument>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
@@ -724,7 +724,7 @@
               <source xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.5/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -738,10 +738,10 @@
               <source xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.5/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                 </argument>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
               </source>
@@ -751,13 +751,13 @@
           </ifExpr>
         </body>
         <loopVariable name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </loopVariable>
         <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.5/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JavaScript"/>
           </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
         </iterSet>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/script> "/>
@@ -773,7 +773,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
         <body xsi:type="mtl:ForBlock">
@@ -782,7 +782,7 @@
             <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.3/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </argument>
             </body>
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -790,7 +790,7 @@
               <source xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -800,10 +800,10 @@
               <argument xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                 </argument>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
               </argument>
@@ -811,13 +811,13 @@
             </ifExpr>
           </body>
           <loopVariable name="n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
@@ -826,7 +826,7 @@
             <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.5/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </argument>
             </body>
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -836,7 +836,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.5/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -850,10 +850,10 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@body.5/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                   </argument>
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
                 </source>
@@ -863,13 +863,13 @@
             </ifExpr>
           </body>
           <loopVariable name="n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/"/>
@@ -878,7 +878,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#x9;&#xA;"/>
         <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -893,7 +893,7 @@
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
               </source>
@@ -904,20 +904,20 @@
                     <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
                       <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                     </source>
-                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                   </source>
                   <body xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@ifExpr/@source/@source/@argument.0/select/n">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                     </argument>
                     <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                   </body>
                   <iterator xsi:type="ocl.ecore:Variable" name="n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </iterator>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -931,12 +931,12 @@
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <body xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@ifExpr/@source/@argument.0/select/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -944,7 +944,7 @@
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </body>
                 <iterator xsi:type="ocl.ecore:Variable" name="n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </iterator>
               </source>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -963,7 +963,7 @@
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
           </body>
           <body xsi:type="mtl:ForBlock">
             <body xsi:type="mtl:IfBlock">
@@ -971,7 +971,7 @@
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@else/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -979,7 +979,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -989,10 +989,10 @@
                 <argument xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.6/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                   </argument>
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </argument>
@@ -1000,13 +1000,13 @@
               </ifExpr>
             </body>
             <loopVariable name="n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </loopVariable>
             <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
               <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.6/o">
                 <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
               </source>
-              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
             </iterSet>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" />"/>
@@ -1022,7 +1022,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.7/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPComment"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <parameter name="o">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPComment"/>
@@ -1035,17 +1035,17 @@
         <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.8/@body.1/n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </argument>
         </body>
         <loopVariable name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </loopVariable>
         <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.8/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDeclaration"/>
           </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
         </iterSet>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" %>"/>
@@ -1060,7 +1060,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.9/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDirective"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:IfBlock">
@@ -1068,7 +1068,7 @@
           <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.9/@body.2/n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </argument>
           </body>
           <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1076,7 +1076,7 @@
             <source xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.9/@body.2/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                 <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1086,10 +1086,10 @@
             <argument xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.9/@body.2/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
             </argument>
@@ -1097,13 +1097,13 @@
           </ifExpr>
         </body>
         <loopVariable name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </loopVariable>
         <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.9/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDirective"/>
           </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
         </iterSet>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="%>"/>
@@ -1118,7 +1118,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.10/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPExpression"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" %>"/>
       <parameter name="o">
@@ -1137,7 +1137,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.12/o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPScriptlet"/>
         </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" %>"/>
       <parameter name="o">
@@ -1152,7 +1152,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
         <body xsi:type="mtl:ForBlock">
@@ -1160,7 +1160,7 @@
             <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@body.3/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </argument>
             </body>
             <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1168,7 +1168,7 @@
               <source xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                   <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1178,10 +1178,10 @@
               <argument xsi:type="ocl.ecore:OperationCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@body.3/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </source>
                 <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                  <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                 </argument>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
               </argument>
@@ -1189,13 +1189,13 @@
             </ifExpr>
           </body>
           <loopVariable name="n">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
@@ -1205,7 +1205,7 @@
             <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
               <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/write.13/@body.0/@body.5/s">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </argument>
             </body>
             <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
@@ -1216,7 +1216,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/write.13/@body.0/@body.5/s">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1230,10 +1230,10 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/write.13/@body.0/@body.5/s">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                   </argument>
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
                 </source>
@@ -1243,13 +1243,13 @@
             </ifExpr>
           </body>
           <loopVariable name="s">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
           </loopVariable>
           <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
           </iterSet>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/"/>
@@ -1258,7 +1258,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;"/>
         <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1273,7 +1273,7 @@
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
               </source>
@@ -1284,20 +1284,20 @@
                     <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
                       <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
                     </source>
-                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                    <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                   </source>
                   <body xsi:type="ocl.ecore:OperationCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@ifExpr/@source/@source/@argument.0/select/n">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                     </source>
                     <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                     </argument>
                     <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                   </body>
                   <iterator xsi:type="ocl.ecore:Variable" name="n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </iterator>
                 </source>
                 <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -1311,12 +1311,12 @@
                   <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
                     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
                 </source>
                 <body xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@ifExpr/@source/@argument.0/select/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1324,7 +1324,7 @@
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </body>
                 <iterator xsi:type="ocl.ecore:Variable" name="n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </iterator>
               </source>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
@@ -1343,14 +1343,14 @@
             <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
           </body>
           <body xsi:type="mtl:ForBlock">
             <body xsi:type="mtl:IfBlock">
               <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@else/@body.2/n">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                 </argument>
               </body>
               <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1358,7 +1358,7 @@
                 <source xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                     <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1368,10 +1368,10 @@
                 <argument xsi:type="ocl.ecore:OperationCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.13/@body.0/@else/@body.2/n">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
                   </source>
                   <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                    <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
                   </argument>
                   <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
                 </argument>
@@ -1379,13 +1379,13 @@
               </ifExpr>
             </body>
             <loopVariable name="n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </loopVariable>
             <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
               <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.13/o">
                 <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
               </source>
-              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
             </iterSet>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" />&#xA;"/>
@@ -1403,7 +1403,7 @@
           <body xsi:type="mtl:TemplateInvocation" definition="/0/write.15">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.14/@body.1/n">
-              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
             </argument>
           </body>
           <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1411,7 +1411,7 @@
             <source xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.14/@body.1/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/ComposedAttribute">
                 <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -1421,10 +1421,10 @@
             <argument xsi:type="ocl.ecore:OperationCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/write.14/@body.1/n">
-                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
               </source>
               <argument xsi:type="ocl.ecore:TypeExp" eType="/43/Attribute">
-                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+                <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
             </argument>
@@ -1432,13 +1432,13 @@
           </ifExpr>
         </body>
         <loopVariable name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </loopVariable>
         <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/13/OrderedSet(Node)">
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/write.14/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPTagLib"/>
           </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element/children"/>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element/children"/>
         </iterSet>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="%>"/>
@@ -1448,7 +1448,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public">
       <parameter name="n">
-        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="write" visibility="Public">
@@ -1456,9 +1456,9 @@
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/write.16/t">
-            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
         </body>
         <ifExpr xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
@@ -1473,9 +1473,9 @@
                   <source xsi:type="ocl.ecore:PropertyCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/write.16/t">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
                     </source>
-                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
                   </source>
                   <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1490,9 +1490,9 @@
                   <source xsi:type="ocl.ecore:PropertyCallExp">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                     <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/write.16/t">
-                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
                     </source>
-                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
                   </source>
                   <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ">
                     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1509,9 +1509,9 @@
                 <source xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                   <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/write.16/t">
-                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
                 </source>
                 <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1528,9 +1528,9 @@
               <source xsi:type="ocl.ecore:PropertyCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
                 <source xsi:type="ocl.ecore:VariableExp" name="t" referredVariable="/0/write.16/t">
-                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
                 </source>
-                <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node/name"/>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node/name"/>
               </source>
               <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -1542,7 +1542,7 @@
         </ifExpr>
       </body>
       <parameter name="t">
-        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
       </parameter>
     </ownedModuleElement>
   </mtl:Module>
@@ -1846,7 +1846,7 @@
         <eAnnotations source="MTL" references="/0/write.1"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
         </eParameters>
       </eOperations>
       <eOperations name="write">
@@ -1856,7 +1856,7 @@
         <eAnnotations source="MTL" references="/0/write.2"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
         </eParameters>
       </eOperations>
       <eOperations name="write">
@@ -1876,7 +1876,7 @@
         <eAnnotations source="MTL" references="/0/write.4"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="o">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
         </eParameters>
       </eOperations>
       <eOperations name="write">
@@ -1986,7 +1986,7 @@
         <eAnnotations source="MTL" references="/0/write.15"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="n">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
         </eParameters>
       </eOperations>
       <eOperations name="write">
@@ -1996,7 +1996,7 @@
         <eAnnotations source="MTL" references="/0/write.16"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="t">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
         </eParameters>
       </eOperations>
     </eClassifiers>
@@ -2148,7 +2148,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Attribute_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+        <references href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
       </eAnnotations>
       <eOperations name="write">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -2160,7 +2160,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Comment_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+        <references href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
       </eAnnotations>
       <eOperations name="write">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -2184,7 +2184,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Element_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+        <references href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
       </eAnnotations>
       <eOperations name="write">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -2316,7 +2316,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Node_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+        <references href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
       </eAnnotations>
       <eOperations name="write">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -2328,7 +2328,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Text_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+        <references href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
       </eAnnotations>
       <eOperations name="write">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -2374,20 +2374,20 @@
   </ocl.ecore:Variable>
   <ecore:EPackage name="collections">
     <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Node)" instanceClassName="java.util.LinkedHashSet">
-      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
-      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
     </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//Page"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//Page"/>
@@ -2396,34 +2396,34 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Comment"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Comment"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -2444,13 +2444,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -2459,17 +2459,17 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ecore:EPackage name="types">
     <eClassifiers xsi:type="ocl.ecore:TypeType" name="Attribute">
-      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Attribute"/>
+      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Attribute"/>
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:TypeType" name="ComposedAttribute">
       <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//ComposedAttribute"/>
@@ -2482,115 +2482,115 @@
     </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -2611,13 +2611,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JavaScript"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JavaScript"/>
@@ -2644,28 +2644,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -2674,19 +2659,34 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPAction"/>
@@ -2722,10 +2722,10 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDeclaration"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDeclaration"/>
@@ -2749,13 +2749,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDirective"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPDirective"/>
@@ -2824,28 +2824,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
@@ -2854,19 +2839,34 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPStdAction"/>
@@ -2887,13 +2887,13 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPTagLib"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#//JSPTagLib"/>
@@ -2902,31 +2902,31 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Node"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Node"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Text"/>
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Text"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>

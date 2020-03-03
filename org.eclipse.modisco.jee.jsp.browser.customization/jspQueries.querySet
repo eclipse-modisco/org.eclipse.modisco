@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <query:ModelQuerySet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:query="http://www.eclipse.org/MoDisco/infra/query/0.8.incubation" name="jspQueries" description="Set of queries for JSP">
   <associatedMetamodels href="http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp#/"/>
-  <associatedMetamodels href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#/"/>
+  <associatedMetamodels href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#/"/>
   <queries xsi:type="query:JavaModelQuery" name="GetJspScriptName" description="Return the name of a JSPScript" implementationClassName="org.eclipse.modisco.jee.jsp.browser.customization.GetName">
     <returnType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <scope href="http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML#//Element"/>
+    <scope href="http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML#//Element"/>
   </queries>
 </query:ModelQuerySet>

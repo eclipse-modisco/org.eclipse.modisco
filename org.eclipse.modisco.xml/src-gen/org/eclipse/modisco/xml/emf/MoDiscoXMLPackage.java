@@ -48,7 +48,7 @@ public interface MoDiscoXMLPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML"; //$NON-NLS-1$
+	String eNS_URI = "http://www.eclipse.org/MoDisco/Xml/0.2.incubation/XML"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.
