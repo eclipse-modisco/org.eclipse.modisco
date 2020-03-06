@@ -5,7 +5,7 @@
     modelDirectory="/org.eclipse.modisco.facet.widgets.celleditors/src" editDirectory="/org.eclipse.modisco.facet.widgets.celleditors.edit/src"
     editorDirectory="/org.eclipse.modisco.facet.widgets.celleditors.editor/src" modelPluginID="org.eclipse.modisco.facet.widgets.celleditors"
     modelName="Celleditors" modelPluginClass="org.eclipse.modisco.facet.widgets.celleditors.CelleditorsPlugin"
-    editPluginClass="org.eclipse.modisco.facet.widgets.celleditors.edit.CelleditorsEditPlugin"
+    editPluginClass="org.eclipse.emf.facet.widgets.celleditors.edit.CelleditorsEditPlugin"
     editorPluginClass="org.eclipse.modisco.facet.widgets.celleditors.editor.CelleditorsEditorPlugin"
     testSuiteClass="org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.tests.CelleditorsAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"

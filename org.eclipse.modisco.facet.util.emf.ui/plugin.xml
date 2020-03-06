@@ -30,7 +30,7 @@
          point="org.eclipse.ui.commands">
       <category
             id="org.eclipse.modisco.facet.util.emf.ui.category"
-            name="%modisco.facet.category.name">
+            name="%emf.facet.category.name">
       </category>
       <command
             categoryId="org.eclipse.modisco.facet.util.emf.ui.category"
