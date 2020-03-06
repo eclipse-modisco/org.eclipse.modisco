@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <component id="org.eclipse.emf.facet.efacet.ui" version="2">
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/widget/IETypedElementSelectionWidget.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidget">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/widget/IETypedElementSelectionWidget.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidget">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidget"/>
@@ -8,7 +8,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/widget/IETypedElementSelectionWidgetFactory.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidgetFactory">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/widget/IETypedElementSelectionWidgetFactory.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidgetFactory">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidgetFactory"/>
@@ -22,7 +22,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/widget/IFacetSetSelectionWidget.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidget">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/widget/IFacetSetSelectionWidget.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidget">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidget"/>
@@ -30,7 +30,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/widget/IFacetSetSelectionWidgetFactory.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidgetFactory">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/widget/IFacetSetSelectionWidgetFactory.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidgetFactory">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.widget.IFacetSetSelectionWidgetFactory"/>
@@ -38,7 +38,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/wizard/ICreateFacetInFacetSetWizard2.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetInFacetSetWizard2">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/wizard/ICreateFacetInFacetSetWizard2.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetInFacetSetWizard2">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetInFacetSetWizard2"/>
@@ -46,7 +46,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/wizard/ICreateFacetSetWizard.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetSetWizard">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/wizard/ICreateFacetSetWizard.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetSetWizard">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ICreateFacetSetWizard"/>
@@ -54,7 +54,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/wizard/IFacetChildrenWizard2.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.IFacetChildrenWizard2">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/wizard/IFacetChildrenWizard2.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.IFacetChildrenWizard2">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.IFacetChildrenWizard2"/>
@@ -62,7 +62,7 @@
             </message_arguments>
         </filter>
     </resource>
-    <resource path="src/org/eclipse/modisco/facet/efacet/ui/internal/exported/wizard/ISelectETypeWizard.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ISelectETypeWizard">
+    <resource path="src/org/eclipse/emf/facet/efacet/ui/internal/exported/wizard/ISelectETypeWizard.java" type="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ISelectETypeWizard">
         <filter comment="These warnings are about internal API." id="305365105">
             <message_arguments>
                 <message_argument value="org.eclipse.emf.facet.efacet.ui.internal.exported.wizard.ISelectETypeWizard"/>

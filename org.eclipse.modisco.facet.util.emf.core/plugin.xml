@@ -29,7 +29,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://www.eclipse.org/modisco/facet/serialization/0.1.incubation"
+            uri="http://www.eclipse.org/emf/facet/serialization/0.1.incubation"
             class="org.eclipse.modisco.facet.util.emf.core.serialization.model.serialization.SerializationPackage"
             genModel="model/serialization.genmodel"/>
    </extension>

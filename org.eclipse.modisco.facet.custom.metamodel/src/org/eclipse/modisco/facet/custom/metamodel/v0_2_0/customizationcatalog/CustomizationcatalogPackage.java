@@ -50,7 +50,7 @@ public interface CustomizationcatalogPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/modisco/facet/custom/0.2.internal/customizationcatalog";
+	String eNS_URI = "http://www.eclipse.org/emf/facet/custom/0.2.internal/customizationcatalog";
 
 	/**
 	 * The package namespace name.

@@ -50,7 +50,7 @@ public interface CatalogPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/modisco/facet/catalog/0.1.incubation"; //$NON-NLS-1$
+	String eNS_URI = "http://www.eclipse.org/emf/facet/catalog/0.1.incubation"; //$NON-NLS-1$
 
 	/**
 	 * The package namespace name.

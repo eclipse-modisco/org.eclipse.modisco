@@ -16,7 +16,7 @@
 <plugin>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://www.eclipse.org/modisco/facet/catalog/0.1.incubation"            
+            uri="http://www.eclipse.org/emf/facet/catalog/0.1.incubation"            
             class="org.eclipse.modisco.facet.util.emf.catalog.CatalogPackage"
             genModel="model/catalog.genmodel"/>
    </extension>
