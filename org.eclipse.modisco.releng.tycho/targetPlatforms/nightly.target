@@ -55,8 +55,12 @@
     <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R202008210805"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/>
-    <repository location="https://download.eclipse.org/birt/update-site/4.6/"/>
+    <!--unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/-->
+    <!--repository location="https://download.eclipse.org/birt/update-site/4.6/"/-->
+    <unit id="org.eclipse.birt.chart.device.extension" version="0.0.0"/>
+    <unit id="org.eclipse.birt.chart.engine" version="0.0.0"/>
+    <unit id="org.eclipse.birt.chart.engine.extension" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/mat/snapshots/update-site/"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.gmf.feature.group" version="0.0.0"/>
