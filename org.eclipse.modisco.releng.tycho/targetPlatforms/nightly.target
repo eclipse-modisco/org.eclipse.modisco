@@ -4,15 +4,15 @@
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/eclipse/updates/I-builds"/-->
-    <repository location="https://download.eclipse.org/releases/2019-09"/>
+    <repository location="https://download.eclipse.org/releases/2020-12/202011061000"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.acceleo.runtime.feature.group" version="0.0.0"/>
-    <repository location="https://download.eclipse.org/acceleo/updates/releases/3.7/R201902261618"/>
+    <repository location="https://download.eclipse.org/acceleo/updates/releases/3.7/R202002210922"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.m2m.atl.sdk.feature.group" version="0.0.0"/>
-    <repository location="https://download.eclipse.org/mmt/atl/updates/milestones/4.1/S201908031203"/>
+    <repository location="https://download.eclipse.org/mmt/atl/updates/releases/latest"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 	<unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0"/>
@@ -42,17 +42,17 @@
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/query/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/emf/query/updates/releases/R201706061326"/>
+    <repository location="https://download.eclipse.org/modeling/emf/query/updates/releases/R201805030653"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R201706061339"/>
+    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.validation.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R201706061352"/>
+    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R202008210805"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/>
@@ -61,7 +61,7 @@
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.gmf.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R201706061437"/>
+    <repository location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.ocl.all.sdk.feature.group" version="0.0.0"/>
