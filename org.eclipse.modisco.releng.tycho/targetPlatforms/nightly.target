@@ -3,8 +3,8 @@
 <locations>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
-    <!--repository location="https://download.eclipse.org/eclipse/updates/I-builds"/-->
-    <repository location="https://download.eclipse.org/releases/2020-12/202011061000"/>
+    <repository location="https://download.eclipse.org/eclipse/updates/I-builds"/>
+    <!--repository location="https://download.eclipse.org/releases/2020-12/202011061000"/-->
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.acceleo.runtime.feature.group" version="0.0.0"/>
@@ -65,7 +65,8 @@
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.gmf.feature.group" version="0.0.0"/>
-    <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
+    <repository location="https://download.eclipse.org/tools/gef/updates/legacy/releases/4.0.0_gef-master_1952"/>
+    <repository location="https://download.eclipse.org/modeling/gmp/gmf-notation/updates/releases/R202004160913"/>
     <repository location="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/R202004160913"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
