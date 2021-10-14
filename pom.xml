@@ -155,25 +155,6 @@
     <module>org.eclipse.modisco.xml.discoverer</module>
     <module>org.eclipse.modisco.xml.discoverer.ui</module>
     <module>org.eclipse.modisco.xml.doc</module>
-	<!-- Features -->
-    <module>org.eclipse.modisco.all.feature</module>
-    <module>org.eclipse.modisco.eclipse.feature</module>
-    <module>org.eclipse.modisco.examples.feature</module>
-    <module>org.eclipse.modisco.facet.feature</module>
-    <module>org.eclipse.modisco.infra.browser.feature</module>
-    <module>org.eclipse.modisco.infra.cdo.derby.feature</module>
-    <module>org.eclipse.modisco.infra.discovery.benchmark.feature</module>
-    <module>org.eclipse.modisco.infra.omg.feature</module>
-    <module>org.eclipse.modisco.infrastructure.feature</module>
-    <module>org.eclipse.modisco.java.cdo.feature</module>
-    <module>org.eclipse.modisco.java.feature</module>
-    <module>org.eclipse.modisco.jee.feature</module>
-    <module>org.eclipse.modisco.sdk.feature</module>
-    <module>org.eclipse.modisco.thirdparties.feature</module>
-    <module>org.eclipse.modisco.usecase.modelfilter.feature</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationschain.feature</module>
-    <module>org.eclipse.modisco.utils.chart.feature</module>
-    <module>org.eclipse.modisco.xml.feature</module>
 	<!-- Test Support Plugins -->
     <module>org.eclipse.modisco.common.tests</module>
     <module>org.eclipse.modisco.facet.util.tests.swtbot</module>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.modisco</groupId>
+    <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
+    <version>1.5.2-SNAPSHOT</version>
+    <relativePath>../org.eclipse.modisco.releng.tycho</relativePath>
+  </parent>
+  <groupId>org.eclipse.modisco-feature</groupId>
+  <artifactId>org.eclipse.modisco.features-folder</artifactId>
+  <version>1.5.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>org.eclipse.modisco.all.feature</module>
+    <module>org.eclipse.modisco.eclipse.feature</module>
+    <module>org.eclipse.modisco.examples.feature</module>
+    <module>org.eclipse.modisco.facet.feature</module>
+    <module>org.eclipse.modisco.infra.browser.feature</module>
+    <module>org.eclipse.modisco.infra.cdo.derby.feature</module>
+    <module>org.eclipse.modisco.infra.discovery.benchmark.feature</module>
+    <module>org.eclipse.modisco.infra.omg.feature</module>
+    <module>org.eclipse.modisco.infrastructure.feature</module>
+    <module>org.eclipse.modisco.java.cdo.feature</module>
+    <module>org.eclipse.modisco.java.feature</module>
+    <module>org.eclipse.modisco.jee.feature</module>
+    <module>org.eclipse.modisco.sdk.feature</module>
+    <module>org.eclipse.modisco.thirdparties.feature</module>
+    <module>org.eclipse.modisco.usecase.modelfilter.feature</module>
+    <module>org.eclipse.modisco.usecase.simpletransformationschain.feature</module>
+    <module>org.eclipse.modisco.utils.chart.feature</module>
+    <module>org.eclipse.modisco.xml.feature</module>
+  </modules>
+  
+</project>
