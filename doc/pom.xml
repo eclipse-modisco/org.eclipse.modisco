@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.modisco</groupId>
+    <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
+    <version>1.5.2-SNAPSHOT</version>
+    <relativePath>../releng/org.eclipse.modisco.releng.tycho</relativePath>
+  </parent>
+  <groupId>org.eclipse.modisco-doc</groupId>
+  <artifactId>org.eclipse.modisco.doc-folder</artifactId>
+  <version>1.5.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>org.eclipse.modisco.doc</module>
+    <!--module>org.eclipse.modisco.doc.api.report</module>
+    <module>org.eclipse.modisco.doc.metric.report</module>
+    <module>org.eclipse.modisco.doc.test.report</module-->
+    <module>org.eclipse.modisco.infra.omg.doc</module>
+    <module>org.eclipse.modisco.infrastructure.doc</module>
+    <module>org.eclipse.modisco.java.doc</module>
+    <module>org.eclipse.modisco.jee.doc</module>
+    <module>org.eclipse.modisco.usecase.modelfilter.doc</module>
+    <module>org.eclipse.modisco.usecase.simpletransformationchain.doc</module>
+    <module>org.eclipse.modisco.xml.doc</module>
+  </modules>
+  
+</project>

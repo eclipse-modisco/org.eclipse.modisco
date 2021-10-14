@@ -7,7 +7,7 @@
     <groupId>org.eclipse.modisco</groupId>
     <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
     <version>1.5.2-SNAPSHOT</version>
-    <relativePath>../org.eclipse.modisco.releng.tycho</relativePath>
+    <relativePath>../releng/org.eclipse.modisco.releng.tycho</relativePath>
   </parent>
   <groupId>org.eclipse.modisco-tests</groupId>
   <artifactId>org.eclipse.modisco.tests-folder</artifactId>

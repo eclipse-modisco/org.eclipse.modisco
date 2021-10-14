@@ -7,7 +7,7 @@
     <groupId>org.eclipse.modisco</groupId>
     <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
     <version>1.5.2-SNAPSHOT</version>
-    <relativePath>org.eclipse.modisco.releng.tycho</relativePath>
+    <relativePath>releng/org.eclipse.modisco.releng.tycho</relativePath>
   </parent>
   <groupId>org.eclipse.modisco</groupId>
   <artifactId>org.eclipse.modisco-folder</artifactId>
@@ -80,10 +80,6 @@
     <module>org.eclipse.modisco.xml.browser.customization</module>
     
 	<!-- MoDisco Plugins -->
-    <module>org.eclipse.modisco.doc</module>
-    <!--module>org.eclipse.modisco.doc.api.report</module>
-    <module>org.eclipse.modisco.doc.metric.report</module>
-    <module>org.eclipse.modisco.doc.test.report</module-->
     <module>org.eclipse.modisco.eclipseplugin</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>
@@ -95,8 +91,6 @@
     <module>org.eclipse.modisco.infra.discovery.benchmark.ui</module>
     <module>org.eclipse.modisco.infra.discovery.core</module>
     <module>org.eclipse.modisco.infra.discovery.ui</module>
-    <module>org.eclipse.modisco.infra.omg.doc</module>
-    <module>org.eclipse.modisco.infrastructure.doc</module>
     <module>org.eclipse.modisco.java.composition</module>
     <module>org.eclipse.modisco.java.composition.browser.customization</module>
     <module>org.eclipse.modisco.java.composition.discoverer</module>
@@ -105,9 +99,7 @@
     <module>org.eclipse.modisco.java.discoverer</module>
     <module>org.eclipse.modisco.java.discoverer.cdo</module>
     <module>org.eclipse.modisco.java.discoverer.ui</module>
-    <module>org.eclipse.modisco.java.doc</module>
     <module>org.eclipse.modisco.jee</module>
-    <module>org.eclipse.modisco.jee.doc</module>
     <module>org.eclipse.modisco.jee.ejbjar</module>
     <module>org.eclipse.modisco.jee.ejbjar.discoverer</module>
     <module>org.eclipse.modisco.jee.ejbjar.discoverer.ui</module>
@@ -136,12 +128,10 @@
     <module>org.eclipse.modisco.properties.discoverer.ui</module>
     <module>org.eclipse.modisco.usecase.modelfilter</module>
     <module>org.eclipse.modisco.usecase.modelfilter.dependencies.ui</module>
-    <module>org.eclipse.modisco.usecase.modelfilter.doc</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer</module>
     <module>org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui</module>
     <module>org.eclipse.modisco.usecase.modelfilter.ui</module>
-    <module>org.eclipse.modisco.usecase.simpletransformationchain.doc</module>
     <module>org.eclipse.modisco.usecase.simpletransformationschain</module>
     <module>org.eclipse.modisco.usecase.simpletransformationschain.ui</module>
     <module>org.eclipse.modisco.util.atl.core</module>
@@ -154,7 +144,6 @@
     <module>org.eclipse.modisco.workflow.ui</module>
     <module>org.eclipse.modisco.xml.discoverer</module>
     <module>org.eclipse.modisco.xml.discoverer.ui</module>
-    <module>org.eclipse.modisco.xml.doc</module>
 	<!-- Test Support Plugins -->
     <module>org.eclipse.modisco.infra.discovery.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark</module>
@@ -162,8 +151,6 @@
     <module>org.eclipse.modisco.java.nousages</module>
     <module>org.eclipse.modisco.java.nousages.cdo</module>
     <module>org.eclipse.modisco.java.classiceobject</module>
-	<!-- Update Site -->
-    <module>org.eclipse.modisco.updatesite</module>
   </modules>
   
 </project>
