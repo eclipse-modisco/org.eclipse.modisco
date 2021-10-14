@@ -156,41 +156,12 @@
     <module>org.eclipse.modisco.xml.discoverer.ui</module>
     <module>org.eclipse.modisco.xml.doc</module>
 	<!-- Test Support Plugins -->
-    <module>org.eclipse.modisco.common.tests</module>
-    <module>org.eclipse.modisco.facet.util.tests.swtbot</module>
     <module>org.eclipse.modisco.infra.discovery.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark</module>
     <module>org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark</module>
     <module>org.eclipse.modisco.java.nousages</module>
     <module>org.eclipse.modisco.java.nousages.cdo</module>
     <module>org.eclipse.modisco.java.classiceobject</module>
-	<!-- Unit Test Plugins -->
-    <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests</module>
-    <module>org.eclipse.modisco.infra.browser.custom.examples.uml.tests</module>
-    <module>org.eclipse.modisco.infra.browser.custom.tests</module>
-    <module>org.eclipse.modisco.infra.browser.tests</module>
-    <module>org.eclipse.modisco.infra.common.core.tests</module>
-    <module>org.eclipse.modisco.infra.discovery.core.tests</module>
-    <module>org.eclipse.modisco.infra.discovery.ui.tests</module>
-    <module>org.eclipse.modisco.infra.doc.tests</module>
-    <module>org.eclipse.modisco.infra.facet.tests</module>
-    <module>org.eclipse.modisco.infra.query.tests</module>
-    <module>org.eclipse.modisco.java.browser.customization.tests</module>
-    <module>org.eclipse.modisco.java.composition.discoverer.tests</module>
-    <module>org.eclipse.modisco.java.discoverer.benchmark.tests</module>
-    <module>org.eclipse.modisco.java.discoverer.cdo.tests</module>
-    <module>org.eclipse.modisco.java.discoverer.tests</module>
-    <module>org.eclipse.modisco.java.generation.tests</module>
-    <module>org.eclipse.modisco.java.queries.tests</module>
-    <module>org.eclipse.modisco.jee.ejbjar.discoverer.tests</module>
-    <module>org.eclipse.modisco.jee.jsp.discoverer.tests</module>
-    <module>org.eclipse.modisco.jee.jsp.generation.tests</module>
-    <module>org.eclipse.modisco.jee.queries.tests</module>
-    <module>org.eclipse.modisco.jee.webapp.discoverer.tests</module>
-    <module>org.eclipse.modisco.kdm.uml2converter.tests</module>
-    <module>org.eclipse.modisco.tests</module>
-    <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
-    <module>org.eclipse.modisco.xml.discoverer.tests</module>
 	<!-- Update Site -->
     <module>org.eclipse.modisco.updatesite</module>
   </modules>

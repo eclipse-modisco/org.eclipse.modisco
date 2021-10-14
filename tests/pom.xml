@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.modisco</groupId>
+    <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
+    <version>1.5.2-SNAPSHOT</version>
+    <relativePath>../org.eclipse.modisco.releng.tycho</relativePath>
+  </parent>
+  <groupId>org.eclipse.modisco-tests</groupId>
+  <artifactId>org.eclipse.modisco.tests-folder</artifactId>
+  <version>1.5.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+	<!-- Test Support Plugins -->
+    <module>org.eclipse.modisco.common.tests</module>
+    <module>org.eclipse.modisco.facet.util.tests.swtbot</module>
+	<!-- Unit Test Plugins -->
+    <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests</module>
+    <module>org.eclipse.modisco.infra.browser.custom.examples.uml.tests</module>
+    <module>org.eclipse.modisco.infra.browser.custom.tests</module>
+    <module>org.eclipse.modisco.infra.browser.tests</module>
+    <module>org.eclipse.modisco.infra.common.core.tests</module>
+    <module>org.eclipse.modisco.infra.discovery.core.tests</module>
+    <module>org.eclipse.modisco.infra.discovery.ui.tests</module>
+    <module>org.eclipse.modisco.infra.doc.tests</module>
+    <module>org.eclipse.modisco.infra.facet.tests</module>
+    <module>org.eclipse.modisco.infra.query.tests</module>
+    <module>org.eclipse.modisco.java.browser.customization.tests</module>
+    <module>org.eclipse.modisco.java.composition.discoverer.tests</module>
+    <module>org.eclipse.modisco.java.discoverer.benchmark.tests</module>
+    <module>org.eclipse.modisco.java.discoverer.cdo.tests</module>
+    <module>org.eclipse.modisco.java.discoverer.tests</module>
+    <module>org.eclipse.modisco.java.generation.tests</module>
+    <module>org.eclipse.modisco.java.queries.tests</module>
+    <module>org.eclipse.modisco.jee.ejbjar.discoverer.tests</module>
+    <module>org.eclipse.modisco.jee.jsp.discoverer.tests</module>
+    <module>org.eclipse.modisco.jee.jsp.generation.tests</module>
+    <module>org.eclipse.modisco.jee.queries.tests</module>
+    <module>org.eclipse.modisco.jee.webapp.discoverer.tests</module>
+    <module>org.eclipse.modisco.kdm.uml2converter.tests</module>
+    <module>org.eclipse.modisco.tests</module>
+    <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
+    <module>org.eclipse.modisco.xml.discoverer.tests</module>
+  </modules>
+  
+</project>

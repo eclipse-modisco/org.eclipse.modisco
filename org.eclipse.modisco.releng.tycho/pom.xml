@@ -73,6 +73,7 @@
   <modules>
    <module>..</module>
    <module>../features</module>
+   <module>../tests</module>
   </modules>
 
   <build>
