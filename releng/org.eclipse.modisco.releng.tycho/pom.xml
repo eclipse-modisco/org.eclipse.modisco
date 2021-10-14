@@ -75,6 +75,7 @@
    <module>../../doc</module>
    <module>../../features</module>
    <module>../../plugins/facet</module>
+   <module>../../plugins/gmt</module>
    <module>../../releng</module>
    <module>../../tests</module>
   </modules>

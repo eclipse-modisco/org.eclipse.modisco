@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.modisco</groupId>
+    <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
+    <version>1.5.2-SNAPSHOT</version>
+    <relativePath>../../releng/org.eclipse.modisco.releng.tycho</relativePath>
+  </parent>
+  <groupId>org.eclipse.modisco-plugins.gmt</groupId>
+  <artifactId>org.eclipse.modisco.plugins.gmt-folder</artifactId>
+  <version>1.5.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+	<!-- GMT MoDisco Plugins -->
+    <module>org.eclipse.modisco.examples</module>
+    <module>org.eclipse.modisco.infra.browser</module>
+    <module>org.eclipse.modisco.infra.browser.custom</module>
+    <module>org.eclipse.modisco.infra.browser.custom.core</module>
+    <module>org.eclipse.modisco.infra.browser.custom.editor</module>
+    <module>org.eclipse.modisco.infra.browser.custom.examples.java.jdk</module>
+    <module>org.eclipse.modisco.infra.browser.custom.examples.uml</module>
+    <module>org.eclipse.modisco.infra.browser.custom.ui</module>
+    <module>org.eclipse.modisco.infra.browser.uicore</module>
+    <module>org.eclipse.modisco.infra.browser.uicore.examples.cnf</module>
+    <module>org.eclipse.modisco.infra.capabilities</module>
+    <module>org.eclipse.modisco.infra.common.cdo</module>
+    <module>org.eclipse.modisco.infra.common.cdo.derby</module>
+    <module>org.eclipse.modisco.infra.common.core</module>
+    <module>org.eclipse.modisco.infra.common.ui</module>
+    <module>org.eclipse.modisco.infra.facet</module>
+    <module>org.eclipse.modisco.infra.facet.core</module>
+    <module>org.eclipse.modisco.infra.facet.edit</module>
+    <module>org.eclipse.modisco.infra.facet.editor</module>
+    <module>org.eclipse.modisco.infra.facet.ui</module>
+    <module>org.eclipse.modisco.infra.prefuse</module>
+    <module>org.eclipse.modisco.infra.query</module>
+    <module>org.eclipse.modisco.infra.query.core</module>
+    <module>org.eclipse.modisco.infra.query.edit</module>
+    <module>org.eclipse.modisco.infra.query.editor</module>
+    <module>org.eclipse.modisco.infra.query.jxpath</module>
+    <module>org.eclipse.modisco.infra.query.ui</module>
+    <module>org.eclipse.modisco.java</module>
+    <module>org.eclipse.modisco.java.browser.customization</module>
+    <module>org.eclipse.modisco.java.cdo</module>
+    <module>org.eclipse.modisco.java.generation</module>
+    <module>org.eclipse.modisco.java.queries</module>
+    <module>org.eclipse.modisco.omg.kdm</module>
+    <module>org.eclipse.modisco.omg.kdm.edit</module>
+    <!--module>See Bug 553387 org.eclipse.gmt.modisco.omg.smm</module-->
+    <module>org.eclipse.modisco.tool.metricsvisualizationbuilder</module>
+    <module>org.eclipse.modisco.xml</module>
+    <module>org.eclipse.modisco.xml.browser.customization</module>
+	<!-- Test Support Plugins -->
+    <module>org.eclipse.modisco.java.nousages</module>
+    <module>org.eclipse.modisco.java.nousages.cdo</module>
+    <module>org.eclipse.modisco.java.classiceobject</module>
+  </modules>
+  
+</project>
