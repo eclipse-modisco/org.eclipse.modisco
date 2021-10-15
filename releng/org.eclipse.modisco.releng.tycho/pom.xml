@@ -71,9 +71,9 @@
   </properties>
   
   <modules>
-   <module>../..</module>
    <module>../../doc</module>
    <module>../../features</module>
+   <module>../../plugins</module>
    <module>../../plugins/facet</module>
    <module>../../plugins/gmt</module>
    <module>../../releng</module>
