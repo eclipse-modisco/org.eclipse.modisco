@@ -371,6 +371,11 @@
         <value>remoteURI</value>
       </detail>
     </annotation>
+    <configSections
+        name="core">
+      <properties
+          key="autocrlf"/>
+    </configSections>
     <description>MoDisco Git repository clone</description>
   </setupTask>
   <project name="dev"
@@ -382,7 +387,7 @@
           locateNestedProjects="true">
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.*"/>
+            pattern="org\.eclipse\.modisco\.*"/>
       </sourceLocator>
       <description>Development Projects</description>
     </setupTask>
@@ -396,142 +401,142 @@
               xsi:type="predicates:OrPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.eclipseplugin.*"/>
+                pattern="org\.eclipse\.modisco\.eclipseplugin.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.discovery.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.discovery.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.java.composition.*"/>
+                pattern="org\.eclipse\.modisco\.java\.composition.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.java.discoverer.*"/>
+                pattern="org\.eclipse\.modisco\.java\.discoverer.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.jee.*"/>
+                pattern="org\.eclipse\.modisco\.jee.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.kdm.*"/>
+                pattern="org\.eclipse\.modisco\.kdm.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.manifest.*"/>
+                pattern="org\.eclipse\.modisco\.manifest.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.omg.*"/>
+                pattern="org\.eclipse\.modisco\.omg.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.properties.*"/>
+                pattern="org\.eclipse\.modisco\.properties.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.usecase.modelfilter.*"/>
+                pattern="org\.eclipse\.modisco\.usecase\.modelfilter.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.usecase.simpletransformationschain.*"/>
+                pattern="org\.eclipse\.modisco\.usecase\.simpletransformationschain.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.util.*"/>
+                pattern="org\.eclipse\.modisco\.util.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.utils.*"/>
+                pattern="org\.eclipse\.modisco\.utils.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.workflow.*"/>
+                pattern="org\.eclipse\.modisco\.workflow.*"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.xml.discoverer.*"/>
+                pattern="org\.eclipse\.modisco\.xml\.discoverer.*"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.feature"/>
+                pattern=".*\.feature"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.tests.*"/>
+                pattern=".*\.tests(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.facet.*"/>
+                pattern="org\.eclipse\.modisco\.facet(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.archi.*"/>
+                pattern=".*\.archi(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.doc.*"/>
+                pattern=".*\.doc(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.releng.*"/>
+                pattern="org\.eclipse\.modisco\.releng(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.oomph.*"/>
+                pattern="org\.eclipse\.modisco\.oomph"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.updatesite.*"/>
+                pattern="org\.eclipse\.modisco\.updatesite"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.custom.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser\.custom(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.uicore.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser\.uicore(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.benchmark"/>
+                pattern="org\.eclipse\.modisco\..*\.benchmark"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.ecore.ui"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser\.ecore\.ui"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark"/>
+                pattern="org\.eclipse\.modisco\.java\.discoverer\.benchmark\.javaBenchmark"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.omg.kdm.*"/>
+                pattern="org\.eclipse\.modisco\.omg\.kdm(\..*)?"/>
           </operand>
         </predicate>
       </workingSet>
@@ -541,12 +546,12 @@
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.eclipse.modisco.*.tests.*"/>
+              pattern=".*\.tests(\..*)?"/>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.feature"/>
+                pattern=".*\.feature"/>
           </operand>
         </predicate>
       </workingSet>
@@ -556,18 +561,18 @@
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.eclipse.modisco.facet.*"/>
+              pattern="org\.eclipse\.modisco\.facet(\..*)?"/>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.feature"/>
+                pattern=".*\.feature"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.tests.*"/>
+                pattern=".*\.tests(\..*)?"/>
           </operand>
         </predicate>
       </workingSet>
@@ -579,106 +584,106 @@
               xsi:type="predicates:OrPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.examples"/>
+                pattern="org\.eclipse\.modisco\.examples"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.*"/>
+                pattern="org\.eclipse\.modisco\.infra.*(\..*)?"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.java.*"/>
+                pattern="org\.eclipse\.modisco\.java(\..*)?"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.omg.*"/>
+                pattern="org\.eclipse\.modisco\.omg(\..*)?"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.tool.metricsvisualizationbuilder"/>
+                pattern="org\.eclipse\.modisco\.tool\.metricsvisualizationbuilder"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.xml.*"/>
+                pattern="org\.eclipse\.modisco\.xml(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.doc.*"/>
+                pattern=".*\.doc(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.feature"/>
+                pattern=".*\.feature"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.tests.*"/>
+                pattern=".*\.tests(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.ecore.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser\.ecore(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.editor.*"/>
+                pattern="org\.eclipse\.modisco\.infra\.browser\.editor(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.composition.*"/>
+                pattern="org\.eclipse\.modisco\..*\.composition(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.discovery.*"/>
+                pattern="org\.eclipse\.modisco\..*\.discovery(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.discoverer.*"/>
+                pattern="org\.eclipse\.modisco\..*\.discoverer(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.nousages.*"/>
+                pattern="org\.eclipse\.modisco\..*\.nousages(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.omg.gastm.*"/>
+                pattern="org\.eclipse\.modisco\.omg\.gastm(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.omg.smm.*"/>
+                pattern="org\.eclipse\.modisco\.omg\.smm(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.browser.custom.examples.generation"/>
+                pattern="org\.eclipse\.modisco\.infra\.browse\r.custom\.examples\.generation"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.infra.facet.examples.kdm"/>
+                pattern="org\.eclipse\.modisco\.infra\.facet\.examples\.kdm"/>
           </operand>
           <operand
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.java.classiceobject"/>
+                pattern="org\.eclipse\.modisco\.java\.classiceobject"/>
           </operand>
         </predicate>
       </workingSet>
@@ -690,16 +695,16 @@
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.tests.*"/>
+                pattern=".*\.tests(\..*)?"/>
           </operand>
           <operand
               xsi:type="predicates:OrPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.doc.*"/>
+                pattern=".*\.doc(\..*)?"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="org.eclipse.modisco.*.archi.*"/>
+                pattern=".*\.archi(\..*)?"/>
           </operand>
         </predicate>
       </workingSet>
@@ -707,7 +712,7 @@
           name="${scope.project.root.label} Features">
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.*.feature"/>
+            pattern=".*\.feature"/>
       </workingSet>
       <workingSet
           name="${scope.project.root.label} Releng">
@@ -715,71 +720,68 @@
             xsi:type="predicates:OrPredicate">
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.eclipse.modisco.oomph"/>
+              pattern="org\.eclipse\.modisco\.oomph"/>
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.eclipse.modisco.releng.*"/>
+              pattern="org\.eclipse\.modisco\.releng\..*"/>
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.eclipse.modisco.updatesite"/>
+              pattern="org\.eclipse\.modisco\.updatesite"/>
         </predicate>
       </workingSet>
       <workingSet
           name="${scope.project.root.label} Probably Dead Plugins">
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco"/>
+            pattern="org\.eclipse\.modisco\.infra\.browser\.custom\.examples\.generation"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.infra.browser.custom.examples.generation"/>
+            pattern="org\.eclipse\.modisco\.infra\.browser\.ecore\.ui"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.infra.browser.ecore.ui"/>
+            pattern="org\.eclipse\.modisco\.infra\.discovery\.benchmark"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.infra.discovery.benchmark"/>
+            pattern="org\.eclipse\.modisco\.infra\.facet\.examples\.kdm"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.infra.facet.examples.kdm"/>
+            pattern="org\.eclipse\.modisco\.java\.classiceobject"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.java.classiceobject"/>
+            pattern="org\.eclipse\.modisco\.java\.composition\.discoverer\.benchmark"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.java.composition.discoverer.benchmark"/>
+            pattern="org\.eclipse\.modisco\.java\.discoverer\.benchmark"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.java.discoverer.benchmark"/>
+            pattern="org\.eclipse\.modisco\.java\.discoverer\.benchmark\.javaBenchmark"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark"/>
+            pattern="org\.eclipse\.modisco\.java\.nousages(\..*)?"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.java.nousages.*"/>
+            pattern="org\.eclipse\.modisco\.smm\.quality"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.smm.quality"/>
+            pattern="org\.eclipse\.modisco\.usecase\.birtsampledb"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.birtsampledb"/>
+            pattern="org\.eclipse\.modisco\.usecase\.bugzillametrics"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.bugzillametrics"/>
+            pattern="org\.eclipse\.modisco\.usecase\.java\.samplemetrics"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.java.samplemetrics"/>
+            pattern="org\.eclipse\.modisco\.usecase\.java\.samplerefactoring"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.java.samplerefactoring"/>
+            pattern="org\.eclipse\.modisco\.usecase\.modelplex\.examples\.customization"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.modelplex.examples.customization"/>
+            pattern="org\.eclipse\.modisco\.usecase\.perfannotatedumlstatechart"/>
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.perfannotatedumlstatechart"/>
-        <predicate
-            xsi:type="predicates:NamePredicate"
-            pattern="org.eclipse.modisco.usecase.travelagency"/>
+            pattern="org\.eclipse\.modisco\.usecase\.travelagency"/>
       </workingSet>
     </setupTask>
     <stream
