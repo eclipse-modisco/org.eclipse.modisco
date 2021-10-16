@@ -387,7 +387,7 @@
           locateNestedProjects="true">
         <predicate
             xsi:type="predicates:NamePredicate"
-            pattern="org\.eclipse\.modisco\.*"/>
+            pattern="org\.eclipse\.modisco\..*"/>
       </sourceLocator>
       <description>Development Projects</description>
     </setupTask>
