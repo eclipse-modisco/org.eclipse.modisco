@@ -211,9 +211,9 @@
     <module>org.eclipse.modisco.tests</module>
     <module>org.eclipse.modisco.usecase.modelfilter.tests</module>
     <module>org.eclipse.modisco.xml.discoverer.tests</module>
-	<!-- Releng>
-    <module>org.eclipse.modisco.oomph</module>
-    <module>org.eclipse.modisco.updatesite</module-->
+	<!--Releng-->
+    <!--module>org.eclipse.modisco.oomph</module-->
+    <module>org.eclipse.modisco.updatesite</module>
   </modules>
   
 </project>
