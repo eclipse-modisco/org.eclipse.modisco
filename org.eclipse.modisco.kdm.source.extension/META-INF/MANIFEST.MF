@@ -6,7 +6,7 @@ Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Activator: org.eclipse.modisco.kdm.source.extension.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.eclipse.modisco.kdm.source.extension;
   x-friends:="org.eclipse.modisco.kdm.source.extension.ui,
    org.eclipse.modisco.java.composition.discoverer,

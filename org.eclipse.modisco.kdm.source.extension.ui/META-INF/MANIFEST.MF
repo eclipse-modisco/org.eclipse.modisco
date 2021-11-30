@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.editors;bundle-version="3.6.0",
  org.eclipse.modisco.infra.common.core;bundle-version="0.9.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.eclipse.modisco.kdm.source.extension.ui.actions,
  org.eclipse.modisco.kdm.source.extension.ui.interfaces,
  org.eclipse.modisco.kdm.source.extension.ui.utils
