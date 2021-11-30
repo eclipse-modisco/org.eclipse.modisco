@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.infra.omg.feature"
       label="MoDisco OMG meta-models implementations and tools"
-      version="1.5.2.qualifier"
+      version="1.5.3.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.modisco.util.atl.core"
       license-feature="org.eclipse.license"
