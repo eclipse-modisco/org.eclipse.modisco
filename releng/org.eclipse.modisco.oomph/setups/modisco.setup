@@ -51,7 +51,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="2021-09"
+      defaultValue="2022-03"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
@@ -159,11 +159,33 @@
             url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
       </repositoryList>
       <repositoryList
-          name="2021-12">
+          name="2022-06">
         <repository
             url="https://download.eclipse.org/releases/latest"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2022-03">
+        <repository
+            url="https://download.eclipse.org/releases/2022-03"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2021-12">
+        <repository
+            url="https://download.eclipse.org/releases/2021-12"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20211213173813/repository"/>
         <repository
             url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
         <repository
