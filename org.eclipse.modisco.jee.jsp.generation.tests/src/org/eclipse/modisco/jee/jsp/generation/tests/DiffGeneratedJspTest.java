@@ -57,9 +57,12 @@ public class DiffGeneratedJspTest {
 		}
 
 		public boolean accept(final File file, final String fileName) {
-			return ((new File(file, fileName).isDirectory() && fileName
-					.indexOf("svn") == -1) || fileName.toLowerCase().endsWith(//$NON-NLS-1$
-					".jsp")); //$NON-NLS-1$
+			if (new File(file, fileName).isDirectory()) {
+				return !".settings".equals(fileName) && (fileName.indexOf("svn") == -1); //$NON-NLS-1$
+			}
+			else {
+				return fileName.toLowerCase().endsWith(".jsp"); //$NON-NLS-1$
+			}
 		}
 	}
 
