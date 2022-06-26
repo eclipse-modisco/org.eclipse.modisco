@@ -57,6 +57,21 @@ public final class SWTBotUtils {
 	private static boolean enableDebugScreenshots = true;
 	private static final String SCREENSHOT_DIR = "SWTBotScreenShots/"; //$NON-NLS-1$
 	private static final String SCREENSHOT_FORMAT = ".png"; //$NON-NLS-1$
+	
+	/**
+	 * As of 2022-06 and/or the pruning of CVS-defined Orbit contributions, the Jenkins build fails because
+	 * org.slf4j.Logger is indirectly referenced from some .class file, so let's provide a direct reference
+	 * and ensure that the conventional plumbing resolves it. See Bug 580266.
+	 */
+	@SuppressWarnings("unused")
+	private static org.slf4j.Logger necessarySLF4Jreference = null;
+	
+	/**
+	 * log4j is never instantiated but is mentioned in a strange Eclipse-RegisterBuddy so it seems
+	 * prudent to have a direct reference for org.apache.log4j too.
+	 */
+	@SuppressWarnings("unused")
+	private static org.apache.log4j.Logger necessaryLOG4Jreference = null;
 
 	private SWTBotUtils() {
 		// Util class should not be instantiable

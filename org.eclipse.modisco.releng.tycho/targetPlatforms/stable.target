@@ -50,6 +50,7 @@
     <unit id="org.antlr.runtime" version="3.2.0.v201101311130"/> 
     <unit id="org.antlr.runtime.source" version="3.2.0.v201101311130"/> 
     <unit id="org.apache.commons.cli" version="0.0.0"/>
+    <unit id="org.apache.log4j" version="0.0.0"/>
     <unit id="org.apache.lucene" version="3.5.0.v20120725-1805"/>
     <unit id="org.apache.lucene.source" version="3.5.0.v20120725-1805"/>
     <unit id="org.apache.lucene.core" version="3.5.0.v20120725-1805"/>
@@ -61,6 +62,7 @@
     <unit id="org.hamcrest" version="0.0.0"/>
     <unit id="org.prefuse" version="0.0.0"/>
     <unit id="org.prefuse.source" version="0.0.0"/>
+    <!--unit id="org.slf4j.api" version="0.0.0"/-->
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-S"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
