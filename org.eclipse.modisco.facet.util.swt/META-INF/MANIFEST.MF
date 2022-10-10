@@ -13,11 +13,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.util.swt.colorprovider,
  org.eclipse.modisco.facet.util.swt.fontprovider,
- org.eclipse.modisco.facet.util.swt.imageprovider,
- org.eclipse.modisco.facet.util.swt.internal.exported;
-  x-friends:="org.eclipse.modisco.facet.aggregate.tests,
-   org.eclipse.modisco.facet.efacet.tests,
-   org.eclipse.modisco.facet.custom.tests,
-   org.eclipse.modisco.facet.widgets.table.tests,
-   org.eclipse.modisco.facet.util.emf.ui.tests"
+ org.eclipse.modisco.facet.util.swt.imageprovider
 Automatic-Module-Name: org.eclipse.modisco.facet.util.swt
