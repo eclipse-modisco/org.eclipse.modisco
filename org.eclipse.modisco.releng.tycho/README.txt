@@ -79,10 +79,13 @@ ssh genie.modisco@projects-storage.eclipse.org rm -rf  /home/data/httpd/download
 -- Updates maintenance -- https://download.eclipse.org/modeling/mdt/modisco/updates
 ssh genie.modisco@projects-storage.eclipse.org ls -la /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases
 ssh genie.modisco@projects-storage.eclipse.org pwd ; cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; pwd ; ls -la
-ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.14.0
+ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; export JAVA_HOME=/shared/common/jdk1.8.0_x64-latest ; java -version ; /shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.14.0
 ssh genie.modisco@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases/0.14.0
 
-ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/nightly ; ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.20.0
+ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/milestones ; export JAVA_HOME=/shared/common/jdk1.8.0_x64-latest ; java -version ; /shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.20.0
+ssh genie.modisco@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/milestones/0.20.0
+
+ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/nightly ; export JAVA_HOME=/shared/common/jdk1.8.0_x64-latest ; java -version ; /shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.20.0
 ssh genie.modisco@projects-storage.eclipse.org rm -rf /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/nightly/0.20.0
 
 
@@ -94,6 +97,6 @@ ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.ecli
 ssh genie.modisco@projects-storage.eclipse.org ls -la /home/data/httpd/archive.eclipse.org/modeling/mdt/modisco/updates/releases
 ssh genie.modisco@projects-storage.eclipse.org rm -rf /home/data/httpd/archive.eclipse.org/modeling/mdt/modisco/updates/releases/zz*
 
-ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.14.0
+ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; export JAVA_HOME=/shared/common/jdk1.8.0_x64-latest ; java -version ; /shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml remove -Dchild.repository=0.14.0
 ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/download.eclipse.org/modeling/mdt/modisco/updates/releases ; mv 0.14.0 /home/data/httpd/archive.eclipse.org/modeling/mdt/modisco/updates/releases
-ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/archive.eclipse.org/modeling/mdt/modisco/updates/releases ; ant -f /shared/modeling/tools/promotion/manage-composite.xml add -Dchild.repository=0.14.0
+ssh genie.modisco@projects-storage.eclipse.org cd /home/data/httpd/archive.eclipse.org/modeling/mdt/modisco/updates/releases ; export JAVA_HOME=/shared/common/jdk1.8.0_x64-latest ; java -version ; /shared/common/apache-ant-latest/bin/ant -f /shared/modeling/tools/promotion/manage-composite.xml add -Dchild.repository=0.14.0
