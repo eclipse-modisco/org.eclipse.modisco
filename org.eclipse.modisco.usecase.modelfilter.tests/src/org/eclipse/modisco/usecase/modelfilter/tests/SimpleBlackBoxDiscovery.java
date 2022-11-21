@@ -136,6 +136,8 @@ public class SimpleBlackBoxDiscovery {
 		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
 		unsetFilenames(referenceModel);
+		UMLNormalizer.INSTANCE.normalize(referenceModel);
+		UMLNormalizer.INSTANCE.normalize(output);
 		final boolean result = TestModelUtils.compareModels(referenceModel, output);
 		Assert.assertTrue(
 				"Comparison of Uml models with real types has failed !", result); //$NON-NLS-1$
