@@ -16,8 +16,8 @@
     label="MoDisco">
   <setupTask
       xsi:type="jdt:JRETask"
-      version="JavaSE-11"
-      location="${jre.location-11}"/>
+      version="JavaSE-17"
+      location="${jre.location-17}"/>
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Xmx"
@@ -69,13 +69,13 @@
         key="instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_STRICTLY_COMPATIBLE_JRE_NOT_AVAILABLE"
         value="ignore"/>
     <setupTask
-        xsi:type="setup:CompoundTask"
-        name="org.eclipse.pde.api.tools">
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.pde.api.tools/missing_default_api_profile"
-          value="Ignore"/>
-    </setupTask>
+        xsi:type="setup:PreferenceTask"
+        key="instance/org.eclipse.epp.mpc.ui/org.eclipse.epp.mpc.naturelookup"
+        value="false"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="instance/org.eclipse.pde.api.tools/missing_default_api_profile"
+        value="Ignore"/>
   </setupTask>
   <setupTask
       xsi:type="setup.targlets:TargletTask">
@@ -86,9 +86,11 @@
           name="com.google.guava"/>
       <requirement
           name="org.antlr.runtime"
-          versionRange="[3.2.0.v201101311130,3.2.0.v201101311130]"/>
+          versionRange="[3.2.0,3.3.0]"/>
       <requirement
           name="org.apache.commons.cli"/>
+      <requirement
+          name="org.apache.log4j"/>
       <requirement
           name="org.apache.lucene"
           versionRange="[3.5.0.v20120725-1805,3.5.0.v20120725-1805]"/>
@@ -152,7 +154,74 @@
         <repository
             url="https://download.eclipse.org/releases/latest"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/latest"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2023-09">
+        <repository
+            url="https://download.eclipse.org/releases/2023-09"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/4.29.0"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2023-06">
+        <repository
+            url="https://download.eclipse.org/releases/2023-06"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20230531010532/repository"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2023-03">
+        <repository
+            url="https://download.eclipse.org/releases/2023-03"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20230302014618/repository"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2022-12">
+        <repository
+            url="https://download.eclipse.org/releases/2022-12"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2022-09">
+        <repository
+            url="https://download.eclipse.org/releases/2022-09"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220830213456/repository"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
             url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
         <repository
@@ -161,9 +230,11 @@
       <repositoryList
           name="2022-06">
         <repository
-            url="https://download.eclipse.org/releases/latest"/>
+            url="https://download.eclipse.org/releases/2022-06"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220531185310/repository"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
             url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
         <repository
@@ -828,6 +899,9 @@
     <stream
         name="master"
         label="Master (Latest)"/>
+    <stream
+        name="1.5.2"
+        label="1.5.2 (2021-12)"/>
     <stream
         name="1.5.1"
         label="1.5.1 (2020-03)"/>
