@@ -55,7 +55,6 @@
     <!--unit id="org.slf4j.api" version="0.0.0"/-->
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-S"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
-    <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="javax.annotation" version="0.0.0"/>
