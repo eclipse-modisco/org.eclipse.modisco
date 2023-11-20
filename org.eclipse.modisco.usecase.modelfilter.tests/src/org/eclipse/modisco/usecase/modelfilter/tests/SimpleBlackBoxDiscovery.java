@@ -129,13 +129,21 @@ public class SimpleBlackBoxDiscovery {
 		 * discovered java code, we have to unset them before comparison
 		 */
 		unsetFilenames(output);
-		final String referencePath = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$
-				+ "RealTypes" + UML_MODEL_EXT; //$NON-NLS-1$
+		String referencePathStem = "/" + Activator.PLUGIN_ID + REF_FOLDER_PATH + PROJECT_NAME //$NON-NLS-1$
+				+ "RealTypes"; //$NON-NLS-1$
+		try {			// Bug 582651 Java 12 adds java.lang.constant
+			Class.forName("java.lang.constant.Constable");
+			referencePathStem += "WithConstants";
+		} catch (ClassNotFoundException e) {
+		}
+		final String referencePath = referencePathStem + UML_MODEL_EXT; //$NON-NLS-1$
 		final URI referenceUri = URI.createPlatformPluginURI(referencePath, true);
 		Assert.assertNotNull(referenceUri);
 		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
 		unsetFilenames(referenceModel);
+		output.setURI(URI.createURI("test.xml"));
+		output.save(null);
 		UMLNormalizer.INSTANCE.normalize(referenceModel);
 		UMLNormalizer.INSTANCE.normalize(output);
 		final boolean result = TestModelUtils.compareModels(referenceModel, output);

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_aSpXYD6AEeqcX6gkWIIK4w" name="root model">
+  <packagedElement xmi:type="uml:Model" xmi:id="_aSp-cD6AEeqcX6gkWIIK4w" name="RealTypesExample">
+    <packagedElement xmi:type="uml:Package" xmi:id="_aSqlgD6AEeqcX6gkWIIK4w" name="org" visibility="public">
+      <packagedElement xmi:type="uml:Package" xmi:id="_aSqlgT6AEeqcX6gkWIIK4w" name="eclipse" visibility="public">
+        <packagedElement xmi:type="uml:Package" xmi:id="_aSqlgj6AEeqcX6gkWIIK4w" name="modisco" visibility="public">
+          <packagedElement xmi:type="uml:Package" xmi:id="_aSqlgz6AEeqcX6gkWIIK4w" name="realtypes" visibility="public">
+            <packagedElement xmi:type="uml:Package" xmi:id="_aSqlhD6AEeqcX6gkWIIK4w" name="example" visibility="public">
+              <packagedElement xmi:type="uml:Class" xmi:id="_aS3Z0D6AEeqcX6gkWIIK4w" name="YourImpl" visibility="public">
+                <interfaceRealization xmi:id="_aS9gcD6AEeqcX6gkWIIK4w" client="_aS3Z0D6AEeqcX6gkWIIK4w" supplier="_aTH4gD6AEeqcX6gkWIIK4w" contract="_aTH4gD6AEeqcX6gkWIIK4w"/>
+                <ownedOperation xmi:id="_aTDnED6AEeqcX6gkWIIK4w" name="YourImpl" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Interface" xmi:id="_aTH4gD6AEeqcX6gkWIIK4w" name="YourInterface" visibility="public"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="_aTH4gT6AEeqcX6gkWIIK4w" name="Princ" visibility="public">
+                <ownedAttribute xmi:id="_aTS3oD6AEeqcX6gkWIIK4w" name="yourField" visibility="public" type="_aTH4gD6AEeqcX6gkWIIK4w" association="_aTd2wD6AEeqcX6gkWIIK4w">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aTVT4D6AEeqcX6gkWIIK4w"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aTWiAD6AEeqcX6gkWIIK4w" value="1"/>
+                </ownedAttribute>
+                <ownedOperation xmi:id="_aTXJED6AEeqcX6gkWIIK4w" name="main" visibility="public">
+                  <ownedParameter xmi:id="_aTbagD6AEeqcX6gkWIIK4w" visibility="public" type="_aTkkdT6AEeqcX6gkWIIK4w" direction="return">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aTbagT6AEeqcX6gkWIIK4w"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aTbagj6AEeqcX6gkWIIK4w" value="1"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_aTbagz6AEeqcX6gkWIIK4w" name="args" visibility="public" type="_aTlLgz6AEeqcX6gkWIIK4w">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aTbahD6AEeqcX6gkWIIK4w"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aTbahT6AEeqcX6gkWIIK4w" value="*"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_aTd2wD6AEeqcX6gkWIIK4w" memberEnd="_aTS3oD6AEeqcX6gkWIIK4w _aTg6ED6AEeqcX6gkWIIK4w">
+                <ownedEnd xmi:id="_aTg6ED6AEeqcX6gkWIIK4w" type="_aTH4gT6AEeqcX6gkWIIK4w" association="_aTd2wD6AEeqcX6gkWIIK4w"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Dependency" xmi:id="_aTg6ET6AEeqcX6gkWIIK4w" name="real type" client="_aTd2wD6AEeqcX6gkWIIK4w" supplier="_aS3Z0D6AEeqcX6gkWIIK4w"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_aTg6Ej6AEeqcX6gkWIIK4w" name="Common Java datatypes" visibility="public">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkcD6AEeqcX6gkWIIK4w" name="int" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkcT6AEeqcX6gkWIIK4w" name="long" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkcj6AEeqcX6gkWIIK4w" name="float" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkcz6AEeqcX6gkWIIK4w" name="double" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkdD6AEeqcX6gkWIIK4w" name="boolean" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkdT6AEeqcX6gkWIIK4w" name="void" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkdj6AEeqcX6gkWIIK4w" name="char" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkdz6AEeqcX6gkWIIK4w" name="short" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkeD6AEeqcX6gkWIIK4w" name="byte" visibility="public"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aTkkeT6AEeqcX6gkWIIK4w" name="string" visibility="public"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_aTlLgD6AEeqcX6gkWIIK4w" name="externals">
+    <packagedElement xmi:type="uml:Package" xmi:id="_aTlLgT6AEeqcX6gkWIIK4w" name="java" visibility="public">
+      <packagedElement xmi:type="uml:Package" xmi:id="_aTlLgj6AEeqcX6gkWIIK4w" name="lang" visibility="public">
+        <packagedElement xsi:type="uml:Package" name="constant" visibility="public">
+          <packagedElement xsi:type="uml:Interface" name="Constable" visibility="public"/>
+          <packagedElement xsi:type="uml:Interface" name="ConstantDesc" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_aTlLgz6AEeqcX6gkWIIK4w" name="String" visibility="public">
+          <interfaceRealization xmi:id="_aTlLhD6AEeqcX6gkWIIK4w" client="_aTlLgz6AEeqcX6gkWIIK4w" supplier="_aTtuYz6AEeqcX6gkWIIK4w" contract="_aTtuYz6AEeqcX6gkWIIK4w"/>
+          <interfaceRealization xmi:id="_aTlLhT6AEeqcX6gkWIIK4w" client="_aTlLgz6AEeqcX6gkWIIK4w" supplier="_aTlLhz6AEeqcX6gkWIIK4w" contract="_aTlLhz6AEeqcX6gkWIIK4w"/>
+          <interfaceRealization xmi:id="_aTlLhj6AEeqcX6gkWIIK4w" client="_aTlLgz6AEeqcX6gkWIIK4w" supplier="_aTtuYT6AEeqcX6gkWIIK4w" contract="_aTtuYT6AEeqcX6gkWIIK4w"/>
+          <interfaceRealization client="//externals/java/lang/String" supplier="//externals/java/lang/constant/Constable" contract="//externals/java/lang/constant/Constable"/>
+          <interfaceRealization client="//externals/java/lang/String" supplier="//externals/java/lang/constant/ConstantDesc" contract="//externals/java/lang/constant/ConstantDesc"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_aTlLhz6AEeqcX6gkWIIK4w" name="Comparable">
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_aTpc8D6AEeqcX6gkWIIK4w" name="Comparable&lt;T>" parameter="_aTtHUD6AEeqcX6gkWIIK4w">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_aTtHUD6AEeqcX6gkWIIK4w" parameteredElement="_aTtuYD6AEeqcX6gkWIIK4w">
+              <ownedParameteredElement xmi:type="uml:Class" xmi:id="_aTtuYD6AEeqcX6gkWIIK4w" name="T" templateParameter="_aTtHUD6AEeqcX6gkWIIK4w"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_aTtuYT6AEeqcX6gkWIIK4w" name="CharSequence" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_aTtuYj6AEeqcX6gkWIIK4w" name="io" visibility="public">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_aTtuYz6AEeqcX6gkWIIK4w" name="Serializable" visibility="public"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_aTtuZD6AEeqcX6gkWIIK4w" name="source references">
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_aTwxsD6AEeqcX6gkWIIK4w" name="YourImpl.java" visibility="public" fileName="D:\_eclipse\com.mia.itmf.dev.eclipsepackage-1.8.0.201910171512\junit-workspace\RealTypesExample\src\org\eclipse\modisco\realtypes\example\YourImpl.java"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_aTwxsT6AEeqcX6gkWIIK4w" name="YourInterface.java" visibility="public" fileName="D:\_eclipse\com.mia.itmf.dev.eclipsepackage-1.8.0.201910171512\junit-workspace\RealTypesExample\src\org\eclipse\modisco\realtypes\example\YourInterface.java"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_aTwxsj6AEeqcX6gkWIIK4w" name="Princ.java" visibility="public" fileName="D:\_eclipse\com.mia.itmf.dev.eclipsepackage-1.8.0.201910171512\junit-workspace\RealTypesExample\src\org\eclipse\modisco\realtypes\example\Princ.java"/>
+  </packagedElement>
+</uml:Model>
