@@ -733,18 +733,19 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.CompilationUnit node) {
 		this.cuNode = node;
-
-		CompilationUnit element = this.factory.createCompilationUnit();
-		this.binding.put(node, element);
-
-		if (!this.isINCREMENTALDISCOVERING) {
-			// we check if any of the top-level types of this compilation unit
-			// are already defined in the model
-			for (Iterator<?> iterator = node.types().iterator(); iterator.hasNext();) {
-				if (isTypeAlreadyVisited((org.eclipse.jdt.core.dom.AbstractTypeDeclaration) iterator
-						.next())) {
-					this.isAlreadyVisited = true;
-					return false;
+		if (node.types().size() > 0) {	// Bug 397384 ignore empty files, Bug 332068 ignore package-info.java
+			CompilationUnit element = this.factory.createCompilationUnit();
+			this.binding.put(node, element);
+	
+			if (!this.isINCREMENTALDISCOVERING) {
+				// we check if any of the top-level types of this compilation unit
+				// are already defined in the model
+				for (Iterator<?> iterator = node.types().iterator(); iterator.hasNext();) {
+					if (isTypeAlreadyVisited((org.eclipse.jdt.core.dom.AbstractTypeDeclaration) iterator
+							.next())) {
+						this.isAlreadyVisited = true;
+						return false;
+					}
 				}
 			}
 		}

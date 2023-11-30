@@ -423,11 +423,9 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 
 		// List all compilation unit in the model
 		List<CompilationUnit> compilationUnitList = new ArrayList<CompilationUnit>();
-		// bug 332068: we have to filter all compilation units named "package-info.java"
+		// The Bug 397384 fix ensures we have no compilation units named "package-info.java"
 		for (CompilationUnit cu : getJavaModel().getCompilationUnits()) {
-			if (!cu.getName().equals("package-info.java")) { //$NON-NLS-1$
-				compilationUnitList.add(cu);
-			} // else it is only javadoc or annotations for parent package
+			compilationUnitList.add(cu);
 		}
 
 		// List all Source File in the model
