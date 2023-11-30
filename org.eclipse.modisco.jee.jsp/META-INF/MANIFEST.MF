@@ -6,7 +6,7 @@ Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.eclipse.modisco.jee.jsp,
  org.eclipse.modisco.jee.jsp.impl;x-internal:=true,
  org.eclipse.modisco.jee.jsp.util;x-internal:=true

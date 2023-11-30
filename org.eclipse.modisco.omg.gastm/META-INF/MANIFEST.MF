@@ -6,7 +6,7 @@ Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.eclipse.modisco.omg.gastm,
  org.eclipse.modisco.omg.gastm.impl;x-internal:=true,
  org.eclipse.modisco.omg.gastm.util;x-internal:=true
