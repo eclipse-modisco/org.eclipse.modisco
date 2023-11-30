@@ -142,8 +142,8 @@ public class SimpleBlackBoxDiscovery {
 		final Resource referenceModel = ModelUtils.loadModel(referenceUri);
 		Assert.assertNotNull(referenceModel);
 		unsetFilenames(referenceModel);
-		output.setURI(URI.createURI("test.xml"));
-		output.save(null);
+	//	output.setURI(URI.createURI("test.xml"));
+	//	output.save(null);
 		UMLNormalizer.INSTANCE.normalize(referenceModel);
 		UMLNormalizer.INSTANCE.normalize(output);
 		final boolean result = TestModelUtils.compareModels(referenceModel, output);
