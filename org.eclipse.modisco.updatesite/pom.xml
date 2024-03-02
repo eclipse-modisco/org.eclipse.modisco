@@ -32,8 +32,16 @@
         <directory>.</directory>
         <filtering>true</filtering>
         <includes>
-          <include>downloads.sh</include>
+          <include>justj-promoter.properties</include>
           <include>publisher.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>.</directory>
+        <filtering>false</filtering>
+        <includes>
+          <include>downloads.sh</include>
+          <include>index.html</include>
           <include>publish.sh</include>
           <include>updates.sh</include>
         </includes>
