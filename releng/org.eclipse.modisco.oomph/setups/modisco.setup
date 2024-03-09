@@ -163,11 +163,24 @@
             url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
       </repositoryList>
       <repositoryList
+          name="2024-03">
+        <repository
+            url="https://download.eclipse.org/releases/2024-03"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2024-03"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
           name="2023-12">
         <repository
             url="https://download.eclipse.org/releases/2023-12"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/4.30.0"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2023-12"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
@@ -180,7 +193,7 @@
         <repository
             url="https://download.eclipse.org/releases/2023-09"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/4.29.0"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2023-09"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
@@ -912,6 +925,9 @@
     <stream
         name="master"
         label="Master (Latest)"/>
+    <stream
+        name="1.5.4"
+        label="1.5.4 (2024-03)"/>
     <stream
         name="1.5.3"
         label="1.5.3 (2023-12)"/>
