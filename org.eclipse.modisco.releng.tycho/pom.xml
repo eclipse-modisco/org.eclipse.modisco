@@ -12,7 +12,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.eclipse.modisco</groupId>
   <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
-  <version>1.5.4-SNAPSHOT</version>
+  <version>1.5.5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <licenses>
     <license>
@@ -122,7 +122,7 @@
             <artifact>
               <groupId>org.eclipse.modisco</groupId>
               <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
-              <version>1.5.4-SNAPSHOT</version>
+              <version>1.5.5-SNAPSHOT</version>
               <classifier>${targetPlatform}</classifier>
             </artifact>
           </target>

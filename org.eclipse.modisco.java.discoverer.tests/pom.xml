@@ -21,12 +21,12 @@
   <parent>
     <groupId>org.eclipse.modisco</groupId>
     <artifactId>org.eclipse.modisco.releng.tycho</artifactId>
-    <version>1.5.4-SNAPSHOT</version>
+    <version>1.5.5-SNAPSHOT</version>
     <relativePath>../org.eclipse.modisco.releng.tycho</relativePath>
   </parent>
   <groupId>org.eclipse.modisco</groupId>
   <artifactId>org.eclipse.modisco.java.discoverer.tests</artifactId>
-  <version>1.5.4-SNAPSHOT</version>
+  <version>1.5.5-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
    <build>
       <plugins>

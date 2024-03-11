@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.usecase.modelfilter.feature"
       label="MoDisco Model Filter"
-      version="1.5.4.qualifier"
+      version="1.5.5.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
