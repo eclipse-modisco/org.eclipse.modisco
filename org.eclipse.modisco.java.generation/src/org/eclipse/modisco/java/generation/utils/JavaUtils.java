@@ -100,7 +100,8 @@ public final class JavaUtils {
 	private static org.eclipse.jdt.core.formatter.CodeFormatter getDefaultFormatter() {
 		if (JavaUtils.sourceFormatter == null) {
 			// Take default Eclipse formatting options
-			Map<Object, Object> options = org.eclipse.jdt.core.formatter.DefaultCodeFormatterConstants
+			// (getEclipseDefaultSettings returned Map up until 4.31)
+			Map<String, String> options = (Map<String, String>) org.eclipse.jdt.core.formatter.DefaultCodeFormatterConstants
 					.getEclipseDefaultSettings();
 
 			// Initialize the compiler settings
