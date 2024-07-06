@@ -93,6 +93,7 @@
     <unit id="org.apache.commons.cli" version="0.0.0"/>
     <unit id="org.apache.log4j" version="0.0.0"/>
     <unit id="org.hamcrest" version="0.0.0"/>
+    <unit id="org.apache.commons.jxpath" version="0.0.0"/>
     <!--unit id="org.slf4j.api" version="0.0.0"/-->
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-S"/>
