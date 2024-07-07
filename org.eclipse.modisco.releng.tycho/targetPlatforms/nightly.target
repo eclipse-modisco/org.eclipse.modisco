@@ -43,13 +43,12 @@
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
-    <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R201805140824"/>
+    <repository location="https://download.eclipse.org/modeling/emf/transaction/updates/releases/R202208110935"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.validation.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/validation/updates/interim"/-->
-    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R202008210805"/>
+    <repository location="https://download.eclipse.org/modeling/emf/validation/updates/releases/R202305230712"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <!--unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/-->
