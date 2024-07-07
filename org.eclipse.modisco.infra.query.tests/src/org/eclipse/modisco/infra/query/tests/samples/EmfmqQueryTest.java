@@ -1,5 +1,6 @@
 package org.eclipse.modisco.infra.query.tests.samples;
 
+import java.util.Collections;
 /**
  * Copyright (c) 2009,2019 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
@@ -15,11 +16,6 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.emf.query.conditions.eobjects.structuralfeatures.EObjectAttributeValueCondition;
-import org.eclipse.emf.query.conditions.strings.SubStringValue;
-import org.eclipse.emf.query.statements.FROM;
-import org.eclipse.emf.query.statements.SELECT;
-import org.eclipse.emf.query.statements.WHERE;
 import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
 import org.eclipse.modisco.infra.query.core.java.IJavaModelQuery;
 import org.eclipse.modisco.infra.query.core.java.ParameterValueList;
@@ -30,11 +26,13 @@ public class EmfmqQueryTest implements
 	public Set<? extends EObject> evaluate(final EPackage context,
 			final ParameterValueList parameterValues)
 			throws ModelQueryExecutionException {
-		EPackage ePackage = context;
+/*	Functionality removed in accordance with Bug 583470
+ * 		EPackage ePackage = context;
 		SELECT statement = new SELECT(new FROM(ePackage.getEClassifiers()),
 				new WHERE(new EObjectAttributeValueCondition(
 						EcorePackage.eINSTANCE.getENamedElement_Name(),
 						new SubStringValue("EC")))); //$NON-NLS-1$
-		return statement.execute().getEObjects();
+		return statement.execute().getEObjects(); */
+		return Collections.emptySet();
 	}
 }

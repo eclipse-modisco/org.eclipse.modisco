@@ -20,7 +20,6 @@
     <!--unit id="org.eclipse.net4j.db.derby.feature.group" version="0.0.0"/-->
     <unit id="org.eclipse.net4j.db.derby" version="0.0.0"/>
     <unit id="org.eclipse.net4j.db.derby.source" version="0.0.0"/>
-    <unit id="org.eclipse.emf.query.sdk.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.emf.validation.sdk.feature.group" version="0.0.0"/>
     <!--unit id="org.eclipse.birt.chart.feature.group" version="0.0.0"/-->
