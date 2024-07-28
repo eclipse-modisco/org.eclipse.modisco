@@ -11,6 +11,8 @@
  *******************************************************************************/
 This data set has be created to produce the following error :
 
+?? not sure what the preceding means and we seem to use 1.8 without problem ??
+
 --------------------
 eclipse.buildId=unknown
 java.version=1.6.0_13
