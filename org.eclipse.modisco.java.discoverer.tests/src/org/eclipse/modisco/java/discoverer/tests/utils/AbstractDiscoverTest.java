@@ -109,6 +109,7 @@ public abstract class AbstractDiscoverTest {
 	private void deepCopy(final String path, final IProject project,
 			final String destinationPath) throws CoreException, IOException {
 		// System.out.println("Deep copy: " + path + " -> " + destinationPath);
+		assert !destinationPath.endsWith("/bin/") : "test workspace got compiled";
 		Bundle bundle = Activator.getDefault().getBundle();
 		Enumeration<?> e = bundle.getEntryPaths(path);
 		if (e == null) {
