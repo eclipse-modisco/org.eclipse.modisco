@@ -26,7 +26,7 @@
   </parent>
   <groupId>org.eclipse.modisco</groupId>
   <artifactId>org.eclipse.modisco.jee.jsp.generation.tests</artifactId>
-  <version>1.5.3-SNAPSHOT</version>
+  <version>1.5.5-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
    <build>
       <plugins>
