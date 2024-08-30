@@ -11,7 +11,7 @@
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupWorkingSets.ecore"
     name="modisco"
     label="MoDisco">
   <setupTask
@@ -51,7 +51,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="2022-03"
+      defaultValue="2024-09"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
@@ -114,7 +114,8 @@
       <requirement
           name="org.eclipse.emf.cdo.feature.group"/>
       <requirement
-          name="org.eclipse.emf.query.sdk.feature.group"/>
+          name="org.eclipse.emf.query.sdk.feature.group"
+          optional="true"/>
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
@@ -148,6 +149,8 @@
       <requirement
           name="org.hamcrest"/>
       <requirement
+          name="org.h2"/>
+      <requirement
           name="org.prefuse"/>
       <repositoryList
           name="Latest">
@@ -155,6 +158,32 @@
             url="https://download.eclipse.org/releases/latest"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/latest"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2024-09">
+        <repository
+            url="https://download.eclipse.org/releases/2024-09"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2024-09"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2024-06">
+        <repository
+            url="https://download.eclipse.org/releases/2024-06"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2024-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
@@ -925,6 +954,9 @@
     <stream
         name="master"
         label="Master (Latest)"/>
+    <stream
+        name="1.5.5"
+        label="1.5.5 (2024-09)"/>
     <stream
         name="1.5.4"
         label="1.5.4 (2024-03)"/>
