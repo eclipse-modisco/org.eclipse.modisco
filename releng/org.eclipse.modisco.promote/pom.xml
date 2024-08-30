@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.eclipse.modisco</groupId>
 	<artifactId>org.eclipse.modisco.promote</artifactId>
-	<version>1.5.5-SNAPSHOT</version>
+	<version>1.5.6-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<!-- based on releng/org.eclipse.nebula.site/promotion/pom.xml and https://eclipse.dev/justj/?page=tools --> 
 	<properties>

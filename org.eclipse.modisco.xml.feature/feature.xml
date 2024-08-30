@@ -12,7 +12,7 @@
 <feature
       id="org.eclipse.modisco.xml.feature"
       label="MoDisco Xml Feature"
-      version="1.5.5.qualifier"
+      version="1.5.6.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.modisco.xml"
       license-feature="org.eclipse.license"
