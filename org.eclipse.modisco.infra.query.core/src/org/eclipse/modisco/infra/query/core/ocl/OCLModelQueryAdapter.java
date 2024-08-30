@@ -24,11 +24,11 @@ import org.eclipse.modisco.infra.query.core.exception.ModelQueryException;
 import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
 import org.eclipse.modisco.infra.query.core.internal.Activator;
 import org.eclipse.modisco.infra.query.runtime.ModelQueryParameterValue;
-import org.eclipse.ocl.OCL;
 import org.eclipse.ocl.ParserException;
 import org.eclipse.ocl.Query;
 import org.eclipse.ocl.ecore.Constraint;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
+import org.eclipse.ocl.ecore.OCL;
 import org.eclipse.ocl.expressions.OCLExpression;
 import org.eclipse.ocl.helper.OCLHelper;
 
@@ -39,7 +39,7 @@ import org.eclipse.ocl.helper.OCLHelper;
 public class OCLModelQueryAdapter extends AbstractModelQuery {
 
 	private OCLExpression<EClassifier> query;
-	private OCL<?, EClassifier, ?, ?, ?, ?, ?, ?, ?, Constraint, EClass, EObject> ocl;
+	private OCL ocl;
 	private OCLHelper<EClassifier, ?, ?, Constraint> helper;
 	private String queryString;
 
