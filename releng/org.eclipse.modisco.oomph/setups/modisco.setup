@@ -51,7 +51,7 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="2024-09"
+      defaultValue="2024-12"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
@@ -157,7 +157,20 @@
         <repository
             url="https://download.eclipse.org/releases/latest"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/latest"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2024-12">
+        <repository
+            url="https://download.eclipse.org/releases/2024-12"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2024-12"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
@@ -521,17 +534,17 @@
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="modisco.git.clone"
-      remoteURI="modisco/org.eclipse.modisco">
+      id="modisco.github.clone"
+      remoteURI="eclipse-modisco/org.eclipse.modisco">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
           key="inherit">
-        <value>eclipse.git.gerrit.remoteURIs</value>
+        <value>github.remoteURIs</value>
       </detail>
       <detail
           key="label">
-        <value>MoDisco Git or Gerrit Repository</value>
+        <value>MoDisco GitHub Repository</value>
       </detail>
       <detail
           key="target">
@@ -550,7 +563,7 @@
     <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
-          rootFolder="${modisco.git.clone.location}"
+          rootFolder="${modisco.github.clone.location}"
           locateNestedProjects="true">
         <predicate
             xsi:type="predicates:NamePredicate"
