@@ -16,8 +16,8 @@
     label="MoDisco">
   <setupTask
       xsi:type="jdt:JRETask"
-      version="JavaSE-17"
-      location="${jre.location-17}"/>
+      version="JavaSE-21"
+      location="${jre.location-21}"/>
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Xmx"
@@ -90,6 +90,8 @@
       <requirement
           name="org.apache.commons.cli"/>
       <requirement
+          name="org.apache.commons.jxpath"/>
+      <requirement
           name="org.apache.log4j"/>
       <requirement
           name="org.apache.lucene"
@@ -158,6 +160,19 @@
             url="https://download.eclipse.org/releases/latest"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+        <repository
+            url="https://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+        <repository
+            url="https://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
+          name="2025-03">
+        <repository
+            url="https://download.eclipse.org/releases/2025-03"/>
+        <repository
+            url="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2025-03"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
         <repository
