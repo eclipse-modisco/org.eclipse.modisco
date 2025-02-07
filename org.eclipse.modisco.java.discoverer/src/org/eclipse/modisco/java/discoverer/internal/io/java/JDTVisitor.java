@@ -1566,7 +1566,7 @@ public class JDTVisitor extends ASTVisitor {
 				deepRemove(typeAccess);
 			}
 		}
-		for (Iterator<?> i = node.thrownExceptions().iterator(); i.hasNext();) {
+		for (Iterator<?> i = node.thrownExceptionTypes().iterator(); i.hasNext();) {
 			ASTNode itElement = this.binding.get(i.next());
 			if (itElement != null) {
 				element.getThrownExceptions().add(
