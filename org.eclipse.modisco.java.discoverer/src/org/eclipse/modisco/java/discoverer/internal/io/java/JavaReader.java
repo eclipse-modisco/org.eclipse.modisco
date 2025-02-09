@@ -337,7 +337,9 @@ public class JavaReader implements IModelReader {
 	protected static CompilationUnit parseCompilationUnit(final ITypeRoot source) {
 		// Code parsing : here is indicated the version of JDK (~JLS) to
 		// consider, see Class comments
-		ASTParser parser = ASTParser.newParser(AST.JLS3);
+		// See ocl#1081. JLS3 stops working for Eclipse 2025-03M3 as JDT pulls up the drawbridge on Java < 8.
+		// Pending ocl#1082, JLS21 would be totally dishonest and doesn't work. JLS8 is a viable compromise.
+		ASTParser parser = ASTParser.newParser(AST.JLS8);
 		parser.setResolveBindings(true);
 		parser.setSource(source);
 		CompilationUnit parsedCompilationUnit = (CompilationUnit) parser.createAST(null);
