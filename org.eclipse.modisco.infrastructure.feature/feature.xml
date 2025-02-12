@@ -162,6 +162,10 @@ http://www.eclipse.org/legal/epl-v20.html
          version="0.0.0"/>
 
    <plugin
+         id="org.apache.commons.collections"
+         version="0.0.0"/>
+
+   <plugin
          id="org.apache.commons.commons-beanutils"
          version="0.0.0"/>
 
