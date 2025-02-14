@@ -65,7 +65,6 @@
     <module>org.eclipse.modisco.infra.query.core</module>
     <module>org.eclipse.modisco.infra.query.edit</module>
     <module>org.eclipse.modisco.infra.query.editor</module>
-    <module>org.eclipse.modisco.infra.query.jxpath</module>
     <module>org.eclipse.modisco.infra.query.ui</module>
     <module>org.eclipse.modisco.java</module>
     <module>org.eclipse.modisco.java.browser.customization</module>
