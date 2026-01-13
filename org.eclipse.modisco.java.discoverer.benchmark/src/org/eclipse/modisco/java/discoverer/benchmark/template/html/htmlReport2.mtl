@@ -1,214 +1,198 @@
-[comment
-Copyright (c) 2011 Mia-Software and others.
-All rights reserved. This program and the accompanying materials
-are made available under the terms of the Eclipse Public License v2.0
-which accompanies this distribution, and is available at
-http://www.eclipse.org/legal/epl-v20.html
-
-Contributors:
-     Gregoire DUPE (Mia-Software) - initial API and implementation
-     Nicolas Bros (Mia-Software) - Bug 343155 - Java discoverer time benchmark
-/]
-
 [module htmlReport2('http://www.eclipse.org/MoDisco/JavaBenchmark/0.9.0/javaBenchmark', 'http://www.eclipse.org/MoDisco/Benchmark/0.9.0/benchmark')/]
 
-[query public maxExecutionTime (discoveries : Set(Discovery)) : Real = invoke('org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportServices', 'maxExecutionTime(java.util.Collection)', Sequence{discoveries})/]
-[query public maxSaveTime (discoveries : Set(Discovery)) : Real = invoke('org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportServices', 'maxSaveTime(java.util.Collection)', Sequence{discoveries})/]
-[query public lfToBr (str : String) : String = invoke('org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportServices', 'lfToBr(java.lang.String)', Sequence{str})/]
-[query public sizeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportServices', 'sizeWithUnit(java.lang.Double)', Sequence{value})/]
-[query public timeWithUnit (value : Real) : String = invoke('org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportServices', 'timeWithUnit(java.lang.Double)', Sequence{value})/]
+[import org::eclipse::modisco::java::discoverer::benchmark::template::html::HtmlReportServices/]
 
-[template public htmlReport(b : AveragedMultiDiscoveryBenchmark, targetFileName : String)]
-
-[comment @main /]
-[file (targetFileName, false)]
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-
-<style type="text/css">
-  .graph {
-    background-color: #E0E0E0;
-    border: solid 1px black;
-  }
-  .graph td {
-    font-family: verdana, arial, sans serif;
-  }
-  .bar {
-    background-color: white;
-    text-align: right;
-    border: solid 1px black;
-    width: 400px;
-  }
-  .bar div { 
-    background-color: #A0A0FF;
-    text-align: right;
-    float: left;
-    height: 20px;
-  }
-  body {
-    background-color: white;
-  }
-  td {
-    text-align: center;
-  }
-</style>
-
-<title>MoDisco Java Discover Benchmark</title>
-</head>
-
-<body>
-
-<h2>Execution time by project size</h2>
-
-<img src="executionTimeByProjectSize.png"/>
-
-<h2>System Information</h2>
-  <table border="1" cellpadding="2" cellspacing="0">
-    <tr>
-       <th>OS name</th>
-       <td>[b.osName/]</td>
-    </tr>
-       
-    <tr>
-       <th>OS version</th>
-       <td>[b.osVersion/]</td>
-    </tr>
-       
-    <tr>
-       <th>OS architecture</th>
-       <td>[b.osArchitecture/]</td>
-    </tr>
-       
-    <tr>
-       <th>Number of processor cores</th>
-       <td>[b.processorCount/]</td>
-    </tr>
-
-    <tr>
-       <th>Processor name</th>
-       <td>[b.processorName/]</td>
-    </tr>
-
-    <tr>
-       <th>Processor description</th>
-       <td>[b.processorDescription/]</td>
-    </tr>
-
-    <tr>
-       <th>Processor cache size</th>
-       <td>[b.processorCacheSize/]</td>
-    </tr>
-
-    <tr>
-       <th>System memory</th>
-       <td>[b.systemMemory/]</td>
-    </tr>
-  </table>
-
-<h2>Results Overview</h2>
-
-  <table border="1" cellpadding="2" cellspacing="0">
-    <tr>
-       <th>Project</th>
-       <th>Average discovery time</th>
-       <th>Average save time</th>
-       <th>Number of model elements</th>
-       <th>Total size</th>
-       <th>Average file size</th>
-       <th>Total lines</th>
-       <th>Average lines per file</th>
-       <th>XMI size</th>
-     </tr>
-     [for (averagedDiscovery : AveragedProjectDiscovery | b.discoveries) ]
-       [let projectDiscovery : ProjectDiscovery = averagedDiscovery.occurrences->first()]
-         <tr>
-            <td>[projectDiscovery.name/]</td>
-            <td>[timeWithUnit(0.0 + averagedDiscovery.averageExecutionTimeInSeconds)/] (&sigma; = [averagedDiscovery.executionTimeStandardDeviation/]s)</td>
-            <td>[timeWithUnit(0.0 + averagedDiscovery.averageSaveTimeInSeconds)/] (&sigma; = [averagedDiscovery.saveTimeStandardDeviation/]s)</td>
-            <td>[projectDiscovery.numberOfModelElements/]</td>
-            <td>[sizeWithUnit(0.0 + projectDiscovery.projects->first().totalSizeInBytes)/]</td>
-            <td>[sizeWithUnit(0.0 + projectDiscovery.projects->first().averageFileSizeInBytes)/]</td>
-            <td>[projectDiscovery.projects->first().totalLines/]</td>
-            <td>[projectDiscovery.projects->first().averageLinesPerFile/]</td>
-            <td>[sizeWithUnit(0.0 + projectDiscovery.xmiSizeInBytes)/]</td>
+[comment @main/]
+[template public htmlReport(b : benchmark::AveragedMultiDiscoveryBenchmark, targetFileName : String)]
+  
+  [file (targetFileName, overwrite)]
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html>
+    <head>
+    
+    <style type="text/css">
+      .graph {
+        background-color: #E0E0E0;
+        border: solid 1px black;
+      }
+      .graph td {
+        font-family: verdana, arial, sans serif;
+      }
+      .bar {
+        background-color: white;
+        text-align: right;
+        border: solid 1px black;
+        width: 400px;
+      }
+      .bar div { 
+        background-color: #A0A0FF;
+        text-align: right;
+        float: left;
+        height: 20px;
+      }
+      body {
+        background-color: white;
+      }
+      td {
+        text-align: center;
+      }
+    </style>
+    
+    <title>MoDisco Java Discover Benchmark</title>
+    </head>
+    
+    <body>
+    
+    <h2>Execution time by project size</h2>
+    
+    <img src="executionTimeByProjectSize.png"/>
+    
+    <h2>System Information</h2>
+      <table border="1" cellpadding="2" cellspacing="0">
+        <tr>
+           <th>OS name</th>
+           <td>[b.osName/]</td>
+        </tr>
+           
+        <tr>
+           <th>OS version</th>
+           <td>[b.osVersion/]</td>
+        </tr>
+           
+        <tr>
+           <th>OS architecture</th>
+           <td>[b.osArchitecture/]</td>
+        </tr>
+           
+        <tr>
+           <th>Number of processor cores</th>
+           <td>[b.processorCount/]</td>
+        </tr>
+    
+        <tr>
+           <th>Processor name</th>
+           <td>[b.processorName/]</td>
+        </tr>
+    
+        <tr>
+           <th>Processor description</th>
+           <td>[b.processorDescription/]</td>
+        </tr>
+    
+        <tr>
+           <th>Processor cache size</th>
+           <td>[b.processorCacheSize/]</td>
+        </tr>
+    
+        <tr>
+           <th>System memory</th>
+           <td>[b.systemMemory/]</td>
+        </tr>
+      </table>
+    
+    <h2>Results Overview</h2>
+    
+      <table border="1" cellpadding="2" cellspacing="0">
+        <tr>
+           <th>Project</th>
+           <th>Average discovery time</th>
+           <th>Average save time</th>
+           <th>Number of model elements</th>
+           <th>Total size</th>
+           <th>Average file size</th>
+           <th>Total lines</th>
+           <th>Average lines per file</th>
+           <th>XMI size</th>
          </tr>
-       [/let]
-     [/for]
-  </table>
-
-[if (b.discoveries->first().occurrences->size() > 1)]
-<h2>Execution times per iteration</h2>
-
-[for (averagedDiscovery : AveragedProjectDiscovery | b.discoveries) ]
-<h3>[averagedDiscovery.occurrences->first().name/]</h3>
-[let maxExecutionTime : Real = maxExecutionTime(averagedDiscovery.occurrences)]
-
-<table width="600" class="graph" cellspacing="6" cellpadding="0">
-  <tr>
-    <th>iteration</th><th>relative execution time</th><th>time</th>
-  </tr>
-
-[for (projectDiscovery : ProjectDiscovery | averagedDiscovery.occurrences)]
-    <tr>
-      <td>[i/]/[averagedDiscovery.occurrences->size()/]</td><td class="bar"><div style="width: [projectDiscovery.totalExecutionTimeInSeconds / maxExecutionTime * 100.0/]%"></div></td><td>[timeWithUnit(0.0 + projectDiscovery.totalExecutionTimeInSeconds)/]</td>
-    </tr>
-[/for]
-</table>
-
-[/let]
-[/for]
-[/if]
-
-[if (b.discoveries->first().occurrences->size() > 1)]
-<h2>Save times per iteration</h2>
-
-[for (averagedDiscovery : AveragedProjectDiscovery | b.discoveries) ]
-<h3>[averagedDiscovery.occurrences->first().name/]</h3>
-[let maxSaveTime : Real = maxSaveTime(averagedDiscovery.occurrences)]
-
-<table width="600" class="graph" cellspacing="6" cellpadding="0">
-  <tr>
-    <th>iteration</th><th>relative save time</th><th>time(s)</th>
-  </tr>
-
-[for (projectDiscovery : ProjectDiscovery | averagedDiscovery.occurrences)]
-    <tr>
-      <td>[i/]/[averagedDiscovery.occurrences->size()/]</td><td class="bar"><div style="width: [projectDiscovery.saveTimeInSeconds / maxSaveTime * 100.0/]%"></div></td><td>[timeWithUnit(0.0 + projectDiscovery.saveTimeInSeconds)/]</td>
-    </tr>
-[/for]
-</table>
-
-[/let]
-[/for]
-[/if]
-
-<h2>Detailed Results</h2>
-[for (averagedDiscovery : AveragedProjectDiscovery | b.discoveries) ]
-<h3>[averagedDiscovery.occurrences->first().name/]</h3>
-[for (projectDiscovery : ProjectDiscovery | averagedDiscovery.occurrences) separator ('<hr/>')]
-<h4>iteration [i/]</h4>
-<b>name</b>: [projectDiscovery.name/]<br/>
-<b>date</b>: [projectDiscovery.dicoveryDate/]<br/>
-<b>algorithm</b>: [projectDiscovery.algorithmVariant/]<br/>
-<b>discoverer</b>: [projectDiscovery.discovererId/] ([projectDiscovery.discovererClassName/])<br/>
-<b>save time</b>: [timeWithUnit(0.0 + projectDiscovery.saveTimeInSeconds)/]<br/>
-<b>execution time</b>: [timeWithUnit(0.0 + projectDiscovery.totalExecutionTimeInSeconds)/]<br/>
-<b>metamodel variant</b>: [projectDiscovery.metaModelVariant/]<br/>
-<b>max used memory</b>: [sizeWithUnit(0.0 + projectDiscovery.maxUsedMemoryInBytes)/]<br/>
-<b>number of model elements</b>: [projectDiscovery.numberOfModelElements/]<br/>
-<b>XMI file size</b>: [sizeWithUnit(0.0 + projectDiscovery.xmiSizeInBytes)/]<br/>
-[if (not projectDiscovery.discoveryError.oclIsUndefined())]
-<b>Discovery error</b>:<br/>
-<font color="red">[lfToBr(projectDiscovery.discoveryError)/]</font>
-[/if]
-[/for]
-[/for]
-
-<p/>
-<hr/>
-<font size="-1"><i>This report has been generated with <a href="http://www.eclipse.org/MoDisco/">MoDisco</a> Java Discoverer Benchmark.</i></font>
-</body></html>
-[/file]
+    [for (averagedDiscovery : benchmark::AveragedProjectDiscovery | b.discoveries)]
+      [let projectDiscovery : benchmark::ProjectDiscovery = averagedDiscovery.occurrences->first()]
+                 <tr>
+                    <td>[projectDiscovery.name/]</td>
+                    <td>[(0.0 + averagedDiscovery.averageExecutionTimeInSeconds).timeWithUnit()/] (&sigma; = [averagedDiscovery.executionTimeStandardDeviation/]s)</td>
+                    <td>[(0.0 + averagedDiscovery.averageSaveTimeInSeconds).timeWithUnit()/] (&sigma; = [averagedDiscovery.saveTimeStandardDeviation/]s)</td>
+                    <td>[projectDiscovery.numberOfModelElements/]</td>
+                    <td>[(0.0 + projectDiscovery.projects->first().totalSizeInBytes.toDouble()).sizeWithUnit()/]</td>
+                    <td>[(0.0 + projectDiscovery.projects->first().averageFileSizeInBytes.toDouble()).sizeWithUnit()/]</td>
+                    <td>[projectDiscovery.projects->first().totalLines/]</td>
+                    <td>[projectDiscovery.projects->first().averageLinesPerFile/]</td>
+                    <td>[(0.0 + projectDiscovery.xmiSizeInBytes.toDouble()).sizeWithUnit()/]</td>
+                 </tr>
+      [/let]
+    [/for]
+      </table>
+    
+    [if (b.discoveries->first().occurrences->size() > 1)]
+      <h2>Execution times per iteration</h2>
+      
+      [for (averagedDiscovery : benchmark::AveragedProjectDiscovery | b.discoveries)]
+        <h3>[averagedDiscovery.occurrences->first().name/]</h3>
+        [let maxExecutionTime : Real = averagedDiscovery.occurrences->maxExecutionTime()]
+          
+          <table width="600" class="graph" cellspacing="6" cellpadding="0">
+            <tr>
+              <th>iteration</th><th>relative execution time</th><th>time</th>
+            </tr>
+          
+          [for (projectDiscovery : benchmark::ProjectDiscovery | averagedDiscovery.occurrences)]
+                <tr>
+                  <td>[projectDiscoveryIndex/]/[averagedDiscovery.occurrences->size()/]</td><td class="bar"><div style="width: [projectDiscovery.totalExecutionTimeInSeconds / maxExecutionTime * 100.0/]%"></div></td><td>[(0.0 + projectDiscovery.totalExecutionTimeInSeconds).timeWithUnit()/]</td>
+                </tr>
+          [/for]
+          </table>
+          
+        [/let]
+      [/for]
+    [/if]
+    
+    [if (b.discoveries->first().occurrences->size() > 1)]
+      <h2>Save times per iteration</h2>
+      
+      [for (averagedDiscovery : benchmark::AveragedProjectDiscovery | b.discoveries)]
+        <h3>[averagedDiscovery.occurrences->first().name/]</h3>
+        [let maxSaveTime : Real = averagedDiscovery.occurrences->maxSaveTime()]
+          
+          <table width="600" class="graph" cellspacing="6" cellpadding="0">
+            <tr>
+              <th>iteration</th><th>relative save time</th><th>time(s)</th>
+            </tr>
+          
+          [for (projectDiscovery : benchmark::ProjectDiscovery | averagedDiscovery.occurrences)]
+                <tr>
+                  <td>[projectDiscoveryIndex/]/[averagedDiscovery.occurrences->size()/]</td><td class="bar"><div style="width: [projectDiscovery.saveTimeInSeconds / maxSaveTime * 100.0/]%"></div></td><td>[(0.0 + projectDiscovery.saveTimeInSeconds).timeWithUnit()/]</td>
+                </tr>
+          [/for]
+          </table>
+          
+        [/let]
+      [/for]
+    [/if]
+    
+    <h2>Detailed Results</h2>
+    [for (averagedDiscovery : benchmark::AveragedProjectDiscovery | b.discoveries)]
+      <h3>[averagedDiscovery.occurrences->first().name/]</h3>
+      [for (projectDiscovery : benchmark::ProjectDiscovery | averagedDiscovery.occurrences) separator('<hr/>')]
+        <h4>iteration [averagedDiscoveryIndex/]</h4>
+        <b>name</b>: [projectDiscovery.name/]<br/>
+        <b>date</b>: [projectDiscovery.dicoveryDate/]<br/>
+        <b>algorithm</b>: [projectDiscovery.algorithmVariant/]<br/>
+        <b>discoverer</b>: [projectDiscovery.discovererId/] ([projectDiscovery.discovererClassName/])<br/>
+        <b>save time</b>: [(0.0 + projectDiscovery.saveTimeInSeconds.toDouble()).timeWithUnit()/]<br/>
+        <b>execution time</b>: [(0.0 + projectDiscovery.totalExecutionTimeInSeconds).timeWithUnit()/]<br/>
+        <b>metamodel variant</b>: [projectDiscovery.metaModelVariant/]<br/>
+        <b>max used memory</b>: [(0.0 + projectDiscovery.maxUsedMemoryInBytes.toDouble()).sizeWithUnit()/]<br/>
+        <b>number of model elements</b>: [projectDiscovery.numberOfModelElements/]<br/>
+        <b>XMI file size</b>: [(0.0 + projectDiscovery.xmiSizeInBytes.toDouble()).sizeWithUnit()/]<br/>
+        [if (not (projectDiscovery.discoveryError = null))]
+          <b>Discovery error</b>:<br/>
+          <font color="red">[projectDiscovery.discoveryError.lfToBr()/]</font>
+        [/if]
+      [/for]
+    [/for]
+    
+    <p/>
+    <hr/>
+    <font size="-1"><i>This report has been generated with <a href="http://www.eclipse.org/MoDisco/">MoDisco</a> Java Discoverer Benchmark.</i></font>
+    </body></html>
+  [/file]
 [/template]

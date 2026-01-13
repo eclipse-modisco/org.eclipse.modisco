@@ -1,3 +1,5 @@
+[module GenerateJsp('http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp', 'http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML')/]
+
 [comment 
  Copyright (c) 2010 Mia-Software and others.
  All rights reserved. This program and the accompanying materials
@@ -7,129 +9,111 @@
 
  Contributors:
     Nicolas Guyomar (Mia-Software) - initial API and implementation/]
-    
 [comment encoding = UTF-8 /]
-[module GenerateJsp('http://www.eclipse.org/MoDisco/JSP/0.1.incubation/jsp'
-,'http://www.eclipse.org/MoDisco/Xml/0.1.incubation/XML')/]
-
-  
 [comment  This method generates one file per Page in the Model/]
-[template public write(p : Page)]
-[comment @main /] 
-[file (p.name, false)]	
-[if (not p.xmlDeclaration.oclIsUndefined())]
-[if (p.xmlDeclaration.size()>0)]
- [p.xmlDeclaration/]
-[/if] 
-[/if]
-[if (not p.doctype.oclIsUndefined())]
-[if (p.doctype.size()>0)]
- [p.doctype/]
-[/if]
-[/if]
-[for (i : Node | p.ownedElements)]
-[i.write()/]
-[/for]
-[/file]
-[/template] 
-
-
-[template public write(o : Attribute)]
-[o.name/]="[o.value/]"
+[comment @main/]
+[template public write(p : jsp::Page)]
+  [file (p.name, overwrite)]
+    [if (not (p.xmlDeclaration = null))]
+      [if (p.xmlDeclaration.size() > 0)]
+         [p.xmlDeclaration/]
+      [/if]
+    [/if]
+    [if (not (p.doctype = null))]
+      [if (p.doctype.size() > 0)]
+         [p.doctype/]
+      [/if]
+    [/if]
+    [for (i : xml::Node | p.ownedElements)]
+      [i.write()/]
+    [/for]
+  [/file]
 [/template]
+
+[template public write(o : xml::Attribute)]
+  [o.name/]="[o.value/]"[/template]
 
 [comment Directly from the model /]
-[template public write(o : Comment)]
-[o.name/]
-[/template]
+[template public write(o : xml::Comment)]
+  [o.name/][/template]
 
-[template public write(o : ComposedAttribute)]
-[o.name/]="[for (n : Node | o.children)][n.write()/][/for]"
-[/template]
- 
-[template public write(o : Element)]
-[if (o.children->size()- ( o.children->select(n | n.oclIsKindOf(xml::Attribute)))->size() -( o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute)))->size()>0)]
-<[o.name/][for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment=true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment=true)][n.write()/][/if][/if][/for]>
-	[for (c : Node | o.children)]
-	[if (c.oclIsKindOf(jsp::JSPScript))][if (c.oclAsType(jsp::JSPScript).isTagFragment=false)]	
-	[c.write()/]
-	[/if]
-	[elseif c.oclIsKindOf(jsp::JSPAction)][if (c.oclAsType(jsp::JSPAction).isTagFragment=false)]	
-	[c.write()/]
-	[/if]
-	[elseif (not c.oclIsKindOf(ComposedAttribute) and not c.oclIsTypeOf(Attribute))]	
-	[c.write()/]
-	[/if]	
-	[/for]</[o.name/]>
-[else]
-	<[o.name/][for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment=true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment=true)][n.write()/][/if][/if][/for] />[/if]	
-[/template]
+[template public write(o : jsp::ComposedAttribute)]
+  [o.name/]="[for (n : xml::Node | o.children)][n.write()/][/for]"[/template]
 
-[template public write(o : JavaScript)]
-<script [o.name/] >
-[for (n : Node | o.children)]
-[if (not n.oclIsKindOf(ComposedAttribute) and not n.oclIsTypeOf(Attribute))]
-	[n.write()/]
-[/if]
-[/for]
-</script> 
-[/template]
+[template public write(o : xml::Element)]
+  [if (o.children->size() - o.children->select(n | n.oclIsKindOf(xml::Attribute))->size() - o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute))->size() > 0)]
+    <[o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment = true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment = true)][n.write()/][/if][/if][/for]>
+    [for (c : xml::Node | o.children)]
+      [if (c.oclIsKindOf(jsp::JSPScript))]
+        [if (c.oclAsType(jsp::JSPScript).isTagFragment = false)]
+          	[c.write()/]
+        [/if]
+      [elseif (c.oclIsKindOf(jsp::JSPAction))]
+        [if (c.oclAsType(jsp::JSPAction).isTagFragment = false)]
+          	[c.write()/]
+        [/if]
+      [elseif (not c.oclIsKindOf(jsp::ComposedAttribute) and not c.oclIsTypeOf(xml::Attribute))]
+        	[c.write()/]
+      [/if]
+    [/for]
+    </[o.name/]>
+  [else]	<[o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment = true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment = true)][n.write()/][/if][/if][/for] />[/if][/template]
 
-[template public write(o : JSPAction)]
-[if (o.children->size()- ( o.children->select(n | n.oclIsKindOf(xml::Attribute)))->size() -( o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute)))->size()>0)]
-<[o.name/] [for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][/for]>
-[for (n : Node | o.children)]
-[if (not n.oclIsKindOf(ComposedAttribute) and not n.oclIsTypeOf(Attribute))][n.write()/][/if][/for]</[o.name/]>	
-[else]
-<[o.name/] [for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][/for] />[/if]
-[/template]
+[template public write(o : jsp::JavaScript)]
+  <script [o.name/] >
+  [for (n : xml::Node | o.children)]
+    [if (not n.oclIsKindOf(jsp::ComposedAttribute) and not n.oclIsTypeOf(xml::Attribute))]
+      	[n.write()/]
+    [/if]
+  [/for]
+  </script> [/template]
+
+[template public write(o : jsp::JSPAction)]
+  [if (o.children->size() - o.children->select(n | n.oclIsKindOf(xml::Attribute))->size() - o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute))->size() > 0)]
+    <[o.name/] [for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][/for]>
+    [for (n : xml::Node | o.children)][if (not n.oclIsKindOf(jsp::ComposedAttribute) and not n.oclIsTypeOf(xml::Attribute))][n.write()/][/if][/for]</[o.name/]>	
+  [else]<[o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][/for] />[/if][/template]
 
 [comment Directly from the model /]
-[template public write(o : JSPComment)]
-[o.name/]
+[template public write(o : jsp::JSPComment)]
+  [o.name/][/template]
+
+[template public write(o : jsp::JSPDeclaration)]
+  <%! [for (n : xml::Node | o.children)] [n.write()/][/for] %>[/template]
+
+[template public write(o : jsp::JSPDirective)]
+  <%@ [o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][/for]%>[/template]
+
+[template public write(o : jsp::JSPExpression)]
+  <%= [o.name/] %>[/template]
+
+[comment defined on subtypes/]
+[template public write(o : jsp::JSPScript)]
 [/template]
 
-[template public write(o : JSPDeclaration)]
-<%! [for (n : Node | o.children)] [n.write()/][/for] %>
+[template public write(o : jsp::JSPScriptlet)]
+  <% [o.name/] %>[/template]
+
+[template public write(o : jsp::JSPStdAction)]
+  [if (o.children->size() - o.children->select(n | n.oclIsKindOf(xml::Attribute))->size() - o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute))->size() > 0)]
+    <[o.name/] [for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))][n.write()/][/if][/for]>
+    [for (s : xml::Node | o.children)]
+      [if (not s.oclIsKindOf(jsp::ComposedAttribute) and not s.oclIsTypeOf(xml::Attribute))]
+        	[s.write()/]
+      [/if]
+    [/for]
+    </[o.name/]>
+  [else]
+    <[o.name/] [for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))][n.write()/][/if][/for] />
+  [/if]
 [/template]
 
-[template public write(o : JSPDirective)]
-<%@ [o.name/][for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][/for]%>
+[template public write(o : jsp::JSPTagLib)]
+  <%@ taglib  [for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][/for]%>[/template]
+
+[comment defined on subtypes/]
+[template public write(n : xml::Node)]
 [/template]
 
-[template public write(o : JSPExpression)]
-<%= [o.name/] %>
-[/template]
-
-[comment defined on subtypes/] 
-[template public write(o : JSPScript)]
-[/template]
-
-[template public write(o : JSPScriptlet)]
-<% [o.name/] %>
-[/template]
-
-[template public write(o : JSPStdAction)]
-[if (o.children->size()- ( o.children->select(n | n.oclIsKindOf(xml::Attribute)))->size() -( o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute)))->size()>0)]
-<[o.name/] [for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))][n.write()/][/if][/for]>
-[for (s : Node | o.children)]
-	[if (not s.oclIsKindOf(ComposedAttribute) and not s.oclIsTypeOf(Attribute))]
-	[s.write()/]
-	[/if] 
-[/for]
-</[o.name/]>
-[else]
-<[o.name/] [for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))][n.write()/][/if][/for] />
-[/if]
-[/template]
-
-[template public write(o : JSPTagLib)]
-<%@ taglib  [for (n : Node | o.children)][if (n.oclIsKindOf(ComposedAttribute) or n.oclIsKindOf(Attribute))] [n.write()/][/if][/for]%>
-[/template]
-
-[comment defined on subtypes/] 
-[template public write(n : Node)][/template]
-
-[template public write(t : Text)]
-[if ((not t.name.equalsIgnoreCase('\n')) and (not t.name.equalsIgnoreCase(' ')) and (not t.name.equalsIgnoreCase('\t')) and (not t.name.equalsIgnoreCase('\r')))][t.name/][/if]
-[/template]
+[template public write(t : xml::Text)]
+  [if (not t.name.equalsIgnoreCase('\n') and not t.name.equalsIgnoreCase(' ') and not t.name.equalsIgnoreCase('\t') and not t.name.equalsIgnoreCase('\r'))][t.name/][/if][/template]

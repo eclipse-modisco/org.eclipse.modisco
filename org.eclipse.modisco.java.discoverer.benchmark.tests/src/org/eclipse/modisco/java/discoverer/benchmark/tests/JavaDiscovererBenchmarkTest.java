@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010, 2019 Mia-Software and others.
+ * Copyright (c) 2010, 2026 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.acceleo.engine.AcceleoEnginePlugin;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -32,6 +31,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.Report;
 import org.eclipse.modisco.java.discoverer.benchmark.RunBenchmark;
 import org.junit.After;
@@ -39,6 +39,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
 
 public class JavaDiscovererBenchmarkTest {
 	private static final String PROJECT_NAME = "benchmark_discovery"; //$NON-NLS-1$
@@ -56,7 +57,7 @@ public class JavaDiscovererBenchmarkTest {
 
 			}
 		};
-		AcceleoEnginePlugin.getDefault().getLog().addLogListener(this.listener);
+		Activator.getDefault().getLog().addLogListener(this.listener);
 	}
 
 	@Ignore // FIXME Bug 552989
@@ -85,7 +86,7 @@ public class JavaDiscovererBenchmarkTest {
 
 	@After
 	public void after() throws CoreException {
-		org.eclipse.acceleo.engine.AcceleoEnginePlugin.getDefault().getLog().removeLogListener(this.listener);
+		Activator.getDefault().getLog().removeLogListener(this.listener);
 		if (this.loggedErrorWarningStatus.size() > 0) {
 			IStatus multiStatus = new MultiStatus(Activator.PLUGIN_ID,
 					IStatus.ERROR,

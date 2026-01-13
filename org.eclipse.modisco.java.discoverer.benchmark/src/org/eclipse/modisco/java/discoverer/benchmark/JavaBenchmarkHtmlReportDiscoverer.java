@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011, 2019 Mia-Software and others.
+ * Copyright (c) 2011, 2026 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -11,7 +11,6 @@
 package org.eclipse.modisco.java.discoverer.benchmark;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
 
 import org.eclipse.core.resources.IContainer;
@@ -20,6 +19,9 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.emf.common.util.BasicMonitor;
+import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -28,7 +30,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkConstants;
 import org.eclipse.modisco.infra.discovery.core.AbstractDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
-import org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReport2;
+import org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReport2GeneratorEclipse;
 
 public class JavaBenchmarkHtmlReportDiscoverer extends AbstractDiscoverer<IFile> {
 
@@ -48,9 +50,9 @@ public class JavaBenchmarkHtmlReportDiscoverer extends AbstractDiscoverer<IFile>
 	public static IFile generateBenchmarkReport(final Benchmark benchmark,
 			final IContainer location, final IProgressMonitor monitor) throws IOException, CoreException {
 
-		ArrayList<Object> arguments = new ArrayList<Object>();
-		arguments.add(JavaBenchmarkHtmlReportDiscoverer.TARGET_FILENAME);
-		new HtmlReport2(benchmark, location.getLocation().toFile(), arguments).doGenerate(null);
+		SubMonitor subMonitor = SubMonitor.convert(monitor, 1);
+		Monitor childMonitor = BasicMonitor.toMonitor(subMonitor.split(1));
+		new HtmlReport2GeneratorEclipse(benchmark, location.getLocation().toFile().getAbsolutePath(), JavaBenchmarkHtmlReportDiscoverer.TARGET_FILENAME).generate(childMonitor);
 		// refresh needed because Acceleo generates without using the
 		// workspace IResource API
 		location.refreshLocal(IResource.DEPTH_INFINITE, monitor);
