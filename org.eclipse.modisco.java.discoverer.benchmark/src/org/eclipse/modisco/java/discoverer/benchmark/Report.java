@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009, 2019 Mia-Software and others.
+ * Copyright (c) 2009, 2026 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -61,6 +61,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -75,7 +76,7 @@ import org.eclipse.modisco.java.discoverer.benchmark.emfstat.Statistics;
 import org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.CDODiscovery;
 import org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.JavaBenchmarkFactory;
 import org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.JavaDiscoveredProject;
-import org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReport;
+import org.eclipse.modisco.java.discoverer.benchmark.template.html.HtmlReportGeneratorEclipse;
 import org.eclipse.modisco.java.discoverer.cdo.JavaDiscovererCDO;
 import org.eclipse.swt.graphics.Point;
 
@@ -318,11 +319,9 @@ public class Report {
 
 	/**
 	 * @param benchmark
-	 * @throws IOException
 	 */
-	private static void generateHTML(final Benchmark benchmark, final File targetDirectory)
-			throws IOException {
-		new HtmlReport(benchmark, targetDirectory, new ArrayList<Object>()).doGenerate(null);
+	private static void generateHTML(final Benchmark benchmark, final File targetDirectory) {
+		new HtmlReportGeneratorEclipse(benchmark, targetDirectory.getAbsolutePath()).generate(new BasicMonitor());
 	}
 
 	private void createYAxis(final Axis yAxis, final String columnName,

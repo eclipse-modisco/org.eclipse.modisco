@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2009, 2019 Mia-Software and others.
+ * Copyright (c) 2009, 2026 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
@@ -10,16 +10,17 @@
  *******************************************************************************/
 package org.eclipse.modisco.java.generation.tests.utils;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
+import java.util.List;
 
-import org.junit.Assert;
-import junit.framework.TestCase;
-
+import org.eclipse.acceleo.aql.evaluation.GenerationResult;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -31,13 +32,17 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.BasicMonitor;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.java.generation.files.GenerateJavaExtended;
 import org.eclipse.modisco.java.generation.tests.Activator;
 import org.eclipse.modisco.java.generation.tests.Messages;
+import org.junit.Assert;
 import org.osgi.framework.Bundle;
 
 /**
@@ -179,16 +184,20 @@ public abstract class DiffGeneratedJavaTest {
 	protected void generateJavaCode(final File javaModel,
 			final File outputDirectory) throws IOException {
 
-		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(URI
-				.createFileURI(javaModel.getAbsolutePath()), outputDirectory,
-				new ArrayList<Object>());
-		Assert.assertNotNull("Java Model instance is null before generation", //$NON-NLS-1$
-				javaGenerator.getModel());
+		List<String> resourcePathes = Collections.singletonList(javaModel.getAbsolutePath());
+		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(resourcePathes, outputDirectory.getAbsolutePath());
+		
+		List<Resource> resources = javaGenerator.loadResources(new ResourceSetImpl(), resourcePathes, new BasicMonitor());
+		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
+				resources.isEmpty());
+		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
+				resources.get(0).getContents().isEmpty());
 		Assert.assertTrue(
 				"Java Model instance not found in java model before generation", //$NON-NLS-1$
-				javaGenerator.getModel().eClass().getName().equals("Model")); //$NON-NLS-1$
-		javaGenerator.doGenerate(null);
+				resources.get(0).getContents().get(0).eClass().getName().equals("Model")); //$NON-NLS-1$
+		GenerationResult generationResult = javaGenerator.generate(new BasicMonitor());
 
+		assertTrue("Acceleo generation failed", generationResult.getDiagnostic().getSeverity() < Diagnostic.WARNING);
 	}
 
 	/**

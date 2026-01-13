@@ -17,12 +17,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.HtmlReport;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.HtmlReportGeneratorEclipse;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.reporting.internal.BenchmarkChartGeneration;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 
@@ -37,8 +38,8 @@ public final class ReportUtils {
 			final boolean measureMemoryUse) throws ReportUtilsException {
 		try {
 			// Generation of the HTML report
-			final HtmlReport report = new HtmlReport(benchmark, targetFolder, arguments);
-			report.doGenerate(null);
+			final HtmlReportGeneratorEclipse report = new HtmlReportGeneratorEclipse(benchmark, targetFolder.getAbsolutePath());
+			report.generate(new BasicMonitor());
 			// Generation of the charts
 			final BenchmarkChartGeneration chartGenerator =
 					new BenchmarkChartGeneration(targetFolder, measureMemoryUse);

@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2010-2022 Mia-Software and others.
+ *  Copyright (c) 2010-2026 Mia-Software and others.
  *  All rights reserved. This program and the accompanying materials
  *  are made available under the terms of the Eclipse Public License v2.0
  *  which accompanies this distribution, and is available at
@@ -12,14 +12,18 @@
  */
 package org.eclipse.modisco.jee.jsp.generation.tests;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
+import java.util.List;
 
+import org.eclipse.acceleo.aql.evaluation.GenerationResult;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -31,11 +35,14 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.BasicMonitor;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp;
+import org.eclipse.modisco.jee.jsp.generation.files.GenerateJspGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
@@ -210,21 +217,21 @@ public class DiffGeneratedJspTest {
 	private void generateJspCode(final File jspModel, final File outputDirectory)
 			throws IOException {
 
-		GenerateJsp jspGenerator = new GenerateJsp(URI.createFileURI(jspModel
-				.getAbsolutePath()), outputDirectory, new ArrayList<Object>());
-		Assert.assertNotNull("JSP Model instance is null before generation", //$NON-NLS-1$
-				jspGenerator.getModel());
-		Assert.assertTrue("JSP Model instance not found in jsp model before generation", //$NON-NLS-1$
-				jspGenerator.getModel().eClass().getName().equals("Model")); //$NON-NLS-1$
-		try {
-			jspGenerator.doGenerate(null);
-		}
-		catch (IOException e) {
-			throw e;
-		}
-		catch (Exception e) {
-			throw new IOException("Acceleo generation failed", e);
-		}
+		List<String> resourcePathes = Collections.singletonList(jspModel.getAbsolutePath());
+		GenerateJspGenerator jspGenerator = new GenerateJspGenerator(resourcePathes, outputDirectory.getAbsolutePath());
+		
+		List<Resource> resources = jspGenerator.loadResources(new ResourceSetImpl(), resourcePathes, new BasicMonitor());
+		Assert.assertFalse("No JSP Model before generation", //$NON-NLS-1$
+				resources.isEmpty());
+		Assert.assertFalse("No JSP Model before generation", //$NON-NLS-1$
+				resources.get(0).getContents().isEmpty());
+		Assert.assertTrue(
+				"JSP Model instance not found in java model before generation", //$NON-NLS-1$
+				resources.get(0).getContents().get(0).eClass().getName().equals("Model")); //$NON-NLS-1$
+
+		GenerationResult generationResult = jspGenerator.generate(new BasicMonitor());
+			
+		assertTrue("Acceleo generation failed", generationResult.getDiagnostic().getSeverity() < Diagnostic.WARNING);
 	}
 
 	/**

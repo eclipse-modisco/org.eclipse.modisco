@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="Eclipse Modisco Nightly Build Target Platform" sequenceNumber="16">
+<?pde version="3.8"?>
+<target includeMode="feature" name="Eclipse Modisco Nightly Build Target Platform" sequenceNumber="16">
 <locations>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/releases/latest"/-->
     <repository location="https://download.eclipse.org/eclipse/updates/I-builds"/>
     <!--repository location="https://download.eclipse.org/releases/2020-12/202011061000"/-->
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.acceleo.runtime.feature.group" version="0.0.0"/>
-    <repository location="https://download.eclipse.org/acceleo/updates/releases/3.7/R202002210922"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.m2m.atl.emftvm.feature.group" version="0.0.0"/>
@@ -106,6 +103,10 @@
     <unit id="org.prefuse" version="0.0.0"/>
     <unit id="org.prefuse.source" version="0.0.0"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <repository location="https://download.eclipse.org/acceleo/updates/releases/4.2/R202510230846/"/>
+    <unit id="org.eclipse.acceleo.aql.feature.feature.group" version="4.2.0"/>
   </location>
 </locations>
 </target>
