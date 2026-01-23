@@ -42,9 +42,33 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 	 *            the {@link List} of model resources to load
 	 * @param target
 	 *            the target folder for the generation
+	 * @since 1.6
 	 */
 	public GenerateJavaExtended(List<String> resources, String target) {
 		super(resources, target);
+	}
+
+	@Deprecated
+	public GenerateJavaExtended() {
+	//    super();
+		super(null, null);
+		throw new UnsupportedOperationException("Use Acceleo 4.x API");
+	}
+
+	@Deprecated
+	public GenerateJavaExtended(URI modelURI, File targetFolder,
+			List<? extends Object> arguments) throws IOException {
+    //	super(modelURI, targetFolder, arguments);
+		super(null, null);
+		throw new UnsupportedOperationException("Use Acceleo 4.x API");
+	}
+
+	@Deprecated
+	public GenerateJavaExtended(EObject model, File targetFolder,
+			List<? extends Object> arguments) throws IOException {
+    //	super(model, targetFolder, arguments);
+		super(null, null);
+		throw new UnsupportedOperationException("Use Acceleo 4.x API");
 	}
 
 	@Override
@@ -53,6 +77,11 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 
 		// apply default java code formatting to generated files
 		JavaUtils.formatJavaCode(new File(this.target));
+	}
+
+	@Deprecated
+	public void doGenerate(Monitor monitor) throws IOException {
+		generate(monitor);
 	}
 
 	/**
@@ -79,8 +108,8 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 	 * Print the usage.
 	 */
 	private static void printUsage() {
-		System.out.println(org.eclipse.modisco.java.generation.files.Messages.GenerateJavaExtended_0);
-		System.out.println(org.eclipse.modisco.java.generation.files.Messages.GenerateJavaExtended_1);
+		System.out.println("Usage: <resources> <target>");
+		System.out.println("Example: model1.xmi,model2.xmi src-gen/");
 	}
 
 	/**

@@ -14,6 +14,7 @@ import org.eclipse.modisco.java.ASTNode;
 
 /**
  * Services for the GenerateJava generator.
+ * @since 1.6
  */
 public class GenerateJavaServices {
 

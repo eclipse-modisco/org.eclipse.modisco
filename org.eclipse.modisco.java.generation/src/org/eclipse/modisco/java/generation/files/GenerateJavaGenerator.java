@@ -68,6 +68,7 @@ import org.eclipse.emf.ecore.EcorePackage;
  * 
  * @author <a href="mailto:yvan.lussaud@obeo.fr">Yvan Lussaud</a>
  * @generated
+ * @since 1.6
  */
 public class GenerateJavaGenerator {
 
@@ -388,8 +389,7 @@ public class GenerateJavaGenerator {
 
 		for (String resource : resources) {
 			monitor.subTask("Loading " + resource);
-			final Resource loaded = resourceSetForModels.getResource(URI.createURI(resource, true),
-					true);
+			final Resource loaded = resourceSetForModels.getResource(URI.createFileURI(resource), true);
 			if (loaded != null) {
 				res.add(loaded);
 			}

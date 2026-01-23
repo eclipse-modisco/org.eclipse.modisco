@@ -181,13 +181,12 @@ public abstract class DiffGeneratedJavaTest {
 		return outputDirectory;
 	}
 
-	protected void generateJavaCode(final File javaModel,
-			final File outputDirectory) throws IOException {
+	protected void generateJavaCode(final File javaModel, final File outputDirectory) throws IOException {
 
-		List<String> resourcePathes = Collections.singletonList(javaModel.getAbsolutePath());
-		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(resourcePathes, outputDirectory.getAbsolutePath());
+		List<String> resourcePaths = Collections.singletonList(javaModel.getAbsolutePath());
+		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(resourcePaths, outputDirectory.getAbsolutePath());
 		
-		List<Resource> resources = javaGenerator.loadResources(new ResourceSetImpl(), resourcePathes, new BasicMonitor());
+		List<Resource> resources = javaGenerator.loadResources(new ResourceSetImpl(), resourcePaths, new BasicMonitor());
 		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
 				resources.isEmpty());
 		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
