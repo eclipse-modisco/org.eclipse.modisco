@@ -217,10 +217,10 @@ public class DiffGeneratedJspTest {
 	private void generateJspCode(final File jspModel, final File outputDirectory)
 			throws IOException {
 
-		List<String> resourcePathes = Collections.singletonList(jspModel.getAbsolutePath());
-		GenerateJspGenerator jspGenerator = new GenerateJspGenerator(resourcePathes, outputDirectory.getAbsolutePath());
+		List<String> resourcePaths = Collections.singletonList(jspModel.getAbsolutePath());
+		GenerateJspGenerator jspGenerator = new GenerateJspGenerator(resourcePaths, outputDirectory.getAbsolutePath());
 		
-		List<Resource> resources = jspGenerator.loadResources(new ResourceSetImpl(), resourcePathes, new BasicMonitor());
+		List<Resource> resources = jspGenerator.loadResources(new ResourceSetImpl(), resourcePaths, new BasicMonitor());
 		Assert.assertFalse("No JSP Model before generation", //$NON-NLS-1$
 				resources.isEmpty());
 		Assert.assertFalse("No JSP Model before generation", //$NON-NLS-1$

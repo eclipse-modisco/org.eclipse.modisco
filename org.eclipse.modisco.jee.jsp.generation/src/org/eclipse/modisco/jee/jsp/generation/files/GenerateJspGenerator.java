@@ -380,7 +380,7 @@ public class GenerateJspGenerator {
 
 		for (String resource : resources) {
 			monitor.subTask("Loading " + resource);
-			final Resource loaded = resourceSetForModels.getResource(URI.createURI(resource, true),
+			final Resource loaded = resourceSetForModels.getResource(URI.createFileURI(resource),
 					true);
 			if (loaded != null) {
 				res.add(loaded);
