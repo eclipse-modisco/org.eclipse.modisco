@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.eclipse.modisco</groupId>
+	<artifactId>org.eclipse.modisco.releng.promote</artifactId>
+	<version>1.6.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<!-- based on releng/org.eclipse.nebula.site/promotion/pom.xml and https://eclipse.dev/justj/?page=tools --> 
+	<properties>
+	    <tycho-version>4.0.5</tycho-version>
+	    <tycho-extras-version>${tycho-version}</tycho-extras-version>
+		
+		<!--
+		Overrideable parameters - defaults here might suit usage as part of a total build, but we 
+		promote separately and only if the build succeeds, so overrides are probably necessary.
+		
+		For limited testing locally see /org.eclipse.qvtd.releng.tycho/.launches/Build QVTd Promote Test.launch.
+		
+		For regular Java debugging see /org.eclipse.qvtd.releng.tycho/.launches/JustJ for QVTd.launch"
+		-->
+		<BUILD_COMMIT>-commit https://github.com/eclipse-modisco/org.eclipse.modisco/commit/?id=${env.GIT_COMMIT}</BUILD_COMMIT>
+		<BUILD_PROMOTE>${org.eclipse.justj.p2.manager.build.url}</BUILD_PROMOTE>
+		<BUILD_REMOTE>-remote genie.modisco@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/modeling/mdt/modisco</BUILD_REMOTE>
+		<BUILD_ROOT>${project.build.directory}/justj-sync</BUILD_ROOT>
+		<BUILD_TIMESTAMP>-timestamp ${build.timestamp}</BUILD_TIMESTAMP>
+		<BUILD_TYPE>${build.type}</BUILD_TYPE>
+		<BUILD_URL>https://ci.eclipse.org/ocl/job/modisco-master/lastSuccessfulBuild/</BUILD_URL>
+		
+		<eclipse.repo>https://download.eclipse.org/releases/latest</eclipse.repo>
+		<justj.tools.repo>https://download.eclipse.org/justj/tools/updates/nightly/latest</justj.tools.repo>
+		<org.eclipse.justj.p2.manager.args></org.eclipse.justj.p2.manager.args>
+		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+		
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-eclipse-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<executionEnvironment>JavaSE-17</executionEnvironment>
+					<dependencies>
+						<dependency>
+							<artifactId>org.eclipse.justj.p2</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+						<dependency>
+							<artifactId>org.apache.felix.scr</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+					</dependencies>
+					<repositories>
+						<repository>
+							<id>eclipse.repo</id>
+							<layout>p2</layout>
+							<url>${eclipse.repo}</url>
+						</repository>
+						<repository>
+							<id>justj.tools.repo</id>
+							<layout>p2</layout>
+							<url>${justj.tools.repo}</url>
+						</repository>
+					</repositories>
+				</configuration>
+				<executions>
+					<execution>
+						<id>promote</id>
+						<goals>
+							<goal>eclipse-run</goal>
+						</goals>
+						<phase>verify</phase>
+						<configuration>
+							<appArgLine>
+                              -consoleLog
+                              -application org.eclipse.justj.p2.manager
+                              -data @None
+                              -nosplash
+                              ${org.eclipse.justj.p2.manager.args}
+                              ${BUILD_REMOTE}
+                              -retain 5
+                              -label "MoDisco"
+                              -build-url ${BUILD_URL}
+                              -root ${BUILD_ROOT}
+                              -relative builds
+                              -version-iu-pattern org\.eclipse\.modisco\.sdk\.feature.*
+                              -primary-iu-filter-pattern org\.eclipse\.modisco\.sdk\.feature.*
+                              ${BUILD_COMMIT}
+                              -target-url https://download.eclipse.org/modeling/mdt/modisco
+                              -promote ${BUILD_PROMOTE}
+                              ${BUILD_TIMESTAMP}
+                              -type ${BUILD_TYPE}
+                              -breadcrumb "MoDisco https://projects.eclipse.org/projects/modeling.mdt.modisco"
+                              -mapping modisco->MoDisco
+                              -archive "P2 repos https://archive.eclipse.org/modeling/mdt/modisco/updates/release"
+                              -archive "zips/drops https://archive.eclipse.org/modeling/mdt/modisco/downloads/drops"
+                              ${org.eclipse.justj.p2.manager.extra.args}
+							</appArgLine>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

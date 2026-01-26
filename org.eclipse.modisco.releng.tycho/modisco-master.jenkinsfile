@@ -1,0 +1,125 @@
+pipeline {
+	agent {
+		label 'ubuntu-latest'
+	}
+
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '5'))
+		disableConcurrentBuilds()
+		skipDefaultCheckout false
+	}
+
+	tools {
+		maven 'apache-maven-latest'
+		jdk 'openjdk-jdk21-latest'
+	}
+
+	environment {
+		BUILD_TIMESTAMP = sh(returnStdout: true, script: 'date +%Y%m%d%H%M').trim()
+	}
+	
+	parameters {
+		choice(
+			name: 'BUILD_TYPE',
+			choices: ['nightly', 'milestone'],
+			description: '''
+<ul>
+<li> N - Nightly build
+<li> S - Stable / Milestone build
+Replay a Stable / Milestone modisco-promoter build to promote a Release. 
+</ul>				'''
+		)
+	}
+
+	stages {
+		//
+		//	Set BUILD_TYPE in the Jenkins job description.
+		//
+		stage('Display Parameters') {
+			steps {
+				script {
+					env.BUILD_TYPE = params.BUILD_TYPE
+					def description = """
+BUILD_TYPE=${env.BUILD_TYPE}
+""".trim()
+					echo description
+					currentBuild.description = description.replace("\n", "<br/>")
+				}
+			}
+		}
+		//
+		//	Do the regular project build and test.
+		//
+		stage('Build') {
+			steps {
+				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+					sh '''
+						if [[ $BUILD_TYPE == 'milestone' ]]; then
+							targetPhase='deploy'
+						else
+							targetPhase='verify'
+						fi
+						mvn	\
+							-f org.eclipse.modisco.releng.tycho/pom.xml \
+							--no-transfer-progress \
+							-DBUILD_TYPE=${BUILD_TYPE} \
+							--show-version \
+							clean \
+							${targetPhase} \
+							-P${BUILD_TYPE} \
+							-Psign
+						'''
+				}
+				archiveArtifacts artifacts: 'org.eclipse.modisco.updatesite/target/repository/**/*'
+			}
+		}
+		//
+		//	Promote the build but only when the currentBuild is successful.
+		//	Promote is delegated to a separate job so that a release can replay a milestone.
+		//
+		stage('Promote') {
+			steps {
+				script {
+					def List job_params = [
+						string(name: 'BUILD_COMMIT', value: '-commit https://github.com/eclipse-modisco/org.eclipse.modisco/commit/' + env.GIT_COMMIT),
+						string(name: 'BUILD_PROMOTE', value: env.BUILD_URL + 'artifact/org.eclipse.modisco.updatesite/target/repository'),
+						string(name: 'BUILD_REMOTE', value: '-remote genie.modisco@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/modeling/mdt/modisco'),
+						string(name: 'BUILD_ROOT', value: '/home/jenkins/agent/workspace/justj-promoter/justj-sync'),
+						string(name: 'BUILD_TIMESTAMP', value: '-timestamp ' + env.BUILD_TIMESTAMP),
+						string(name: 'BUILD_TYPE', value: env.BUILD_TYPE),
+						string(name: 'BUILD_URL', value: env.BUILD_URL)
+					]
+					echo job_params.toString()
+					build job: "modisco-promoter", parameters: job_params
+				}
+			}
+		}
+	}
+	
+	post {
+		failure {
+			mail to: 'ed@willink.me.uk', subject: "[MoDisco CI] Build Failure ${currentBuild.fullDisplayName}", mimeType: 'text/plain',
+body: "Project: ${env.JOB_NAME} \n\
+Build Number: ${env.BUILD_NUMBER} \n\
+Build URL: <${env.BUILD_URL}> \n\
+Console: <${env.BUILD_URL}console>"
+			archiveArtifacts allowEmptyArchive: true, artifacts: '**'
+		}
+
+		fixed {
+			mail to: 'ed@willink.me.uk', subject: "[MoDisco CI] Back to normal ${currentBuild.fullDisplayName}", mimeType: 'text/plain',
+body: "Project: ${env.JOB_NAME} \n\
+Build Number: ${env.BUILD_NUMBER} \n\
+Build URL: <${env.BUILD_URL}> \n\
+Console: <${env.BUILD_URL}console>"
+		}
+
+		always {
+			junit '**/target/surefire-reports/TEST-*.xml'
+		}
+
+//		cleanup {
+//			deleteDir()
+//		}
+	}
+}
