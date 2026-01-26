@@ -9,6 +9,10 @@
     <!--repository location="https://download.eclipse.org/releases/2020-12/202011061000"/-->
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="org.eclipse.acceleo.aql.feature.feature.group" version="0.0.0"/>
+    <repository location="https://download.eclipse.org/acceleo/updates/releases/4.2/R202510230846/"/>
+  </location>
+  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.m2m.atl.emftvm.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.m2m.atl.feature.group" version="0.0.0"/>
     <repository location="https://download.eclipse.org/mmt/atl/updates/releases/latest"/>
@@ -36,7 +40,7 @@
     <unit id="org.eclipse.net4j.db.derby" version="0.0.0"/>
     <unit id="org.eclipse.net4j.db.derby.source" version="0.0.0"/>
     <!--repository location="https://download.eclipse.org/modeling/emf/cdo/updates/interim"/-->
-    <repository location="http://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x"/>
+    <repository location="http://download.eclipse.org/modeling/emf/cdo/updates/releases/4.x/latest"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
@@ -85,9 +89,7 @@
     <unit id="org.apache.log4j" version="0.0.0"/>
     <unit id="org.hamcrest" version="0.0.0"/>
     <!--unit id="org.slf4j.api" version="0.0.0"/-->
-    <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
-    <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-S"/>
-    <repository location="https://download.eclipse.org/tools/orbit/downloads/latest-R"/>
+    <repository location="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/latest"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="javax.annotation" version="0.0.0"/>
@@ -103,10 +105,6 @@
     <unit id="org.prefuse" version="0.0.0"/>
     <unit id="org.prefuse.source" version="0.0.0"/>
     <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository"/>
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <repository location="https://download.eclipse.org/acceleo/updates/releases/4.2/R202510230846/"/>
-    <unit id="org.eclipse.acceleo.aql.feature.feature.group" version="4.2.0"/>
   </location>
 </locations>
 </target>

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.eclipse.modisco.infra.browser;singleton:=true
-Bundle-Version: 1.5.5.qualifier
+Bundle-Version: 1.6.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin$Implementation
 Bundle-Vendor: %Bundle-Vendor

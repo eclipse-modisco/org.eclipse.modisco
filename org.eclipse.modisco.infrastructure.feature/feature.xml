@@ -14,7 +14,7 @@
 <feature
       id="org.eclipse.modisco.infrastructure.feature"
       label="%featureName"
-      version="1.5.6.qualifier"
+      version="1.6.0.qualifier"
       provider-name="%providerName"
       plugin="org.eclipse.modisco.infra.common.core"
       license-feature="org.eclipse.license"
