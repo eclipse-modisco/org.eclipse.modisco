@@ -33,12 +33,18 @@
                [n.write()/]
              [/for]
            [/if]
-  [if (not (o.modifier = null))][o.modifier.write()/][/if][o.S()/][if (o.typeParameters->notEmpty())]<[for (t : java::TypeParameter | o.typeParameters) separator(', ')][t.write()/][/for]>[/if][o.S()/][o.writeReturnType()/][o.name/]([for (p : java::SingleVariableDeclaration | o.parameters) separator(', ')][p.write()/][/for])[o.S()/][for (t : java::TypeAccess | o.thrownExceptions) separator(',')][t.write()/][/for][o.S()/][if (o.body = null)]
-                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-                                                                                                                                                                                                                                                                                                                                                                                                                                       [else]
-                                                                                                                                                                                                                                                                                                                                                                                                                                         [o.body.write()/]
-                                                                                                                                                                                                                                                                                                                                                                                                                                       [/if]
+  [o.writeMethodSignature() +
+    if (o.body = null) then
+      ';'
+    else
+      o.body.write()
+    endif
+  /]
   [o.wca()/]
+[/template]
+
+[template public writeMethodSignature(o : java::AbstractMethodDeclaration) post(self.trim())]
+  [if (not (o.modifier = null))][o.modifier.write()/][/if][if (o.typeParameters->notEmpty())]<[for (t : java::TypeParameter | o.typeParameters) separator(', ')][t.write()/][/for]>[/if][o.writeReturnType()/][o.name/]([for (p : java::SingleVariableDeclaration | o.parameters) separator(', ')][p.write()/][/for])[for (t : java::TypeAccess | o.thrownExceptions) separator(',')][t.write()/][/for]
 [/template]
 
 [comment superType : BodyDeclaration /]
