@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="org.eclipse.modisco.java.generation" version="2">
+    <resource path="src/org/eclipse/modisco/java/generation/files/GenerateJava.java" type="org.eclipse.modisco.java.generation.files.GenerateJava">
+        <filter id="338722907">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="GenerateJava(EObject, File, List&lt;? extends Object&gt;)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338722907">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="GenerateJava(URI, File, List&lt;? extends Object&gt;)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="addPropertiesFile(String)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="createTemplateURI(String)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="doGenerate(Monitor)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="getGenerationListeners()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="getGenerationStrategy()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="getModuleName()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="getProperties()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="getTemplateNames()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="main(String[])"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="registerPackages(ResourceSet)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+                <message_argument value="registerResourceFactories(ResourceSet)"/>
+            </message_arguments>
+        </filter>
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJava"/>
+            </message_arguments>
+        </filter>
+    </resource>
+    <resource path="src/org/eclipse/modisco/java/generation/files/GenerateJavaExtended.java" type="org.eclipse.modisco.java.generation.files.GenerateJavaExtended">
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.java.generation.files.GenerateJavaExtended"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

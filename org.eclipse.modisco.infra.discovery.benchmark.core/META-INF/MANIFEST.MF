@@ -15,14 +15,18 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.discovery.core,
  org.eclipse.modisco.infra.discovery.benchmark.metamodel,
  org.eclipse.modisco.infra.common.core,
- org.eclipse.acceleo.engine;bundle-version="3.0.0",
  org.eclipse.jdt.core;bundle-version="3.6.0",
  org.eclipse.modisco.utils.core;bundle-version="0.10.0",
  org.eclipse.modisco.utils.chart.birt.core;bundle-version="0.10.0",
  org.eclipse.modisco.utils.chart.metamodel;bundle-version="0.10.0",
  org.apache.commons.cli;bundle-version="1.0.0",
  org.eclipse.modisco.facet.util.core;bundle-version="1.1.0",
- org.eclipse.emf.common
+ org.eclipse.emf.common,
+ org.eclipse.acceleo.query;bundle-version="[8.1.0,9.0.0)",
+ org.eclipse.acceleo.query.ide;bundle-version="[8.1.0,9.0.0)",
+ org.eclipse.acceleo.aql;bundle-version="[4.2.0,5.0.0)",
+ org.eclipse.acceleo.aql.profiler;bundle-version="[4.2.0,5.0.0)",
+ org.antlr.antlr4-runtime;bundle-version="[4.13.2,4.13.3)"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.discovery.benchmark.core;x-internal:=true,
