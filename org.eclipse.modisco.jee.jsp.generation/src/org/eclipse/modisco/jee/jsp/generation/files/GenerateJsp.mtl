@@ -11,9 +11,12 @@
     Nicolas Guyomar (Mia-Software) - initial API and implementation/]
 [comment encoding = UTF-8 /]
 [comment  This method generates one file per Page in the Model/]
+
+[import org::eclipse::modisco::java::generation::files::GenerateJavaServices/]
+
 [comment @main/]
 [template public write(p : jsp::Page)]
-  [file (p.name, overwrite)]
+  [file (p.name.relativizePath(), overwrite)]
     [if (not (p.xmlDeclaration = null))]
       [if (p.xmlDeclaration.size() > 0)]
          [p.xmlDeclaration/]

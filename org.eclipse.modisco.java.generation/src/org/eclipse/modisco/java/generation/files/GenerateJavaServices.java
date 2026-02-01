@@ -16,7 +16,20 @@ import org.eclipse.modisco.java.ASTNode;
  * Services for the GenerateJava generator.
  * @since 1.6
  */
-public class GenerateJavaServices {
+public class GenerateJavaServices
+{
+	/**
+	 * This worksaround Acceleo Issue https://github.com/eclipse-acceleo/acceleo/issues/233
+	 * whereby Acceleo 4 does not relativize paths starting with / in the way that Acceleo 3 did.
+	 */
+	public String relativizePath(String string) {
+		if (string.startsWith("/")) {
+			return string.substring(1);
+		}
+		else {
+			return string;
+		}
+	}
 
 	/**
 	 * Gets brackets of the given dimension for the given {@link ASTNode}.

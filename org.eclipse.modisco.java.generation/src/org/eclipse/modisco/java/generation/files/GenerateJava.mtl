@@ -14,7 +14,7 @@
 
 [comment @main/]
 [template public write(c : java::CompilationUnit)]
-  [file (c.qualifiedPath(), overwrite)]
+  [file (c.qualifiedPath().relativizePath(), overwrite)]
     [c.wc()/][if (not (c.package = null))][c.package.write()/][/if]
     
     [for (i : java::ImportDeclaration | c.imports)][i.write()/][/for]
