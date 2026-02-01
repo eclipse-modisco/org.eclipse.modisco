@@ -12,6 +12,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.common.core;bundle-version="0.8.0",
  com.ibm.icu;bundle-version="4.2.1"
 Bundle-ActivationPolicy: lazy
+Import-Package: org.xml.sax,
+  org.xml.sax.ext,
+  org.xml.sax.helpers
 Export-Package: org.eclipse.modisco.xml,
  org.eclipse.modisco.xml.emf,
  org.eclipse.modisco.xml.emf.impl;x-internal:=true,

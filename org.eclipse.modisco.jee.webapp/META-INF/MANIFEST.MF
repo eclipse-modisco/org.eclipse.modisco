@@ -11,6 +11,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.modisco.infra.common.core;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
+Import-Package: org.xml.sax,
+  org.xml.sax.helpers
 Export-Package: org.eclipse.modisco.jee.webapp.webapp22,
  org.eclipse.modisco.jee.webapp.webapp22.impl;x-internal:=true,
  org.eclipse.modisco.jee.webapp.webapp22.util;x-friends:="org.eclipse.modisco.jee.webapp.discoverer",

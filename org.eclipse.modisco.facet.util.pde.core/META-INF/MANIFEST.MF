@@ -13,6 +13,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
  com.ibm.icu;bundle-version="4.2.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Import-Package: org.xml.sax
 Export-Package: org.eclipse.modisco.facet.util.pde.core.internal.exported,
  org.eclipse.modisco.facet.util.pde.core.internal.exported.exception
 Automatic-Module-Name: org.eclipse.modisco.facet.util.pde.core
