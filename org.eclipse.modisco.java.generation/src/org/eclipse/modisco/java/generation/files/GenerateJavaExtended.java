@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.acceleo.aql.evaluation.GenerationResult;
@@ -22,6 +23,8 @@ import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.BasicMonitor.Printing;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.java.generation.Messages;
 import org.eclipse.modisco.java.generation.utils.JavaUtils;
 
@@ -36,6 +39,13 @@ import org.eclipse.modisco.java.generation.utils.JavaUtils;
 public class GenerateJavaExtended extends GenerateJavaGenerator {
 
 	/**
+	 * The target folder for the generation.
+	 * 
+	 * @generated
+	 */
+	private final List<EObject> models = new ArrayList<>();
+
+	/**
 	 * Constructor.
 	 * 
 	 * @param resources
@@ -48,22 +58,29 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 		super(resources, target);
 	}
 
-	@Deprecated
+	@Deprecated /* Use the GenerateJavaGenerator and the Acceleo 4.2 API */
 	public GenerateJavaExtended() {
-	//    super();
 		super(null, null);
-		throw new UnsupportedOperationException("Use Acceleo 4.x API");
 	}
 
-	@Deprecated
+	@Deprecated /* Use the GenerateJavaGenerator and the Acceleo 4.2 API */
 	public GenerateJavaExtended(URI modelURI, File targetFolder,
 			List<? extends Object> arguments) throws IOException {
-    //	super(modelURI, targetFolder, arguments);
-		super(null, null);
-		throw new UnsupportedOperationException("Use Acceleo 4.x API");
+		super(Collections.singletonList(modelURI.toFileString()), targetFolder.getAbsolutePath());
+		List<String> resourcePaths = Collections.singletonList(modelURI.toFileString());
+		List<Resource> resources = loadResources(new ResourceSetImpl(), resourcePaths, new BasicMonitor());
+		for (Resource resource : resources) {
+			for (EObject eRoot : resource.getContents()) {
+				models.add(eRoot);
+				break;
+			}
+		}
+		if ((arguments != null) && (arguments.size() > 0)) {
+			System.err.println(getClass().getName() + " ignores " + arguments);
+		}
 	}
 
-	@Deprecated
+	@Deprecated /* Use the GenerateJavaGenerator and the Acceleo 4.2 API */
 	public GenerateJavaExtended(EObject model, File targetFolder,
 			List<? extends Object> arguments) throws IOException {
     //	super(model, targetFolder, arguments);
@@ -81,7 +98,7 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 
 	@Deprecated
 	public void doGenerate(Monitor monitor) throws IOException {
-		generate(monitor);
+		generate(monitor != null ? monitor : new BasicMonitor());
 	}
 
 	/**
@@ -121,4 +138,7 @@ public class GenerateJavaExtended extends GenerateJavaGenerator {
 		return new Printing(new PrintStream(System.out));
 	}
 
+	public EObject getModel() {
+		return models.size() > 0 ? models.get(0) : null;
+	}
 }

@@ -631,5 +631,4 @@ public class GenerateJavaGenerator {
 	protected void afterGeneration(GenerationResult generationResult) {
 		// this is called after the generation finished
 	}
-
 }

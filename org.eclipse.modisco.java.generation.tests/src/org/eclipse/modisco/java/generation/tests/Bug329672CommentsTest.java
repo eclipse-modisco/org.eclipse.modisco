@@ -48,10 +48,36 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 	}
 
 	@Test
-	public final void testBug329672Comments() throws CoreException, IOException {
+	public final void testBug329672Comments3() throws CoreException, IOException {
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();
-		generateJavaCode(sourceJavaModel, targetJavaDirectory);
+		generateJavaCode3(sourceJavaModel, targetJavaDirectory);
+		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
+				targetJavaDirectory.listFiles().length > 0);
+
+		File sourceJavaDirectory = getJavaSourceDirectory();
+		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
+				sourceJavaDirectory.listFiles().length > 0);
+
+		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
+				new JavaFileComparator());
+
+		Assert.assertTrue(
+				Messages.DiffGeneratedJavaTest_folders_comparison_failure
+						+ Messages.DiffGeneratedJavaTest_folders_check_invitation
+						+ sourceJavaDirectory.getAbsolutePath()
+						+ Messages.DiffGeneratedJavaTest_7
+						+ Messages.DiffGeneratedJavaTest_8
+						+ targetJavaDirectory.getAbsolutePath(),
+				compareOldAndNewFiles);
+	}
+
+	@Test
+	public final void testBug329672Comments4() throws CoreException, IOException {
+		File sourceJavaModel = getInputModelFile();
+		File targetJavaDirectory = prepareOutputDirectory();
+		generateJavaCode4(sourceJavaModel, targetJavaDirectory);
 		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
 				targetJavaDirectory.listFiles().length > 0);
 

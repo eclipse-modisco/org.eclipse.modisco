@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
@@ -34,6 +35,8 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
@@ -181,7 +184,20 @@ public abstract class DiffGeneratedJavaTest {
 		return outputDirectory;
 	}
 
-	protected void generateJavaCode(final File javaModel, final File outputDirectory) throws IOException {
+	protected void generateJavaCode3(final File javaModel, final File outputDirectory) throws IOException {
+
+		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(URI
+				.createFileURI(javaModel.getAbsolutePath()), outputDirectory,
+				new ArrayList<Object>());
+		Assert.assertNotNull("Java Model instance is null before generation", //$NON-NLS-1$
+				javaGenerator.getModel());
+		Assert.assertTrue(
+				"Java Model instance not found in java model before generation", //$NON-NLS-1$
+				javaGenerator.getModel().eClass().getName().equals("Model")); //$NON-NLS-1$
+		javaGenerator.doGenerate(null);
+	}
+
+	protected void generateJavaCode4(final File javaModel, final File outputDirectory) throws IOException {
 
 		List<String> resourcePaths = Collections.singletonList(javaModel.getAbsolutePath());
 		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(resourcePaths, outputDirectory.getAbsolutePath());
