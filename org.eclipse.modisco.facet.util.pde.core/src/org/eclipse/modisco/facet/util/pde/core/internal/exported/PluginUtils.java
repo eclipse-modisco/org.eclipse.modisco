@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v20.html
  * 
  * Contributors:
- *  Grégoire Dupé (Soft-Maint) - Bug 387470 - [EFacet][Custom] Editors
+ *  Grï¿½goire Dupï¿½ (Soft-Maint) - Bug 387470 - [EFacet][Custom] Editors
  */
 package org.eclipse.modisco.facet.util.pde.core.internal.exported;
 

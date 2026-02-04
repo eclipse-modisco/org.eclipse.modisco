@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v20.html
  * 
  * Contributors:
- *    Grégoire Dupé (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model
+ *    Grï¿½goire Dupï¿½ (Mia-Software) - Bug 477657 - The catalog manager should be able to manage workspace model
  */
 package org.eclipse.modisco.facet.util.emf.catalog.metamodel.internal.v1_1.catalog;
 

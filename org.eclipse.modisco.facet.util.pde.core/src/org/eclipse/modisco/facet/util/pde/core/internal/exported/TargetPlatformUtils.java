@@ -7,7 +7,7 @@
  *
  * Contributors:
  *     Fabien Treguer (Soft-Maint) - Bug 418565 - [Unit Test Failure] Missing dependencies during tests, target platform creation and load
- *     Grégoire Dupé (Mia-Software) - Bug 468648 - TargetPlatformUtils.loadTargetPlatform: wrong number of arguments
+ *     Grï¿½goire Dupï¿½ (Mia-Software) - Bug 468648 - TargetPlatformUtils.loadTargetPlatform: wrong number of arguments
  ******************************************************************************/
 package org.eclipse.modisco.facet.util.pde.core.internal.exported;
 

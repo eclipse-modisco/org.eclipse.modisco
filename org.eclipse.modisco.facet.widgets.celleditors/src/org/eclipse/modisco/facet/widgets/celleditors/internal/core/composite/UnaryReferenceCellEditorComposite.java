@@ -11,7 +11,7 @@
  *   Nicolas Guyomar (Mia-Software) - initial API and implementation
  *   Nicolas Bros (Mia-Software) - Bug 339664 - org.eclipse.modisco.facet.widgets.celleditors API cleaning
  *   Nicolas Bros (Mia-Software) - Bug 334539 - [celleditors] change listener
- *   Grégoire Dupé (Mia-Software) - Bug 424122 - [Table] Images, fonts and colors are not shared between the instances of table
+ *   Grï¿½goire Dupï¿½ (Mia-Software) - Bug 424122 - [Table] Images, fonts and colors are not shared between the instances of table
  *****************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite;
 
