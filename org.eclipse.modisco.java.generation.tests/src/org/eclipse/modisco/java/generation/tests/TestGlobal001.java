@@ -123,4 +123,41 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 						+ targetJavaDirectory.getAbsolutePath(),
 				compareOldAndNewFiles);
 	}
+
+	/**
+	 * Launch a java files generation, and compares result with from reference
+	 * java files.
+	 *
+	 * @throws URISyntaxException
+	 * @throws IOException
+	 * @throws CoreException
+	 */
+//	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
+	@Test
+	public final void test001_direct() throws URISyntaxException, CoreException,
+			IOException {
+		File sourceJavaModel = getInputModelFile();
+		File targetJavaDirectory = prepareOutputDirectory();
+		String code = generateJavaCodeDirect(sourceJavaModel, targetJavaDirectory);
+		System.out.println(code);
+		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
+				targetJavaDirectory.listFiles().length > 0);
+
+		File sourceJavaDirectory = getJavaSourceDirectory();
+		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
+				sourceJavaDirectory.listFiles().length > 0);
+
+		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
+				new JavaFileComparator());
+
+		Assert.assertTrue(
+				Messages.DiffGeneratedJavaTest_folders_comparison_failure
+						+ Messages.DiffGeneratedJavaTest_folders_check_invitation
+						+ sourceJavaDirectory.getAbsolutePath()
+						+ Messages.DiffGeneratedJavaTest_7
+						+ Messages.DiffGeneratedJavaTest_8
+						+ targetJavaDirectory.getAbsolutePath(),
+				compareOldAndNewFiles);
+	}
 }

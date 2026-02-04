@@ -13,6 +13,7 @@ package org.eclipse.modisco.java.generation.tests.utils;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.acceleo.aql.evaluation.GenerationResult;
 import org.eclipse.core.resources.IFile;
@@ -213,6 +215,45 @@ public abstract class DiffGeneratedJavaTest {
 		GenerationResult generationResult = javaGenerator.generate(new BasicMonitor());
 
 		assertTrue("Acceleo generation failed", generationResult.getDiagnostic().getSeverity() < Diagnostic.WARNING);
+	}
+
+	protected String generateJavaCodeDirect(final File javaModel, final File outputDirectory) throws IOException {
+
+		List<String> resourcePaths = Collections.singletonList(javaModel.getAbsolutePath());
+		GenerateJavaExtended javaGenerator = new GenerateJavaExtended(resourcePaths, outputDirectory.getAbsolutePath());
+		
+		List<Resource> resources = javaGenerator.loadResources(new ResourceSetImpl(), resourcePaths, new BasicMonitor());
+		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
+				resources.isEmpty());
+		Assert.assertFalse("No Java Model before generation", //$NON-NLS-1$
+				resources.get(0).getContents().isEmpty());
+		Assert.assertTrue(
+				"Java Model instance not found in java model before generation", //$NON-NLS-1$
+				resources.get(0).getContents().get(0).eClass().getName().equals("Model")); //$NON-NLS-1$
+
+		JavaModel2JavaTextSwitch javaModel2javaTextSwitch = new JavaModel2JavaTextSwitch(outputDirectory.getAbsolutePath());
+		Map<String, String> file2text = javaModel2javaTextSwitch.generate(resources);
+		List<String> fileKeys = new ArrayList<>(file2text.keySet());
+		Collections.sort(fileKeys);
+		for (String fileKey : fileKeys) {
+			String fileText = file2text.get(fileKey);
+			System.out.println("*******************************************");
+			System.out.println(fileKey);
+			System.out.println("*******************************************");
+			System.out.println(fileText);
+			File file = new File(fileKey);
+			file.getParentFile().mkdirs();
+			FileWriter fw = new FileWriter(file);
+			fw.append(fileText);
+			fw.close();
+		}
+		return "";
+		
+		
+	//	GenerationResult generationResult = javaGenerator.generate(new BasicMonitor());
+
+	//	assertTrue("Acceleo generation failed", generationResult.getDiagnostic().getSeverity() < Diagnostic.WARNING);
+	//	return javaModel2javaTextSwitch.toString();
 	}
 
 	/**

@@ -99,4 +99,30 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 				compareOldAndNewFiles);
 	}
 
+	@Test
+	public final void testBug329672Comments_direct() throws CoreException, IOException {
+		File sourceJavaModel = getInputModelFile();
+		File targetJavaDirectory = prepareOutputDirectory();
+		generateJavaCodeDirect(sourceJavaModel, targetJavaDirectory);
+		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
+				targetJavaDirectory.listFiles().length > 0);
+
+		File sourceJavaDirectory = getJavaSourceDirectory();
+		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
+				sourceJavaDirectory.listFiles().length > 0);
+
+		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
+				new JavaFileComparator());
+
+		Assert.assertTrue(
+				Messages.DiffGeneratedJavaTest_folders_comparison_failure
+						+ Messages.DiffGeneratedJavaTest_folders_check_invitation
+						+ sourceJavaDirectory.getAbsolutePath()
+						+ Messages.DiffGeneratedJavaTest_7
+						+ Messages.DiffGeneratedJavaTest_8
+						+ targetJavaDirectory.getAbsolutePath(),
+				compareOldAndNewFiles);
+	}
+
 }
