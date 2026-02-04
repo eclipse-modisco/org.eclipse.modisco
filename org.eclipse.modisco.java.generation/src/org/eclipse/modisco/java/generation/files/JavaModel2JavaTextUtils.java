@@ -1,4 +1,14 @@
-package org.eclipse.modisco.java.generation.tests.utils;
+/**
+ * Copyright (c) 2026 Willink Transformations and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *   E.D.Willink - Initial API and implementation
+ */
+package org.eclipse.modisco.java.generation.files;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,47 +22,23 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.emf.util.JavaSwitch;
+import org.eclipse.modisco.java.generation.utils.IndentingStringBuilder;
 
+/**
+ * @since 1.6
+ */
+@SuppressWarnings("nls")
 public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 {
-	protected final Stack<StringBuilder> files = new Stack<>();
-	protected final Stack<String> indentation = new Stack<>();
-	private StringBuilder s = null;
-	private char lastChar = 0;
-	private boolean indentationPending = false;
+	private IndentingStringBuilder indentingStringBuilder = null;//new IndentingStringBuilder();
 	private Map<String, String> file2text = new HashMap<>();
-	
-	protected JavaModel2JavaTextUtils() {
-		indentation.push("");
-	//	files.push(s = new StringBuilder());
-	}
 
 	protected void append(boolean value) {
 		append(Boolean.toString(value));
 	}
 
 	protected void append(String string) {
-		if (string != null) {
-			for (int i = 0; i < string.length(); i++) {
-				char ch = string.charAt(i);
-				if (ch == '\n') {
-					if (indentationPending) {
-						s.append("\n");
-					}
-					lastChar = ch;
-					indentationPending = true;
-				}
-				else if (ch != '\r') {
-					if (indentationPending) {
-						s.append("\n");
-						s.append(indentation.peek());
-						indentationPending = false;
-					}
-					s.append(ch);
-					lastChar = ch;
-				}
-			}
-		}
+		indentingStringBuilder.append(string);
 	}
 	
 	protected void appendBrackets(int d) {
@@ -170,15 +156,11 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 	}
 
 	protected void appendSoftNewLine() {
-		if ((lastChar >= 0) && (lastChar != '\n')) {
-			append("\n");
-		}
+		indentingStringBuilder.appendSoftNewLine();
 	}
 
 	protected void appendSoftSpace() {
-		if ((lastChar >= 0) && (lastChar != ' ') && (lastChar != '\n')) {
-			append(" ");
-		}
+		indentingStringBuilder.appendSoftSpace();
 	}
 	
 	protected void appendTypeHeader(TypeDeclaration jTypeDeclaration) {
@@ -215,17 +197,24 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 		append(suffix);
 	}
 
+	protected void doChildren(EObject jObject, boolean withIndentation) {
+		if (withIndentation) {
+			pushIndentation();
+		}
+		for (EObject eChild : jObject.eContents()) {
+			appendNode((ASTNode) eChild);
+		}
+		if (withIndentation) {
+			popIndentation();
+		}
+	}
+
 	public Map<String, String> generate(Iterable<Resource> resources) {
 		for (Resource resource : resources) {
 			for (EObject eObject : resource.getContents()) {
 				appendNode(eObject);
 			}
 		}
-	//	StringBuilder s = files.pop();
-		assert files.isEmpty();
-	//	if (s.length() > 0) {
-	//		file2text.put(null,  s.toString());
-	//	}
 		return file2text;
 	}
 
@@ -248,26 +237,23 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 		return s.toString();
 	}
 
-	protected void popFile(String fileKey) {
-		assert files.size() == 1;
-		assert indentation.size() == 1;
-		file2text.put(fileKey, files.pop().toString());
-		s = null;
+	public void popFile(String fileKey) {
+		indentingStringBuilder.close();
+		file2text.put(fileKey, indentingStringBuilder.toString());
+		indentingStringBuilder = null;
 	}
 
 	protected void popIndentation() {
-		indentation.pop();
+		indentingStringBuilder.popIndentation();
 	}
 
-	protected void pushFile() {
-		assert files.size() == 0;
-		files.push(s = new StringBuilder());
-		indentationPending = false;
-		lastChar = 0;
+	public void pushFile() {
+		assert indentingStringBuilder == null;
+		indentingStringBuilder = new IndentingStringBuilder();
 	}
 
 	protected void pushIndentation() {
-		indentation.push(indentation.peek() + "\t");
+		indentingStringBuilder.pushIndentation();
 	}
 
 	/**
@@ -310,20 +296,8 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 		}
 	}
 
-	protected void doChildren(EObject jObject, boolean withIndentation) {
-		if (withIndentation) {
-			pushIndentation();
-		}
-		for (EObject eChild : jObject.eContents()) {
-			appendNode((ASTNode) eChild);
-		}
-		if (withIndentation) {
-			popIndentation();
-		}
-	}
-
 	@Override
 	public String toString() {
-		return s.toString();
+		return indentingStringBuilder.toString();
 	}
 }

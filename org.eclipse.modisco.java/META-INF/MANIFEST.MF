@@ -16,7 +16,7 @@ Export-Package:
  org.eclipse.modisco.java,
  org.eclipse.modisco.java.emf,
  org.eclipse.modisco.java.emf.impl;x-internal:=true,
- org.eclipse.modisco.java.emf.util;x-internal:=true,
+ org.eclipse.modisco.java.emf.util,
  org.eclipse.modisco.java.internal.util;
   x-friends:="org.eclipse.modisco.infra.browser.custom.examples.java.jdk,
    org.eclipse.modisco.java.queries,

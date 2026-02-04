@@ -1,4 +1,14 @@
-package org.eclipse.modisco.java.generation.tests.utils;
+/**
+ * Copyright (c) 2026 Willink Transformations and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *   E.D.Willink - Initial API and implementation
+ */
+package org.eclipse.modisco.java.generation.files;
 
 import java.util.List;
 import java.util.Stack;
@@ -11,6 +21,10 @@ import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.emf.util.JavaSwitch;
 
+/**
+ * @since 1.6
+ */
+@SuppressWarnings("nls")
 public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 {
 	protected final String absoluteOutputPath;
@@ -19,16 +33,15 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		this.absoluteOutputPath = absoluteOutputPath;
 	}
 
-//	@Override
-//	public Object caseASTNode(ASTNode object) {
-//		return super.caseASTNode(object);
-//	}
+	@Override
+	public Object caseASTNode(ASTNode jASTNode) {		// Should be overridden
+		return errorCase(jASTNode);
+	}
 
 	@Override
 	public Object caseAbstractMethodDeclaration(AbstractMethodDeclaration jAbstractMethodDeclaration) {
 		wc(jAbstractMethodDeclaration);
 		appendNodes(jAbstractMethodDeclaration.getAnnotations()) ;
-	//	wci(jAbstractMethodDeclaration);
 		appendModifier(jAbstractMethodDeclaration.getModifier());
 		appendOptionalWrappedNodes("<", jAbstractMethodDeclaration.getTypeParameters(), ", ", "> ");
 		if (jAbstractMethodDeclaration instanceof MethodDeclaration) {
@@ -55,27 +68,24 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseAbstractMethodInvocation(AbstractMethodInvocation object) {
-		// TODO Auto-generated method stub
-		return super.caseAbstractMethodInvocation(object);
+	public Object caseAbstractMethodInvocation(AbstractMethodInvocation jAbstractMethodInvocation) {		// Should be overridden
+		return errorCase(jAbstractMethodInvocation);
 	}
 
 	@Override
-	public Object caseAbstractTypeDeclaration(AbstractTypeDeclaration object) {
-		// TODO Auto-generated method stub
-		return super.caseAbstractTypeDeclaration(object);
+	public Object caseAbstractTypeDeclaration(AbstractTypeDeclaration jAbstractTypeDeclaration) {		// Should be overridden
+		return errorCase(jAbstractTypeDeclaration);
 	}
 
 	@Override
-	public Object caseAbstractTypeQualifiedExpression(AbstractTypeQualifiedExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseAbstractTypeQualifiedExpression(object);
+	public Object caseAbstractTypeQualifiedExpression(AbstractTypeQualifiedExpression jAbstractTypeQualifiedExpression) {		// Should be overridden
+		return errorCase(jAbstractTypeQualifiedExpression);
 	}
 
+
 	@Override
-	public Object caseAbstractVariablesContainer(AbstractVariablesContainer object) {
-		// TODO Auto-generated method stub
-		return super.caseAbstractVariablesContainer(object);
+	public Object caseAbstractVariablesContainer(AbstractVariablesContainer jAbstractVariablesContainer) {		// Should be overridden
+		return errorCase(jAbstractVariablesContainer);
 	}
 
 	@Override
@@ -159,27 +169,38 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseArchive(Archive object) {
-		// TODO Auto-generated method stub
-		return super.caseArchive(object);
+	public Object caseArchive(Archive jArchive) {
+		return errorCase(jArchive);					// should never be called
 	}
 
 	@Override
-	public Object caseArrayAccess(ArrayAccess object) {
-		// TODO Auto-generated method stub
-		return super.caseArrayAccess(object);
+	public Object caseArrayAccess(ArrayAccess jArrayAccess) {	// XXX No unit testing
+		wc(jArrayAccess);
+		appendNode(jArrayAccess.getArray());
+		appendWrappedNode("[", jArrayAccess.getIndex(), "]");
+		wca(jArrayAccess);
+		return this;
 	}
 
 	@Override
-	public Object caseArrayCreation(ArrayCreation object) {
-		// TODO Auto-generated method stub
-		return super.caseArrayCreation(object);
+	public Object caseArrayCreation(ArrayCreation jArrayCreation) {	// XXX No unit testing
+		wc(jArrayCreation);
+		append("new ");
+		ArrayType jArrayType = (ArrayType)jArrayCreation.getType();
+		appendNode(jArrayType.getElementType());
+		appendWrappedNodes("[", jArrayCreation.getDimensions(), "][", "]");
+		appendBrackets(jArrayType.getDimensions() - jArrayCreation.getDimensions().size()); // example of result : (3)(2)()()
+		appendNode(jArrayCreation.getInitializer());
+		wca(jArrayCreation);
+		return this;
 	}
 
 	@Override
-	public Object caseArrayInitializer(ArrayInitializer object) {
-		// TODO Auto-generated method stub
-		return super.caseArrayInitializer(object);
+	public Object caseArrayInitializer(ArrayInitializer jArrayInitializer) {	// XXX No unit testing
+		wc(jArrayInitializer);
+		appendWrappedNodes("{ ", jArrayInitializer.getExpressions(), ", ", " }");
+		wca(jArrayInitializer);
+		return this;
 	}
 
 	@Override
@@ -201,9 +222,14 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseAssertStatement(AssertStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseAssertStatement(object);
+	public Object caseAssertStatement(AssertStatement jAssertStatement) {	// XXX No unit testing
+		wc(jAssertStatement);
+		append("assert ");
+		appendNode(jAssertStatement.getExpression());
+		appendWrappedNode(" : ", jAssertStatement.getMessage(), null);
+		append(";");
+		wca(jAssertStatement);
+		return this;
 	}
 
 	@Override
@@ -239,9 +265,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseBodyDeclaration(BodyDeclaration object) {
-		// TODO Auto-generated method stub
-		return super.caseBodyDeclaration(object);
+	public Object caseBodyDeclaration(BodyDeclaration jBodyDeclaration) {		// Should be overridden
+		return errorCase(jBodyDeclaration);
 	}
 
 	@Override
@@ -253,15 +278,25 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseBreakStatement(BreakStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseBreakStatement(object);
+	public Object caseBreakStatement(BreakStatement jBreakStatement) {	// XXX No unit testing
+		wc(jBreakStatement);
+		append("break ");
+		if (jBreakStatement.getLabel() != null) {
+			append(jBreakStatement.getLabel().getName());
+		}
+		append(";");
+		wca(jBreakStatement);
+		return this;
 	}
 
 	@Override
-	public Object caseCastExpression(CastExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseCastExpression(object);
+	public Object caseCastExpression(CastExpression jCastExpression) {	// XXX No unit testing
+		wc(jCastExpression);
+		appendWrappedNode("(", jCastExpression.getType(), ")");
+		append("  ");
+		appendNode(jCastExpression.getExpression());
+		wca(jCastExpression);
+		return this;
 	}
 
 	@Override
@@ -275,9 +310,11 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseCharacterLiteral(CharacterLiteral object) {
-		// TODO Auto-generated method stub
-		return super.caseCharacterLiteral(object);
+	public Object caseCharacterLiteral(CharacterLiteral jCharacterLiteral) {	// XXX No unit testing
+		wc(jCharacterLiteral);
+		append(jCharacterLiteral.getEscapedValue());
+		wca(jCharacterLiteral);
+		return this;
 	}
 
 	@Override
@@ -305,9 +342,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseClassFile(ClassFile object) {
-		// TODO Auto-generated method stub
-		return super.caseClassFile(object);
+	public Object caseClassFile(ClassFile jClassFile) {
+		return errorCase(jClassFile);					// should never be called
 	}
 
 	@Override
@@ -344,16 +380,21 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		return this;
 	}
 
-	@Override
-	public Object caseConstructorDeclaration(ConstructorDeclaration object) {
-		// TODO Auto-generated method stub
+/*	@Override
+	public Object caseConstructorDeclaration(ConstructorDeclaration object) {	// XXX No unit testing
 		return super.caseConstructorDeclaration(object);
-	}
+	} */
 
 	@Override
-	public Object caseConditionalExpression(ConditionalExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseConditionalExpression(object);
+	public Object caseConditionalExpression(ConditionalExpression jConditionalExpression) {	// XXX No unit testing
+		wc(jConditionalExpression);
+		appendNode(jConditionalExpression.getExpression());
+		append(" ? ");
+		appendNode(jConditionalExpression.getThenExpression());
+		append(" : ");
+		appendNode(jConditionalExpression.getElseExpression());
+		wca(jConditionalExpression);
+		return this;
 	}
 
 	@Override
@@ -368,21 +409,34 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseContinueStatement(ContinueStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseContinueStatement(object);
+	public Object caseContinueStatement(ContinueStatement jContinueStatement) {	// XXX No unit testing
+		wc(jContinueStatement);
+		append("continue ");
+		if (jContinueStatement.getLabel() != null) {
+			append(jContinueStatement.getLabel().getName());
+		}
+		append(";");
+		wca(jContinueStatement);
+		return this;
 	}
 
 	@Override
-	public Object caseDoStatement(DoStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseDoStatement(object);
+	public Object caseDoStatement(DoStatement jDoStatement) {	// XXX No unit testing
+		wc(jDoStatement);
+		append("do ");
+		appendNode(jDoStatement.getBody());
+		appendSoftNewLine();
+		appendWrappedNode("while (", jDoStatement.getExpression(), ");");
+		wca(jDoStatement);
+		return this;
 	}
 
 	@Override
-	public Object caseEmptyStatement(EmptyStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseEmptyStatement(object);
+	public Object caseEmptyStatement(EmptyStatement jEmptyStatement) {	// XXX No unit testing
+		wc(jEmptyStatement);
+		append(";");
+		wca(jEmptyStatement);
+		return this;
 	}
 
 	@Override
@@ -441,10 +495,10 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseExpression(Expression object) {
-		// TODO Auto-generated method stub
-		return super.caseExpression(object);
+	public Object caseExpression(Expression jExpression) {		// Should be overridden
+		return errorCase(jExpression);
 	}
+
 
 	@Override
 	public Object caseExpressionStatement(ExpressionStatement jExpressionStatement) {
@@ -479,9 +533,14 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseForStatement(ForStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseForStatement(object);
+	public Object caseForStatement(ForStatement jForStatement) {	// XXX No unit testing
+		wc(jForStatement);
+		appendWrappedNodes("for (", jForStatement.getInitializers(), ", ", "; ");
+		appendNode(jForStatement.getExpression());
+		appendWrappedNodes(null, jForStatement.getUpdaters(), ", ", ") ");
+		appendNode(jForStatement.getBody());
+		wca(jForStatement);
+		return this;
 	}
 
 	@Override
@@ -547,9 +606,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseInstanceofExpression(InstanceofExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseInstanceofExpression(object);
+	public Object caseInstanceofExpression(InstanceofExpression jInstanceofExpression) {	// XXX No unit testing
+		wc(jInstanceofExpression);
+		appendNode(jInstanceofExpression.getLeftOperand());
+		append(" instanceof ");
+		appendNode(jInstanceofExpression.getRightOperand());
+		wca(jInstanceofExpression);
+		return this;
 	}
 
 	@Override
@@ -599,9 +662,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseLabeledStatement(LabeledStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseLabeledStatement(object);
+	public Object caseLabeledStatement(LabeledStatement jLabeledStatement) {	// XXX No unit testing
+		wc(jLabeledStatement);
+		append(jLabeledStatement.getName());
+		append(" : ");
+		appendNode(jLabeledStatement.getBody());
+		wca(jLabeledStatement);
+		return this;
 	}
 
 	@Override
@@ -612,27 +679,27 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseManifest(Manifest object) {
-		// TODO Auto-generated method stub
-		return super.caseManifest(object);
+	public Object caseManifest(Manifest jManifest) {
+		return errorCase(jManifest);					// should never be called
 	}
 
 	@Override
-	public Object caseManifestAttribute(ManifestAttribute object) {
-		// TODO Auto-generated method stub
-		return super.caseManifestAttribute(object);
+	public Object caseManifestAttribute(ManifestAttribute jManifestAttribute) {
+		return errorCase(jManifestAttribute);					// should never be called
 	}
 
 	@Override
-	public Object caseManifestEntry(ManifestEntry object) {
-		// TODO Auto-generated method stub
-		return super.caseManifestEntry(object);
+	public Object caseManifestEntry(ManifestEntry jManifestEntry) {
+		return errorCase(jManifestEntry);					// should never be called
 	}
 
 	@Override
-	public Object caseMemberRef(MemberRef object) {
-		// TODO Auto-generated method stub
-		return super.caseMemberRef(object);
+	public Object caseMemberRef(MemberRef jMemberRef) {	// XXX No unit testing
+		wc(jMemberRef);
+		appendWrappedNode(null, jMemberRef.getQualifier(), "#");
+		append(jMemberRef.getMember().getName());
+		wca(jMemberRef);
+		return this;
 	}
 
 	@Override
@@ -655,9 +722,15 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseMethodRefParameter(MethodRefParameter object) {
-		// TODO Auto-generated method stub
-		return super.caseMethodRefParameter(object);
+	public Object caseMethodRefParameter(MethodRefParameter jMethodRefParameter) {	// XXX No unit testing
+		appendNode(jMethodRefParameter.getType());
+		if (jMethodRefParameter.isVarargs()) {
+			append("...");
+		}
+		append(" ");
+		append(jMethodRefParameter.getName());
+		wca(jMethodRefParameter);
+		return this;
 	}
 
 	@Override
@@ -707,15 +780,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseNamedElement(NamedElement object) {
-		// TODO Auto-generated method stub
-		return super.caseNamedElement(object);
+	public Object caseNamedElement(NamedElement jNamedElement) {		// Should be overridden
+		return errorCase(jNamedElement);
 	}
 
 	@Override
-	public Object caseNamespaceAccess(NamespaceAccess object) {
-		// TODO Auto-generated method stub
-		return super.caseNamespaceAccess(object);
+	public Object caseNamespaceAccess(NamespaceAccess jNamespaceAccess) {			// Should be overridden
+		return errorCase(jNamespaceAccess);
 	}
 
 	@Override
@@ -763,9 +834,11 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseParenthesizedExpression(ParenthesizedExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseParenthesizedExpression(object);
+	public Object caseParenthesizedExpression(ParenthesizedExpression jParenthesizedExpression) {	// XXX No unit testing
+		wc(jParenthesizedExpression);
+		appendWrappedNode("(", jParenthesizedExpression.getExpression(), ")");
+		wca(jParenthesizedExpression);
+		return this;
 	}
 
 	@Override
@@ -778,69 +851,80 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object casePrefixExpression(PrefixExpression object) {
-		// TODO Auto-generated method stub
-		return super.casePrefixExpression(object);
+	public Object casePrefixExpression(PrefixExpression jPrefixExpression) {	// XXX No unit testing
+		wc(jPrefixExpression);
+		append(jPrefixExpression.getOperator().toString());
+		appendNode(jPrefixExpression.getOperand());
+		wca(jPrefixExpression);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveType(PrimitiveType object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveType(object);
+	public Object casePrimitiveType(PrimitiveType jPrimitiveType) {				// Should be overridden
+		return errorCase(jPrimitiveType);
 	}
 
 	@Override
-	public Object casePrimitiveTypeBoolean(PrimitiveTypeBoolean object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeBoolean(object);
+	public Object casePrimitiveTypeBoolean(PrimitiveTypeBoolean jPrimitiveType) {	// XXX No unit testing
+		append("boolean");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeByte(PrimitiveTypeByte object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeByte(object);
+	public Object casePrimitiveTypeByte(PrimitiveTypeByte jPrimitiveType) {	// XXX No unit testing
+		append("byte");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeChar(PrimitiveTypeChar object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeChar(object);
+	public Object casePrimitiveTypeChar(PrimitiveTypeChar jPrimitiveType) {	// XXX No unit testing
+		append("char");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeDouble(PrimitiveTypeDouble object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeDouble(object);
+	public Object casePrimitiveTypeDouble(PrimitiveTypeDouble jPrimitiveType) {	// XXX No unit testing
+		append("double");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeShort(PrimitiveTypeShort object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeShort(object);
+	public Object casePrimitiveTypeFloat(PrimitiveTypeFloat jPrimitiveType) {	// XXX No unit testing
+		append("float");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeFloat(PrimitiveTypeFloat object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeFloat(object);
+	public Object casePrimitiveTypeInt(PrimitiveTypeInt jPrimitiveType) {	// XXX No unit testing
+		append("int");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeInt(PrimitiveTypeInt object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeInt(object);
+	public Object casePrimitiveTypeLong(PrimitiveTypeLong jPrimitiveType) {	// XXX No unit testing
+		append("long");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeLong(PrimitiveTypeLong object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeLong(object);
+	public Object casePrimitiveTypeShort(PrimitiveTypeShort jPrimitiveType) {	// XXX No unit testing
+		append("short");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeVoid(PrimitiveTypeVoid object) {
-		// TODO Auto-generated method stub
-		return super.casePrimitiveTypeVoid(object);
+	public Object casePrimitiveTypeVoid(PrimitiveTypeVoid jPrimitiveType) {	// XXX No unit testing
+		append("void");
+		wca(jPrimitiveType);
+		return this;
 	}
 
 	@Override
@@ -866,7 +950,6 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	public Object caseSingleVariableDeclaration(SingleVariableDeclaration jSingleVariableDeclaration) {
 		wc(jSingleVariableDeclaration);
 		appendNodes(jSingleVariableDeclaration.getAnnotations());
-	//	wci(jSingleVariableDeclaration);
 		appendModifier(jSingleVariableDeclaration.getModifier());
 		appendWrappedNode(null, jSingleVariableDeclaration.getType(), " ");
 		if (jSingleVariableDeclaration.isVarargs()) {
@@ -880,9 +963,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseStatement(Statement object) {
-		// TODO Auto-generated method stub
-		return super.caseStatement(object);
+	public Object caseStatement(Statement jStatement) {		// Should be overridden
+		return errorCase(jStatement);
 	}
 
 	@Override
@@ -906,9 +988,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseSuperFieldAccess(SuperFieldAccess object) {
-		// TODO Auto-generated method stub
-		return super.caseSuperFieldAccess(object);
+	public Object caseSuperFieldAccess(SuperFieldAccess jSuperFieldAccess) {	// XXX No unit testing
+		wc(jSuperFieldAccess);
+		appendWrappedNode("", jSuperFieldAccess.getQualifier(), ".");
+		append("super.");
+		appendNode(jSuperFieldAccess.getField());
+		wca(jSuperFieldAccess);
+		return this;
 	}
 
 	@Override
@@ -920,21 +1006,39 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseSwitchCase(SwitchCase object) {
-		// TODO Auto-generated method stub
-		return super.caseSwitchCase(object);
+	public Object caseSwitchCase(SwitchCase jSwitchCase) {	// XXX No unit testing
+		wc(jSwitchCase);
+		if (jSwitchCase.isDefault()) {
+			appendWrappedNode("case ", jSwitchCase.getExpression(), null);
+		}
+		else {
+			append("default");
+		}
+		appendWrappedNode(" : ", jSwitchCase.getExpression(), null);
+		wca(jSwitchCase);
+		return this;
 	}
 
 	@Override
-	public Object caseSwitchStatement(SwitchStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseSwitchStatement(object);
+	public Object caseSwitchStatement(SwitchStatement jSwitchStatement) {	// XXX No unit testing
+		wc(jSwitchStatement);
+		appendWrappedNode("switch (", jSwitchStatement.getExpression(), ") {\n");
+		pushIndentation();
+		appendNodes(jSwitchStatement.getStatements());
+		popIndentation();
+		append("}");
+		wca(jSwitchStatement);
+		return this;
 	}
 
 	@Override
-	public Object caseSynchronizedStatement(SynchronizedStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseSynchronizedStatement(object);
+	public Object caseSynchronizedStatement(SynchronizedStatement jSynchronizedStatement) {	// XXX No unit testing
+		wc(jSynchronizedStatement);
+		appendWrappedNode("synchronized (", jSynchronizedStatement.getExpression(), ")");
+		appendSoftSpace();
+		appendNode(jSynchronizedStatement.getBody());
+		wca(jSynchronizedStatement);
+		return this;
 	}
 
 	@Override
@@ -979,9 +1083,12 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseThisExpression(ThisExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseThisExpression(object);
+	public Object caseThisExpression(ThisExpression jThisExpression) {	// XXX No unit testing
+		wc(jThisExpression);
+		appendWrappedNode("", jThisExpression.getQualifier(), ".");
+		append("this");
+		wca(jThisExpression);
+		return this;
 	}
 
 	@Override
@@ -1004,9 +1111,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseType(Type object) {
-		// TODO Auto-generated method stub
-		return super.caseType(object);
+	public Object caseType(Type jType) {		// Should be overridden
+		return errorCase(jType);
 	}
 
 	@Override
@@ -1025,21 +1131,26 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseTypeDeclaration(TypeDeclaration object) {
-		// TODO Auto-generated method stub
-		return super.caseTypeDeclaration(object);
+	public Object caseTypeDeclaration(TypeDeclaration jTypeDeclaration) {		// Should be overridden
+		return errorCase(jTypeDeclaration);
 	}
 
 	@Override
-	public Object caseTypeDeclarationStatement(TypeDeclarationStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseTypeDeclarationStatement(object);
+	public Object caseTypeDeclarationStatement(TypeDeclarationStatement jTypeDeclarationStatement) {	// XXX No unit testing
+		wc(jTypeDeclarationStatement);
+		appendNode(jTypeDeclarationStatement.getDeclaration());
+		wca(jTypeDeclarationStatement);
+		return this;
 	}
 
 	@Override
-	public Object caseTypeLiteral(TypeLiteral object) {
-		// TODO Auto-generated method stub
-		return super.caseTypeLiteral(object);
+	public Object caseTypeLiteral(TypeLiteral jTypeLiteral) {	// XXX No unit testing
+		wc(jTypeLiteral);
+		if (!appendWrappedNode(null, jTypeLiteral.getType(), ".class")) {
+			append("void.class");
+		}
+		wca(jTypeLiteral);
+		return this;
 	}
 
 	@Override
@@ -1093,13 +1204,16 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		return this;
 	}
 
-	/*	@Override
-	public Object caseUnresolvedLabeledStatement(UnresolvedLabeledStatement object) {
-		return super.caseUnresolvedLabeledStatement(object);
-	} */
+	@Override
+	public Object caseUnresolvedLabeledStatement(UnresolvedLabeledStatement jUnresolvedLabeledStatement) {	// XXX No unit testing
+		wc(jUnresolvedLabeledStatement);
+		append(jUnresolvedLabeledStatement.getName());
+		wca(jUnresolvedLabeledStatement);
+		return this;
+	}
 
 	@Override
-	public Object caseUnresolvedMethodDeclaration(UnresolvedMethodDeclaration jUnresolvedMethodDeclaration) {
+	public Object caseUnresolvedMethodDeclaration(UnresolvedMethodDeclaration jUnresolvedMethodDeclaration) {	// XXX No unit testing
 		wc(jUnresolvedMethodDeclaration);
 		append(jUnresolvedMethodDeclaration.getName());
 		wca(jUnresolvedMethodDeclaration);
@@ -1111,15 +1225,21 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		return super.caseUnresolvedSingleVariableDeclaration(object);
 	} */
 
-	/*	@Override
-	public Object caseUnresolvedType(UnresolvedType object) {
-		return super.caseUnresolvedType(object);
-	} */
+	@Override
+	public Object caseUnresolvedType(UnresolvedType jUnresolvedType) {	// XXX No unit testing
+		wc(jUnresolvedType);
+		append(jUnresolvedType.getName());
+		wca(jUnresolvedType);
+		return this;
+	}
 
-/*	@Override
-	public Object caseUnresolvedTypeDeclaration(UnresolvedTypeDeclaration object) {
-		return super.caseUnresolvedTypeDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedTypeDeclaration(UnresolvedTypeDeclaration jUnresolvedTypeDeclaration) {
+		wc(jUnresolvedTypeDeclaration);
+		append(jUnresolvedTypeDeclaration.getName());
+		wca(jUnresolvedTypeDeclaration);
+		return this;
+	}
 
 /*	@Override
 	public Object caseUnresolvedVariableDeclarationFragment(UnresolvedVariableDeclarationFragment object) {
@@ -1127,15 +1247,20 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	} */
 
 	@Override
-	public Object caseVariableDeclaration(VariableDeclaration object) {
-		// TODO Auto-generated method stub
-		return super.caseVariableDeclaration(object);
+	public Object caseVariableDeclaration(VariableDeclaration jVariableDeclaration) {			// Should be overridden
+		return errorCase(jVariableDeclaration);
 	}
 
 	@Override
-	public Object caseVariableDeclarationExpression(VariableDeclarationExpression object) {
-		// TODO Auto-generated method stub
-		return super.caseVariableDeclarationExpression(object);
+	public Object caseVariableDeclarationExpression(VariableDeclarationExpression jVariableDeclarationExpression) {	// XXX No unit testing
+		wc(jVariableDeclarationExpression);
+		appendNodes(jVariableDeclarationExpression.getAnnotations());
+		appendNode(jVariableDeclarationExpression.getModifier());
+		appendNode(jVariableDeclarationExpression.getType());
+		append(" ");
+		appendWrappedNodes(null, jVariableDeclarationExpression.getFragments(), ",", null);
+		wca(jVariableDeclarationExpression);
+		return this;
 	}
 
 	@Override
@@ -1163,18 +1288,21 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
+	public Object caseWhileStatement(WhileStatement jWhileStatement) {	// XXX No unit testing
+		wc(jWhileStatement);
+		appendWrappedNode("while (", jWhileStatement.getBody(), ") ");
+		appendNode(jWhileStatement.getBody());
+		wca(jWhileStatement);
+		return this;
+	}
+
+	@Override
 	public Object caseWildCardType(WildCardType jWildCardType) {
 		wc(jWildCardType);
 		append("?");
 		appendWrappedNode(jWildCardType.isUpperBound() ? " extends " : " super ", jWildCardType.getBound(), null);
 		wca(jWildCardType);
 		return this;
-	}
-
-	@Override
-	public Object caseWhileStatement(WhileStatement object) {
-		// TODO Auto-generated method stub
-		return super.caseWhileStatement(object);
 	}
 
 	@Override
@@ -1186,6 +1314,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	public Object errorCase(EObject eObject) {
+		System.err.println("Missing override case" + eObject.eClass().getName());			// XXX
 		append("Missing override case" + eObject.eClass().getName() + "\n");
 		doChildren(eObject, true);
 		return null;
