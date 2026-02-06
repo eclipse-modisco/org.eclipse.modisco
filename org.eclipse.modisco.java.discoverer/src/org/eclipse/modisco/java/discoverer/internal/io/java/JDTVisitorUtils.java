@@ -28,6 +28,7 @@ import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.PackageDeclaration;
+import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
@@ -417,6 +418,21 @@ public final class JDTVisitorUtils {
 			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString(),
 					primitiveType);
 		}
+	}
+
+	/**
+	 * Return the LabeledStatement that is the identifier target of node, or null if not found.
+	 */
+	public static org.eclipse.jdt.core.dom.LabeledStatement resolveLabel(final org.eclipse.jdt.core.dom.ASTNode node, String identifier) {
+		for (org.eclipse.jdt.core.dom.ASTNode ancestorNode = node; (ancestorNode = ancestorNode.getParent()) != null; ) {
+			if (ancestorNode instanceof org.eclipse.jdt.core.dom.LabeledStatement) {
+				SimpleName ancestorLabel = ((org.eclipse.jdt.core.dom.LabeledStatement)ancestorNode).getLabel();
+				if (ancestorLabel.getIdentifier().equals(identifier)) {
+					return (org.eclipse.jdt.core.dom.LabeledStatement)ancestorNode;
+				}
+			}
+		}
+		return null;
 	}
 
 	/**

@@ -42,6 +42,7 @@ import org.eclipse.jdt.core.dom.IExtendedModifier;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.QualifiedName;
+import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
@@ -595,16 +596,15 @@ public class JDTVisitor extends ASTVisitor {
 		BreakStatement element = (BreakStatement) this.binding.get(node);
 		initializeNode(element, node);
 
-		if (node.getLabel() != null) {
-			PendingElement label = new PendingElement(this.factory);
-			label.setClientNode(element);
-			label.setLinkName("label"); //$NON-NLS-1$
-
-			NamedElement target = JDTVisitorUtils.manageBindingRef(label, node.getLabel(), this);
-			if (target != null) {
-				element.setLabel((LabeledStatement) target);
+		SimpleName nodeLabel = node.getLabel();
+		if (nodeLabel != null) {
+			org.eclipse.jdt.core.dom.LabeledStatement labeledNode = JDTVisitorUtils.resolveLabel(node, nodeLabel.getIdentifier());
+			if (labeledNode != null ) {
+				LabeledStatement labeledElement = (LabeledStatement) this.binding.get(labeledNode);
+				element.setLabel(labeledElement);
 			}
 		}
+		// impossible case of unresolved label treated as label-less
 	}
 
 	@Override
@@ -929,16 +929,15 @@ public class JDTVisitor extends ASTVisitor {
 		ContinueStatement element = (ContinueStatement) this.binding.get(node);
 		initializeNode(element, node);
 
-		if (node.getLabel() != null) {
-			PendingElement label = new PendingElement(this.factory);
-			label.setClientNode(element);
-			label.setLinkName("label"); //$NON-NLS-1$
-
-			NamedElement target = JDTVisitorUtils.manageBindingRef(label, node.getLabel(), this);
-			if (target != null) {
-				element.setLabel((LabeledStatement) target);
+		SimpleName nodeLabel = node.getLabel();
+		if (nodeLabel != null) {
+			org.eclipse.jdt.core.dom.LabeledStatement labeledNode = JDTVisitorUtils.resolveLabel(node, nodeLabel.getIdentifier());
+			if (labeledNode != null ) {
+				LabeledStatement labeledElement = (LabeledStatement) this.binding.get(labeledNode);
+				element.setLabel(labeledElement);
 			}
 		}
+		// impossible case of unresolved label treated as label-less
 	}
 
 	@Override
@@ -1393,6 +1392,9 @@ public class JDTVisitor extends ASTVisitor {
 	public boolean visit(final org.eclipse.jdt.core.dom.LabeledStatement node) {
 		LabeledStatement element = this.factory.createLabeledStatement();
 		this.binding.put(node, element);
+	//	SimpleName label = node.getLabel();
+	//	element.setName(label.getIdentifier());
+	//	JDTVisitorUtils.manageBindingDeclaration(element, label, this);			// XXX surely the label is the definition?
 		return true;
 	}
 
@@ -1407,7 +1409,7 @@ public class JDTVisitor extends ASTVisitor {
 			element.setBody((Statement) this.binding.get(node.getBody()));
 		}
 
-		JDTVisitorUtils.manageBindingDeclaration(element, node.getLabel(), this);
+	//	JDTVisitorUtils.manageBindingDeclaration(element, node.getLabel(), this);			// XXX surely the label is the definition?
 	}
 
 	@Override
