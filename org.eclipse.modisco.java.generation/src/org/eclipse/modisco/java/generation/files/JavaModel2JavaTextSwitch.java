@@ -61,9 +61,10 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 			appendNode(jAbstractMethodDeclaration.getBody());
 		}
 		else {
-			append(";\n");
+			append(";");
 		}
 		wca(jAbstractMethodDeclaration);
+		appendSoftNewLine();
 		return this;
 	}
 
@@ -130,7 +131,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		}
 		wci(jAnnotationTypeDeclaration);
 		popIndentation();
-		append("}\n");
+		append("}");
 		wca(jAnnotationTypeDeclaration);
 		return this;
 	}
@@ -144,7 +145,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		append(jAnnotationTypeMemberDeclaration.getName());
 		append("()");
 		appendWrappedNode(" default ", jAnnotationTypeMemberDeclaration.getDefault(), null);
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jAnnotationTypeMemberDeclaration);
 		return this;
 	}
@@ -174,7 +176,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseArrayAccess(ArrayAccess jArrayAccess) {	// XXX No unit testing
+	public Object caseArrayAccess(ArrayAccess jArrayAccess) {
 		wc(jArrayAccess);
 		appendNode(jArrayAccess.getArray());
 		appendWrappedNode("[", jArrayAccess.getIndex(), "]");
@@ -183,20 +185,23 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseArrayCreation(ArrayCreation jArrayCreation) {	// XXX No unit testing
+	public Object caseArrayCreation(ArrayCreation jArrayCreation) {
 		wc(jArrayCreation);
 		append("new ");
-		ArrayType jArrayType = (ArrayType)jArrayCreation.getType();
+		ArrayType jArrayType = (ArrayType)jArrayCreation.getType().getType();
 		appendNode(jArrayType.getElementType());
-		appendWrappedNodes("[", jArrayCreation.getDimensions(), "][", "]");
-		appendBrackets(jArrayType.getDimensions() - jArrayCreation.getDimensions().size()); // example of result : (3)(2)()()
+		int size = jArrayCreation.getDimensions().size();
+		if (size > 0) {
+			appendWrappedNodes("[", jArrayCreation.getDimensions(), "][", "]");
+		}
+		appendBrackets(jArrayType.getDimensions() - size); // example of result : (3)(2)()()
 		appendNode(jArrayCreation.getInitializer());
 		wca(jArrayCreation);
 		return this;
 	}
 
 	@Override
-	public Object caseArrayInitializer(ArrayInitializer jArrayInitializer) {	// XXX No unit testing
+	public Object caseArrayInitializer(ArrayInitializer jArrayInitializer) {
 		wc(jArrayInitializer);
 		appendWrappedNodes("{ ", jArrayInitializer.getExpressions(), ", ", " }");
 		wca(jArrayInitializer);
@@ -222,12 +227,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseAssertStatement(AssertStatement jAssertStatement) {	// XXX No unit testing
+	public Object caseAssertStatement(AssertStatement jAssertStatement) {
 		wc(jAssertStatement);
 		append("assert ");
 		appendNode(jAssertStatement.getExpression());
 		appendWrappedNode(" : ", jAssertStatement.getMessage(), null);
 		append(";");
+		appendSoftNewLine();
 		wca(jAssertStatement);
 		return this;
 	}
@@ -250,7 +256,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendSoftSpace();
 		append("{\n");
 		pushIndentation();
-		appendNodes(jBlock.getStatements());
+		appendWrappedNodes(null, jBlock.getStatements(), "\n", null);
 		wci(jBlock);
 		popIndentation();
 		append("}\n");				// XXX ?? pre-new-line
@@ -278,22 +284,24 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseBreakStatement(BreakStatement jBreakStatement) {	// XXX No unit testing
+	public Object caseBreakStatement(BreakStatement jBreakStatement) {
 		wc(jBreakStatement);
-		append("break ");
+		append("break");
 		if (jBreakStatement.getLabel() != null) {
+			appendSoftSpace();
 			append(jBreakStatement.getLabel().getName());
 		}
 		append(";");
+		appendSoftNewLine();
 		wca(jBreakStatement);
 		return this;
 	}
 
 	@Override
-	public Object caseCastExpression(CastExpression jCastExpression) {	// XXX No unit testing
+	public Object caseCastExpression(CastExpression jCastExpression) {
 		wc(jCastExpression);
 		appendWrappedNode("(", jCastExpression.getType(), ")");
-		append("  ");
+	//	appendSoftSpace();
 		appendNode(jCastExpression.getExpression());
 		wca(jCastExpression);
 		return this;
@@ -310,7 +318,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseCharacterLiteral(CharacterLiteral jCharacterLiteral) {	// XXX No unit testing
+	public Object caseCharacterLiteral(CharacterLiteral jCharacterLiteral) {
 		wc(jCharacterLiteral);
 		append(jCharacterLiteral.getEscapedValue());
 		wca(jCharacterLiteral);
@@ -319,25 +327,18 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 
 	@Override
 	public Object caseClassDeclaration(ClassDeclaration jClassDeclaration) {
-		append("\n");		// perhaps in package
+		appendSoftNewLine();
 		wc(jClassDeclaration);
 		appendTypeHeader(jClassDeclaration);
 		appendWrappedNode(" extends ", jClassDeclaration.getSuperClass(), null);
 		appendOptionalWrappedNodes(" implements ", jClassDeclaration.getSuperInterfaces(), ", ", null);
 		appendSoftSpace();
 		append("{");
-		pushIndentation();
-		append("\n");
-		for (BodyDeclaration jBodyDeclaration : jClassDeclaration.getBodyDeclarations()) {
-			if (!jBodyDeclaration.isProxy()) {
-				appendNode(jBodyDeclaration);
-			}
-		}
+		appendBodyDeclarations(jClassDeclaration.getBodyDeclarations());
 		wci(jClassDeclaration);
-		popIndentation();
-		append("}\n");				// XXX ?? pre-new-line
+		append("}");				// XXX ?? pre-new-line
 		wca(jClassDeclaration);
-		append("\n");				// XXX ?? pre-new-line
+	//	appendSoftNewLine();
 		return this;
 	}
 
@@ -365,14 +366,15 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 
 	@Override
 	public Object caseCompilationUnit(CompilationUnit jCompilationUnit) {
-		StringBuilder s = new StringBuilder();
-		s.append(absoluteOutputPath);
-		s.append("/");
-		String fileKey = getQualifiedPath(s, jCompilationUnit);
+		StringBuilder sFile = new StringBuilder();
+		sFile.append(absoluteOutputPath);
+		sFile.append("/");
+		String fileKey = getQualifiedPath(sFile, jCompilationUnit);
 		pushFile();
 		wc(jCompilationUnit);
 		appendNode(jCompilationUnit.getPackage());
-		appendNodes(jCompilationUnit.getImports());
+		appendOptionalWrappedNodes("\n", jCompilationUnit.getImports(), null, null);
+		append("\n");
 		wci(jCompilationUnit);
 		appendNodes( jCompilationUnit.getTypes());
 		wca(jCompilationUnit);
@@ -381,12 +383,12 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 /*	@Override
-	public Object caseConstructorDeclaration(ConstructorDeclaration object) {	// XXX No unit testing
+	public Object caseConstructorDeclaration(ConstructorDeclaration object) { => AbstractMethodDeclaration
 		return super.caseConstructorDeclaration(object);
 	} */
 
 	@Override
-	public Object caseConditionalExpression(ConditionalExpression jConditionalExpression) {	// XXX No unit testing
+	public Object caseConditionalExpression(ConditionalExpression jConditionalExpression) {
 		wc(jConditionalExpression);
 		appendNode(jConditionalExpression.getExpression());
 		append(" ? ");
@@ -403,39 +405,45 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendOptionalWrappedNodes("<", jConstructorInvocation.getTypeArguments(), ", ", ">");
 		append("this");
 		appendWrappedNodes("(", jConstructorInvocation.getArguments(), ", ", ")");
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jConstructorInvocation);
 		return this;
 	}
 
 	@Override
-	public Object caseContinueStatement(ContinueStatement jContinueStatement) {	// XXX No unit testing
+	public Object caseContinueStatement(ContinueStatement jContinueStatement) {
 		wc(jContinueStatement);
-		append("continue ");
+		append("continue");
 		if (jContinueStatement.getLabel() != null) {
+			appendSoftSpace();
 			append(jContinueStatement.getLabel().getName());
 		}
 		append(";");
 		wca(jContinueStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
 	@Override
-	public Object caseDoStatement(DoStatement jDoStatement) {	// XXX No unit testing
+	public Object caseDoStatement(DoStatement jDoStatement) {
 		wc(jDoStatement);
 		append("do ");
 		appendNode(jDoStatement.getBody());
 		appendSoftNewLine();
 		appendWrappedNode("while (", jDoStatement.getExpression(), ");");
+		appendSoftNewLine();
 		wca(jDoStatement);
+//		appendSoftNewLine();
 		return this;
 	}
 
 	@Override
-	public Object caseEmptyStatement(EmptyStatement jEmptyStatement) {	// XXX No unit testing
+	public Object caseEmptyStatement(EmptyStatement jEmptyStatement) {
 		wc(jEmptyStatement);
 		append(";");
 		wca(jEmptyStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
@@ -452,6 +460,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendSoftSpace();
 		appendNode(jEnhancedForStatement.getBody());
 		wca(jEnhancedForStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
@@ -469,7 +478,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 
 	@Override
 	public Object caseEnumDeclaration(EnumDeclaration jEnumDeclaration) {
-		append("\n");		// perhaps in package
+		appendSoftNewLine();
 		wc(jEnumDeclaration);
 		appendNodes(jEnumDeclaration.getAnnotations());
 		appendNode(jEnumDeclaration.getModifier());
@@ -480,7 +489,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendSoftSpace();
 		append("{\n");
 		pushIndentation();
-		appendWrappedNodes(null, jEnumDeclaration.getEnumConstants(), ",\n", ";\n");
+		appendWrappedNodes(null, jEnumDeclaration.getEnumConstants(), ",\n", ";");
+		appendSoftNewLine();
 		for (BodyDeclaration jBodyDeclaration : jEnumDeclaration.getBodyDeclarations()) {
 			if (!jBodyDeclaration.isProxy()) {
 				appendNode(jBodyDeclaration);				// an implicit constructor may exist as proxy
@@ -488,9 +498,9 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		}
 		wci(jEnumDeclaration);
 		popIndentation();
-		append("}\n");				// XXX ?? pre-new-line
+		append("}");				// XXX ?? pre-new-line
 		wca(jEnumDeclaration);
-		append("\n");				// XXX ?? pre-new-line
+	//	appendSoftNewLine();
 		return this;
 	}
 
@@ -504,7 +514,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	public Object caseExpressionStatement(ExpressionStatement jExpressionStatement) {
 		wc(jExpressionStatement);
 		appendNode(jExpressionStatement.getExpression());
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jExpressionStatement);
 		return this;
 	}
@@ -527,19 +538,25 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendModifier(jFieldDeclaration.getModifier());
 		appendWrappedNode(null, jFieldDeclaration.getType(), " ");
 		appendWrappedNodes(null, jFieldDeclaration.getFragments(), ", ", null);
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jFieldDeclaration);
 		return this;
 	}
 
 	@Override
-	public Object caseForStatement(ForStatement jForStatement) {	// XXX No unit testing
+	public Object caseForStatement(ForStatement jForStatement) {
 		wc(jForStatement);
-		appendWrappedNodes("for (", jForStatement.getInitializers(), ", ", "; ");
+		append("for (");
+		appendWrappedNodes(null, jForStatement.getInitializers(), ", ", null);
+		append("; ");
 		appendNode(jForStatement.getExpression());
-		appendWrappedNodes(null, jForStatement.getUpdaters(), ", ", ") ");
+		append("; ");
+		appendWrappedNodes(null, jForStatement.getUpdaters(), ", ", null);
+		append(") ");
 		appendNode(jForStatement.getBody());
 		wca(jForStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
@@ -606,7 +623,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseInstanceofExpression(InstanceofExpression jInstanceofExpression) {	// XXX No unit testing
+	public Object caseInstanceofExpression(InstanceofExpression jInstanceofExpression) {
 		wc(jInstanceofExpression);
 		appendNode(jInstanceofExpression.getLeftOperand());
 		append(" instanceof ");
@@ -617,24 +634,16 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 
 	@Override
 	public Object caseInterfaceDeclaration(InterfaceDeclaration jInterfaceDeclaration) {
-		append("\n");		// perhaps in package
+		appendSoftNewLine();
 		wc(jInterfaceDeclaration);
 		appendTypeHeader(jInterfaceDeclaration);
 		appendOptionalWrappedNodes(" extends ", jInterfaceDeclaration.getSuperInterfaces(), ", ", null);
 		appendSoftSpace();
 		append("{");
-		pushIndentation();
-		append("\n");
-		for (BodyDeclaration jBodyDeclaration : jInterfaceDeclaration.getBodyDeclarations()) {
-			if (!jBodyDeclaration.isProxy()) {
-				appendNode(jBodyDeclaration);				// an implicit constructor may exist as proxy
-			}
-		}
+		appendBodyDeclarations(jInterfaceDeclaration.getBodyDeclarations());
 		wci(jInterfaceDeclaration);
-		popIndentation();
-		append("}\n");				// XXX ?? pre-new-line
+		append("}");
 		wca(jInterfaceDeclaration);
-		append("\n");				// XXX ?? pre-new-line
 		return this;
 	}
 
@@ -662,7 +671,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseLabeledStatement(LabeledStatement jLabeledStatement) {	// XXX No unit testing
+	public Object caseLabeledStatement(LabeledStatement jLabeledStatement) {
 		wc(jLabeledStatement);
 		append(jLabeledStatement.getName());
 		append(" : ");
@@ -722,7 +731,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseMethodRefParameter(MethodRefParameter jMethodRefParameter) {	// XXX No unit testing
+	public Object caseMethodRefParameter(MethodRefParameter jMethodRefParameter) {
 		appendNode(jMethodRefParameter.getType());
 		if (jMethodRefParameter.isVarargs()) {
 			append("...");
@@ -834,7 +843,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseParenthesizedExpression(ParenthesizedExpression jParenthesizedExpression) {	// XXX No unit testing
+	public Object caseParenthesizedExpression(ParenthesizedExpression jParenthesizedExpression) {
 		wc(jParenthesizedExpression);
 		appendWrappedNode("(", jParenthesizedExpression.getExpression(), ")");
 		wca(jParenthesizedExpression);
@@ -851,7 +860,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object casePrefixExpression(PrefixExpression jPrefixExpression) {	// XXX No unit testing
+	public Object casePrefixExpression(PrefixExpression jPrefixExpression) {
 		wc(jPrefixExpression);
 		append(jPrefixExpression.getOperator().toString());
 		appendNode(jPrefixExpression.getOperand());
@@ -865,63 +874,63 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object casePrimitiveTypeBoolean(PrimitiveTypeBoolean jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeBoolean(PrimitiveTypeBoolean jPrimitiveType) {	// Only used as an orphan type
 		append("boolean");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeByte(PrimitiveTypeByte jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeByte(PrimitiveTypeByte jPrimitiveType) {	// Only used as an orphan type
 		append("byte");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeChar(PrimitiveTypeChar jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeChar(PrimitiveTypeChar jPrimitiveType) {	// Only used as an orphan type
 		append("char");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeDouble(PrimitiveTypeDouble jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeDouble(PrimitiveTypeDouble jPrimitiveType) {	// Only used as an orphan type
 		append("double");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeFloat(PrimitiveTypeFloat jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeFloat(PrimitiveTypeFloat jPrimitiveType) {	// Only used as an orphan type
 		append("float");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeInt(PrimitiveTypeInt jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeInt(PrimitiveTypeInt jPrimitiveType) {	// Only used as an orphan type
 		append("int");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeLong(PrimitiveTypeLong jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeLong(PrimitiveTypeLong jPrimitiveType) {	// Only used as an orphan type
 		append("long");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeShort(PrimitiveTypeShort jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeShort(PrimitiveTypeShort jPrimitiveType) {	// Only used as an orphan type
 		append("short");
 		wca(jPrimitiveType);
 		return this;
 	}
 
 	@Override
-	public Object casePrimitiveTypeVoid(PrimitiveTypeVoid jPrimitiveType) {	// XXX No unit testing
+	public Object casePrimitiveTypeVoid(PrimitiveTypeVoid jPrimitiveType) {	// Only used as an orphan type
 		append("void");
 		wca(jPrimitiveType);
 		return this;
@@ -930,9 +939,10 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	@Override
 	public Object caseReturnStatement(ReturnStatement jReturnStatement) {
 		wc(jReturnStatement);
-		append("return ");
-		appendNode(jReturnStatement.getExpression());
-		append(";\n");
+		append("return");
+		appendWrappedNode(" ", jReturnStatement.getExpression(), null);
+		append(";");
+		appendSoftNewLine();
 		wca(jReturnStatement);
 		return this;
 	}
@@ -982,13 +992,14 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendOptionalWrappedNodes("<", jSuperConstructorInvocation.getTypeArguments(), ", ", ">");
 		append("super");
 		appendWrappedNodes("(", jSuperConstructorInvocation.getArguments(), ", ", ")");
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jSuperConstructorInvocation);
 		return this;
 	}
 
 	@Override
-	public Object caseSuperFieldAccess(SuperFieldAccess jSuperFieldAccess) {	// XXX No unit testing
+	public Object caseSuperFieldAccess(SuperFieldAccess jSuperFieldAccess) {
 		wc(jSuperFieldAccess);
 		appendWrappedNode("", jSuperFieldAccess.getQualifier(), ".");
 		append("super.");
@@ -1000,39 +1011,45 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	@Override
 	public Object caseSuperMethodInvocation(SuperMethodInvocation jSuperMethodInvocation) {
 		wc(jSuperMethodInvocation);
+		append("super.");
 		appendMethodHeader(jSuperMethodInvocation);
 		wca(jSuperMethodInvocation);
 		return this;
 	}
 
 	@Override
-	public Object caseSwitchCase(SwitchCase jSwitchCase) {	// XXX No unit testing
+	public Object caseSwitchCase(SwitchCase jSwitchCase) {
+		appendSoftNewLine();
 		wc(jSwitchCase);
 		if (jSwitchCase.isDefault()) {
-			appendWrappedNode("case ", jSwitchCase.getExpression(), null);
-		}
-		else {
 			append("default");
 		}
-		appendWrappedNode(" : ", jSwitchCase.getExpression(), null);
+		else {
+			appendWrappedNode("case ", jSwitchCase.getExpression(), null);
+		}
+		append(": ");
+	//	appendWrappedNode(" : ", jSwitchCase.getExpression(), null);
 		wca(jSwitchCase);
+	//	appendSoftNewLine();
 		return this;
 	}
 
 	@Override
-	public Object caseSwitchStatement(SwitchStatement jSwitchStatement) {	// XXX No unit testing
+	public Object caseSwitchStatement(SwitchStatement jSwitchStatement) {
 		wc(jSwitchStatement);
 		appendWrappedNode("switch (", jSwitchStatement.getExpression(), ") {\n");
 		pushIndentation();
 		appendNodes(jSwitchStatement.getStatements());
+		appendSoftNewLine();
 		popIndentation();
 		append("}");
 		wca(jSwitchStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
 	@Override
-	public Object caseSynchronizedStatement(SynchronizedStatement jSynchronizedStatement) {	// XXX No unit testing
+	public Object caseSynchronizedStatement(SynchronizedStatement jSynchronizedStatement) {
 		wc(jSynchronizedStatement);
 		appendWrappedNode("synchronized (", jSynchronizedStatement.getExpression(), ")");
 		appendSoftSpace();
@@ -1083,7 +1100,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseThisExpression(ThisExpression jThisExpression) {	// XXX No unit testing
+	public Object caseThisExpression(ThisExpression jThisExpression) {
 		wc(jThisExpression);
 		appendWrappedNode("", jThisExpression.getQualifier(), ".");
 		append("this");
@@ -1094,7 +1111,8 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	@Override
 	public Object caseThrowStatement(ThrowStatement jThrowStatement) {
 		wc(jThrowStatement);
-		appendWrappedNode("throw ", jThrowStatement.getExpression(), ";\n");
+		appendWrappedNode("throw ", jThrowStatement.getExpression(), ";");
+		appendSoftNewLine();
 		wca(jThrowStatement);
 		return this;
 	}
@@ -1136,15 +1154,16 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseTypeDeclarationStatement(TypeDeclarationStatement jTypeDeclarationStatement) {	// XXX No unit testing
+	public Object caseTypeDeclarationStatement(TypeDeclarationStatement jTypeDeclarationStatement) {
 		wc(jTypeDeclarationStatement);
 		appendNode(jTypeDeclarationStatement.getDeclaration());
 		wca(jTypeDeclarationStatement);
+		appendSoftNewLine();
 		return this;
 	}
 
 	@Override
-	public Object caseTypeLiteral(TypeLiteral jTypeLiteral) {	// XXX No unit testing
+	public Object caseTypeLiteral(TypeLiteral jTypeLiteral) {
 		wc(jTypeLiteral);
 		if (!appendWrappedNode(null, jTypeLiteral.getType(), ".class")) {
 			append("void.class");
@@ -1162,30 +1181,45 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		return this;
 	}
 
-	/*	@Override
-	public Object caseUnresolvedAnnotationDeclaration(UnresolvedAnnotationDeclaration object) {
-		return super.caseUnresolvedAnnotationDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedAnnotationDeclaration(UnresolvedAnnotationDeclaration jUnresolvedAnnotationDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedAnnotationDeclaration);
+		append(jUnresolvedAnnotationDeclaration.getName());
+		wca(jUnresolvedAnnotationDeclaration);
+		return this;
+	}
 
-	/*	@Override
-	public Object caseUnresolvedAnnotationTypeMemberDeclaration(UnresolvedAnnotationTypeMemberDeclaration object) {
-		return super.caseUnresolvedAnnotationTypeMemberDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedAnnotationTypeMemberDeclaration(UnresolvedAnnotationTypeMemberDeclaration jUnresolvedAnnotationTypeMemberDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedAnnotationTypeMemberDeclaration);
+		append(jUnresolvedAnnotationTypeMemberDeclaration.getName());
+		wca(jUnresolvedAnnotationTypeMemberDeclaration);
+		return this;
+	}
 
-	/*	@Override
-	public Object caseUnresolvedClassDeclaration(UnresolvedClassDeclaration object) {
-		return super.caseUnresolvedClassDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedClassDeclaration(UnresolvedClassDeclaration jUnresolvedClassDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedClassDeclaration);
+		append(jUnresolvedClassDeclaration.getName());
+		wca(jUnresolvedClassDeclaration);
+		return this;
+	}
 
-	/*	@Override
-	public Object caseUnresolvedEnumDeclaration(UnresolvedEnumDeclaration object) {
-		return super.caseUnresolvedEnumDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedEnumDeclaration(UnresolvedEnumDeclaration jUnresolvedEnumDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedEnumDeclaration);
+		append(jUnresolvedEnumDeclaration.getName());
+		wca(jUnresolvedEnumDeclaration);
+		return this;
+	}
 
-	/*	@Override
-	public Object caseUnresolvedInterfaceDeclaration(UnresolvedInterfaceDeclaration object) {
-		return super.caseUnresolvedInterfaceDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedInterfaceDeclaration(UnresolvedInterfaceDeclaration jUnresolvedInterfaceDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedInterfaceDeclaration);
+		append(jUnresolvedInterfaceDeclaration.getName());
+		wca(jUnresolvedInterfaceDeclaration);
+		return this;
+	}
 
 	@Override
 	public Object caseUnresolvedItem(UnresolvedItem jUnresolvedItem) {
@@ -1220,10 +1254,13 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		return this;
 	}
 
-/*	@Override
-	public Object caseUnresolvedSingleVariableDeclaration(UnresolvedSingleVariableDeclaration object) {
-		return super.caseUnresolvedSingleVariableDeclaration(object);
-	} */
+	@Override
+	public Object caseUnresolvedSingleVariableDeclaration(UnresolvedSingleVariableDeclaration jUnresolvedSingleVariableDeclaration) {	// XXX No unit testing
+		wc(jUnresolvedSingleVariableDeclaration);
+		append(jUnresolvedSingleVariableDeclaration.getName());
+		wca(jUnresolvedSingleVariableDeclaration);
+		return this;
+	}
 
 	@Override
 	public Object caseUnresolvedType(UnresolvedType jUnresolvedType) {	// XXX No unit testing
@@ -1252,7 +1289,7 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 	}
 
 	@Override
-	public Object caseVariableDeclarationExpression(VariableDeclarationExpression jVariableDeclarationExpression) {	// XXX No unit testing
+	public Object caseVariableDeclarationExpression(VariableDeclarationExpression jVariableDeclarationExpression) {
 		wc(jVariableDeclarationExpression);
 		appendNodes(jVariableDeclarationExpression.getAnnotations());
 		appendNode(jVariableDeclarationExpression.getModifier());
@@ -1282,15 +1319,16 @@ public class JavaModel2JavaTextSwitch extends JavaModel2JavaTextUtils
 		appendBrackets(jVariableDeclarationStatement.getExtraArrayDimensions());
 		append(" ");
 		appendWrappedNodes(null, jVariableDeclarationStatement.getFragments(), ",", null);
-		append(";\n");
+		append(";");
+		appendSoftNewLine();
 		wca(jVariableDeclarationStatement);
 		return this;
 	}
 
 	@Override
-	public Object caseWhileStatement(WhileStatement jWhileStatement) {	// XXX No unit testing
+	public Object caseWhileStatement(WhileStatement jWhileStatement) {
 		wc(jWhileStatement);
-		appendWrappedNode("while (", jWhileStatement.getBody(), ") ");
+		appendWrappedNode("while (", jWhileStatement.getExpression(), ") ");
 		appendNode(jWhileStatement.getBody());
 		wca(jWhileStatement);
 		return this;

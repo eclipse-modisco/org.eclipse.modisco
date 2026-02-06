@@ -15,6 +15,7 @@ package org.eclipse.modisco.java.discoverer.tests;
 import java.net.URL;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
@@ -156,9 +157,9 @@ public class SimpleBlackBoxDiscovery {
 		Assert.assertNotNull(outputModel);
 
 		Diagnostician diagnostician = new Diagnostician();
+		BasicDiagnostic defaultDiagnostic = diagnostician.createDefaultDiagnostic(outputModel.getContents().get(0));
 		for (EObject eObject : outputModel.getContents()) {
-			boolean result = diagnostician.validate(eObject,
-					(DiagnosticChain) null);
+			boolean result = diagnostician.validate(eObject, defaultDiagnostic);
 			Assert.assertTrue(result);
 		}
 	}

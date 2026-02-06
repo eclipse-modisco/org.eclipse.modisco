@@ -21,13 +21,16 @@ public class Comments {
 	
 	/**
 	 * javadoc on field
+	 * @see Comments#s
 	 */
 	public String s;
 	
 	/**
 	 * javadoc on method
+	 * {@link #method(int p)}
+	 * @see #method(int p)#p pass me
 	 */
-	public void method(){
+	public void method(int p){
 		//in method
 	}
 	

@@ -30,7 +30,7 @@ import org.eclipse.modisco.java.generation.utils.IndentingStringBuilder;
 @SuppressWarnings("nls")
 public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 {
-	private IndentingStringBuilder indentingStringBuilder = null;//new IndentingStringBuilder();
+	private IndentingStringBuilder indentingStringBuilder = null;
 	private Map<String, String> file2text = new HashMap<>();
 
 	protected void append(boolean value) {
@@ -39,6 +39,29 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 
 	protected void append(String string) {
 		indentingStringBuilder.append(string);
+	}
+
+	protected void appendBodyDeclarations(List<BodyDeclaration> bodyDeclarations) {
+		if (!bodyDeclarations.isEmpty()) {
+			boolean gotOne = false;
+			for (BodyDeclaration jBodyDeclaration : bodyDeclarations) {
+				if (!jBodyDeclaration.isProxy()) {
+					if (!gotOne) {
+						gotOne = true;
+						pushIndentation();
+						appendSoftNewLine();			// Prefix
+					}
+					else {
+						append("\n");			// Separator maybe post-Suffix
+					}
+					appendNode(jBodyDeclaration);
+					appendSoftNewLine();				// Suffix maybe pre-Separator
+				}
+			}
+			if (gotOne) {
+				popIndentation();
+			}
+		}
 	}
 	
 	protected void appendBrackets(int d) {
@@ -50,6 +73,10 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 				append("[]");
 			}
 		}
+	}
+
+	protected void appendEndLine() {
+		indentingStringBuilder.appendEndLine();
 	}
 
 	protected void appendJavaKeyword(AbstractTypeDeclaration jAbstractTypeDeclaration) {
@@ -82,6 +109,8 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 		}
 	}
 	
+	public static Map<String, Integer> eClassName2coverage = null;			// Assign a Map to a ctivate coverage instrumentation
+
 	/**
 	 * If jNode non-null, append the text appropriate for jNode returning true,else retutn false.
 	 */
@@ -93,6 +122,10 @@ public class JavaModel2JavaTextUtils extends JavaSwitch<Object>
 		int classifierID = eClass.getClassifierID();
 		doSwitch(classifierID, jNode);				// TODO short cut eases debug single stepping
 	//	doSwitch(jNode);
+		if (eClassName2coverage != null) {
+			String eClassName = eClass.getName();
+			eClassName2coverage.put(eClassName, eClassName2coverage.getOrDefault(eClassName, 0).intValue()+1);
+		}
 		return true;
 	}
 

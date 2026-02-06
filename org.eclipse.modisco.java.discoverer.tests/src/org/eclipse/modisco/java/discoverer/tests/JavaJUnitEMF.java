@@ -16,6 +16,10 @@ package org.eclipse.modisco.java.discoverer.tests;
 
 import java.util.Iterator;
 
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.Annotation;
 import org.eclipse.modisco.java.AnnotationMemberValuePair;
@@ -42,23 +46,50 @@ import org.eclipse.modisco.java.TypeDeclaration;
 import org.eclipse.modisco.java.TypeParameter;
 import org.eclipse.modisco.java.VariableDeclarationFragment;
 import org.eclipse.modisco.java.VisibilityKind;
+import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
 import org.eclipse.modisco.java.discoverer.tests.utils.AbstractDiscoverTest;
 import org.eclipse.modisco.java.internal.util.JavaUtil;
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 
 public class JavaJUnitEMF extends AbstractDiscoverTest {
 
+	public static class TestDiscoverJavaModelFromJavaProject extends DiscoverJavaModelFromJavaProject
+	{
+		@Override
+		public void setDefaultTargetURI(URI defaultURI) {
+			if (getDefaultTargetURI() == null) {
+				super.setDefaultTargetURI(defaultURI);
+			}
+		}
+	}
+
 	private static final int MAGIC_NUMBER = 3;
+	
+	@Rule
+	public TestName name = new TestName();
 
 	@Override
 	protected String getTargetProjectName() {
-		return Activator.PLUGIN_ID + "_test001"; //$NON-NLS-1$
+		return Activator.PLUGIN_ID + "_" + name.getMethodName(); //$NON-NLS-1$
 	}
 
 	@Override
 	protected String getSourcesReferencePath() {
 		return "/workspace/test001/"; //$NON-NLS-1$
+	}
+	
+	@Override
+	protected void loadResource(final IJavaProject javaProject) throws Exception {
+		TestDiscoverJavaModelFromJavaProject discoverer = new TestDiscoverJavaModelFromJavaProject();
+		IProject project = javaProject.getProject();
+		String fileName = project.getName() + "/" + Activator.PLUGIN_ID + "_test001.javaxmi";
+		discoverer.setDefaultTargetURI(URI.createPlatformResourceURI(fileName, true));
+		discoverer.setSerializeTarget(true);
+		discoverer.discoverElement(javaProject, new NullProgressMonitor());
+		setResource(discoverer.getTargetModel());
 	}
 
 	/**

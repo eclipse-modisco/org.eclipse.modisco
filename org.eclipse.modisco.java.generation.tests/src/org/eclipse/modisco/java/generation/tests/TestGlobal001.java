@@ -13,10 +13,18 @@ package org.eclipse.modisco.java.generation.tests;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.java.emf.JavaPackage;
+import org.eclipse.modisco.java.generation.files.JavaModel2JavaTextUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -125,17 +133,18 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	}
 
 	/**
-	 * Launch a java files generation, and compares result with from reference
-	 * java files.
-	 *
-	 * @throws URISyntaxException
-	 * @throws IOException
-	 * @throws CoreException
+	 * Launch a java files generation, and compares result with from reference java files.
+	 * 
+	 * The java files are identified by
+	 * /org.eclipse.modisco.java.generation.tests/resources/org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
+	 * which is copied from any org.eclipse.modisco.java.discoverer.tests.JavaJUnitEMF test as e.g.
+	 * platform:/resource/org.eclipse.modisco.java.discoverer.tests_modifiers/org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
+	 * which may be found at e.g.
+	 * E:\Tools\Eclipse\4.38+modisco\junit-workspace\org.eclipse.modisco.java.discoverer.tests_modifiers\org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
 	 */
-//	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
 	@Test
-	public final void test001_direct() throws URISyntaxException, CoreException,
-			IOException {
+	public final void test001_direct() throws URISyntaxException, CoreException, IOException {
+		JavaModel2JavaTextUtils.eClassName2coverage = new HashMap<>();
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();
 		String code = generateJavaCodeDirect(sourceJavaModel, targetJavaDirectory);
@@ -159,5 +168,22 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 						+ Messages.DiffGeneratedJavaTest_8
 						+ targetJavaDirectory.getAbsolutePath(),
 				compareOldAndNewFiles);
+		List<String> eClassNames = new ArrayList<>(JavaModel2JavaTextUtils.eClassName2coverage.keySet());
+		Collections.sort(eClassNames);
+		//	for (String eClassName : eClassNames) {
+		for (EClassifier eClassifier : JavaPackage.eINSTANCE.getEClassifiers()) {
+			if ((eClassifier instanceof EClass) && !((EClass)eClassifier).isAbstract()) {
+				int count = JavaModel2JavaTextUtils.eClassName2coverage.getOrDefault(eClassifier.getName(), 0);
+				System.out.println(eClassifier.getName() + " " +  count);
+			}
+		}
+		for (EClassifier eClassifier : JavaPackage.eINSTANCE.getEClassifiers()) {
+			if ((eClassifier instanceof EClass) && !((EClass)eClassifier).isAbstract()) {
+				int count = JavaModel2JavaTextUtils.eClassName2coverage.getOrDefault(eClassifier.getName(), 0);
+				if (count == 0) {
+					System.out.println("No test coverage for " + eClassifier.getName());
+				}
+			}
+		}
 	}
 }
