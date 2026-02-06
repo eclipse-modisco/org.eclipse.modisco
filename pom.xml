@@ -85,9 +85,9 @@
     <module>org.eclipse.modisco.infra.browser.ecore.core</module>
     <module>org.eclipse.modisco.infra.browser.editor.ui</module>
     <module>org.eclipse.modisco.infra.discovery</module>
-    <module>org.eclipse.modisco.infra.discovery.benchmark.core</module>
-    <module>org.eclipse.modisco.infra.discovery.benchmark.metamodel</module>
-    <module>org.eclipse.modisco.infra.discovery.benchmark.ui</module>
+    <!--module>Issue 1102:org.eclipse.modisco.infra.discovery.benchmark.core</module-->
+    <!--module>Issue 1102:org.eclipse.modisco.infra.discovery.benchmark.metamodel</module-->
+    <!--module>Issue 1102:org.eclipse.modisco.infra.discovery.benchmark.ui</module-->
     <module>org.eclipse.modisco.infra.discovery.core</module>
     <module>org.eclipse.modisco.infra.discovery.ui</module>
     <module>org.eclipse.modisco.java.composition</module>
@@ -137,7 +137,7 @@
     <module>org.eclipse.modisco.util.emf.core</module>
     <module>org.eclipse.modisco.utils.chart.birt.core</module>
     <module>org.eclipse.modisco.utils.chart.metamodel</module>
-    <module>org.eclipse.modisco.utils.core</module>
+    <!--module>Issue 1102:org.eclipse.modisco.utils.core</module-->
     <module>org.eclipse.modisco.workflow</module>
     <module>org.eclipse.modisco.workflow.core</module>
     <module>org.eclipse.modisco.workflow.ui</module>
@@ -150,7 +150,7 @@
     <module>org.eclipse.modisco.facet.feature</module>
     <module>org.eclipse.modisco.infra.browser.feature</module>
     <module>org.eclipse.modisco.infra.cdo.derby.feature</module>
-    <module>org.eclipse.modisco.infra.discovery.benchmark.feature</module>
+    <!--module>Issue 1102:org.eclipse.modisco.infra.discovery.benchmark.feature</module-->
     <module>org.eclipse.modisco.infra.omg.feature</module>
     <module>org.eclipse.modisco.infrastructure.feature</module>
     <module>org.eclipse.modisco.java.cdo.feature</module>

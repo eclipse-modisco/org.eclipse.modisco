@@ -9,10 +9,6 @@
     <!--repository location="https://download.eclipse.org/releases/2020-12/202011061000"/-->
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-    <unit id="org.eclipse.acceleo.aql.feature.feature.group" version="0.0.0"/>
-    <repository location="https://download.eclipse.org/acceleo/updates/releases/4.2/R202510230846/"/>
-  </location>
-  <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
     <unit id="org.eclipse.m2m.atl.emftvm.feature.group" version="0.0.0"/>
     <unit id="org.eclipse.m2m.atl.feature.group" version="0.0.0"/>
     <repository location="https://download.eclipse.org/mmt/atl/updates/releases/latest"/>
@@ -83,6 +79,7 @@
     <repository location="https://download.eclipse.org/cbi/updates/license"/>
   </location>
   <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+    <unit id="com.google.guava" version="0.0.0"/>
     <unit id="org.antlr.runtime" version="3.2.0.v20230929-1400"/> 
     <unit id="org.antlr.runtime.source" version="3.2.0.v20230929-1400"/> 
     <unit id="org.apache.commons.cli" version="0.0.0"/>

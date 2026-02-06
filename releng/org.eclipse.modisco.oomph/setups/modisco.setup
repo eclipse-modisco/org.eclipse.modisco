@@ -109,9 +109,6 @@
           name="org.eclipse.acceleo.feature.group"
           optional="true"/>
       <requirement
-          name="org.eclipse.acceleo.aql.feature.feature.group"
-          optional="true"/>
-      <requirement
           name="org.eclipse.birt.chart.device.extension"/>
       <requirement
           name="org.eclipse.birt.chart.engine"/>
@@ -641,9 +638,6 @@
           name="org.eclipse.m2m.atl.feature.group"/>
       <requirement
           name="org.eclipse.acceleo.feature.group"
-          optional="true"/>
-      <requirement
-          name="org.eclipse.acceleo.aql.feature.feature.group"
           optional="true"/>
       <requirement
           name="org.eclipse.slf4j"

@@ -86,12 +86,6 @@
    <feature id="org.eclipse.modisco.xml.feature.source" version="0.0.0">
       <category name="org.eclipse.modisco.updatesite.technologies"/>
    </feature>
-   <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature" version="0.0.0">
-      <category name="org.eclipse.modisco.updatesite.dev"/>
-   </feature>
-   <feature id="org.eclipse.modisco.infra.discovery.benchmark.feature.source" version="0.0.0">
-      <category name="org.eclipse.modisco.updatesite.dev"/>
-   </feature>
    <feature id="org.eclipse.modisco.all.feature" version="0.0.0">
       <category name="org.eclipse.modisco.updatesite.dev"/>
    </feature>
