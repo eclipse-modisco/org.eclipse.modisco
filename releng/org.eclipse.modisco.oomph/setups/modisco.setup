@@ -1070,6 +1070,19 @@
           location="${jre.location-21}"/>
     </stream>
     <stream
+        name="1.5.6"
+        label="1.5.6 (2025-03)">
+      <setupTask
+          xsi:type="setup:VariableTask"
+          name="eclipse.target.platform"
+          defaultValue="2025-03"
+          storageURI="scope://Workspace"/>
+      <setupTask
+          xsi:type="jdt:JRETask"
+          version="JavaSE-21"
+          location="${jre.location-21}"/>
+    </stream>
+    <stream
         name="1.5.5"
         label="1.5.5 (2024-09)">
       <setupTask
