@@ -14,7 +14,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources;bundle-version="3.5.0",
  org.junit;bundle-version="4.7.0",
  com.ibm.icu;bundle-version="4.2.1",
- org.eclipse.acceleo.aql,
  org.eclipse.modisco.java;bundle-version="1.6.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

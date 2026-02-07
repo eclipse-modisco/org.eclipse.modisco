@@ -24,18 +24,20 @@ import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.emf.util.JavaSwitch;
 
 /**
+ * IndentingStringBuilder wraps the regular StringBuilder to support push/popIndentation for emission at the start of every
+ * non-blank line, and merging of multiple soft space/new-lines with adjacent regular hard space/new-line.
+ * 
  * @since 1.6
  */
 @SuppressWarnings("nls")
 public class IndentingStringBuilder
 {
 	private static final char NOT_A_CHAR = 0;
-	private static final char SOFT_NEW_LINE = '\r';
 	private static final char HARD_NEW_LINE = '\n';
 	private static final char HARD_SPACE = ' ';
+	private static final char SOFT_NEW_LINE = '\r';
 	private static final char SOFT_SPACE = '»';
 	private static final char INDENTATION = '\f';
-	private static final String indentation = "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
 
 	/**
 	 * The prevailing string content.
@@ -66,10 +68,8 @@ public class IndentingStringBuilder
 		assert assertStateIsValid();
 		assert (ch != NOT_A_CHAR) && (ch != SOFT_NEW_LINE) && (ch != SOFT_SPACE) && (ch != INDENTATION);
 		if (ch == HARD_NEW_LINE) {
-		//	if (nextChar == INDENTATION) {
-				s.append("\n");
-				lastChar = HARD_NEW_LINE;
-		//	}
+			s.append("\n");
+			lastChar = HARD_NEW_LINE;
 			nextChar = INDENTATION;
 		}
 		else if (ch == HARD_SPACE) {
@@ -78,13 +78,13 @@ public class IndentingStringBuilder
 				lastChar = ch;
 			}
 		}
-		else {//if (ch != '\r') {
+		else {
 			appendNextChar(s);
 			s.append(ch);
 			nextChar = NOT_A_CHAR;
 			lastChar = ch;
 		}
-		assertStateIsValid();
+		assert assertStateIsValid();
 	}
 
 	public void append(String string) {

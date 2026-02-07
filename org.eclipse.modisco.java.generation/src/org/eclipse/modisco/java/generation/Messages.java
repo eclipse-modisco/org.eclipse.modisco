@@ -10,6 +10,10 @@
  *******************************************************************************/
 package org.eclipse.modisco.java.generation;
 
+import java.text.MessageFormat;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
 import org.eclipse.osgi.util.NLS;
 
 public final class Messages extends NLS {

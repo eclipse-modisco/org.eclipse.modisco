@@ -29,8 +29,8 @@ public class JavaFileComparator implements Comparator<File> {
 
 	public final int compare(final File source, final File target) {
 		boolean result = true;
-		StringBuilder s = new StringBuilder();
-		StringBuilder t = new StringBuilder();
+	//	StringBuilder s = new StringBuilder();
+	//	StringBuilder t = new StringBuilder();
 		if (!source.getName().equals(target.getName())) {
 			result = false;
 //		} else if (source.getName().equalsIgnoreCase("Comments.java")) { //$NON-NLS-1$
@@ -43,14 +43,14 @@ public class JavaFileComparator implements Comparator<File> {
 				FileReader targetReader = new FileReader(target);
 				int sourceChar = nextChar(sourceReader);
 				int targetChar = nextChar(targetReader);
-				s.append((char)sourceChar);
-				t.append((char)targetChar);
+			//	s.append((char)sourceChar);
+			//	t.append((char)targetChar);
 				while ((sourceChar != -1) && (targetChar != -1)) {
 					result = result && (sourceChar == targetChar);
 					sourceChar = nextChar(sourceReader);
 					targetChar = nextChar(targetReader);
-					s.append((char)sourceChar);
-					t.append((char)targetChar);
+				//	s.append((char)sourceChar);
+				//	t.append((char)targetChar);
 				}
 				if (result) {
 					if ((sourceChar != -1) || (targetChar != -1)) {

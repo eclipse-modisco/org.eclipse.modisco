@@ -27,7 +27,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
 import org.eclipse.modisco.java.generation.files.JavaModel2JavaTextUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -61,78 +60,6 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	}
 
 	/**
-	 * Launch a java files generation, and compares result with from reference
-	 * java files.
-	 *
-	 * @throws URISyntaxException
-	 * @throws IOException
-	 * @throws CoreException
-	 */
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
-	@Test
-	public final void test001_3() throws URISyntaxException, CoreException,
-			IOException {
-		File sourceJavaModel = getInputModelFile();
-		File targetJavaDirectory = prepareOutputDirectory();
-		generateJavaCode3(sourceJavaModel, targetJavaDirectory);
-		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
-				targetJavaDirectory.listFiles().length > 0);
-
-		File sourceJavaDirectory = getJavaSourceDirectory();
-		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
-				sourceJavaDirectory.listFiles().length > 0);
-
-		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
-				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
-				new JavaFileComparator());
-
-		Assert.assertTrue(
-				Messages.DiffGeneratedJavaTest_folders_comparison_failure
-						+ Messages.DiffGeneratedJavaTest_folders_check_invitation
-						+ sourceJavaDirectory.getAbsolutePath()
-						+ Messages.DiffGeneratedJavaTest_7
-						+ Messages.DiffGeneratedJavaTest_8
-						+ targetJavaDirectory.getAbsolutePath(),
-				compareOldAndNewFiles);
-	}
-
-	/**
-	 * Launch a java files generation, and compares result with from reference
-	 * java files.
-	 *
-	 * @throws URISyntaxException
-	 * @throws IOException
-	 * @throws CoreException
-	 */
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468685
-	@Test
-	public final void test001_4() throws URISyntaxException, CoreException,
-			IOException {
-		File sourceJavaModel = getInputModelFile();
-		File targetJavaDirectory = prepareOutputDirectory();
-		generateJavaCode4(sourceJavaModel, targetJavaDirectory);
-		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
-				targetJavaDirectory.listFiles().length > 0);
-
-		File sourceJavaDirectory = getJavaSourceDirectory();
-		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
-				sourceJavaDirectory.listFiles().length > 0);
-
-		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
-				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
-				new JavaFileComparator());
-
-		Assert.assertTrue(
-				Messages.DiffGeneratedJavaTest_folders_comparison_failure
-						+ Messages.DiffGeneratedJavaTest_folders_check_invitation
-						+ sourceJavaDirectory.getAbsolutePath()
-						+ Messages.DiffGeneratedJavaTest_7
-						+ Messages.DiffGeneratedJavaTest_8
-						+ targetJavaDirectory.getAbsolutePath(),
-				compareOldAndNewFiles);
-	}
-
-	/**
 	 * Launch a java files generation, and compares result with from reference java files.
 	 * 
 	 * The java files are identified by
@@ -143,12 +70,11 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	 * E:\Tools\Eclipse\4.38+modisco\junit-workspace\org.eclipse.modisco.java.discoverer.tests_modifiers\org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
 	 */
 	@Test
-	public final void test001_direct() throws URISyntaxException, CoreException, IOException {
-		JavaModel2JavaTextUtils.eClassName2coverage = new HashMap<>();
+	public final void test001() throws URISyntaxException, CoreException, IOException {
+	//	JavaModel2JavaTextUtils.eClassName2coverage = new HashMap<>();
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();
-		String code = generateJavaCodeDirect(sourceJavaModel, targetJavaDirectory);
-		System.out.println(code);
+		generateJavaCode(sourceJavaModel, targetJavaDirectory);
 		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
 				targetJavaDirectory.listFiles().length > 0);
 
@@ -168,9 +94,8 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 						+ Messages.DiffGeneratedJavaTest_8
 						+ targetJavaDirectory.getAbsolutePath(),
 				compareOldAndNewFiles);
-		List<String> eClassNames = new ArrayList<>(JavaModel2JavaTextUtils.eClassName2coverage.keySet());
+	/*	List<String> eClassNames = new ArrayList<>(JavaModel2JavaTextUtils.eClassName2coverage.keySet());
 		Collections.sort(eClassNames);
-		//	for (String eClassName : eClassNames) {
 		for (EClassifier eClassifier : JavaPackage.eINSTANCE.getEClassifiers()) {
 			if ((eClassifier instanceof EClass) && !((EClass)eClassifier).isAbstract()) {
 				int count = JavaModel2JavaTextUtils.eClassName2coverage.getOrDefault(eClassifier.getName(), 0);
@@ -184,6 +109,6 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 					System.out.println("No test coverage for " + eClassifier.getName());
 				}
 			}
-		}
+		} */
 	}
 }
