@@ -15,9 +15,11 @@ package org.eclipse.modisco.jee.jsp.generation.files;
 //Start of user code imports
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +47,7 @@ import org.eclipse.acceleo.query.runtime.impl.namespace.JavaLoader;
 import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameQueryEnvironment;
 import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameResolver;
 import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.BasicMonitor.Printing;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.Monitor;
@@ -619,5 +622,4 @@ public class GenerateJspGenerator {
 	protected void afterGeneration(GenerationResult generationResult) {
 		// this is called after the generation finished
 	}
-
 }

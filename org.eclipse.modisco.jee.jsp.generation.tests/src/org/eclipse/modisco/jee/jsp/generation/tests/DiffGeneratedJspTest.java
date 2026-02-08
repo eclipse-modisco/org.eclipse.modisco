@@ -44,6 +44,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.java.generation.tests.JavaFileComparator;
 import org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp;
 import org.eclipse.modisco.jee.jsp.generation.files.GenerateJspGenerator;
 import org.junit.Assert;
@@ -99,7 +100,8 @@ public class DiffGeneratedJspTest {
 
 		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
 				sourceJspDirectory, targetJspDirectory, new JspFileFilter(),
-				new JSPFileComparator());
+				new JavaFileComparator());
+//		new JSPFileComparator());
 
 		Assert.assertTrue(Messages.DiffGeneratedJspTest_Comparison_Failure
 				+ Messages.DiffGeneratedJspTest_Invite_Check
@@ -122,6 +124,38 @@ public class DiffGeneratedJspTest {
 		File sourceJspModel = getInputModelFile();
 		File targetJspDirectory = prepareOutputDirectory();
 		generateJspCode4(sourceJspModel, targetJspDirectory);
+		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
+				targetJspDirectory.listFiles().length > 0);
+
+		File sourceJspDirectory = getJspSourceDirectory();
+		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
+				sourceJspDirectory.listFiles().length > 0);
+
+		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+				sourceJspDirectory, targetJspDirectory, new JspFileFilter(),
+				new JSPFileComparator());
+
+		Assert.assertTrue(Messages.DiffGeneratedJspTest_Comparison_Failure
+				+ Messages.DiffGeneratedJspTest_Invite_Check
+				+ sourceJspDirectory.getAbsolutePath()
+				+ Messages.DiffGeneratedJspTest_Target_Directory
+				+ targetJspDirectory.getAbsolutePath(), compareOldAndNewFiles);
+	}
+
+	/**
+	 * Launch a jsp files generation, and simply check that for each jsp source
+	 * file a jsp generated file with the same path exists.
+	 *
+	 * @throws URISyntaxException
+	 * @throws IOException
+	 * @throws CoreException
+	 */
+	@Test // (timeout = 5 * 60 * 1000)
+	public final void testJspFileExistenceDirect() throws URISyntaxException,
+			CoreException, IOException {
+		File sourceJspModel = getInputModelFile();
+		File targetJspDirectory = prepareOutputDirectory();
+		generateJspCodeDirect(sourceJspModel, targetJspDirectory);
 		Assert.assertTrue("Generation Output folder is empty", //$NON-NLS-1$
 				targetJspDirectory.listFiles().length > 0);
 
@@ -287,6 +321,24 @@ public class DiffGeneratedJspTest {
 		GenerationResult generationResult = jspGenerator.generate(new BasicMonitor());
 			
 		assertTrue("Acceleo generation failed", generationResult.getDiagnostic().getSeverity() < Diagnostic.WARNING);
+	}
+
+	private void generateJspCodeDirect(final File jspModel, final File outputDirectory) throws IOException {
+		URI fileURI = URI.createFileURI(jspModel.getAbsolutePath());
+		GenerateJsp jspGenerator = new GenerateJsp(fileURI, outputDirectory, new ArrayList<Object>());
+		Assert.assertNotNull("JSP Model instance is null before generation", //$NON-NLS-1$
+				jspGenerator.getModel());
+		Assert.assertTrue("JSP Model instance not found in jsp model before generation", //$NON-NLS-1$
+				jspGenerator.getModel().eClass().getName().equals("Model")); //$NON-NLS-1$
+		try {
+			jspGenerator.doGenerateDirect(null);
+		}
+		catch (IOException e) {
+			throw e;
+		}
+		catch (Exception e) {
+			throw new IOException("Acceleo generation failed", e);
+		}
 	}
 
 	/**

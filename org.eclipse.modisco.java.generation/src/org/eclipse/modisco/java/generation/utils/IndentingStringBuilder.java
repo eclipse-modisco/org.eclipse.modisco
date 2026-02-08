@@ -122,8 +122,17 @@ public class IndentingStringBuilder
 		else if (nextChar == SOFT_SPACE) {
 			is.append(" ");
 		}
-		else {
+		else if (nextChar != NOT_A_CHAR){
 			assert false;
+		}
+	}
+
+	public void appendRaw(String string) {
+		if ((string != null) && (string.length() > 0)) {
+			appendNextChar(s);
+			s.append(string);
+			lastChar = string.charAt(string.length()-1);
+			nextChar = NOT_A_CHAR;
 		}
 	}
 
@@ -152,7 +161,7 @@ public class IndentingStringBuilder
 	}
 
 	protected boolean assertStateIsValid() {
-		assert lastChar == (s.length() >= 0 ? s.charAt(s.length()-1) : NOT_A_CHAR);
+		assert lastChar == (s.length() > 0 ? s.charAt(s.length()-1) : NOT_A_CHAR);
 		assert (nextChar == NOT_A_CHAR) || (nextChar == SOFT_NEW_LINE) || (nextChar == SOFT_SPACE) || (nextChar == INDENTATION);
 		assert (nextChar != INDENTATION) || ((lastChar == NOT_A_CHAR) || (lastChar == HARD_NEW_LINE));
 		return true;
@@ -160,7 +169,10 @@ public class IndentingStringBuilder
 
 	public void close() {
 		assert indentationDepth == 0;
-		assert nextChar == NOT_A_CHAR;
+		if (nextChar == HARD_NEW_LINE) {
+			s.append("\n");
+		}
+		nextChar = NOT_A_CHAR;
 	}
 
 	protected boolean endsWithNonNewLine() {

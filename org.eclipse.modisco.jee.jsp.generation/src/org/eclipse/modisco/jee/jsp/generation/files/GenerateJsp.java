@@ -11,11 +11,14 @@
 package org.eclipse.modisco.jee.jsp.generation.files;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
+import org.eclipse.acceleo.aql.evaluation.GenerationResult;
 import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
@@ -23,14 +26,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.modisco.java.generation.files.JavaModel2JavaTextSwitch;
 
 /**
  * Entry point of the 'GenerateJsp' generation module.
- *
- * @generated
  */
 @SuppressWarnings("all")
-@Deprecated /* Use the GenerateJspGenerator and the Acceleo 4.2 API */
 public class GenerateJsp extends GenerateJspGenerator
 {
 	/**
@@ -51,8 +52,6 @@ public class GenerateJsp extends GenerateJspGenerator
 	 * retrieval of {@link #getProperties()} and
 	 * {@link #getGenerationListeners()}.
 	 * </p>
-	 *
-	 * @generated
 	 */
 	public GenerateJsp() {
 		super(null, null);
@@ -75,7 +74,6 @@ public class GenerateJsp extends GenerateJspGenerator
 	 * @throws IOException
 	 *             This can be thrown in three scenarios : the module cannot be
 	 *             found, it cannot be loaded, or the model cannot be loaded.
-	 * @generated
 	 */
 	public GenerateJsp(URI modelURI, File targetFolder,
 			List<? extends Object> arguments) throws IOException {
@@ -110,7 +108,6 @@ public class GenerateJsp extends GenerateJspGenerator
 	 * @throws IOException
 	 *             This can be thrown in two scenarios : the module cannot be
 	 *             found, or it cannot be loaded.
-	 * @generated
 	 */
 	public GenerateJsp(EObject model, File targetFolder,
 			List<? extends Object> arguments) throws IOException {
@@ -163,5 +160,31 @@ public class GenerateJsp extends GenerateJspGenerator
 
 	public EObject getModel() {
 		return models.size() > 0 ? models.get(0) : null;
+	}
+
+	public void doGenerateDirect(Monitor monitor) throws IOException {
+		List<Resource> resources = new ArrayList<>();
+		for (EObject eObject : models) {
+			Resource eResource = eObject.eResource();
+			if (!resources.contains(eResource)) {
+				resources.add(eResource);
+			}
+		}
+		JspModel2JspTextSwitch javaModel2javaTextSwitch = new JspModel2JspTextSwitch(target/*Folder.getAbsolutePath()*/);
+		Map<String, String> file2text = javaModel2javaTextSwitch.generate(resources);
+		List<String> fileKeys = new ArrayList<>(file2text.keySet());
+		Collections.sort(fileKeys);
+		for (String fileKey : fileKeys) {
+			String fileText = file2text.get(fileKey);
+			System.out.println("*******************************************");
+			System.out.println(fileKey);
+			System.out.println("*******************************************");
+			System.out.println(fileText);
+			File file = new File(fileKey);
+			file.getParentFile().mkdirs();
+			FileWriter fw = new FileWriter(file);
+			fw.append(fileText);
+			fw.close();
+		}
 	}
 }

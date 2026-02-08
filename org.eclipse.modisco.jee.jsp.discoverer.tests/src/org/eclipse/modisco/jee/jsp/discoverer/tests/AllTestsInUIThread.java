@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({TestJsp.class, TestJSPStdAction.class, TestMemory.class, TestHtml.class })
+@SuiteClasses({TestJsp.class, TestJSPStdAction.class, TestMemory.class, TestHtml.class, TestnonASCIIcharacters.class, TestSaveAll.class })
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }
