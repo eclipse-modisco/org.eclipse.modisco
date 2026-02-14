@@ -64,10 +64,9 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	 * 
 	 * The java files are identified by
 	 * /org.eclipse.modisco.java.generation.tests/resources/org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
-	 * which is copied from any org.eclipse.modisco.java.discoverer.tests.JavaJUnitEMF test as e.g.
-	 * platform:/resource/org.eclipse.modisco.java.discoverer.tests_modifiers/org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
-	 * which may be found at e.g.
-	 * E:\Tools\Eclipse\4.38+modisco\junit-workspace\org.eclipse.modisco.java.discoverer.tests_modifiers\org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
+	 * which is copied from the
+	 * ...\junit-workspace\org.eclipse.modisco.java.discoverer.tests_test001/org.eclipse.modisco.java.discoverer.tests_test001.javaxmi
+	 * dropped by /org.eclipse.modisco.java.discoverer.tests/src/org/eclipse/modisco/java/discoverer/tests/TestSaveAll/saveAll
 	 */
 	@Test
 	public final void test001() throws URISyntaxException, CoreException, IOException {

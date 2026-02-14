@@ -21,7 +21,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ Bug329423CommentsTest.class, Java2KdmConverterTest.class,
 		JavaJUnitEMF.class, JavaProject2KdmTest.class,
 		ParameterizedDiscovery.class, SimpleBlackBoxConverter.class,
-		SimpleBlackBoxDiscovery.class, Bug351590ClassCastWithAnnotationMemberTest.class })
+		SimpleBlackBoxDiscovery.class, Bug351590ClassCastWithAnnotationMemberTest.class, TestSaveAll.class })
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }

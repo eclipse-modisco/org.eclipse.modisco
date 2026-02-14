@@ -37,7 +37,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
-import org.eclipse.modisco.java.generation.Messages;
 import org.eclipse.modisco.java.generation.utils.JavaUtils;
 import org.eclipse.ocl.ecore.EcoreEnvironment;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;

@@ -25,6 +25,7 @@ import org.eclipse.modisco.java.generation.Messages;
  * Util Class for formatting Java code.
  *
  * @author fgiquel
+ * @since 1.6
  *
  */
 public final class JavaUtils {
