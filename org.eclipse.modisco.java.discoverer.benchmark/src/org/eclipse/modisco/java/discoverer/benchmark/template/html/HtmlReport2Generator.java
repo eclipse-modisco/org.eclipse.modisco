@@ -23,27 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.eclipse.acceleo.Module;
-import org.eclipse.acceleo.Template;
-import org.eclipse.acceleo.aql.AcceleoUtil;
-import org.eclipse.acceleo.aql.evaluation.AcceleoEvaluator;
-import org.eclipse.acceleo.aql.evaluation.AcceleoProfilerEvaluator;
-import org.eclipse.acceleo.aql.evaluation.GenerationResult;
-import org.eclipse.acceleo.aql.evaluation.strategy.DefaultGenerationStrategy;
-import org.eclipse.acceleo.aql.evaluation.strategy.DefaultWriterFactory;
-import org.eclipse.acceleo.aql.evaluation.strategy.IAcceleoGenerationStrategy;
-import org.eclipse.acceleo.aql.parser.AcceleoParser;
-import org.eclipse.acceleo.aql.parser.ModuleLoader;
-import org.eclipse.acceleo.aql.profiler.IProfiler;
-import org.eclipse.acceleo.aql.profiler.ProfileResource;
-import org.eclipse.acceleo.query.AQLUtils;
-import org.eclipse.acceleo.query.ast.ASTNode;
-import org.eclipse.acceleo.query.ast.EClassifierTypeLiteral;
-import org.eclipse.acceleo.query.ast.TypeLiteral;
-import org.eclipse.acceleo.query.runtime.impl.namespace.ClassLoaderQualifiedNameResolver;
-import org.eclipse.acceleo.query.runtime.impl.namespace.JavaLoader;
-import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameQueryEnvironment;
-import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameResolver;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.BasicMonitor.Printing;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -56,6 +35,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.modisco.infra.discovery.benchmark.AveragedMultiDiscoveryBenchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkPackage;
 import org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.JavaBenchmarkPackage;
 
@@ -66,30 +46,26 @@ import org.eclipse.modisco.java.discoverer.benchmark.javaBenchmark.JavaBenchmark
  * org::eclipse::modisco::java::discoverer::benchmark::template::html::htmlReport2.
  * 
  * @author <a href="mailto:yvan.lussaud@obeo.fr">Yvan Lussaud</a>
- * @generated
  */
+@SuppressWarnings("nls")
 public class HtmlReport2Generator {
 
 	/**
 	 * The {@link List} of resources to load.
-	 * 
-	 * @generated
 	 */
 	protected final List<String> resources;
 
 	/**
 	 * The target folder for the generation.
-	 * 
-	 * @generated
 	 */
 	protected final String target;
 
 	/**
 	 * The target folder for the generation.
-	 * 
-	 * @generated NOT
 	 */
 	protected final String targetFileName;
+
+	protected final HtmlReport2 reportGenerator;
 
 	/**
 	 * Constructor.
@@ -98,12 +74,12 @@ public class HtmlReport2Generator {
 	 *            the {@link List} of model resources to load
 	 * @param target
 	 *            the target folder for the generation
-	 * @generated NOT
 	 */
 	public HtmlReport2Generator(List<String> resources, String target, String targetFileName) {
 		this.resources = resources;
 		this.target = target;
 		this.targetFileName = targetFileName;
+		this.reportGenerator = new HtmlReport2(target+ "/" + targetFileName);
 	}
 
 	/**
@@ -111,7 +87,6 @@ public class HtmlReport2Generator {
 	 * 
 	 * @param args
 	 *            resources separated by a comma, target folder
-	 * @generated NOT
 	 */
 	public static void main(String[] args) {
 		if (args.length == 3) {
@@ -131,8 +106,6 @@ public class HtmlReport2Generator {
 
 	/**
 	 * Print the usage.
-	 * 
-	 * @generated NOT
 	 */
 	private static void printUsage() {
 		System.out.println("Usage: <resources> <target> <targetFileName>");
@@ -143,155 +116,33 @@ public class HtmlReport2Generator {
 	 * Gets the progress {@link Monitor}.
 	 * 
 	 * @return the progress {@link Monitor}
-	 * @generated
 	 */
 	private static Monitor getMonitor() {
 		return new Printing(new PrintStream(System.out));
 	}
 
-	/**
-	 * Generates.
-	 * 
-	 * @param monitor
-	 *            the progress {@link Monitor}
-	 * @generated NOT
-	 */
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
 	public void generate(Monitor monitor) {
-		// inputs
-		final String moduleQualifiedName = getModuleQualifiedName();
-		final URI targetURI = getTargetURI(target);
-		final Map<String, String> options = getOptions();
-
-		// create the resource set used to load models
-		final Object generationKey = new Object();
-		final List<Exception> exceptions = new ArrayList<>();
-		final ResourceSet resourceSet = createDefaultResourceSet();
-		final ResourceSet resourceSetForModels = createResourceSetForModel(generationKey, options,
-				exceptions, resourceSet);
-
-		standaloneInitialization(resourceSetForModels);
-
-		// prepare Acceleo environment
-		final IQualifiedNameResolver resolver = createResolver();
-		final IQualifiedNameQueryEnvironment queryEnvironment = createAcceleoQueryEnvironment(
-				options, resolver, resourceSetForModels);
-		final AcceleoEvaluator evaluator = createAcceleoEvaluator(targetURI, resolver,
-				queryEnvironment);
-		final IAcceleoGenerationStrategy strategy = createGenerationStrategy(resourceSetForModels);
-
-		final Module module = (Module) resolver.resolve(moduleQualifiedName);
-		final Set<String> nsURIs = AQLUtils.getAllNeededEPackages(resolver, moduleQualifiedName);
-		AQLUtils.registerEPackages(queryEnvironment, EPackage.Registry.INSTANCE, nsURIs);
-		final URI logURI = AcceleoUtil.getlogURI(targetURI,
-				options.get(AcceleoUtil.LOG_URI_OPTION));
-		final List<Template> mainTemplates = getTemplates(module);
-
-		monitor.beginTask("Generating",
-				resources.size() + 1 + mainTemplates.size() * resources.size() + 1);
-		// load models
-		final List<Resource> modelResources = loadResources(resourceSetForModels, resources,
-				monitor);
-
-		monitor.subTask("Before generation");
-		beforeGeneration(evaluator, queryEnvironment, module, resourceSetForModels, strategy,
-				targetURI, logURI);
-		monitor.worked(1);
-		try {
-			final Map<EClass, List<EObject>> valuesCache = new LinkedHashMap<>();
-			for (Template template : mainTemplates) {
-				final EClassifierTypeLiteral eClassifierTypeLiteral = (EClassifierTypeLiteral) template
-						.getParameters().get(0).getType().getAst();
-				final List<EObject> values = getValues(queryEnvironment, valuesCache,
-						eClassifierTypeLiteral, resourceSetForModels, modelResources, monitor);
-
-				final String parameterName = template.getParameters().get(0).getName();
-				Map<String, Object> variables = new LinkedHashMap<>();
-				variables.put("targetFileName", targetFileName); //$NON-NLS-1$
-				for (EObject value : values) {
-					variables.put(parameterName, value);
-					AcceleoUtil.generate(template, variables, evaluator, queryEnvironment, strategy,
-							targetURI, logURI, monitor);
-					if (monitor.isCanceled()) {
-						return;
-					}
-				}
-				monitor.worked(1);
-				if (monitor.isCanceled()) {
-					return;
-				}
-			}
-		} finally {
-			if (evaluator instanceof AcceleoProfilerEvaluator) {
-				IProfiler profiler = ((AcceleoProfilerEvaluator) evaluator).getProfiler();
-				ProfileResource profileResource = profiler.getResource();
-				profileResource
-						.setStartResource(resolver.getSourceURI(moduleQualifiedName).toString());
-				try {
-					profiler.save(
-							URI.createURI(targetURI.toString() + "/" + module.getName() + ".mtlp"));
-				} catch (IOException e) {
-					final Diagnostic diagnostic = new BasicDiagnostic(Diagnostic.ERROR,
-							getClass().getCanonicalName(), 0, e.getMessage(), new Object[] { e });
-					evaluator.getGenerationResult().addDiagnostic(diagnostic);
-				}
-			}
-			AQLUtils.cleanResourceSetForModels(generationKey, resourceSetForModels);
-			AcceleoUtil.cleanServices(queryEnvironment, resourceSetForModels);
-			printDiagnostics(evaluator.getGenerationResult());
-			monitor.subTask("After generation");
-			afterGeneration(evaluator.getGenerationResult());
-			monitor.worked(1);
+		List<EObject> values = new ArrayList<>();
+		for (Resource eResource : loadResources(new ResourceSetImpl(), resources, monitor)) {
+			values.addAll(eResource.getContents());
 		}
-
+		reportGenerator.generate(values);
 	}
 
-	/**
-	 * Gets the {@link List} of {@link Template} to generate for the given
-	 * {@link Module}.
-	 * 
-	 * @param module
-	 *            the {@link Module}
-	 * @return the {@link List} of {@link Template} to generate for the given
-	 *         {@link Module}
-	 * @generated
-	 */
-	protected List<Template> getTemplates(Module module) {
-		return AcceleoUtil.getMainTemplates(module);
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected List<Object> getTemplates(Module module) {
+		return null;
 	}
 
-	/**
-	 * Gets the {@link List} of {@link EObject} values to use.
-	 * 
-	 * @param queryEnvironment
-	 *            the {@link IQualifiedNameQueryEnvironment}
-	 * @param valuesCache
-	 *            the cache for any previous values
-	 * @param type
-	 *            the {@link TypeLiteral}
-	 * @param resourceSetForModels
-	 *            the {@link ResourceSet} for models
-	 * @param modelResources
-	 *            the {@link List} of loaded {@link Resource}
-	 * @param monitor
-	 *            the progress {@link Monitor}, it must consumes the
-	 *            resources.size()
-	 * @return the {@link List} of {@link EObject} values to use
-	 * @generated
-	 */
-	protected List<EObject> getValues(IQualifiedNameQueryEnvironment queryEnvironment,
-			Map<EClass, List<EObject>> valuesCache, TypeLiteral type,
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected List<EObject> getValues(Object queryEnvironment,
+			Map<EClass, List<EObject>> valuesCache, Object type,
 			ResourceSet resourceSetForModels, List<Resource> modelResources, Monitor monitor) {
-		final List<EObject> values = AcceleoUtil.getValues(type, queryEnvironment, modelResources,
-				valuesCache, monitor);
-		return values;
+		return null;
 	}
 
-	/**
-	 * Gets the module qualified name.
-	 * 
-	 * @return the module qualified name
-	 * @generated
-	 */
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
 	protected String getModuleQualifiedName() {
 		return "org::eclipse::modisco::java::discoverer::benchmark::template::html::htmlReport2";
 	}
@@ -302,61 +153,26 @@ public class HtmlReport2Generator {
 	 * @param target
 	 *            the target folder {@link String}.
 	 * @return the target folder {@link URI}
-	 * @generated
 	 */
-	protected URI getTargetURI(String target) {
-		return URI.createFileURI(new File(target).getAbsolutePath() + "/");
+	protected URI getTargetURI(String targetString) {
+		return URI.createFileURI(new File(targetString).getAbsolutePath() + "/");
 	}
 
-	/**
-	 * Gets the {@link Map} of options for the generation.
-	 * 
-	 * @return the {@link Map} of options for the generation
-	 * @generated
-	 */
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
 	protected Map<String, String> getOptions() {
 		Map<String, String> res = new LinkedHashMap<>();
-
-		res.put(AcceleoUtil.LOG_URI_OPTION, "acceleo.log");
-		res.put(AcceleoUtil.NEW_LINE_OPTION, System.lineSeparator());
-		// res.put(AQLUtils.INSTALL_CROSS_REFERENCE_ADAPTER_OPTION,
-		// Boolean.TRUE.toString());
-		// res.put(AQLUtils.PROPERTIES_URIS_OPTION,
-		// "file1.properties,file2.properties");
-
 		return res;
 	}
 
-	/**
-	 * Creates the default {@link ResourceSet}.
-	 * 
-	 * @return the created default {@link ResourceSet}
-	 * @generated
-	 */
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
 	protected ResourceSet createDefaultResourceSet() {
 		return new ResourceSetImpl();
 	}
 
-	/**
-	 * Creates the {@link ResourceSet} for models.
-	 * 
-	 * @param generationKey
-	 *            the generation key
-	 * @param options
-	 *            the {@link Map} of options
-	 * @param exceptions
-	 *            the {@link List} of exceptions
-	 * @param resourceSet
-	 *            the default {@link ResourceSet}
-	 * @return the created {@link ResourceSet} for models
-	 * @generated
-	 */
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
 	protected ResourceSet createResourceSetForModel(Object generationKey,
 			Map<String, String> options, List<Exception> exceptions, ResourceSet resourceSet) {
-		final ResourceSet resourceSetForModels = AQLUtils.createResourceSetForModels(exceptions,
-				generationKey, resourceSet, options);
-
-		return resourceSetForModels;
+		return new ResourceSetImpl();
 	}
 
 	/**
@@ -364,7 +180,6 @@ public class HtmlReport2Generator {
 	 * 
 	 * @param resourceSetForModels
 	 *            the {@link ResourceSet} for models
-	 * @generated
 	 */
 	protected void standaloneInitialization(ResourceSet resourceSetForModels) {
 		// initialize EPackages
@@ -387,13 +202,12 @@ public class HtmlReport2Generator {
 	 *            the progress {@link Monitor}, it must consumes the number of
 	 *            resources
 	 * @return the {@link List} of loaded {@link Resource}
-	 * @generated
 	 */
-	protected List<Resource> loadResources(ResourceSet resourceSetForModels, List<String> resources,
+	protected List<Resource> loadResources(ResourceSet resourceSetForModels, List<String> resources2,
 			Monitor monitor) {
 		final List<Resource> res = new ArrayList<>();
 
-		for (String resource : resources) {
+		for (String resource : resources2) {
 			monitor.subTask("Loading " + resource);
 			final Resource loaded = resourceSetForModels.getResource(URI.createURI(resource, true),
 					true);
@@ -409,234 +223,44 @@ public class HtmlReport2Generator {
 		return res;
 	}
 
-	/**
-	 * Creates the {@link IQualifiedNameResolver}.
-	 * 
-	 * @return the created {@link IQualifiedNameResolver}
-	 * @generated
-	 */
-	protected IQualifiedNameResolver createResolver() {
-		final IQualifiedNameResolver resolver = new ClassLoaderQualifiedNameResolver(
-				this.getClass().getClassLoader(), EPackage.Registry.INSTANCE,
-				AcceleoParser.QUALIFIER_SEPARATOR);
-
-		return resolver;
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected Object createResolver() {
+		return null;
 	}
 
-	/**
-	 * Creates the {@link IQualifiedNameQueryEnvironment}.
-	 * 
-	 * @param options
-	 *            the {@link Map} of options
-	 * @param resolver
-	 *            the {@link IQualifiedNameResolver}
-	 * @param resourceSetForModels
-	 *            the {@link ResourceSet} for models
-	 * @return the created {@link IQualifiedNameQueryEnvironment}
-	 * @generated
-	 */
-	protected IQualifiedNameQueryEnvironment createAcceleoQueryEnvironment(
-			Map<String, String> options, IQualifiedNameResolver resolver,
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected Object createAcceleoQueryEnvironment(
+			Map<String, String> options, Object resolver,
 			ResourceSet resourceSetForModels) {
-		final IQualifiedNameQueryEnvironment queryEnvironment = AcceleoUtil
-				.newAcceleoQueryEnvironment(options, resolver, resourceSetForModels, false);
-
-		return queryEnvironment;
+		return null;
 	}
 
-	/**
-	 * Creates the {@link AcceleoEvaluator}
-	 * 
-	 * @param targetURI
-	 *            the target {@link URI}
-	 * @param resolver
-	 *            the {@link IQualifiedNameResolver}
-	 * @param queryEnvironment
-	 *            the {@link IQualifiedNameQueryEnvironment}
-	 * @return the created {@link AcceleoEvaluator}
-	 * @generated
-	 */
-	protected AcceleoEvaluator createAcceleoEvaluator(URI targetURI,
-			IQualifiedNameResolver resolver, IQualifiedNameQueryEnvironment queryEnvironment) {
-		final AcceleoEvaluator evaluator = new AcceleoEvaluator(queryEnvironment.getLookupEngine(),
-				System.lineSeparator());
-
-		// final Representation profilerModelRepresentation =
-		// Representation.TREE;
-		// final IProfiler profiler =
-		// ProfilerUtils.getProfiler(getModuleQualifiedName(),
-		// profilerModelRepresentation,
-		// ProfilerPackage.eINSTANCE.getProfilerFactory());
-		// final AcceleoEvaluator evaluator = new
-		// AcceleoProfilerEvaluator(queryEnvironment.getLookupEngine(),
-		// System
-		// .lineSeparator(), profiler);
-
-		resolver.addLoader(new ModuleLoader(new AcceleoParser(), evaluator));
-		resolver.addLoader(new JavaLoader(AcceleoParser.QUALIFIER_SEPARATOR, false));
-
-		return evaluator;
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected Object createAcceleoEvaluator(URI targetURI,
+			Object resolver, Object queryEnvironment) {
+		return null;
 	}
 
-	/**
-	 * Creates the {@link IAcceleoGenerationStrategy}
-	 * 
-	 * @param resourceSetForModels
-	 *            the {@link ResourceSet} containing loaded models
-	 * @return the created {@link IAcceleoGenerationStrategy}
-	 * @generated
-	 */
-	protected IAcceleoGenerationStrategy createGenerationStrategy(
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected Object createGenerationStrategy(
 			ResourceSet resourceSetForModels) {
-		final IAcceleoGenerationStrategy strategy = new DefaultGenerationStrategy(
-				resourceSetForModels.getURIConverter(), new DefaultWriterFactory());
-
-		return strategy;
+		return null;
 	}
 
-	/**
-	 * Before the generation starts.
-	 * 
-	 * @param evaluator
-	 *            the {@link AcceleoEvaluator}
-	 * @param queryEnvironment
-	 *            the {@link IQualifiedNameQueryEnvironment}
-	 * @param module
-	 *            the {@link Module}
-	 * @param resourceSetForModels
-	 *            the {@link ResourceSet} containing loaded models
-	 * @param generationStrategy
-	 *            the {@link IAcceleoGenerationStrategy}
-	 * @param destination
-	 *            destination {@link URI}
-	 * @param logURI
-	 *            the {@link URI} for logging if any, <code>null</code>
-	 *            otherwise
-	 * @generated
-	 */
-	protected void beforeGeneration(AcceleoEvaluator evaluator,
-			IQualifiedNameQueryEnvironment queryEnvironment, Module module,
-			ResourceSet resourceSetForModels, IAcceleoGenerationStrategy strategy, URI destination,
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected void beforeGeneration(Object evaluator,
+			Object queryEnvironment, Module module,
+			ResourceSet resourceSetForModels, Object strategy, URI destination,
 			URI logURI) {
 		// this is called before the generation starts
 	}
 
-	/**
-	 * Prints the diagnostics for the given {@link GenerationResult}.
-	 * 
-	 * @param generationResult
-	 *            the {@link GenerationResult}
-	 * @generated
-	 */
-	protected void printDiagnostics(GenerationResult generationResult) {
-		if (generationResult.getDiagnostic().getSeverity() > Diagnostic.INFO) {
-			PrintStream stream;
-			switch (generationResult.getDiagnostic().getSeverity()) {
-			case Diagnostic.WARNING:
-				stream = System.out;
-				stream.println("WARNING");
-				break;
-			case Diagnostic.ERROR:
-				// Fall-through
-			default:
-				// Shouldn't happen as we only show warnings and errors
-				stream = System.err;
-				stream.println("ERROR");
-				break;
-			}
-			printDiagnostic(stream, generationResult.getDiagnostic(), "");
-		}
-		printSummary(System.out, generationResult);
-	}
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected void printDiagnostics(Object generationResult) {}
 
-	/**
-	 * Prints the generation summary.
-	 * 
-	 * @param stream
-	 *            the {@link PrintStream}
-	 * @param result
-	 *            the {@link GenerationResult}
-	 * @generated
-	 */
-	private void printSummary(PrintStream stream, GenerationResult result) {
-		int nbErrors = 0;
-		int nbWarnings = 0;
-		int nbInfos = 0;
-		for (Diagnostic diagnostic : result.getDiagnostic().getChildren()) {
-			switch (diagnostic.getSeverity()) {
-			case Diagnostic.ERROR:
-				nbErrors++;
-				break;
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected void printDiagnostic(PrintStream stream, Diagnostic diagnostic, String indentation) {}
 
-			case Diagnostic.WARNING:
-				nbWarnings++;
-				break;
-
-			case Diagnostic.INFO:
-				nbInfos++;
-				break;
-
-			default:
-				break;
-			}
-		}
-
-		stream.print("Files: " + result.getGeneratedFiles().size());
-		stream.print(", Lost Files: " + result.getLostFiles().size());
-		stream.print(", Errors: " + nbErrors);
-		stream.print(", Warnings: " + nbWarnings);
-		stream.print(", Infos: " + nbInfos);
-		stream.println(".");
-	}
-
-	/**
-	 * Prints the given {@link Diagnostic} for the given {@link PrintStream}.
-	 * 
-	 * @param stream
-	 *            the {@link PrintStream}
-	 * @param diagnostic
-	 *            the {@link Diagnostic}
-	 * @param indentation
-	 *            the current indentation
-	 * @generated
-	 */
-	protected void printDiagnostic(PrintStream stream, Diagnostic diagnostic, String indentation) {
-		String nextIndentation = indentation;
-		if (diagnostic.getMessage() != null) {
-			stream.print(indentation);
-			switch (diagnostic.getSeverity()) {
-			case Diagnostic.INFO:
-				stream.print("INFO ");
-				break;
-
-			case Diagnostic.WARNING:
-				stream.print("WARNING ");
-				break;
-
-			case Diagnostic.ERROR:
-				stream.print("ERROR ");
-				break;
-			}
-			if (!diagnostic.getData().isEmpty() && diagnostic.getData().get(0) instanceof ASTNode) {
-				stream.print(AcceleoUtil.getLocation((ASTNode) diagnostic.getData().get(0)));
-			}
-			stream.println(": " + diagnostic.getMessage().replaceAll("\n", "\n" + nextIndentation));
-			nextIndentation += "\t";
-		}
-		for (Diagnostic child : diagnostic.getChildren()) {
-			printDiagnostic(stream, child, nextIndentation);
-		}
-	}
-
-	/**
-	 * After the generation finished.
-	 * 
-	 * @param generationResult
-	 *            the {@link GenerationResult}
-	 * @generated
-	 */
-	protected void afterGeneration(GenerationResult generationResult) {
-		// this is called after the generation finished
-	}
-
+	@Deprecated /* @deprecated obsolete Acceleo 3 API */
+	protected void afterGeneration(Object generationResult) {}
 }

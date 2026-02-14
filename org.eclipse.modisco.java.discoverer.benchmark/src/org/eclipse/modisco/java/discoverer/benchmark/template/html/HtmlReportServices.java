@@ -21,7 +21,7 @@ public final class HtmlReportServices {
 		//
 	}
 
-	public static double maxExecutionTime(final Collection<Discovery> discoveries) {
+	public static double maxExecutionTime(final Collection<? extends Discovery> discoveries) {
 		double maxExecutionTime = 0.0;
 		for (Discovery discovery : discoveries) {
 			maxExecutionTime = Math.max(discovery.getTotalExecutionTimeInSeconds(),
@@ -30,7 +30,7 @@ public final class HtmlReportServices {
 		return maxExecutionTime;
 	}
 
-	public static double maxSaveTime(final Collection<Discovery> discoveries) {
+	public static double maxSaveTime(final Collection<? extends Discovery> discoveries) {
 		double maxSaveTime = 0.0;
 		for (Discovery discovery : discoveries) {
 			maxSaveTime = Math.max(discovery.getSaveTimeInSeconds(), maxSaveTime);

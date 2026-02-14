@@ -16,20 +16,11 @@ package org.eclipse.modisco.java.discoverer.benchmark.template.html;
 //Start of user code imports
 import java.io.File;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.acceleo.aql.AcceleoUtil;
-import org.eclipse.acceleo.aql.evaluation.GenerationResult;
-import org.eclipse.acceleo.aql.ide.ui.dialog.AbstractResourceSelectionDialog;
-import org.eclipse.acceleo.aql.ide.ui.dialog.FolderSelectionDialog;
-import org.eclipse.acceleo.aql.parser.AcceleoParser;
-import org.eclipse.acceleo.query.ast.ASTNode;
-import org.eclipse.acceleo.query.ast.TypeLiteral;
-import org.eclipse.acceleo.query.ide.runtime.impl.namespace.OSGiQualifiedNameResolver;
-import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameQueryEnvironment;
-import org.eclipse.acceleo.query.runtime.namespace.IQualifiedNameResolver;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
@@ -51,7 +42,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
+import org.eclipse.modisco.infra.discovery.benchmark.MultiProjectBenchmark;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
+import org.eclipse.modisco.java.discoverer.benchmark.ripoffs.AbstractResourceSelectionDialog;
+import org.eclipse.modisco.java.discoverer.benchmark.ripoffs.FolderSelectionDialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 import org.osgi.framework.Bundle;
@@ -64,7 +58,7 @@ import org.osgi.framework.Bundle;
  * org::eclipse::modisco::java::discoverer::benchmark::template::html::htmlReport.
  * 
  * @author <a href="mailto:yvan.lussaud@obeo.fr">Yvan Lussaud</a>
- * @generated
+ * 
  */
 public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 
@@ -112,7 +106,7 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	/**
 	 * The selected value.
 	 * 
-	 * @generated
+	 * 
 	 */
 	private final List<EObject> values;
 
@@ -120,7 +114,7 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	 * Constructor.
 	 * 
 	 * @param selected the selected {@link IFile}
-	 * @generated
+	 * 
 	 */
 	public HtmlReportGeneratorEclipse(IFile selected) {
 		super(Collections.singletonList(URI.createFileURI(selected.getLocation().toString()).toString()),
@@ -133,7 +127,7 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	 * 
 	 * @param selected the selected {@link IFile}
 	 * @param target   the target folder of the generation
-	 * @generated
+	 * 
 	 */
 	public HtmlReportGeneratorEclipse(IFile selected, String target) {
 		super(Collections.singletonList(URI.createFileURI(selected.getLocation().toString()).toString()), target);
@@ -145,7 +139,7 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	 * 
 	 * @param selected
 	 *            the selected {@link }
-	 * @generated
+	 * 
 	 */
 	public HtmlReportGeneratorEclipse(Benchmark selected) {
 		super(Collections.emptyList(), getTarget(selected));
@@ -159,51 +153,16 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	 *            the selected {@link }
 	 * @param target
 	 *            the target folder of the generation
-	 * @generated
+	 * 
 	 */
 	public HtmlReportGeneratorEclipse(Benchmark selected, String target) {
 		super(Collections.emptyList(), target);
 		this.values = Collections.singletonList(selected);
 	}
 
-	/**
-	 * @generated
-	 */
-	@Override
-	protected List<EObject> getValues(IQualifiedNameQueryEnvironment queryEnvironment,
-			Map<EClass, List<EObject>> valuesCache, TypeLiteral type, ResourceSet resourceSetForModels,
-			List<Resource> modelResources, Monitor monitor) {
-		final List<EObject> res;
-
-		if (values != null) {
-			res = values;
-		} else {
-			res = super.getValues(queryEnvironment, valuesCache, type, resourceSetForModels, modelResources, monitor);
-		}
-
-		return res;
-	}
-
-	/**
-	 * @generated
-	 */
 	@Override
 	protected void standaloneInitialization(ResourceSet resourceSetForModels) {
 		// nothing to do here
-	}
-
-	/**
-	 * @generated
-	 */
-	@Override
-	protected IQualifiedNameResolver createResolver() {
-		final String bundleIdentifier = "org.eclipse.modisco.java.discoverer.benchmark";
-		final Bundle bundle = Platform.getBundle(bundleIdentifier);
-		if (bundle == null || bundle.getState() == Bundle.UNINSTALLED) {
-			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, getClass(),
-					"The Bundle " + bundleIdentifier + " must be available in the target platform."));
-		}
-		return new OSGiQualifiedNameResolver(bundle, EPackage.Registry.INSTANCE, AcceleoParser.QUALIFIER_SEPARATOR);
 	}
 
 	/**
@@ -211,7 +170,7 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	 * 
 	 * @param selected the model {@link } or selected {@link IFile}
 	 * @return the target folder for the selected {@link } or selected {@link IFile}
-	 * @generated
+	 * 
 	 */
 	private static String getTarget(Object selected) {
 		final SelectTargetRunnable runnable = new SelectTargetRunnable();
@@ -221,120 +180,30 @@ public class HtmlReportGeneratorEclipse extends HtmlReportGenerator {
 	}
 
 	/**
-	 * @generated
+	 * 
 	 */
 	@Override
 	public void generate(Monitor monitor) {
 		if (target != null) {
-			super.generate(monitor);
+			List<MultiProjectBenchmark> list = new ArrayList<>();
+			for (Object value : values) {
+				if (value instanceof MultiProjectBenchmark) {
+					list.add((MultiProjectBenchmark)value);
+				}
+			}
+			reportGenerator.generate(list, monitor);
 		}
 	}
 
-	/**
-	 * Prints the diagnostics for the given {@link GenerationResult}.
-	 * 
-	 * @param generationResult the {@link GenerationResult}
-	 * @generated
-	 */
-	protected void printDiagnostics(GenerationResult generationResult) {
-		if (generationResult.getDiagnostic().getSeverity() > Diagnostic.INFO) {
-			printDiagnostic(generationResult.getDiagnostic());
-		}
-		printSummary(generationResult);
+	@Deprecated	/* @Deprecated obsolete Acceleo 3 API */
+	protected void printDiagnostics(Object generationResult) {
 	}
 
-	/**
-	 * Prints the given {@link Diagnostic} for the given {@link PrintStream}.
-	 * 
-	 * @param stream      the {@link PrintStream}
-	 * @param diagnostic  the {@link Diagnostic}
-	 * @param indentation the current indentation
-	 * @generated
-	 */
+	@Deprecated	/* @Deprecated obsolete Acceleo 3 API */
 	protected void printDiagnostic(Diagnostic diagnostic) {
-		if (diagnostic.getMessage() != null) {
-			final String location;
-			if (!diagnostic.getData().isEmpty() && diagnostic.getData().get(0) instanceof ASTNode) {
-				location = AcceleoUtil.getLocation((ASTNode) diagnostic.getData().get(0)) + ": ";
-			} else {
-				location = "";
-			}
-			switch (diagnostic.getSeverity()) {
-			case Diagnostic.INFO:
-				Activator.getDefault().getLog().log(new Status(IStatus.INFO, diagnostic.getSource(),
-						location + diagnostic.getMessage(), diagnostic.getException()));
-				break;
-
-			case Diagnostic.WARNING:
-				Activator.getDefault().getLog().log(new Status(IStatus.WARNING, diagnostic.getSource(),
-						location + diagnostic.getMessage(), diagnostic.getException()));
-				break;
-
-			case Diagnostic.ERROR:
-				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, diagnostic.getSource(),
-						location + diagnostic.getMessage(), diagnostic.getException()));
-				break;
-			}
-		}
-		for (Diagnostic child : diagnostic.getChildren()) {
-			printDiagnostic(child);
-		}
 	}
 
-	/**
-	 * Prints the summary of the generation.
-	 * 
-	 * @param result the {@link GenerationResult}
-	 * @generated
-	 */
-	protected void printSummary(GenerationResult result) {
-		int nbErrors = 0;
-		int nbWarnings = 0;
-		int nbInfos = 0;
-		for (Diagnostic diagnostic : result.getDiagnostic().getChildren()) {
-			switch (diagnostic.getSeverity()) {
-			case Diagnostic.ERROR:
-				nbErrors++;
-				break;
-
-			case Diagnostic.WARNING:
-				nbWarnings++;
-				break;
-
-			case Diagnostic.INFO:
-				nbInfos++;
-				break;
-
-			default:
-				break;
-			}
-		}
-
-		final String message = "Files: " + result.getGeneratedFiles().size() + ", Lost Files: "
-				+ result.getLostFiles().size() + ", Errors: " + nbErrors + ", Warnings: " + nbWarnings + ", Infos: "
-				+ nbInfos + ".";
-		Activator.getDefault().getLog().log(new Status(IStatus.INFO, getClass(), message));
+	@Deprecated	/* @Deprecated obsolete Acceleo 3 API */
+	protected void printSummary(Object result) {
 	}
-
-	/**
-	 * @generated
-	 */
-	@Override
-	protected void afterGeneration(GenerationResult generationResult) {
-		super.afterGeneration(generationResult);
-
-		// refresh if the generated files are in the workspace
-		final File targetFolder = new File(target);
-		final IContainer targetWorkspaceContainer = ResourcesPlugin.getWorkspace().getRoot()
-				.getContainerForLocation(new Path(targetFolder.getAbsolutePath()));
-		if (targetWorkspaceContainer != null) {
-			try {
-				targetWorkspaceContainer.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
-			} catch (CoreException e) {
-				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
-						"could not refresh " + targetWorkspaceContainer.getFullPath(), e));
-			}
-		}
-	}
-
 }

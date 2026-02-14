@@ -31,7 +31,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.java.discoverer.benchmark.Activator;
+//import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.Report;
 import org.eclipse.modisco.java.discoverer.benchmark.RunBenchmark;
 import org.junit.After;
@@ -60,7 +60,7 @@ public class JavaDiscovererBenchmarkTest {
 		Activator.getDefault().getLog().addLogListener(this.listener);
 	}
 
-	@Ignore // FIXME Bug 552989
+//	@Ignore // FIXME Bug 552989
 	@Test(timeout = 25 * 60 * 1000)
 	public void test001() throws CoreException, IOException {
 		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {

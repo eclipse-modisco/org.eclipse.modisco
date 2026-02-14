@@ -46,7 +46,6 @@
    </extension>
    
 
-<!--
    <extension point="org.eclipse.ui.commands">
       <command
             id="org.eclipse.modisco.java.discoverer.benchmark.internal.handlers.BenchmarkCommand"
@@ -86,7 +85,7 @@
          </command>
       </menuContribution>
    </extension>
--->
+
 
 	<extension
 		id="DerbyCDOServerNoAudits"
