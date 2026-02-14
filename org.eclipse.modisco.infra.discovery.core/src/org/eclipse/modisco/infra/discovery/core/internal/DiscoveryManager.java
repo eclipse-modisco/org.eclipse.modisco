@@ -137,7 +137,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 	 */
 	public DiscovererDescription getDiscovererDescription(final String id) {
 		for (DiscovererDescription discovererDescription : getDiscoverers()) {
-			if (id.equals(discovererDescription.getId())) {
+			if ((id != null) && id.equals(discovererDescription.getId())) {
 				return discovererDescription;
 			}
 		}

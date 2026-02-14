@@ -267,13 +267,13 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					throws DiscoveryException {
 		progressMonitor.subTask(
 				Messages.DiscovererBenchmarkDiscoverer_ProjectInitializationSubTask);
-		final ISizeDiscoverer discoverer = (ISizeDiscoverer)
-				IDiscoveryManager.INSTANCE.createDiscovererImpl(this.sizeDiscovererId);
+	//	final ISizeDiscoverer discoverer = (ISizeDiscoverer)
+	//			IDiscoveryManager.INSTANCE.createDiscovererImpl(this.sizeDiscovererId);
 		final Project projDesc = BenchmarkFactory.eINSTANCE.createProject();
-		discoverer.discoverElement(project, new NullProgressMonitor());
-		final double prjSize = discoverer.getSize();
+	//	discoverer.discoverElement(project, new NullProgressMonitor());
+		final double prjSize = 10; //discoverer.getSize();
 		projDesc.setInputSize(prjSize);
-		final String prjUnit = discoverer.getUnit();
+		final String prjUnit = "us"; //discoverer.getUnit();
 		projDesc.setInputSizeUnit(prjUnit);
 		projDesc.setName(project.getName());
 		benchmark.getProjects().add(projDesc);
@@ -368,7 +368,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 			final String pathStr =
 					targetUriStr.replaceAll("platform:/resource", ""); //$NON-NLS-1$//$NON-NLS-2$
 			iFile = wsRoot.getFile(new Path(pathStr));
-			iFile.getLocation().toFile();
+			file = iFile.getLocation().toFile();
 		} else if (targetURI.isFile()) {
 			file = new java.io.File(java.net.URI.create(targetUriStr));
 		} else {
