@@ -12,18 +12,11 @@
 package org.eclipse.modisco.jee.jsp.generation.tests;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.LineNumberReader;
 import java.util.Comparator;
-import java.util.Stack;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import org.eclipse.modisco.java.generation.tests.Messages;
 import org.eclipse.osgi.util.NLS;
@@ -34,9 +27,10 @@ import org.eclipse.osgi.util.NLS;
  */
 public class JSPFileComparator implements Comparator<File>
 {
+	@Override
 	public final int compare(final File source, final File target) {
 		if ("memory.jsp".equals(target.getName())) {
-			System.err.println("Validation of " + source + " bypassed - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1099");
+			System.err.println("See Issue 1108: Validation of " + source + " bypassed - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1099");
 			return 0;
 		}
 		boolean result = true;
