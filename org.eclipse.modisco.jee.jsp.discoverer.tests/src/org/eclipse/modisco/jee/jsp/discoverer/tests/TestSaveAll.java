@@ -60,13 +60,13 @@ public class TestSaveAll {
 	}
 
 	private static final String[] RESOURCES_TESTs = {
-			"/about.html",
-			"/resources/1.jsp",
-			"/resources/jspAction.jsp",
-			"/resources/jspElement.jsp",
-			"/resources/memory.jsp",
-			"/resources/nonASCIIcharacters.jsp",
-			"/resources/testHtml.html"};
+			"about.html",
+			"resources/1.jsp",
+			"resources/jspAction.jsp",
+			"resources/jspElement.jsp",
+			"resources/memory.jsp",
+			"resources/nonASCIIcharacters.jsp",
+			"resources/testHtml.html"};
 
 	private static final String targetFileName = "org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi";
 	private static final String referenceFileName = "org.eclipse.modisco.jee.jsp.generation.tests/resources/org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi";
@@ -96,6 +96,17 @@ public class TestSaveAll {
 				IFile jspFile = project.getFile(resourceName);
 				assertTrue("Could not access test file :" + jspFile.getName(), jspFile.exists());
 				discoverer.discoverElement(jspFile, new NullProgressMonitor());
+				Resource resource = discoverer.getTargetModel();
+				for (EObject eObject : resource.getContents()) {
+					if (eObject instanceof Model) {
+						for (Page jPage : ((Model)eObject).getPages()) {
+							if (jPage.getOriginalFilePath().replace("\\", "/").endsWith(resourceName)) {
+								jPage.setName(resourceName);				// project-relative to avoid embedding build computer dependence
+								jPage.setOriginalFilePath(resourceName);	// project-relative to avoid suit generation testing
+							}
+						}
+					}
+				}
 			}
 			Resource targetResource = discoverer.getTargetModel();
 			List<EObject> allContents = new ArrayList<>();
@@ -110,7 +121,6 @@ public class TestSaveAll {
 					}
 					for (Page jPage : ((Model)eObject).getPages()) {
 						allPages.add(jPage);
-						jPage.setOriginalFilePath("originalFilePath" + allPages.size());	// Avoid embedding build computer dependence
 					}
 				}
 				else {

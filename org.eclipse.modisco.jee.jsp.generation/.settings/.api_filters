@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="org.eclipse.modisco.jee.jsp.generation" version="2">
+    <resource path="src/org/eclipse/modisco/jee/jsp/generation/files/GenerateJsp.java" type="org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp">
+        <filter id="338792546">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp"/>
+                <message_argument value="getGenerationStrategy()"/>
+            </message_arguments>
+        </filter>
+        <filter id="338849923">
+            <message_arguments>
+                <message_argument value="org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

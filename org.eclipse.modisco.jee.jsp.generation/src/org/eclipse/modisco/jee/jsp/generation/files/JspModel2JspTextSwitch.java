@@ -55,6 +55,21 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 		this.absoluteOutputPath = absoluteOutputPath;
 	}
 
+	/**
+	 * Workaround the inconsistent usage of child Text elements for a name attribute.
+	 * See https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1099
+	 */
+	protected void appendNameAndChildTexts(Element jspExpression) {
+		StringBuilder sValue = new StringBuilder();
+		sValue.append(jspExpression.getName());
+		for (EObject eObject : jspExpression.getChildren()) {
+			if ((eObject instanceof Text)) {
+				sValue.append(((Text)eObject).getName());
+			}
+		}
+		append(sValue.toString());
+	}
+
 	@Override
 	public Object caseComposedAttribute(ComposedAttribute jComposedAttribute) {
 		append(jComposedAttribute.getName());
@@ -139,7 +154,7 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 	@Override
 	public Object caseJSPExpression(JSPExpression jspExpression) {
 		append("<%=");
-		append(jspExpression.getName());
+		appendNameAndChildTexts(jspExpression);
 		append("%>");
 		return this;
 	}
@@ -152,7 +167,7 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 	@Override
 	public Object caseJSPScriptlet(JSPScriptlet jspScriptlet) {
 		append("<% ");
-		append(jspScriptlet.getName());
+		appendNameAndChildTexts(jspScriptlet);
 		append(" %>");
 		appendSoftNewLine();
 		return this;
@@ -202,14 +217,37 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 
 	@Override
 	public Object caseJavaScript(JavaScript jJavaScript) {
-		append("<script ");
-		append(jJavaScript.getName());
-		append(" >\n");
+		String name = jJavaScript.getName();
+		List<EObject> attributes = new ArrayList<>();
+		List<EObject> elements = new ArrayList<>();
 		for (EObject eObject : jJavaScript.getChildren()) {
-			if (!(eObject instanceof Attribute) && ! (eObject instanceof ComposedAttribute)) {
-				appendNode(eObject);
-				appendSoftNewLine();
+			int attributesSize = attributes.size();
+			if ((eObject instanceof Attribute) || (eObject instanceof ComposedAttribute)) {
+				attributes.add(eObject);
 			}
+		//	else if ((eObject instanceof JSPAction) && ((JSPAction)eObject).isIsTagFragment()) {
+		//		attributes.add(eObject);
+		//	}
+		//	else if ((eObject instanceof JSPComment) && ((JSPComment)eObject).isIsTagFragment()) {
+		//		attributes.add(eObject);
+		//	}
+		//	else if ((eObject instanceof JSPScript) && ((JSPScript)eObject).isIsTagFragment()) {
+		//		attributes.add(eObject);
+		//	}
+			if (attributes.size() <= attributesSize) {
+				elements.add(eObject);
+			}
+		}
+
+		
+		
+		
+		append("<script");
+		appendWrappedNodes(" ", attributes, " ", " ");
+		append(jJavaScript.getName());
+		append(">");
+		for (EObject eObject : elements) {
+			appendNode(eObject);
 		}
 		append("</script>\n");
 		appendSoftNewLine();
@@ -232,7 +270,7 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 		String name = jPage.getName();
 		StringBuilder sFile = new StringBuilder();
 		sFile.append(absoluteOutputPath);
-		if (!name.startsWith("/")) {
+		if (!name.startsWith("/") && !absoluteOutputPath.endsWith("/")) {
 			sFile.append("/");
 		}
 		sFile.append(name);
@@ -286,58 +324,47 @@ public class JspModel2JspTextSwitch extends JspModel2JspTextUtils
 	@Override
 	public Object caseXmlElement(Element xmlElement) {
 		String name = xmlElement.getName();
-		List<Node> children = xmlElement.getChildren();
 		List<EObject> attributes = new ArrayList<>();
 		List<EObject> elements = new ArrayList<>();
-		for (EObject eObject : children) {
+		for (EObject eObject : xmlElement.getChildren()) {
+			int attributesSize = attributes.size();
 			if ((eObject instanceof Attribute) || (eObject instanceof ComposedAttribute)) {
 				attributes.add(eObject);
 			}
-			else {
+			else if ((eObject instanceof JSPAction) && ((JSPAction)eObject).isIsTagFragment()) {
+				attributes.add(eObject);
+			}
+			else if ((eObject instanceof JSPComment) && ((JSPComment)eObject).isIsTagFragment()) {
+				attributes.add(eObject);
+			}
+			else if ((eObject instanceof JSPScript) && ((JSPScript)eObject).isIsTagFragment()) {
+				attributes.add(eObject);
+			}
+			if (attributes.size() <= attributesSize) {
 				elements.add(eObject);
 			}
 		}
-		if (elements.size() > 0) {
-			append("<");
-			append(name);
-			appendOptionalWrappedNodes(" ", attributes, " ", null);
-			append(">");
-		//	pushIndentation();
-			appendNodes(elements);
-		//	popIndentation();
-			append("</");
-			append(name);
-			append(">");
+		append("<");
+		append(name);
+		appendOptionalWrappedNodes(" ", attributes, " ", null);
+		if (elements.size() <= 0) {
+			append("/");
 		}
 		else {
-			append("<");
+			append(">");
+			appendSoftNewLine();
+			pushIndentation();
+			appendNodes(elements);
+			popIndentation();
+			appendSoftNewLine();
+			append("</");
 			append(name);
-			appendOptionalWrappedNodes(" ", attributes, " ", null);
-			append("/>");
 		}
-	//	appendSoftNewLine();
+		append(">");
+		appendSoftNewLine();
 		return this;
 	}
 
-/*[template public write(o : xml::Element)]
-  [if (o.children->size() - o.children->select(n | n.oclIsKindOf(xml::Attribute))->size() - o.children->select(n | n.oclIsKindOf(jsp::ComposedAttribute))->size() > 0)]
-    <[o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment = true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment = true)][n.write()/][/if][/if][/for]>
-    [for (c : xml::Node | o.children)]
-      [if (c.oclIsKindOf(jsp::JSPScript))]
-        [if (c.oclAsType(jsp::JSPScript).isTagFragment = false)]
-          	[c.write()/]
-        [/if]
-      [elseif (c.oclIsKindOf(jsp::JSPAction))]
-        [if (c.oclAsType(jsp::JSPAction).isTagFragment = false)]
-          	[c.write()/]
-        [/if]
-      [elseif (not c.oclIsKindOf(jsp::ComposedAttribute) and not c.oclIsTypeOf(xml::Attribute))]
-        	[c.write()/]
-      [/if]
-    [/for]
-    </[o.name/]>
-  [else]	<[o.name/][for (n : xml::Node | o.children)][if (n.oclIsKindOf(jsp::ComposedAttribute) or n.oclIsKindOf(xml::Attribute))] [n.write()/][/if][if (n.oclIsKindOf(jsp::JSPScript))][if (n.oclAsType(jsp::JSPScript).isTagFragment = true)][n.write()/][/if][/if][if (n.oclIsKindOf(jsp::JSPAction))][if (n.oclAsType(jsp::JSPAction).isTagFragment = true)][n.write()/][/if][/if][/for] />[/if][/template]
-*/
 	@Override
 	public Object caseXmlNamespace(Namespace object) {
 		// TODO Auto-generated method stub

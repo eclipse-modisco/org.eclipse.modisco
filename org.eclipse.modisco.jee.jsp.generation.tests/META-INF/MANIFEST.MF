@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.ui,
  org.junit;bundle-version="4.8.1",
  org.eclipse.modisco.jee,
  org.eclipse.modisco.jee.jsp.discoverer.tests,
- org.eclipse.acceleo.aql
+ org.eclipse.modisco.jee.jsp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.jee.jsp.generation.tests
