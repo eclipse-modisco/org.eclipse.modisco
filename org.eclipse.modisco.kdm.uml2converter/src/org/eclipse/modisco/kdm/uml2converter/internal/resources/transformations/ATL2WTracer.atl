@@ -1,3 +1,4 @@
+-- @atlcompiler atl2004
 module ATL2WTracer;
 create OUT : ATL refining IN : ATL;
 
