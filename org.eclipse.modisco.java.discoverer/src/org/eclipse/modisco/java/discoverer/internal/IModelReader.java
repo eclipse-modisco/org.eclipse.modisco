@@ -12,6 +12,7 @@
 package org.eclipse.modisco.java.discoverer.internal;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 
@@ -69,12 +70,13 @@ public interface IModelReader {
 	 *            the global {@code BindingManager}
 	 * @param monitor
 	 *            a monitor to report progress
+	 * @throws DiscoveryException 
 	 * @throws IllegalArgumentException
 	 *             if the reader can not handle the source (for example, a
 	 *             library reader can not analyse a compilation unit)
 	 */
 	public void readModel(Object source, Model model, BindingManager globalBindings,
-			IProgressMonitor monitor);
+			IProgressMonitor monitor) throws DiscoveryException;
 
 	/**
 	 * Finalize the creation of the model.

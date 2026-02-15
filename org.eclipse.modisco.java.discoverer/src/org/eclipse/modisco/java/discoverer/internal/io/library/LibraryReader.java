@@ -27,6 +27,7 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Archive;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
@@ -215,7 +216,7 @@ public class LibraryReader implements IModelReader {
 	}
 
 	protected void visitClassFile(final IClassFile classFile, final String filePath)
-			throws JavaModelException {
+			throws JavaModelException, DiscoveryException {
 
 		boolean classFileHasSource = false;
 		String fileContent = null;

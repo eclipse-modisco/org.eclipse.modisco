@@ -42,6 +42,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -141,13 +142,19 @@ public class JavaReader implements IModelReader {
 		return this.incremental;
 	}
 
+	@Override
 	public void readModel(final Object source, final Model resultModel1,
 			final IProgressMonitor monitor) {
-		readModel(source, resultModel1, getBindingManager(), monitor);
+		try {
+			readModel(source, resultModel1, getBindingManager(), monitor);
+		} catch (DiscoveryException e) {
+			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+		}
 	}
 
+	@Override
 	public void readModel(final Object source, final Model resultModel1,
-			final BindingManager bindingManager, final IProgressMonitor monitor) {
+			final BindingManager bindingManager, final IProgressMonitor monitor) throws DiscoveryException {
 
 		if (source == null) {
 			return;
@@ -193,7 +200,7 @@ public class JavaReader implements IModelReader {
 						"Java reader can not handle source object : " + source.toString()); //$NON-NLS-1$
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			throw new DiscoveryException(e);
 		}
 	}
 
@@ -399,6 +406,7 @@ public class JavaReader implements IModelReader {
 		return bindingManager;
 	}
 
+	@Override
 	public void terminate(final IProgressMonitor monitor) {
 		monitor.subTask(Messages.JavaReader_bindingsTask);
 		finalResolveBindings(getResultModel());

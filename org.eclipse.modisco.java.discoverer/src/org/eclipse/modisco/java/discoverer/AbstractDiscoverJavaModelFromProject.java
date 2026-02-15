@@ -34,6 +34,7 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -131,7 +132,7 @@ public abstract class AbstractDiscoverJavaModelFromProject<T> extends AbstractRe
 		return org.eclipse.modisco.java.emf.JavaFactory.eINSTANCE;
 	}
 
-	protected void analyzeJavaProject(final IJavaProject source, final IProgressMonitor monitor) {
+	protected void analyzeJavaProject(final IJavaProject source, final IProgressMonitor monitor) throws DiscoveryException {
 		if (source == null) {
 			throw new IllegalArgumentException("source is null"); //$NON-NLS-1$
 		}

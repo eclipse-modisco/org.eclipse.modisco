@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.common.tests.TestModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
+import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Assignment;
 import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.FieldAccess;
@@ -36,6 +37,7 @@ import org.eclipse.modisco.java.VariableDeclaration;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
 import org.eclipse.modisco.java.discoverer.JavaDiscoveryConstants;
 import org.eclipse.modisco.java.discoverer.tests.utils.JavaProjectFactory;
+import org.eclipse.search.core.text.TextSearchEngine;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -55,6 +57,9 @@ public class SimpleBlackBoxDiscovery {
 	private final String projectName = "test001"; //$NON-NLS-1$
 
 	private JavaProjectFactory javaProjectFactory;
+	
+	@SuppressWarnings("unused")					// Ensure org.eclipse.search is findable to avoid bogus NPE
+	private static TextSearchEngine dummyReference = null;
 
 	/**
 	 * @throws java.lang.Exception
@@ -188,19 +193,17 @@ public class SimpleBlackBoxDiscovery {
 
 		DiscoverJavaModelFromJavaProject javaDiscoverer = new DiscoverJavaModelFromJavaProject();
 		javaDiscoverer.setSerializeTarget(true);
-		javaDiscoverer.discoverElement(javaProject, new NullProgressMonitor());
-		Resource output = javaDiscoverer.getTargetModel();
-		Assert.assertNotNull(output);
-		// because, every exceptions have been caught in the discoverer,
-		// a way to check if every element has been attached to the resource
-		// is to save the resource.
-		output.save(null);
-
-		if (this.export) {
-			output.setURI(URI
-					.createFileURI("c:/referenceModel" + this.javaModelExtension)); //$NON-NLS-1$
-			output.save(null);
+		final String MISSING_SYSTEM_LIBRARY = "Missing system library";
+		try {
+			javaDiscoverer.discoverElement(javaProject, new NullProgressMonitor());
 		}
+		catch (DiscoveryException e) {
+			Throwable cause = e.getCause();
+			assert cause instanceof IllegalStateException;
+			Assert.assertEquals(MISSING_SYSTEM_LIBRARY, cause.getMessage());
+			return;
+		}
+		Assert.fail("\"" + MISSING_SYSTEM_LIBRARY + "\" exception expected");
 	}
 
 	@SuppressWarnings("null")
