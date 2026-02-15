@@ -106,6 +106,7 @@ public abstract class AbstractCDOServer implements Server {
 					setStarted(true);
 				} catch (Exception e) {
 					MoDiscoLogger.logError(e, Activator.getDefault());
+					setStarted(true);		// caller is waiting for started)
 				}
 			}
 

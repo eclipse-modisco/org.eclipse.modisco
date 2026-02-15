@@ -90,32 +90,27 @@ public class RunBenchmark extends AbstractRunBenchmark {
 
 		// CDO+H2, No audits, With usage
 		begin("CDO+H2, No audits, With usage"); //$NON-NLS-1$
-		System.err.println("Skipping: CDO+H2, No audits, With usage - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1103"); //$NON-NLS-1$
-//		serverAndDisco(source, H2CDOServer.class, BenchmarkJavaDiscovererCDO.class, monitor);
+		serverAndDisco(source, H2CDOServer.class, BenchmarkJavaDiscovererCDO.class, monitor);
 		end();
 
 		// CDO+H2, No audits, Without usages
 		begin("CDO+H2, No audits, Without usages"); //$NON-NLS-1$
-		System.err.println("Skipping: CDO+H2, No audits, Without usages - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1103"); //$NON-NLS-1$
-//		serverAndDisco(source, H2CDOServer.class, JavaDiscovererCDONoUsages.class, monitor);
+		serverAndDisco(source, H2CDOServer.class, JavaDiscovererCDONoUsages.class, monitor);
 		end();
 
 		// CDO+Derby, No audits, With usages
 		begin("CDO+Derby, No audits, With usages"); //$NON-NLS-1$
-		System.err.println("Skipping: CDO+Derby, No audits, With usages - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1103"); //$NON-NLS-1$
-//		serverAndDisco(source, DerbyCDOServerNoAudits.class, BenchmarkJavaDiscovererCDO.class, monitor);
+		serverAndDisco(source, DerbyCDOServerNoAudits.class, BenchmarkJavaDiscovererCDO.class, monitor);
 		end();
 
 		// CDO+Derby, No audits, Without usages
 		begin("CDO+Derby, No audits, Without usages"); //$NON-NLS-1$
-		System.err.println("Skipping: CDO+Derby, No audits, Without usages - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1103"); //$NON-NLS-1$
-//		serverAndDisco(source, DerbyCDOServerNoAudits.class, JavaDiscovererCDONoUsages.class, monitor);
+		serverAndDisco(source, DerbyCDOServerNoAudits.class, JavaDiscovererCDONoUsages.class, monitor);
 		end();
 
 		// CDO+Derby, with audits, With usages
 		begin("CDO+Derby, with audits, With usages"); //$NON-NLS-1$
-		System.err.println("Skipping: CDO+Derby, with audits, With usages - see https://github.com/eclipse-modisco/org.eclipse.modisco/issues/1103"); //$NON-NLS-1$
-//		serverAndDisco(source, DerbyCDOServer.class, BenchmarkJavaDiscovererCDO.class, monitor);
+		serverAndDisco(source, DerbyCDOServer.class, BenchmarkJavaDiscovererCDO.class, monitor);
 		end();
 	}
 }

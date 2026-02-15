@@ -164,9 +164,10 @@ public class Report {
 							cdoDiscovery.setCurrentLruCapacity(new Integer(properties
 									.getProperty(JavaDiscovererCDO.CURRENT_LRU_CAPACITY)));
 							try {
-								cdoDiscovery.setInitTimeInSeconds(new Double(properties
-										.getProperty(Statistics.INIT_TIME))
-										/ Report.MINUTE_MS_RANGE);
+								String property = properties.getProperty(Statistics.INIT_TIME);
+								if ((property != null) && (property.length() > 0)) {
+									cdoDiscovery.setInitTimeInSeconds(new Double(property)/ Report.MINUTE_MS_RANGE);
+								}
 							} catch (Exception e) {
 								MoDiscoLogger.logError(e, Activator.getDefault());
 								IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
@@ -190,10 +191,12 @@ public class Report {
 								.getProperty(DiscoverJavaModelFromJavaProjectEMFStat.MM_VARIANT));
 						discovery.setAlgorithmVariant(properties
 								.getProperty(DiscoverJavaModelFromJavaProjectEMFStat.ALGO_VARIANT));
-						discovery.setSaveTimeInSeconds(new Double(getValue(lastLine2,
-								Statistics.SAVE)) / Report.MINUTE_MS_RANGE);
-						discovery.setTotalExecutionTimeInSeconds(new Double(getValue(lastLine2,
-								Statistics.SINCEBEGIN)) / Report.MINUTE_MS_RANGE);
+						if (lastLine2.length() > 0) {
+							discovery.setSaveTimeInSeconds(new Double(getValue(lastLine2,
+									Statistics.SAVE)) / Report.MINUTE_MS_RANGE);
+							discovery.setTotalExecutionTimeInSeconds(new Double(getValue(lastLine2,
+									Statistics.SINCEBEGIN)) / Report.MINUTE_MS_RANGE);
+						}
 						discovery
 								.setDiscovererClassName(properties
 										.getProperty(DiscoverJavaModelFromJavaProjectEMFStat.DISCOVERER_CLASS_NAME));
@@ -373,7 +376,8 @@ public class Report {
 		for (int i = 0; i < splits.length; i++) {
 			Float f;
 			try {
-				f = new Float(splits[i]);
+				String split = splits[i];
+				f = new Float(split);
 			} catch (Exception e) {
 				f = new Float(0);
 			}
