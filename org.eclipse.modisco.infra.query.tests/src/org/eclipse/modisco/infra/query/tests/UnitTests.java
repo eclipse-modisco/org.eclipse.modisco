@@ -331,9 +331,11 @@ public class UnitTests {
 
 	private static final int EMFMQQUERYTEST_EXPECTED_RESULT = 5;
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
-	//	org.eclipse.emf.query discontinued in EMF Services 1.14.0 for 2024-09
-	@Test
+/*	@_I_g_n_o_r_e See Issue 1078. The intent of this test was to ensure that org.eclipse.emf.query could
+ * be loaded and then used. However the test for usage uses EMFq sources and so requires the MANIFEST to 
+ * load it and so underemine the test. org.eclipse.emf.query discontinued in EMF Services 1.14.0 for 2024-09
+ * so there is really very little use for the test as is. A better test might really do a dynamic load and verify.
+ *	@_T_e_s_t
 	public void emfmqQueryTest() throws Exception {
 		String name = "emfmqQueryTest"; //$NON-NLS-1$
 		IProject projectToCreate = this.utils.createProject(name);
@@ -360,7 +362,7 @@ public class UnitTests {
 		}
 		Assert.assertEquals(UnitTests.EMFMQQUERYTEST_EXPECTED_RESULT, ((Collection<?>) result
 				.get(0).getValue()).size());
-	}
+	} */
 
 	@Ignore // FIXME Issue 1107 - re-instate jxpath support
 	@Test
