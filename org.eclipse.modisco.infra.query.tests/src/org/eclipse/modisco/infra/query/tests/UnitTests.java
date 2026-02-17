@@ -37,7 +37,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.facet.util.core.DebugUtils;
 import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
@@ -502,6 +501,7 @@ public class UnitTests {
 	private IMarker[] wrongX(final String name, final int nbOfExpectedMarkers) throws Exception {
 		return wrongX(name, nbOfExpectedMarkers, new Runnable() {
 
+			@Override
 			public void run(final IProject project) throws Exception {
 				// Empty
 			}
@@ -669,6 +669,7 @@ public class UnitTests {
 	public void wrongImplementationClassInterface() throws Exception {
 		String name = "wrongImplementationClassInterface"; //$NON-NLS-1$
 		wrongX(name, 1, new Runnable() {
+			@Override
 			public void run(final IProject project) throws Exception {
 				FileUtils
 						.copyFileFromBundle(
