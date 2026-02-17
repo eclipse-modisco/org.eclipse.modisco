@@ -67,7 +67,7 @@
                <testFailureIgnore>true</testFailureIgnore>
                <failIfNoTests>false</failIfNoTests>
                <forkedProcessTimeoutInSeconds>1800</forkedProcessTimeoutInSeconds>
-               <argLine>-DoutputEncoding=UTF-8</argLine>
+               <argLine>-DoutputEncoding=UTF-8 -Declipse.e4.inject.javax.disabled=true -ea</argLine>
                <application>org.eclipse.ui.ide.workbench</application>
                <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                <showEclipseLog>true</showEclipseLog>
