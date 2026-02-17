@@ -30,7 +30,6 @@ import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class Tests {
@@ -98,7 +97,6 @@ public class Tests {
 		Assert.assertNotNull(facet25);
 	}
 
-	@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=470350
 	@Test
 	public void bug308991() throws CoreException, IOException,
 			InterruptedException {

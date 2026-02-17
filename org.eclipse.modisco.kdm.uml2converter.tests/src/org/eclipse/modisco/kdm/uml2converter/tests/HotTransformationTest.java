@@ -28,7 +28,6 @@ import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class HotTransformationTest {
@@ -66,7 +65,6 @@ public class HotTransformationTest {
 		Assert.assertTrue(targetFile.exists());
 	}
 
-	@Ignore // FIXME Bug 552989 intermittent failure
 	@Test
 	public void testExportAndModelTransformation() throws Exception {
 		Assert.assertNotNull(this.projectFactory);
@@ -102,7 +100,6 @@ public class HotTransformationTest {
 		}
 	}
 
-	@Ignore // FIXME Bug 552989 - test works in isolation, started to fail with an AIOOBE once KDM to UML fixed
 	@Test
 	public void testExportModelAndAddTraceability() throws Exception {
 		Assert.assertNotNull(this.projectFactory);

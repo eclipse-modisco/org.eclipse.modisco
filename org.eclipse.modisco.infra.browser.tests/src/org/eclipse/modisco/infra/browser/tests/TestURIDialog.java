@@ -29,10 +29,8 @@ import org.eclipse.swtbot.swt.finder.widgets.SWTBotTable;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotToolbarButton;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTree;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468159
 public class TestURIDialog {
 
 	protected static SWTWorkbenchBot bot = new SWTWorkbenchBot();

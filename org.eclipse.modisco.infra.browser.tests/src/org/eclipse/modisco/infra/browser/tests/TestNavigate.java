@@ -14,10 +14,9 @@ import org.eclipse.modisco.infra.browser.tests.utils.AbstractTest;
 import org.eclipse.modisco.infra.browser.tests.utils.TestUtils;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.swt.finder.waits.DefaultCondition;
-import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468159
+//@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468159
 /** Tests for the search function. */
 public class TestNavigate extends AbstractTest {
 

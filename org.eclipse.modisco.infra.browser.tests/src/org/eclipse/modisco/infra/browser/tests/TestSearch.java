@@ -19,10 +19,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
-import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468159
 /** Tests for the search function. */
 public class TestSearch extends AbstractTest {
 

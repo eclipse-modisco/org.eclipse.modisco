@@ -31,13 +31,11 @@ import org.eclipse.ui.IEditorPart;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-@Ignore //cf. https://bugs.eclipse.org/bugs/show_bug.cgi?id=468159
 @RunWith(Parameterized.class)
 public class TestOpenModel {
 

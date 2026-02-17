@@ -76,7 +76,6 @@ import org.osgi.framework.Bundle;
  * @author Gregoire DUPE
  *
  */
-@SuppressWarnings({ "nls" })
 public class FacetTests {
 	private static final int NB_MARKER_GETSUBCLASSES = 6;
 	public static final String FILE_EXT = ".facetSet";
@@ -98,7 +97,7 @@ public class FacetTests {
 		return this.utils;
 	}
 
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
+//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001";
@@ -588,7 +587,7 @@ public class FacetTests {
 		Assert.assertEquals(f.getFacetSet(), fs);
 	}
 
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
+//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug305688() throws Exception {
 		final String name = "test001";
@@ -666,10 +665,10 @@ public class FacetTests {
 		ProjectUtils.create(project, new NullProgressMonitor());
 		Bundle javaQueriesBundle = Platform.getBundle("org.eclipse.modisco.java.queries");
 		// create the querySet
-		FileUtils.copyFileFromBundle("META-INF/MANIFEST.MF", project, "META-INF/MANIFEST.MF",
+		FileUtils.copyFileFromBundle("META-INF/MANIFEST.MF", project, "workspace/bug307715v2/META-INF/MANIFEST.MF",
 				javaQueriesBundle);
-		FolderUtils.copyFolderFromBundle("/src", javaQueriesBundle, "/src", project);
-		FileUtils.copyFileFromBundle("textJavaQueries.querySet", project, "/"
+		FolderUtils.copyFolderFromBundle("src/", javaQueriesBundle, "workspace/bug307715v2/src/", project);
+		FileUtils.copyFileFromBundle("textJavaQueries.querySet", project, "workspace/bug307715v2/"
 				+ "textJavaQueries.querySet", javaQueriesBundle);
 		// addWSFile querySet
 		IFile f = project.getFile("textJavaQueries.querySet");
@@ -840,7 +839,7 @@ public class FacetTests {
 	}
 
 	/** Bug 310279 - Only 1 listener works per referenced resource */
-	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
+//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug310279() throws Exception {
 		IProject project = this.utils.createProject("310279");

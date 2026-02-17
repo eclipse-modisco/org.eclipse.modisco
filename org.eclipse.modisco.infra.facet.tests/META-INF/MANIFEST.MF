@@ -21,7 +21,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.ide;bundle-version="3.6.0",
  org.eclipse.jface;bundle-version="3.6.0",
  org.eclipse.modisco.facet.util.pde.core;bundle-version="1.0.0",
- org.eclipse.modisco.facet.util.core;bundle-version="1.0.0"
+ org.eclipse.modisco.facet.util.core;bundle-version="1.0.0",
+ org.eclipse.modisco.java.queries,
+ org.eclipse.modisco.infra.browser.custom.examples.java.jdk;bundle-version="1.6.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.modisco.infra.facet.tests.Activator
 Export-Package: org.eclipse.modisco.infra.facet.tests
