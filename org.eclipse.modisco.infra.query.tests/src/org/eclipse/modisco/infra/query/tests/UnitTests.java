@@ -13,7 +13,6 @@
 package org.eclipse.modisco.infra.query.tests;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -39,7 +38,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.facet.util.core.DebugUtils;
-import org.eclipse.modisco.facet.util.pde.core.internal.exported.TargetPlatformUtils;
 import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
@@ -63,7 +61,6 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-@SuppressWarnings("nls")
 public class UnitTests {
 
 	private static final String FILE_EXT = ".querySet"; //$NON-NLS-1$
@@ -80,7 +77,6 @@ public class UnitTests {
 //		TargetPlatformUtils.loadTargetPlatform();
 	}
 	
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
@@ -121,7 +117,6 @@ public class UnitTests {
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$
 	}
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void simpleEval() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
@@ -229,7 +224,6 @@ public class UnitTests {
 	 * Tests that when the implementation of a Java query is modified, the new
 	 * implementation is used instead of the old
 	 */
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void osgiReload() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
@@ -368,7 +362,7 @@ public class UnitTests {
 				.get(0).getValue()).size());
 	}
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
+	@Ignore // FIXME Issue 1107 - re-instate jxpath support
 	@Test
 	public void jxpathQueryTest() throws Exception {
 		String name = "jxpathQueryTest"; //$NON-NLS-1$
@@ -443,14 +437,12 @@ public class UnitTests {
 		wrongX(name, 1);
 	}
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void wrongResultType() throws Exception {
 		String name = "wrongResultType"; //$NON-NLS-1$
 		wrongX(name, 1);
 	}
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void wrongScope() throws Exception {
 		String name = "wrongScope"; //$NON-NLS-1$
@@ -547,7 +539,6 @@ public class UnitTests {
 		Assert.assertEquals(null, catalog.getModelQuerySet("modisco.infra.query.tests.03.querySet")); //$NON-NLS-1$
 	}
 
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void resourceSet() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
@@ -726,7 +717,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void bug307095() throws Exception {
 		final String name = "bug307095"; //$NON-NLS-1$
@@ -755,7 +745,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void bug307095v2() throws Exception {
 		final String name = "bug307095v2"; //$NON-NLS-1$
@@ -795,7 +784,6 @@ public class UnitTests {
 	 * Bug 307095 - the validation state of a Java query is not updated when the
 	 * Java class is fixed
 	 */
-//	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho platform init
 	@Test
 	public void bug307095v3() throws Exception {
 		final String name = "bug307095v3"; //$NON-NLS-1$
