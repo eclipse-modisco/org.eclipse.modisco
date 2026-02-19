@@ -18,8 +18,6 @@ import java.util.Comparator;
 
 import org.eclipse.osgi.util.NLS;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * Specific file comparator for java files generated : compare char by char,
  * ignore white spaces (tab, line feeds, ...).
@@ -27,6 +25,7 @@ import com.ibm.icu.lang.UCharacter;
  */
 public class JavaFileComparator implements Comparator<File> {
 
+	@Override
 	public final int compare(final File source, final File target) {
 		boolean result = true;
 		StringBuilder s = new StringBuilder();
@@ -86,7 +85,7 @@ public class JavaFileComparator implements Comparator<File> {
 	private static int nextChar(final FileReader fr) throws IOException {
 		int result = fr.read();
 		while (result != -1
-				&& ((UCharacter.isWhitespace(result)) || (result == '*'))) {
+				&& ((Character.isWhitespace(result)) || (result == '*'))) {
 			// (result == '*') -> misc case, javadoc first line ******...*
 			result = fr.read();
 		}

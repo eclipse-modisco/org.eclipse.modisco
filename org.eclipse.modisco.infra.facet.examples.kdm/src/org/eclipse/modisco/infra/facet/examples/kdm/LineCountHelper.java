@@ -19,8 +19,6 @@ import java.util.Map;
 
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * @deprecated Replaced by EMF Facet
  */
@@ -106,7 +104,7 @@ public final class LineCountHelper {
 							}
 							nLines++;
 							empty = true;
-						} else if (!UCharacter.isWhitespace(buffer[i])) {
+						} else if (!Character.isWhitespace(buffer[i])) {
 							empty = false;
 						}
 					}

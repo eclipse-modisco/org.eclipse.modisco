@@ -12,8 +12,6 @@ package org.eclipse.modisco.infra.common.ui.internal.util;
 
 import java.util.Vector;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * A string pattern matcher. Supports '*' and '?' wildcards.
  *
@@ -441,13 +439,13 @@ public class StringMatcher {
 				continue;
 			}
 			if (this.fIgnoreCase) {
-				if (UCharacter.toUpperCase(tchar) == UCharacter.toUpperCase(pchar)) {
+				if (Character.toUpperCase(tchar) == Character.toUpperCase(pchar)) {
 					continue;
 				}
 				// comparing after converting to upper case doesn't handle all
 				// cases;
 				// also compare after converting to lower case
-				if (UCharacter.toLowerCase(tchar) == UCharacter.toLowerCase(pchar)) {
+				if (Character.toLowerCase(tchar) == Character.toLowerCase(pchar)) {
 					continue;
 				}
 			}

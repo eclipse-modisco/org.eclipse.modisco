@@ -81,8 +81,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
-import com.ibm.icu.lang.UCharacter;
-
 public final class PluginUtils {
 
 	// This class has been copied from
@@ -351,8 +349,8 @@ public final class PluginUtils {
 
 		String result = builder.toString();
 		// first letter to lowercase
-		if (result.length() > 0 && UCharacter.isUpperCase(result.charAt(0))) {
-			result = UCharacter.toLowerCase(result.charAt(0))
+		if (result.length() > 0 && Character.isUpperCase(result.charAt(0))) {
+			result = Character.toLowerCase(result.charAt(0))
 					+ result.substring(1);
 		}
 
@@ -450,6 +448,7 @@ public final class PluginUtils {
 	 */
 	public static IProject importPlugin(final Bundle bundle) throws CoreException {
 		return PluginUtils.importPlugin(bundle, new IFilter<String>() {
+			@Override
 			public boolean filter(final String fileName) {
 				return true;
 			}
@@ -470,6 +469,7 @@ public final class PluginUtils {
 	public static IProject importPlugin(final Bundle bundle, final IFilter<String> filter) throws CoreException {
 		final IProject[] project = new IProject[1];
 		final IWorkspaceRunnable workspaceRunnable = new IWorkspaceRunnable() {
+			@Override
 			public void run(final IProgressMonitor monitor) throws CoreException {
 				project[0] = internalImportPlugin(bundle, filter);
 			}

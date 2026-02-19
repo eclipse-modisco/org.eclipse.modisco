@@ -17,8 +17,6 @@ package org.eclipse.modisco.facet.util.core.internal.exported;
 
 import org.eclipse.modisco.facet.util.core.internal.Messages;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * @author Gabriel Barbier
  * @since 0.2
@@ -97,7 +95,7 @@ public final class StringUtils {
 			if (c == ' ') {
 				space = true;
 			} else if (space) {
-				javaName.append(UCharacter.toUpperCase(c));
+				javaName.append(Character.toUpperCase(c));
 				space = false;
 			} else {
 				javaName.append(c);
