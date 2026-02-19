@@ -11,17 +11,23 @@
  *****************************************************************************/
 package org.eclipse.modisco.jee.webapp.discoverer.tests;
 
+import com.google.common.collect.Sets;
 import java.io.File;
-
-import org.junit.Assert;
+import java.util.Collections;
+import java.util.Set;
+import java.util.Stack;
 
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
 import org.eclipse.modisco.jee.actions.AbstractDeploymentDescriptorDiscoverer;
 import org.eclipse.modisco.jee.webapp.discoverer.WebXmlDiscoverer2;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -48,9 +54,19 @@ public class TestNoUri {
 			File xmlFile = new File(path.toOSString());
 			Assert.assertTrue("Could not find " + path.toString(), xmlFile.exists());
 
+		//	Bundle bundle = CommonModiscoActivator.getDefault().getBundle();
+			String symbolicName = "org.eclipse.modisco.jee.webapp.discoverer"; //bundle.getSymbolicName();
+			String prefix = "In plug-in=\"" + symbolicName + "\"; extension=\"org.eclipse.modisco.infra.discovery.ui.discoverer\": attribute discovererID=\"";
+			String suffix = "\" doesn't refer to an existing discoverer.)";
+			Status status1 = new Status(IStatus.WARNING, symbolicName, "Unknown feature detected:org.eclipse.emf.ecore.xml.type.impl.AnyTypeImpl", null);
+			Logger.addExpectedStatuses(Sets.newHashSet(status1));
+			
 			WebXmlDiscoverer2 discoverer = (WebXmlDiscoverer2) IDiscoveryManager.INSTANCE
 					.createDiscovererImpl(WebXmlDiscoverer2.ID);
 			discoverer.discoverElement(xmlFile, new NullProgressMonitor());
+			Stack<Set<IStatus>> residualExpectedStatuses = Logger.resetExpectedStatuses();
+			Assert.assertNull("Not all expected status messages logged", residualExpectedStatuses);
+
 			this.resource = discoverer.getTargetModel();
 
 			Assert.assertTrue(AbstractDeploymentDescriptorDiscoverer.getDescXmlVersion(
