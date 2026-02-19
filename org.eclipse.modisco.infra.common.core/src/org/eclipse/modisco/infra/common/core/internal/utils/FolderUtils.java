@@ -375,6 +375,7 @@ public final class FolderUtils {
 	 */
 	public static void copyFolderFromBundle(final String sourcePath, final Bundle sourceBundle,
 			final String destinationPath, final IProject project) throws IOException, CoreException {
+		System.out.println("copyFolderFromBundle " + sourceBundle.getSymbolicName() + "[" + sourcePath + "] to " + project.toString() + "[" + destinationPath + "]");
 		Enumeration<?> e = sourceBundle.getEntryPaths(sourcePath);
 		if (e == null) {
 			// it should be a file (not a folder)
