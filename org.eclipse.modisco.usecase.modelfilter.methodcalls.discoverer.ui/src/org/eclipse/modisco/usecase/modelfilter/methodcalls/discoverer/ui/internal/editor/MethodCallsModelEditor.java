@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.Activator;
 import org.eclipse.modisco.usecase.modelfilter.methodcalls.discoverer.ui.internal.Messages;
@@ -102,7 +102,7 @@ public class MethodCallsModelEditor extends EditorPart {
 					tempProject = JavaCore.create(project);
 				} // else, nothing to do
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 			// initialize the editor input
 			this.editorInput = new PrefuseGraphInput(result, tempProject);

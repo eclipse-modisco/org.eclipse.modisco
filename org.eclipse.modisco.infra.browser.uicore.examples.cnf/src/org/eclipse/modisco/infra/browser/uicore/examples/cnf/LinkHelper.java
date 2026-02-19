@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.IResourceEditorInput;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.ui.IEditorInput;
@@ -48,7 +48,7 @@ public class LinkHelper implements ILinkHelper {
 					return new StructuredSelection(files[0]);
 				}
 			} catch (URISyntaxException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 
 			if (uri.isPlatformResource()) {

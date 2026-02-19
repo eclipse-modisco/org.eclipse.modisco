@@ -32,7 +32,7 @@ import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.common.cdo.derby.DerbyCDOServer;
 import org.eclipse.modisco.infra.common.cdo.server.Server;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
@@ -101,7 +101,7 @@ public abstract class AbstractRunBenchmark implements IDiscoverer<IJavaProject> 
 		try {
 			createReport(source, monitor);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

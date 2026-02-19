@@ -44,7 +44,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.AttributeItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ITreeElement;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.LinkItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.dnd.Clipboard;
@@ -266,7 +266,7 @@ public final class BrowserUtils {
 					public void run() {
 						boolean result = browser.browseToByURI(uriFragment);
 						if (!result) {
-							MoDiscoLogger.logError("could not find EObject with uriFragment \"" //$NON-NLS-1$
+							Logger.logError("could not find EObject with uriFragment \"" //$NON-NLS-1$
 									+ uriFragment + "\" in the model", //$NON-NLS-1$
 									MoDiscoBrowserPlugin.getPlugin());
 						}

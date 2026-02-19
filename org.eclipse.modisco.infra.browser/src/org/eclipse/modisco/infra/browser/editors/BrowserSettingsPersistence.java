@@ -27,7 +27,7 @@ import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.modisco.infra.browser.custom.MetamodelView;
 import org.eclipse.modisco.infra.browser.custom.core.CustomizationsCatalog;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
@@ -200,7 +200,7 @@ public class BrowserSettingsPersistence implements IPartListener {
 						try {
 							settings.load(filename);
 						} catch (IOException e) {
-							MoDiscoLogger.logWarning(e,
+							Logger.logWarning(e,
 									"previous browser settings couldn't be loaded", //$NON-NLS-1$
 									MoDiscoBrowserPlugin.getPlugin());
 						}
@@ -216,7 +216,7 @@ public class BrowserSettingsPersistence implements IPartListener {
 
 					settings.save(filename);
 				} else {
-					MoDiscoLogger.logError("couldn't find metamodel URI; " //$NON-NLS-1$
+					Logger.logError("couldn't find metamodel URI; " //$NON-NLS-1$
 							+ "skipped saving settings", MoDiscoBrowserPlugin.getPlugin()); //$NON-NLS-1$
 				}
 

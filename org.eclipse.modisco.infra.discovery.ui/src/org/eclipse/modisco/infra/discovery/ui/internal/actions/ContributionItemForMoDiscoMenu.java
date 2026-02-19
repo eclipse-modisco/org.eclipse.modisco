@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.action.ContributionItem;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
@@ -110,7 +110,7 @@ public class ContributionItemForMoDiscoMenu extends ContributionItem implements
 										break;
 									}
 								} catch (Exception e) {
-									MoDiscoLogger.logError(e, Activator.getDefault());
+									Logger.logError(e, Activator.getDefault());
 								}
 							}
 							if (applicable) {
@@ -135,7 +135,7 @@ public class ContributionItemForMoDiscoMenu extends ContributionItem implements
 							discovererMenu.setEnabled(false);
 						}
 					} catch (Exception e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 
@@ -153,7 +153,7 @@ public class ContributionItemForMoDiscoMenu extends ContributionItem implements
 				discoverer.getId());
 		if (discovererUI == null) {
 			if (Platform.inDebugMode()) {
-				MoDiscoLogger
+				Logger
 						.logWarning(
 								"No discoverer UI defined for discoverer " + discoverer.getId() //$NON-NLS-1$
 										+ ". It will not appear in the MoDisco menu.", Activator.getDefault()); //$NON-NLS-1$

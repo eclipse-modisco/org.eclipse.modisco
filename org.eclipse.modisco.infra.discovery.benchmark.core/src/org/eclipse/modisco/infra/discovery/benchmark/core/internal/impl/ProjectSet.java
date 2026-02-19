@@ -28,7 +28,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
 
 /**
@@ -98,7 +98,7 @@ public class ProjectSet implements IProjectSet {
 						return 1;
 					}
 				} catch (CoreException e) {
-					MoDiscoLogger.logError(e,
+					Logger.logError(e,
 							"Could not compute size of a project. The project set will not be sorted.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault()); //$NON-NLS-1$
 					return 0;
 				}

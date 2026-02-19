@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.core.FacetContext;
 import org.eclipse.modisco.infra.facet.core.FacetContextListener;
@@ -88,7 +88,7 @@ public class MetaclassInstancesAdapterWithFacet extends MetaclassInstancesAdapte
 				// received an error message, having the same cause.
 				assert true;
 			} catch (ModelQueryException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		notifyModelChanged(null);

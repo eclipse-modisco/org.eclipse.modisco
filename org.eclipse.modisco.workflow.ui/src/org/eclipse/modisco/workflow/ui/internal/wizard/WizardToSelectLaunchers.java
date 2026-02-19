@@ -15,7 +15,7 @@ package org.eclipse.modisco.workflow.ui.internal.wizard;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.Constants;
 import org.eclipse.modisco.workflow.core.WorkflowModel;
 import org.eclipse.modisco.workflow.modiscoworkflow.Element;
@@ -75,7 +75,7 @@ public class WizardToSelectLaunchers extends Wizard {
 				this.workflowModel.addElement(element);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return true;
 	}

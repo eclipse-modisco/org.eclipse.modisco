@@ -43,7 +43,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.extensions.IconProvider
 import org.eclipse.modisco.infra.browser.uicore.internal.extensions.NameProvidersRegistry;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
 import org.eclipse.modisco.infra.facet.FacetReference;
@@ -213,7 +213,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 					.getAttributes(this.fModelElement);
 			allAttributes.addAll(allAttributes2);
 		} catch (final ModelQueryException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		for (final EAttribute attribute : allAttributes) {
 			EClass containingEClass;
@@ -278,7 +278,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		try {
 			allReferences.addAll(this.facetContext.getReferences(this.fModelElement));
 		} catch (final ModelQueryException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		for (final EReference reference : allReferences) {
 			EClass containingEClass;
@@ -676,7 +676,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 				return ExtendedImageRegistry.getInstance().getImage(image);
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error retrieving image", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Error retrieving image", Activator.getDefault()); //$NON-NLS-1$
 		}
 
 		return null;
@@ -729,7 +729,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 			try {
 				result = this.facetContext.get(this.fModelElement, structuralFeature);
 			} catch (final Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				result = null;
 			}
 		} else {
@@ -738,7 +738,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 					result = this.fModelElement.eGet(structuralFeature);
 				}
 			} catch (Exception e) {
-				MoDiscoLogger.logError("Error getting value of feature '" //$NON-NLS-1$
+				Logger.logError("Error getting value of feature '" //$NON-NLS-1$
 						+ ((ENamedElement) structuralFeature.eContainer()).getName() + "::" //$NON-NLS-1$
 						+ structuralFeature.getName() + "' on instance of '" //$NON-NLS-1$
 						+ this.fModelElement.eClass().getName() + "'", Activator.getDefault()); //$NON-NLS-1$

@@ -21,7 +21,7 @@ import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.AbstractTypeDeclaration;
 import org.eclipse.modisco.java.BodyDeclaration;
@@ -171,7 +171,7 @@ public class JavaJdtBridge {
 					result = findCorrespondingMethod(jdtType, operation);
 				}
 			} catch (JavaModelException e) {
-				MoDiscoLogger.logError(e, JavaActivator.getDefault());
+				Logger.logError(e, JavaActivator.getDefault());
 			}
 		}
 
@@ -257,7 +257,7 @@ public class JavaJdtBridge {
 						if (ifield != null) {
 							result = ifield;
 						} else {
-							MoDiscoLogger.logWarning(Messages.JavaJdtBridge_6,
+							Logger.logWarning(Messages.JavaJdtBridge_6,
 									JavaActivator.getDefault());
 						}
 					} else if (container instanceof AbstractMethodDeclaration) {
@@ -276,7 +276,7 @@ public class JavaJdtBridge {
 					}
 				}
 			} catch (JavaModelException e) {
-				MoDiscoLogger.logError(e, JavaActivator.getDefault());
+				Logger.logError(e, JavaActivator.getDefault());
 			}
 		}
 

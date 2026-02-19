@@ -25,7 +25,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ColorProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
@@ -429,7 +429,7 @@ public class CustomTreePainter {
 		case BottomRight:
 			return new Point(step * 2, step);
 		default:
-			MoDiscoLogger.logError("Unhandled overlay icon position", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError("Unhandled overlay icon position", Activator.getDefault()); //$NON-NLS-1$
 		}
 		return null;
 	}

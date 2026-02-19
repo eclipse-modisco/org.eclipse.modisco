@@ -27,7 +27,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.core.internal.Activator;
 import org.eclipse.modisco.infra.query.core.internal.Messages;
@@ -97,15 +97,15 @@ public class ImplementationClassName extends AbstractModelConstraint {
 							}
 						}
 					} catch (Exception e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				} catch (JavaModelException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			} else {
 				Exception e = new Exception("Unexpected query model location:" //$NON-NLS-1$
 						+ uri.toString());
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 
 		}

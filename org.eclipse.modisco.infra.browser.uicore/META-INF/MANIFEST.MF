@@ -17,7 +17,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.modisco.infra.query.core;bundle-version="0.8.0",
  org.eclipse.modisco.infra.browser.custom.core;bundle-version="0.8.0",
  org.eclipse.emf.edit;bundle-version="2.6.0",
- org.eclipse.emf.edit.ui;bundle-version="2.6.0"
+ org.eclipse.emf.edit.ui;bundle-version="2.6.0",
+ org.eclipse.modisco.facet.util.core
 Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

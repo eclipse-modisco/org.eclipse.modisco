@@ -34,7 +34,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.osgi.util.ManifestElement;
 import org.eclipse.pde.core.plugin.IPluginAttribute;
 import org.eclipse.pde.core.plugin.IPluginElement;
@@ -216,7 +216,7 @@ public final class PluginUtils {
 						new NullProgressMonitor());
 
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		} else {
 			try {
@@ -242,11 +242,11 @@ public final class PluginUtils {
 				try {
 					BuildPropertiesUtils.addToBuild(pluginXML);
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, "Error adding file " + pluginXML.getFullPath() //$NON-NLS-1$
+					Logger.logError(e, "Error adding file " + pluginXML.getFullPath() //$NON-NLS-1$
 							+ " to the build.properties", null); //$NON-NLS-1$
 				}
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		}
 
@@ -261,7 +261,7 @@ public final class PluginUtils {
 		// pluginModel.getExtensions().add(extension);
 		// ((IEditableModel) pluginModel).save();
 		// } catch (Exception e) {
-		// MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+		// Logger.logError(e, CommonModiscoActivator.getDefault());
 		// }
 	}
 
@@ -308,7 +308,7 @@ public final class PluginUtils {
 
 					manifest.getMainAttributes().putValue("Require-Bundle", newRequires.toString()); //$NON-NLS-1$
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+					Logger.logError(e, CommonModiscoActivator.getDefault());
 				}
 			}
 		});
@@ -363,7 +363,7 @@ public final class PluginUtils {
 			manifestResource.setContents(byteArrayInputStream, true, true,
 					new NullProgressMonitor());
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 	}
 }

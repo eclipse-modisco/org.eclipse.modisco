@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.generation.utils.JavaUtils;
 import org.eclipse.ocl.ecore.EcoreEnvironment;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
@@ -323,7 +323,7 @@ abstract class AbstractAcceleoGenerator {
 			}
 		}
 		if (s != null) {
-			MoDiscoLogger.logWarning(s.toString(), null);
+			Logger.logWarning(s.toString(), null);
 		}
 		// check errors
 		targetFolder = folder;

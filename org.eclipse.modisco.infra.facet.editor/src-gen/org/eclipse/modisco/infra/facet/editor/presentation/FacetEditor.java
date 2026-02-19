@@ -113,7 +113,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.controls.EObjectErrorPainter;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetPackage;
@@ -872,7 +872,7 @@ public class FacetEditor extends MultiPageEditorPart implements IEditingDomainPr
 				return feature1.getName().equals(feature2.getName());
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, null);
+			Logger.logError(e, null);
 		}
 		return false;
 	}
@@ -1212,7 +1212,7 @@ public class FacetEditor extends MultiPageEditorPart implements IEditingDomainPr
 		try {
 			getEditorSite().getPage().showView(FacetEditor.PROPERTY_VIEW_ID);
 		} catch (final PartInitException e) {
-			MoDiscoLogger.logError(e, null);
+			Logger.logError(e, null);
 		}
 	}
 
@@ -1472,7 +1472,7 @@ public class FacetEditor extends MultiPageEditorPart implements IEditingDomainPr
 					}
 				}
 				if (resource == null) {
-					MoDiscoLogger.logError("Found no resource to save", //$NON-NLS-1$
+					Logger.logError("Found no resource to save", //$NON-NLS-1$
 							FacetEditorPlugin.getPlugin());
 					return;
 				}

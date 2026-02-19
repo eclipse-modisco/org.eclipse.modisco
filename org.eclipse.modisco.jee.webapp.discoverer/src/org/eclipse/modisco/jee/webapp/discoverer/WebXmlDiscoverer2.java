@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xml.type.AnyType;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.Messages;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
@@ -132,7 +132,7 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 
 			// Unknown feature management:
 			for (AnyType anyType : unknowFeature.values()) {
-				MoDiscoLogger.logWarning("Unknown feature detected:" + anyType.toString(), //$NON-NLS-1$
+				Logger.logWarning("Unknown feature detected:" + anyType.toString(), //$NON-NLS-1$
 						WebXmlActivator.getDefault());
 			}
 		} catch (IOException e) {

@@ -38,7 +38,7 @@ import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.AveragedMultiDiscoveryBenchmark;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.JavaBenchmarkDiscoverer;
@@ -138,12 +138,12 @@ public class BenchmarkAction extends AbstractHandler {
 								try {
 									IDE.openEditor(activePage, benchmarkReportFile);
 								} catch (PartInitException e) {
-									MoDiscoLogger.logError(e, Activator.getDefault());
+									Logger.logError(e, Activator.getDefault());
 								}
 							}
 						});
 					} catch (Exception e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 					return Status.OK_STATUS;
 				}

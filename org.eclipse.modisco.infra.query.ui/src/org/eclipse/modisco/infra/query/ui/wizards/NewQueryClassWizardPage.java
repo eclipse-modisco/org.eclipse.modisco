@@ -52,7 +52,7 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -142,7 +142,7 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 				}
 			}
 		} catch (JavaModelException e1) {
-			MoDiscoLogger.logError(e1, Activator.getDefault());
+			Logger.logError(e1, Activator.getDefault());
 		}
 	}
 
@@ -184,7 +184,7 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 			IDE.openEditor(activePage, (IFile) javaClass.getResource());
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			MessageDialog.openError(getShell(),
 					Messages.NewClassCreationWizard_failedToCreateJavaClass,
 					Messages.NewClassCreationWizard_failedToCreateJavaModelQueryClass);
@@ -240,7 +240,7 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 			manifestResource.setContents(byteArrayInputStream, true, true,
 					new NullProgressMonitor());
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 
@@ -276,13 +276,13 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 						requiredBundles.add(modelPluginID);
 					}
 				} else {
-					MoDiscoLogger.logWarning("Couldn't add the metamodel implementation plug-in" //$NON-NLS-1$
+					Logger.logWarning("Couldn't add the metamodel implementation plug-in" //$NON-NLS-1$
 							+ " to the dependencies automatically because" //$NON-NLS-1$
 							+ " the corresponding genmodel couldn't be found: " //$NON-NLS-1$
 							+ ePackage.getNsURI(), Activator.getDefault());
 				}
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return requiredBundles.toArray(new String[requiredBundles.size()]);

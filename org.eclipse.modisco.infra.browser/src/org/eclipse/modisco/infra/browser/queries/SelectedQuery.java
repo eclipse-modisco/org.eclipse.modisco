@@ -16,7 +16,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.QueryUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.Util;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.osgi.util.NLS;
 
@@ -46,7 +46,7 @@ public class SelectedQuery {
 			this.executed = true;
 			this.selectedQueriesManager.fireChangeNotification();
 		} else {
-			MoDiscoLogger.logError(NLS.bind(Messages.unresolvedQuery, EMFUtil
+			Logger.logError(NLS.bind(Messages.unresolvedQuery, EMFUtil
 					.proxyURI(this.modelQuery)), Activator.getDefault());
 		}
 	}

@@ -13,7 +13,7 @@
  * 
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
-  import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+  import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.jee.jsp.discoverer.JspActivator;
 
 
@@ -97,7 +97,7 @@ public class JSPLexer extends Lexer {
                                             RecognitionException e) {
             String hdr = getErrorHeader(e);
             String msg = getErrorMessage(e, tokenNames);
-               MoDiscoLogger.logWarning("Lexer error in "+this.filePath+" "+hdr+" "+msg, JspActivator.getDefault());
+               Logger.logWarning("Lexer error in "+this.filePath+" "+hdr+" "+msg, JspActivator.getDefault());
         }
         private String filePath;
         public JSPLexer(CharStream input, String path) {

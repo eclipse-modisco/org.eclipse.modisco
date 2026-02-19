@@ -17,7 +17,7 @@ import java.net.URL;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.graphics.Image;
 
@@ -149,7 +149,7 @@ public final class ImageProvider {
 	private ImageDescriptor createImageDescriptor(final String resourcePath) {
 		final URL url = Activator.getDefault().getBundle().getResource(resourcePath);
 		if (url == null) {
-			MoDiscoLogger.logError(NLS.bind("Resource not found: {0}", //$NON-NLS-1$
+			Logger.logError(NLS.bind("Resource not found: {0}", //$NON-NLS-1$
 					resourcePath), Activator.getDefault());
 			return ImageDescriptor.getMissingImageDescriptor();
 		}

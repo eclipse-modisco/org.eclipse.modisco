@@ -17,7 +17,7 @@ import java.util.Map;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.generation.Activator;
 import org.eclipse.modisco.java.generation.Messages;
 
@@ -55,7 +55,7 @@ public final class JavaUtils {
 					fw.close();
 				} catch (IOException e) {
 					if (Platform.isRunning()) {
-						MoDiscoLogger.logWarning(e, Messages.JavaUtils_1
+						Logger.logWarning(e, Messages.JavaUtils_1
 								+ file.getAbsoluteFile(), Activator
 								.getDefault());
 					} else {
@@ -84,14 +84,14 @@ public final class JavaUtils {
 				return document.get();
 			} catch (Exception e) {
 				if (Platform.isRunning()) {
-					MoDiscoLogger.logWarning(e, Messages.JavaUtils_4, Activator
+					Logger.logWarning(e, Messages.JavaUtils_4, Activator
 							.getDefault());
 				} else {
 					System.err.println(Messages.JavaUtils_5 + e.getMessage());
 				}
 			}
 		} else {
-			MoDiscoLogger.logWarning(Messages.JavaUtils_4, Activator
+			Logger.logWarning(Messages.JavaUtils_4, Activator
 					.getDefault());
 		}
 		return source;

@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventListener;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Event;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.MemoryMeasurement;
@@ -168,7 +168,7 @@ public class EventAndMemoryRecorder implements IEventListener {
 
 
 		} catch (InterruptedException e) {
-				MoDiscoLogger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
+				Logger.logError(e, "Problem with the memory recorder.", org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator.getDefault());
 		}
 
 

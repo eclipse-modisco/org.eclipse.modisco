@@ -40,7 +40,7 @@ import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
 import org.eclipse.modisco.infra.browser.preferences.PreferenceConstants;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageUtils;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetPackage;
@@ -294,7 +294,7 @@ public class LoadFacetsAction extends Action {
 				try {
 					Job.getJobManager().join(loadFacetsFamily, monitor);
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+					Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 					return Status.CANCEL_STATUS;
 				}
 				if (facetsToLoad.size() > 0) {

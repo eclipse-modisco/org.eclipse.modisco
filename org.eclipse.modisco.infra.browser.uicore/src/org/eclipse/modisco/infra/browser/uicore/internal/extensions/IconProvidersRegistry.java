@@ -29,7 +29,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.extensions.AbstractRegistry;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.graphics.Image;
 
 /**
@@ -197,7 +197,7 @@ public class IconProvidersRegistry extends AbstractRegistry {
 			iconProviderObject = configurationElement
 					.createExecutableExtension(IconProvidersRegistry.ICON_PROVIDER_CLASS);
 		} catch (final CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return;
 		}
 		if (iconProviderObject == null) {

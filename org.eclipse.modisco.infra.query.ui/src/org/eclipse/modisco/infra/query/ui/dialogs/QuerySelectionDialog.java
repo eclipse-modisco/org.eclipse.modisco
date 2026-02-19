@@ -38,7 +38,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.jface.window.Window;
 import org.eclipse.jface.wizard.WizardDialog;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -132,7 +132,7 @@ public class QuerySelectionDialog extends Dialog {
 							ResourcesPlugin.getWorkspace().build(
 									IncrementalProjectBuilder.FULL_BUILD, monitor);
 						} catch (CoreException e) {
-							MoDiscoLogger.logError(e, Activator.getDefault());
+							Logger.logError(e, Activator.getDefault());
 						}
 						// the query sets have been re-created => find by name
 						Collection<ModelQuerySet> oldQuerySets = new ArrayList<ModelQuerySet>(

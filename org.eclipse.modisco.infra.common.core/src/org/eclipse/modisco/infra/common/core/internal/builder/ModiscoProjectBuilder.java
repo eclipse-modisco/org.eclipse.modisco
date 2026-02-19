@@ -24,8 +24,8 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * This class is the MoDisco project builder implementation.
@@ -60,7 +60,7 @@ public class ModiscoProjectBuilder extends IncrementalProjectBuilder {
 							builderDescriptor.getDependsOn().add(depends.getAttribute("builder")); //$NON-NLS-1$
 						}
 					} catch (Exception e) {
-						MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+						Logger.logError(e, CommonModiscoActivator.getDefault());
 					}
 				}
 				ModiscoProjectBuilder.modiscoBuilders = sortBuilders(ModiscoProjectBuilder.modiscoBuilders);
@@ -126,7 +126,7 @@ public class ModiscoProjectBuilder extends IncrementalProjectBuilder {
 		for (BuilderDescriptor descriptor : ModiscoProjectBuilder.modiscoBuilders) {
 			for (String dependsOn : descriptor.getDependsOn()) {
 				if (!idList.contains(dependsOn)) {
-					MoDiscoLogger.logWarning("The builder " + descriptor.getId() + " depends on " //$NON-NLS-1$//$NON-NLS-2$
+					Logger.logWarning("The builder " + descriptor.getId() + " depends on " //$NON-NLS-1$//$NON-NLS-2$
 							+ dependsOn + " which does not exist.", CommonModiscoActivator //$NON-NLS-1$
 							.getDefault());
 				}

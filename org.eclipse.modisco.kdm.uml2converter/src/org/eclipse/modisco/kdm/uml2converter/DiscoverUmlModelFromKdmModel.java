@@ -20,7 +20,7 @@ import org.eclipse.core.runtime.content.IContentDescription;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
@@ -58,7 +58,7 @@ public class DiscoverUmlModelFromKdmModel extends AbstractModelDiscoverer<IFile>
 			IContentDescription contentDescription = file.getContentDescription();
 			return IKDMConstants.CONTENT_TYPE.equals(contentDescription.getContentType().getId());
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+			Logger.logError(e, KdmToUml2Activator.getDefault());
 		}
 
 		return file.toString().endsWith(IKDMDiscoveryConstants.KDM_MODEL_FILE_SUFFIX);
@@ -93,7 +93,7 @@ public class DiscoverUmlModelFromKdmModel extends AbstractModelDiscoverer<IFile>
 			result = resources[0];
 			setTargetModel(result);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+			Logger.logError(e, KdmToUml2Activator.getDefault());
 		}
 	}
 }

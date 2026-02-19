@@ -112,7 +112,7 @@ import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.controls.EObjectErrorPainter;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
@@ -814,7 +814,7 @@ public class QueryEditor extends MultiPageEditorPart implements IEditingDomainPr
 						&& querySet1.getName().equals(querySet2.getName());
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, null);
+			Logger.logError(e, null);
 		}
 		return false;
 	}
@@ -1154,7 +1154,7 @@ public class QueryEditor extends MultiPageEditorPart implements IEditingDomainPr
 		try {
 			getEditorSite().getPage().showView(QueryEditor.PROPERTY_VIEW_ID);
 		} catch (final PartInitException e) {
-			MoDiscoLogger.logError(e, null);
+			Logger.logError(e, null);
 		}
 	}
 
@@ -1414,7 +1414,7 @@ public class QueryEditor extends MultiPageEditorPart implements IEditingDomainPr
 					}
 				}
 				if (resource == null) {
-					MoDiscoLogger.logError("Found no resource to save", //$NON-NLS-1$
+					Logger.logError("Found no resource to save", //$NON-NLS-1$
 							QueryEditorPlugin.getPlugin());
 					return;
 				}
@@ -1819,7 +1819,7 @@ public class QueryEditor extends MultiPageEditorPart implements IEditingDomainPr
 								}
 							}
 						} catch (JavaModelException e) {
-							MoDiscoLogger.logError(e, null);
+							Logger.logError(e, null);
 						}
 					}
 				}

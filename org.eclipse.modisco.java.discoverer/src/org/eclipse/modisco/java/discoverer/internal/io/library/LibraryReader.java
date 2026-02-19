@@ -26,7 +26,7 @@ import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Archive;
 import org.eclipse.modisco.java.Model;
@@ -183,7 +183,7 @@ public class LibraryReader implements IModelReader {
 						"Library reader can not handle source object : " + source.toString()); //$NON-NLS-1$
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 	}
 
@@ -211,7 +211,7 @@ public class LibraryReader implements IModelReader {
 			}
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 	}
 

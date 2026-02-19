@@ -54,11 +54,11 @@ import org.eclipse.jdt.core.JavaConventions;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.exception.MoDiscoCommonRuntimeException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.service.datalocation.Location;
 import org.osgi.framework.Bundle;
 
@@ -142,7 +142,7 @@ public final class ProjectUtils {
 				InputStream source = new ByteArrayInputStream(activatorContents.getBytes());
 				activatorFile.create(source, true, new NullProgressMonitor());
 			} catch (IOException e) {
-				MoDiscoLogger.logError(e, "Couldn't create Activator", CommonModiscoActivator //$NON-NLS-1$
+				Logger.logError(e, "Couldn't create Activator", CommonModiscoActivator //$NON-NLS-1$
 						.getDefault());
 			}
 		}
@@ -186,7 +186,7 @@ public final class ProjectUtils {
 		IStatus status = JavaConventions.validatePackageName(result, JavaCore.VERSION_1_5,
 				JavaCore.VERSION_1_5);
 		if (!status.isOK()) {
-			MoDiscoLogger.logWarning("Couldn't make valid package name from project name: " //$NON-NLS-1$
+			Logger.logWarning("Couldn't make valid package name from project name: " //$NON-NLS-1$
 					+ status.getMessage(), CommonModiscoActivator.getDefault());
 			return name;
 		}
@@ -432,7 +432,7 @@ public final class ProjectUtils {
 			ProjectUtils.configureAsPluginProject(project);
 			ProjectUtils.createBuildProperties(project);
 		} else {
-			MoDiscoLogger.logWarning("Project creation aborted : the project already exists", //$NON-NLS-1$
+			Logger.logWarning("Project creation aborted : the project already exists", //$NON-NLS-1$
 					CommonModiscoActivator.getDefault());
 		}
 		if (monitorDone) {
@@ -494,7 +494,7 @@ public final class ProjectUtils {
 			}
 			return project.getNature(MoDiscoProject.NATURE_ID) != null;
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 			return false;
 		}
 	}
@@ -523,7 +523,7 @@ public final class ProjectUtils {
 				javaNode.put(AptPreferenceConstants.APT_PROCESSANNOTATIONS, "enabled"); //$NON-NLS-1$
 				javaNode.sync();
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, "Error enabling apt processing", //$NON-NLS-1$
+				Logger.logError(e, "Error enabling apt processing", //$NON-NLS-1$
 						CommonModiscoActivator.getDefault());
 			}
 		}

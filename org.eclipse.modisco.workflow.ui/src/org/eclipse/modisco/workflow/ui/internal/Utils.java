@@ -15,7 +15,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Shell;
@@ -54,7 +54,7 @@ public final class Utils {
 			ResourcesPlugin.getWorkspace().getRoot()
 					.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 }

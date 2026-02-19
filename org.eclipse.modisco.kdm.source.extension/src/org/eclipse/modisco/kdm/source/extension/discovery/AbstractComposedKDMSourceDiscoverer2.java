@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.IOWrappedException;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.jdt.core.IJavaElement;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.kdm.source.discoverer.DiscoverSourceModelFromJavaElement;
@@ -153,7 +153,7 @@ public abstract class AbstractComposedKDMSourceDiscoverer2<T> extends AbstractMo
 				AbstractComposedKDMSourceDiscoverer2.FLUSH_LIMIT);
 		options.put(XMLResource.OPTION_USE_FILE_BUFFER, Boolean.TRUE);
 		if (resource.getURI() == null) {
-			MoDiscoLogger.logError("Cannot save a Resource without URI." //$NON-NLS-1$
+			Logger.logError("Cannot save a Resource without URI." //$NON-NLS-1$
 					, Activator.getDefault());
 			return;
 		}
@@ -162,12 +162,12 @@ public abstract class AbstractComposedKDMSourceDiscoverer2<T> extends AbstractMo
 		} catch (IOWrappedException e) {
 			// TODO here is a temporary fix for Bug 323247
 			if (e.getCause() != null && (e.getCause() instanceof CoreException)) {
-				MoDiscoLogger.logWarning(e, "XMI serialization has failed on '" + resource.getURI() //$NON-NLS-1$
+				Logger.logWarning(e, "XMI serialization has failed on '" + resource.getURI() //$NON-NLS-1$
 						+ "'. Trying again without File Buffer.", //$NON-NLS-1$
 						Activator.getDefault());
 				options.clear();
 				resource.save(options);
-				MoDiscoLogger.logInfo("XMI serialization is done for " + resource.getURI(), //$NON-NLS-1$
+				Logger.logInfo("XMI serialization is done for " + resource.getURI(), //$NON-NLS-1$
 						Activator.getDefault());
 			} else {
 				throw e;

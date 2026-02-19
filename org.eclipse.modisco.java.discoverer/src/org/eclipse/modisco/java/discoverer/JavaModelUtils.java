@@ -13,7 +13,7 @@ package org.eclipse.modisco.java.discoverer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.content.IContentDescription;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.IJavaConstants;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
@@ -30,7 +30,7 @@ public final class JavaModelUtils {
 			IContentDescription contentDescription = file.getContentDescription();
 			return IJavaConstants.CONTENT_TYPE.equals(contentDescription.getContentType().getId());
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 
 		return file.toString().endsWith(JavaDiscoveryConstants.JAVA_MODEL_FILE_SUFFIX);

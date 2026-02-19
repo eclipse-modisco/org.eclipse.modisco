@@ -19,7 +19,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.benchmark.Report;
@@ -54,7 +54,7 @@ public class Benchmark2 implements IDiscoverer<IJavaProject> {
 			aReport.generate();
 			getStatProject().refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

@@ -46,7 +46,7 @@ public class DerbyCDOServer extends AbstractCDOServer {
 			dataSource.setDatabaseName(project.getLocation().toString()
 					+ "/derbyDB"); //$NON-NLS-1$
 		} catch (Exception e) {
-			// MoDiscoLogger
+			// Logger
 			// .logWarning(
 			//							"Failed to use the workspace, tmpdir will be used", Activator //$NON-NLS-1$
 			// .getDefault());

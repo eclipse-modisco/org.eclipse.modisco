@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.kdm.source.extension.ASTNodeSourceRegion;
 import org.eclipse.modisco.kdm.source.extension.ui.Activator;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.RevealingStrategy;
@@ -138,7 +138,7 @@ public class SourceAccessAdapter extends AdapterImpl {
 					this.revealingStrategy.revealInTextEditor(file,
 							this.sourceRegion);
 				} else {
-					MoDiscoLogger.logError("The file: " + file.getName() //$NON-NLS-1$
+					Logger.logError("The file: " + file.getName() //$NON-NLS-1$
 							+ " could not be found. Please update your model", //$NON-NLS-1$
 							Activator.getDefault());
 				}

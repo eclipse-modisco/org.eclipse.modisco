@@ -52,6 +52,7 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.Diagnostic;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.protocol.ModiscoProtocolException;
@@ -62,7 +63,6 @@ import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.util.NLS;
 import org.osgi.framework.Bundle;
 
@@ -162,7 +162,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 					IWorkspaceRoot wsr = ResourcesPlugin.getWorkspace().getRoot();
 					IResource resource = wsr.findMember(path);
 					if (resource == null || !resource.exists() || !(resource instanceof IFile)) {
-						MoDiscoLogger.logError("The resource " + line + " has not be found.", //$NON-NLS-1$//$NON-NLS-2$
+						Logger.logError("The resource " + line + " has not be found.", //$NON-NLS-1$//$NON-NLS-2$
 								CommonModiscoActivator.getDefault());
 					} else {
 						internalAddWSFile((IFile) resource, false);
@@ -172,7 +172,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				br.close();
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, getActivator());
+			Logger.logError(e, getActivator());
 		}
 	}
 
@@ -193,7 +193,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				}
 				ps.close();
 			} catch (FileNotFoundException e) {
-				MoDiscoLogger.logError(e, getActivator());
+				Logger.logError(e, getActivator());
 			}
 		}
 
@@ -347,16 +347,16 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			this.nonValidFiles.remove(file);
 		} catch (OpenResourceException e) {
 			if (uri.isPlatformPlugin()) {
-				MoDiscoLogger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
+				Logger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
 			}
 			invalidateWSFile(file);
 		} catch (ModiscoProtocolException e) {
 			if (uri.isPlatformPlugin()) {
-				MoDiscoLogger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
+				Logger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
 			}
 			invalidateWSFile(file);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
+			Logger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
 			invalidateWSFile(file);
 		} finally {
 			// avoid platform:/ resources in the MoDiscoResourceSet
@@ -390,10 +390,10 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 						marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 						marker.setAttribute(EValidator.URI_ATTRIBUTE, brokenRef.getLocation());
 					} catch (CoreException e) {
-						MoDiscoLogger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
+						Logger.logError(e, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
 					}
 				} else {
-					MoDiscoLogger.logError(brokenRef, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
+					Logger.logError(brokenRef, "Failed to load: " + uri, getActivator()); //$NON-NLS-1$
 				}
 			}
 		}
@@ -438,7 +438,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 							NLS.bind(Messages.AbstractMoDiscoCatalog_nameConflict, registeredURI));
 					marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 				} catch (CoreException e1) {
-					MoDiscoLogger.logError(e1, "Failed to add markers to " //$NON-NLS-1$
+					Logger.logError(e1, "Failed to add markers to " //$NON-NLS-1$
 							+ file.getLocation().toString(), getActivator());
 				}
 				synchronized (this.nameToFileInConflict) {
@@ -507,6 +507,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 
 	public final synchronized void scheduleAddWSFile(final IFile declarationFile) {
 		Runnable action = new Runnable() {
+			@Override
 			public void run() {
 				synchronized (AbstractMoDiscoCatalog.this) {
 					if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
@@ -664,6 +665,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			}
 		}
 		Runnable action = new Runnable() {
+			@Override
 			public void run() {
 				synchronized (AbstractMoDiscoCatalog.this) {
 					for (IFile declarationFile : pathNames.keySet()) {
@@ -685,6 +687,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	public synchronized void scheduleRemoveWSFile(final IFile declarationFile) {
 		final String pathName = getPath(declarationFile);
 		Runnable action = new Runnable() {
+			@Override
 			public void run() {
 				if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
 					System.out
@@ -768,7 +771,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				}
 				String message = "Failed to " + verb + " a workspace file in " //$NON-NLS-1$ //$NON-NLS-2$
 						+ this.getClass().getSimpleName() + " : " + declarationFile.getLocation(); //$NON-NLS-1$
-				MoDiscoLogger.logError(e, message, getActivator());
+				Logger.logError(e, message, getActivator());
 			}
 			save();
 		}
@@ -785,6 +788,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	public final synchronized void scheduleUpdateWSFile(final IFile declarationFile) {
 		final String path = getPath(declarationFile);
 		Runnable action = new Runnable() {
+			@Override
 			public void run() {
 				synchronized (AbstractMoDiscoCatalog.this) {
 					if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
@@ -811,6 +815,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		}
 		final List<ModiscoCatalogChangeListener> tmpChangeListeners = this.changeListeners;
 		Runnable runnable = new Runnable() {
+			@Override
 			public void run() {
 				for (ModiscoCatalogChangeListener listener : tmpChangeListeners) {
 					if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
@@ -831,6 +836,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		}
 		final List<ModiscoCatalogChangeListener> tmpChangeListeners = this.changeListeners;
 		Runnable runnable = new Runnable() {
+			@Override
 			public void run() {
 				for (ModiscoCatalogChangeListener listener : tmpChangeListeners) {
 					if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
@@ -850,6 +856,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		}
 		final List<ModiscoCatalogChangeListener> tmpChangeListeners = this.changeListeners;
 		Runnable runnable = new Runnable() {
+			@Override
 			public void run() {
 				for (ModiscoCatalogChangeListener listener : tmpChangeListeners) {
 					if (AbstractMoDiscoCatalog.SCHEDULING_DEBUG) {
@@ -951,6 +958,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		// remove error markers
 		try {
 			project.accept(new IResourceVisitor() {
+				@Override
 				public boolean visit(final IResource resource) throws CoreException {
 					String fileExtension = resource.getFileExtension();
 					if (getFileExtension().equals(fileExtension)) {
@@ -963,14 +971,14 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 							}
 						} catch (CoreException e) {
 							final String message = "An error happened while removing markers"; //$NON-NLS-1$
-							MoDiscoLogger.logError(e, message, CommonModiscoActivator.getDefault());
+							Logger.logError(e, message, CommonModiscoActivator.getDefault());
 						}
 					}
 					return true;
 				}
 			});
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, getActivator());
+			Logger.logError(e, getActivator());
 		}
 
 		// remove non-valid files in the cleaned project
@@ -1016,6 +1024,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	public void aListenedResourceHasChanged(final URI resourceUri, final URI dependingResourceURI) {
 		IFile declarationFile = null;
 		URI uri;
@@ -1031,7 +1040,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				declarationFile = ResourcesPlugin.getWorkspace().getRoot()
 						.getFile(new Path(uri.toPlatformString(true)));
 			} else {
-				MoDiscoLogger.logError("Unexpected uri: " //$NON-NLS-1$
+				Logger.logError("Unexpected uri: " //$NON-NLS-1$
 						+ dependingResourceURI, getActivator());
 				return;
 			}
@@ -1069,6 +1078,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		return AbstractMoDiscoCatalog.catalogs;
 	}
 
+	@Override
 	public void resourceChanged(final IResourceChangeEvent event) {
 		try {
 			IResource resource = event.getResource();
@@ -1079,6 +1089,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 							|| event.getType() == IResourceChangeEvent.PRE_DELETE) {
 						final List<IFile> toBeRemoved = new ArrayList<IFile>();
 						project.accept(new IResourceVisitor() {
+							@Override
 							public boolean visit(final IResource visitedResource)
 									throws CoreException {
 								if (visitedResource instanceof IFile) {
@@ -1100,7 +1111,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				checkOpenResource(event);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 	}
 
@@ -1114,6 +1125,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 				IProject project = (IProject) projectDelta.getResource();
 				if (project.isOpen() && ProjectUtils.isMoDiscoProject(project)) {
 					project.accept(new IResourceVisitor() {
+						@Override
 						public boolean visit(final IResource visitedResource) throws CoreException {
 							if (visitedResource instanceof IFile) {
 								IFile file = (IFile) visitedResource;
@@ -1154,11 +1166,11 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 					// updateWSFile(file);
 					// }
 					// } catch (IOException e) {
-					// MoDiscoLogger.logError(e, getActivator());
+					// Logger.logError(e, getActivator());
 					// }
 				}
 			} else {
-				MoDiscoLogger
+				Logger
 						.logError(
 								"No file found for: " + uri.toString(), CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 			}
@@ -1219,7 +1231,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
 			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, "Unexpected error.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Unexpected error.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 		}
 	}
 

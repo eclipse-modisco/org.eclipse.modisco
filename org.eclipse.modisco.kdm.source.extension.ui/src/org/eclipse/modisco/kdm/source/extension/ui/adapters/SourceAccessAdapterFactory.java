@@ -26,7 +26,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.kdm.source.extension.ui.Activator;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.RevealingStrategy;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.SourceStrategy;
@@ -87,10 +87,10 @@ public class SourceAccessAdapterFactory extends AdapterFactoryImpl {
 						addSourceStrategy(sourceStrategy);
 
 					} catch (CoreException e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				} else {
-					MoDiscoLogger.logError("Metamodel or class in extension: " //$NON-NLS-1$
+					Logger.logError("Metamodel or class in extension: " //$NON-NLS-1$
 							+ ext.getNamespaceIdentifier() + " is null", //$NON-NLS-1$
 							Activator.getDefault());
 				}
@@ -122,7 +122,7 @@ public class SourceAccessAdapterFactory extends AdapterFactoryImpl {
 						// Add the revealing strategy to the list
 						addRevealingSrategy(revealingStrategy);
 					} catch (CoreException e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 			}

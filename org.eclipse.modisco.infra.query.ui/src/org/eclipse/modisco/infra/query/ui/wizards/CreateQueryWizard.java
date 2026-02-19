@@ -28,7 +28,7 @@ import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
 import org.eclipse.modisco.infra.query.QueryFactory;
@@ -145,7 +145,7 @@ public class CreateQueryWizard extends Wizard {
 				resource.save(Collections.emptyMap());
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return false;
 		}
 		return true;
@@ -183,7 +183,7 @@ public class CreateQueryWizard extends Wizard {
 			if (cmd.canExecute()) {
 				compoundCommand.append(cmd);
 			} else {
-				MoDiscoLogger.logWarning(
+				Logger.logWarning(
 						"Couldn't automatically add EPackages to QuerySet: " + packagesToAdd, //$NON-NLS-1$
 						Activator.getDefault());
 			}

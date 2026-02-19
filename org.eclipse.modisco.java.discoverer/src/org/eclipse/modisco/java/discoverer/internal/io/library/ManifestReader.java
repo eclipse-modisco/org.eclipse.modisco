@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.IPackageFragmentRoot;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.Archive;
 import org.eclipse.modisco.java.Manifest;
 import org.eclipse.modisco.java.ManifestAttribute;
@@ -63,7 +63,7 @@ public final class ManifestReader {
 			}
 
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 	}
 

@@ -42,7 +42,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
 import org.eclipse.modisco.infra.query.QueryFactory;
 import org.eclipse.modisco.infra.query.QueryPackage;
@@ -247,7 +247,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 						try {
 							BuildPropertiesUtils.addToBuild(modelFile);
 						} catch (Exception e) {
-							MoDiscoLogger
+							Logger
 									.logError(
 											e,
 											"Error adding file " + modelFile.getFullPath() //$NON-NLS-1$

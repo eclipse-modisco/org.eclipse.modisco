@@ -38,7 +38,7 @@ import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.Signature;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.core.internal.Activator;
 import org.eclipse.modisco.infra.query.core.internal.Messages;
@@ -147,7 +147,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 						} catch (final UnresolvedType e) {
 							ifNoMarkers(type, new Runnable() {
 								public void run() {
-									MoDiscoLogger.logWarning(e,
+									Logger.logWarning(e,
 											"Unresolved type while validating query context type: " //$NON-NLS-1$
 													+ modelQuery.getName(), Activator.getDefault());
 								}
@@ -163,7 +163,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 						} catch (final UnresolvedType e) {
 							ifNoMarkers(type, new Runnable() {
 								public void run() {
-									MoDiscoLogger.logWarning(e,
+									Logger.logWarning(e,
 											"Unresolved type while validating query return type: " //$NON-NLS-1$
 													+ modelQuery.getName(), Activator.getDefault());
 								}
@@ -180,7 +180,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 			return ctx.createFailureStatus(NLS.bind(Messages.ImplementationClassInterface_wrongInterface3,
 					modelQuery.getImplementationClassName()));
 		} catch (JavaModelException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return ctx.createSuccessStatus();
 	}
@@ -215,7 +215,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 				} catch (final UnresolvedType e) {
 					ifNoMarkers(type, new Runnable() {
 						public void run() {
-							MoDiscoLogger.logWarning(e,
+							Logger.logWarning(e,
 									"Unresolved type while validating multi-valued return type in query: " //$NON-NLS-1$
 											+ modelQuery.getName(), Activator.getDefault());
 						}
@@ -252,7 +252,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 					} catch (final UnresolvedType e) {
 						ifNoMarkers(type, new Runnable() {
 							public void run() {
-								MoDiscoLogger.logWarning(e,
+								Logger.logWarning(e,
 										"Unresolved type while validating multi-valued return type argument in query: " //$NON-NLS-1$
 												+ modelQuery.getName(), Activator.getDefault());
 							}
@@ -318,7 +318,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 					} catch (final UnresolvedType e) {
 						ifNoMarkers(queryImplType, new Runnable() {
 							public void run() {
-								MoDiscoLogger.logWarning(e,
+								Logger.logWarning(e,
 										"Unresolved type while validating scope in query: " //$NON-NLS-1$
 												+ modelQuery.getName(), Activator.getDefault());
 							}
@@ -326,12 +326,12 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 
 					}
 				} else {
-					MoDiscoLogger
+					Logger
 							.logWarning(
 									"Couldn't resolve scope type " + scopeClassName, Activator.getDefault()); //$NON-NLS-1$
 				}
 			} else {
-				MoDiscoLogger
+				Logger
 						.logWarning(
 								"Couldn't resolve scope type because InstanceClassName is null: " + scope.getName(), Activator.getDefault()); //$NON-NLS-1$
 			}
@@ -475,7 +475,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 				Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
 				Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
 			} catch (InterruptedException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 
 			for (LogJobItem logJobItem : this.items) {
@@ -519,7 +519,7 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return false;
 	}

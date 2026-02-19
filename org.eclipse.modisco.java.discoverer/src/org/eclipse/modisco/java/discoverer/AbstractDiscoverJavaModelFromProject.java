@@ -32,7 +32,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
@@ -204,7 +204,7 @@ public abstract class AbstractDiscoverJavaModelFromProject<T> extends AbstractRe
 			}
 			return elementsToAnalyze;
 		} catch (CloneNotSupportedException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 			return null;
 		}
 	}
@@ -218,7 +218,7 @@ public abstract class AbstractDiscoverJavaModelFromProject<T> extends AbstractRe
 			projects = computeRequiredProjects(javaProject);
 			libraries = computeRequiredLibraries(projects);
 		} catch (JavaModelException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 			return discoverableElements;
 		}
 

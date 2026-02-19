@@ -16,7 +16,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Plugin;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.wizards.AbstractExampleWizard;
 
 public class NewWizard extends AbstractExampleWizard {
@@ -35,7 +35,7 @@ public class NewWizard extends AbstractExampleWizard {
 			// Bug 309976 - Remove the folder org from the MoDisco examples
 			project.getFolder("org").delete(true, new NullProgressMonitor()); //$NON-NLS-1$
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 }

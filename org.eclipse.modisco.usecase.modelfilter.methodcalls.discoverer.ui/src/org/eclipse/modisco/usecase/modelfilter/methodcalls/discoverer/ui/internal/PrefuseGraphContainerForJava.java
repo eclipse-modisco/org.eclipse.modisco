@@ -17,7 +17,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.prefuse.PrefuseGraphContainer;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 
@@ -84,7 +84,7 @@ public final class PrefuseGraphContainerForJava extends PrefuseGraphContainer {
 							 */
 							//BrowseJavaCode browserUtil = new BrowseJavaCode();
 							//browserUtil.browseJavaCode(operation);
-							MoDiscoLogger.logWarning("not implemented", Activator.getDefault()); //$NON-NLS-1$
+							Logger.logWarning("not implemented", Activator.getDefault()); //$NON-NLS-1$
 						}
 					}
 				}

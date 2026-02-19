@@ -27,7 +27,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.modisco.infra.common.core.internal.builder.IModiscoBuilder;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.modisco.infra.query.core.internal.Activator;
 
@@ -78,7 +78,7 @@ public class JavaValidationQueryBuilder implements IModiscoBuilder {
 				ModelQuerySetCatalog.getSingleton().revalidateAll(project);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, "Failed to build: " + builder.getProject(), Activator //$NON-NLS-1$
+			Logger.logError(e, "Failed to build: " + builder.getProject(), Activator //$NON-NLS-1$
 					.getDefault());
 		}
 	}

@@ -37,7 +37,7 @@ import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceLi
 import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
@@ -117,7 +117,7 @@ public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 					metamodelView.setLocation(getURI(metamodelView.getName()).toString());
 					result.add(metamodelView);
 				} else {
-					MoDiscoLogger.logError("MetamodelView with null name", Activator.getDefault()); //$NON-NLS-1$
+					Logger.logError("MetamodelView with null name", Activator.getDefault()); //$NON-NLS-1$
 				}
 			}
 		}
@@ -169,7 +169,7 @@ public class CustomizationsCatalog extends AbstractMoDiscoCatalog {
 				}
 			});
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

@@ -17,7 +17,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.controls.Tooltip;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.core.IModelQueryTooltip;
@@ -138,7 +138,7 @@ public class QueryTooltip extends Tooltip {
 					this.queryTooltips.add(modelQueryTooltip);
 				}
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 	}

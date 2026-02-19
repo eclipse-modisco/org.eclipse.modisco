@@ -24,7 +24,7 @@ import org.eclipse.emf.cdo.server.db.mapping.IMappingStrategy;
 import org.eclipse.emf.cdo.server.net4j.CDONet4jServerUtil;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.eclipse.modisco.infra.common.cdo.internal.Activator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.net4j.Net4jUtil;
 import org.eclipse.net4j.acceptor.IAcceptor;
 import org.eclipse.net4j.db.DBUtil;
@@ -105,7 +105,7 @@ public abstract class AbstractCDOServer implements Server {
 					setAcceptor(acceptorLocal);
 					setStarted(true);
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 					setStarted(true);		// caller is waiting for started)
 				}
 			}

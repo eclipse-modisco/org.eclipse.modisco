@@ -38,7 +38,7 @@ import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.builder.CatalogJob;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.NonValidFileListener;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -96,7 +96,7 @@ public final class JavaQueryImplMarkerChangeListener implements IResourceChangeL
 						}
 					}
 				} catch (CoreException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 		}
@@ -139,7 +139,7 @@ public final class JavaQueryImplMarkerChangeListener implements IResourceChangeL
 							IFile javaFile = project.getFile(cuPath);
 							associate(queryFile, javaFile);
 						} catch (JavaModelException e) {
-							MoDiscoLogger.logError(e,
+							Logger.logError(e,
 									"Failed to find the Java class associated to the query: " //$NON-NLS-1$
 											+ implementationClassName, Activator.getDefault());
 						}

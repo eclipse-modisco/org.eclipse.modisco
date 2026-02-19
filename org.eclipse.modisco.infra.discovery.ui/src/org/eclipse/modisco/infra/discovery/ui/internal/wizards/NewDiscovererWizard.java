@@ -23,7 +23,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.internal.catalog.DiscovererRegistry;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.modisco.infra.discovery.ui.Messages;
@@ -119,7 +119,7 @@ public class NewDiscovererWizard extends Wizard implements INewWizard {
 				openResource((IFile) resource);
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 		return true;
@@ -143,7 +143,7 @@ public class NewDiscovererWizard extends Wizard implements INewWizard {
 				try {
 					IDE.openEditor(activePage, resource, true);
 				} catch (PartInitException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 		});

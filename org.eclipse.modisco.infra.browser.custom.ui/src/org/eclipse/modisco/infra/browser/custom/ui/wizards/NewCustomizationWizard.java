@@ -35,7 +35,7 @@ import org.eclipse.modisco.infra.browser.custom.ui.Messages;
 import org.eclipse.modisco.infra.browser.custom.ui.controls.QuerySetsSelectionControl;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
@@ -81,7 +81,7 @@ public class NewCustomizationWizard extends Wizard implements INewWizard {
 					try {
 						BuildPropertiesUtils.addToBuild(file);
 					} catch (Exception e) {
-						MoDiscoLogger.logError("Error adding file " + file.getFullPath() //$NON-NLS-1$
+						Logger.logError("Error adding file " + file.getFullPath() //$NON-NLS-1$
 								+ " to the build.properties", Activator.getDefault()); //$NON-NLS-1$
 					}
 					PluginUtils.register(file,
@@ -90,7 +90,7 @@ public class NewCustomizationWizard extends Wizard implements INewWizard {
 				}
 			});
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return true;
 	}

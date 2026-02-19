@@ -46,7 +46,7 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.osgi.framework.Bundle;
@@ -255,7 +255,7 @@ public final class FileUtils {
 				}
 			}
 		} catch (JavaModelException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 		return false;
 	}

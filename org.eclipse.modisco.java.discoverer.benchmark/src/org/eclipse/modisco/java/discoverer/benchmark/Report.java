@@ -66,7 +66,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.Discovery;
@@ -169,7 +169,7 @@ public class Report {
 									cdoDiscovery.setInitTimeInSeconds(new Double(property)/ Report.MINUTE_MS_RANGE);
 								}
 							} catch (Exception e) {
-								MoDiscoLogger.logError(e, Activator.getDefault());
+								Logger.logError(e, Activator.getDefault());
 								IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
 										e.getMessage(), e);
 								errors.add(status);
@@ -216,7 +216,7 @@ public class Report {
 
 				this.statProject.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				IStatus status = new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e);
 				errors.add(status);
 			}
@@ -226,7 +226,7 @@ public class Report {
 			CoreException e = new CoreException(new MultiStatus(Activator.PLUGIN_ID, IStatus.ERROR,
 					errors.toArray(new IStatus[] {}), "", //$NON-NLS-1$
 					new Exception()));
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			// throw e;
 		}
 		return benchmark;

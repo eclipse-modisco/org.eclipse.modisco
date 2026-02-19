@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.AbstractMethodInvocation;
 import org.eclipse.modisco.java.AnnotationMemberValuePair;
@@ -203,7 +203,7 @@ public class PendingElement implements ASTNode {
 			try {
 				lst.add(target);
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, JavaActivator.getDefault());
+				Logger.logError(e, JavaActivator.getDefault());
 
 			}
 		} else {

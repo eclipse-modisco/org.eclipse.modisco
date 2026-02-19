@@ -56,7 +56,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.util.QueryUtil;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PathUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.modisco.infra.query.ModelQuery;
@@ -195,7 +195,7 @@ public class CustomizationEngine {
 					this.linkCollapsedFeature.add(customViewFeature);
 					break;
 				default:
-					MoDiscoLogger.logError("unhandled feature type in CustomizationEngine: " //$NON-NLS-1$
+					Logger.logError("unhandled feature type in CustomizationEngine: " //$NON-NLS-1$
 							+ customViewFeature, Activator.getDefault());
 				}
 			}
@@ -429,7 +429,7 @@ public class CustomizationEngine {
 
 		final String metamodelURI = metamodelView.getMetamodelURI();
 		if (metamodelURI == null) {
-			MoDiscoLogger.logError(
+			Logger.logError(
 					NLS.bind(Messages.CustomizationEngine_couldNotFindMetamodel,
 							metamodelView.getMetamodelURI()), Activator.getDefault());
 			return;
@@ -488,7 +488,7 @@ public class CustomizationEngine {
 	private boolean associateEClassAndStructuralFeatures(final EClass eClass, final TypeView type,
 			final List<TypeView> types, final Map<String, TypeView> typeViewMap) {
 		if (eClass == null) {
-			MoDiscoLogger.logError(
+			Logger.logError(
 					NLS.bind(Messages.CustomizationEngine_coundNotFindEclass,
 							type.getMetaclassName()), Activator.getDefault());
 			return false;
@@ -592,7 +592,7 @@ public class CustomizationEngine {
 	private List<EClass> getMetaclasses(final String metamodelURI) {
 		final EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(metamodelURI);
 		if (ePackage == null) {
-			MoDiscoLogger.logError(
+			Logger.logError(
 					NLS.bind(Messages.CustomizationEngine_metamodelNotFound, metamodelURI),
 					Activator.getDefault());
 			return null;
@@ -1280,7 +1280,7 @@ public class CustomizationEngine {
 							return evaluate(context, value);
 						}
 					} else {
-						MoDiscoLogger.logError(NLS.bind(
+						Logger.logError(NLS.bind(
 								Messages.CustomizationEngine_conditionQueryWrongReturnType,
 								new Object[] { queryName, querySetName,
 										conditionResult.getClass().getSimpleName() }), Activator
@@ -1289,7 +1289,7 @@ public class CustomizationEngine {
 					}
 				}
 			} else {
-				MoDiscoLogger.logError(
+				Logger.logError(
 						NLS.bind(Messages.CustomizationEngine_unresolvedConditionQuery,
 								EMFUtil.proxyURI(conditionQuery)), Activator.getDefault());
 			}
@@ -1316,7 +1316,7 @@ public class CustomizationEngine {
 			final DerivedFeatureValue derivedFeatureValue = (DerivedFeatureValue) featureValue;
 			final ModelQuery query = derivedFeatureValue.getValueCalculator();
 			if (!EMFUtil.tryResolve(query)) {
-				MoDiscoLogger.logError(NLS.bind(Messages.unresolvedQuery, EMFUtil.proxyURI(query)),
+				Logger.logError(NLS.bind(Messages.unresolvedQuery, EMFUtil.proxyURI(query)),
 						Activator.getDefault());
 			}
 			final Object modelQueryResult = QueryUtil.basicEvaluate(query, context);
@@ -1357,7 +1357,7 @@ public class CustomizationEngine {
 		case LABEL:
 			return strValue;
 		default:
-			MoDiscoLogger.logError("unhandled feature type in CustomizationEngine:" //$NON-NLS-1$
+			Logger.logError("unhandled feature type in CustomizationEngine:" //$NON-NLS-1$
 					+ featureType.getName(), Activator.getDefault());
 		}
 		return null;
@@ -1381,7 +1381,7 @@ public class CustomizationEngine {
 		case COLOR:
 		case BACKGROUND_COLOR:
 			if (!(modelQueryResult instanceof String)) {
-				MoDiscoLogger.logError(
+				Logger.logError(
 						NLS.bind(Messages.CustomizationEngine_errorColorString, queryName),
 						Activator.getDefault());
 				return null;
@@ -1394,7 +1394,7 @@ public class CustomizationEngine {
 		case STICKER_ICON:
 		case FACET_MAIN_ICON:
 			if (!(modelQueryResult instanceof String)) {
-				MoDiscoLogger.logError(
+				Logger.logError(
 						NLS.bind(Messages.CustomizationEngine_errorIconString, queryName),
 						Activator.getDefault());
 				return null;
@@ -1403,7 +1403,7 @@ public class CustomizationEngine {
 			return decodeIcon(strIcon);
 		case FACET_OVERLAY_ICON:
 			if (!(modelQueryResult instanceof String)) {
-				MoDiscoLogger
+				Logger
 						.logError(
 								NLS.bind(
 										"Customized overlay icon should be expressed " //$NON-NLS-1$
@@ -1413,7 +1413,7 @@ public class CustomizationEngine {
 			final String strOverlayIcon = (String) modelQueryResult;
 			return decodeOverlayIcon(strOverlayIcon);
 		default:
-			MoDiscoLogger.logError("unhandled feature type in CustomizationEngine: " //$NON-NLS-1$
+			Logger.logError("unhandled feature type in CustomizationEngine: " //$NON-NLS-1$
 					+ featureType.getName(), Activator.getDefault());
 		}
 		return null;
@@ -1448,7 +1448,7 @@ public class CustomizationEngine {
 			try {
 				final InputStream inputStream = PathUtils.getResourceStream(new Path(strValue));
 				if (inputStream == null) {
-					MoDiscoLogger.logError(NLS.bind(
+					Logger.logError(NLS.bind(
 							Messages.CustomizationEngine_errorOpeningCustomizationResource,
 							strValue), Activator.getDefault());
 					return null;
@@ -1456,7 +1456,7 @@ public class CustomizationEngine {
 				icon = new Image(Display.getCurrent(), inputStream);
 				inputStream.close();
 			} catch (final Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				return null;
 			}
 			this.iconsCache.put(strValue, icon);

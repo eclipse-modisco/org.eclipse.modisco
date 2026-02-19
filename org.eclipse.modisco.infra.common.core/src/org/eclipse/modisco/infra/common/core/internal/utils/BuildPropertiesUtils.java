@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.pde.core.IEditableModel;
 import org.eclipse.pde.core.build.IBuild;
 import org.eclipse.pde.core.build.IBuildEntry;
@@ -60,7 +60,7 @@ public final class BuildPropertiesUtils {
 				buildModel = (IBuildModel) method.invoke(pluginModelBase);
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 		return buildModel;
 	}

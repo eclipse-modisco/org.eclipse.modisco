@@ -40,7 +40,7 @@ import org.eclipse.modisco.infra.browser.custom.TypeView;
 import org.eclipse.modisco.infra.browser.custom.emf.UicustomFactory;
 import org.eclipse.modisco.infra.browser.custom.examples.generation.Activator;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
@@ -83,7 +83,7 @@ public class HideAllReferencesAction implements IObjectActionDelegate {
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 
@@ -91,7 +91,7 @@ public class HideAllReferencesAction implements IObjectActionDelegate {
 		String metamodelURI = metamodelView.getMetamodelURI();
 		final EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(metamodelURI);
 		if (ePackage == null) {
-			MoDiscoLogger.logError(
+			Logger.logError(
 					"Cannot find customization metamodel: " + metamodelURI, Activator.getDefault()); //$NON-NLS-1$
 			return;
 		}
@@ -225,12 +225,12 @@ public class HideAllReferencesAction implements IObjectActionDelegate {
 		try {
 			resource.load(null);
 		} catch (final IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 		EList<EObject> contents = resource.getContents();
 		if (contents.size() == 0) {
-			MoDiscoLogger.logError("Resource is empty", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError("Resource is empty", Activator.getDefault()); //$NON-NLS-1$
 			return null;
 		}
 
@@ -238,7 +238,7 @@ public class HideAllReferencesAction implements IObjectActionDelegate {
 		if (eObject instanceof MetamodelView) {
 			return (MetamodelView) eObject;
 		}
-		MoDiscoLogger.logError("Resource does not contain a MetamodelView", Activator.getDefault()); //$NON-NLS-1$
+		Logger.logError("Resource does not contain a MetamodelView", Activator.getDefault()); //$NON-NLS-1$
 		return null;
 	}
 

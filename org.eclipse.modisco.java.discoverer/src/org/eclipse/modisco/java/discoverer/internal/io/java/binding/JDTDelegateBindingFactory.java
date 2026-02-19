@@ -30,7 +30,7 @@ import org.eclipse.jdt.core.dom.ParameterizedType;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
 import org.eclipse.jdt.core.dom.WildcardType;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
 
@@ -88,7 +88,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		ITypeBinding binding = type.resolveBinding();
 		if (binding == null) {
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ type.toString() + "' unresolved.", JavaActivator //$NON-NLS-1$
 						.getDefault());
 			}
@@ -112,7 +112,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		ITypeBinding binding = type.resolveBinding();
 		if (binding == null) {
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ type.toString() + "' unresolved.", JavaActivator //$NON-NLS-1$
 						.getDefault());
 			}
@@ -128,7 +128,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		ITypeBinding binding = type.resolveBinding();
 		if (binding == null) {
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ type.toString() + "' unresolved.", JavaActivator //$NON-NLS-1$
 						.getDefault());
 			}
@@ -145,7 +145,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		IMethodBinding binding = constructorCall.resolveConstructorBinding();
 		if (binding == null || binding.getDeclaringClass() == null) {
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ constructorCall.toString() + Messages.JDTDelegateBindingFactory_10,
 						JavaActivator.getDefault());
 			}
@@ -162,7 +162,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		IMethodBinding binding = constructorCall.resolveConstructorBinding();
 		if (binding == null || binding.getDeclaringClass() == null) {
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ constructorCall.toString() + "' unresolved.", //$NON-NLS-1$
 						JavaActivator.getDefault());
 			}
@@ -180,7 +180,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		if (binding == null || binding.getDeclaringClass() == null) {
 			// managing misc binding.getName() NPE
 			if (this.logJDTBindingsIssues) {
-				MoDiscoLogger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
 						+ constructorCall.toString() + "' unresolved.", //$NON-NLS-1$
 						JavaActivator.getDefault());
 			}

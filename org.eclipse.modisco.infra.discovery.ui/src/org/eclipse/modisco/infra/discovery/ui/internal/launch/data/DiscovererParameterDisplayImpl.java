@@ -12,7 +12,7 @@
 
 package org.eclipse.modisco.infra.discovery.ui.internal.launch.data;
 
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
@@ -69,7 +69,7 @@ public class DiscovererParameterDisplayImpl implements DiscovererParameterDispla
 						this.discoverer, source);
 				setValue(initialValue);
 			} catch (DiscoveryException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 	}

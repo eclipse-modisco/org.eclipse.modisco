@@ -17,7 +17,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
@@ -108,9 +108,9 @@ public class Activator extends Plugin {
 			// bundle.start();
 		} catch (Exception e) {
 			final String message = "Failed to load bundle: " + project.getName(); //$NON-NLS-1$
-			MoDiscoLogger.logError(e, message, Activator.getDefault());
+			Logger.logError(e, message, Activator.getDefault());
 		}
-		MoDiscoLogger.logInfo("Bundle loaded: " + project.getName(), Activator.getDefault()); //$NON-NLS-1$
+		Logger.logInfo("Bundle loaded: " + project.getName(), Activator.getDefault()); //$NON-NLS-1$
 		return bundle;
 	}
 }

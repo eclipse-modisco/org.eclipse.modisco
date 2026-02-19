@@ -41,7 +41,7 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
@@ -148,7 +148,7 @@ public class JavaReader implements IModelReader {
 		try {
 			readModel(source, resultModel1, getBindingManager(), monitor);
 		} catch (DiscoveryException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 	}
 
@@ -286,7 +286,7 @@ public class JavaReader implements IModelReader {
 			visitCompilationUnit(getResultModel(), parsedCompilationUnit, filePath, fileContent);
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 	}
 

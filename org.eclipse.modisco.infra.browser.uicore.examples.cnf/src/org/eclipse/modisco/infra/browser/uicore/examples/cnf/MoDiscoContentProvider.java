@@ -12,7 +12,7 @@ package org.eclipse.modisco.infra.browser.uicore.examples.cnf;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.modisco.infra.browser.uicore.CustomizableModelContentProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.PlatformUI;
@@ -69,7 +69,7 @@ public class MoDiscoContentProvider extends CustomizableModelContentProvider {
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 }

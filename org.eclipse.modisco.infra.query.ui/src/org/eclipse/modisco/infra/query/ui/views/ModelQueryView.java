@@ -24,7 +24,7 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.modisco.facet.common.ui.internal.views.AbstractTreeView;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageUtils;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -231,7 +231,7 @@ public class ModelQueryView extends AbstractTreeView implements ModiscoCatalogCh
 				}
 
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, "Failed to open: " + uri, Activator.getDefault()); //$NON-NLS-1$
+				Logger.logError(e, "Failed to open: " + uri, Activator.getDefault()); //$NON-NLS-1$
 			}
 		}
 	}

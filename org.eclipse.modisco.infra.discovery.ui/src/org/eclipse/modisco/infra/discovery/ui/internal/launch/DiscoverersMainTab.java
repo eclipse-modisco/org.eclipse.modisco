@@ -27,7 +27,7 @@ import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite
 import org.eclipse.modisco.facet.widgets.celleditors.ICompositeEditorFactory;
 import org.eclipse.modisco.facet.widgets.celleditors.IListener;
 import org.eclipse.modisco.facet.widgets.celleditors.core.composite.registry.ICompositeEditorFactoriesRegistry;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
@@ -398,7 +398,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 			}
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 		if (this.inCellEditorOpened || this.inoutCellEditorOpened) {
@@ -423,7 +423,7 @@ public class DiscoverersMainTab extends AbstractLaunchConfigurationTab implement
 			}
 		} catch (SWTException e) {
 			// error when dialog is closing
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 	}
 }

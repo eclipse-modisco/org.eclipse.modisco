@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.kdm.source.extension.ui.Activator;
 import org.eclipse.modisco.kdm.source.extension.ui.adapters.SourceAccessAdapter;
 import org.eclipse.modisco.kdm.source.extension.ui.adapters.SourceAccessAdapterFactory;
@@ -69,7 +69,7 @@ public class ActionBrowseCodeInTextEditor implements IActionDelegate {
 				BrowseCodeUtils
 						.openAndSelectEObjectInSourceFile(eObject);
 			} else {
-				MoDiscoLogger.logWarning("Cannot browse this element", //$NON-NLS-1$
+				Logger.logWarning("Cannot browse this element", //$NON-NLS-1$
 						Activator.getDefault());
 			}
 		}

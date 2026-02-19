@@ -24,7 +24,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardDialog;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.WorkbenchUtils;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.editor.presentation.QueryEditor;
@@ -90,19 +90,19 @@ public class CreateJavaQueryClassHandler extends AbstractHandler {
 						.getActiveWorkbenchWindow().getShell(),
 						Messages.CreateJavaQueryImplClass_cannotCreate,
 						Messages.CreateJavaQueryImplClass_modelURIMustBePlatform);
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			} catch (ClassAlreadyExistsException e) {
 				MessageDialog.openError(Activator.getDefault().getWorkbench()
 						.getActiveWorkbenchWindow().getShell(),
 						Messages.CreateJavaQueryImplClass_cannotCreateImplClass,
 						Messages.CreateJavaQueryImplClass_implClassAlreadyExists);
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			} catch (Exception e) {
 				MessageDialog.openError(Activator.getDefault().getWorkbench()
 						.getActiveWorkbenchWindow().getShell(),
 						Messages.CreateJavaQueryImplClass_unknownError,
 						Messages.CreateJavaQueryImplClass_cannotCreateImplClass2);
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return null;

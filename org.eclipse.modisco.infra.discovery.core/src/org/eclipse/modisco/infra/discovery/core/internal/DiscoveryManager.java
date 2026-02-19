@@ -22,7 +22,7 @@ import java.util.Set;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
@@ -184,7 +184,7 @@ public final class DiscoveryManager implements IDiscoveryManager {
 				}
 			}
 		} catch (IllegalArgumentException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 		discovererDescription.setSourceType(sourceType);
 	}

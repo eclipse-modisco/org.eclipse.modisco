@@ -21,7 +21,7 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ui.Activator;
 import org.eclipse.modisco.infra.query.ui.views.queryExecution.internal.QueryExecutionView;
@@ -54,7 +54,7 @@ public class ExecuteQueryHandler extends AbstractHandler {
 				}
 			}
 		} catch (final PartInitException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return null;
 	}

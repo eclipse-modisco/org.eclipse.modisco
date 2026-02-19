@@ -16,7 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.Constants;
 import org.eclipse.modisco.workflow.core.WorkflowModel;
 import org.eclipse.modisco.workflow.core.internal.Activator;
@@ -118,7 +118,7 @@ public class WorkflowControllerImpl implements WorkflowController {
 					result = verifyLoops(workflowModel.getAllElements(), rootConfigName);
 				}
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return result;

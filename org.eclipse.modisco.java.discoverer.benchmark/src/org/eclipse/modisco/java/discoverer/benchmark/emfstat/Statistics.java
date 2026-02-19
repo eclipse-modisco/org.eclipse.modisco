@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.ITypeRoot;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 
 public class Statistics {
@@ -208,7 +208,7 @@ public class Statistics {
 		try {
 			Thread.sleep(Statistics.GC_SLEEP);
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e,
+			Logger.logError(e,
 					org.eclipse.modisco.java.discoverer.benchmark.Activator.getDefault());
 		}
 		long freememory = Runtime.getRuntime().freeMemory() / Statistics.MEGA_BYTES
@@ -527,7 +527,7 @@ public class Statistics {
 					writer.close();
 				}
 			} catch (IOException e1) { // do nothing
-				MoDiscoLogger.logError(e1, Activator.getDefault());
+				Logger.logError(e1, Activator.getDefault());
 			}
 		}
 
@@ -550,7 +550,7 @@ public class Statistics {
 				line = reader.readLine();
 			}
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		} finally {
 			try {
 				if (reader != null) {
@@ -560,7 +560,7 @@ public class Statistics {
 					writer.close();
 				}
 			} catch (IOException e1) {
-				MoDiscoLogger.logError(e1, Activator.getDefault());
+				Logger.logError(e1, Activator.getDefault());
 			}
 		}
 	}

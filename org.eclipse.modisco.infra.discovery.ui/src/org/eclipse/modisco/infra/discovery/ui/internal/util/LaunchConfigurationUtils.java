@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
@@ -84,7 +84,7 @@ public class LaunchConfigurationUtils {
 		try {
 			launchConfiguration.eResource().save(Collections.emptyMap());
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 
@@ -128,7 +128,7 @@ public class LaunchConfigurationUtils {
 						}
 					}
 				} else {
-					MoDiscoLogger.logError("expected " + LaunchConfiguration.class.getSimpleName(), //$NON-NLS-1$
+					Logger.logError("expected " + LaunchConfiguration.class.getSimpleName(), //$NON-NLS-1$
 							Activator.getDefault());
 				}
 			}
@@ -152,7 +152,7 @@ public class LaunchConfigurationUtils {
 					parameterValue.setValue(initialValue);
 					launchConfiguration.getParameterValues().add(parameterValue);
 				} catch (DiscoveryException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 		}

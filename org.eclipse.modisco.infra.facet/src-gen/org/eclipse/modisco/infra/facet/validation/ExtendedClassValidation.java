@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.validation.AbstractModelConstraint;
 import org.eclipse.emf.validation.EMFEventType;
 import org.eclipse.emf.validation.IValidationContext;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.plugin.FacetPlugin;
@@ -61,7 +61,7 @@ public class ExtendedClassValidation extends AbstractModelConstraint {
 			return result;
 		} catch (NullPointerException e) {
 			String message = "Unexpected null value in " + eObject.eResource().getURI().toString(); //$NON-NLS-1$
-			MoDiscoLogger.logWarning(e, message, FacetPlugin.getDefault());
+			Logger.logWarning(e, message, FacetPlugin.getDefault());
 			return ctx.createSuccessStatus();
 		}
 	}

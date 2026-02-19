@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.modisco.infra.discovery.ui.internal.util.LaunchModelUtils;
@@ -66,18 +66,18 @@ public final class LaunchConfigUtils {
 							.getContents().get(0);
 					return launchConfiguration;
 				}
-				MoDiscoLogger.logWarning(LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG
+				Logger.logWarning(LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG
 						+ " : empty resource", //$NON-NLS-1$
 						Activator.getDefault());
 			}
 		} catch (UnsupportedEncodingException e) {
-			MoDiscoLogger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
+			Logger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
 					Activator.getDefault());
 		} catch (CoreException e) {
-			MoDiscoLogger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
+			Logger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
 					Activator.getDefault());
 		} catch (IOException e) {
-			MoDiscoLogger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
+			Logger.logWarning(e, LaunchConfigUtils.COULD_NOT_DESERIALIZE_MSG,
 					Activator.getDefault());
 		}
 		return null;
@@ -96,10 +96,10 @@ public final class LaunchConfigUtils {
 			launchConfig.setAttribute(LaunchModelUtils.DISCOVERER_LAUNCH_MODEL,
 					launchModelSerialized);
 		} catch (UnsupportedEncodingException e) {
-			MoDiscoLogger.logWarning(e, LaunchConfigUtils.COULD_NOT_SERIALIZE_MSG,
+			Logger.logWarning(e, LaunchConfigUtils.COULD_NOT_SERIALIZE_MSG,
 					Activator.getDefault());
 		} catch (IOException e) {
-			MoDiscoLogger.logWarning(e, LaunchConfigUtils.COULD_NOT_SERIALIZE_MSG,
+			Logger.logWarning(e, LaunchConfigUtils.COULD_NOT_SERIALIZE_MSG,
 					Activator.getDefault());
 		}
 	}

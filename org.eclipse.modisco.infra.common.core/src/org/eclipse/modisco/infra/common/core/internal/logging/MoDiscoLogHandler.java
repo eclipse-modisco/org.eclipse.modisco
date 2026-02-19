@@ -18,8 +18,8 @@ import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * Log to a file
@@ -41,7 +41,7 @@ public class MoDiscoLogHandler extends Handler {
 		try {
 			this.pWriter = new PrintWriter(this.logFile);
 		} catch (FileNotFoundException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 	}
 

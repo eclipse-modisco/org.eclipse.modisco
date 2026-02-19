@@ -17,7 +17,7 @@ import org.eclipse.core.runtime.jobs.JobChangeAdapter;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.ui.IEditorDescriptor;
@@ -134,7 +134,7 @@ public final class ModelUtils {
 			try {
 				IDE.openEditor(page, editorInput, editDesc.getId());
 			} catch (PartInitException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 	}

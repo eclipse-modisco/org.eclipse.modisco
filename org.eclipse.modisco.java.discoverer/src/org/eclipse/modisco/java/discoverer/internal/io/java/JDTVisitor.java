@@ -43,7 +43,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.SimpleName;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -2198,7 +2198,7 @@ public class JDTVisitor extends ASTVisitor {
 					varAcc.setVariable((VariableDeclaration) target);
 				}
 			} else {
-				MoDiscoLogger
+				Logger
 						.logError(
 								"Unknown binding type for " + node + " : " + jdtBinding, JavaActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$
 			}
@@ -3013,7 +3013,7 @@ public class JDTVisitor extends ASTVisitor {
 							message += "???"; //$NON-NLS-1$
 						}
 						RuntimeException exception = new RuntimeException(message);
-						MoDiscoLogger.logError(exception, JavaActivator.getDefault());
+						Logger.logError(exception, JavaActivator.getDefault());
 						throw exception;
 					}
 					deepRemove(eObject);

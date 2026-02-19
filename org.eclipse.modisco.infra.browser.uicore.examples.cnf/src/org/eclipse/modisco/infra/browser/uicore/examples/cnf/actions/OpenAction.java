@@ -20,7 +20,7 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
 import org.eclipse.modisco.infra.browser.uicore.examples.cnf.Activator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
@@ -98,7 +98,7 @@ public class OpenAction extends Action {
 				}
 
 			} catch (PartInitException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				MessageDialog.openError(Display.getDefault().getActiveShell(), "Error Opening", //$NON-NLS-1$
 						"Could not open element (see log)"); //$NON-NLS-1$
 			}

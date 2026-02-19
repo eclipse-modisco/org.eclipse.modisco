@@ -20,7 +20,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.common.ui,
  org.eclipse.modisco.infra.query.core,
  org.eclipse.modisco.infra.common.core,
- org.eclipse.modisco.infra.facet.core;bundle-version="0.8.0"
+ org.eclipse.modisco.infra.facet.core;bundle-version="0.8.0",
+ org.eclipse.modisco.facet.util.core
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.infra.facet.editor.presentation;x-friends:="org.eclipse.modisco.infra.facet.ui"
 Automatic-Module-Name: org.eclipse.modisco.infra.facet.editor

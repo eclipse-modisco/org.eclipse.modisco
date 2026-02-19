@@ -42,7 +42,7 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.JavaUtils;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
@@ -166,7 +166,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 				case NewDiscovererMainWizardPage.MULTIVALUED_COLUMN_INDEX:
 					return Boolean.toString(discoveryParameterLine.isMultivalued());
 				default:
-					MoDiscoLogger.logError("unhandled case", Activator.getDefault()); //$NON-NLS-1$
+					Logger.logError("unhandled case", Activator.getDefault()); //$NON-NLS-1$
 				}
 			}
 			return null;
@@ -822,7 +822,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 		try {
 			createType(monitor);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

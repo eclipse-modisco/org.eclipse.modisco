@@ -42,7 +42,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.util.ColorProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.utils.PathUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyleRange;
@@ -218,7 +218,7 @@ public class CustomizationViewer {
 			case COLLAPSE_LINK:
 				return Messages.CustomizationViewer_collapseLink;
 			default:
-				MoDiscoLogger.logWarning("Missing friendly feature name", Activator.getDefault()); //$NON-NLS-1$
+				Logger.logWarning("Missing friendly feature name", Activator.getDefault()); //$NON-NLS-1$
 				return customizedFeature.getName();
 			}
 		}

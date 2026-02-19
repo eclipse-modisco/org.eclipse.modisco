@@ -26,7 +26,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.AppearanceConfiguration
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.CustomizationEngine;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ColorProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetReference;
 import org.eclipse.modisco.infra.facet.FacetStructuralFeature;
@@ -277,7 +277,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 				result = this.appearanceConfiguration.getFacetContext().get(this.parent,
 						this.reference);
 			} catch (final Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				result = null;
 			}
 		} else {
@@ -291,7 +291,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 					result = this.parent.eGet(this.reference);
 				}
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, "Error getting value of feature '" //$NON-NLS-1$
+				Logger.logError(e, "Error getting value of feature '" //$NON-NLS-1$
 						+ ((ENamedElement) this.reference.eContainer()).getName() + "::" //$NON-NLS-1$
 						+ this.reference.getName() + "' on instance of '" //$NON-NLS-1$
 						+ this.parent.eClass().getName() + "'", Activator.getDefault()); //$NON-NLS-1$

@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * @author Gregoire DUPE
@@ -57,6 +57,7 @@ public class MoDiscoResourceListenerGroup {
 			for (URI clientUri : this.listeners.get(listener)) {
 				final URI fClientURI = clientUri;
 				Runnable toDo = new Runnable() {
+					@Override
 					public void run() {
 						try {
 							if (MoDiscoResourceSet.DEBUG) {
@@ -69,7 +70,7 @@ public class MoDiscoResourceListenerGroup {
 									MoDiscoResourceListenerGroup.this.watchedResourceUri,
 									fClientURI);
 						} catch (Exception e) {
-							MoDiscoLogger
+							Logger
 									.logError(
 											e,
 											"An exception happened while notifying change of: " //$NON-NLS-1$

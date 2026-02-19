@@ -30,7 +30,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ITreeElement;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.LinkItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.util.EditingSupportUtil;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 
 public class ModelElementItemEx extends ModelElementItem implements IEditingDomainItemProvider {
 
@@ -53,7 +53,7 @@ public class ModelElementItemEx extends ModelElementItem implements IEditingDoma
 					children.add(new QueryItem(getEObject(), this, selectedQuery,
 							this.browserConfiguration));
 				} else {
-					MoDiscoLogger.logError(Messages.ModelElementItem_nullQuerySelected,
+					Logger.logError(Messages.ModelElementItem_nullQuerySelected,
 							MoDiscoBrowserPlugin.getPlugin());
 				}
 			}

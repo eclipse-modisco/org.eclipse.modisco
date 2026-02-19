@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkConstants;
 import org.eclipse.modisco.infra.discovery.core.AbstractDiscoverer;
@@ -42,7 +42,7 @@ public class JavaBenchmarkHtmlReportDiscoverer extends AbstractDiscoverer<IFile>
 					&& BenchmarkConstants.CONTENT_TYPE.equals(source.getContentDescription()
 							.getContentType().getId());
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return false;
 		}
 	}

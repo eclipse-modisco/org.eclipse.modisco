@@ -18,7 +18,7 @@ import java.util.List;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.modisco.infra.common.core.internal.extensions.AbstractRegistry;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.core.extensions.RefreshStrategy;
 import org.eclipse.modisco.infra.facet.core.internal.Activator;
@@ -92,7 +92,7 @@ public class RefreshStrategiesRegistry extends AbstractRegistry {
 			refreshStrategyObject = configurationElement
 					.createExecutableExtension(RefreshStrategiesRegistry.CLASS_ATTRIBUTE);
 		} catch (final CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return;
 		}
 		if (refreshStrategyObject == null) {

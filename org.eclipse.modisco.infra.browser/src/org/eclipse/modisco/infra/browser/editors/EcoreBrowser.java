@@ -158,7 +158,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.controls.FormStyleSashForm;
 import org.eclipse.modisco.infra.common.ui.internal.controls.Tooltip;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.IResourceEditorInput;
@@ -733,7 +733,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	private void checkResourceSet() {
 		for (Resource resource : this.fResourceSet.getResources()) {
 			if (resource.getURI() == null) {
-				MoDiscoLogger.logError(
+				Logger.logError(
 						"The ResourceSet opened in the browser contains a Resource with a null URI. " //$NON-NLS-1$
 								+ "This can be the cause of NullPointerExceptions.", //$NON-NLS-1$
 						MoDiscoBrowserPlugin.getPlugin());
@@ -746,7 +746,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			try {
 				Display.getDefault().syncExec(runnable);
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
@@ -788,7 +788,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+			Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 		}
 		return ""; //$NON-NLS-1$
 	}
@@ -817,7 +817,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+			Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 		}
 		this.referencedEPackages = ePackages;
 		return ePackages;
@@ -1016,7 +1016,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 						if (externalResource != null) {
 							directReferencedResources.add(externalResource);
 						} else {
-							MoDiscoLogger
+							Logger
 									.logError(
 											"Failed to load an external element: " + external.eClass().getName() //$NON-NLS-1$
 													+ " " + EcoreUtil.getURI(external), //$NON-NLS-1$
@@ -1291,7 +1291,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 													listener.synchronizeEObject(eObject,
 															statusLineManager);
 												} catch (CoreException e) {
-													MoDiscoLogger.logError(e,
+													Logger.logError(e,
 															MoDiscoBrowserPlugin.getPlugin());
 												} finally {
 													handled = true;
@@ -1304,7 +1304,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 										statusLineManager
 												.setErrorMessage(Messages.EcoreBrowser_noSynchronisationExtensionFound);
 									} else {
-										MoDiscoLogger
+										Logger
 												.logWarning(
 														Messages.EcoreBrowser_noSynchronisationExtensionFound,
 														MoDiscoBrowserPlugin.getPlugin());
@@ -1492,7 +1492,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 							addSubclasses);
 				}
 			} else {
-				MoDiscoLogger.logError("Could not find subclasses of '" + eClass.getName() + "'", //$NON-NLS-1$ //$NON-NLS-2$
+				Logger.logError("Could not find subclasses of '" + eClass.getName() + "'", //$NON-NLS-1$ //$NON-NLS-2$
 						MoDiscoBrowserPlugin.getPlugin());
 			}
 
@@ -1882,7 +1882,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 									EcoreBrowser.this.savedResources.add(resource);
 								}
 							} catch (final Exception e) {
-								MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+								Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 								DialogUtils.openErrorDialog(getSite().getShell(), e,
 										Messages.EcoreBrowser_errorSavingResource);
 								EcoreBrowser.this.resourceToDiagnosticMap.put(resource,
@@ -1980,7 +1980,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			ResourcesPlugin.getWorkspace().addResourceChangeListener(this.resourceChangeListener,
 					IResourceChangeEvent.POST_CHANGE);
 		} catch (final Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+			Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 		}
 	}
 
@@ -2903,7 +2903,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+			Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 		}
 	}
 

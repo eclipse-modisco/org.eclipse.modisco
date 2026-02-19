@@ -20,7 +20,7 @@ import java.util.List;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.jee.jsp.JspFactory;
@@ -75,7 +75,7 @@ public abstract class AbstractJspDiscoverer<T> extends AbstractModelDiscoverer<T
 			parser.page(file.getPath(), file.getName());
 			model.getPages().add(parser.page);
 		} catch (OutOfMemoryError e) {
-			MoDiscoLogger.logError(e, "Discovery encountered an error on \"" //$NON-NLS-1$
+			Logger.logError(e, "Discovery encountered an error on \"" //$NON-NLS-1$
 					+ file.getAbsolutePath() + "\".", //$NON-NLS-1$
 					JspActivator.getDefault());
 		} catch (Exception e) {

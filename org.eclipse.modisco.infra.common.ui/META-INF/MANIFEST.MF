@@ -15,7 +15,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.common.ui,
  org.eclipse.emf.edit;bundle-version="2.6.0",
  org.eclipse.emf.edit.ui;bundle-version="2.6.0",
- org.eclipse.jdt.ui;bundle-version="3.6.0"
+ org.eclipse.jdt.ui;bundle-version="3.6.0",
+ org.eclipse.modisco.facet.util.core
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: %Bundle-Vendor

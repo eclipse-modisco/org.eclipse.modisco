@@ -34,8 +34,8 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Plugin;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.osgi.framework.Bundle;
 
 /** @author Gabriel Barbier */
@@ -61,6 +61,7 @@ public final class FolderUtils {
 		 * @return <code>true</code> if and only if the name should be included
 		 *         in the file list; <code>false</code> otherwise.
 		 */
+		@Override
 		public boolean accept(final File dir, final String name) {
 			boolean result = false;
 			if (!name.equals(FolderUtils.ConfigurationManagementFilter.FILTER_NAME)) {
@@ -119,7 +120,7 @@ public final class FolderUtils {
 			result = FolderUtils.recursiveCompareFolders(folderSource, folderTarget, filter,
 					fileComparison);
 			if (FolderUtils.debug && !result) {
-				MoDiscoLogger
+				Logger
 						.logError(
 								"folders " + folderSource.getName() + " and " + folderTarget.getName() + " are not equal.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 			}
@@ -133,6 +134,7 @@ public final class FolderUtils {
 
 	private static final Comparator<File> getDefaultFileComparator() {
 		return new Comparator<File>() {
+			@Override
 			public int compare(final File source, final File target) {
 				boolean result = true;
 				if (!source.getName().equals(target.getName())) {
@@ -153,7 +155,7 @@ public final class FolderUtils {
 						}
 						if ((sourceLine != null) || (targetLine != null)) {
 							result = false;
-							MoDiscoLogger
+							Logger
 									.logError(
 											"These files do not have the same number of lines.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 						}
@@ -166,14 +168,14 @@ public final class FolderUtils {
 							try {
 								sourceReader.close();
 							} catch (IOException e) {
-								MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+								Logger.logError(e, CommonModiscoActivator.getDefault());
 							}
 						}
 						if (targetReader != null) {
 							try {
 								targetReader.close();
 							} catch (IOException e) {
-								MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+								Logger.logError(e, CommonModiscoActivator.getDefault());
 							}
 						}
 					}
@@ -191,7 +193,7 @@ public final class FolderUtils {
 		assert ((source.isFile()) && (target.isFile()));
 		boolean result = (fileComparator.compare(source, target) == 0);
 		if (FolderUtils.debug && result) {
-			MoDiscoLogger
+			Logger
 					.logInfo(
 							"Files " + source.getName() + " and " + target.getName() + " are equal.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		}
@@ -210,15 +212,15 @@ public final class FolderUtils {
 				sourceLine = sourceReader.readLine();
 			}
 		} catch (FileNotFoundException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		} finally {
 			if (sourceReader != null) {
 				try {
 					sourceReader.close();
 				} catch (IOException e) {
-					MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+					Logger.logError(e, CommonModiscoActivator.getDefault());
 				}
 			}
 		}
@@ -233,7 +235,7 @@ public final class FolderUtils {
 			final File folderTarget, final FilenameFilter filter,
 			final Comparator<File> fileComparison) {
 		if (FolderUtils.debug) {
-			MoDiscoLogger
+			Logger
 					.logError(
 							"comparison of " + folderSource.getName() + " and " + folderTarget.getName(), CommonModiscoActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$
 		}
@@ -244,7 +246,7 @@ public final class FolderUtils {
 		if (sourceContents.length != targetContents.length) {
 			result = false;
 			if (FolderUtils.debug) {
-				MoDiscoLogger.logError("folders " + folderSource.getName() + " and " //$NON-NLS-1$//$NON-NLS-2$
+				Logger.logError("folders " + folderSource.getName() + " and " //$NON-NLS-1$//$NON-NLS-2$
 						+ folderTarget.getName() + " do not have the same number of children (" //$NON-NLS-1$
 						+ sourceContents.length + ", " + targetContents.length + ")", //$NON-NLS-1$ //$NON-NLS-2$
 						CommonModiscoActivator.getDefault());
@@ -262,7 +264,7 @@ public final class FolderUtils {
 				if (targetContent == null) {
 					result = false;
 					if (FolderUtils.debug) {
-						MoDiscoLogger
+						Logger
 								.logError(
 										"There is no corresponding element in target folder for " + sourceContent.getName(), CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 					}
@@ -277,7 +279,7 @@ public final class FolderUtils {
 						result = result && subResult;
 
 						if (FolderUtils.debug && !subResult) {
-							MoDiscoLogger
+							Logger
 									.logError(
 											"folders " + sourceContent.getName() + " and " + targetContent.getName() + " are not equal.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 						}
@@ -286,7 +288,7 @@ public final class FolderUtils {
 								fileComparison);
 						result = result && subResult;
 						if (FolderUtils.debug && !subResult) {
-							MoDiscoLogger
+							Logger
 									.logError(
 											"files " + sourceContent.getName() + " and " + targetContent.getName() + " are not equal.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 						}
@@ -315,6 +317,7 @@ public final class FolderUtils {
 	public static final void copyDirectory(final File srcDir, final File destDir)
 			throws IOException {
 		FolderUtils.copyDirectory(srcDir, destDir, new IFilter() {
+			@Override
 			public boolean filter(final Object object) {
 				return true;
 			}
@@ -383,7 +386,7 @@ public final class FolderUtils {
 				}
 				javaFile.create(source, true, new NullProgressMonitor());
 			} catch (Exception e1) {
-				MoDiscoLogger.logError(e1, CommonModiscoActivator.getDefault());
+				Logger.logError(e1, CommonModiscoActivator.getDefault());
 			}
 		} else {
 			String subDestinationPath = "/"; //$NON-NLS-1$
@@ -393,7 +396,7 @@ public final class FolderUtils {
 					try {
 						folder.create(true, true, new NullProgressMonitor());
 					} catch (Exception e1) {
-						MoDiscoLogger.logError(e1, CommonModiscoActivator.getDefault());
+						Logger.logError(e1, CommonModiscoActivator.getDefault());
 					}
 				}
 				subDestinationPath = folder.getProjectRelativePath().toString();

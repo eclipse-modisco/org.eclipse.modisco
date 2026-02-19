@@ -17,7 +17,7 @@ package org.eclipse.modisco.java.composition.ui.strategies;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.composition.ui.Activator;
 import org.eclipse.modisco.java.emf.JavaPackage;
 import org.eclipse.modisco.kdm.source.extension.ui.interfaces.RevealingStrategy;
@@ -68,7 +68,7 @@ public class StrategyRevealingJava implements RevealingStrategy {
 						iEditorPart = IDE.openEditor(activePage, inputFile,
 								true);
 					} catch (PartInitException e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 

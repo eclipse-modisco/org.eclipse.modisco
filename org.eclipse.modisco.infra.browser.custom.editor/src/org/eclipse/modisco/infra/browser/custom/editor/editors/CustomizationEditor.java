@@ -98,7 +98,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.controls.FormStyleSashForm;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
@@ -246,7 +246,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 					locationURI = fileEditorInput.getFile().getLocationURI();
 				}
 			} catch (URISyntaxException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				locationURI = fileEditorInput.getFile().getLocationURI();
 			}
 			fileName = fileEditorInput.getFile().getName();
@@ -331,7 +331,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 				return resource;
 			}
 		}
-		MoDiscoLogger.logError(
+		Logger.logError(
 				NLS.bind(Messages.CustomizationEditor_cannotFindMetamodel, metamodelURI),
 				Activator.getDefault());
 		return null;
@@ -868,7 +868,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 				});
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e,
+			Logger.logError(e,
 					"Error converting customization to new format", Activator.getDefault()); //$NON-NLS-1$
 		}
 	}
@@ -1848,7 +1848,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 				}
 			}
 		} catch (CoreException exception) {
-			MoDiscoLogger.logError(exception, Activator.getDefault());
+			Logger.logError(exception, Activator.getDefault());
 		}
 
 	}
@@ -1929,7 +1929,7 @@ public class CustomizationEditor extends EditorPart implements IGotoMarker {
 				refreshHeader();
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

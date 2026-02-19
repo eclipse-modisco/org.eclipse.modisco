@@ -17,7 +17,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.IDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
@@ -45,7 +45,7 @@ public class GenerateReportAction implements IDiscoverer<IProject> {
 					}
 				}
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return false;
@@ -57,12 +57,12 @@ public class GenerateReportAction implements IDiscoverer<IProject> {
 		try {
 			new Report(project).generate();
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		try {
 			project.refreshLocal(IResource.DEPTH_ONE, new NullProgressMonitor());
 		} catch (CoreException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 	}
 }

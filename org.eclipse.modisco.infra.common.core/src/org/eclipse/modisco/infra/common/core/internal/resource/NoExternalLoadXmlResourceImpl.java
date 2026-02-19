@@ -18,8 +18,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.xmi.XMLLoad;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXNotRecognizedException;
 
@@ -48,7 +48,7 @@ public class NoExternalLoadXmlResourceImpl extends XMLResourceImpl {
 							"http://apache.org/xml/features/nonvalidating/load-external-dtd", //$NON-NLS-1$
 							false);
 				} catch (SAXNotRecognizedException e) {
-					MoDiscoLogger.logWarning(e, CommonModiscoActivator.getDefault());
+					Logger.logWarning(e, CommonModiscoActivator.getDefault());
 				}
 				return result;
 			}

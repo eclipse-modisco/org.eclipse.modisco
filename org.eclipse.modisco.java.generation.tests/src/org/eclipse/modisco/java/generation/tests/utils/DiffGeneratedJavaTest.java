@@ -30,7 +30,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI; 
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.generation.files.GenerateJavaExtended;
 import org.eclipse.modisco.java.generation.tests.Activator;
 import org.eclipse.modisco.java.generation.tests.Messages;
@@ -114,7 +114,7 @@ public abstract class DiffGeneratedJavaTest {
 				}
 				javaFile.create(source, true, new NullProgressMonitor());
 			} catch (Exception e1) {
-				MoDiscoLogger.logError(e1, Activator.getDefault());
+				Logger.logError(e1, Activator.getDefault());
 			}
 		} else {
 			String subDestinationPath = "/";
@@ -124,7 +124,7 @@ public abstract class DiffGeneratedJavaTest {
 					try {
 						folder.create(true, true, new NullProgressMonitor());
 					} catch (Exception e1) {
-						MoDiscoLogger.logError(e1, Activator.getDefault());
+						Logger.logError(e1, Activator.getDefault());
 					}
 				}
 				subDestinationPath = folder.getProjectRelativePath().toString();

@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 
 /**
  * @deprecated Replaced by EMF Facet
@@ -117,7 +117,7 @@ public final class LineCountHelper {
 					}
 				}
 				inputStream.close();
-				// MoDiscoLogger.logInfo("NonEmptyLines : " + context.getName()
+				// Logger.logInfo("NonEmptyLines : " + context.getName()
 				// + " " + (System.currentTimeMillis() - before) + "ms",
 				// Activator.getDefault());
 				count = new Count(nChars, nLines, nNotEmptyLines, file.lastModified());
@@ -125,7 +125,7 @@ public final class LineCountHelper {
 				return count;
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return null;
 	}

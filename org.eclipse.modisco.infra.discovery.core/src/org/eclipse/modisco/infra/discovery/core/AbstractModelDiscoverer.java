@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.infra.discovery.core.internal.Activator;
@@ -148,7 +148,7 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> {
 			} else if (defaultURI != null) {
 				getTargetModel().setURI(defaultURI);
 			} else if (targetModel.getURI() == null) {
-				MoDiscoLogger.logError("Cannot save a Resource without URI. " //$NON-NLS-1$
+				Logger.logError("Cannot save a Resource without URI. " //$NON-NLS-1$
 						+ "You must pass a valid URI using " //$NON-NLS-1$
 						+ "AbstractModelDiscoverer#setTargetURI", Activator.getDefault()); //$NON-NLS-1$
 				return;
@@ -158,13 +158,13 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> {
 			} catch (IOWrappedException e) {
 				// TODO here is a temporary fix for Bug 323247
 				if (e.getCause() != null && (e.getCause() instanceof CoreException)) {
-					MoDiscoLogger.logWarning(e,
+					Logger.logWarning(e,
 							"XMI serialization has failed on '" + targetModel.getURI() //$NON-NLS-1$
 									+ "'. Trying again without File Buffer.", //$NON-NLS-1$
 							Activator.getDefault());
 					options.clear();
 					targetModel.save(options);
-					MoDiscoLogger.logInfo("XMI serialization is done for " + targetModel.getURI(), //$NON-NLS-1$
+					Logger.logInfo("XMI serialization is done for " + targetModel.getURI(), //$NON-NLS-1$
 							Activator.getDefault());
 				} else {
 					throw e;
@@ -194,7 +194,7 @@ public abstract class AbstractModelDiscoverer<T> extends AbstractDiscoverer<T> {
 						"The saving step of '%s' failed (targetURI='%s')", //$NON-NLS-1$
 						this.getClass().getName(),
 						this.getTargetURI());
-				MoDiscoLogger.logError(e, message, Activator.getDefault());
+				Logger.logError(e, message, Activator.getDefault());
 			}
 		}
 	}

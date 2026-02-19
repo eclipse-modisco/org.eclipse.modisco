@@ -25,7 +25,7 @@ import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.core.model.IProcess;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.WorkflowExecution;
 import org.eclipse.modisco.workflow.core.WorkflowModel;
 import org.eclipse.modisco.workflow.core.internal.Activator;
@@ -70,7 +70,7 @@ public class WorkflowExecutionImpl implements WorkflowExecution {
 						}
 					}
 				} catch (DebugException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 			ILaunchConfiguration conf = Utils.getLaunchConfigurationFromName(element.getName());
@@ -94,9 +94,9 @@ public class WorkflowExecutionImpl implements WorkflowExecution {
 				}
 				monitor.worked(1);
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			} catch (InterruptedException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 
 		}

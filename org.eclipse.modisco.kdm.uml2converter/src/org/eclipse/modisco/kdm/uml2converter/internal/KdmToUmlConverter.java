@@ -48,7 +48,7 @@ import org.eclipse.m2m.atl.core.emf.EMFModel;
 import org.eclipse.m2m.atl.core.launch.ILauncher;
 import org.eclipse.m2m.atl.core.service.CoreService;
 import org.eclipse.m2m.atl.engine.parser.AtlParser;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper.ModelInfo;
 import org.eclipse.swt.widgets.Display;
@@ -166,7 +166,7 @@ public class KdmToUmlConverter {
 									.getActiveWorkbenchWindow().getActivePage();
 							IDE.openEditor(page, file);
 						} catch (Exception e) {
-							MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+							Logger.logError(e, KdmToUml2Activator.getDefault());
 						}
 					}
 				});
@@ -190,7 +190,7 @@ public class KdmToUmlConverter {
 				ecoreSourceModel.getResource().setURI(sourceModelUri);
 				ecoreSourceModel.getResource().save(null);
 			} catch (IOException e) {
-				MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+				Logger.logError(e, KdmToUml2Activator.getDefault());
 			}
 		}
 
@@ -202,7 +202,7 @@ public class KdmToUmlConverter {
 				ecoreTargetModel.getResource().setURI(targetModelUri);
 				ecoreTargetModel.getResource().save(null);
 			} catch (IOException e) {
-				MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+				Logger.logError(e, KdmToUml2Activator.getDefault());
 			}
 
 		}
@@ -211,7 +211,7 @@ public class KdmToUmlConverter {
 		try {
 			result = parseFromModel(targetModel, atlFileUri);
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+			Logger.logError(e, KdmToUml2Activator.getDefault());
 		}
 
 		return result;
@@ -275,7 +275,7 @@ public class KdmToUmlConverter {
 							transformation.openStream());
 				} catch (IOException e) {
 					result = Status.CANCEL_STATUS;
-					MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+					Logger.logError(e, KdmToUml2Activator.getDefault());
 				}
 
 				return result;
@@ -285,7 +285,7 @@ public class KdmToUmlConverter {
 		try {
 			transformationThread.join();
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+			Logger.logError(e, KdmToUml2Activator.getDefault());
 		}
 
 		extractor.extract(outputInstance, targetModelUri.toString());
@@ -308,15 +308,15 @@ public class KdmToUmlConverter {
 			try {
 				AtlParser.getDefault().extract(transformationModel, file.getLocation().toString());
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+				Logger.logError(e, KdmToUml2Activator.getDefault());
 			}
 			try {
 				file.refreshLocal(0, new NullProgressMonitor());
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, KdmToUml2Activator.getDefault());
+				Logger.logError(e, KdmToUml2Activator.getDefault());
 			}
 		} else {
-			MoDiscoLogger.logError("Uri invalid", KdmToUml2Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError("Uri invalid", KdmToUml2Activator.getDefault()); //$NON-NLS-1$
 		}
 		return file;
 	}

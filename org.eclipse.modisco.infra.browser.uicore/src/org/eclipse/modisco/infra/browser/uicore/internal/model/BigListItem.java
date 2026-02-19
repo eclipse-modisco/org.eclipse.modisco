@@ -27,7 +27,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.AppearanceConfiguration
 import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.Util;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
@@ -321,21 +321,21 @@ public class BigListItem implements ITreeElement {
 							progressMonitorDialog.run(false, true, sortOperation);
 						} catch (final InvocationTargetException e) {
 							if (!(e.getCause() instanceof OperationCanceledException)) {
-								MoDiscoLogger.logError(e, Activator.getDefault());
+								Logger.logError(e, Activator.getDefault());
 							}
 						} catch (final InterruptedException e) {
-							MoDiscoLogger.logError(e, Activator.getDefault());
+							Logger.logError(e, Activator.getDefault());
 						}
 					}
 				});
 			}
 		} catch (final OperationCanceledException e) {
 			// sorting canceled by user
-			MoDiscoLogger.logInfo(Messages.BigListItem_sortingCanceled, Activator.getDefault());
+			Logger.logInfo(Messages.BigListItem_sortingCanceled, Activator.getDefault());
 		} catch (InvocationTargetException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

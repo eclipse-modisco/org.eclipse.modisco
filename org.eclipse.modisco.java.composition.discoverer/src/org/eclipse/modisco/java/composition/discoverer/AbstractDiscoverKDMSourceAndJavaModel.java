@@ -25,7 +25,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.java.AbstractTypeDeclaration;
 import org.eclipse.modisco.java.Archive;
@@ -207,7 +207,7 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 		try {
 			discoverJavaModel(source, monitor);
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 
@@ -227,7 +227,7 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 				try {
 					saveAllResources(monitor);
 				} catch (IOException e) {
-					MoDiscoLogger.logError(e.getMessage(), Activator.getDefault());
+					Logger.logError(e.getMessage(), Activator.getDefault());
 				}
 			}
 
@@ -291,7 +291,7 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 			javaDiscoverer.discoverElement(source, monitor);
 			this.javaModelResource = javaDiscoverer.getTargetModel();
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "error discovering Java model", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "error discovering Java model", Activator.getDefault()); //$NON-NLS-1$
 		}
 		if (this.javaModelResource != null) {
 			getResourceSet().getResources().add(this.javaModelResource);
@@ -388,7 +388,7 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 				}
 			}
 		} catch (NullPointerException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return this.container;
 	}
@@ -515,7 +515,7 @@ public abstract class AbstractDiscoverKDMSourceAndJavaModel<T> extends
 				}
 			}
 		} else {
-			MoDiscoLogger.logWarning("No Package Found", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logWarning("No Package Found", Activator.getDefault()); //$NON-NLS-1$
 		}
 		return java2Directory;
 	}

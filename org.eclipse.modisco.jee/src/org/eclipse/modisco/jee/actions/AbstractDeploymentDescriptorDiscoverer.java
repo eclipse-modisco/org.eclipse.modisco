@@ -27,7 +27,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.Plugin;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -93,9 +93,9 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 			}
 
 		} catch (FileNotFoundException e) {
-			MoDiscoLogger.logError(e.getMessage(), plugin);
+			Logger.logError(e.getMessage(), plugin);
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e.getMessage(), plugin);
+			Logger.logError(e.getMessage(), plugin);
 		}
 
 		// Step 2 : trying XML std reading
@@ -144,11 +144,11 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 				}
 			}
 		} catch (ParserConfigurationException e) {
-			MoDiscoLogger.logError(e.getMessage(), plugin);
+			Logger.logError(e.getMessage(), plugin);
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e.getMessage(), plugin);
+			Logger.logError(e.getMessage(), plugin);
 		} catch (SAXException e) {
-			MoDiscoLogger.logError(e.getMessage(), plugin);
+			Logger.logError(e.getMessage(), plugin);
 		}
 
 		return version;
@@ -213,7 +213,7 @@ public abstract class AbstractDeploymentDescriptorDiscoverer<T> extends Abstract
 			}
 			br.close();
 		} catch (Exception e) {
-			MoDiscoLogger.logWarning(Messages.DeployementDescriptorDiscoverer_1 + e.toString(),
+			Logger.logWarning(Messages.DeployementDescriptorDiscoverer_1 + e.toString(),
 					plugin);
 		}
 		return version;

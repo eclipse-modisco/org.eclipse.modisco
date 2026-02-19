@@ -29,7 +29,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -78,7 +78,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 					changeBundleId(project);
 					afterImport(project);
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, getActivator());
+					Logger.logError(e, getActivator());
 				}
 			}
 
@@ -87,7 +87,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 		try {
 			getContainer().run(true, false, operation);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, getActivator());
+			Logger.logError(e, getActivator());
 			return false;
 		}
 		return true;
@@ -115,11 +115,11 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 				}
 			}
 			if (!success) {
-				MoDiscoLogger.logWarning(
+				Logger.logWarning(
 						"Couldn't clean " + pluginXML.getFullPath(), getActivator()); //$NON-NLS-1$
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError("Error cleaning plugin.xml", getActivator()); //$NON-NLS-1$
+			Logger.logError("Error cleaning plugin.xml", getActivator()); //$NON-NLS-1$
 		}
 	}
 
@@ -147,7 +147,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 
 			project.setDescription(description, new NullProgressMonitor());
 		} catch (Exception e) {
-			MoDiscoLogger.logError("Error cleaning example project", getActivator()); //$NON-NLS-1$
+			Logger.logError("Error cleaning example project", getActivator()); //$NON-NLS-1$
 		}
 	}
 
@@ -162,7 +162,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 						new NullProgressMonitor());
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError("Error changing imported bundle id", getActivator()); //$NON-NLS-1$
+			Logger.logError("Error changing imported bundle id", getActivator()); //$NON-NLS-1$
 		}
 	}
 

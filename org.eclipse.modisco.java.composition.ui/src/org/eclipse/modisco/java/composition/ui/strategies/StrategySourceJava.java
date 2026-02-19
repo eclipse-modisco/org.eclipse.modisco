@@ -17,7 +17,7 @@ package org.eclipse.modisco.java.composition.ui.strategies;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.core.exception.ModelQueryExecutionException;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.CompilationUnit;
@@ -69,7 +69,7 @@ public class StrategySourceJava implements SourceStrategy {
 			try {
 				return query.evaluate(astNode, null);
 			} catch (ModelQueryExecutionException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return null;

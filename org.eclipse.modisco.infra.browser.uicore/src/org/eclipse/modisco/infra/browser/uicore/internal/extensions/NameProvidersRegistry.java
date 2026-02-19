@@ -29,7 +29,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.extensions.AbstractRegistry;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 
 /**
  * The singleton registry of name providers, which initializes the registry by
@@ -198,7 +198,7 @@ public class NameProvidersRegistry extends AbstractRegistry {
 			nameProviderObject = configurationElement
 					.createExecutableExtension(NameProvidersRegistry.NAME_PROVIDER_CLASS);
 		} catch (final CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return;
 		}
 		if (nameProviderObject == null) {

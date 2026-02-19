@@ -21,7 +21,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.custom.BusyIndicator;
 import org.eclipse.swt.widgets.Display;
@@ -62,7 +62,7 @@ public class ConvertToMoDiscoProjectAction implements IObjectActionDelegate {
 			ProjectUtils.createBuildProperties(project);
 			project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 		}
 	}
 

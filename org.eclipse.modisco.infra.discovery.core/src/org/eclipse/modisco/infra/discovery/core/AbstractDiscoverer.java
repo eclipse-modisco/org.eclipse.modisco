@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
@@ -127,7 +127,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 					result = true;
 				}
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return result;
@@ -196,7 +196,7 @@ public abstract class AbstractDiscoverer<T> implements IDiscoverer<T> {
 							parameterValue = IDiscoveryManager.INSTANCE.getValue(
 									aParameterDescription, this);
 						} catch (Exception e) {
-							MoDiscoLogger.logWarning(e, Messages.AbstractDiscoverer_CannotCheck,
+							Logger.logWarning(e, Messages.AbstractDiscoverer_CannotCheck,
 									Activator.getDefault());
 							// Do not stop discovery
 						}

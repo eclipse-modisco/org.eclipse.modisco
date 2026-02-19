@@ -20,7 +20,7 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.debug.ui.DebugUITools;
 import org.eclipse.jface.wizard.WizardPage;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.internal.defaultengine.WorkflowController;
 import org.eclipse.modisco.workflow.core.internal.defaultengine.WorkflowControllerImpl;
 import org.eclipse.modisco.workflow.ui.internal.Activator;
@@ -129,7 +129,7 @@ public class LaunchersPage extends WizardPage {
 				}
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		if (recursionMessage) {
 			setMessage(Messages.LaunchersPage_messageExtended);

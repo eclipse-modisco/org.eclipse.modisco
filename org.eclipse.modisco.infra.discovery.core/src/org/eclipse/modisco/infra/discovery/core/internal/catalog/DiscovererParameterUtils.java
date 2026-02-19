@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.CatalogFactory;
 import org.eclipse.modisco.infra.discovery.catalog.DirectionKind;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
@@ -88,7 +88,7 @@ public final class DiscovererParameterUtils {
 					memberToParameterMap.put(aMember, parameterAnnotation);
 
 				} catch (ParameterDeclarationException e) {
-					MoDiscoLogger.logError(
+					Logger.logError(
 							"Some Discoverer parameter annotation " + parameterAnnotation //$NON-NLS-1$
 									+ " has problems and will be ignored : " //$NON-NLS-1$
 									+ e.getMessage(), Activator.getDefault());
@@ -111,7 +111,7 @@ public final class DiscovererParameterUtils {
 							parameterInitialValueAnnotation);
 
 				} catch (ParameterDeclarationException e) {
-					MoDiscoLogger
+					Logger
 							.logError(
 									"Some Discoverer parameter annotation " + parameterInitialValueAnnotation //$NON-NLS-1$
 											+ " has problems and will be ignored : " //$NON-NLS-1$
@@ -131,7 +131,7 @@ public final class DiscovererParameterUtils {
 				DiscoveryAnnotationControls.checkAnnotationsForOneParameter(null, entry.getValue(),
 						null, methodToParameterInitialValueMap);
 			} catch (ParameterDeclarationException e) {
-				MoDiscoLogger
+				Logger
 						.logError(
 								"Some Discoverer annotations have problems and will be ignored : " + e.getMessage(), //$NON-NLS-1$
 								Activator.getDefault());

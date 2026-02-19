@@ -28,7 +28,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.xml.internal.resource.GenericXMLHandler;
 import org.eclipse.modisco.xml.internal.resource.GenericXMLWriter;
 import org.eclipse.modisco.xml.plugin.XmlActivator;
@@ -90,7 +90,7 @@ public class GenericXMLResourceImpl extends ResourceImpl {
 				// UnknownHostException may occur when
 				// a external dtd is indicated 
 				// but not accessible (e.g. if www is not available)
-				MoDiscoLogger.logWarning(e, XmlActivator.getDefault());
+				Logger.logWarning(e, XmlActivator.getDefault());
 			}
 
 			p.parse(inputStream, handler);

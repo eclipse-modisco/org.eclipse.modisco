@@ -26,7 +26,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.internal.Activator;
 
@@ -52,7 +52,7 @@ public final class MarkerUtils {
 		try {
 			javaResource.deleteMarkers(markerId, true, IResource.DEPTH_ONE);
 		} catch (CoreException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 	}
 
@@ -89,9 +89,9 @@ public final class MarkerUtils {
 			marker.setAttribute(IMarker.MESSAGE, message);
 
 		} catch (CoreException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		} catch (IOException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 	}
 

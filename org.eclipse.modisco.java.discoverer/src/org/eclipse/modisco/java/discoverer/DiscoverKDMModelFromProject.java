@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -39,7 +39,7 @@ public class DiscoverKDMModelFromProject extends AbstractModelDiscoverer<IProjec
 		try {
 			return project.isAccessible() && project.hasNature(JavaCore.NATURE_ID);
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 			return false;
 		}
 	}

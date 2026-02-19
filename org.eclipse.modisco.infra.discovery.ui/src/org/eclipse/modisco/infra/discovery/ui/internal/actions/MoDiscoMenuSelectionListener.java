@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.modisco.facet.util.emf.core.IBrowserRegistry;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
@@ -228,7 +228,7 @@ public class MoDiscoMenuSelectionListener implements SelectionListener {
 					IProgressMonitor.UNKNOWN);
 			objectDiscoverer.discoverElement(element, monitor);
 		} catch (final DiscoveryException e) {
-			MoDiscoLogger.logError(e, "Error in discovery", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Error in discovery", Activator.getDefault()); //$NON-NLS-1$
 			// final String location;
 			// StackTraceElement[] stackTrace = e.getStackTrace();
 			// if (stackTrace != null && stackTrace.length > 0) {

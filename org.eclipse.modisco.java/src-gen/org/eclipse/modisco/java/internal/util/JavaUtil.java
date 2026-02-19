@@ -29,7 +29,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.AbstractTypeDeclaration;
@@ -182,11 +182,11 @@ public final class JavaUtil {
 				// No prefix if container is a Model instance
 				assert true; // misc statement for checkstyle rule
 			} else if (typeDeclaration.eContainer() != null) {
-				MoDiscoLogger.logWarning(
+				Logger.logWarning(
 						"Not managed type declaration: typeDeclaration.eContainer().getClass()= " //$NON-NLS-1$
 						, JavaPlugin.getDefault());
 			} else {
-				MoDiscoLogger.logWarning("Type with null container" //$NON-NLS-1$
+				Logger.logWarning("Type with null container" //$NON-NLS-1$
 						, JavaPlugin.getDefault());
 			}
 			buffer.append(typeDeclaration.getName());
@@ -353,7 +353,7 @@ public final class JavaUtil {
 		JavaUtil javaUtil = new JavaUtil();
 		CurrentElement currentElement = javaUtil.new CurrentElement();
 		if (searchedQualifiedName == null) {
-			MoDiscoLogger
+			Logger
 					.logError(
 							"JavaDiscovererUtils::getNamedElementByQualifiedName(): qualifiedName parameter is null", //$NON-NLS-1$
 							JavaPlugin.getDefault());

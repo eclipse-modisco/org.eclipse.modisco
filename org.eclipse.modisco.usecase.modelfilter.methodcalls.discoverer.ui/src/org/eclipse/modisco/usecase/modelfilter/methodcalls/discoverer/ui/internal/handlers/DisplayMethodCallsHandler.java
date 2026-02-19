@@ -32,7 +32,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.Model;
@@ -88,13 +88,13 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 			if (JavaModelUtils.isJavaModelFile(file)) {
 				openOn(file);
 			} else {
-				MoDiscoLogger
+				Logger
 						.logWarning("Not a Java model: " //$NON-NLS-1$
 								+ file.getFullPath().toString(),
 								Activator.getDefault());
 			}
 		} else {
-			MoDiscoLogger.logWarning("Input not handled: " //$NON-NLS-1$
+			Logger.logWarning("Input not handled: " //$NON-NLS-1$
 					+ object.getClass().getName(), Activator.getDefault());
 		}
 
@@ -130,7 +130,7 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 					}
 					openPrefuseEditor(input);
 				} catch (DiscoveryException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 					return Status.CANCEL_STATUS;
 				}
 				return Status.OK_STATUS;
@@ -208,7 +208,7 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 									tempProject = JavaCore.create(project);
 								}
 							} catch (CoreException e) {
-								MoDiscoLogger.logError(e,
+								Logger.logError(e,
 										Activator.getDefault());
 							}
 						}
@@ -232,7 +232,7 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 							JavaCore.create(file.getProject()));
 					openPrefuseEditor(input);
 				} catch (DiscoveryException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 					return Status.CANCEL_STATUS;
 				}
 				return Status.OK_STATUS;
@@ -253,7 +253,7 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 							javaProject);
 					openPrefuseEditor(input);
 				} catch (DiscoveryException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 					return Status.CANCEL_STATUS;
 				}
 				return Status.OK_STATUS;
@@ -271,7 +271,7 @@ public class DisplayMethodCallsHandler extends AbstractHandler {
 					IDE.openEditor(page, editorInput,
 							MethodCallsModelEditor.EDITOR_ID, true);
 				} catch (PartInitException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 		});

@@ -34,34 +34,42 @@ public final class MoDiscoLogger {
 		// Nothing
 	}
 
+	@Deprecated
 	public static void logError(final Throwable e, final Plugin plugin) {
 		MoDiscoLogger.log(e, IStatus.ERROR, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logError(final String message, final Plugin plugin) {
 		MoDiscoLogger.log(null, IStatus.ERROR, message, plugin);
 	}
 
+	@Deprecated
 	public static void logError(final Throwable e, final String message, final Plugin plugin) {
 		MoDiscoLogger.log(e, IStatus.ERROR, message, plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final Throwable e, final Plugin plugin) {
 		MoDiscoLogger.log(e, IStatus.WARNING, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final String message, final Plugin plugin) {
 		MoDiscoLogger.log(null, IStatus.WARNING, message, plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final Throwable e, final String message, final Plugin plugin) {
 		MoDiscoLogger.log(e, IStatus.WARNING, message, plugin);
 	}
 
+	@Deprecated
 	public static void logInfo(final Throwable e, final Plugin plugin) {
 		MoDiscoLogger.log(e, IStatus.INFO, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logInfo(final String message, final Plugin plugin) {
 		MoDiscoLogger.log(null, IStatus.INFO, message, plugin);
 	}
@@ -74,6 +82,7 @@ public final class MoDiscoLogger {
 		private static final long serialVersionUID = 309882934616507415L;
 	}
 
+	@Deprecated
 	@SuppressWarnings("synthetic-access")
 	public static void log(final Throwable e, final int level, final String message,
 			final Plugin plugin) {

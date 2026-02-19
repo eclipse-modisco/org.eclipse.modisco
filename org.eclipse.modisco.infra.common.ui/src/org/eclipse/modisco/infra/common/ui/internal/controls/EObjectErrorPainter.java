@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageProvider;
 import org.eclipse.swt.SWT;
@@ -79,7 +79,7 @@ public class EObjectErrorPainter {
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 		}
 		return null;
 	}
@@ -168,7 +168,7 @@ public class EObjectErrorPainter {
 					try {
 						text = (String) marker.getAttribute(IMarker.MESSAGE);
 					} catch (CoreException e) {
-						MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+						Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 					}
 					if (text != null) {
 						createTooltip(display, text, item);

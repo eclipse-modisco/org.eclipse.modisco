@@ -17,7 +17,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
 public class JavaProjectSerializer implements ISerializer<IJavaProject> {
@@ -41,7 +41,7 @@ public class JavaProjectSerializer implements ISerializer<IJavaProject> {
 				return JavaCore.create(project);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, JavaActivator.getDefault());
+			Logger.logError(e, JavaActivator.getDefault());
 		}
 		return null;
 	}

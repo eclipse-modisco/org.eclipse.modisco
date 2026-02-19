@@ -17,7 +17,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.Messages;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.ui.INewWizard;
@@ -76,7 +76,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		try {
 			getContainer().run(false, false, operation);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 			return false;
 		}
 

@@ -25,7 +25,7 @@ import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.modisco.facet.common.ui.internal.views.AbstractTreeView;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageUtils;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetPackage;
@@ -216,7 +216,7 @@ public class FacetView extends AbstractTreeView implements ModiscoCatalogChangeL
 				}
 
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, "Failed to open: " + uri, Activator.getDefault()); //$NON-NLS-1$
+				Logger.logError(e, "Failed to open: " + uri, Activator.getDefault()); //$NON-NLS-1$
 			}
 		}
 	}

@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.core.AbstractModelQuery;
 import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
@@ -62,7 +62,7 @@ public final class QueryUtil {
 				Exception exc = modelQueryResult.getException();
 				if (exc != null) {
 					showMessageDialog(exc);
-					MoDiscoLogger.logError(exc, Activator.getDefault());
+					Logger.logError(exc, Activator.getDefault());
 				} else {
 					return results.get(0).getValue();
 				}
@@ -70,7 +70,7 @@ public final class QueryUtil {
 			return null;
 		} catch (final Throwable e) {
 			showMessageDialog(e);
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return null;
 		}
 	}

@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.Messages;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -61,7 +61,7 @@ public class NewProjectCreationOperation extends WorkspaceModifyOperation {
 			ProjectUtils.addNature(this.project, monitor, MoDiscoProject.NATURE_ID);
 			ProjectUtils.createBuildProperties(this.project);
 		} else {
-			MoDiscoLogger.logWarning("MoDisco project creation aborted: the project already exists", //$NON-NLS-1$
+			Logger.logWarning("MoDisco project creation aborted: the project already exists", //$NON-NLS-1$
 					MoDiscoCommonUIPlugin.getDefault());
 		}
 		monitor.done();

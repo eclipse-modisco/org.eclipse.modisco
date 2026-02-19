@@ -16,7 +16,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -60,7 +60,7 @@ public abstract class FormStyleSashForm extends SashForm {
 				}
 				break;
 			default:
-				MoDiscoLogger.logWarning("Unhandled event", MoDiscoCommonUIPlugin.getDefault()); //$NON-NLS-1$
+				Logger.logWarning("Unhandled event", MoDiscoCommonUIPlugin.getDefault()); //$NON-NLS-1$
 			}
 		}
 	};
@@ -115,7 +115,7 @@ public abstract class FormStyleSashForm extends SashForm {
 				this.fSashes.add(sash);
 			}
 		} catch (final Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 		}
 	}
 
@@ -126,7 +126,7 @@ public abstract class FormStyleSashForm extends SashForm {
 			final Sash[] allSashes = (Sash[]) sashesField.get(this);
 			return allSashes;
 		} catch (final Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 			return new Sash[0];
 		}
 	}

@@ -18,7 +18,7 @@ import java.net.URL;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.util.atl.core.internal.AtlLaunchHelper;
 
 public class TranslateJavaModelToKdm {
@@ -51,7 +51,7 @@ public class TranslateJavaModelToKdm {
 			try {
 				url = new URL(getPathToTransformation());
 			} catch (MalformedURLException e) {
-				MoDiscoLogger.logError(e,
+				Logger.logError(e,
 						"wrong URL: " + getPathToTransformation(), JavaActivator.getDefault()); //$NON-NLS-1$
 			}
 

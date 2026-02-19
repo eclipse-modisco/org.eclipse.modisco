@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 
 public final class EditingSupportUtil {
 
@@ -75,7 +75,7 @@ public final class EditingSupportUtil {
 					}
 				}
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+				Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 			}
 		}
 

@@ -16,7 +16,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit,
  org.eclipse.jdt.apt.core,
  org.eclipse.ui.workbench,
- org.eclipse.swt
+ org.eclipse.swt,
+ org.eclipse.modisco.facet.util.core
 Import-Package: org.xml.sax
 Export-Package: org.eclipse.modisco.infra.common.core.internal;
   x-friends:="org.eclipse.modisco.dev.core,

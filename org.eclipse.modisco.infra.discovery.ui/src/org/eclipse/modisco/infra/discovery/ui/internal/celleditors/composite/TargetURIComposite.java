@@ -18,7 +18,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.ui.dialogs.WorkspaceResourceDialog;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.modisco.infra.discovery.ui.Messages;
 import org.eclipse.swt.SWT;
@@ -75,7 +75,7 @@ public class TargetURIComposite extends AbstractCellEditorComposite<URI> {
 							originalPath = new Path(originalUri.toPlatformString(true));
 						}
 					} catch (IllegalArgumentException iae) {
-						MoDiscoLogger.logInfo(iae, Activator.getDefault());
+						Logger.logInfo(iae, Activator.getDefault());
 					}
 				}
 

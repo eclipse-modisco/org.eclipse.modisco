@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.IExtension;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.Constants;
 import org.eclipse.modisco.workflow.core.WorkflowExecution;
 import org.eclipse.modisco.workflow.core.internal.Activator;
@@ -58,7 +58,7 @@ public class EngineFactoryImpl implements EngineFactory {
 						getWorkflowEngines().put(extension.getUniqueIdentifier(),
 								(WorkflowExecution) element.createExecutableExtension("class")); //$NON-NLS-1$
 					} catch (Throwable e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 			}

@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
 import org.eclipse.modisco.infra.facet.FacetReference;
@@ -142,14 +142,14 @@ public class FacetContext {
 					} else {
 						String message = "Query " + abstractModelQuery.toString() //$NON-NLS-1$
 								+ " didn't return a boolean result as expected."; //$NON-NLS-1$
-						MoDiscoLogger.logError(message, Activator.getDefault());
+						Logger.logError(message, Activator.getDefault());
 					}
 				} catch (ModelQueryException e) {
 					result = false;
 					throw e;
 				} catch (Exception e) {
 					result = false;
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 					throw new ModelQueryException("FacetContext failed to execute a query", e); //$NON-NLS-1$
 				}
 			}
@@ -307,7 +307,7 @@ public class FacetContext {
 					result.add(facet);
 				}
 			} catch (ModelQueryException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return result;

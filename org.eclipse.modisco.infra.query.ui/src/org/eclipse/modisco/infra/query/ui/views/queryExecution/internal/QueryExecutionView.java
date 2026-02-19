@@ -46,7 +46,7 @@ import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.util.ImageUtils;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -330,7 +330,7 @@ public class QueryExecutionView extends ViewPart {
 						this.fQuerySetProviders.add(querySetProvider);
 					}
 				} catch (CoreException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 		}
@@ -622,17 +622,17 @@ public class QueryExecutionView extends ViewPart {
 					displayResult(result);
 				}
 			} catch (ExecutionEnvironmentException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				MessageDialog.openError(getSite().getShell(),
 						Messages.QueryExecutionView_execEnvNotAvailable, NLS.bind(
 								Messages.QueryExecutionView_execEnvError, e.getRequiredExecEnv(),
 								e.getAvailableExecEnv()));
 			} catch (MissingBundleException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				MessageDialog.openError(getSite().getShell(), Messages.QueryExecutionView_0,
 						NLS.bind(Messages.QueryExecutionView_1, e.getBundleName()));
 			} catch (BundleClassPathException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				MessageDialog.openError(getSite().getShell(),
 						Messages.QueryExecutionView_errorInBundleClasspath, NLS.bind(
 								Messages.QueryExecutionView_classpathWarning, e.getProject()
@@ -652,7 +652,7 @@ public class QueryExecutionView extends ViewPart {
 				MessageDialog.openError(getSite().getShell(),
 						Messages.QueryExecutionView_ErrorExecutingQuery, e.getClass()
 								.getSimpleName() + message + stack);
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		} else {
 			MessageDialog.openInformation(getSite().getShell(),
@@ -665,14 +665,14 @@ public class QueryExecutionView extends ViewPart {
 		for (ModelQueryResult modelQueryResult : result) {
 			Exception exc = modelQueryResult.getException();
 			if (exc != null) {
-				MoDiscoLogger.logError(exc, "Query exception", Activator.getDefault()); //$NON-NLS-1$
+				Logger.logError(exc, "Query exception", Activator.getDefault()); //$NON-NLS-1$
 				MessageDialog.openError(this.mainComposite.getShell(),
 						Messages.QueryExecutionView_QueryException, exc.getClass().getSimpleName()
 								+ " : " + exc.getMessage()); //$NON-NLS-1$
 				return false;
 			}
 			// if (modelQueryResult.getValue() == null) {
-			//				MoDiscoLogger.logError("null query result", Activator.getDefault()); //$NON-NLS-1$
+			//				Logger.logError("null query result", Activator.getDefault()); //$NON-NLS-1$
 			// MessageDialog.openError(this.mainComposite.getShell(),
 			// Messages.QueryExecutionView_NullQueryResult,
 			// Messages.QueryExecutionView_QueryReturnedNull);
@@ -690,7 +690,7 @@ public class QueryExecutionView extends ViewPart {
 			queryResultDisplayer.getDisplayer().displayQueryResult(result);
 		} else {
 			String message = NLS.bind("Query Displayer with name \"{0}\" not found", displayerName); //$NON-NLS-1$
-			MoDiscoLogger.logError(message, Activator.getDefault());
+			Logger.logError(message, Activator.getDefault());
 			MessageDialog.openWarning(getSite().getShell(),
 					Messages.QueryExecutionView_NoQueryDisplayer, message);
 		}

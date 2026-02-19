@@ -21,7 +21,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ui.Activator;
 import org.eclipse.modisco.infra.query.ui.exceptions.ClassAlreadyExistsException;
@@ -72,7 +72,7 @@ public class NewClassCreationWizard extends Wizard {
 		try {
 			this.mainPage.apply(this.query);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return false;
 		}
 		return true;

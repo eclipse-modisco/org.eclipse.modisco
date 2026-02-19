@@ -25,7 +25,7 @@ import org.eclipse.jface.dialogs.DialogSettings;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.Messages;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.modisco.infra.common.ui.internal.controls.FilteredElementSelectionControl;
@@ -103,7 +103,7 @@ public class MetaclassSelectionDialog extends Dialog {
 			settings.put(MetaclassSelectionDialog.CLASSIFIERS_SETTING, builder.toString());
 			settings.save(filename);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 		}
 	}
 
@@ -139,7 +139,7 @@ public class MetaclassSelectionDialog extends Dialog {
 				}
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 		}
 	}
 

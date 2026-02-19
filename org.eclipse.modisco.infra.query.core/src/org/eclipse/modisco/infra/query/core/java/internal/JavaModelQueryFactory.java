@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -187,7 +187,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 			ModelQueryException mqe = new ModelQueryException("Failed to load the model query: " //$NON-NLS-1$
 					+ modelQuery.getModelQuerySet().getName() + "::" //$NON-NLS-1$
 					+ modelQuery.getName(), e);
-			MoDiscoLogger.logError(mqe, Activator.getDefault());
+			Logger.logError(mqe, Activator.getDefault());
 			throw mqe;
 		}
 		return javaModelQueryInst;
@@ -262,7 +262,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 
 			}
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error checking bundle classpath", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Error checking bundle classpath", Activator.getDefault()); //$NON-NLS-1$
 			return;
 		}
 
@@ -359,7 +359,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 						}
 
 						if (className == null || uri == null) {
-							MoDiscoLogger.logError("Error in extension " //$NON-NLS-1$
+							Logger.logError("Error in extension " //$NON-NLS-1$
 									+ EcorePlugin.GENERATED_PACKAGE_PPID
 									+ ": couldn't hotload metamodel", Activator.getDefault()); //$NON-NLS-1$
 						}
@@ -380,7 +380,7 @@ public class JavaModelQueryFactory implements IModelQueryFactory {
 			MoDiscoResourceSet.getResourceSetSingleton().aResourceHasBeenLoaded(
 					ePackage.eResource());
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Failed to load an EPackage: " + uri, //$NON-NLS-1$
+			Logger.logError(e, "Failed to load an EPackage: " + uri, //$NON-NLS-1$
 					Activator.getDefault());
 		}
 	}

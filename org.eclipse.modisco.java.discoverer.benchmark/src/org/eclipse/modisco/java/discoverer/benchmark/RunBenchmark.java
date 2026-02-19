@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.common.cdo.derby.DerbyCDOServer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.MultiProjectBenchmark;
 import org.eclipse.modisco.java.discoverer.benchmark.cdo.client.BenchmarkJavaDiscovererCDO;
 import org.eclipse.modisco.java.discoverer.benchmark.cdo.client.nousage.JavaDiscovererCDONoUsages;
@@ -46,7 +46,7 @@ public class RunBenchmark extends AbstractRunBenchmark {
 		try {
 			getStatProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 		} catch (CoreException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 		return benchmarkModel;
 	}

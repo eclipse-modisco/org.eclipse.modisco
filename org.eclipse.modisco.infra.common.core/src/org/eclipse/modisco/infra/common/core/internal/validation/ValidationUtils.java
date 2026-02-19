@@ -23,7 +23,7 @@ import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.pde.core.build.IBuildEntry;
 
@@ -71,20 +71,20 @@ public final class ValidationUtils {
 								notInBuild.add(file);
 							}
 						} catch (CoreException e) {
-							MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+							Logger.logError(e, CommonModiscoActivator.getDefault());
 						}
 					}
 					return true;
 				}
 			});
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 
 		try {
 			project.deleteMarkers(markerType, true, IResource.DEPTH_ONE);
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+			Logger.logError(e, CommonModiscoActivator.getDefault());
 		}
 
 		IResource markersResource;
@@ -94,7 +94,7 @@ public final class ValidationUtils {
 			try {
 				pluginXML.deleteMarkers(markerType, true, IResource.DEPTH_ONE);
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		} else {
 			markersResource = project;
@@ -107,7 +107,7 @@ public final class ValidationUtils {
 			try {
 				buildProperties.deleteMarkers(markerType, true, IResource.DEPTH_ONE);
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		} else {
 			buildMarkersResource = project;
@@ -121,7 +121,7 @@ public final class ValidationUtils {
 				marker.setAttribute(IMarker.MESSAGE, message);
 				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		}
 
@@ -133,7 +133,7 @@ public final class ValidationUtils {
 				marker.setAttribute(IMarker.MESSAGE, message);
 				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+				Logger.logError(e, CommonModiscoActivator.getDefault());
 			}
 		}
 	}

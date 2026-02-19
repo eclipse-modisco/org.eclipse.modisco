@@ -17,9 +17,9 @@ import org.eclipse.core.runtime.IExtension;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.util.NLS;
 
 /**
@@ -42,7 +42,7 @@ public abstract class AbstractRegistry {
 				getExtensionPointNamespace(), getExtensionPointName());
 
 		if (extensionPoint == null) {
-			MoDiscoLogger.logError("Extension point not found:" + getExtensionPointNamespace() //$NON-NLS-1$
+			Logger.logError("Extension point not found:" + getExtensionPointNamespace() //$NON-NLS-1$
 					+ "." + getExtensionPointName(), CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 			return;
 		}
@@ -80,7 +80,7 @@ public abstract class AbstractRegistry {
 			buf.append(id);
 		}
 		buf.append(Messages.AbstractRegistry_colon + text);
-		MoDiscoLogger.logError(buf.toString(), CommonModiscoActivator.getDefault());
+		Logger.logError(buf.toString(), CommonModiscoActivator.getDefault());
 	}
 
 	/**

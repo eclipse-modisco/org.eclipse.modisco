@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.prefuse.PrefuseGraphContainer;
 import org.eclipse.modisco.infra.prefuse.examples.graphview.GraphViewConstants;
 import org.eclipse.modisco.java.Model;
@@ -92,7 +92,7 @@ public class DependenciesEditor extends EditorPart {
 					tempProject = JavaCore.create(project);
 				} // else, nothing to do
 			} catch (CoreException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 			// initialize the editor input
 			this.editorInput = new PrefuseGraphInput(result, tempProject);
@@ -213,7 +213,7 @@ public class DependenciesEditor extends EditorPart {
 			if (element instanceof Type) {
 				// BrowseJavaCode browserUtil = new BrowseJavaCode();
 				// browserUtil.browseJavaCode(element);
-				MoDiscoLogger.logWarning("not implemented", Activator.getDefault()); //$NON-NLS-1$
+				Logger.logWarning("not implemented", Activator.getDefault()); //$NON-NLS-1$
 			} else if (element instanceof Package) {
 				clearData();
 				Package packElement = (Package) element;

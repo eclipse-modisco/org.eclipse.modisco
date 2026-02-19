@@ -67,7 +67,7 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.LinkItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.modisco.infra.facet.FacetStructuralFeature;
 import org.eclipse.modisco.infra.facet.core.FacetContext;
@@ -836,7 +836,7 @@ public class TableEditor extends EditorPart implements ISelectionProvider, IMenu
 			this.tableViewer.getTable().setColumnOrder(order);
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error sorting columns by type", //$NON-NLS-1$
+			Logger.logError(e, "Error sorting columns by type", //$NON-NLS-1$
 					MoDiscoBrowserPlugin.getPlugin());
 		} finally {
 			this.tableViewer.getControl().setRedraw(true);

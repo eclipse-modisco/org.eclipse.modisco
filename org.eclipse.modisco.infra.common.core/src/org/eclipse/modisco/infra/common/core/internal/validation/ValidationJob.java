@@ -32,9 +32,9 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.util.NLS;
 
 /**
@@ -207,7 +207,7 @@ public final class ValidationJob extends Job {
 						file.deleteMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
 								IResource.DEPTH_INFINITE);
 					} catch (CoreException e) {
-						MoDiscoLogger.logError(e,
+						Logger.logError(e,
 								"Failed to delete marker for: " + file.getFullPath(), //$NON-NLS-1$
 								CommonModiscoActivator.getDefault());
 					}
@@ -215,7 +215,7 @@ public final class ValidationJob extends Job {
 						try {
 							ValidationJob.convertDiagnosticToMarker(file, diagnostic);
 						} catch (CoreException e) {
-							MoDiscoLogger.logError(e, null);
+							Logger.logError(e, null);
 						}
 					}
 				}
@@ -236,11 +236,11 @@ public final class ValidationJob extends Job {
 			String diagnosticMessage = "The following problem has been found while validating " //$NON-NLS-1$
 					+ resource.getURI().toString() + " : " + diagnostic.getMessage(); //$NON-NLS-1$
 			if (diagnostic.getSeverity() == Diagnostic.ERROR) {
-				MoDiscoLogger.logError(diagnosticMessage, CommonModiscoActivator.getDefault());
+				Logger.logError(diagnosticMessage, CommonModiscoActivator.getDefault());
 			} else if (diagnostic.getSeverity() == Diagnostic.WARNING) {
-				MoDiscoLogger.logWarning(diagnosticMessage, CommonModiscoActivator.getDefault());
+				Logger.logWarning(diagnosticMessage, CommonModiscoActivator.getDefault());
 			} else if (diagnostic.getSeverity() == Diagnostic.INFO) {
-				MoDiscoLogger.logInfo(diagnosticMessage, CommonModiscoActivator.getDefault());
+				Logger.logInfo(diagnosticMessage, CommonModiscoActivator.getDefault());
 			}
 		}
 

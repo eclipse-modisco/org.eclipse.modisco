@@ -35,7 +35,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaModelFromJavaProject;
 import org.eclipse.modisco.java.composition.javaapplication.Java2Directory;
 import org.eclipse.modisco.java.composition.javaapplication.Java2File;
@@ -181,7 +181,7 @@ public class TestJavaApp {
 				javaFile.create(source, true, new NullProgressMonitor());
 				// + destinationPath);
 			} catch (Exception e1) {
-				MoDiscoLogger.logError(e1, JUnitPlugin.getDefault());
+				Logger.logError(e1, JUnitPlugin.getDefault());
 			}
 		} else {
 			String subDestinationPath = "/"; //$NON-NLS-1$
@@ -191,7 +191,7 @@ public class TestJavaApp {
 					try {
 						folder.create(true, true, new NullProgressMonitor());
 					} catch (Exception e1) {
-						MoDiscoLogger.logError(e1, JUnitPlugin.getDefault());
+						Logger.logError(e1, JUnitPlugin.getDefault());
 					}
 				}
 				subDestinationPath = folder.getProjectRelativePath().toString();

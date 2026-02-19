@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetReference;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -397,7 +397,7 @@ public class Tests {
 					.getBundle().getSymbolicName(), IStatus.ERROR, statusList
 					.toArray(new IStatus[] {}), "Test failed.", new Exception());
 			CoreException e = new CoreException(status);
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			throw e;
 		}
 	}

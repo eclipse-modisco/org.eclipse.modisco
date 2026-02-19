@@ -33,7 +33,7 @@ import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.discoverer.AbstractDiscoverJavaModelFromProject;
 import org.eclipse.modisco.java.discoverer.ElementsToAnalyze;
 import org.eclipse.swt.SWT;
@@ -208,7 +208,7 @@ public class JavaElementsToAnalyzeDialog extends TitleAreaDialog {
 			try {
 				return lib.getSourceAttachmentPath() != null;
 			} catch (JavaModelException e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 			}
 		}
 		return false;
@@ -279,7 +279,7 @@ public class JavaElementsToAnalyzeDialog extends TitleAreaDialog {
 								.computeRequiredProjects(javaProject);
 						return projects.toArray();
 					} catch (JavaModelException e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 			} else {
@@ -303,7 +303,7 @@ public class JavaElementsToAnalyzeDialog extends TitleAreaDialog {
 							.computeRequiredLibraries(javaProject);
 					return requiredLibraries.toArray();
 				} catch (JavaModelException e) {
-					MoDiscoLogger.logError(e, Activator.getDefault());
+					Logger.logError(e, Activator.getDefault());
 				}
 			}
 			return new Object[0];

@@ -25,7 +25,7 @@ import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializationRegis
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializationService;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializer;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.discoverer.ElementsToAnalyze;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 
@@ -100,7 +100,7 @@ public class ElementsToAnalyzeSerializer implements ISerializer<ElementsToAnalyz
 					builder.append(ElementsToAnalyzeSerializer.SEPARATOR3);
 					builder.append(escape(javaElement.getPath().toString()));
 				} else {
-					MoDiscoLogger.logError("Unexpected element: " + object.getClass().getName(), //$NON-NLS-1$
+					Logger.logError("Unexpected element: " + object.getClass().getName(), //$NON-NLS-1$
 							JavaActivator.getDefault());
 					continue;
 				}
@@ -121,7 +121,7 @@ public class ElementsToAnalyzeSerializer implements ISerializer<ElementsToAnalyz
 							builder.append(escape(serialized2));
 						}
 					} else {
-						MoDiscoLogger.logError(
+						Logger.logError(
 								"No serializer for: " + entry.getValue().getClass().getName(), //$NON-NLS-1$
 								JavaActivator.getDefault());
 					}
@@ -130,7 +130,7 @@ public class ElementsToAnalyzeSerializer implements ISerializer<ElementsToAnalyz
 
 			return builder.toString();
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error serializing elements to analyze", //$NON-NLS-1$
+			Logger.logError(e, "Error serializing elements to analyze", //$NON-NLS-1$
 					JavaActivator.getDefault());
 			return ""; //$NON-NLS-1$
 		}
@@ -173,14 +173,14 @@ public class ElementsToAnalyzeSerializer implements ISerializer<ElementsToAnalyz
 						}
 					}
 				} else {
-					MoDiscoLogger.logError("unhandled element", JavaActivator.getDefault()); //$NON-NLS-1$
+					Logger.logError("unhandled element", JavaActivator.getDefault()); //$NON-NLS-1$
 				}
 
 			}
 
 			return elementsToAnalyze;
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error deserializing elements to analyze", //$NON-NLS-1$
+			Logger.logError(e, "Error deserializing elements to analyze", //$NON-NLS-1$
 					JavaActivator.getDefault());
 			return new ElementsToAnalyze(null);
 		}

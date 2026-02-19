@@ -259,7 +259,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 		//
 		// System.out.println(builder.toString());
 		// } catch (Throwable e) {
-		// MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+		// Logger.logError(e, CommonModiscoActivator.getDefault());
 		// }
 
 		// CREATE = 0

@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.AveragedMultiDiscoveryBenchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.AveragedProjectDiscovery;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkFactory;
@@ -143,7 +143,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 			benchmark.setProcessorName(systemInfo.getProcName());
 			benchmark.setSystemMemory(systemInfo.getMemory());
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e,
+			Logger.logError(e,
 					"Could not get system information for benchmark", Activator.getDefault()); //$NON-NLS-1$
 		}
 
@@ -302,13 +302,13 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 			} catch (IOWrappedException e) {
 				// TODO this is a temporary fix for Bug 323247
 				if (e.getCause() != null && (e.getCause() instanceof CoreException)) {
-					MoDiscoLogger.logWarning(e,
+					Logger.logWarning(e,
 							"XMI serialization has failed on '" + targetModel.getURI() //$NON-NLS-1$
 									+ "'. Trying again without File Buffer.", //$NON-NLS-1$
 							Activator.getDefault());
 					options.clear();
 					targetModel.save(options);
-					MoDiscoLogger.logInfo("XMI serialization is done for " + targetModel.getURI(), //$NON-NLS-1$
+					Logger.logInfo("XMI serialization is done for " + targetModel.getURI(), //$NON-NLS-1$
 							Activator.getDefault());
 				} else {
 					throw e;

@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.workflow.core.Constants;
 import org.eclipse.modisco.workflow.core.WorkflowModel;
 import org.eclipse.modisco.workflow.core.WorkflowModelListener;
@@ -95,7 +95,7 @@ public class WorkflowModelImpl extends WorkflowImpl implements WorkflowModel {
 				this.notifier.elementAdded(element);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 
@@ -162,7 +162,7 @@ public class WorkflowModelImpl extends WorkflowImpl implements WorkflowModel {
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 	}

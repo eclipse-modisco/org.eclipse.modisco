@@ -35,7 +35,7 @@ import org.eclipse.jface.operation.IRunnableContext;
 import org.eclipse.jface.window.Window;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.SelectionDialog;
@@ -113,13 +113,13 @@ public final class JavaUtils {
 								PluginUtils.addRequiredBundles(tempproj[0],
 										additionalBundlesInSearchPath);
 							} catch (CoreException e) {
-								MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+								Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 							}
 						}
 					}, new NullProgressMonitor());
 
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+					Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 					// continue without tempproj
 				}
 			}
@@ -146,7 +146,7 @@ public final class JavaUtils {
 			}
 
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+			Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 			return null;
 		} finally {
 			if (tempproj[0] != null) {
@@ -161,13 +161,13 @@ public final class JavaUtils {
 									try {
 										toDelete.delete(true, monitor2);
 									} catch (CoreException e) {
-										MoDiscoLogger.logError(e,
+										Logger.logError(e,
 												MoDiscoCommonUIPlugin.getDefault());
 									}
 								}
 							}, monitor1);
 						} catch (CoreException e) {
-							MoDiscoLogger.logError(e, MoDiscoCommonUIPlugin.getDefault());
+							Logger.logError(e, MoDiscoCommonUIPlugin.getDefault());
 						}
 						return Status.OK_STATUS;
 					}

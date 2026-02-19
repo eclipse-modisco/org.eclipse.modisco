@@ -16,7 +16,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
@@ -45,7 +45,7 @@ public class DiscoverUmlModelWithBidirectionalAssociationsFromProject extends
 		try {
 			return source.isAccessible() && source.getNature(JavaCore.NATURE_ID) != null;
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return false;
 		}
 	}

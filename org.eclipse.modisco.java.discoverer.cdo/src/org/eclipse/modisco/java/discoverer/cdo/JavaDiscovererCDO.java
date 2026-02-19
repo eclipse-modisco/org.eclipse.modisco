@@ -30,7 +30,7 @@ import org.eclipse.emf.cdo.view.CDOView;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.modisco.infra.common.cdo.server.AbstractCDOServer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
@@ -79,7 +79,7 @@ public class JavaDiscovererCDO extends DiscoverJavaModelFromJavaProject {
 					try {
 						cdoTransaction.commit();
 					} catch (CommitException e) {
-						MoDiscoLogger.logError(e, Activator.getDefault());
+						Logger.logError(e, Activator.getDefault());
 					}
 				}
 			}
@@ -147,7 +147,7 @@ public class JavaDiscovererCDO extends DiscoverJavaModelFromJavaProject {
 			session = configuration.openSession();
 		} catch (org.eclipse.net4j.channel.ChannelException e) {
 			if (e.getCause() instanceof org.eclipse.net4j.util.concurrent.TimeoutRuntimeException) {
-				MoDiscoLogger.logError(
+				Logger.logError(
 						"If you are using the JavaDiscovererCDO in a unit test, the CDO may be " //$NON-NLS-1$
 								+ "not already started. You should increase the org.eclipse" //$NON-NLS-1$
 								+ ".modisco.java.discoverer.tests.cdo.server.AbstractCDOServer." //$NON-NLS-1$

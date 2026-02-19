@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializer;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererListFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
@@ -60,7 +60,7 @@ public class DiscovererListSerializer implements ISerializer<IDiscovererList> {
 			this.inMemoryRes.save(os, Collections.EMPTY_MAP);
 			return os.toString();
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, "Discoverer and LaunchConfiguration serialization problem", Activator.getDefault());
+			Logger.logError(e, "Discoverer and LaunchConfiguration serialization problem", Activator.getDefault());
 		}
 		return "";
 	}
@@ -73,7 +73,7 @@ public class DiscovererListSerializer implements ISerializer<IDiscovererList> {
 			this.inMemoryRes.load(is, Collections.EMPTY_MAP);
 			discovererList.addAll((Collection<? extends Discovery>) this.inMemoryRes.getContents());
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, "Discoverer and LaunchConfiguration deserialization problem", Activator.getDefault());
+			Logger.logError(e, "Discoverer and LaunchConfiguration deserialization problem", Activator.getDefault());
 		}
 		return discovererList;
 	}

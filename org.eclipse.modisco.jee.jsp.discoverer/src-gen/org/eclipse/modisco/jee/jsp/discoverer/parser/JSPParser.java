@@ -13,7 +13,7 @@
  * 
  */
   package org.eclipse.modisco.jee.jsp.discoverer.parser;
-  import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+  import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.jee.jsp.*;
   import org.eclipse.modisco.jee.jsp.impl.*;
 import org.eclipse.modisco.xml.*;
@@ -125,7 +125,7 @@ public class JSPParser extends Parser {
                                             RecognitionException e) {
             String hdr = getErrorHeader(e);
             String msg = getErrorMessage(e, tokenNames);
-            MoDiscoLogger.logWarning("Parser error in "+this.page.getOriginalFilePath()+" "+hdr+" "+msg, JspActivator.getDefault());  
+            Logger.logWarning("Parser error in "+this.page.getOriginalFilePath()+" "+hdr+" "+msg, JspActivator.getDefault());  
         }
         
       private JspFactory factory = new JspFactoryImpl();
@@ -967,7 +967,7 @@ public class JSPParser extends Parser {
                                 }else{
                                 //This case would appear if there is a problem in the file formation, or the
                                 // abscence of the </script> tag
-                               MoDiscoLogger.logInfo("The </script> was not detected ", JspActivator.getDefault());
+                               Logger.logInfo("The </script> was not detected ", JspActivator.getDefault());
                                break loop1; 
                                 }                            
                             } while (true);

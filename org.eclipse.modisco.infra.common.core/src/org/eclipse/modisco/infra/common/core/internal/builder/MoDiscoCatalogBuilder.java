@@ -29,9 +29,9 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 
@@ -39,6 +39,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 	static final boolean DEBUG = CommonModiscoActivator.getDefault().isDebugging()
 			&& Boolean.parseBoolean(Platform.getDebugOption(MoDiscoCatalogBuilder.DEBUG_ID));
 
+	@Override
 	public void clean(final IncrementalProjectBuilder builder, final IProgressMonitor monitor)
 			throws CoreException {
 		final IProject project = builder.getProject();
@@ -46,6 +47,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 		validateModelDeclared(project);
 	}
 
+	@Override
 	public IProject[] build(final IncrementalProjectBuilder builder, final int kind,
 			final Map<?, ?> args, final IProgressMonitor monitor) throws CoreException {
 		getCatalog(); // make sure catalog is initialized (for listening referenced resources changes)
@@ -66,6 +68,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 	private void fullBuild(final IncrementalProjectBuilder builder) {
 		try {
 			builder.getProject().accept(new IResourceVisitor() {
+				@Override
 				public boolean visit(final IResource resource) throws CoreException {
 					String fileExtension = resource.getFileExtension();
 					if (fileExtension != null && fileExtension.equals(getFileExtension())) {
@@ -98,6 +101,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 			final List<IFile> toBeRemoved = new ArrayList<IFile>();
 			final List<IFile> toBeUpdated = new ArrayList<IFile>();
 			resourceDelta.accept(new IResourceDeltaVisitor() {
+				@Override
 				public boolean visit(final IResourceDelta delta) {
 					IResource resource = delta.getResource();
 					if ("plugin.xml".equals(resource.getName()) || "build.properties".equals(resource.getName())) { //$NON-NLS-1$ //$NON-NLS-2$
@@ -150,7 +154,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 							toBeRemoved.add(file);
 							break;
 						default:
-							MoDiscoLogger.logError("Unknown delta kind: " //$NON-NLS-1$
+							Logger.logError("Unknown delta kind: " //$NON-NLS-1$
 									+ delta.getKind(), getActivator());
 							break;
 						}
@@ -171,7 +175,7 @@ public abstract class MoDiscoCatalogBuilder implements IModiscoBuilder {
 				validateModelDeclared(project);
 			}
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, "Failed to build: " + builder.getProject(), getActivator()); //$NON-NLS-1$
+			Logger.logError(e, "Failed to build: " + builder.getProject(), getActivator()); //$NON-NLS-1$
 		}
 	}
 

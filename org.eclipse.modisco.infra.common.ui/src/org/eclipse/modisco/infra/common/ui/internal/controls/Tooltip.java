@@ -10,7 +10,7 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.common.ui.internal.controls;
 
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
@@ -66,7 +66,7 @@ public abstract class Tooltip {
 					}
 					break;
 				default:
-					MoDiscoLogger.logWarning("Unhandled event", MoDiscoCommonUIPlugin.getDefault()); //$NON-NLS-1$
+					Logger.logWarning("Unhandled event", MoDiscoCommonUIPlugin.getDefault()); //$NON-NLS-1$
 				}
 			}
 		};

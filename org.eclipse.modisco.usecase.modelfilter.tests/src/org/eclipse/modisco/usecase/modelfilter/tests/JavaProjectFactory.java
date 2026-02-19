@@ -31,7 +31,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 
 /**
  * @author Gabriel Barbier
@@ -75,7 +75,7 @@ public class JavaProjectFactory {
 			FolderUtils.copyFolderFromBundle(src, Activator.getDefault(),
 					"/" + this.srcPath, this.project); //$NON-NLS-1$
 		} catch (IOException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 		// refresh will perform also the compilation ...
@@ -91,9 +91,9 @@ public class JavaProjectFactory {
 			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD,
 					new NullProgressMonitor());
 		} catch (OperationCanceledException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 
 	}

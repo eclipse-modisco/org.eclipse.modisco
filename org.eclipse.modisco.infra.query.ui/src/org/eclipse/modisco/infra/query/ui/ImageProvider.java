@@ -12,7 +12,7 @@
 package org.eclipse.modisco.infra.query.ui;
 
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
@@ -49,7 +49,7 @@ public final class ImageProvider {
 		ImageDescriptor imageDescriptor = AbstractUIPlugin.imageDescriptorFromPlugin(
 				Activator.PLUGIN_ID, resourcePath);
 		if (imageDescriptor == null) {
-			MoDiscoLogger.logError(NLS.bind("Resource not found: {0}", resourcePath), Activator //$NON-NLS-1$
+			Logger.logError(NLS.bind("Resource not found: {0}", resourcePath), Activator //$NON-NLS-1$
 					.getDefault());
 			return ImageDescriptor.getMissingImageDescriptor();
 		}

@@ -19,7 +19,7 @@ import org.eclipse.modisco.infra.browser.custom.editor.Messages;
 import org.eclipse.modisco.infra.browser.custom.util.OverlayIconInfo;
 import org.eclipse.modisco.infra.browser.custom.util.OverlayIconPosition;
 import org.eclipse.modisco.infra.browser.custom.util.UicustomUtil;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -80,7 +80,7 @@ public class OverlayIconFeatureDialog extends IconFeatureDialog {
 				this.text.setText(overlayIcon.getPath());
 				this.combo.setText(overlayIcon.getIconPosition().name());
 			} catch (Exception e) {
-				MoDiscoLogger.logError(e, "Error decoding overlay icon", Activator //$NON-NLS-1$
+				Logger.logError(e, "Error decoding overlay icon", Activator //$NON-NLS-1$
 						.getDefault());
 			}
 		}

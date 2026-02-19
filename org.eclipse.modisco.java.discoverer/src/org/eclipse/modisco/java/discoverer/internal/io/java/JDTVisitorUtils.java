@@ -31,7 +31,7 @@ import org.eclipse.jdt.core.dom.PackageDeclaration;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.ArrayType;
@@ -146,7 +146,7 @@ public final class JDTVisitorUtils {
 			primitiveType.setName(id.toString());
 			visitor.getJdtModel().getOrphanTypes().add(primitiveType);
 			visitor.getGlobalBindings().addTarget(id, primitiveType);
-			MoDiscoLogger.logError("primitiveType == null", JavaActivator.getDefault()); //$NON-NLS-1$
+			Logger.logError("primitiveType == null", JavaActivator.getDefault()); //$NON-NLS-1$
 
 		}
 		return primitiveType;
@@ -181,7 +181,7 @@ public final class JDTVisitorUtils {
 				if (node == null) {
 					RuntimeException e = new RuntimeException(
 							"typeArgument not found in visitor bijective map: " + type.getParent().getParent().toString()); //$NON-NLS-1$
-					MoDiscoLogger.logWarning(e, JavaActivator.getDefault());
+					Logger.logWarning(e, JavaActivator.getDefault());
 				}
 				TypeAccess itElement = completeTypeAccess(node, visitor);
 				if (itElement != null) {

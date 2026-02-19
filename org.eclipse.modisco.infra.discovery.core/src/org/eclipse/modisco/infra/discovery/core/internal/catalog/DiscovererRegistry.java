@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.discovery.catalog.CatalogFactory;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererCatalog;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererDescription;
@@ -75,7 +75,7 @@ public final class DiscovererRegistry {
 			}
 			throw new IllegalStateException("Not an IDiscoverer."); //$NON-NLS-1$
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 		return null;
 	}
@@ -127,7 +127,7 @@ public final class DiscovererRegistry {
 								String alternateId = discovererId.replace(' ', '_');
 								alternateId = alternateId.replace('/', '_');
 								alternateId = alternateId.replace('#', '_');
-								MoDiscoLogger
+								Logger
 										.logWarning(
 												"A Discoverer ID contains invalid characters : '" + discovererId + "'. '" + alternateId + "' will be used instead.", Activator.getDefault()); //$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$
 								discoDesc.setId(alternateId);
@@ -144,11 +144,11 @@ public final class DiscovererRegistry {
 						this.discovererCatalog.eResource().getContents().add(discoDesc);
 					} catch (CoreException e) {
 						String message = "A problem occurred when instantiating discoverer configuration: " + element.getValue(); //$NON-NLS-1$
-						MoDiscoLogger.logWarning(e, message, Activator.getDefault());
+						Logger.logWarning(e, message, Activator.getDefault());
 					}
 				} else {
 					String message = "A problem occurred when retrieving discoverer configuration: " + element.getValue(); //$NON-NLS-1$
-					MoDiscoLogger.logWarning(message, Activator.getDefault());
+					Logger.logWarning(message, Activator.getDefault());
 				}
 			}
 		}
@@ -188,7 +188,7 @@ public final class DiscovererRegistry {
 				}
 			}
 		} catch (IllegalArgumentException e) {
-			MoDiscoLogger.logWarning(e, Activator.getDefault());
+			Logger.logWarning(e, Activator.getDefault());
 		}
 		discovererDescription.setSourceType(sourceType);
 	}
