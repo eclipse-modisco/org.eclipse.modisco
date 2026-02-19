@@ -12,6 +12,7 @@
  */
 package org.eclipse.modisco.java.discoverer.benchmark.cdo.client;
 
+import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 import org.eclipse.core.runtime.IStatus;
@@ -22,7 +23,6 @@ import org.eclipse.modisco.java.discoverer.benchmark.Activator;
 import org.eclipse.modisco.java.discoverer.benchmark.Messages;
 import org.eclipse.modisco.java.discoverer.benchmark.cdo.server.DerbyCDOServerNoAudits;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFromJavaProjectEMFStat;
-import com.ibm.icu.text.SimpleDateFormat;
 
 public class JavaDiscovererCDOWithoutTrace extends BenchmarkJavaDiscovererCDO {
 

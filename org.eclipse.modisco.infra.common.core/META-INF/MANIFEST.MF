@@ -15,7 +15,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.pde.core,
  org.eclipse.emf.edit,
  org.eclipse.jdt.apt.core,
- com.ibm.icu;bundle-version="4.2.1",
  org.eclipse.ui.workbench,
  org.eclipse.swt
 Import-Package: org.xml.sax

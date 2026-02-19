@@ -14,8 +14,6 @@ package org.eclipse.modisco.infra.common.core.internal.utils;
 
 import org.eclipse.modisco.infra.common.core.internal.Messages;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * @author Gabriel Barbier
  */
@@ -92,7 +90,7 @@ public final class StringUtils {
 			if (c == ' ') {
 				space = true;
 			} else if (space) {
-				javaName.append(UCharacter.toUpperCase(c));
+				javaName.append(Character.toUpperCase(c));
 				space = false;
 			} else {
 				javaName.append(c);

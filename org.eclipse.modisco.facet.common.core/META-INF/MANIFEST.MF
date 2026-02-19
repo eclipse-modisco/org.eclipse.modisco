@@ -5,8 +5,7 @@ Bundle-SymbolicName: org.eclipse.modisco.facet.common.core;singleton:=true
 Bundle-Version: 1.6.0.qualifier
 Bundle-Activator: org.eclipse.modisco.facet.common.core.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
-Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
- com.ibm.icu;bundle-version="4.2.1"
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.common.core.internal;x-friends:="org.eclipse.modisco.facet.common.ui",

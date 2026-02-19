@@ -16,6 +16,7 @@ package org.eclipse.modisco.java.discoverer.benchmark.emfstat;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
@@ -25,8 +26,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromJavaProject;
-
-import com.ibm.icu.text.SimpleDateFormat;
 
 public class DiscoverJavaModelFromJavaProjectEMFStat extends DiscoverJavaModelFromJavaProject {
 

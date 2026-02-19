@@ -6,8 +6,7 @@ Bundle-Version: 1.6.0.qualifier
 Bundle-Activator: org.eclipse.modisco.facet.util.core.internal.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.core.resources;bundle-version="3.6.0",
- com.ibm.icu;bundle-version="4.2.1"
+ org.eclipse.core.resources;bundle-version="3.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.facet.util.core,

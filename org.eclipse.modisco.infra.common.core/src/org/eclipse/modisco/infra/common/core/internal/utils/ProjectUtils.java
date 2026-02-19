@@ -62,8 +62,6 @@ import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.osgi.service.datalocation.Location;
 import org.osgi.framework.Bundle;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * @author Gregoire DUPE (Mia-Software), Fabien Giquel (Mia-Software)
  *
@@ -181,8 +179,8 @@ public final class ProjectUtils {
 
 		String result = builder.toString();
 		// first letter to lowercase
-		if (result.length() > 0 && UCharacter.isUpperCase(result.charAt(0))) {
-			result = UCharacter.toLowerCase(result.charAt(0)) + result.substring(1);
+		if (result.length() > 0 && Character.isUpperCase(result.charAt(0))) {
+			result = Character.toLowerCase(result.charAt(0)) + result.substring(1);
 		}
 
 		IStatus status = JavaConventions.validatePackageName(result, JavaCore.VERSION_1_5,
@@ -265,6 +263,7 @@ public final class ProjectUtils {
 
 	public static IProject importPlugin(final Bundle bundle) throws CoreException, IOException {
 		return ProjectUtils.importPlugin(bundle, new IFilter() {
+			@Override
 			public boolean filter(final Object fileName) {
 				return true;
 			}

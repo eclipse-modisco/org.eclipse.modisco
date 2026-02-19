@@ -27,6 +27,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.Reader;
 import java.io.Writer;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -50,8 +51,6 @@ import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.ITypeRoot;
 import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.java.discoverer.benchmark.Activator;
-
-import com.ibm.icu.text.SimpleDateFormat;
 
 public class Statistics {
 	private static final int DEFAULT_SINCE_BEGIN = 1000;

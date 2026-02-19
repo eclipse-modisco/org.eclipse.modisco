@@ -10,7 +10,6 @@
 <unit id="org.eclipse.birt.source.feature.group" version="2.6.0.v20100617-9gF727DGKb0yl9AwWxpmbo35PwQ_"/>
 <unit id="org.eclipse.acceleo.feature.group" version="3.0.0.v201006150906"/>
 <unit id="org.eclipse.acceleo.runtime.feature.group" version="3.0.0.v201006150906"/>
-<unit id="com.ibm.icu" version="4.2.1.v20100412"/>
 <unit id="org.apache.ant" version="1.7.1.v20100518-1145"/>
 <unit id="org.apache.derby" version="10.5.1.1_201005192117"/>
 <unit id="org.apache.log4j" version="1.2.13.v200903072027"/>

@@ -33,8 +33,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.ext.LexicalHandler;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.ibm.icu.lang.UCharacter;
-
 /**
  * A handler for reading xml files and instanciating a generic xml model.
  */
@@ -135,7 +133,7 @@ public class GenericXMLHandler extends DefaultHandler implements LexicalHandler 
 				hasContent = false;
 				int index = start;
 				while (!hasContent && index < start + length) {
-					hasContent = !UCharacter.isWhitespace(ch[index]);
+					hasContent = !Character.isWhitespace(ch[index]);
 					index++;
 				}
 			}
@@ -160,6 +158,7 @@ public class GenericXMLHandler extends DefaultHandler implements LexicalHandler 
 		}
 	}
 
+	@Override
 	public final void comment(final char[] ch, final int start, final int length)
 			throws SAXException {
 		if (this.current != null && !isLightweightModel()) {
@@ -173,6 +172,7 @@ public class GenericXMLHandler extends DefaultHandler implements LexicalHandler 
 		}
 	}
 
+	@Override
 	public final void startDTD(final String name, final String publicId, final String systemId)
 			throws SAXException {
 		DocumentTypeDeclaration newDtd = MoDiscoXMLFactory.eINSTANCE
@@ -214,6 +214,7 @@ public class GenericXMLHandler extends DefaultHandler implements LexicalHandler 
 		return this.lightweightModel;
 	}
 
+	@Override
 	public final void endCDATA() throws SAXException {
 		this.nextIsCDATA = false;
 	}
@@ -237,18 +238,22 @@ public class GenericXMLHandler extends DefaultHandler implements LexicalHandler 
 
 	}
 
+	@Override
 	public void endDTD() throws SAXException {
 		// nothing
 	}
 
+	@Override
 	public void endEntity(final String arg0) throws SAXException {
 		// nothing
 	}
 
+	@Override
 	public final void startCDATA() throws SAXException {
 		this.nextIsCDATA = true;
 	}
 
+	@Override
 	public void startEntity(final String arg0) throws SAXException {
 		// nothing
 	}

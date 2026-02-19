@@ -67,8 +67,6 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 
-import com.ibm.icu.lang.UCharacter;
-
 /** The single page of the {@link NewDiscovererWizard} */
 public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 
@@ -109,14 +107,17 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 	private String fDiscovererLabel;
 
 	protected final class ParametersTableContentProvider implements IStructuredContentProvider {
+		@Override
 		public void inputChanged(final Viewer viewer, final Object oldInput, final Object newInput) {
 			//
 		}
 
+		@Override
 		public void dispose() {
 			//
 		}
 
+		@Override
 		public Object[] getElements(final Object inputElement) {
 			if (inputElement instanceof List) {
 				List<?> list = (List<?>) inputElement;
@@ -143,6 +144,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 
 	protected static final class ParametersTableLabelProvider implements ITableLabelProvider,
 			IColorProvider {
+		@Override
 		public String getColumnText(final Object element, final int columnIndex) {
 			if (element instanceof DiscoveryParameterLine) {
 				DiscoveryParameterLine discoveryParameterLine = (DiscoveryParameterLine) element;
@@ -170,26 +172,32 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 			return null;
 		}
 
+		@Override
 		public Image getColumnImage(final Object element, final int columnIndex) {
 			return null;
 		}
 
+		@Override
 		public boolean isLabelProperty(final Object element, final String property) {
 			return true;
 		}
 
+		@Override
 		public void dispose() {
 			//
 		}
 
+		@Override
 		public void addListener(final ILabelProviderListener listener) {
 			//
 		}
 
+		@Override
 		public void removeListener(final ILabelProviderListener listener) {
 			//
 		}
 
+		@Override
 		public Color getForeground(final Object element) {
 			if (AbstractModelDiscovererParameters.isInheritedParameter(element)) {
 				return Display.getDefault().getSystemColor(SWT.COLOR_DARK_GRAY);
@@ -197,6 +205,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 			return null;
 		}
 
+		@Override
 		public Color getBackground(final Object element) {
 			return null;
 		}
@@ -216,6 +225,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 	 *
 	 * @param parent
 	 */
+	@Override
 	public void createControl(final Composite parent) {
 		initializeDialogUnits(parent);
 
@@ -257,6 +267,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 				"org.eclipse.core.resources.IFolder", "org.eclipse.core.resources.IProject" }); //$NON-NLS-1$//$NON-NLS-2$
 		this.fComboInputType.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
 		this.fComboInputType.addModifyListener(new ModifyListener() {
+			@Override
 			public void modifyText(final ModifyEvent e) {
 				handleFieldChanged(NewDiscovererMainWizardPage.COMBO_INPUT_TYPE);
 				updateSuperType();
@@ -287,6 +298,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 		this.txtDiscovererName = new Text(container, SWT.BORDER);
 		this.txtDiscovererName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
 		this.txtDiscovererName.addModifyListener(new ModifyListener() {
+			@Override
 			public void modifyText(final ModifyEvent e) {
 				handleFieldChanged(NewDiscovererMainWizardPage.TXT_DISCOVERER_NAME);
 			}
@@ -375,6 +387,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 				this.tableParameters);
 		editors[NewDiscovererMainWizardPage.TYPE_COLUMN_INDEX] = new TypeCellEditor(
 				this.tableParameters, new IJavaProjectProvider() {
+					@Override
 					public IJavaProject getJavaProject() {
 						return NewDiscovererMainWizardPage.this.getJavaProject();
 					}
@@ -665,7 +678,7 @@ public class NewDiscovererMainWizardPage extends NewTypeWizardPage {
 					.addImport("org.eclipse.modisco.infra.discovery.core.annotations.Parameter"); //$NON-NLS-1$
 			String capitalizedName;
 			if (parameter.getName().length() > 0) {
-				capitalizedName = UCharacter.toUpperCase(parameter.getName().charAt(0))
+				capitalizedName = Character.toUpperCase(parameter.getName().charAt(0))
 						+ parameter.getName().substring(1);
 			} else {
 				capitalizedName = ""; //$NON-NLS-1$

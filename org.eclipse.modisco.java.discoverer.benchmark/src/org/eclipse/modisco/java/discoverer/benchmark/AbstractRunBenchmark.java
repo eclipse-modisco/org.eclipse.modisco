@@ -13,6 +13,7 @@
 package org.eclipse.modisco.java.discoverer.benchmark;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspace;
@@ -44,8 +45,6 @@ import org.eclipse.modisco.java.discoverer.benchmark.emf.client.JavaDiscovererEM
 import org.eclipse.modisco.java.discoverer.benchmark.emf.client.JavaDiscovererIncrementalEMF;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.DiscoverJavaModelFromJavaProjectEMFStat;
 import org.eclipse.modisco.java.discoverer.benchmark.emfstat.Statistics;
-
-import com.ibm.icu.text.SimpleDateFormat;
 
 public abstract class AbstractRunBenchmark implements IDiscoverer<IJavaProject> {
 
@@ -91,10 +90,12 @@ public abstract class AbstractRunBenchmark implements IDiscoverer<IJavaProject> 
 		return this.port;
 	}
 
+	@Override
 	public boolean isApplicableTo(final IJavaProject source) {
 		return source.getProject().isAccessible();
 	}
 
+	@Override
 	public void discoverElement(final IJavaProject source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		try {
