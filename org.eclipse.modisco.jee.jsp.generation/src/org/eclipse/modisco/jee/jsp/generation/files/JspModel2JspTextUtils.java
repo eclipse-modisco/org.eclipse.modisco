@@ -13,13 +13,9 @@ package org.eclipse.modisco.jee.jsp.generation.files;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Stack;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.generation.utils.IndentingStringBuilder;
 import org.eclipse.modisco.jee.jsp.JspPackage;
 import org.eclipse.modisco.jee.jsp.util.JspSwitch;

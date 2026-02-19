@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.internal.Activator;
 
 

@@ -31,7 +31,6 @@ import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
 import org.eclipse.modisco.xml.Attribute;
 import org.eclipse.modisco.xml.Node;
 import org.eclipse.modisco.xml.Text;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

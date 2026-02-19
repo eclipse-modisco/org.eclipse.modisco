@@ -11,7 +11,7 @@
  *******************************************************************************/
 package org.eclipse.modisco.facet.util.emf.core.internal.serialization;
 
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.internal.Activator;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializationRegistry;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializationService;

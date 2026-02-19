@@ -13,7 +13,6 @@
  */
 package org.eclipse.modisco.infra.discovery.benchmark;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**

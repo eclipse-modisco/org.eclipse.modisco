@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.ETypedElement;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.custom.core.ICustomizationManager;
 import org.eclipse.modisco.facet.custom.core.exception.CustomizationException;
 import org.eclipse.modisco.facet.custom.core.internal.Activator;
@@ -30,7 +31,6 @@ import org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.EClassCustomizat
 import org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.FacetCustomization;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.FacetOperation;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 /**
  * @since 0.2

@@ -18,9 +18,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.Messages;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.ui.progress.IWorkbenchSiteProgressService;
 
 /**
@@ -111,7 +111,7 @@ public abstract class NonBlockingElementComputation<T> {
 				return getTemporaryDefaultValue();
 			}
 		} catch (InterruptedException e) {
-			MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+			Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 		}
 		debugPrint("synchronous"); //$NON-NLS-1$
 		return valueRef.getValue();

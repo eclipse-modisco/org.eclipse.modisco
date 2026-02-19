@@ -61,7 +61,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaConventions;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.FileUtils;
 import org.eclipse.modisco.facet.util.core.internal.exported.FolderUtils;
 import org.eclipse.modisco.facet.util.core.internal.exported.IFilter;

@@ -16,6 +16,7 @@
 package org.eclipse.modisco.facet.query.java.core.internal.evaluator;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.IDerivedTypedElementManager;
 import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
 import org.eclipse.modisco.facet.efacet.core.internal.query.QueryUtils;
@@ -27,7 +28,6 @@ import org.eclipse.modisco.facet.query.java.core.IJavaQuery3;
 import org.eclipse.modisco.facet.query.java.core.internal.plugin.Activator;
 import org.eclipse.modisco.facet.query.java.metamodel.v0_2_0.javaquery.JavaQuery;
 import org.eclipse.modisco.facet.query.java.metamodel.v0_2_0.javaquery.JavaQueryPackage;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.osgi.framework.Bundle;
 
 public class JavaQueryImplementationFactory implements IQueryImplementationFactory {

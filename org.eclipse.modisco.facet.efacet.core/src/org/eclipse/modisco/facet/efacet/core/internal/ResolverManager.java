@@ -18,9 +18,9 @@ import java.util.List;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.internal.exported.IResolver;
 import org.eclipse.modisco.facet.efacet.core.internal.exported.IResolverManager;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 public class ResolverManager implements IResolverManager {
 

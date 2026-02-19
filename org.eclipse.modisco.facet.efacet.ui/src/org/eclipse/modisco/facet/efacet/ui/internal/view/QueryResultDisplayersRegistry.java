@@ -17,9 +17,9 @@ import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.ui.IETypedElementResultDisplayer;
 import org.eclipse.modisco.facet.efacet.ui.internal.Activator;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.AbstractRegistry;
 import org.eclipse.osgi.util.NLS;
 

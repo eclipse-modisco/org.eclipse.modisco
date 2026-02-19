@@ -13,7 +13,7 @@
  *****************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.ecore.composite;
 
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.modisco.facet.widgets.celleditors.ecore.Activator;
 import org.eclipse.modisco.facet.widgets.celleditors.ecore.ui.MultiLineDialog;

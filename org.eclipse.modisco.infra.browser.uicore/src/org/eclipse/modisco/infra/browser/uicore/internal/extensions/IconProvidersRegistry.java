@@ -23,13 +23,13 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.uicore.extensions.icons.FilteredIconProvider;
 import org.eclipse.modisco.infra.browser.uicore.extensions.icons.IconProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.browser.uicore.internal.Messages;
 import org.eclipse.modisco.infra.common.core.internal.extensions.AbstractRegistry;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.swt.graphics.Image;
 
 /**
@@ -197,7 +197,7 @@ public class IconProvidersRegistry extends AbstractRegistry {
 			iconProviderObject = configurationElement
 					.createExecutableExtension(IconProvidersRegistry.ICON_PROVIDER_CLASS);
 		} catch (final CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return;
 		}
 		if (iconProviderObject == null) {

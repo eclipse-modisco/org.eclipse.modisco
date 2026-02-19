@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.catalog.CatalogFactory;
 import org.eclipse.modisco.facet.util.emf.catalog.CatalogSet;
 import org.eclipse.modisco.facet.util.emf.core.ICatalogManager;

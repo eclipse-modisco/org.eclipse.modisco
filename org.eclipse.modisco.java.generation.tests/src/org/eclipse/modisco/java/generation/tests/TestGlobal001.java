@@ -13,18 +13,9 @@ package org.eclipse.modisco.java.generation.tests;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.modisco.java.emf.JavaPackage;
-import org.eclipse.modisco.java.generation.files.JavaModel2JavaTextUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Test;

@@ -66,7 +66,6 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.modisco.infra.query.core.exception.ModelQueryException;
 import org.eclipse.swt.widgets.Display;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 @SuppressWarnings({ "restriction", "nls" })

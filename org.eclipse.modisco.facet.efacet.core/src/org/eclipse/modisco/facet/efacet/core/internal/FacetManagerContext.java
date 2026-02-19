@@ -40,6 +40,7 @@ import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.FacetUtils;
 import org.eclipse.modisco.facet.efacet.core.IFacetManagerListener;
 import org.eclipse.modisco.facet.efacet.core.exception.FacetManagerException;
@@ -50,7 +51,6 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElem
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.Facet;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
 import org.eclipse.modisco.facet.util.core.DebugUtils;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.ListUtils;
 import org.eclipse.modisco.facet.util.emf.core.ModelUtils;
 

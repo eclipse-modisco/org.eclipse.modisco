@@ -14,7 +14,7 @@ package org.eclipse.modisco.infra.browser.editor.ui.internal.opener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.IEObjectBrowserOpener;
 import org.eclipse.modisco.facet.util.emf.core.IEPackageBrowserOpener;
 import org.eclipse.modisco.facet.util.emf.core.IResourceBrowserOpener;

@@ -23,7 +23,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.pde.core.internal.exception.PdeCoreUtilsRuntimeException;
 import org.eclipse.pde.core.IEditableModel;
 import org.eclipse.pde.core.build.IBuild;

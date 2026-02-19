@@ -12,6 +12,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.infra.query.core,
  org.eclipse.modisco.omg.kdm,
  org.eclipse.emf.ecore,
- org.eclipse.modisco.infra.facet.core
+ org.eclipse.modisco.infra.facet.core,
+ org.eclipse.modisco.facet.util.core
 Bundle-Version: 1.6.0.qualifier
 Automatic-Module-Name: org.eclipse.modisco.infra.facet.examples.kdm

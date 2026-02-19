@@ -17,7 +17,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.AbstractRegistry;
 import org.eclipse.modisco.facet.util.emf.core.internal.Activator;
 import org.eclipse.modisco.facet.util.emf.core.serialization.ISerializationRegistry;

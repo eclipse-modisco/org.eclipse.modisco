@@ -29,40 +29,49 @@ import org.eclipse.modisco.facet.util.core.internal.Activator;
  * @author fgiquel
  * 
  */
+@Deprecated /* @deprecated use org.eclipse.modisco.common.core.Logger */
 public final class Logger {
 
 	private Logger() {
 		// Nothing
 	}
 
+	@Deprecated
 	public static void logError(final Throwable e, final Plugin plugin) {
 		Logger.log(e, IStatus.ERROR, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logError(final String message, final Plugin plugin) {
 		Logger.log(null, IStatus.ERROR, message, plugin);
 	}
 
+	@Deprecated
 	public static void logError(final Throwable e, final String message, final Plugin plugin) {
 		Logger.log(e, IStatus.ERROR, message, plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final Throwable e, final Plugin plugin) {
 		Logger.log(e, IStatus.WARNING, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final String message, final Plugin plugin) {
 		Logger.log(null, IStatus.WARNING, message, plugin);
 	}
 
+	@Deprecated
 	public static void logWarning(final Throwable e, final String message, final Plugin plugin) {
 		Logger.log(e, IStatus.WARNING, message, plugin);
 	}
 
+	@Deprecated
 	public static void logInfo(final Throwable e, final Plugin plugin) {
 		Logger.log(e, IStatus.INFO, e.getMessage(), plugin);
 	}
 
+	@Deprecated
 	public static void logInfo(final String message, final Plugin plugin) {
 		Logger.log(null, IStatus.INFO, message, plugin);
 	}
@@ -74,6 +83,7 @@ public final class Logger {
 	 * @param args
 	 *            Arguments referenced by messageTemplates
 	 */
+	@Deprecated
 	public static void logError(final Plugin plugin,
 			final String messageTemplate, final Object... args) {
 		Logger.log(null, IStatus.ERROR, plugin, messageTemplate, args);
@@ -86,6 +96,7 @@ public final class Logger {
 	 * @param args
 	 *            Arguments referenced by messageTemplates
 	 */
+	@Deprecated
 	public static void logError(final Throwable e, final Plugin plugin,
 			final String messageTemplate, final Object... args) {
 		Logger.log(e, IStatus.ERROR, plugin, messageTemplate, args);
@@ -98,6 +109,7 @@ public final class Logger {
 	 * @param args
 	 *            Arguments referenced by messageTemplates
 	 */
+	@Deprecated
 	public static void logWarning(final Plugin plugin,
 			final String messageTemplace, final Object... args) {
 		Logger.log(null, IStatus.WARNING, plugin, messageTemplace, args);
@@ -106,6 +118,7 @@ public final class Logger {
 	/**
 	 * @since 1.1
 	 */
+	@Deprecated
 	public static void logWarning(final Throwable e, final Plugin plugin,
 			final String messageTemplace, final Object... args) {
 		Logger.log(e, IStatus.WARNING, plugin, messageTemplace, args);
@@ -118,6 +131,7 @@ public final class Logger {
 	 * @param args
 	 *            Arguments referenced by messageTemplates
 	 */
+	@Deprecated
 	public static void logInfo(final Plugin plugin,
 			final String messageTemplace, final Object... args) {
 		Logger.log(null, IStatus.INFO, plugin, messageTemplace, args);
@@ -127,6 +141,7 @@ public final class Logger {
 	 * An exception that is instantiated with the sole purpose of providing a
 	 * stack trace when there wouldn't be one otherwise.
 	 */
+	@Deprecated
 	protected static class LogStackTrace extends Exception {
 		private static final long serialVersionUID = 309882934616507415L;
 	}
@@ -138,6 +153,7 @@ public final class Logger {
 	 * @param args
 	 *            Arguments referenced by messageTemplates
 	 */
+	@Deprecated
 	public static void log(final Throwable e, final int level,
 			final Plugin plugin, final String messageTemplate,
 			final Object... args) {
@@ -145,6 +161,7 @@ public final class Logger {
 		log(e, level, message, plugin);
 	}
 	
+	@Deprecated
 	public static void log(final Throwable e, final int level,
 			final String message, final Plugin plugin) {
 

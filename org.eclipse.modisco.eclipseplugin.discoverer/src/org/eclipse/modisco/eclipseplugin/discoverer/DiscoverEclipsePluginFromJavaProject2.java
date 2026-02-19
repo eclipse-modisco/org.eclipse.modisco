@@ -23,9 +23,9 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.eclipseplugin.EclipsePlugin;
 import org.eclipse.modisco.eclipseplugin.EclipsepluginFactory;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
@@ -55,7 +55,7 @@ public class DiscoverEclipsePluginFromJavaProject2 extends AbstractModelDiscover
 			return source.getProject().isAccessible()
 					&& source.getProject().getNature(IBundleProjectDescription.PLUGIN_NATURE) != null;
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			return false;
 		}
 	}

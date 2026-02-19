@@ -25,7 +25,6 @@ import org.eclipse.modisco.infra.common.core.internal.builder.EcoreBuilder;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class EcoreCatalogTest {

@@ -38,6 +38,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.jface.viewers.ViewerFilter;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.modisco.infra.browser.core.InstancesForMetaclass;
 import org.eclipse.modisco.infra.browser.core.InstancesForMetaclasses;
@@ -45,7 +46,6 @@ import org.eclipse.modisco.infra.browser.uicore.internal.AppearanceConfiguration
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.CustomizationEngine;
 import org.eclipse.modisco.infra.browser.uicore.internal.extensions.IconProvidersRegistry;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
@@ -678,7 +678,7 @@ public class MetaclassViewer implements ISelectionProvider {
 							return;
 						}
 					} catch (Exception e) {
-						MoDiscoLogger.logError(e,
+						Logger.logError(e,
 								"Failed to deal with: " + packageGroup.toString(), //$NON-NLS-1$
 								MoDiscoBrowserPlugin.getPlugin());
 					}

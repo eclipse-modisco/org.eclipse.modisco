@@ -21,6 +21,7 @@ import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.DragAndDropCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.Messages;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.modisco.infra.browser.editors.BrowserConfiguration;
@@ -30,7 +31,6 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ITreeElement;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.LinkItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.util.EditingSupportUtil;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 public class ModelElementItemEx extends ModelElementItem implements IEditingDomainItemProvider {
 
@@ -53,7 +53,7 @@ public class ModelElementItemEx extends ModelElementItem implements IEditingDoma
 					children.add(new QueryItem(getEObject(), this, selectedQuery,
 							this.browserConfiguration));
 				} else {
-					MoDiscoLogger.logError(Messages.ModelElementItem_nullQuerySelected,
+					Logger.logError(Messages.ModelElementItem_nullQuerySelected,
 							MoDiscoBrowserPlugin.getPlugin());
 				}
 			}

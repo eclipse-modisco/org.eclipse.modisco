@@ -15,7 +15,7 @@ package org.eclipse.modisco.facet.util.tests.swtbot.internal.exported;
 import java.io.File;
 
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.tests.swtbot.internal.Activator;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 

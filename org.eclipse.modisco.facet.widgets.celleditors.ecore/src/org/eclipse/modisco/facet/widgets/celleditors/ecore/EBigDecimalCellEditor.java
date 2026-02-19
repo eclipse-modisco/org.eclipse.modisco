@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.widgets.celleditors.IListener;
 import org.eclipse.modisco.facet.widgets.celleditors.IModelCellEditHandler;
 import org.eclipse.modisco.facet.widgets.celleditors.IModelCellEditor;

@@ -30,9 +30,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /**
  * Utility functions related to EMF
@@ -121,7 +121,7 @@ public class EMFUtil {
 
 		for (final Resource resource : browsedResources) {
 			if (resource == null) {
-				MoDiscoLogger.logWarning(
+				Logger.logWarning(
 						"null Resource in browsed resources", Activator.getDefault()); //$NON-NLS-1$
 				continue;
 			}

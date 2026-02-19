@@ -58,6 +58,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.exception.FacetManagerException;
 import org.eclipse.modisco.facet.efacet.core.internal.Activator;
 import org.eclipse.modisco.facet.efacet.core.internal.exported.IResolverManager;
@@ -70,7 +71,6 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedEl
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementPrimitiveTypeListResult;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementPrimitiveTypeResult;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementResult;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.ModelUtils;
 import org.eclipse.modisco.facet.util.emf.core.internal.EMFUtils;
 

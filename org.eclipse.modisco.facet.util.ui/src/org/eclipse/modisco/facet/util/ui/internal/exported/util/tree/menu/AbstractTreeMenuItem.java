@@ -14,7 +14,7 @@ package org.eclipse.modisco.facet.util.ui.internal.exported.util.tree.menu;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.ui.internal.Activator;
 import org.eclipse.modisco.facet.util.ui.internal.exported.util.tree.item.AbstractTreeItem;
 import org.eclipse.swt.widgets.Tree;

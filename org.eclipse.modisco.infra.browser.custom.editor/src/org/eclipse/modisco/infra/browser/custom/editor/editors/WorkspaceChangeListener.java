@@ -20,9 +20,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.custom.MetamodelView;
 import org.eclipse.modisco.infra.browser.custom.editor.Activator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 
 /** Listens to workspace changes to detect changed resources and update the editor accordingly. */
 public class WorkspaceChangeListener implements IResourceChangeListener {
@@ -80,11 +80,11 @@ public class WorkspaceChangeListener implements IResourceChangeListener {
 											filePath = path.removeFirstSegments(nSegments)
 													.setDevice(null).makeAbsolute();
 										} else {
-											MoDiscoLogger.logError(
+											Logger.logError(
 													"Not a workspace file", Activator.getDefault()); //$NON-NLS-1$
 										}
 									} else {
-										MoDiscoLogger
+										Logger
 												.logError(
 														"Unhandled resource URI kind", Activator.getDefault()); //$NON-NLS-1$
 									}
@@ -120,7 +120,7 @@ public class WorkspaceChangeListener implements IResourceChangeListener {
 			}
 
 		} catch (CoreException e) {
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 		}
 	}
 

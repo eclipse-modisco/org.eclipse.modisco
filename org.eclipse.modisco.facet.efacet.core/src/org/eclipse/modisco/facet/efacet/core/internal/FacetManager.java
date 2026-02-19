@@ -58,6 +58,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.FacetUtils;
 import org.eclipse.modisco.facet.efacet.core.IDerivedTypedElementManager;
 import org.eclipse.modisco.facet.efacet.core.IFacetManager;
@@ -81,7 +82,6 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedEl
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementPrimitiveTypeResult;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementResult;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.RuntimeFactory;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 public class FacetManager implements IFacetManager, Adapter {
 

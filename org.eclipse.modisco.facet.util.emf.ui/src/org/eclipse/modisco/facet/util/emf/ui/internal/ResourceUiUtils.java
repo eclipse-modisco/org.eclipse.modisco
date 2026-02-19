@@ -17,7 +17,7 @@ import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.ui.internal.dialogs.SaveAsDialog;
 import org.eclipse.modisco.facet.util.ui.internal.exported.dialog.IDialogCallback;
 import org.eclipse.modisco.facet.util.ui.internal.exported.dialog.IOkDialog;

@@ -15,7 +15,7 @@
  *****************************************************************************/
 package org.eclipse.modisco.facet.widgets.celleditors.internal.core.composite;
 
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.modisco.facet.widgets.celleditors.internal.Activator;
 import org.eclipse.swt.SWT;

@@ -13,7 +13,6 @@
 package org.eclipse.modisco.facet.efacet.ui.internal.sync.generated;
 
 import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.AbstractExceptionFreeRunnable;
-import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.AbstractVoidExceptionFreeRunnable;
 import org.eclipse.modisco.facet.util.ui.internal.exported.displaysync.SynchronizedObject;
 import org.eclipse.swt.widgets.Display;
 

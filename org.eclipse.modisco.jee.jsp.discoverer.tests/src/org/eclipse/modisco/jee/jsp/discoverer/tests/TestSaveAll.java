@@ -10,7 +10,6 @@
  */
 package org.eclipse.modisco.jee.jsp.discoverer.tests;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -23,24 +22,15 @@ import java.util.List;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.URIConverter;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
-import org.eclipse.modisco.xml.Attribute;
-import org.eclipse.modisco.xml.Element;
-import org.eclipse.modisco.xml.Node;
 import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;

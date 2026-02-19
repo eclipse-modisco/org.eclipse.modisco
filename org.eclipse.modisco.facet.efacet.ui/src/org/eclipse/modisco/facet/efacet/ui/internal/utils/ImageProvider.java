@@ -15,8 +15,8 @@ package org.eclipse.modisco.facet.efacet.ui.internal.utils;
 import java.net.URL;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.ui.internal.Activator;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.swt.graphics.Image;
 

@@ -17,6 +17,7 @@ import java.util.ListIterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.CustomizationEngine;
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.OverlayIconImageInfo;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.AttributeItem;
@@ -25,7 +26,6 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ColorProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.EMFUtil;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
@@ -429,7 +429,7 @@ public class CustomTreePainter {
 		case BottomRight:
 			return new Point(step * 2, step);
 		default:
-			MoDiscoLogger.logError("Unhandled overlay icon position", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError("Unhandled overlay icon position", Activator.getDefault()); //$NON-NLS-1$
 		}
 		return null;
 	}

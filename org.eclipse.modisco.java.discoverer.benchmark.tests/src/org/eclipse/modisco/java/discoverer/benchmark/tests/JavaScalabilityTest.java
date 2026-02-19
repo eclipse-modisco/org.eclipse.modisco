@@ -39,7 +39,6 @@ import org.eclipse.modisco.java.discoverer.benchmark.emf.client.JavaDiscovererEM
 import org.eclipse.modisco.java.discoverer.benchmark.emf.client.JavaDiscovererIncrementalEMF;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

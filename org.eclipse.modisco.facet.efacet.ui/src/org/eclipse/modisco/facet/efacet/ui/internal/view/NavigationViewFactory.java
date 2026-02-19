@@ -14,11 +14,11 @@
 package org.eclipse.modisco.facet.efacet.ui.internal.view;
 
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.ui.internal.Activator;
 import org.eclipse.modisco.facet.efacet.ui.internal.exported.view.INavigationView;
 import org.eclipse.modisco.facet.efacet.ui.internal.exported.view.INavigationViewFactory;
 import org.eclipse.modisco.facet.efacet.ui.internal.sync.generated.SynchronizedNavigationView;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;

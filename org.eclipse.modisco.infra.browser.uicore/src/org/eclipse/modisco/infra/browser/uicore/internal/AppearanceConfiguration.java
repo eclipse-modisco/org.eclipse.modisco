@@ -22,10 +22,10 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.resource.FontDescriptor;
 import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.uicore.ChangeListener;
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.CustomizationEngine;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ItemsFactory;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.core.FacetContext;
 import org.eclipse.swt.SWT;
@@ -581,7 +581,7 @@ public class AppearanceConfiguration {
 		try {
 			this.facetContext.addFacet(facet);
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error loading Facet", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Error loading Facet", Activator.getDefault()); //$NON-NLS-1$
 		}
 		this.modificationCount++;
 	}
@@ -594,7 +594,7 @@ public class AppearanceConfiguration {
 		try {
 			this.facetContext.clear();
 		} catch (Exception e) {
-			MoDiscoLogger.logError(e, "Error clearing Facets", Activator.getDefault()); //$NON-NLS-1$
+			Logger.logError(e, "Error clearing Facets", Activator.getDefault()); //$NON-NLS-1$
 		}
 		this.modificationCount++;
 	}

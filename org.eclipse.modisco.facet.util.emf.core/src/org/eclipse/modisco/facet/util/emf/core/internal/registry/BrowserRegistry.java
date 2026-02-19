@@ -27,7 +27,7 @@ import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.IBrowserRegistry;
 import org.eclipse.modisco.facet.util.emf.core.IEObjectBrowserOpener;
 import org.eclipse.modisco.facet.util.emf.core.IEPackageBrowserOpener;

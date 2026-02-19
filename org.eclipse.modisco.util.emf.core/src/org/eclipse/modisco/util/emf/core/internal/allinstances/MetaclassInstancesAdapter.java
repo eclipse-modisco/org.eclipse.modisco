@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.util.emf.core.internal.Activator;
 
 /**
@@ -259,7 +259,7 @@ public class MetaclassInstancesAdapter extends AdapterImpl implements MetaclassI
 		//
 		// System.out.println(builder.toString());
 		// } catch (Throwable e) {
-		// MoDiscoLogger.logError(e, CommonModiscoActivator.getDefault());
+		// Logger.logError(e, CommonModiscoActivator.getDefault());
 		// }
 
 		// CREATE = 0

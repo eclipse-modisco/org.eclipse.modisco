@@ -12,10 +12,10 @@ package org.eclipse.modisco.facet.efacet.ui.internal.widget;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.ui.internal.Activator;
 import org.eclipse.modisco.facet.efacet.ui.internal.Messages;
 import org.eclipse.modisco.facet.efacet.ui.internal.exported.widget.IUriWidget;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.ui.internal.exported.dialog.IOkDialogFactory;
 import org.eclipse.modisco.facet.util.ui.utils.UIUtils;
 import org.eclipse.osgi.util.NLS;

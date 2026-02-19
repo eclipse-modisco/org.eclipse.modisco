@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.IDerivedTypedElementManager;
 import org.eclipse.modisco.facet.efacet.core.IFacetManager;
 import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
@@ -42,7 +43,6 @@ import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElem
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.ParameterValue;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.extensible.Query;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.runtime.ETypedElementResult;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 public class DerivedTypedElementManager implements IDerivedTypedElementManager {
 

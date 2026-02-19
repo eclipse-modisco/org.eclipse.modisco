@@ -12,13 +12,7 @@ package org.eclipse.modisco.jee.jsp.generation.files;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.jee.jsp.ComposedAttribute;
 import org.eclipse.modisco.jee.jsp.JSPAction;
 import org.eclipse.modisco.jee.jsp.JSPComment;

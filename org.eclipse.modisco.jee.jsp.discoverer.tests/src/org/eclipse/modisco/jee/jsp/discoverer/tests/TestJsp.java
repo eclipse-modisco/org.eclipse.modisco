@@ -38,7 +38,6 @@ import org.eclipse.modisco.xml.CDATA;
 import org.eclipse.modisco.xml.Element;
 import org.eclipse.modisco.xml.Node;
 import org.eclipse.modisco.xml.Text;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

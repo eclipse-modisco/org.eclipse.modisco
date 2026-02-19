@@ -19,13 +19,13 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.uicore.internal.Activator;
 import org.eclipse.modisco.infra.browser.uicore.internal.AppearanceConfiguration;
 import org.eclipse.modisco.infra.browser.uicore.internal.customization.CustomizationEngine;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ColorProvider;
 import org.eclipse.modisco.infra.browser.uicore.internal.util.ImageProvider;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
 import org.eclipse.swt.graphics.Color;
@@ -108,7 +108,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 				this.cachedValue = this.appearanceConfiguration.getFacetContext().get(this.parent,
 						this.attribute);
 			} catch (final Exception e) {
-				MoDiscoLogger.logError(e, Activator.getDefault());
+				Logger.logError(e, Activator.getDefault());
 				this.cachedValue = null;
 			}
 		} else {

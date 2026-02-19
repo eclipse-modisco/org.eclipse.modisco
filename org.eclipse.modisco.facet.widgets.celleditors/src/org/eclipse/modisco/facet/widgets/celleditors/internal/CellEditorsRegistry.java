@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.AbstractRegistry;
 import org.eclipse.modisco.facet.widgets.celleditors.ICellEditorsRegistry;
 import org.eclipse.modisco.facet.widgets.celleditors.IModelCellEditor;

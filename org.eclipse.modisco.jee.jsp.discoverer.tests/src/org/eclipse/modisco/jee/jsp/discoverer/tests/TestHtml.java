@@ -25,7 +25,6 @@ import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

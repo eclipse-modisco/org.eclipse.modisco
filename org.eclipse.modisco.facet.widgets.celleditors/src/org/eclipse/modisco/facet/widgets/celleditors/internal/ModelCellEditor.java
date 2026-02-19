@@ -13,7 +13,7 @@
 package org.eclipse.modisco.facet.widgets.celleditors.internal;
 
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.widgets.celleditors.modelCellEditor.AbstractModelCellEditor;
 
 public class ModelCellEditor {

@@ -44,10 +44,10 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.FacetFactory;
 import org.eclipse.modisco.infra.facet.FacetPackage;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -246,7 +246,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 						try {
 							BuildPropertiesUtils.addToBuild(modelFile);
 						} catch (Exception e) {
-							MoDiscoLogger
+							Logger
 									.logError(
 											e,
 											"Error adding file " + modelFile.getFullPath() //$NON-NLS-1$

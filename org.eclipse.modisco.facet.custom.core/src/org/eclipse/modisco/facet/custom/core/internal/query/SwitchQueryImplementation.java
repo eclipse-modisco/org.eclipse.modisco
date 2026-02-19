@@ -20,7 +20,6 @@ import org.eclipse.modisco.facet.custom.metamodel.v0_2_0.custom.ETypedElementSwi
 import org.eclipse.modisco.facet.efacet.core.IDerivedTypedElementManager;
 import org.eclipse.modisco.facet.efacet.core.IFacetManager;
 import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
-import org.eclipse.modisco.facet.efacet.core.exception.FacetManagerException;
 import org.eclipse.modisco.facet.efacet.core.query.IQueryImplementation;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.DerivedTypedElement;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.ParameterValue;

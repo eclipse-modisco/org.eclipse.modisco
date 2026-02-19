@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPage;
@@ -45,7 +45,7 @@ public class OpenResourceInMoDiscoBrowserAction implements IObjectActionDelegate
 					IDE.openEditor(page, new ResourceEditorInput(resource), EcoreBrowser.EDITOR_ID,
 							true);
 				} catch (PartInitException e) {
-					MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+					Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 				}
 			}
 		}

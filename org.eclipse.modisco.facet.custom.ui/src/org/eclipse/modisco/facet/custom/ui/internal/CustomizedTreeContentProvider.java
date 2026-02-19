@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.custom.core.ICustomizationManager;
 import org.eclipse.modisco.facet.custom.core.exception.CustomizationException;
 import org.eclipse.modisco.facet.custom.metamodel.v0_2_0.internal.treeproxy.EAttributeTreeElement;
@@ -49,7 +50,6 @@ import org.eclipse.modisco.facet.efacet.core.FacetUtils;
 import org.eclipse.modisco.facet.efacet.core.IFacetManager;
 import org.eclipse.modisco.facet.efacet.core.IFacetManagerListener;
 import org.eclipse.modisco.facet.efacet.core.exception.FacetManagerException;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 @SuppressWarnings("deprecation")
 // @SuppressWarnings("deprecation") : Bug 380229 - [deprecated] ICustomizedContentProvider

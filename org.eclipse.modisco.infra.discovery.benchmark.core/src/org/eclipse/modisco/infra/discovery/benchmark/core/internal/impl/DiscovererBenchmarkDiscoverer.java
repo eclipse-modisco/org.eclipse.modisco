@@ -53,7 +53,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.MathUtils;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;

@@ -24,10 +24,10 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
@@ -127,7 +127,7 @@ public class Tests {
 					.getBundle().getSymbolicName(), IStatus.ERROR, statusList
 					.toArray(new IStatus[] {}), "Test failed.", new Exception()); //$NON-NLS-1$
 			CoreException e = new CoreException(status);
-			MoDiscoLogger.logError(e, Activator.getDefault());
+			Logger.logError(e, Activator.getDefault());
 			throw e;
 		}
 	}

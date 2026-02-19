@@ -21,8 +21,8 @@ import java.util.Map;
 
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.core.DebugUtils;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.swt.imageprovider.IImageProvider;
 import org.eclipse.modisco.facet.util.swt.internal.Activator;
 import org.eclipse.osgi.util.NLS;

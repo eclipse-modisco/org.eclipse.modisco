@@ -19,7 +19,7 @@ import java.util.List;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.core.internal.exported.AbstractRegistry;
 import org.eclipse.modisco.facet.widgets.celleditors.ICommandFactoriesRegistry;
 import org.eclipse.modisco.facet.widgets.celleditors.ICommandFactory;

@@ -14,7 +14,6 @@
 package org.eclipse.modisco.facet.util.ui.internal.exported.displaysync;
 
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 
 /**
  * <ul>

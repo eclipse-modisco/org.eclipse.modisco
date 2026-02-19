@@ -26,9 +26,9 @@ import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.window.ToolTip;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.widgets.celleditors.AbstractCellEditorComposite;
 import org.eclipse.modisco.facet.widgets.celleditors.IValidator;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.discovery.catalog.DiscovererParameter;
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.launch.ParameterValue;
@@ -123,7 +123,7 @@ public class GenericParametersDialog extends TitleAreaDialog {
 				case GenericParametersDialog.TYPE_COLUMN_INDEX:
 					return param.getType().getName();
 				default:
-					MoDiscoLogger.logError("unhandled case", Activator.getDefault()); //$NON-NLS-1$
+					Logger.logError("unhandled case", Activator.getDefault()); //$NON-NLS-1$
 				}
 			}
 			return null;

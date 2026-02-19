@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.AbstractOverrideableCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.FacetUtils;
 import org.eclipse.modisco.facet.efacet.core.IFacetManager;
 import org.eclipse.modisco.facet.efacet.core.exception.FacetManagerException;
 import org.eclipse.modisco.facet.efacet.edit.core.FacetCommandException;
 import org.eclipse.modisco.facet.efacet.edit.core.internal.Activator;
 import org.eclipse.modisco.facet.efacet.edit.core.internal.FacetCommandRuntimeException;
-import org.eclipse.modisco.facet.util.core.Logger;
 
 public abstract class AbstractFacetCommand extends AbstractOverrideableCommand {
 

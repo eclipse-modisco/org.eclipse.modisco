@@ -20,13 +20,13 @@ import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.efacet.core.IDerivedTypedElementManager;
 import org.eclipse.modisco.facet.efacet.core.exception.DerivedTypedElementException;
 import org.eclipse.modisco.facet.efacet.core.internal.Activator;
 import org.eclipse.modisco.facet.efacet.core.query.IQueryImplementation;
 import org.eclipse.modisco.facet.efacet.core.query.IQueryImplementationFactory;
 import org.eclipse.modisco.facet.efacet.metamodel.v0_2_0.efacet.extensible.Query;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.ICatalogSetManagerFactory;
 import org.osgi.framework.Bundle;
 

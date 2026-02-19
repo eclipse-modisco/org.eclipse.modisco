@@ -58,6 +58,7 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerComparator;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.custom.core.ICustomizationManager;
 import org.eclipse.modisco.facet.custom.core.ICustomizationManagerFactory;
 import org.eclipse.modisco.facet.efacet.core.FacetUtils;
@@ -76,7 +77,6 @@ import org.eclipse.modisco.facet.efacet.ui.internal.exported.view.INavigationVie
 import org.eclipse.modisco.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidget;
 import org.eclipse.modisco.facet.efacet.ui.internal.exported.widget.IETypedElementSelectionWidgetFactory;
 import org.eclipse.modisco.facet.efacet.ui.internal.view.DropAdapter.DropAction;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.emf.ui.internal.exported.IEmfLabelProviderFactory;
 import org.eclipse.modisco.facet.util.ui.internal.exported.dialog.IOkDialog;
 import org.eclipse.modisco.facet.util.ui.internal.exported.dialog.IOkDialogFactory;

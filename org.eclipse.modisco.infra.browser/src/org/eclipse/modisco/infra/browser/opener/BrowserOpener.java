@@ -15,13 +15,13 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.facet.util.emf.core.IEObjectBrowserOpener;
 import org.eclipse.modisco.facet.util.emf.core.IEPackageBrowserOpener;
 import org.eclipse.modisco.facet.util.emf.core.IResourceBrowserOpener;
 import org.eclipse.modisco.infra.browser.MoDiscoBrowserPlugin;
 import org.eclipse.modisco.infra.browser.editors.BrowserUtils;
 import org.eclipse.modisco.infra.browser.editors.EcoreBrowser;
-import org.eclipse.modisco.infra.common.core.logging.MoDiscoLogger;
 import org.eclipse.modisco.infra.common.ui.internal.editorInputs.ResourceEditorInput;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
@@ -45,7 +45,7 @@ public class BrowserOpener implements IResourceBrowserOpener, IEPackageBrowserOp
 					IDE.openEditor(activePage, new ResourceEditorInput(resource),
 							EcoreBrowser.EDITOR_ID, true);
 				} catch (Exception e) {
-					MoDiscoLogger.logError(e, MoDiscoBrowserPlugin.getPlugin());
+					Logger.logError(e, MoDiscoBrowserPlugin.getPlugin());
 				}
 			}
 		});
