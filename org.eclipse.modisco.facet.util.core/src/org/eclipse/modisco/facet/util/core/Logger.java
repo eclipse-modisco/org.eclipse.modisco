@@ -182,7 +182,7 @@ public final class Logger {
 				effectiveMessage += " (activator class = " //$NON-NLS-1$
 						+ effectivePlugin.getClass().getName() + ")"; //$NON-NLS-1$
 			}
-			if (effectiveE == null) {
+			if ((effectiveE == null) && (level > IStatus.INFO)) {
 				// record a stacktrace
 				effectiveE = new LogStackTrace();
 			}
