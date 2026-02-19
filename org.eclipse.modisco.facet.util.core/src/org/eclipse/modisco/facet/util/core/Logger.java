@@ -15,6 +15,9 @@
 package org.eclipse.modisco.facet.util.core;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Objects;
+import java.util.Set;
+import java.util.Stack;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
@@ -189,6 +192,24 @@ public final class Logger {
 			status = new Status(level, effectivePlugin.getBundle().getSymbolicName(),
 					effectiveMessage, effectiveE);
 		}
+		if (expectedStatusesStack != null) {
+			Set<IStatus> expectedStatuses = expectedStatusesStack.peek();
+			for (IStatus expectedStatus : expectedStatuses) {
+				if (isEqual(status, expectedStatus)) {
+					expectedStatuses.remove(expectedStatus);
+					if (expectedStatuses.isEmpty()) {
+						expectedStatusesStack.pop();
+						if (expectedStatusesStack.isEmpty()) {
+							expectedStatusesStack = null;
+						}
+					}
+					return;		// Suppress expected status logging
+				}
+			}
+			IStatus extraStatus = new Status(IStatus.ERROR, effectivePlugin.getBundle().getSymbolicName(),
+					"Expected messages were not logged", null);
+			effectivePlugin.getLog().log(extraStatus);
+		}
 		effectivePlugin.getLog().log(status);
 	}
 
@@ -203,4 +224,49 @@ public final class Logger {
 	//			return ""; //$NON-NLS-1$
 	// }
 	// }
+	
+	/**
+	 * @since 1.6
+	 */
+	private static boolean isEqual(IStatus status, IStatus expectedStatus) {
+		if (status.getSeverity() != expectedStatus.getSeverity()) {
+			return false;
+		}
+		if (expectedStatus.getException() == null) {
+			if (!(status.getException() instanceof LogStackTrace)) {
+				return false;
+			}
+		}
+		else if (!Objects.equals(status.getException(), expectedStatus.getException())) {
+			return false;
+		}
+		if (!status.getMessage().startsWith(expectedStatus.getMessage())) {
+			return false;
+		}
+		return true;
+	}
+
+	private static Stack<Set<IStatus>> expectedStatusesStack = null;
+	
+	/**
+	 * @since 1.6
+	 */
+	public static void addExpectedStatuses(Set<IStatus> expectedStatuses) {
+		if (expectedStatusesStack == null) {
+			expectedStatusesStack = new Stack<>();
+		}
+		expectedStatusesStack.push(expectedStatuses);
+	}
+	
+	/**
+	 * @since 1.6
+	 */
+	public static Stack<Set<IStatus>> resetExpectedStatuses() {
+		try {
+			return expectedStatusesStack;
+		}
+		finally {
+			expectedStatusesStack = null;
+		}
+	}
 }
