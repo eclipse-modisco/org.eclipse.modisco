@@ -669,7 +669,7 @@ public class FacetTests {
 				javaQueriesBundle);
 		System.out.println(new File("src/").getCanonicalPath());
 		System.out.println(project.getLocation().toString());
-		FolderUtils.copyFolderFromBundle("src/", javaQueriesBundle, "workspace/bug307715v2/src/", project);
+		FolderUtils.copyFolderFromBundle("/src", javaQueriesBundle, "workspace/bug307715v2/src/", project);
 		FileUtils.copyFileFromBundle("textJavaQueries.querySet", project, "workspace/bug307715v2/"
 				+ "textJavaQueries.querySet", javaQueriesBundle);
 		// addWSFile querySet
