@@ -17,14 +17,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	TestCommentedDocType.class,
-	TestNoVersion.class,
-	TestNoUri.class,
-	TestWebXml22.class,
-	TestWebXml23.class,
-	TestWebXml24.class,
-	TestWebXml25.class,
-	TestWebXml30.class
+	DocTypeTests.class
 	})
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
