@@ -33,11 +33,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LocaleEncodingMappingListType#getLocaleEncodingMapping <em>Locale Encoding Mapping</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LocaleEncodingMappingListType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getLocaleEncodingMappingListType()
  * @model extendedMetaData="name='locale-encoding-mapping-listType' kind='elementOnly'"

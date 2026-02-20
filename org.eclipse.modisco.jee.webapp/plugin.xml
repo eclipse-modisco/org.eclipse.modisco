@@ -29,6 +29,14 @@ Contributors:
             type="webapp24"
             class="org.eclipse.modisco.jee.webapp.webapp24.util.Webapp24ResourceFactoryImpl"/>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated webapp25 -->
+      <package
+            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_5.xsd"
+            class="org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package"
+            genModel="model/webapp25.genmodel"/>
+   </extension>
+
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="webapp25"

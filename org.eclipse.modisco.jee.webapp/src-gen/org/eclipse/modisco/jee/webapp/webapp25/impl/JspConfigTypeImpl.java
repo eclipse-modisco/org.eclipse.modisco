@@ -40,12 +40,12 @@ import org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.JspConfigTypeImpl#getTaglib <em>Taglib</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.JspConfigTypeImpl#getJspPropertyGroup <em>Jsp Property Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.JspConfigTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -260,7 +260,7 @@ public class JspConfigTypeImpl extends EObjectImpl implements JspConfigType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

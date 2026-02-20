@@ -39,10 +39,10 @@ import java.lang.String;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.DescriptionType#getLang <em>Lang</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getDescriptionType()
  * @model extendedMetaData="name='descriptionType' kind='simple'"

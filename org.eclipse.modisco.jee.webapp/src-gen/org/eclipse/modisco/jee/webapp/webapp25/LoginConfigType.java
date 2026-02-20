@@ -35,13 +35,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LoginConfigType#getAuthMethod <em>Auth Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LoginConfigType#getRealmName <em>Realm Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LoginConfigType#getFormLoginConfig <em>Form Login Config</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.LoginConfigType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getLoginConfigType()
  * @model extendedMetaData="name='login-configType' kind='elementOnly'"

@@ -148,7 +148,7 @@ public class Webapp25FactoryImpl extends EFactoryImpl implements Webapp25Factory
 	 */
 	public static Webapp25Factory init() {
 		try {
-			Webapp25Factory theWebapp25Factory = (Webapp25Factory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Javaee/web-app_2_5.xsd"); //$NON-NLS-1$ 
+			Webapp25Factory theWebapp25Factory = (Webapp25Factory)EPackage.Registry.INSTANCE.getEFactory(Webapp25Package.eNS_URI);
 			if (theWebapp25Factory != null) {
 				return theWebapp25Factory;
 			}

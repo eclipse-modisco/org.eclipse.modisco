@@ -35,12 +35,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServletMappingType#getServletName <em>Servlet Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServletMappingType#getUrlPattern <em>Url Pattern</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServletMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getServletMappingType()
  * @model extendedMetaData="name='servlet-mappingType' kind='elementOnly'"

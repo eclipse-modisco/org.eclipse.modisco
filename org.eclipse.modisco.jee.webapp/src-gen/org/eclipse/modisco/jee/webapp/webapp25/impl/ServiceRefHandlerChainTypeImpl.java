@@ -40,6 +40,7 @@ import org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.ServiceRefHandlerChainTypeImpl#getServiceNamePattern <em>Service Name Pattern</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.ServiceRefHandlerChainTypeImpl#getPortNamePattern <em>Port Name Pattern</em>}</li>
@@ -47,7 +48,6 @@ import org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.ServiceRefHandlerChainTypeImpl#getHandler <em>Handler</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.ServiceRefHandlerChainTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -380,7 +380,7 @@ public class ServiceRefHandlerChainTypeImpl extends EObjectImpl implements Servi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (serviceNamePattern: "); //$NON-NLS-1$
 		result.append(serviceNamePattern);
 		result.append(", portNamePattern: "); //$NON-NLS-1$

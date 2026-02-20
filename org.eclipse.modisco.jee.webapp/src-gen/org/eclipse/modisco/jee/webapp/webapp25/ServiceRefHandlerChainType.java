@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServiceRefHandlerChainType#getServiceNamePattern <em>Service Name Pattern</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServiceRefHandlerChainType#getPortNamePattern <em>Port Name Pattern</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServiceRefHandlerChainType#getHandler <em>Handler</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ServiceRefHandlerChainType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getServiceRefHandlerChainType()
  * @model extendedMetaData="name='service-ref_handler-chainType' kind='elementOnly'"
