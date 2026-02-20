@@ -45,6 +45,7 @@ public class EjbJarDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 
 	public static final String ID = "org.eclipse.modisco.jee.ejbjar.discoverer"; //$NON-NLS-1$
 
+	@Override
 	public boolean isApplicableTo(final IFile source) {
 		return isAnIFileWithExtension(source, "xml"); //$NON-NLS-1$
 	}
@@ -70,7 +71,7 @@ public class EjbJarDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 
 		final URI sourceURI = URI.createFileURI(file.getPath().toString());
 		initializeResourceFactory(file);
-		discoverResource(sourceURI);
+		discoverResourceInternal(sourceURI);
 
 		monitor.setTaskName(Messages.AbstractModelDiscoverer_savingModel);
 		if (isTargetSerializationChosen()) {
@@ -118,10 +119,10 @@ public class EjbJarDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 						.concat(EjbJarDiscoveryConstants.EJB_JAR_MODEL_FILE_SUFFIX), true));
 		initializeResourceFactory(source);
 		URI sourceURI = URI.createPlatformResourceURI(source.getFullPath().toString(), true);
-		discoverResource(sourceURI);
+		discoverResourceInternal(sourceURI);
 	}
 
-	private void discoverResource(final URI sourceURI) throws DiscoveryException {
+	private void discoverResourceInternal(final URI sourceURI) throws DiscoveryException {
 		try {
 			Resource resource = getModiscoResourceFactory().createResource(sourceURI);
 
@@ -148,6 +149,11 @@ public class EjbJarDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 					e);
 		}
 
+	}
+
+	public void discoverResource(URI sourceURI) throws DiscoveryException {
+		initializeResourceFactory(sourceURI);
+		discoverResourceInternal(sourceURI);
 	}
 
 	protected void setModiscoResourceFactory(final Resource.Factory modiscoResourceFactory) {

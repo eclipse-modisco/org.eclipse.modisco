@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TestEjbJar11.class, TestEjbJar20.class, TestEjbJar21.class, TestEjbJar30.class, TestEjbJar31.class })
+@SuiteClasses({ EjbJarTests.class })
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
 }
