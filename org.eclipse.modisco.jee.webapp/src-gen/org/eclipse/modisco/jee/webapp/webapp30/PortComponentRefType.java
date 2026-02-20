@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PortComponentRefType#getServiceEndpointInterface <em>Service Endpoint Interface</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PortComponentRefType#getEnableMtom <em>Enable Mtom</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PortComponentRefType#getPortComponentLink <em>Port Component Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PortComponentRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getPortComponentRefType()
  * @model extendedMetaData="name='port-component-refType' kind='elementOnly'"

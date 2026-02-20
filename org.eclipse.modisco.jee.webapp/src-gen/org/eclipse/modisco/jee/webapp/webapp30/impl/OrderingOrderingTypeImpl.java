@@ -38,11 +38,11 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.OrderingOrderingTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.OrderingOrderingTypeImpl#getOthers <em>Others</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

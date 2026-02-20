@@ -44,11 +44,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.InjectionTargetType#getInjectionTargetClass <em>Injection Target Class</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.InjectionTargetType#getInjectionTargetName <em>Injection Target Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getInjectionTargetType()
  * @model extendedMetaData="name='injection-targetType' kind='elementOnly'"

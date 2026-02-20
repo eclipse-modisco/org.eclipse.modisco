@@ -33,11 +33,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.HandlerChainsType#getHandlerChain <em>Handler Chain</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.HandlerChainsType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getHandlerChainsType()
  * @model extendedMetaData="name='handler-chainsType' kind='elementOnly'"

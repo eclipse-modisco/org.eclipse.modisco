@@ -73,6 +73,7 @@ import org.eclipse.modisco.jee.webapp.webapp30.WelcomeFileListType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebFragmentTypeImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebFragmentTypeImpl#getName <em>Name</em>}</li>
@@ -113,7 +114,6 @@ import org.eclipse.modisco.jee.webapp.webapp30.WelcomeFileListType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebFragmentTypeImpl#isMetadataComplete <em>Metadata Complete</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebFragmentTypeImpl#getVersion <em>Version</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -1211,7 +1211,7 @@ public class WebFragmentTypeImpl extends EObjectImpl implements WebFragmentType 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (group: "); //$NON-NLS-1$
 		result.append(group);
 		result.append(", id: "); //$NON-NLS-1$

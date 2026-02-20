@@ -37,13 +37,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.IconType#getSmallIcon <em>Small Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.IconType#getLargeIcon <em>Large Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.IconType#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.IconType#getLang <em>Lang</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getIconType()
  * @model extendedMetaData="name='iconType' kind='elementOnly'"

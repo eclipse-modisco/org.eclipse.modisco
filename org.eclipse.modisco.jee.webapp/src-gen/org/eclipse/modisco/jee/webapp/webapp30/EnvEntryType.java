@@ -50,6 +50,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.EnvEntryType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.EnvEntryType#getEnvEntryName <em>Env Entry Name</em>}</li>
@@ -60,7 +61,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.EnvEntryType#getLookupName <em>Lookup Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.EnvEntryType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getEnvEntryType()
  * @model extendedMetaData="name='env-entryType' kind='elementOnly'"

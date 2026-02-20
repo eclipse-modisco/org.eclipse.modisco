@@ -29,12 +29,12 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.LocaleEncodingMappingTypeImpl#getLocale <em>Locale</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.LocaleEncodingMappingTypeImpl#getEncoding <em>Encoding</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.LocaleEncodingMappingTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -268,7 +268,7 @@ public class LocaleEncodingMappingTypeImpl extends EObjectImpl implements Locale
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (locale: "); //$NON-NLS-1$
 		result.append(locale);
 		result.append(", encoding: "); //$NON-NLS-1$

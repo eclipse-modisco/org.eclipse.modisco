@@ -31,11 +31,11 @@ import org.eclipse.modisco.jee.webapp.webapp30.XsdNonNegativeIntegerType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.XsdNonNegativeIntegerTypeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.XsdNonNegativeIntegerTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -218,7 +218,7 @@ public class XsdNonNegativeIntegerTypeImpl extends EObjectImpl implements XsdNon
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: "); //$NON-NLS-1$
 		result.append(value);
 		result.append(", id: "); //$NON-NLS-1$

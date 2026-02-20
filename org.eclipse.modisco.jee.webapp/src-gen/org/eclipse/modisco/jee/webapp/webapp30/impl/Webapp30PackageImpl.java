@@ -1085,7 +1085,8 @@ public class Webapp30PackageImpl extends EPackageImpl implements Webapp30Package
 		if (isInited) return (Webapp30Package)EPackage.Registry.INSTANCE.getEPackage(Webapp30Package.eNS_URI);
 
 		// Obtain or create and register package
-		Webapp30PackageImpl theWebapp30Package = (Webapp30PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Webapp30PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Webapp30PackageImpl());
+		Object registeredWebapp30Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Webapp30PackageImpl theWebapp30Package = registeredWebapp30Package instanceof Webapp30PackageImpl ? (Webapp30PackageImpl)registeredWebapp30Package : new Webapp30PackageImpl();
 
 		isInited = true;
 
@@ -1101,7 +1102,7 @@ public class Webapp30PackageImpl extends EPackageImpl implements Webapp30Package
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theWebapp30Package, 
+			(theWebapp30Package,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return Webapp30Validator.INSTANCE;
@@ -1111,7 +1112,6 @@ public class Webapp30PackageImpl extends EPackageImpl implements Webapp30Package
 		// Mark meta-data to indicate it can't be changed
 		theWebapp30Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Webapp30Package.eNS_URI, theWebapp30Package);
 		return theWebapp30Package;

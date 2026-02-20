@@ -11837,6 +11837,13 @@ public interface Webapp30Package extends EPackage {
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Encoding Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         The encodingType defines IANA character sets.
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Encoding Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
@@ -12008,6 +12015,14 @@ public interface Webapp30Package extends EPackage {
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Locale Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         The localeType defines valid locale defined by ISO-639-1
+     *         and ISO-3166.
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Locale Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
@@ -12144,6 +12159,16 @@ public interface Webapp30Package extends EPackage {
 	 * Returns the meta object for data type '{@link java.util.List <em>Protocol Binding List Type</em>}'.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         Defines the type used for specifying a list of
+     *         protocol-bindingType(s). For e.g.
+     *         
+     *         ##SOAP11_HTTP ##SOAP12_HTTP ##XML_HTTP
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Protocol Binding List Type</em>'.
 	 * @see java.util.List
 	 * @model instanceClass="java.util.List"
@@ -12156,6 +12181,25 @@ public interface Webapp30Package extends EPackage {
 	 * Returns the meta object for data type '{@link java.lang.String <em>Protocol Binding Type</em>}'.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         Defines the type used for specifying the URI for the
+     *         protocol binding used by the port-component.  For
+     *         portability one could use one of the following tokens that
+     *         alias the standard binding types: 
+     *         
+     *         ##SOAP11_HTTP
+     *         ##SOAP11_HTTP_MTOM
+     *         ##SOAP12_HTTP
+     *         ##SOAP12_HTTP_MTOM
+     *         ##XML_HTTP
+     *         
+     *         Other specifications could define tokens that start with ##
+     *         to alias new standard binding URIs that are introduced.
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Protocol Binding Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
@@ -12168,6 +12212,27 @@ public interface Webapp30Package extends EPackage {
 	 * Returns the meta object for data type '{@link java.lang.String <em>Protocol URI Alias Type</em>}'.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         Defines the type that is used for specifying tokens that
+     *         start with ## which are used to alias existing standard
+     *         protocol bindings and support aliases for new standard
+     *         binding URIs that are introduced in future specifications.
+     *         
+     *         The following tokens alias the standard protocol binding
+     *         URIs:
+     *         
+     *         ##SOAP11_HTTP = "http://schemas.xmlsoap.org/wsdl/soap/http"
+     *         ##SOAP11_HTTP_MTOM = 
+     *         "http://schemas.xmlsoap.org/wsdl/soap/http?mtom=true"
+     *         ##SOAP12_HTTP = "http://www.w3.org/2003/05/soap/bindings/HTTP/"
+     *         ##SOAP12_HTTP_MTOM = 
+     *         "http://www.w3.org/2003/05/soap/bindings/HTTP/?mtom=true"
+     *         ##XML_HTTP = "http://www.w3.org/2004/08/wsdl/http"
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Protocol URI Alias Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
@@ -12179,6 +12244,50 @@ public interface Webapp30Package extends EPackage {
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Qname Pattern</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     *         This is used to specify the QName pattern in the
+     *         attribute service-name-pattern and port-name-pattern in
+     *         the handler-chain element
+     *         
+     *         For example, the various forms acceptable here for
+     *         service-name-pattern attribute in handler-chain element
+     *         are :
+     *         
+     *         Exact Name: service-name-pattern="ns1:EchoService"
+     *         
+     *         	 In this case, handlers specified in this
+     *         	 handler-chain element will apply to all ports with
+     *         	 this exact service name. The namespace prefix must
+     *         	 have been declared in a namespace declaration
+     *         	 attribute in either the start-tag of the element
+     *         	 where the prefix is used or in an an ancestor 
+     *         	 element (i.e. an element in whose content the 
+     *         	 prefixed markup occurs)
+     *         	 
+     *         
+     *         Pattern : service-name-pattern="ns1:EchoService*"
+     *         
+     *         	 In this case, handlers specified in this
+     *         	 handler-chain element will apply to all ports whose
+     *         	 Service names are like EchoService1, EchoServiceFoo
+     *         	 etc. The namespace prefix must have been declared in
+     *         	 a namespace declaration attribute in either the
+     *         	 start-tag of the element where the prefix is used or
+     *         	 in an an ancestor element (i.e. an element in whose 
+     *         	 content the prefixed markup occurs)
+     *         
+     *         Wild Card : service-name-pattern="*"
+     *         
+     *         	In this case, handlers specified in this handler-chain
+     *         	element will apply to ports of all service names.
+     *         
+     *         The same can be applied to port-name attribute in
+     *         handler-chain element.
+     *         
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Qname Pattern</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"

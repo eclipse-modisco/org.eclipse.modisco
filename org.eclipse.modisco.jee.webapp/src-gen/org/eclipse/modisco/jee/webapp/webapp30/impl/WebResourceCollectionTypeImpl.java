@@ -41,6 +41,7 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebResourceCollectionTypeImpl#getWebResourceName <em>Web Resource Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebResourceCollectionTypeImpl#getDescription <em>Description</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebResourceCollectionTypeImpl#getHttpMethodOmission <em>Http Method Omission</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.WebResourceCollectionTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -395,7 +395,7 @@ public class WebResourceCollectionTypeImpl extends EObjectImpl implements WebRes
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (httpMethod: "); //$NON-NLS-1$
 		result.append(httpMethod);
 		result.append(", httpMethodOmission: "); //$NON-NLS-1$

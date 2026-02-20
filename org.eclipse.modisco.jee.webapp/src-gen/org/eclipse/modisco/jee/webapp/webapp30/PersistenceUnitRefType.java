@@ -56,6 +56,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PersistenceUnitRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PersistenceUnitRefType#getPersistenceUnitRefName <em>Persistence Unit Ref Name</em>}</li>
@@ -64,7 +65,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PersistenceUnitRefType#getInjectionTarget <em>Injection Target</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.PersistenceUnitRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getPersistenceUnitRefType()
  * @model extendedMetaData="name='persistence-unit-refType' kind='elementOnly'"
