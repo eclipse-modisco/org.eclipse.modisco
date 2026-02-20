@@ -35,13 +35,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.SessionConfigType#getSessionTimeout <em>Session Timeout</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.SessionConfigType#getCookieConfig <em>Cookie Config</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.SessionConfigType#getTrackingMode <em>Tracking Mode</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.SessionConfigType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getSessionConfigType()
  * @model extendedMetaData="name='session-configType' kind='elementOnly'"

@@ -31,11 +31,11 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.LifecycleCallbackTypeImpl#getLifecycleCallbackClass <em>Lifecycle Callback Class</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.LifecycleCallbackTypeImpl#getLifecycleCallbackMethod <em>Lifecycle Callback Method</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

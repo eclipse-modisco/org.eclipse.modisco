@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.TaglibType#getTaglibUri <em>Taglib Uri</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.TaglibType#getTaglibLocation <em>Taglib Location</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.TaglibType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getTaglibType()
  * @model extendedMetaData="name='taglibType' kind='elementOnly'"

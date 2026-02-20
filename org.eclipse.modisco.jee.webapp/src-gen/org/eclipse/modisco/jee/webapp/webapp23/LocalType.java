@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.LocalType#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.LocalType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getLocalType()
  * @model extendedMetaData="name='local_._type' kind='mixed'"

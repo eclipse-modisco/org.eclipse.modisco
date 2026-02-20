@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.SecurityRoleRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.SecurityRoleRefType#getRoleName <em>Role Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.SecurityRoleRefType#getRoleLink <em>Role Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.SecurityRoleRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getSecurityRoleRefType()
  * @model extendedMetaData="name='security-role-ref_._type' kind='elementOnly'"

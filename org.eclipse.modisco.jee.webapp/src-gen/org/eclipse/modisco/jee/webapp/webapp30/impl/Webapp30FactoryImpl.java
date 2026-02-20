@@ -167,7 +167,7 @@ public class Webapp30FactoryImpl extends EFactoryImpl implements Webapp30Factory
 	 */
 	public static Webapp30Factory init() {
 		try {
-			Webapp30Factory theWebapp30Factory = (Webapp30Factory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Javaee/web-app_3_0.xsd"); //$NON-NLS-1$ 
+			Webapp30Factory theWebapp30Factory = (Webapp30Factory)EPackage.Registry.INSTANCE.getEFactory(Webapp30Package.eNS_URI);
 			if (theWebapp30Factory != null) {
 				return theWebapp30Factory;
 			}

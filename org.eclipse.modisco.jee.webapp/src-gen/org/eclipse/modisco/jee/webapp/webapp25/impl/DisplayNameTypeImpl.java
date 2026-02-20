@@ -28,10 +28,10 @@ import org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.DisplayNameTypeImpl#getLang <em>Lang</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -163,7 +163,7 @@ public class DisplayNameTypeImpl extends StringImpl implements DisplayNameType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (lang: "); //$NON-NLS-1$
 		result.append(lang);
 		result.append(')');

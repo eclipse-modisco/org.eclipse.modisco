@@ -49,6 +49,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.JspPropertyGroupType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.JspPropertyGroupType#getDisplayName <em>Display Name</em>}</li>
@@ -67,7 +68,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.JspPropertyGroupType#getErrorOnUndeclaredNamespace <em>Error On Undeclared Namespace</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.JspPropertyGroupType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getJspPropertyGroupType()
  * @model extendedMetaData="name='jsp-property-groupType' kind='elementOnly'"

@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FormLoginConfigType#getFormLoginPage <em>Form Login Page</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FormLoginConfigType#getFormErrorPage <em>Form Error Page</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FormLoginConfigType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getFormLoginConfigType()
  * @model extendedMetaData="name='form-login-configType' kind='elementOnly'"

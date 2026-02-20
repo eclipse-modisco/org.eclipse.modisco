@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.FilterType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.FilterType#getDisplayName <em>Display Name</em>}</li>
@@ -48,7 +49,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.FilterType#getInitParam <em>Init Param</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.FilterType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getFilterType()
  * @model extendedMetaData="name='filterType' kind='elementOnly'"

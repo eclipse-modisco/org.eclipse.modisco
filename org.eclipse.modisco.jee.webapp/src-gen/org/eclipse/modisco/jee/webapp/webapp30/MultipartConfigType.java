@@ -31,13 +31,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.MultipartConfigType#getLocation <em>Location</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.MultipartConfigType#getMaxFileSize <em>Max File Size</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.MultipartConfigType#getMaxRequestSize <em>Max Request Size</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.MultipartConfigType#getFileSizeThreshold <em>File Size Threshold</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getMultipartConfigType()
  * @model extendedMetaData="name='multipart-configType' kind='elementOnly'"

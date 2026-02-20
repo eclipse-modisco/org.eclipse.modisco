@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ErrorPageType#getErrorCode <em>Error Code</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ErrorPageType#getExceptionType <em>Exception Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ErrorPageType#getLocation <em>Location</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ErrorPageType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getErrorPageType()
  * @model extendedMetaData="name='error-page_._type' kind='elementOnly'"

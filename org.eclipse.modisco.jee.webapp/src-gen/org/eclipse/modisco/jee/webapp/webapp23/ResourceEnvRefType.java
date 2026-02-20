@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceEnvRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceEnvRefType#getResourceEnvRefName <em>Resource Env Ref Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceEnvRefType#getResourceEnvRefType <em>Resource Env Ref Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceEnvRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getResourceEnvRefType()
  * @model extendedMetaData="name='resource-env-ref_._type' kind='elementOnly'"

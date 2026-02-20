@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.CookieConfigType#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.CookieConfigType#getDomain <em>Domain</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.CookieConfigType#getMaxAge <em>Max Age</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.CookieConfigType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getCookieConfigType()
  * @model extendedMetaData="name='cookie-configType' kind='elementOnly'"

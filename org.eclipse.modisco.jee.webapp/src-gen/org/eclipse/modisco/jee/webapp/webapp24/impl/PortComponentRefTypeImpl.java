@@ -32,12 +32,12 @@ import org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.PortComponentRefTypeImpl#getServiceEndpointInterface <em>Service Endpoint Interface</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.PortComponentRefTypeImpl#getPortComponentLink <em>Port Component Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.PortComponentRefTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -311,7 +311,7 @@ public class PortComponentRefTypeImpl extends EObjectImpl implements PortCompone
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ErrorCodeType#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ErrorCodeType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getErrorCodeType()
  * @model extendedMetaData="name='error-code_._type' kind='mixed'"

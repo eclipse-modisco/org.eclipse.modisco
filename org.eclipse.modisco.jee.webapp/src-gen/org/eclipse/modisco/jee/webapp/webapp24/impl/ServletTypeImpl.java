@@ -48,6 +48,7 @@ import org.eclipse.modisco.jee.webapp.webapp24.XsdIntegerType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.ServletTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.ServletTypeImpl#getDisplayName <em>Display Name</em>}</li>
@@ -61,7 +62,6 @@ import org.eclipse.modisco.jee.webapp.webapp24.XsdIntegerType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.ServletTypeImpl#getSecurityRoleRef <em>Security Role Ref</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.ServletTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -706,7 +706,7 @@ public class ServletTypeImpl extends EObjectImpl implements ServletType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

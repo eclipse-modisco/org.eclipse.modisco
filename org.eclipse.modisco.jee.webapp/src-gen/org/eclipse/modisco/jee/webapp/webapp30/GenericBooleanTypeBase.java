@@ -155,6 +155,8 @@ public enum GenericBooleanTypeBase implements Enumerator {
 	 * Returns the '<em><b>Generic Boolean Type Base</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GenericBooleanTypeBase get(String literal) {
@@ -171,6 +173,8 @@ public enum GenericBooleanTypeBase implements Enumerator {
 	 * Returns the '<em><b>Generic Boolean Type Base</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GenericBooleanTypeBase getByName(String name) {
@@ -187,6 +191,8 @@ public enum GenericBooleanTypeBase implements Enumerator {
 	 * Returns the '<em><b>Generic Boolean Type Base</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GenericBooleanTypeBase get(int value) {

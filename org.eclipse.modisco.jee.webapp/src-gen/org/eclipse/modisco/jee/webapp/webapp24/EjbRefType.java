@@ -44,6 +44,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.EjbRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.EjbRefType#getEjbRefName <em>Ejb Ref Name</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.EjbRefType#getEjbLink <em>Ejb Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.EjbRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getEjbRefType()
  * @model extendedMetaData="name='ejb-refType' kind='elementOnly'"

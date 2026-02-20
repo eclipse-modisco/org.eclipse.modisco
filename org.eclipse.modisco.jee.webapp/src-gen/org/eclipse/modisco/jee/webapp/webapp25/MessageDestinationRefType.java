@@ -66,6 +66,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.MessageDestinationRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.MessageDestinationRefType#getMessageDestinationRefName <em>Message Destination Ref Name</em>}</li>
@@ -76,7 +77,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.MessageDestinationRefType#getInjectionTarget <em>Injection Target</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.MessageDestinationRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getMessageDestinationRefType()
  * @model extendedMetaData="name='message-destination-refType' kind='elementOnly'"

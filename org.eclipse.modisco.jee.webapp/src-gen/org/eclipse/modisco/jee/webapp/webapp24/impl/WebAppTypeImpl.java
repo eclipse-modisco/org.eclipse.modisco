@@ -67,6 +67,7 @@ import org.eclipse.modisco.jee.webapp.webapp24.WelcomeFileListType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.WebAppTypeImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.WebAppTypeImpl#getDescription <em>Description</em>}</li>
@@ -99,7 +100,6 @@ import org.eclipse.modisco.jee.webapp.webapp24.WelcomeFileListType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.WebAppTypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.WebAppTypeImpl#getVersion <em>Version</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -958,7 +958,7 @@ public class WebAppTypeImpl extends EObjectImpl implements WebAppType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (group: "); //$NON-NLS-1$
 		result.append(group);
 		result.append(", id: "); //$NON-NLS-1$

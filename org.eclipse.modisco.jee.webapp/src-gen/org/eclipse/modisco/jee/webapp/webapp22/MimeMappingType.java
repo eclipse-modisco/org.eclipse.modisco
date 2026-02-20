@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.MimeMappingType#getExtension <em>Extension</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.MimeMappingType#getMimeType <em>Mime Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.MimeMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getMimeMappingType()
  * @model extendedMetaData="name='mime-mapping_._type' kind='elementOnly'"

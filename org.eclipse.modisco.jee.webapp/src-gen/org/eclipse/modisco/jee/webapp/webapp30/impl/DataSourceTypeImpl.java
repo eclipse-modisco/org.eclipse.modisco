@@ -46,6 +46,7 @@ import org.eclipse.modisco.jee.webapp.webapp30.XsdIntegerType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.DataSourceTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.DataSourceTypeImpl#getName <em>Name</em>}</li>
@@ -67,7 +68,6 @@ import org.eclipse.modisco.jee.webapp.webapp30.XsdIntegerType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.DataSourceTypeImpl#getMaxStatements <em>Max Statements</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.DataSourceTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -1372,7 +1372,7 @@ public class DataSourceTypeImpl extends EObjectImpl implements DataSourceType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isolationLevel: "); //$NON-NLS-1$
 		if (isolationLevelESet) result.append(isolationLevel); else result.append("<unset>"); //$NON-NLS-1$
 		result.append(", id: "); //$NON-NLS-1$

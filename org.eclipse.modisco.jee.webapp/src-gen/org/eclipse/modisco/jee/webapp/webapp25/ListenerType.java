@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ListenerType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ListenerType#getDisplayName <em>Display Name</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ListenerType#getListenerClass <em>Listener Class</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.ListenerType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getListenerType()
  * @model extendedMetaData="name='listenerType' kind='elementOnly'"

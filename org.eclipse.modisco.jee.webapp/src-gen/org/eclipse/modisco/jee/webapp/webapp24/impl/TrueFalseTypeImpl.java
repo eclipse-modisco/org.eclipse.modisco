@@ -20,8 +20,6 @@ import org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>True False Type</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

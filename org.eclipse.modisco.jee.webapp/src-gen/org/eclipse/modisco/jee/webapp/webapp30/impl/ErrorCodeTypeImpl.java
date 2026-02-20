@@ -20,8 +20,6 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Error Code Type</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -27,15 +27,14 @@ import org.eclipse.emf.ecore.xmi.XMLResource.URIHandler;
 /**
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the
  * package. <!-- end-user-doc -->
- * 
  * @see org.eclipse.modisco.jee.webapp.webapp25.util.Webapp25ResourceImpl
  * @generated
  */
 public class Webapp25ResourceFactoryImpl extends ResourceFactoryImpl {
 	/**
-	 * Creates an instance of the resource factory. <!-- begin-user-doc --> <!--
+	 * Creates an instance of the resource factory.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Webapp25ResourceFactoryImpl() {

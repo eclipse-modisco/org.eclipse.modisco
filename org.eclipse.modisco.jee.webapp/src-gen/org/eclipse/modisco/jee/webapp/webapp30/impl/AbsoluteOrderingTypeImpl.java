@@ -37,12 +37,12 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AbsoluteOrderingTypeImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AbsoluteOrderingTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AbsoluteOrderingTypeImpl#getOthers <em>Others</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -215,7 +215,7 @@ public class AbsoluteOrderingTypeImpl extends EObjectImpl implements AbsoluteOrd
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (group: "); //$NON-NLS-1$
 		result.append(group);
 		result.append(')');

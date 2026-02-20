@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.WebResourceCollectionType#getWebResourceName <em>Web Resource Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.WebResourceCollectionType#getDescription <em>Description</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.WebResourceCollectionType#getHttpMethodOmission <em>Http Method Omission</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.WebResourceCollectionType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getWebResourceCollectionType()
  * @model extendedMetaData="name='web-resource-collectionType' kind='elementOnly'"

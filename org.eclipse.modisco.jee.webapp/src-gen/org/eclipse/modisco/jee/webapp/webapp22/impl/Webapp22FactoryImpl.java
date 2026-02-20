@@ -36,7 +36,7 @@ public class Webapp22FactoryImpl extends EFactoryImpl implements Webapp22Factory
 	 */
 	public static Webapp22Factory init() {
 		try {
-			Webapp22Factory theWebapp22Factory = (Webapp22Factory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Javaee/web-app_2_2.dtd"); //$NON-NLS-1$ 
+			Webapp22Factory theWebapp22Factory = (Webapp22Factory)EPackage.Registry.INSTANCE.getEFactory(Webapp22Package.eNS_URI);
 			if (theWebapp22Factory != null) {
 				return theWebapp22Factory;
 			}

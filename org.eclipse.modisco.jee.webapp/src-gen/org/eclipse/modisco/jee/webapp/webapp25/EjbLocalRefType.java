@@ -50,6 +50,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.EjbLocalRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.EjbLocalRefType#getEjbRefName <em>Ejb Ref Name</em>}</li>
@@ -61,7 +62,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.EjbLocalRefType#getInjectionTarget <em>Injection Target</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.EjbLocalRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package#getEjbLocalRefType()
  * @model extendedMetaData="name='ejb-local-refType' kind='elementOnly'"

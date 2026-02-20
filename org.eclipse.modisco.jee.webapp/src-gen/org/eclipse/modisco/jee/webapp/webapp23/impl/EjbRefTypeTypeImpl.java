@@ -33,11 +33,11 @@ import org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.EjbRefTypeTypeImpl#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.EjbRefTypeTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -216,7 +216,7 @@ public class EjbRefTypeTypeImpl extends EObjectImpl implements EjbRefTypeType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (mixed: "); //$NON-NLS-1$
 		result.append(mixed);
 		result.append(", id: "); //$NON-NLS-1$

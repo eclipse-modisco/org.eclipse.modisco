@@ -58,6 +58,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.ResourceEnvRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.ResourceEnvRefType#getResourceEnvRefName <em>Resource Env Ref Name</em>}</li>
@@ -67,7 +68,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.ResourceEnvRefType#getLookupName <em>Lookup Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.ResourceEnvRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getResourceEnvRefType()
  * @model extendedMetaData="name='resource-env-refType' kind='elementOnly'"

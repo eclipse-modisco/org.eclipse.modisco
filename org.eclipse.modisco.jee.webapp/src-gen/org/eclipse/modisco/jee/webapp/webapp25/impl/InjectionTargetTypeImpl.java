@@ -31,11 +31,11 @@ import org.eclipse.modisco.jee.webapp.webapp25.Webapp25Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.InjectionTargetTypeImpl#getInjectionTargetClass <em>Injection Target Class</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp25.impl.InjectionTargetTypeImpl#getInjectionTargetName <em>Injection Target Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

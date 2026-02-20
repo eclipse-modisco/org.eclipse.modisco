@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceRefType#getResRefName <em>Res Ref Name</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceRefType#getResSharingScope <em>Res Sharing Scope</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ResourceRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getResourceRefType()
  * @model extendedMetaData="name='resource-ref_._type' kind='elementOnly'"

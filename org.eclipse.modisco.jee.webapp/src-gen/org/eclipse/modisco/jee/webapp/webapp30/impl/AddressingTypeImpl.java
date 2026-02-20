@@ -31,12 +31,12 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AddressingTypeImpl#getEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AddressingTypeImpl#getRequired <em>Required</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.AddressingTypeImpl#getResponses <em>Responses</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

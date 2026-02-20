@@ -35,6 +35,7 @@ import org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.EjbRefTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.EjbRefTypeImpl#getEjbRefName <em>Ejb Ref Name</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.EjbRefTypeImpl#getEjbLink <em>Ejb Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.EjbRefTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -578,7 +578,7 @@ public class EjbRefTypeImpl extends EObjectImpl implements EjbRefType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

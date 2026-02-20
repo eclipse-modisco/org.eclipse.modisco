@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.IconType#getSmallIcon <em>Small Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.IconType#getLargeIcon <em>Large Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.IconType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getIconType()
  * @model extendedMetaData="name='icon_._type' kind='elementOnly'"

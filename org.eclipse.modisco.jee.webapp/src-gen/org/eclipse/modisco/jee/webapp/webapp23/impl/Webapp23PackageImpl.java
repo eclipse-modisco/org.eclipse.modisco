@@ -690,7 +690,7 @@ public class Webapp23PackageImpl extends EPackageImpl implements Webapp23Package
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Webapp23Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -704,7 +704,8 @@ public class Webapp23PackageImpl extends EPackageImpl implements Webapp23Package
 		if (isInited) return (Webapp23Package)EPackage.Registry.INSTANCE.getEPackage(Webapp23Package.eNS_URI);
 
 		// Obtain or create and register package
-		Webapp23PackageImpl theWebapp23Package = (Webapp23PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Webapp23PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Webapp23PackageImpl());
+		Object registeredWebapp23Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Webapp23PackageImpl theWebapp23Package = registeredWebapp23Package instanceof Webapp23PackageImpl ? (Webapp23PackageImpl)registeredWebapp23Package : new Webapp23PackageImpl();
 
 		isInited = true;
 
@@ -720,7 +721,6 @@ public class Webapp23PackageImpl extends EPackageImpl implements Webapp23Package
 		// Mark meta-data to indicate it can't be changed
 		theWebapp23Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Webapp23Package.eNS_URI, theWebapp23Package);
 		return theWebapp23Package;
@@ -5296,3034 +5296,3034 @@ public class Webapp23PackageImpl extends EPackageImpl implements Webapp23Package
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$		
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "qualified", "false" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "qualified", "false" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (authConstraintTypeEClass, 
-		   source, 
+		  (authConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "auth-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "auth-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_Description(), 
-		   source, 
+		  (getAuthConstraintType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_RoleName(), 
-		   source, 
+		  (getAuthConstraintType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_Id(), 
-		   source, 
+		  (getAuthConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (authMethodTypeEClass, 
-		   source, 
+		  (authMethodTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "auth-method_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "auth-method_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthMethodType_Mixed(), 
-		   source, 
+		  (getAuthMethodType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthMethodType_Id(), 
-		   source, 
+		  (getAuthMethodType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (contextParamTypeEClass, 
-		   source, 
+		  (contextParamTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "context-param_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "context-param_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getContextParamType_ParamName(), 
-		   source, 
+		  (getContextParamType_ParamName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getContextParamType_ParamValue(), 
-		   source, 
+		  (getContextParamType_ParamValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getContextParamType_Description(), 
-		   source, 
+		  (getContextParamType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getContextParamType_Id(), 
-		   source, 
+		  (getContextParamType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (descriptionTypeEClass, 
-		   source, 
+		  (descriptionTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "description_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "description_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDescriptionType_Mixed(), 
-		   source, 
+		  (getDescriptionType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDescriptionType_Id(), 
-		   source, 
+		  (getDescriptionType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (displayNameTypeEClass, 
-		   source, 
+		  (displayNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "display-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "display-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDisplayNameType_Mixed(), 
-		   source, 
+		  (getDisplayNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDisplayNameType_Id(), 
-		   source, 
+		  (getDisplayNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (distributableTypeEClass, 
-		   source, 
+		  (distributableTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "distributable_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "distributable_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDistributableType_Id(), 
-		   source, 
+		  (getDistributableType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (documentRootEClass, 
-		   source, 
+		  (documentRootEClass,
+		   source,
 		   new String[] {
-			 "name", "", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Mixed(), 
-		   source, 
+		  (getDocumentRoot_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_XMLNSPrefixMap(), 
-		   source, 
+		  (getDocumentRoot_XMLNSPrefixMap(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_XSISchemaLocation(), 
-		   source, 
+		  (getDocumentRoot_XSISchemaLocation(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_AuthConstraint(), 
-		   source, 
+		  (getDocumentRoot_AuthConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_AuthMethod(), 
-		   source, 
+		  (getDocumentRoot_AuthMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ContextParam(), 
-		   source, 
+		  (getDocumentRoot_ContextParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Description(), 
-		   source, 
+		  (getDocumentRoot_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_DisplayName(), 
-		   source, 
+		  (getDocumentRoot_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Distributable(), 
-		   source, 
+		  (getDocumentRoot_Distributable(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EjbLink(), 
-		   source, 
+		  (getDocumentRoot_EjbLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EjbLocalRef(), 
-		   source, 
+		  (getDocumentRoot_EjbLocalRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EjbRef(), 
-		   source, 
+		  (getDocumentRoot_EjbRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EjbRefName(), 
-		   source, 
+		  (getDocumentRoot_EjbRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EjbRefType(), 
-		   source, 
+		  (getDocumentRoot_EjbRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EnvEntry(), 
-		   source, 
+		  (getDocumentRoot_EnvEntry(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EnvEntryName(), 
-		   source, 
+		  (getDocumentRoot_EnvEntryName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EnvEntryType(), 
-		   source, 
+		  (getDocumentRoot_EnvEntryType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_EnvEntryValue(), 
-		   source, 
+		  (getDocumentRoot_EnvEntryValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ErrorCode(), 
-		   source, 
+		  (getDocumentRoot_ErrorCode(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ErrorPage(), 
-		   source, 
+		  (getDocumentRoot_ErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ExceptionType(), 
-		   source, 
+		  (getDocumentRoot_ExceptionType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Extension(), 
-		   source, 
+		  (getDocumentRoot_Extension(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Filter(), 
-		   source, 
+		  (getDocumentRoot_Filter(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FilterClass(), 
-		   source, 
+		  (getDocumentRoot_FilterClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FilterMapping(), 
-		   source, 
+		  (getDocumentRoot_FilterMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FilterName(), 
-		   source, 
+		  (getDocumentRoot_FilterName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FormErrorPage(), 
-		   source, 
+		  (getDocumentRoot_FormErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FormLoginConfig(), 
-		   source, 
+		  (getDocumentRoot_FormLoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_FormLoginPage(), 
-		   source, 
+		  (getDocumentRoot_FormLoginPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Home(), 
-		   source, 
+		  (getDocumentRoot_Home(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_HttpMethod(), 
-		   source, 
+		  (getDocumentRoot_HttpMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Icon(), 
-		   source, 
+		  (getDocumentRoot_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_InitParam(), 
-		   source, 
+		  (getDocumentRoot_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_JspFile(), 
-		   source, 
+		  (getDocumentRoot_JspFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_LargeIcon(), 
-		   source, 
+		  (getDocumentRoot_LargeIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Listener(), 
-		   source, 
+		  (getDocumentRoot_Listener(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ListenerClass(), 
-		   source, 
+		  (getDocumentRoot_ListenerClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_LoadOnStartup(), 
-		   source, 
+		  (getDocumentRoot_LoadOnStartup(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Local(), 
-		   source, 
+		  (getDocumentRoot_Local(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_LocalHome(), 
-		   source, 
+		  (getDocumentRoot_LocalHome(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Location(), 
-		   source, 
+		  (getDocumentRoot_Location(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_LoginConfig(), 
-		   source, 
+		  (getDocumentRoot_LoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_MimeMapping(), 
-		   source, 
+		  (getDocumentRoot_MimeMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_MimeType(), 
-		   source, 
+		  (getDocumentRoot_MimeType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ParamName(), 
-		   source, 
+		  (getDocumentRoot_ParamName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ParamValue(), 
-		   source, 
+		  (getDocumentRoot_ParamValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_RealmName(), 
-		   source, 
+		  (getDocumentRoot_RealmName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Remote(), 
-		   source, 
+		  (getDocumentRoot_Remote(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResAuth(), 
-		   source, 
+		  (getDocumentRoot_ResAuth(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResourceEnvRef(), 
-		   source, 
+		  (getDocumentRoot_ResourceEnvRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResourceEnvRefName(), 
-		   source, 
+		  (getDocumentRoot_ResourceEnvRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResourceEnvRefType(), 
-		   source, 
+		  (getDocumentRoot_ResourceEnvRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResourceRef(), 
-		   source, 
+		  (getDocumentRoot_ResourceRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResRefName(), 
-		   source, 
+		  (getDocumentRoot_ResRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResSharingScope(), 
-		   source, 
+		  (getDocumentRoot_ResSharingScope(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ResType(), 
-		   source, 
+		  (getDocumentRoot_ResType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_RoleLink(), 
-		   source, 
+		  (getDocumentRoot_RoleLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_RoleName(), 
-		   source, 
+		  (getDocumentRoot_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_RunAs(), 
-		   source, 
+		  (getDocumentRoot_RunAs(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SecurityConstraint(), 
-		   source, 
+		  (getDocumentRoot_SecurityConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SecurityRole(), 
-		   source, 
+		  (getDocumentRoot_SecurityRole(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SecurityRoleRef(), 
-		   source, 
+		  (getDocumentRoot_SecurityRoleRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Servlet(), 
-		   source, 
+		  (getDocumentRoot_Servlet(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ServletClass(), 
-		   source, 
+		  (getDocumentRoot_ServletClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ServletMapping(), 
-		   source, 
+		  (getDocumentRoot_ServletMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_ServletName(), 
-		   source, 
+		  (getDocumentRoot_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SessionConfig(), 
-		   source, 
+		  (getDocumentRoot_SessionConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SessionTimeout(), 
-		   source, 
+		  (getDocumentRoot_SessionTimeout(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_SmallIcon(), 
-		   source, 
+		  (getDocumentRoot_SmallIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Taglib(), 
-		   source, 
+		  (getDocumentRoot_Taglib(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_TaglibLocation(), 
-		   source, 
+		  (getDocumentRoot_TaglibLocation(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_TaglibUri(), 
-		   source, 
+		  (getDocumentRoot_TaglibUri(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_TransportGuarantee(), 
-		   source, 
+		  (getDocumentRoot_TransportGuarantee(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_UrlPattern(), 
-		   source, 
+		  (getDocumentRoot_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_UserDataConstraint(), 
-		   source, 
+		  (getDocumentRoot_UserDataConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WebApp(), 
-		   source, 
+		  (getDocumentRoot_WebApp(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-app", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-app", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WebResourceCollection(), 
-		   source, 
+		  (getDocumentRoot_WebResourceCollection(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WebResourceName(), 
-		   source, 
+		  (getDocumentRoot_WebResourceName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WelcomeFile(), 
-		   source, 
+		  (getDocumentRoot_WelcomeFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WelcomeFileList(), 
-		   source, 
+		  (getDocumentRoot_WelcomeFileList(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbLinkTypeEClass, 
-		   source, 
+		  (ejbLinkTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-link_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-link_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLinkType_Mixed(), 
-		   source, 
+		  (getEjbLinkType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLinkType_Id(), 
-		   source, 
+		  (getEjbLinkType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbLocalRefTypeEClass, 
-		   source, 
+		  (ejbLocalRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-local-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-local-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Description(), 
-		   source, 
+		  (getEjbLocalRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbRefName(), 
-		   source, 
+		  (getEjbLocalRefType_EjbRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbRefType(), 
-		   source, 
+		  (getEjbLocalRefType_EjbRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_LocalHome(), 
-		   source, 
+		  (getEjbLocalRefType_LocalHome(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Local(), 
-		   source, 
+		  (getEjbLocalRefType_Local(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbLink(), 
-		   source, 
+		  (getEjbLocalRefType_EjbLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Id(), 
-		   source, 
+		  (getEjbLocalRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefNameTypeEClass, 
-		   source, 
+		  (ejbRefNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefNameType_Mixed(), 
-		   source, 
+		  (getEjbRefNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefNameType_Id(), 
-		   source, 
+		  (getEjbRefNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeEClass, 
-		   source, 
+		  (ejbRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Description(), 
-		   source, 
+		  (getEjbRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbRefName(), 
-		   source, 
+		  (getEjbRefType_EjbRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbRefType(), 
-		   source, 
+		  (getEjbRefType_EjbRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Home(), 
-		   source, 
+		  (getEjbRefType_Home(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Remote(), 
-		   source, 
+		  (getEjbRefType_Remote(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbLink(), 
-		   source, 
+		  (getEjbRefType_EjbLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Id(), 
-		   source, 
+		  (getEjbRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeTypeEClass, 
-		   source, 
+		  (ejbRefTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefTypeType_Mixed(), 
-		   source, 
+		  (getEjbRefTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefTypeType_Id(), 
-		   source, 
+		  (getEjbRefTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryNameTypeEClass, 
-		   source, 
+		  (envEntryNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entry-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryNameType_Mixed(), 
-		   source, 
+		  (getEnvEntryNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryNameType_Id(), 
-		   source, 
+		  (getEnvEntryNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeEClass, 
-		   source, 
+		  (envEntryTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entry_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_Description(), 
-		   source, 
+		  (getEnvEntryType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryName(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryValue(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryType(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_Id(), 
-		   source, 
+		  (getEnvEntryType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeTypeEClass, 
-		   source, 
+		  (envEntryTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entry-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryTypeType_Mixed(), 
-		   source, 
+		  (getEnvEntryTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryTypeType_Id(), 
-		   source, 
+		  (getEnvEntryTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryValueTypeEClass, 
-		   source, 
+		  (envEntryValueTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entry-value_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry-value_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryValueType_Mixed(), 
-		   source, 
+		  (getEnvEntryValueType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryValueType_Id(), 
-		   source, 
+		  (getEnvEntryValueType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (errorCodeTypeEClass, 
-		   source, 
+		  (errorCodeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "error-code_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "error-code_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorCodeType_Mixed(), 
-		   source, 
+		  (getErrorCodeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorCodeType_Id(), 
-		   source, 
+		  (getErrorCodeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (errorPageTypeEClass, 
-		   source, 
+		  (errorPageTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "error-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "error-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_ErrorCode(), 
-		   source, 
+		  (getErrorPageType_ErrorCode(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_ExceptionType(), 
-		   source, 
+		  (getErrorPageType_ExceptionType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_Location(), 
-		   source, 
+		  (getErrorPageType_Location(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_Id(), 
-		   source, 
+		  (getErrorPageType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (exceptionTypeTypeEClass, 
-		   source, 
+		  (exceptionTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "exception-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "exception-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getExceptionTypeType_Mixed(), 
-		   source, 
+		  (getExceptionTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getExceptionTypeType_Id(), 
-		   source, 
+		  (getExceptionTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (extensionTypeEClass, 
-		   source, 
+		  (extensionTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "extension_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "extension_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getExtensionType_Mixed(), 
-		   source, 
+		  (getExtensionType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getExtensionType_Id(), 
-		   source, 
+		  (getExtensionType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterClassTypeEClass, 
-		   source, 
+		  (filterClassTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filter-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterClassType_Mixed(), 
-		   source, 
+		  (getFilterClassType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterClassType_Id(), 
-		   source, 
+		  (getFilterClassType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterMappingTypeEClass, 
-		   source, 
+		  (filterMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filter-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_FilterName(), 
-		   source, 
+		  (getFilterMappingType_FilterName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_UrlPattern(), 
-		   source, 
+		  (getFilterMappingType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_ServletName(), 
-		   source, 
+		  (getFilterMappingType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_Id(), 
-		   source, 
+		  (getFilterMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterNameTypeEClass, 
-		   source, 
+		  (filterNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filter-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterNameType_Mixed(), 
-		   source, 
+		  (getFilterNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterNameType_Id(), 
-		   source, 
+		  (getFilterNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterTypeEClass, 
-		   source, 
+		  (filterTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filter_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Icon(), 
-		   source, 
+		  (getFilterType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_FilterName(), 
-		   source, 
+		  (getFilterType_FilterName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_DisplayName(), 
-		   source, 
+		  (getFilterType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Description(), 
-		   source, 
+		  (getFilterType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_FilterClass(), 
-		   source, 
+		  (getFilterType_FilterClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_InitParam(), 
-		   source, 
+		  (getFilterType_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Id(), 
-		   source, 
+		  (getFilterType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (formErrorPageTypeEClass, 
-		   source, 
+		  (formErrorPageTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "form-error-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "form-error-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormErrorPageType_Mixed(), 
-		   source, 
+		  (getFormErrorPageType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormErrorPageType_Id(), 
-		   source, 
+		  (getFormErrorPageType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (formLoginConfigTypeEClass, 
-		   source, 
+		  (formLoginConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "form-login-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "form-login-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_FormLoginPage(), 
-		   source, 
+		  (getFormLoginConfigType_FormLoginPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_FormErrorPage(), 
-		   source, 
+		  (getFormLoginConfigType_FormErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_Id(), 
-		   source, 
+		  (getFormLoginConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (formLoginPageTypeEClass, 
-		   source, 
+		  (formLoginPageTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "form-login-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "form-login-page_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginPageType_Mixed(), 
-		   source, 
+		  (getFormLoginPageType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginPageType_Id(), 
-		   source, 
+		  (getFormLoginPageType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (homeTypeEClass, 
-		   source, 
+		  (homeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "home_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "home_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getHomeType_Mixed(), 
-		   source, 
+		  (getHomeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getHomeType_Id(), 
-		   source, 
+		  (getHomeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (httpMethodTypeEClass, 
-		   source, 
+		  (httpMethodTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "http-method_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "http-method_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getHttpMethodType_Mixed(), 
-		   source, 
+		  (getHttpMethodType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getHttpMethodType_Id(), 
-		   source, 
+		  (getHttpMethodType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (iconTypeEClass, 
-		   source, 
+		  (iconTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_SmallIcon(), 
-		   source, 
+		  (getIconType_SmallIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_LargeIcon(), 
-		   source, 
+		  (getIconType_LargeIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_Id(), 
-		   source, 
+		  (getIconType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (initParamTypeEClass, 
-		   source, 
+		  (initParamTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "init-param_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "init-param_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getInitParamType_ParamName(), 
-		   source, 
+		  (getInitParamType_ParamName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getInitParamType_ParamValue(), 
-		   source, 
+		  (getInitParamType_ParamValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getInitParamType_Description(), 
-		   source, 
+		  (getInitParamType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getInitParamType_Id(), 
-		   source, 
+		  (getInitParamType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jspFileTypeEClass, 
-		   source, 
+		  (jspFileTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "jsp-file_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "jsp-file_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspFileType_Mixed(), 
-		   source, 
+		  (getJspFileType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspFileType_Id(), 
-		   source, 
+		  (getJspFileType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (largeIconTypeEClass, 
-		   source, 
+		  (largeIconTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "large-icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "large-icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLargeIconType_Mixed(), 
-		   source, 
+		  (getLargeIconType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLargeIconType_Id(), 
-		   source, 
+		  (getLargeIconType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (listenerClassEClass, 
-		   source, 
+		  (listenerClassEClass,
+		   source,
 		   new String[] {
-			 "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerClass_ListenerClass(), 
-		   source, 
+		  (getListenerClass_ListenerClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (listenerClassTypeEClass, 
-		   source, 
+		  (listenerClassTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "listener-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "listener-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerClassType_Mixed(), 
-		   source, 
+		  (getListenerClassType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerClassType_Id(), 
-		   source, 
+		  (getListenerClassType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (listenerTypeEClass, 
-		   source, 
+		  (listenerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "listener_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "listener_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_Id(), 
-		   source, 
+		  (getListenerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (loadOnStartupTypeEClass, 
-		   source, 
+		  (loadOnStartupTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "load-on-startup_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "load-on-startup_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoadOnStartupType_Mixed(), 
-		   source, 
+		  (getLoadOnStartupType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoadOnStartupType_Id(), 
-		   source, 
+		  (getLoadOnStartupType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localHomeTypeEClass, 
-		   source, 
+		  (localHomeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "local-home_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "local-home_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocalHomeType_Mixed(), 
-		   source, 
+		  (getLocalHomeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocalHomeType_Id(), 
-		   source, 
+		  (getLocalHomeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localTypeEClass, 
-		   source, 
+		  (localTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "local_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "local_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocalType_Mixed(), 
-		   source, 
+		  (getLocalType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocalType_Id(), 
-		   source, 
+		  (getLocalType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (locationTypeEClass, 
-		   source, 
+		  (locationTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "location_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "location_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocationType_Mixed(), 
-		   source, 
+		  (getLocationType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocationType_Id(), 
-		   source, 
+		  (getLocationType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (loginConfigTypeEClass, 
-		   source, 
+		  (loginConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "login-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "login-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_AuthMethod(), 
-		   source, 
+		  (getLoginConfigType_AuthMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_RealmName(), 
-		   source, 
+		  (getLoginConfigType_RealmName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_FormLoginConfig(), 
-		   source, 
+		  (getLoginConfigType_FormLoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_Id(), 
-		   source, 
+		  (getLoginConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (mimeMappingTypeEClass, 
-		   source, 
+		  (mimeMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "mime-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "mime-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_Extension(), 
-		   source, 
+		  (getMimeMappingType_Extension(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_MimeType(), 
-		   source, 
+		  (getMimeMappingType_MimeType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_Id(), 
-		   source, 
+		  (getMimeMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (mimeTypeTypeEClass, 
-		   source, 
+		  (mimeTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "mime-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "mime-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeTypeType_Mixed(), 
-		   source, 
+		  (getMimeTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeTypeType_Id(), 
-		   source, 
+		  (getMimeTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (paramNameTypeEClass, 
-		   source, 
+		  (paramNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "param-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "param-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamNameType_Mixed(), 
-		   source, 
+		  (getParamNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamNameType_Id(), 
-		   source, 
+		  (getParamNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (paramValueTypeEClass, 
-		   source, 
+		  (paramValueTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "param-value_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "param-value_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_Mixed(), 
-		   source, 
+		  (getParamValueType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_Id(), 
-		   source, 
+		  (getParamValueType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (realmNameTypeEClass, 
-		   source, 
+		  (realmNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "realm-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "realm-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRealmNameType_Mixed(), 
-		   source, 
+		  (getRealmNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRealmNameType_Id(), 
-		   source, 
+		  (getRealmNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (remoteTypeEClass, 
-		   source, 
+		  (remoteTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "remote_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "remote_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRemoteType_Mixed(), 
-		   source, 
+		  (getRemoteType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRemoteType_Id(), 
-		   source, 
+		  (getRemoteType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resAuthTypeEClass, 
-		   source, 
+		  (resAuthTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-auth_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-auth_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResAuthType_Mixed(), 
-		   source, 
+		  (getResAuthType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResAuthType_Id(), 
-		   source, 
+		  (getResAuthType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceEnvRefNameTypeEClass, 
-		   source, 
+		  (resourceEnvRefNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-env-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-env-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefNameType_Mixed(), 
-		   source, 
+		  (getResourceEnvRefNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefNameType_Id(), 
-		   source, 
+		  (getResourceEnvRefNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceEnvRefTypeEClass, 
-		   source, 
+		  (resourceEnvRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-env-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-env-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_Description(), 
-		   source, 
+		  (getResourceEnvRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_ResourceEnvRefName(), 
-		   source, 
+		  (getResourceEnvRefType_ResourceEnvRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_ResourceEnvRefType(), 
-		   source, 
+		  (getResourceEnvRefType_ResourceEnvRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_Id(), 
-		   source, 
+		  (getResourceEnvRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceEnvRefTypeTypeEClass, 
-		   source, 
+		  (resourceEnvRefTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-env-ref-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-env-ref-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefTypeType_Mixed(), 
-		   source, 
+		  (getResourceEnvRefTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefTypeType_Id(), 
-		   source, 
+		  (getResourceEnvRefTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceRefTypeEClass, 
-		   source, 
+		  (resourceRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_Description(), 
-		   source, 
+		  (getResourceRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResRefName(), 
-		   source, 
+		  (getResourceRefType_ResRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResType(), 
-		   source, 
+		  (getResourceRefType_ResType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResAuth(), 
-		   source, 
+		  (getResourceRefType_ResAuth(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResSharingScope(), 
-		   source, 
+		  (getResourceRefType_ResSharingScope(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_Id(), 
-		   source, 
+		  (getResourceRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resRefNameTypeEClass, 
-		   source, 
+		  (resRefNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-ref-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResRefNameType_Mixed(), 
-		   source, 
+		  (getResRefNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResRefNameType_Id(), 
-		   source, 
+		  (getResRefNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resSharingScopeTypeEClass, 
-		   source, 
+		  (resSharingScopeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-sharing-scope_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-sharing-scope_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResSharingScopeType_Mixed(), 
-		   source, 
+		  (getResSharingScopeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResSharingScopeType_Id(), 
-		   source, 
+		  (getResSharingScopeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resTypeTypeEClass, 
-		   source, 
+		  (resTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-type_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResTypeType_Mixed(), 
-		   source, 
+		  (getResTypeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResTypeType_Id(), 
-		   source, 
+		  (getResTypeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (roleLinkTypeEClass, 
-		   source, 
+		  (roleLinkTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "role-link_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "role-link_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRoleLinkType_Mixed(), 
-		   source, 
+		  (getRoleLinkType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRoleLinkType_Id(), 
-		   source, 
+		  (getRoleLinkType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (roleNameTypeEClass, 
-		   source, 
+		  (roleNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "role-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "role-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRoleNameType_Mixed(), 
-		   source, 
+		  (getRoleNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRoleNameType_Id(), 
-		   source, 
+		  (getRoleNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (runAsTypeEClass, 
-		   source, 
+		  (runAsTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "run-as_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "run-as_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_Description(), 
-		   source, 
+		  (getRunAsType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_RoleName(), 
-		   source, 
+		  (getRunAsType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_Id(), 
-		   source, 
+		  (getRunAsType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityConstraintTypeEClass, 
-		   source, 
+		  (securityConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_DisplayName(), 
-		   source, 
+		  (getSecurityConstraintType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_WebResourceCollection(), 
-		   source, 
+		  (getSecurityConstraintType_WebResourceCollection(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_AuthConstraint(), 
-		   source, 
+		  (getSecurityConstraintType_AuthConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_UserDataConstraint(), 
-		   source, 
+		  (getSecurityConstraintType_UserDataConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_Id(), 
-		   source, 
+		  (getSecurityConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityRoleRefTypeEClass, 
-		   source, 
+		  (securityRoleRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-role-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-role-ref_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_Description(), 
-		   source, 
+		  (getSecurityRoleRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_RoleName(), 
-		   source, 
+		  (getSecurityRoleRefType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_RoleLink(), 
-		   source, 
+		  (getSecurityRoleRefType_RoleLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_Id(), 
-		   source, 
+		  (getSecurityRoleRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityRoleTypeEClass, 
-		   source, 
+		  (securityRoleTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-role_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-role_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_Description(), 
-		   source, 
+		  (getSecurityRoleType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_RoleName(), 
-		   source, 
+		  (getSecurityRoleType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_Id(), 
-		   source, 
+		  (getSecurityRoleType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletClassTypeEClass, 
-		   source, 
+		  (servletClassTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servlet-class_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletClassType_Mixed(), 
-		   source, 
+		  (getServletClassType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletClassType_Id(), 
-		   source, 
+		  (getServletClassType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletMappingTypeEClass, 
-		   source, 
+		  (servletMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servlet-mapping_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_ServletName(), 
-		   source, 
+		  (getServletMappingType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_UrlPattern(), 
-		   source, 
+		  (getServletMappingType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_Id(), 
-		   source, 
+		  (getServletMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletNameTypeEClass, 
-		   source, 
+		  (servletNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servlet-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletNameType_Mixed(), 
-		   source, 
+		  (getServletNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletNameType_Id(), 
-		   source, 
+		  (getServletNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletTypeEClass, 
-		   source, 
+		  (servletTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servlet_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Icon(), 
-		   source, 
+		  (getServletType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_ServletName(), 
-		   source, 
+		  (getServletType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_DisplayName(), 
-		   source, 
+		  (getServletType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Description(), 
-		   source, 
+		  (getServletType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_ServletClass(), 
-		   source, 
+		  (getServletType_ServletClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_JspFile(), 
-		   source, 
+		  (getServletType_JspFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_InitParam(), 
-		   source, 
+		  (getServletType_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_LoadOnStartup(), 
-		   source, 
+		  (getServletType_LoadOnStartup(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_RunAs(), 
-		   source, 
+		  (getServletType_RunAs(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_SecurityRoleRef(), 
-		   source, 
+		  (getServletType_SecurityRoleRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Id(), 
-		   source, 
+		  (getServletType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (sessionConfigTypeEClass, 
-		   source, 
+		  (sessionConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "session-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "session-config_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionConfigType_SessionTimeout(), 
-		   source, 
+		  (getSessionConfigType_SessionTimeout(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionConfigType_Id(), 
-		   source, 
+		  (getSessionConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (sessionTimeoutTypeEClass, 
-		   source, 
+		  (sessionTimeoutTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "session-timeout_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "session-timeout_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionTimeoutType_Mixed(), 
-		   source, 
+		  (getSessionTimeoutType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionTimeoutType_Id(), 
-		   source, 
+		  (getSessionTimeoutType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (smallIconTypeEClass, 
-		   source, 
+		  (smallIconTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "small-icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "small-icon_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSmallIconType_Mixed(), 
-		   source, 
+		  (getSmallIconType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSmallIconType_Id(), 
-		   source, 
+		  (getSmallIconType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (taglibLocationTypeEClass, 
-		   source, 
+		  (taglibLocationTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "taglib-location_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "taglib-location_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibLocationType_Mixed(), 
-		   source, 
+		  (getTaglibLocationType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibLocationType_Id(), 
-		   source, 
+		  (getTaglibLocationType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (taglibTypeEClass, 
-		   source, 
+		  (taglibTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "taglib_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "taglib_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_TaglibUri(), 
-		   source, 
+		  (getTaglibType_TaglibUri(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_TaglibLocation(), 
-		   source, 
+		  (getTaglibType_TaglibLocation(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_Id(), 
-		   source, 
+		  (getTaglibType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (taglibUriTypeEClass, 
-		   source, 
+		  (taglibUriTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "taglib-uri_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "taglib-uri_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibUriType_Mixed(), 
-		   source, 
+		  (getTaglibUriType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibUriType_Id(), 
-		   source, 
+		  (getTaglibUriType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (transportGuaranteeTypeEClass, 
-		   source, 
+		  (transportGuaranteeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "transport-guarantee_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "transport-guarantee_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTransportGuaranteeType_Mixed(), 
-		   source, 
+		  (getTransportGuaranteeType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTransportGuaranteeType_Id(), 
-		   source, 
+		  (getTransportGuaranteeType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (urlPatternTypeEClass, 
-		   source, 
+		  (urlPatternTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "url-pattern_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "url-pattern_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUrlPatternType_Mixed(), 
-		   source, 
+		  (getUrlPatternType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUrlPatternType_Id(), 
-		   source, 
+		  (getUrlPatternType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (userDataConstraintTypeEClass, 
-		   source, 
+		  (userDataConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "user-data-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "user-data-constraint_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_Description(), 
-		   source, 
+		  (getUserDataConstraintType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_TransportGuarantee(), 
-		   source, 
+		  (getUserDataConstraintType_TransportGuarantee(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_Id(), 
-		   source, 
+		  (getUserDataConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webAppTypeEClass, 
-		   source, 
+		  (webAppTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "web-app_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "web-app_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Icon(), 
-		   source, 
+		  (getWebAppType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_DisplayName(), 
-		   source, 
+		  (getWebAppType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Description(), 
-		   source, 
+		  (getWebAppType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Distributable(), 
-		   source, 
+		  (getWebAppType_Distributable(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ContextParam(), 
-		   source, 
+		  (getWebAppType_ContextParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Filter(), 
-		   source, 
+		  (getWebAppType_Filter(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_FilterMapping(), 
-		   source, 
+		  (getWebAppType_FilterMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Listener(), 
-		   source, 
+		  (getWebAppType_Listener(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Servlet(), 
-		   source, 
+		  (getWebAppType_Servlet(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ServletMapping(), 
-		   source, 
+		  (getWebAppType_ServletMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SessionConfig(), 
-		   source, 
+		  (getWebAppType_SessionConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_MimeMapping(), 
-		   source, 
+		  (getWebAppType_MimeMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_WelcomeFileList(), 
-		   source, 
+		  (getWebAppType_WelcomeFileList(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ErrorPage(), 
-		   source, 
+		  (getWebAppType_ErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Taglib(), 
-		   source, 
+		  (getWebAppType_Taglib(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ResourceEnvRef(), 
-		   source, 
+		  (getWebAppType_ResourceEnvRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ResourceRef(), 
-		   source, 
+		  (getWebAppType_ResourceRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SecurityConstraint(), 
-		   source, 
+		  (getWebAppType_SecurityConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_LoginConfig(), 
-		   source, 
+		  (getWebAppType_LoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SecurityRole(), 
-		   source, 
+		  (getWebAppType_SecurityRole(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EnvEntry(), 
-		   source, 
+		  (getWebAppType_EnvEntry(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EjbRef(), 
-		   source, 
+		  (getWebAppType_EjbRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EjbLocalRef(), 
-		   source, 
+		  (getWebAppType_EjbLocalRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Id(), 
-		   source, 
+		  (getWebAppType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webResourceCollectionTypeEClass, 
-		   source, 
+		  (webResourceCollectionTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "web-resource-collection_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "web-resource-collection_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_WebResourceName(), 
-		   source, 
+		  (getWebResourceCollectionType_WebResourceName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_Description(), 
-		   source, 
+		  (getWebResourceCollectionType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_UrlPattern(), 
-		   source, 
+		  (getWebResourceCollectionType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_HttpMethod(), 
-		   source, 
+		  (getWebResourceCollectionType_HttpMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_Id(), 
-		   source, 
+		  (getWebResourceCollectionType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webResourceNameTypeEClass, 
-		   source, 
+		  (webResourceNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "web-resource-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "web-resource-name_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceNameType_Mixed(), 
-		   source, 
+		  (getWebResourceNameType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceNameType_Id(), 
-		   source, 
+		  (getWebResourceNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (welcomeFileListTypeEClass, 
-		   source, 
+		  (welcomeFileListTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "welcome-file-list_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "welcome-file-list_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileListType_WelcomeFile(), 
-		   source, 
+		  (getWelcomeFileListType_WelcomeFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileListType_Id(), 
-		   source, 
+		  (getWelcomeFileListType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (welcomeFileTypeEClass, 
-		   source, 
+		  (welcomeFileTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "welcome-file_._type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "welcome-file_._type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileType_Mixed(), 
-		   source, 
+		  (getWelcomeFileType_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileType_Id(), 
-		   source, 
+		  (getWelcomeFileType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "##targetNamespace" //$NON-NLS-1$ //$NON-NLS-2$
 		   });
 	}
 

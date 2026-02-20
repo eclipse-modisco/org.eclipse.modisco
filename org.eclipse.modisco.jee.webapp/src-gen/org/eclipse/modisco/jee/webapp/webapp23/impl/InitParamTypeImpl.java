@@ -32,13 +32,13 @@ import org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.InitParamTypeImpl#getParamName <em>Param Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.InitParamTypeImpl#getParamValue <em>Param Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.InitParamTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.InitParamTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -377,7 +377,7 @@ public class InitParamTypeImpl extends EObjectImpl implements InitParamType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.EjbLocalRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.EjbLocalRefType#getEjbRefName <em>Ejb Ref Name</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.EjbLocalRefType#getEjbLink <em>Ejb Link</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.EjbLocalRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getEjbLocalRefType()
  * @model extendedMetaData="name='ejb-local-ref_._type' kind='elementOnly'"

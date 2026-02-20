@@ -40,6 +40,7 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.HandlerChainTypeImpl#getServiceNamePattern <em>Service Name Pattern</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.HandlerChainTypeImpl#getPortNamePattern <em>Port Name Pattern</em>}</li>
@@ -47,7 +48,6 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.HandlerChainTypeImpl#getHandler <em>Handler</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.HandlerChainTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -380,7 +380,7 @@ public class HandlerChainTypeImpl extends EObjectImpl implements HandlerChainTyp
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (serviceNamePattern: "); //$NON-NLS-1$
 		result.append(serviceNamePattern);
 		result.append(", portNamePattern: "); //$NON-NLS-1$

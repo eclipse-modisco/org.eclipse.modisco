@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ContextParamType#getParamName <em>Param Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ContextParamType#getParamValue <em>Param Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ContextParamType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ContextParamType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getContextParamType()
  * @model extendedMetaData="name='context-param_._type' kind='elementOnly'"

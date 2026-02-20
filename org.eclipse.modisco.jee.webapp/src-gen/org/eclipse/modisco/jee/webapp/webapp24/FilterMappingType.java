@@ -46,6 +46,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.FilterMappingType#getFilterName <em>Filter Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.FilterMappingType#getUrlPattern <em>Url Pattern</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.FilterMappingType#getDispatcher <em>Dispatcher</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.FilterMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getFilterMappingType()
  * @model extendedMetaData="name='filter-mappingType' kind='elementOnly'"

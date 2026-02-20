@@ -31,13 +31,13 @@ import org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.MultipartConfigTypeImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.MultipartConfigTypeImpl#getMaxFileSize <em>Max File Size</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.MultipartConfigTypeImpl#getMaxRequestSize <em>Max Request Size</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.impl.MultipartConfigTypeImpl#getFileSizeThreshold <em>File Size Threshold</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -416,7 +416,7 @@ public class MultipartConfigTypeImpl extends EObjectImpl implements MultipartCon
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (maxFileSize: "); //$NON-NLS-1$
 		if (maxFileSizeESet) result.append(maxFileSize); else result.append("<unset>"); //$NON-NLS-1$
 		result.append(", maxRequestSize: "); //$NON-NLS-1$

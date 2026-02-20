@@ -48,6 +48,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FilterMappingType#getFilterName <em>Filter Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FilterMappingType#getGroup <em>Group</em>}</li>
@@ -56,7 +57,6 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FilterMappingType#getDispatcher <em>Dispatcher</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp30.FilterMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp30.Webapp30Package#getFilterMappingType()
  * @model extendedMetaData="name='filter-mappingType' kind='elementOnly'"
