@@ -46,6 +46,7 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 	public static final String ROOT_NAME = "web-app"; //$NON-NLS-1$
 	public static final String DTD_URL = "http://java.sun.com/"; //$NON-NLS-1$
 
+	@Override
 	public boolean isApplicableTo(final IFile source) {
 		return isAnIFileWithExtension(source, "xml"); //$NON-NLS-1$
 	}
@@ -70,8 +71,8 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 				WebXMLDIscoveryConstants.WEB_XML_MODEL_FILE_SUFFIX)));
 
 		final URI sourceURI = URI.createFileURI(file.getPath().toString());
-		initializeResourceFactory(file);
-		discoverResource(sourceURI);
+		initializeResourceFactory(sourceURI);
+		discoverResourceInternal(sourceURI);
 
 		monitor.setTaskName(Messages.AbstractModelDiscoverer_savingModel);
 		if (isTargetSerializationChosen()) {
@@ -83,19 +84,24 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 		}
 	}
 
+	public void discoverResource(URI sourceURI) throws DiscoveryException {
+		initializeResourceFactory(sourceURI);
+		discoverResourceInternal(sourceURI);
+	}
+
 	@Override
 	protected void basicDiscoverElement(final IFile source, final IProgressMonitor monitor)
 			throws DiscoveryException {
 		setDefaultTargetURI(URI.createPlatformResourceURI(
 				source.getFullPath().toString()
 						.concat(WebXMLDIscoveryConstants.WEB_XML_MODEL_FILE_SUFFIX), true));
-		initializeResourceFactory(source);
 		URI sourceURI = URI.createPlatformResourceURI(source.getFullPath().toString(), true);
-		discoverResource(sourceURI);
+		initializeResourceFactory(sourceURI);
+		discoverResourceInternal(sourceURI);
 	}
 
-	private static void initializeResourceFactory(final Object source) throws DiscoveryException {
-		String version = getDescXmlVersion(WebXmlActivator.getDefault(), source,
+	private static void initializeResourceFactory(final URI sourceURI) throws DiscoveryException {
+		String version = getDescXmlVersion(WebXmlActivator.getDefault(), sourceURI,
 				WebXmlDiscoverer2.ROOT_NAME, WebXmlDiscoverer2.DTD_URL);
 
 		// Chose the right Factory according to the detected version
@@ -116,7 +122,7 @@ public class WebXmlDiscoverer2 extends AbstractDeploymentDescriptorDiscoverer<IF
 		}
 	}
 
-	private void discoverResource(final URI sourceURI) throws DiscoveryException {
+	private void discoverResourceInternal(final URI sourceURI) throws DiscoveryException {
 		try {
 			Resource resource = getModiscoResourceFactory().createResource(sourceURI);
 			// A ResourceSet is necessary for EPackage.Registry
