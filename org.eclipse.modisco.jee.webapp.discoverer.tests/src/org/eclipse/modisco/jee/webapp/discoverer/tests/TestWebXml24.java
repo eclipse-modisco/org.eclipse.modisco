@@ -54,7 +54,7 @@ public class TestWebXml24 {
 					+ TestWebXml24.RESOURCES_TEST1_XML);
 
 			File xmlFile = new File(path.toOSString());
-			Assert.assertTrue("Count not find " + path.toString(), xmlFile.exists());
+			Assert.assertTrue("Could not find " + path.toString(), xmlFile.exists());
 
 			WebXmlDiscoverer2 discoverer = (WebXmlDiscoverer2) IDiscoveryManager.INSTANCE
 					.createDiscovererImpl(WebXmlDiscoverer2.ID);

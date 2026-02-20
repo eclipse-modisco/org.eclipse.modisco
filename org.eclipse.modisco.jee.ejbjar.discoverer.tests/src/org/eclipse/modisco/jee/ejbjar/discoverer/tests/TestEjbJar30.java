@@ -49,7 +49,7 @@ public class TestEjbJar30 {
 					+ TestEjbJar30.RESOURCES_TEST_XML);
 
 			File xmlFile = new File(path.toOSString());
-			Assert.assertTrue("Count not find " + path.toString(), xmlFile.exists());
+			Assert.assertTrue("Could not find " + path.toString(), xmlFile.exists());
 
 			EjbJarDiscoverer2 discoverer = (EjbJarDiscoverer2) IDiscoveryManager.INSTANCE
 					.createDiscovererImpl(EjbJarDiscoverer2.ID);
