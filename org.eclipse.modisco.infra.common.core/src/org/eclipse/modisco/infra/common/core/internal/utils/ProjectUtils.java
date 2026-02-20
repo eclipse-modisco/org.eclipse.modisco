@@ -272,13 +272,17 @@ public final class ProjectUtils {
 
 	public static IProject importPlugin(final Bundle bundle, final IFilter filter)
 			throws CoreException, IOException {
+		// FIXME Try using URIConverter code from e.g. org.eclipse.modisco.jee.ejbjar.discoverer.tests.EjbJarTests.getSourceURI
 		final String bundleName = bundle.getSymbolicName();
+		System.out.println("importPlugin bundle:" + bundleName);
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(bundleName);
+		System.out.println("importPlugin project:" + project);
 		if (project.exists()) {
 			int n = 1;
 			final int maxIter = 100;
 			while (project.exists() && n < maxIter) {
 				String uniqueName = bundleName + " (" + n + ")"; //$NON-NLS-1$ //$NON-NLS-2$
+				System.out.println("importPlugin uniqueName:" + uniqueName);
 				project = ResourcesPlugin.getWorkspace().getRoot().getProject(uniqueName);
 				n++;
 			}
@@ -288,20 +292,29 @@ public final class ProjectUtils {
 		ZipFile zip = null;
 		try {
 			final String bundlePath = bundle.getLocation();
+			System.out.println("importPlugin bundlePath:" + bundlePath);
 			String filePath;
 			final Location platformInstall = Platform.getInstallLocation();
+			System.out.println("importPlugin platformInstall:" + platformInstall);
 			final URL url = platformInstall.getURL();
+			System.out.println("importPlugin url:" + url);
 			final String installPath = url.toString().replaceAll(".*file:", ""); //$NON-NLS-1$ //$NON-NLS-2$
+			System.out.println("importPlugin installPath:" + installPath);
 			if (bundlePath
 					.startsWith("initial@reference:file:")) { //$NON-NLS-1$
 				// cas d'un chemin relatif
 				filePath = bundlePath.replaceAll(
 						"initial@reference:file:", //$NON-NLS-1$
-						installPath);
+						"");
+				if (filePath.startsWith(".")) {
+					filePath = installPath + filePath;
+				}
 			} else {
 				filePath = bundlePath.replaceFirst("^reference:file:", ""); //$NON-NLS-1$ //$NON-NLS-2$
 			}
+			System.out.println("importPlugin filePath:" + filePath);
 			File bundleFile = new File(filePath);
+			System.out.println("importPlugin bundleFile:" + bundleFile);
 			if (bundleFile.isDirectory()) {
 				FolderUtils.copyDirectory(bundleFile, project.getLocation().toFile(), filter);
 			} else {

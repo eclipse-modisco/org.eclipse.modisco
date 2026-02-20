@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.facet.util.pde.core.internal.exported.TargetPlatformUtils;
+import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.builder.EcoreCatalog;
@@ -55,7 +55,6 @@ import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
 import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
-import org.eclipse.modisco.facet.util.core.Logger;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
 import org.eclipse.modisco.infra.facet.FacetReference;
@@ -68,7 +67,6 @@ import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.eclipse.modisco.infra.query.tests.Utils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -605,6 +603,7 @@ public class FacetTests {
 	public void bug307715() throws CoreException, IOException {
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -613,6 +612,7 @@ public class FacetTests {
 		log.addLogListener(listener);
 		ProjectUtils.importPlugin(Platform.getBundle("org.eclipse.modisco.java.queries"),
 				new IFilter() {
+					@Override
 					public boolean filter(final Object object) {
 						boolean result = true;
 						if (object instanceof File) {
@@ -648,6 +648,7 @@ public class FacetTests {
 
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -669,7 +670,7 @@ public class FacetTests {
 				javaQueriesBundle);
 		System.out.println(new File("src/").getCanonicalPath());
 		System.out.println(project.getLocation().toString());
-		FolderUtils.copyFolderFromBundle("/src", javaQueriesBundle, "workspace/bug307715v2/src/", project);
+		FolderUtils.copyFolderFromBundle("/src/", org.eclipse.modisco.java.queries.Activator.getDefault(), "workspace/bug307715v2/src/", project);
 		FileUtils.copyFileFromBundle("textJavaQueries.querySet", project, "workspace/bug307715v2/"
 				+ "textJavaQueries.querySet", javaQueriesBundle);
 		// addWSFile querySet
@@ -743,6 +744,7 @@ public class FacetTests {
 
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -751,6 +753,7 @@ public class FacetTests {
 		log.addLogListener(listener);
 		String pluginName = "org.eclipse.modisco.infra.browser.custom.examples.java.jdk";
 		ProjectUtils.importPlugin(Platform.getBundle(pluginName), new IFilter() {
+			@Override
 			public boolean filter(final Object object) {
 				boolean result = true;
 				if (object instanceof File) {

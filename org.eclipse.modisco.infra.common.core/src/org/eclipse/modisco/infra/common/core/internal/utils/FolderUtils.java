@@ -23,6 +23,7 @@ import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -365,22 +366,34 @@ public final class FolderUtils {
 
 	public static void copyFolderFromBundle(final String sourcePath, final Plugin sourcePlugin,
 			final String destinationPath, final IProject project) throws IOException, CoreException {
-		FolderUtils.copyFolderFromBundle(sourcePath, sourcePlugin.getBundle(), destinationPath,
-				project);
+		FolderUtils.copyFolderFromBundleInternal(sourcePath, sourcePlugin.getBundle(), destinationPath, project);
+	}
+
+	/**
+	 * Copies the source directory to the target directory. The target is
+	 * created if it does not exist.
+	 * 
+	 * @Deprecated Use Plugin argument to avoid wrong 'bundle' on Tycho.
+	 */
+	@Deprecated
+	public static void copyFolderFromBundle(final String sourcePath, final Bundle sourceBundle,
+			final String destinationPath, final IProject project) throws IOException, CoreException {
+		FolderUtils.copyFolderFromBundleInternal(sourcePath, sourceBundle, destinationPath, project);
 	}
 
 	/**
 	 * Copies the source directory to the target directory. The target is
 	 * created if it does not exist.
 	 */
-	public static void copyFolderFromBundle(final String sourcePath, final Bundle sourceBundle,
+	private static void copyFolderFromBundleInternal(final String sourcePath, final Bundle sourceBundle,
 			final String destinationPath, final IProject project) throws IOException, CoreException {
 		System.out.println("copyFolderFromBundle " + sourceBundle.getSymbolicName() + "[" + sourcePath + "] to " + project.toString() + "[" + destinationPath + "]");
 		Enumeration<?> e = sourceBundle.getEntryPaths(sourcePath);
 		if (e == null) {
 			// it should be a file (not a folder)
 			try {
-				InputStream source = sourceBundle.getEntry(sourcePath).openStream();
+				URL entry = sourceBundle.getEntry(sourcePath);
+				InputStream source = entry.openStream();
 				IFile javaFile = project.getFile(destinationPath);
 				if (javaFile.exists()) {
 					javaFile.delete(true, new NullProgressMonitor());
@@ -409,7 +422,7 @@ public final class FolderUtils {
 					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
 						String dest = subDestinationPath
 								+ subpath.substring(sourcePath.length() - 1);
-						FolderUtils.copyFolderFromBundle(subpath, sourceBundle, dest, project);
+						FolderUtils.copyFolderFromBundleInternal(subpath, sourceBundle, dest, project);
 					}
 				} else {
 					throw new RuntimeException("Unexpected element type"); //$NON-NLS-1$

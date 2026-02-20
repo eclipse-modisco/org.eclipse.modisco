@@ -6,9 +6,12 @@ Bundle-Version: 1.6.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.eclipse.modisco.java.queries.Activator
 Bundle-ClassPath: .,bin
 Require-Bundle: org.eclipse.modisco.infra.query.core;bundle-version="0.8.0",
+ org.eclipse.core.runtime;bundle-version="3.5.0",
  org.eclipse.modisco.java;bundle-version="0.6.0"
-Export-Package: org.eclipse.modisco.java.queries.modifiers,
+Export-Package: org.eclipse.modisco.java.queries,
+ org.eclipse.modisco.java.queries.modifiers,
  org.eclipse.modisco.java.queries.text
 Automatic-Module-Name: org.eclipse.modisco.java.queries
