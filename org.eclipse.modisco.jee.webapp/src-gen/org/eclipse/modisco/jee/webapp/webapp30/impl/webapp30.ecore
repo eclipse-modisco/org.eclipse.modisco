@@ -1955,7 +1955,7 @@
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="null-charType"/>
     </eAnnotations>
-    <eLiterals name="_" literal=""/>
+    <eLiterals name="NULL_CHAR_OBJECT" literal=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="NullCharTypeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

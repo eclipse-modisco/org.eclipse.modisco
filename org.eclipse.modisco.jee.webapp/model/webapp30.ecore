@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- *  Copyright (c) 2010 Mia-Software and others.
- *  All rights reserved. This program and the accompanying materials
- *  are made available under the terms of the Eclipse Public License v2.0
- *  which accompanies this distribution, and is available at
- *  http://www.eclipse.org/legal/epl-v20.html
- *  
- *  Contributors:
- *  
- *      Nicolas Guyomar (Mia-Software) - initial API and implementation
- -->
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webapp30"
-    nsURI="http://www.eclipse.org/MoDisco/Javaee/web-app_3_0.xsd" nsPrefix="webapp30">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webapp30" nsURI="http://www.eclipse.org/MoDisco/Javaee/web-app_3_0.xsd"
+    nsPrefix="webapp30">
   <eClassifiers xsi:type="ecore:EClass" name="AbsoluteOrderingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="&#xD;&#xA;&#xD;&#xA;        Please see section 8.2.2 of the specification for details.&#xD;&#xA;        &#xD;&#xA;      "/>
@@ -2384,7 +2372,7 @@
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="null-charType"/>
     </eAnnotations>
-    <eLiterals name="_" literal=""/>
+    <eLiterals name="NULL_CHAR_OBJECT" literal=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="NullCharTypeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

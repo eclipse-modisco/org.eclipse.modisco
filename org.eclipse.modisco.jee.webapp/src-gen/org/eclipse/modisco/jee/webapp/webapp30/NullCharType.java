@@ -30,29 +30,25 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum NullCharType implements Enumerator {
 	/**
-	 * The '<em><b></b></em>' literal object.
+	 * The '<em><b>NULL CHAR OBJECT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #__VALUE
-	 * @generated
+	 * @see #NULL_CHAR_OBJECT_VALUE
+	 * @generated NOT
 	 * @ordered
 	 */
-	_(0, "_", ""); //$NON-NLS-1$ //$NON-NLS-2$
+	NULL_CHAR_OBJECT(0, "_", ""); //$NON-NLS-1$ //$NON-NLS-2$
 
 	/**
-	 * The '<em><b></b></em>' literal value.
+	 * The '<em><b>NULL CHAR OBJECT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b></b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #_
+	 * @see #NULL_CHAR_OBJECT
 	 * @model literal=""
 	 * @generated
 	 * @ordered
 	 */
-	public static final int __VALUE = 0;
+	public static final int NULL_CHAR_OBJECT_VALUE = 0;
 
 	/**
 	 * An array of all the '<em><b>Null Char Type</b></em>' enumerators.
@@ -62,7 +58,7 @@ public enum NullCharType implements Enumerator {
 	 */
 	private static final NullCharType[] VALUES_ARRAY =
 		new NullCharType[] {
-			_,
+			NULL_CHAR_OBJECT,
 		};
 
 	/**
@@ -119,7 +115,7 @@ public enum NullCharType implements Enumerator {
 	 */
 	public static NullCharType get(int value) {
 		switch (value) {
-			case __VALUE: return _;
+			case NULL_CHAR_OBJECT_VALUE: return NULL_CHAR_OBJECT;
 		}
 		return null;
 	}

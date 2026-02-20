@@ -6102,7 +6102,7 @@ public class Webapp25PackageImpl extends EPackageImpl implements Webapp25Package
 		addEEnumLiteral(messageDestinationUsageTypeBaseEEnum, MessageDestinationUsageTypeBase.CONSUMES_PRODUCES);
 
 		initEEnum(nullCharTypeEEnum, NullCharType.class, "NullCharType"); //$NON-NLS-1$
-		addEEnumLiteral(nullCharTypeEEnum, NullCharType._);
+		addEEnumLiteral(nullCharTypeEEnum, NullCharType.NULL_CHAR_OBJECT);
 
 		initEEnum(persistenceContextTypeTypeBaseEEnum, PersistenceContextTypeTypeBase.class, "PersistenceContextTypeTypeBase"); //$NON-NLS-1$
 		addEEnumLiteral(persistenceContextTypeTypeBaseEEnum, PersistenceContextTypeTypeBase.TRANSACTION);
