@@ -18,12 +18,35 @@ Contributors:
 
 <plugin>
 
+   <!-- see /model/Readme.txt -->
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated webapp22 -->
+      <package
+            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_2.dtd"
+            class="org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package"
+            genModel="model/webapp22.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated webapp23 -->
+      <package
+            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_3.dtd"
+            class="org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package"
+            genModel="model/webapp23.genmodel"/>
+   </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="webapp23"
             class="org.eclipse.modisco.jee.webapp.webapp23.util.Webapp23ResourceFactoryImpl"/>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated webapp24 -->
+      <package
+            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_4.xsd"
+            class="org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package"
+            genModel="model/webapp24.genmodel"/>
+   </extension>
+
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="webapp24"
@@ -55,48 +78,13 @@ Contributors:
             type="webapp30"
             class="org.eclipse.modisco.jee.webapp.webapp30.util.Webapp30ResourceFactoryImpl"/>
    </extension>
+
    <extension
          point="org.eclipse.emf.ecore.extension_parser">
       <parser
             class="org.eclipse.modisco.jee.webapp.webapp22.util.Webapp22ResourceFactoryImpl"
             type="webapp22">
       </parser>
-   </extension>
-   <!-- see /model/Readme.txt -->
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
-      <package
-            class="org.eclipse.modisco.jee.webapp.webapp22.impl.Webapp22PackageImpl"
-            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_2.dtd">
-      </package>
-   </extension>
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
-      <package
-            class="org.eclipse.modisco.jee.webapp.webapp23.impl.Webapp23PackageImpl"
-            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_3.dtd">
-      </package>
-   </extension>
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
-      <package
-            class="org.eclipse.modisco.jee.webapp.webapp24.impl.Webapp24PackageImpl"
-            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_4.xsd">
-      </package>
-   </extension>
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
-      <package
-            class="org.eclipse.modisco.jee.webapp.webapp25.impl.Webapp25PackageImpl"
-            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_2_5.xsd">
-      </package>
-   </extension>
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
-      <package
-            class="org.eclipse.modisco.jee.webapp.webapp30.impl.Webapp30PackageImpl"
-            uri="http://www.eclipse.org/MoDisco/Javaee/web-app_3_0.xsd">
-      </package>
    </extension>
 
 
