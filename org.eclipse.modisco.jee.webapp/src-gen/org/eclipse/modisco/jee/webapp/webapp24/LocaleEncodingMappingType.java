@@ -32,12 +32,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.LocaleEncodingMappingType#getLocale <em>Locale</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.LocaleEncodingMappingType#getEncoding <em>Encoding</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.LocaleEncodingMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getLocaleEncodingMappingType()
  * @model extendedMetaData="name='locale-encoding-mappingType' kind='elementOnly'"

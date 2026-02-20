@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.InitParamType#getParamName <em>Param Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.InitParamType#getParamValue <em>Param Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.InitParamType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.InitParamType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getInitParamType()
  * @model extendedMetaData="name='init-param_._type' kind='elementOnly'"

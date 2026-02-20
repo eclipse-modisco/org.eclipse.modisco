@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.EnvEntryValueType#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.EnvEntryValueType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getEnvEntryValueType()
  * @model extendedMetaData="name='env-entry-value_._type' kind='mixed'"

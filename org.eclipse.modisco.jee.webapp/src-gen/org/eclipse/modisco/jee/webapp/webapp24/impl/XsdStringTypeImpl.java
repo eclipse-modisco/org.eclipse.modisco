@@ -29,11 +29,11 @@ import org.eclipse.modisco.jee.webapp.webapp24.XsdStringType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.XsdStringTypeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.impl.XsdStringTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -216,7 +216,7 @@ public class XsdStringTypeImpl extends EObjectImpl implements XsdStringType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: "); //$NON-NLS-1$
 		result.append(value);
 		result.append(", id: "); //$NON-NLS-1$

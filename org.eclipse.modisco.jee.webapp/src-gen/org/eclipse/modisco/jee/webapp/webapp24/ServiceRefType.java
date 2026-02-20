@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.ServiceRefType#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.ServiceRefType#getDisplayName <em>Display Name</em>}</li>
@@ -51,7 +52,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.ServiceRefType#getHandler <em>Handler</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.ServiceRefType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getServiceRefType()
  * @model extendedMetaData="name='service-refType' kind='elementOnly'"

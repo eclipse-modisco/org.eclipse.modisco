@@ -33,6 +33,7 @@ import org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.ResourceRefTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.ResourceRefTypeImpl#getResRefName <em>Res Ref Name</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.ResourceRefTypeImpl#getResAuth <em>Res Auth</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.ResourceRefTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -444,7 +444,7 @@ public class ResourceRefTypeImpl extends EObjectImpl implements ResourceRefType 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

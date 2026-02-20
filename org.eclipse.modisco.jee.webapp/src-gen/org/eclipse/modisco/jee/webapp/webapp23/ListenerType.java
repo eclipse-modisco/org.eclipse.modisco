@@ -19,10 +19,10 @@ package org.eclipse.modisco.jee.webapp.webapp23;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.ListenerType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getListenerType()
  * @model extendedMetaData="name='listener_._type' kind='elementOnly'"

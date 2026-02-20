@@ -1050,7 +1050,7 @@ public class Webapp24PackageImpl extends EPackageImpl implements Webapp24Package
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Webapp24Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -1064,7 +1064,8 @@ public class Webapp24PackageImpl extends EPackageImpl implements Webapp24Package
 		if (isInited) return (Webapp24Package)EPackage.Registry.INSTANCE.getEPackage(Webapp24Package.eNS_URI);
 
 		// Obtain or create and register package
-		Webapp24PackageImpl theWebapp24Package = (Webapp24PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Webapp24PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Webapp24PackageImpl());
+		Object registeredWebapp24Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Webapp24PackageImpl theWebapp24Package = registeredWebapp24Package instanceof Webapp24PackageImpl ? (Webapp24PackageImpl)registeredWebapp24Package : new Webapp24PackageImpl();
 
 		isInited = true;
 
@@ -1080,7 +1081,7 @@ public class Webapp24PackageImpl extends EPackageImpl implements Webapp24Package
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theWebapp24Package, 
+			(theWebapp24Package,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return Webapp24Validator.INSTANCE;
@@ -1090,7 +1091,6 @@ public class Webapp24PackageImpl extends EPackageImpl implements Webapp24Package
 		// Mark meta-data to indicate it can't be changed
 		theWebapp24Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Webapp24Package.eNS_URI, theWebapp24Package);
 		return theWebapp24Package;
@@ -5298,2654 +5298,2654 @@ public class Webapp24PackageImpl extends EPackageImpl implements Webapp24Package
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$			
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData"; //$NON-NLS-1$
 		addAnnotation
-		  (authConstraintTypeEClass, 
-		   source, 
+		  (authConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "auth-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "auth-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_Description(), 
-		   source, 
+		  (getAuthConstraintType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_RoleName(), 
-		   source, 
+		  (getAuthConstraintType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getAuthConstraintType_Id(), 
-		   source, 
+		  (getAuthConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (authMethodTypeEClass, 
-		   source, 
+		  (authMethodTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "auth-methodType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "auth-methodType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (authMethodTypeBaseEDataType, 
-		   source, 
+		  (authMethodTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "auth-methodType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "auth-methodType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (descriptionTypeEClass, 
-		   source, 
+		  (descriptionTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "descriptionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "descriptionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDescriptionType_Lang(), 
-		   source, 
+		  (getDescriptionType_Lang(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (deweyVersionTypeEDataType, 
-		   source, 
+		  (deweyVersionTypeEDataType,
+		   source,
 		   new String[] {
-			 "name", "dewey-versionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#decimal", //$NON-NLS-1$ //$NON-NLS-2$
-			 "whiteSpace", "collapse" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "dewey-versionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#decimal", //$NON-NLS-1$ //$NON-NLS-2$
+			   "whiteSpace", "collapse" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (dispatcherTypeEClass, 
-		   source, 
+		  (dispatcherTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "dispatcherType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "dispatcherType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (dispatcherTypeBaseEEnum, 
-		   source, 
+		  (dispatcherTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "dispatcherType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "dispatcherType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (dispatcherTypeBaseObjectEDataType, 
-		   source, 
+		  (dispatcherTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "dispatcherType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "dispatcherType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "dispatcherType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "dispatcherType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (displayNameTypeEClass, 
-		   source, 
+		  (displayNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "display-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "display-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDisplayNameType_Lang(), 
-		   source, 
+		  (getDisplayNameType_Lang(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (documentRootEClass, 
-		   source, 
+		  (documentRootEClass,
+		   source,
 		   new String[] {
-			 "name", "", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_Mixed(), 
-		   source, 
+		  (getDocumentRoot_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "elementWildcard", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", ":mixed" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_XMLNSPrefixMap(), 
-		   source, 
+		  (getDocumentRoot_XMLNSPrefixMap(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xmlns:prefix" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_XSISchemaLocation(), 
-		   source, 
+		  (getDocumentRoot_XSISchemaLocation(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "xsi:schemaLocation" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getDocumentRoot_WebApp(), 
-		   source, 
+		  (getDocumentRoot_WebApp(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-app", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-app", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbLinkTypeEClass, 
-		   source, 
+		  (ejbLinkTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-linkType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-linkType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbLinkTypeBaseEDataType, 
-		   source, 
+		  (ejbLinkTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "ejb-linkType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "ejb-linkType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbLocalRefTypeEClass, 
-		   source, 
+		  (ejbLocalRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-local-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-local-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Description(), 
-		   source, 
+		  (getEjbLocalRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbRefName(), 
-		   source, 
+		  (getEjbLocalRefType_EjbRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbRefType(), 
-		   source, 
+		  (getEjbLocalRefType_EjbRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_LocalHome(), 
-		   source, 
+		  (getEjbLocalRefType_LocalHome(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local-home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Local(), 
-		   source, 
+		  (getEjbLocalRefType_Local(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "local", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_EjbLink(), 
-		   source, 
+		  (getEjbLocalRefType_EjbLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbLocalRefType_Id(), 
-		   source, 
+		  (getEjbLocalRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefNameTypeEClass, 
-		   source, 
+		  (ejbRefNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefNameTypeBaseEDataType, 
-		   source, 
+		  (ejbRefNameTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-nameType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "ejb-ref-nameType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeEClass, 
-		   source, 
+		  (ejbRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Description(), 
-		   source, 
+		  (getEjbRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbRefName(), 
-		   source, 
+		  (getEjbRefType_EjbRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbRefType(), 
-		   source, 
+		  (getEjbRefType_EjbRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Home(), 
-		   source, 
+		  (getEjbRefType_Home(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "home", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Remote(), 
-		   source, 
+		  (getEjbRefType_Remote(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "remote", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_EjbLink(), 
-		   source, 
+		  (getEjbRefType_EjbLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEjbRefType_Id(), 
-		   source, 
+		  (getEjbRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeTypeEClass, 
-		   source, 
+		  (ejbRefTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-typeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref-typeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeTypeBaseEEnum, 
-		   source, 
+		  (ejbRefTypeTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "ejb-ref-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (ejbRefTypeTypeBaseObjectEDataType, 
-		   source, 
+		  (ejbRefTypeTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "ejb-ref-typeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "ejb-ref-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "ejb-ref-typeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "ejb-ref-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (emptyTypeEClass, 
-		   source, 
+		  (emptyTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "emptyType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "emptyType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "empty" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEmptyType_Id(), 
-		   source, 
+		  (getEmptyType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (encodingTypeEDataType, 
-		   source, 
+		  (encodingTypeEDataType,
+		   source,
 		   new String[] {
-			 "name", "encodingType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#string", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "[^\\s]+" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "encodingType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#string", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "[^\\s]+" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeEClass, 
-		   source, 
+		  (envEntryTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entryType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entryType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_Description(), 
-		   source, 
+		  (getEnvEntryType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryName(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryType(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_EnvEntryValue(), 
-		   source, 
+		  (getEnvEntryType_EnvEntryValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getEnvEntryType_Id(), 
-		   source, 
+		  (getEnvEntryType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeValuesTypeEClass, 
-		   source, 
+		  (envEntryTypeValuesTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "env-entry-type-valuesType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry-type-valuesType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeValuesTypeBaseEEnum, 
-		   source, 
+		  (envEntryTypeValuesTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "env-entry-type-valuesType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "env-entry-type-valuesType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (envEntryTypeValuesTypeBaseObjectEDataType, 
-		   source, 
+		  (envEntryTypeValuesTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "env-entry-type-valuesType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "env-entry-type-valuesType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "env-entry-type-valuesType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "env-entry-type-valuesType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (errorCodeTypeEClass, 
-		   source, 
+		  (errorCodeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "error-codeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "error-codeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (errorCodeTypeBaseEDataType, 
-		   source, 
+		  (errorCodeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "error-codeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#positiveInteger", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "\\d{3}" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "error-codeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#positiveInteger", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "\\d{3}" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (errorPageTypeEClass, 
-		   source, 
+		  (errorPageTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "error-pageType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "error-pageType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_ErrorCode(), 
-		   source, 
+		  (getErrorPageType_ErrorCode(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-code", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_ExceptionType(), 
-		   source, 
+		  (getErrorPageType_ExceptionType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "exception-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_Location(), 
-		   source, 
+		  (getErrorPageType_Location(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getErrorPageType_Id(), 
-		   source, 
+		  (getErrorPageType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterMappingTypeEClass, 
-		   source, 
+		  (filterMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filter-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_FilterName(), 
-		   source, 
+		  (getFilterMappingType_FilterName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_UrlPattern(), 
-		   source, 
+		  (getFilterMappingType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_ServletName(), 
-		   source, 
+		  (getFilterMappingType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_Dispatcher(), 
-		   source, 
+		  (getFilterMappingType_Dispatcher(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "dispatcher", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "dispatcher", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterMappingType_Id(), 
-		   source, 
+		  (getFilterMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterNameTypeEClass, 
-		   source, 
+		  (filterNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filter-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "filter-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (filterTypeEClass, 
-		   source, 
+		  (filterTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "filterType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "filterType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Description(), 
-		   source, 
+		  (getFilterType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_DisplayName(), 
-		   source, 
+		  (getFilterType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Icon(), 
-		   source, 
+		  (getFilterType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_FilterName(), 
-		   source, 
+		  (getFilterType_FilterName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_FilterClass(), 
-		   source, 
+		  (getFilterType_FilterClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_InitParam(), 
-		   source, 
+		  (getFilterType_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFilterType_Id(), 
-		   source, 
+		  (getFilterType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (formLoginConfigTypeEClass, 
-		   source, 
+		  (formLoginConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "form-login-configType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "form-login-configType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_FormLoginPage(), 
-		   source, 
+		  (getFormLoginConfigType_FormLoginPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_FormErrorPage(), 
-		   source, 
+		  (getFormLoginConfigType_FormErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getFormLoginConfigType_Id(), 
-		   source, 
+		  (getFormLoginConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (fullyQualifiedClassTypeEClass, 
-		   source, 
+		  (fullyQualifiedClassTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "fully-qualified-classType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "fully-qualified-classType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (fullyQualifiedClassTypeBaseEDataType, 
-		   source, 
+		  (fullyQualifiedClassTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "fully-qualified-classType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "fully-qualified-classType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (genericBooleanTypeEClass, 
-		   source, 
+		  (genericBooleanTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "generic-booleanType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "generic-booleanType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (genericBooleanTypeBaseEEnum, 
-		   source, 
+		  (genericBooleanTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (genericBooleanTypeBaseObjectEDataType, 
-		   source, 
+		  (genericBooleanTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "generic-booleanType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "generic-booleanType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "generic-booleanType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (homeTypeEClass, 
-		   source, 
+		  (homeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "homeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "homeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (homeTypeBaseEDataType, 
-		   source, 
+		  (homeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "homeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "homeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (httpMethodTypeEClass, 
-		   source, 
+		  (httpMethodTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "http-methodType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "http-methodType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (httpMethodTypeBaseEEnum, 
-		   source, 
+		  (httpMethodTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "http-methodType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "http-methodType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (httpMethodTypeBaseObjectEDataType, 
-		   source, 
+		  (httpMethodTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "http-methodType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http-methodType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "http-methodType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http-methodType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (iconTypeEClass, 
-		   source, 
+		  (iconTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "iconType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "iconType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_SmallIcon(), 
-		   source, 
+		  (getIconType_SmallIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "small-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_LargeIcon(), 
-		   source, 
+		  (getIconType_LargeIcon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "large-icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_Id(), 
-		   source, 
+		  (getIconType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getIconType_Lang(), 
-		   source, 
+		  (getIconType_Lang(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "lang", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://www.w3.org/XML/1998/namespace" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaIdentifierTypeEClass, 
-		   source, 
+		  (javaIdentifierTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "java-identifierType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "java-identifierType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaIdentifierTypeBaseEDataType, 
-		   source, 
+		  (javaIdentifierTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "java-identifierType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "($|_|\\p{L})(\\p{L}|\\p{Nd}|_|$)*" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "java-identifierType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "($|_|\\p{L})(\\p{L}|\\p{Nd}|_|$)*" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaTypeTypeEClass, 
-		   source, 
+		  (javaTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "java-typeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "java-typeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (javaTypeTypeBaseEDataType, 
-		   source, 
+		  (javaTypeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "java-typeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "[^\\p{Z}]*" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "java-typeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "[^\\p{Z}]*" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jndiNameTypeEClass, 
-		   source, 
+		  (jndiNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "jndi-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "jndi-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jndiNameTypeBaseEDataType, 
-		   source, 
+		  (jndiNameTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "jndi-nameType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "jndi-nameType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jspConfigTypeEClass, 
-		   source, 
+		  (jspConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "jsp-configType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "jsp-configType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspConfigType_Taglib(), 
-		   source, 
+		  (getJspConfigType_Taglib(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspConfigType_JspPropertyGroup(), 
-		   source, 
+		  (getJspConfigType_JspPropertyGroup(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jsp-property-group", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jsp-property-group", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspConfigType_Id(), 
-		   source, 
+		  (getJspConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jspFileTypeEClass, 
-		   source, 
+		  (jspFileTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "jsp-fileType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "jsp-fileType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jspFileTypeBaseEDataType, 
-		   source, 
+		  (jspFileTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "jsp-fileType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "jsp-fileType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (jspPropertyGroupTypeEClass, 
-		   source, 
+		  (jspPropertyGroupTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "jsp-property-groupType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "jsp-property-groupType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_Description(), 
-		   source, 
+		  (getJspPropertyGroupType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_DisplayName(), 
-		   source, 
+		  (getJspPropertyGroupType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_Icon(), 
-		   source, 
+		  (getJspPropertyGroupType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_UrlPattern(), 
-		   source, 
+		  (getJspPropertyGroupType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_ElIgnored(), 
-		   source, 
+		  (getJspPropertyGroupType_ElIgnored(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "el-ignored", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "el-ignored", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_PageEncoding(), 
-		   source, 
+		  (getJspPropertyGroupType_PageEncoding(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "page-encoding", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "page-encoding", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_ScriptingInvalid(), 
-		   source, 
+		  (getJspPropertyGroupType_ScriptingInvalid(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "scripting-invalid", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "scripting-invalid", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_IsXml(), 
-		   source, 
+		  (getJspPropertyGroupType_IsXml(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "is-xml", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "is-xml", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_IncludePrelude(), 
-		   source, 
+		  (getJspPropertyGroupType_IncludePrelude(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "include-prelude", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "include-prelude", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_IncludeCoda(), 
-		   source, 
+		  (getJspPropertyGroupType_IncludeCoda(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "include-coda", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "include-coda", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getJspPropertyGroupType_Id(), 
-		   source, 
+		  (getJspPropertyGroupType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (listenerTypeEClass, 
-		   source, 
+		  (listenerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "listenerType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "listenerType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_Description(), 
-		   source, 
+		  (getListenerType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_DisplayName(), 
-		   source, 
+		  (getListenerType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_Icon(), 
-		   source, 
+		  (getListenerType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_ListenerClass(), 
-		   source, 
+		  (getListenerType_ListenerClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getListenerType_Id(), 
-		   source, 
+		  (getListenerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localeEncodingMappingListTypeEClass, 
-		   source, 
+		  (localeEncodingMappingListTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "locale-encoding-mapping-listType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "locale-encoding-mapping-listType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocaleEncodingMappingListType_LocaleEncodingMapping(), 
-		   source, 
+		  (getLocaleEncodingMappingListType_LocaleEncodingMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "locale-encoding-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "locale-encoding-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocaleEncodingMappingListType_Id(), 
-		   source, 
+		  (getLocaleEncodingMappingListType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localeEncodingMappingTypeEClass, 
-		   source, 
+		  (localeEncodingMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "locale-encoding-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "locale-encoding-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocaleEncodingMappingType_Locale(), 
-		   source, 
+		  (getLocaleEncodingMappingType_Locale(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "locale", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "locale", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocaleEncodingMappingType_Encoding(), 
-		   source, 
+		  (getLocaleEncodingMappingType_Encoding(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "encoding", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "encoding", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLocaleEncodingMappingType_Id(), 
-		   source, 
+		  (getLocaleEncodingMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localeTypeEDataType, 
-		   source, 
+		  (localeTypeEDataType,
+		   source,
 		   new String[] {
-			 "name", "localeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#string", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "[a-z]{2}(_|-)?([\\p{L}\\-\\p{Nd}]{2})?" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "localeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#string", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "[a-z]{2}(_|-)?([\\p{L}\\-\\p{Nd}]{2})?" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localHomeTypeEClass, 
-		   source, 
+		  (localHomeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "local-homeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "local-homeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localHomeTypeBaseEDataType, 
-		   source, 
+		  (localHomeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "local-homeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "local-homeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localTypeEClass, 
-		   source, 
+		  (localTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "localType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "localType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (localTypeBaseEDataType, 
-		   source, 
+		  (localTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "localType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "localType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (loginConfigTypeEClass, 
-		   source, 
+		  (loginConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "login-configType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "login-configType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_AuthMethod(), 
-		   source, 
+		  (getLoginConfigType_AuthMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_RealmName(), 
-		   source, 
+		  (getLoginConfigType_RealmName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "realm-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_FormLoginConfig(), 
-		   source, 
+		  (getLoginConfigType_FormLoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "form-login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getLoginConfigType_Id(), 
-		   source, 
+		  (getLoginConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationLinkTypeEClass, 
-		   source, 
+		  (messageDestinationLinkTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "message-destination-linkType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destination-linkType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationLinkTypeBaseEDataType, 
-		   source, 
+		  (messageDestinationLinkTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "message-destination-linkType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "message-destination-linkType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationRefTypeEClass, 
-		   source, 
+		  (messageDestinationRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "message-destination-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destination-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_Description(), 
-		   source, 
+		  (getMessageDestinationRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_MessageDestinationRefName(), 
-		   source, 
+		  (getMessageDestinationRefType_MessageDestinationRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_MessageDestinationType(), 
-		   source, 
+		  (getMessageDestinationRefType_MessageDestinationType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_MessageDestinationUsage(), 
-		   source, 
+		  (getMessageDestinationRefType_MessageDestinationUsage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-usage", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-usage", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_MessageDestinationLink(), 
-		   source, 
+		  (getMessageDestinationRefType_MessageDestinationLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationRefType_Id(), 
-		   source, 
+		  (getMessageDestinationRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationTypeEClass, 
-		   source, 
+		  (messageDestinationTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "message-destinationType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destinationType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationType_Description(), 
-		   source, 
+		  (getMessageDestinationType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationType_DisplayName(), 
-		   source, 
+		  (getMessageDestinationType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationType_Icon(), 
-		   source, 
+		  (getMessageDestinationType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationType_MessageDestinationName(), 
-		   source, 
+		  (getMessageDestinationType_MessageDestinationName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMessageDestinationType_Id(), 
-		   source, 
+		  (getMessageDestinationType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationTypeTypeEClass, 
-		   source, 
+		  (messageDestinationTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "message-destination-typeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destination-typeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationTypeTypeBaseEDataType, 
-		   source, 
+		  (messageDestinationTypeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "message-destination-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "message-destination-typeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationUsageTypeEClass, 
-		   source, 
+		  (messageDestinationUsageTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "message-destination-usageType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destination-usageType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationUsageTypeBaseEEnum, 
-		   source, 
+		  (messageDestinationUsageTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "message-destination-usageType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "message-destination-usageType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (messageDestinationUsageTypeBaseObjectEDataType, 
-		   source, 
+		  (messageDestinationUsageTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "message-destination-usageType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "message-destination-usageType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "message-destination-usageType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "message-destination-usageType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (mimeMappingTypeEClass, 
-		   source, 
+		  (mimeMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "mime-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "mime-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_Extension(), 
-		   source, 
+		  (getMimeMappingType_Extension(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "extension", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_MimeType(), 
-		   source, 
+		  (getMimeMappingType_MimeType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getMimeMappingType_Id(), 
-		   source, 
+		  (getMimeMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (mimeTypeTypeEClass, 
-		   source, 
+		  (mimeTypeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "mime-typeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "mime-typeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (mimeTypeTypeBaseEDataType, 
-		   source, 
+		  (mimeTypeTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "mime-typeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "[^\\p{Cc}^\\s]+/[^\\p{Cc}^\\s]+" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "mime-typeType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "[^\\p{Cc}^\\s]+/[^\\p{Cc}^\\s]+" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (nonEmptyStringTypeEClass, 
-		   source, 
+		  (nonEmptyStringTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "nonEmptyStringType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "nonEmptyStringType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (nonEmptyStringTypeBaseEDataType, 
-		   source, 
+		  (nonEmptyStringTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "nonEmptyStringType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "minLength", "1" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "nonEmptyStringType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "minLength", "1" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (paramValueTypeEClass, 
-		   source, 
+		  (paramValueTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "param-valueType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "param-valueType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_Description(), 
-		   source, 
+		  (getParamValueType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_ParamName(), 
-		   source, 
+		  (getParamValueType_ParamName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_ParamValue(), 
-		   source, 
+		  (getParamValueType_ParamValue(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "param-value", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getParamValueType_Id(), 
-		   source, 
+		  (getParamValueType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (pathTypeEClass, 
-		   source, 
+		  (pathTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "pathType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "pathType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (pathTypeBaseEDataType, 
-		   source, 
+		  (pathTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (portComponentRefTypeEClass, 
-		   source, 
+		  (portComponentRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "port-component-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "port-component-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getPortComponentRefType_ServiceEndpointInterface(), 
-		   source, 
+		  (getPortComponentRefType_ServiceEndpointInterface(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "service-endpoint-interface", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "service-endpoint-interface", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getPortComponentRefType_PortComponentLink(), 
-		   source, 
+		  (getPortComponentRefType_PortComponentLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "port-component-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "port-component-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getPortComponentRefType_Id(), 
-		   source, 
+		  (getPortComponentRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (remoteTypeEClass, 
-		   source, 
+		  (remoteTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "remoteType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "remoteType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (remoteTypeBaseEDataType, 
-		   source, 
+		  (remoteTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "remoteType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "remoteType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resAuthTypeEClass, 
-		   source, 
+		  (resAuthTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-authType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-authType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resAuthTypeBaseEEnum, 
-		   source, 
+		  (resAuthTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "res-authType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-authType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resAuthTypeBaseObjectEDataType, 
-		   source, 
+		  (resAuthTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "res-authType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "res-authType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "res-authType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "res-authType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceEnvRefTypeEClass, 
-		   source, 
+		  (resourceEnvRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-env-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-env-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_Description(), 
-		   source, 
+		  (getResourceEnvRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_ResourceEnvRefName(), 
-		   source, 
+		  (getResourceEnvRefType_ResourceEnvRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_ResourceEnvRefType(), 
-		   source, 
+		  (getResourceEnvRefType_ResourceEnvRefType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceEnvRefType_Id(), 
-		   source, 
+		  (getResourceEnvRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resourceRefTypeEClass, 
-		   source, 
+		  (resourceRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "resource-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "resource-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_Description(), 
-		   source, 
+		  (getResourceRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResRefName(), 
-		   source, 
+		  (getResourceRefType_ResRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResType(), 
-		   source, 
+		  (getResourceRefType_ResType(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-type", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResAuth(), 
-		   source, 
+		  (getResourceRefType_ResAuth(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-auth", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_ResSharingScope(), 
-		   source, 
+		  (getResourceRefType_ResSharingScope(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "res-sharing-scope", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getResourceRefType_Id(), 
-		   source, 
+		  (getResourceRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resSharingScopeTypeEClass, 
-		   source, 
+		  (resSharingScopeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "res-sharing-scopeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-sharing-scopeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resSharingScopeTypeBaseEEnum, 
-		   source, 
+		  (resSharingScopeTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "res-sharing-scopeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "res-sharing-scopeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (resSharingScopeTypeBaseObjectEDataType, 
-		   source, 
+		  (resSharingScopeTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "res-sharing-scopeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "res-sharing-scopeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "res-sharing-scopeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "res-sharing-scopeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (roleNameTypeEClass, 
-		   source, 
+		  (roleNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "role-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "role-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (roleNameTypeBaseEDataType, 
-		   source, 
+		  (roleNameTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "role-nameType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "role-nameType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (runAsTypeEClass, 
-		   source, 
+		  (runAsTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "run-asType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "run-asType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_Description(), 
-		   source, 
+		  (getRunAsType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_RoleName(), 
-		   source, 
+		  (getRunAsType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getRunAsType_Id(), 
-		   source, 
+		  (getRunAsType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityConstraintTypeEClass, 
-		   source, 
+		  (securityConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_DisplayName(), 
-		   source, 
+		  (getSecurityConstraintType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_WebResourceCollection(), 
-		   source, 
+		  (getSecurityConstraintType_WebResourceCollection(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-collection", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_AuthConstraint(), 
-		   source, 
+		  (getSecurityConstraintType_AuthConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "auth-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_UserDataConstraint(), 
-		   source, 
+		  (getSecurityConstraintType_UserDataConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "user-data-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityConstraintType_Id(), 
-		   source, 
+		  (getSecurityConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityRoleRefTypeEClass, 
-		   source, 
+		  (securityRoleRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-role-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-role-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_Description(), 
-		   source, 
+		  (getSecurityRoleRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_RoleName(), 
-		   source, 
+		  (getSecurityRoleRefType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_RoleLink(), 
-		   source, 
+		  (getSecurityRoleRefType_RoleLink(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-link", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleRefType_Id(), 
-		   source, 
+		  (getSecurityRoleRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (securityRoleTypeEClass, 
-		   source, 
+		  (securityRoleTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "security-roleType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "security-roleType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_Description(), 
-		   source, 
+		  (getSecurityRoleType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_RoleName(), 
-		   source, 
+		  (getSecurityRoleType_RoleName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "role-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSecurityRoleType_Id(), 
-		   source, 
+		  (getSecurityRoleType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (serviceRefHandlerTypeEClass, 
-		   source, 
+		  (serviceRefHandlerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "service-ref_handlerType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "service-ref_handlerType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_Description(), 
-		   source, 
+		  (getServiceRefHandlerType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_DisplayName(), 
-		   source, 
+		  (getServiceRefHandlerType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_Icon(), 
-		   source, 
+		  (getServiceRefHandlerType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_HandlerName(), 
-		   source, 
+		  (getServiceRefHandlerType_HandlerName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_HandlerClass(), 
-		   source, 
+		  (getServiceRefHandlerType_HandlerClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_InitParam(), 
-		   source, 
+		  (getServiceRefHandlerType_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_SoapHeader(), 
-		   source, 
+		  (getServiceRefHandlerType_SoapHeader(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "soap-header", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "soap-header", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_SoapRole(), 
-		   source, 
+		  (getServiceRefHandlerType_SoapRole(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "soap-role", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "soap-role", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_PortName(), 
-		   source, 
+		  (getServiceRefHandlerType_PortName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "port-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "port-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefHandlerType_Id(), 
-		   source, 
+		  (getServiceRefHandlerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (serviceRefTypeEClass, 
-		   source, 
+		  (serviceRefTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "service-refType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "service-refType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_Description(), 
-		   source, 
+		  (getServiceRefType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_DisplayName(), 
-		   source, 
+		  (getServiceRefType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_Icon(), 
-		   source, 
+		  (getServiceRefType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_ServiceRefName(), 
-		   source, 
+		  (getServiceRefType_ServiceRefName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "service-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "service-ref-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_ServiceInterface(), 
-		   source, 
+		  (getServiceRefType_ServiceInterface(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "service-interface", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "service-interface", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_WsdlFile(), 
-		   source, 
+		  (getServiceRefType_WsdlFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "wsdl-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "wsdl-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_JaxrpcMappingFile(), 
-		   source, 
+		  (getServiceRefType_JaxrpcMappingFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jaxrpc-mapping-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jaxrpc-mapping-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_ServiceQname(), 
-		   source, 
+		  (getServiceRefType_ServiceQname(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "service-qname", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "service-qname", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_PortComponentRef(), 
-		   source, 
+		  (getServiceRefType_PortComponentRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "port-component-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "port-component-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_Handler(), 
-		   source, 
+		  (getServiceRefType_Handler(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "handler", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "handler", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServiceRefType_Id(), 
-		   source, 
+		  (getServiceRefType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletMappingTypeEClass, 
-		   source, 
+		  (servletMappingTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servlet-mappingType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_ServletName(), 
-		   source, 
+		  (getServletMappingType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_UrlPattern(), 
-		   source, 
+		  (getServletMappingType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletMappingType_Id(), 
-		   source, 
+		  (getServletMappingType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletNameTypeEClass, 
-		   source, 
+		  (servletNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servlet-nameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "servlet-nameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (servletTypeEClass, 
-		   source, 
+		  (servletTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "servletType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "servletType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Description(), 
-		   source, 
+		  (getServletType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_DisplayName(), 
-		   source, 
+		  (getServletType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Icon(), 
-		   source, 
+		  (getServletType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_ServletName(), 
-		   source, 
+		  (getServletType_ServletName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_ServletClass(), 
-		   source, 
+		  (getServletType_ServletClass(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-class", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_JspFile(), 
-		   source, 
+		  (getServletType_JspFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jsp-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_InitParam(), 
-		   source, 
+		  (getServletType_InitParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "init-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_LoadOnStartup(), 
-		   source, 
+		  (getServletType_LoadOnStartup(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "load-on-startup", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_RunAs(), 
-		   source, 
+		  (getServletType_RunAs(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "run-as", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_SecurityRoleRef(), 
-		   source, 
+		  (getServletType_SecurityRoleRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getServletType_Id(), 
-		   source, 
+		  (getServletType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (sessionConfigTypeEClass, 
-		   source, 
+		  (sessionConfigTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "session-configType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "session-configType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionConfigType_SessionTimeout(), 
-		   source, 
+		  (getSessionConfigType_SessionTimeout(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-timeout", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getSessionConfigType_Id(), 
-		   source, 
+		  (getSessionConfigType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (stringEClass, 
-		   source, 
+		  (stringEClass,
+		   source,
 		   new String[] {
-			 "name", "string", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "string", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getString_Value(), 
-		   source, 
+		  (getString_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getString_Id(), 
-		   source, 
+		  (getString_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (taglibTypeEClass, 
-		   source, 
+		  (taglibTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "taglibType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "taglibType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_TaglibUri(), 
-		   source, 
+		  (getTaglibType_TaglibUri(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-uri", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_TaglibLocation(), 
-		   source, 
+		  (getTaglibType_TaglibLocation(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "taglib-location", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getTaglibType_Id(), 
-		   source, 
+		  (getTaglibType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (transportGuaranteeTypeEClass, 
-		   source, 
+		  (transportGuaranteeTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "transport-guaranteeType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "transport-guaranteeType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (transportGuaranteeTypeBaseEEnum, 
-		   source, 
+		  (transportGuaranteeTypeBaseEEnum,
+		   source,
 		   new String[] {
-			 "name", "transport-guaranteeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "transport-guaranteeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (transportGuaranteeTypeBaseObjectEDataType, 
-		   source, 
+		  (transportGuaranteeTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "transport-guaranteeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "transport-guaranteeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "transport-guaranteeType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "transport-guaranteeType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (trueFalseTypeEClass, 
-		   source, 
+		  (trueFalseTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "true-falseType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "true-falseType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (trueFalseTypeBaseEDataType, 
-		   source, 
+		  (trueFalseTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "true-falseType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#boolean", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "(true|false)" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "true-falseType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#boolean", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "(true|false)" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (trueFalseTypeBaseObjectEDataType, 
-		   source, 
+		  (trueFalseTypeBaseObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "true-falseType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "true-falseType_._base" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "true-falseType_._base:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "true-falseType_._base" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (urlPatternTypeEClass, 
-		   source, 
+		  (urlPatternTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "url-patternType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "url-patternType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUrlPatternType_Value(), 
-		   source, 
+		  (getUrlPatternType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (userDataConstraintTypeEClass, 
-		   source, 
+		  (userDataConstraintTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "user-data-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "user-data-constraintType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_Description(), 
-		   source, 
+		  (getUserDataConstraintType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_TransportGuarantee(), 
-		   source, 
+		  (getUserDataConstraintType_TransportGuarantee(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "transport-guarantee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getUserDataConstraintType_Id(), 
-		   source, 
+		  (getUserDataConstraintType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (warPathTypeEClass, 
-		   source, 
+		  (warPathTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "war-pathType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "war-pathType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (warPathTypeBaseEDataType, 
-		   source, 
+		  (warPathTypeBaseEDataType,
+		   source,
 		   new String[] {
-			 "name", "war-pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
-			 "pattern", "/.*" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "war-pathType_._base", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "http://www.eclipse.org/emf/2003/XMLType#token", //$NON-NLS-1$ //$NON-NLS-2$
+			   "pattern", "/.*" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webAppTypeEClass, 
-		   source, 
+		  (webAppTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "web-appType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "web-appType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Group(), 
-		   source, 
+		  (getWebAppType_Group(),
+		   source,
 		   new String[] {
-			 "kind", "group", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "group", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Description(), 
-		   source, 
+		  (getWebAppType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_DisplayName(), 
-		   source, 
+		  (getWebAppType_DisplayName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "display-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Icon(), 
-		   source, 
+		  (getWebAppType_Icon(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "icon", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Distributable(), 
-		   source, 
+		  (getWebAppType_Distributable(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "distributable", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ContextParam(), 
-		   source, 
+		  (getWebAppType_ContextParam(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "context-param", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Filter(), 
-		   source, 
+		  (getWebAppType_Filter(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_FilterMapping(), 
-		   source, 
+		  (getWebAppType_FilterMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "filter-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Listener(), 
-		   source, 
+		  (getWebAppType_Listener(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "listener", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Servlet(), 
-		   source, 
+		  (getWebAppType_Servlet(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ServletMapping(), 
-		   source, 
+		  (getWebAppType_ServletMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "servlet-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SessionConfig(), 
-		   source, 
+		  (getWebAppType_SessionConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "session-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_MimeMapping(), 
-		   source, 
+		  (getWebAppType_MimeMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "mime-mapping", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_WelcomeFileList(), 
-		   source, 
+		  (getWebAppType_WelcomeFileList(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file-list", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ErrorPage(), 
-		   source, 
+		  (getWebAppType_ErrorPage(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "error-page", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_JspConfig(), 
-		   source, 
+		  (getWebAppType_JspConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "jsp-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "jsp-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SecurityConstraint(), 
-		   source, 
+		  (getWebAppType_SecurityConstraint(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-constraint", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_LoginConfig(), 
-		   source, 
+		  (getWebAppType_LoginConfig(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "login-config", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_SecurityRole(), 
-		   source, 
+		  (getWebAppType_SecurityRole(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "security-role", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EnvEntry(), 
-		   source, 
+		  (getWebAppType_EnvEntry(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "env-entry", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EjbRef(), 
-		   source, 
+		  (getWebAppType_EjbRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_EjbLocalRef(), 
-		   source, 
+		  (getWebAppType_EjbLocalRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "ejb-local-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ServiceRef(), 
-		   source, 
+		  (getWebAppType_ServiceRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "service-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "service-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ResourceRef(), 
-		   source, 
+		  (getWebAppType_ResourceRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_ResourceEnvRef(), 
-		   source, 
+		  (getWebAppType_ResourceEnvRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "resource-env-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_MessageDestinationRef(), 
-		   source, 
+		  (getWebAppType_MessageDestinationRef(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination-ref", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination-ref", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_MessageDestination(), 
-		   source, 
+		  (getWebAppType_MessageDestination(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "message-destination", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "message-destination", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_LocaleEncodingMappingList(), 
-		   source, 
+		  (getWebAppType_LocaleEncodingMappingList(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "locale-encoding-mapping-list", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
-			 "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "locale-encoding-mapping-list", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee", //$NON-NLS-1$ //$NON-NLS-2$
+			   "group", "#group:0" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Id(), 
-		   source, 
+		  (getWebAppType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebAppType_Version(), 
-		   source, 
+		  (getWebAppType_Version(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "version" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "version" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webAppVersionTypeEEnum, 
-		   source, 
+		  (webAppVersionTypeEEnum,
+		   source,
 		   new String[] {
-			 "name", "web-app-versionType" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "web-app-versionType" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webAppVersionTypeObjectEDataType, 
-		   source, 
+		  (webAppVersionTypeObjectEDataType,
+		   source,
 		   new String[] {
-			 "name", "web-app-versionType:Object", //$NON-NLS-1$ //$NON-NLS-2$
-			 "baseType", "web-app-versionType" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "web-app-versionType:Object", //$NON-NLS-1$ //$NON-NLS-2$
+			   "baseType", "web-app-versionType" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (webResourceCollectionTypeEClass, 
-		   source, 
+		  (webResourceCollectionTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "web-resource-collectionType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "web-resource-collectionType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_WebResourceName(), 
-		   source, 
+		  (getWebResourceCollectionType_WebResourceName(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "web-resource-name", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_Description(), 
-		   source, 
+		  (getWebResourceCollectionType_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "description", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_UrlPattern(), 
-		   source, 
+		  (getWebResourceCollectionType_UrlPattern(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "url-pattern", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_HttpMethod(), 
-		   source, 
+		  (getWebResourceCollectionType_HttpMethod(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "http-method", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWebResourceCollectionType_Id(), 
-		   source, 
+		  (getWebResourceCollectionType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (welcomeFileListTypeEClass, 
-		   source, 
+		  (welcomeFileListTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "welcome-file-listType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "name", "welcome-file-listType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "elementOnly" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileListType_WelcomeFile(), 
-		   source, 
+		  (getWelcomeFileListType_WelcomeFile(),
+		   source,
 		   new String[] {
-			 "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
-			 "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "kind", "element", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "welcome-file", //$NON-NLS-1$ //$NON-NLS-2$
+			   "namespace", "http://java.sun.com/xml/ns/j2ee" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getWelcomeFileListType_Id(), 
-		   source, 
+		  (getWelcomeFileListType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdAnyURITypeEClass, 
-		   source, 
+		  (xsdAnyURITypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdAnyURIType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdAnyURIType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdAnyURIType_Value(), 
-		   source, 
+		  (getXsdAnyURIType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdAnyURIType_Id(), 
-		   source, 
+		  (getXsdAnyURIType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdBooleanTypeEClass, 
-		   source, 
+		  (xsdBooleanTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdBooleanType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdBooleanType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdBooleanType_Value(), 
-		   source, 
+		  (getXsdBooleanType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdBooleanType_Id(), 
-		   source, 
+		  (getXsdBooleanType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdIntegerTypeEClass, 
-		   source, 
+		  (xsdIntegerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdIntegerType_Value(), 
-		   source, 
+		  (getXsdIntegerType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdIntegerType_Id(), 
-		   source, 
+		  (getXsdIntegerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdNMTOKENTypeEClass, 
-		   source, 
+		  (xsdNMTOKENTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdNMTOKENType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdNMTOKENType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdNMTOKENType_Value(), 
-		   source, 
+		  (getXsdNMTOKENType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdNMTOKENType_Id(), 
-		   source, 
+		  (getXsdNMTOKENType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdNonNegativeIntegerTypeEClass, 
-		   source, 
+		  (xsdNonNegativeIntegerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdNonNegativeIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdNonNegativeIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdNonNegativeIntegerType_Value(), 
-		   source, 
+		  (getXsdNonNegativeIntegerType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdNonNegativeIntegerType_Id(), 
-		   source, 
+		  (getXsdNonNegativeIntegerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdPositiveIntegerTypeEClass, 
-		   source, 
+		  (xsdPositiveIntegerTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdPositiveIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdPositiveIntegerType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdPositiveIntegerType_Value(), 
-		   source, 
+		  (getXsdPositiveIntegerType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdPositiveIntegerType_Id(), 
-		   source, 
+		  (getXsdPositiveIntegerType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdQNameTypeEClass, 
-		   source, 
+		  (xsdQNameTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdQNameType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdQNameType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdQNameType_Value(), 
-		   source, 
+		  (getXsdQNameType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdQNameType_Id(), 
-		   source, 
+		  (getXsdQNameType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
-		   });			
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (xsdStringTypeEClass, 
-		   source, 
+		  (xsdStringTypeEClass,
+		   source,
 		   new String[] {
-			 "name", "xsdStringType", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", "xsdStringType", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdStringType_Value(), 
-		   source, 
+		  (getXsdStringType_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
-			 "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
-		   });		
+			   "name", ":0", //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "simple" //$NON-NLS-1$ //$NON-NLS-2$
+		   });
 		addAnnotation
-		  (getXsdStringType_Id(), 
-		   source, 
+		  (getXsdStringType_Id(),
+		   source,
 		   new String[] {
-			 "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
-			 "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
+			   "kind", "attribute", //$NON-NLS-1$ //$NON-NLS-2$
+			   "name", "id" //$NON-NLS-1$ //$NON-NLS-2$
 		   });
 	}
 

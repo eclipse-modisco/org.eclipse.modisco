@@ -35,11 +35,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WelcomeFileListType#getWelcomeFile <em>Welcome File</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WelcomeFileListType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getWelcomeFileListType()
  * @model extendedMetaData="name='welcome-file-listType' kind='elementOnly'"

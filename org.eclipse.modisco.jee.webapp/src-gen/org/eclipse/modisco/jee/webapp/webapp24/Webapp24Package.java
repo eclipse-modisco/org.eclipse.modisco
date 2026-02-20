@@ -7843,6 +7843,13 @@ public interface Webapp24Package extends EPackage {
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Encoding Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     * 	The encodingType defines IANA character sets.
+     * 
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Encoding Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
@@ -7976,6 +7983,14 @@ public interface Webapp24Package extends EPackage {
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Locale Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * 
+     * 
+     * 	The localeType defines valid locale defined by ISO-639-1
+     * 	and ISO-3166.
+     * 
+     *       
+     * <!-- end-model-doc -->
 	 * @return the meta object for data type '<em>Locale Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"

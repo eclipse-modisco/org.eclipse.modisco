@@ -135,7 +135,7 @@ public class Webapp24FactoryImpl extends EFactoryImpl implements Webapp24Factory
 	 */
 	public static Webapp24Factory init() {
 		try {
-			Webapp24Factory theWebapp24Factory = (Webapp24Factory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/MoDisco/Javaee/web-app_2_4.xsd"); //$NON-NLS-1$ 
+			Webapp24Factory theWebapp24Factory = (Webapp24Factory)EPackage.Registry.INSTANCE.getEFactory(Webapp24Package.eNS_URI);
 			if (theWebapp24Factory != null) {
 				return theWebapp24Factory;
 			}

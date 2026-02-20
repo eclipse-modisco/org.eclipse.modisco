@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.SecurityConstraintType#getDisplayName <em>Display Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.SecurityConstraintType#getWebResourceCollection <em>Web Resource Collection</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.SecurityConstraintType#getUserDataConstraint <em>User Data Constraint</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.SecurityConstraintType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getSecurityConstraintType()
  * @model extendedMetaData="name='security-constraintType' kind='elementOnly'"

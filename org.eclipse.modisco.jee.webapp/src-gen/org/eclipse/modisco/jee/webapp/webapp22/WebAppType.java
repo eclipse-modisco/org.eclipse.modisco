@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.WebAppType#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.WebAppType#getDisplayName <em>Display Name</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.WebAppType#getEjbRef <em>Ejb Ref</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.WebAppType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getWebAppType()
  * @model extendedMetaData="name='web-app_._type' kind='elementOnly'"

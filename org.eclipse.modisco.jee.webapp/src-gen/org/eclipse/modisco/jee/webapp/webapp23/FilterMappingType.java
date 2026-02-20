@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.FilterMappingType#getFilterName <em>Filter Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.FilterMappingType#getUrlPattern <em>Url Pattern</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.FilterMappingType#getServletName <em>Servlet Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.FilterMappingType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp23.Webapp23Package#getFilterMappingType()
  * @model extendedMetaData="name='filter-mapping_._type' kind='elementOnly'"

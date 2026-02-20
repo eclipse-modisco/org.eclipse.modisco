@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.JspConfigType#getTaglib <em>Taglib</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.JspConfigType#getJspPropertyGroup <em>Jsp Property Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.JspConfigType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getJspConfigType()
  * @model extendedMetaData="name='jsp-configType' kind='elementOnly'"

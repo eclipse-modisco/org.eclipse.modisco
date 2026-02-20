@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WebAppType#getGroup <em>Group</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WebAppType#getDescription <em>Description</em>}</li>
@@ -58,7 +59,6 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WebAppType#getId <em>Id</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.WebAppType#getVersion <em>Version</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getWebAppType()
  * @model extendedMetaData="name='web-appType' kind='elementOnly'"

@@ -30,11 +30,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.XsdAnyURIType#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp24.XsdAnyURIType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp24.Webapp24Package#getXsdAnyURIType()
  * @model extendedMetaData="name='xsdAnyURIType' kind='simple'"

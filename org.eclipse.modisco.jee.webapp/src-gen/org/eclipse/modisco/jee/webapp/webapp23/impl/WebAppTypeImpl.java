@@ -59,6 +59,7 @@ import org.eclipse.modisco.jee.webapp.webapp23.WelcomeFileListType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.WebAppTypeImpl#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.WebAppTypeImpl#getDisplayName <em>Display Name</em>}</li>
@@ -85,7 +86,6 @@ import org.eclipse.modisco.jee.webapp.webapp23.WelcomeFileListType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.WebAppTypeImpl#getEjbLocalRef <em>Ejb Local Ref</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp23.impl.WebAppTypeImpl#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -1245,7 +1245,7 @@ public class WebAppTypeImpl extends EObjectImpl implements WebAppType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: "); //$NON-NLS-1$
 		result.append(id);
 		result.append(')');

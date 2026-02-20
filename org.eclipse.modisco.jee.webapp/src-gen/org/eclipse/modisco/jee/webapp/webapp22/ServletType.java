@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ServletType#getIcon <em>Icon</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ServletType#getServletName <em>Servlet Name</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ServletType#getSecurityRoleRef <em>Security Role Ref</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.ServletType#getId <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.jee.webapp.webapp22.Webapp22Package#getServletType()
  * @model extendedMetaData="name='servlet_._type' kind='elementOnly'"

@@ -100,6 +100,7 @@ import org.eclipse.modisco.jee.webapp.webapp22.WelcomeFileType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.DocumentRootImpl#getMixed <em>Mixed</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.DocumentRootImpl#getXMLNSPrefixMap <em>XMLNS Prefix Map</em>}</li>
@@ -168,7 +169,6 @@ import org.eclipse.modisco.jee.webapp.webapp22.WelcomeFileType;
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.DocumentRootImpl#getWelcomeFile <em>Welcome File</em>}</li>
  *   <li>{@link org.eclipse.modisco.jee.webapp.webapp22.impl.DocumentRootImpl#getWelcomeFileList <em>Welcome File List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -2823,7 +2823,7 @@ public class DocumentRootImpl extends EObjectImpl implements DocumentRoot {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (mixed: "); //$NON-NLS-1$
 		result.append(mixed);
 		result.append(')');
