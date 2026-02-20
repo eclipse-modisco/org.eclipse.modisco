@@ -217,7 +217,7 @@ public class DocTypeTests
 	@Test
 	public void testWebXml23() throws Exception {
 		Resource resource = initResource("/resources/TestWebXml23.xml", "2.3", null);
-		Assert.assertFalse("Count not retrieve XML model", resource.getContents().isEmpty());
+		Assert.assertFalse("Could not retrieve XML model", resource.getContents().isEmpty());
 
 		EObject root = resource.getContents().get(0);
 		org.eclipse.modisco.jee.webapp.webapp23.DocumentRoot myWebXmlModel = (org.eclipse.modisco.jee.webapp.webapp23.DocumentRoot) root;

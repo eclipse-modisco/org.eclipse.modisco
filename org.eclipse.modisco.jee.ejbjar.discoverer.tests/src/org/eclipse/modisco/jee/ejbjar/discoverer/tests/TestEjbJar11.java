@@ -59,7 +59,7 @@ public class TestEjbJar11 {
 					JUnitPlugin.getDefault(), xmlFile, EjbJarDiscoverer2.ROOT_NAME,
 					EjbJarDiscoverer2.DTD_URL).equalsIgnoreCase(TestEjbJar11.VERSION));
 
-			Assert.assertNotNull("Count not retrieve a XML model from " + path.toString(),
+			Assert.assertNotNull("Could notretrieve a XML model from " + path.toString(),
 					this.resource);
 		}
 	}
