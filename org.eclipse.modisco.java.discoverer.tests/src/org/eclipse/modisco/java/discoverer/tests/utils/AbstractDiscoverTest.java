@@ -149,7 +149,7 @@ public abstract class AbstractDiscoverTest {
 				Object object = e.nextElement();
 				if (object instanceof String) {
 					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
+					if (!subpath.matches(".*/\\.svn/") && !subpath.endsWith("/bin/")) { //$NON-NLS-1$ -- local tycho re-uses GIT with binaries
 						String dest = subDestinationPath
 								+ subpath.substring(path.length() - 1);
 						deepCopy(subpath, project, dest);
