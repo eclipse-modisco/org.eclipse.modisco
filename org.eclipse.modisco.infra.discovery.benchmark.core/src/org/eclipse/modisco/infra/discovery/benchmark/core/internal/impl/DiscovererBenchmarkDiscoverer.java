@@ -42,7 +42,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -55,7 +54,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.modisco.facet.util.core.Logger;
-import org.eclipse.modisco.infra.discovery.benchmark.core.ISizeDiscoverer;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Activator;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.MathUtils;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.Messages;
@@ -64,6 +62,7 @@ import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IDiscover
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.api.IEventNotifier;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IDiscovererList;
 import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.IProjectSet;
+import org.eclipse.modisco.infra.discovery.benchmark.core.internal.exported.SystemInfo;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Benchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.BenchmarkFactory;
 import org.eclipse.modisco.infra.discovery.benchmark.metamodel.internal.benchmark.Discovery;
@@ -85,7 +84,6 @@ import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.infra.discovery.launch.LaunchConfiguration;
 import org.eclipse.modisco.infra.discovery.launch.LaunchFactory;
 import org.eclipse.modisco.infra.discovery.launch.ParameterValue;
-import org.eclipse.modisco.utils.core.internal.exported.SystemInfo;
 import org.eclipse.osgi.util.NLS;
 
 /**
@@ -662,6 +660,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		if (this.iterations > 0) {
 			final MathUtils.Resolver<DiscoveryIteration> discoTimeResolver =
 					new MathUtils.Resolver<DiscoveryIteration>() {
+				@Override
 				public double getValue(final DiscoveryIteration object) {
 					return object.getDiscoveryTimeInSeconds();
 				}
@@ -672,6 +671,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 					disco.getIterations(), discoTimeResolver));
 			final MathUtils.Resolver<DiscoveryIteration> saveTimeResolver =
 					new MathUtils.Resolver<DiscoveryIteration>() {
+				@Override
 				public double getValue(final DiscoveryIteration object) {
 					return object.getSaveTimeInSeconds();
 				}
@@ -864,6 +864,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	/**
 	 * @see AbstractModelDiscoverer#isApplicableTo(Object)
 	 */
+	@Override
 	public boolean isApplicableTo(final IProjectSet sources) {
 		boolean result = true;
 		for (IProject source : sources.getProjects()) {
@@ -945,23 +946,28 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 		return super.getTargetURI();
 	}
 
+	@Override
 	public IDiscovererID getDiscovererID() {
 		return this.discovererID;
 	}
 
 
+	@Override
 	public int getIterations() {
 		return this.iterations;
 	}
 
+	@Override
 	public boolean isMeasureMemoryUse() {
 		return this.measureMemoryUse;
 	}
 
+	@Override
 	public int getMemoryPollingInterval() {
 		return this.memPollInterval;
 	}
 
+	@Override
 	public boolean isGenerateHtmlReport() {
 		return this.generateHtml;
 	}

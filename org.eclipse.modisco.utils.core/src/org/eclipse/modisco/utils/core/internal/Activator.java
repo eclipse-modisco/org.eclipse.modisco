@@ -18,10 +18,12 @@ import org.osgi.framework.BundleContext;
 // @SuppressWarnings("PMD.UseSingleton") We cannot conforms to this rule because
 // this class is an Eclipse plug-in activator which will be instantiated by the
 // Eclipse framework.
+@Deprecated /* @deprecated use org.eclipse.modisco.utils.core */
 public class Activator extends Plugin {
 
 	private static Activator plugin;
 
+	@Deprecated
 	@Override
 	@SuppressWarnings("PMD.SignatureDeclareThrowsException")
 	// @SuppressWarnings("PMD.SignatureDeclareThrowsException") We have to use
@@ -32,6 +34,7 @@ public class Activator extends Plugin {
 		Activator.plugin = this;
 	}
 
+	@Deprecated
 	@Override
 	@SuppressWarnings("PMD.SignatureDeclareThrowsException")
 	// @SuppressWarnings("PMD.SignatureDeclareThrowsException") We have to use
@@ -44,6 +47,7 @@ public class Activator extends Plugin {
 		super.stop(bundleContext);
 	}
 
+	@Deprecated
 	public static Plugin getDefault() {
 		return Activator.plugin;
 	}

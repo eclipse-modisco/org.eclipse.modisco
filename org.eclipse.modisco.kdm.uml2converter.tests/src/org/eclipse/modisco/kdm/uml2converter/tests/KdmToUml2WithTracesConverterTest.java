@@ -16,8 +16,6 @@ package org.eclipse.modisco.kdm.uml2converter.tests;
 
 import java.io.IOException;
 
-import org.junit.Assert;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -28,6 +26,7 @@ import org.eclipse.modisco.common.tests.TestModelUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
