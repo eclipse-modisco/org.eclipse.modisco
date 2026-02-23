@@ -759,6 +759,9 @@ public class JDTVisitor extends ASTVisitor {
 
 	@Override
 	public void endVisit(final org.eclipse.jdt.core.dom.CompilationUnit node) {
+		if (node.types().size() <= 0) {	// Bug 397384/Issue 858 ignore empty files, Bug 332068/Issue 609 ignore package-info.java
+			return;
+		}
 		CompilationUnit element = (CompilationUnit) this.binding.get(node);
 
 		// if any type of this cu already exists in the model, we don't
