@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TestMemoryUsage.class, TestJavaApp.class,
+@SuiteClasses({ JavaProjectTests.class,
 		CompositeDiscoveryTests.class, StrategySourceJavaTests.class })
 public class AllTestsInUIThread {
 	// JUnit 4 test suite
