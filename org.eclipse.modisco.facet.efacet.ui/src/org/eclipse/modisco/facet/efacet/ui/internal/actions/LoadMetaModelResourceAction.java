@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.ui.action.LoadResourceAction;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.modisco.facet.common.ui.internal.widgets.AnywhereFilterMatcher;
+import org.eclipse.modisco.common.core.strings.AnywhereFilterMatcher;
 import org.eclipse.modisco.facet.efacet.ui.internal.Messages;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;

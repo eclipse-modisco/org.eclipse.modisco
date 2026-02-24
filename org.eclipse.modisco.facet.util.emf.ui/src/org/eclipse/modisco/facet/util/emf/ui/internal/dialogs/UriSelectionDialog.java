@@ -19,7 +19,7 @@ import java.util.TreeSet;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.modisco.facet.common.ui.internal.widgets.AnywhereFilterMatcher;
+import org.eclipse.modisco.common.core.strings.AnywhereFilterMatcher;
 import org.eclipse.modisco.facet.util.emf.ui.internal.Activator;
 import org.eclipse.modisco.facet.util.emf.ui.internal.Messages;
 import org.eclipse.modisco.facet.util.emf.ui.internal.utils.ImageProvider;

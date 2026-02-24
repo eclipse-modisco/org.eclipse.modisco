@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.ui.action.LoadResourceAction;
 import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.modisco.infra.common.ui.internal.util.AnywhereFilterMatcher;
+import org.eclipse.modisco.common.core.strings.AnywhereFilterMatcher;
 import org.eclipse.modisco.infra.query.editor.Messages;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
@@ -39,11 +39,13 @@ import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 @Deprecated
 public class LoadMetaModelResourceAction extends LoadResourceAction {
 
+	@Deprecated
 	public LoadMetaModelResourceAction() {
 		super();
 		setText(Messages.LoadMetaModelResourceAction_0);
 	}
 
+	@Deprecated
 	@Override
 	public void run() {
 		Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow()
@@ -72,6 +74,7 @@ public class LoadMetaModelResourceAction extends LoadResourceAction {
 		}
 	}
 	
+	@Deprecated
 	public class RegisteredPackageDialog extends ElementListSelectionDialog {
 
 		public RegisteredPackageDialog(Shell parent) {
