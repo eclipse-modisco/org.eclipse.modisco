@@ -79,6 +79,7 @@
     <module>org.eclipse.modisco.xml.browser.customization</module>
     
 	<!-- MoDisco Plugins -->
+    <module>org.eclipse.modisco.common.core</module>
     <module>org.eclipse.modisco.eclipseplugin</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer</module>
     <module>org.eclipse.modisco.eclipseplugin.discoverer.ui</module>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.modisco.common.core;singleton:=true
+Bundle-Version: 1.6.0.qualifier
+Export-Package: org.eclipse.modisco.common.core
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.6.0",
+ org.eclipse.ui;bundle-version="1.6.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.eclipse.modisco.common.core.internal.Activator
+Automatic-Module-Name: org.eclipse.modisco.common.core
