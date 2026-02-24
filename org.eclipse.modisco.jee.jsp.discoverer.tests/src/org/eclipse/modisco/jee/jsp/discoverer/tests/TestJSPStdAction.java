@@ -11,8 +11,6 @@
  *********************************************************************************/
 package org.eclipse.modisco.jee.jsp.discoverer.tests;
 
-import org.junit.Assert;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -21,7 +19,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.JSPComment;
 import org.eclipse.modisco.jee.jsp.JSPDirective;
 import org.eclipse.modisco.jee.jsp.JSPStdAction;
@@ -31,6 +29,7 @@ import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
 import org.eclipse.modisco.xml.Attribute;
 import org.eclipse.modisco.xml.Node;
 import org.eclipse.modisco.xml.Text;
+import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

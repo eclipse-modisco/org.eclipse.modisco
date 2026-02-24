@@ -19,12 +19,12 @@ import java.io.IOException;
 
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.NullProgressMonitor;
 
 /**
  * @author Gabriel Barbier
  * @since 0.2
  */
+@Deprecated /* @deprecated use org.eclipse.modisco.common.core.files.FileUtils */
 public final class FolderUtils {
 
 	// This class has been copied from org.eclipse.modisco.facet.infra.common.core.internal.utils.FolderUtils
@@ -37,6 +37,7 @@ public final class FolderUtils {
 	 * This method delete the content of the folder
 	 * @param folder The folder that has to be emptied
 	 */
+	@Deprecated /* not used */
 	public static final void clearFolder(final File folder) {
 		assert folder != null;
 		assert folder.exists();
@@ -60,22 +61,20 @@ public final class FolderUtils {
 	 * @param folder The folder that have to be created.
 	 * @throws CoreException
 	 */
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.core.files.FileUtils.createFolder */
 	public static void createFolder(final IFolder folder) throws CoreException {
-		if (!folder.getParent().exists()) {
-			FolderUtils.createFolder((IFolder) folder.getParent());
-		}
-		if (!folder.exists()) {
-			folder.create(true, true, new NullProgressMonitor());
-		}
+		org.eclipse.modisco.common.core.files.FileUtils.createFolder(folder);
 	}
 
 	/**
 	 * Copies the source directory to the target directory. The target is
 	 * created if it does not exist.
 	 */
+	@Deprecated /* not used */
 	public static final void copyFolder(final File srcDir, final File destDir)
 			throws IOException {
 		FolderUtils.copyFolder(srcDir, destDir, new IFilter<String>() {
+			@Override
 			public boolean filter(final String object) {
 				return true;
 			}
@@ -85,6 +84,7 @@ public final class FolderUtils {
 	/**
 	 * Copies the source directory to the target directory.
 	 */
+	@Deprecated /* not used */
 	public static final void copyFolder(final File srcDir, final File destDir,
 			final IFilter<String> filter) throws IOException {
 

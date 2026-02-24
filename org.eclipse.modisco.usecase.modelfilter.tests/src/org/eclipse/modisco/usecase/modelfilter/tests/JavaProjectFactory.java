@@ -21,17 +21,16 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.jdt.launching.JavaRuntime;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 
 /**
  * @author Gabriel Barbier
@@ -57,7 +56,7 @@ public class JavaProjectFactory {
 		this.setJavaNature();
 		this.javaProject.setRawClasspath(new IClasspathEntry[0], null);
 		this.createOutputFolder(binFolder);
-		this.addSystemLibraries();
+		TestProjectUtils.addSystemLibraries(javaProject, null);
 
 		this.project.refreshLocal(IResource.DEPTH_INFINITE, null);
 	}
@@ -72,24 +71,15 @@ public class JavaProjectFactory {
 		}
 
 		try {
-			FolderUtils.copyFolderFromBundle(src, Activator.getDefault(),
-					"/" + this.srcPath, this.project); //$NON-NLS-1$
+			FileUtils.copyFolderFromBundle(Activator.getDefault().getBundle(), src,
+					this.project, "/" + this.srcPath); //$NON-NLS-1$
 		} catch (IOException e) {
 			Logger.logError(e, Activator.getDefault());
 		}
 
 		// refresh will perform also the compilation ...
-		this.project.refreshLocal(IResource.DEPTH_INFINITE,
-				new NullProgressMonitor());
 		try {
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD,
-					new NullProgressMonitor());
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD,
-					new NullProgressMonitor());
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH,
-					new NullProgressMonitor());
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD,
-					new NullProgressMonitor());
+			ProjectUtils.refresh(project);
 		} catch (OperationCanceledException e) {
 			Logger.logError(e, Activator.getDefault());
 		} catch (InterruptedException e) {
@@ -139,14 +129,4 @@ public class JavaProjectFactory {
 		this.javaProject.setRawClasspath(newEntries, null);
 		return root;
 	}
-
-	private final void addSystemLibraries() throws JavaModelException {
-		IClasspathEntry[] oldEntries = this.javaProject.getRawClasspath();
-		IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
-		System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
-		newEntries[oldEntries.length] = JavaRuntime
-				.getDefaultJREContainerEntry();
-		this.javaProject.setRawClasspath(newEntries, null);
-	}
-
 }

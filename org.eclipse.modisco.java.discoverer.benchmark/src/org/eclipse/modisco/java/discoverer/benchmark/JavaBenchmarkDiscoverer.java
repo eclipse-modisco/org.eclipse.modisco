@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.infra.discovery.benchmark.AveragedMultiDiscoveryBenchmark;
 import org.eclipse.modisco.infra.discovery.benchmark.AveragedProjectDiscovery;
 import org.eclipse.modisco.infra.discovery.benchmark.BenchmarkFactory;
@@ -76,6 +76,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 		return this.numberOfIterations;
 	}
 
+	@Override
 	public boolean isApplicableTo(final IFile source) {
 		return source.exists() && JavaBenchmarkDiscoverer.INPUT_FILE_NAME.equals(source.getName());
 	}
@@ -194,6 +195,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 			// TODO: externalize
 			monitor.subTask("Visiting " + javaProject.getElementName()); //$NON-NLS-1$
 			javaProject.getProject().accept(new IResourceVisitor() {
+				@Override
 				public boolean visit(final IResource resource) throws CoreException {
 					testCanceled(monitor);
 					if (resource instanceof IFile) {
@@ -211,8 +213,7 @@ public class JavaBenchmarkDiscoverer extends AbstractModelDiscoverer<IFile> {
 									.toPortableString());
 							String input;
 							try {
-								input = FileUtils.readInputStream(iFile.getContents(),
-										iFile.getCharset());
+								input = FileUtils.readInputStream(iFile.getContents(), iFile.getCharset());
 							} catch (IOException e) {
 								throw new CoreException(new Status(IStatus.ERROR,
 										Activator.PLUGIN_ID, 0, "Error reading file " //$NON-NLS-1$

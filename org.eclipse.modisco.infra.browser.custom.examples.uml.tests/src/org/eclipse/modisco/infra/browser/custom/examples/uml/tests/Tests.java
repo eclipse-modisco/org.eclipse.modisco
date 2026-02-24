@@ -31,9 +31,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetReference;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -50,7 +50,6 @@ import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Property;
 import org.junit.Assert;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -131,37 +130,37 @@ public class Tests {
 	@Test
 	public void umlQuerySet() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_uml.querySet");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void umlUiCustom() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_uml.uiCustom");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void umlFacets() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_umlFacets.facetSet");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void umlFacets2() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_umlFacets2.facetSet");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void umlFacetsUiCustom() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_umlFacetSet.uiCustom");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void umlFacets2UiCustom() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_umlFacetSet2.uiCustom");
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	public static final String QUERY_SET_NAME = "_example_uml";
@@ -364,6 +363,7 @@ public class Tests {
 			InterruptedException {
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -371,10 +371,10 @@ public class Tests {
 		ILog log = Platform.getLog(Platform
 				.getBundle("org.eclipse.modisco.infra.common.core"));
 		log.addLogListener(listener);
-		ProjectUtils
-				.importPlugin(
+		ProjectUtils.importPlugin(
 						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"),
 						new IFilter() {
+							@Override
 							public boolean filter(final Object object) {
 								boolean result = true;
 								if (object instanceof File) {

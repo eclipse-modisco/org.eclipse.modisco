@@ -11,10 +11,8 @@
 package org.eclipse.modisco.java.generation.tests;
 
 import java.io.File;
-import java.io.IOException;
 
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -47,7 +45,7 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 	}
 
 	@Test
-	public final void testBug329672Comments() throws CoreException, IOException {
+	public final void testBug329672Comments() throws Exception {
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();
 		generateJavaCode(sourceJavaModel, targetJavaDirectory);
@@ -58,7 +56,7 @@ public class Bug329672CommentsTest extends DiffGeneratedJavaTest {
 		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
 				sourceJavaDirectory.listFiles().length > 0);
 
-		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+		boolean compareOldAndNewFiles = TestFileUtils.compareFolders(
 				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
 				new JavaFileComparator());
 

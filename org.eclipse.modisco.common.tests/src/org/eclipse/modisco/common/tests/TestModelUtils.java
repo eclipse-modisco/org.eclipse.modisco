@@ -14,8 +14,11 @@ package org.eclipse.modisco.common.tests;
 import java.io.IOException;
 
 import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.uml2.uml.PackageableElement;
 import org.eclipse.uml2.uml.VisibilityKind;
@@ -90,5 +93,12 @@ public class TestModelUtils {
 		String actual = EmfFormatter.listToStr(actualResource.getContents())/*.replaceAll(" : ", ": ")*/;
 		TestCase.assertEquals(expected, actual);
 		return true;
+	}
+
+	public static EPackage getEcorePackage() {
+		URI ecoreMmUri = URI.createURI("http://www.eclipse.org/emf/2002/Ecore"); //$NON-NLS-1$
+		Resource ecoreMmResource = new ResourceSetImpl().getResource(
+				ecoreMmUri, true);
+		return (EPackage) ecoreMmResource.getContents().get(0);
 	}
 }

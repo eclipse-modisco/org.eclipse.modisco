@@ -35,7 +35,6 @@ import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -46,14 +45,16 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
+import org.eclipse.modisco.common.tests.TestModelUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.builder.EcoreCatalog;
 import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
@@ -81,19 +82,27 @@ public class FacetTests {
 	public static final String FILE_EXT = ".facetSet";
 	public static final String QUERY_EXT = ".querySet";
 
-	private final Utils utils = new Utils(Activator.getDefault());
-	private final EPackage ecorePackage = this.utils.getEcorePackage();
+	private Utils utils = null;
+	private final EPackage ecorePackage = TestModelUtils.getEcorePackage();
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
 	@BeforeClass
 	public static void loadTarget() throws PdeCoreUtilsException {
 	//	TargetPlatformUtils.loadTargetPlatform();
 	}
+
+	private IProject createTestProject(String name) throws Exception {
+		return TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+	}
 	
 	/**
 	 * @return the utils
 	 */
+	@Deprecated /* not used */
 	protected Utils getUtils() {
+		if (this.utils == null) {
+			this.utils = new Utils(Activator.getDefault());
+		}
 		return this.utils;
 	}
 
@@ -101,20 +110,17 @@ public class FacetTests {
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001";
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile queryFile = FileUtils.copyFileFromBundle("resources/" + name + ".querySet",
-				projectToCreate, "/" + name + ".querySet", TEST_BUNDLE);
-		IFile facetFile = FileUtils.copyFileFromBundle("resources/" + name + FacetTests.FILE_EXT,
-				projectToCreate, "/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
-		IFile javaFile = FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java",
-				projectToCreate,
-				"/src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java",
-				TEST_BUNDLE);
+		IProject projectToCreate = createTestProject(name);
+		IFile queryFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + ".querySet",
+				projectToCreate, "/" + name + ".querySet");
+		IFile facetFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + FacetTests.FILE_EXT,
+				projectToCreate, "/" + name + FacetTests.FILE_EXT);
+		IFile javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java",
+				projectToCreate, "/src/org/eclipse/modisco/infra/facet/tests/samples/GetSubClasses.java");
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKER_GETSUBCLASSES);
-		FileUtils.checkNoMarkerOn(queryFile);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKER_GETSUBCLASSES);
+		TestFileUtils.checkNoMarkerOn(queryFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		FacetSet facetSet = FacetSetCatalog.getSingleton().getFacetSet(name);
 		Assert.assertNotNull(facetSet);
 		FacetContext context = new FacetContext();
@@ -150,14 +156,14 @@ public class FacetTests {
 	@Test
 	public void test002() throws Exception {
 		final String name = "test002";
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile queryFile = FileUtils.copyFileFromBundle("resources/" + name + ".querySet",
-				projectToCreate, "/" + name + ".querySet", TEST_BUNDLE);
-		IFile facetFile = FileUtils.copyFileFromBundle("resources/" + name + FacetTests.FILE_EXT,
-				projectToCreate, "/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject projectToCreate = createTestProject(name);
+		IFile queryFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + ".querySet",
+				projectToCreate, "/" + name + ".querySet");
+		IFile facetFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + FacetTests.FILE_EXT,
+				projectToCreate, "/" + name + FacetTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(queryFile);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMarkerOn(queryFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		FacetSet facetSet = FacetSetCatalog.getSingleton().getFacetSet(name);
 		Assert.assertNotNull(facetSet);
 		FacetContext context = new FacetContext();
@@ -168,11 +174,11 @@ public class FacetTests {
 		Assert.assertEquals("x", queryFromFacet1.getDescription());
 		Assert.assertFalse(queryFromFacet1.eIsProxy());
 		// Changing query description value to "bis"
-		FileUtils.copyFileFromBundle("resources/" + name + "bis.querySet", projectToCreate, "/"
-				+ name + ".querySet", TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + "bis.querySet", projectToCreate, "/"
+				+ name + ".querySet");
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(queryFile);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMarkerOn(queryFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		// Checking directly the query
 		ModelQuerySet querySet = ModelQuerySetCatalog.getSingleton().getModelQuerySet("test002");
 		ModelQuery modelQuery = querySet.getQuery("nbEClassifiers");
@@ -219,17 +225,17 @@ public class FacetTests {
 	@Test
 	public void test003() throws Exception {
 		final String name = "test003";
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile queryFile = FileUtils.copyFileFromBundle("resources/" + name + ".querySet",
-				projectToCreate, "/" + name + ".querySet", TEST_BUNDLE);
-		IFile facetFile = FileUtils.copyFileFromBundle("resources/" + name + ".facetSet",
-				projectToCreate, "/" + name + ".facetSet", TEST_BUNDLE);
-		IFile ecoreFile = FileUtils.copyFileFromBundle("resources/" + name + ".ecore",
-				projectToCreate, "/" + name + ".ecore", TEST_BUNDLE);
+		IProject projectToCreate = createTestProject(name);
+		IFile queryFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + ".querySet",
+				projectToCreate, "/" + name + ".querySet");
+		IFile facetFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + ".facetSet",
+				projectToCreate, "/" + name + ".facetSet");
+		IFile ecoreFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + ".ecore",
+				projectToCreate, "/" + name + ".ecore");
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(queryFile);
-		FileUtils.checkNoMarkerOn(ecoreFile);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMarkerOn(queryFile);
+		TestFileUtils.checkNoMarkerOn(ecoreFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		FacetSet facetSet = FacetSetCatalog.getSingleton().getFacetSet(name);
 		Assert.assertNotNull(facetSet);
 		Facet facet = facetSet.getFacet("EPackageFacet");
@@ -239,10 +245,10 @@ public class FacetTests {
 		String mmNsUri = queryFromFacet1.getReturnType().getEPackage().getNsURI();
 		Assert.assertFalse(queryFromFacet1.eIsProxy());
 		// Changing query description value to "bis"
-		FileUtils.copyFileFromBundle("resources/" + name + "bis.ecore", projectToCreate, "/" + name
-				+ ".ecore", TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + "bis.ecore", projectToCreate, "/" + name
+				+ ".ecore");
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(ecoreFile);
+		TestFileUtils.checkNoMarkerOn(ecoreFile);
 		// Checking directly the query
 		EPackage epackage = EPackage.Registry.INSTANCE.getEPackage(mmNsUri);
 		Assert.assertNotNull(epackage);
@@ -263,11 +269,11 @@ public class FacetTests {
 	@Test
 	public void wrongIsAbstract() throws Exception {
 		final String name = "wrongIsAbstract";
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/validation/" + name + FacetTests.FILE_EXT, project,
-				"/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/validation/" + name + FacetTests.QUERY_EXT,
-				project, "/" + name + FacetTests.QUERY_EXT, TEST_BUNDLE);
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name + FacetTests.FILE_EXT, project,
+				"/" + name + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name + FacetTests.QUERY_EXT,
+				project, "/" + name + FacetTests.QUERY_EXT);
 		wrongX(name, project, 1);
 	}
 
@@ -413,9 +419,9 @@ public class FacetTests {
 	@Test
 	public void wrongNbOfSuperType() throws Exception {
 		String name = "wrongNbOfSuperType";
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/validation/" + name + FacetTests.FILE_EXT, project,
-				"/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name + FacetTests.FILE_EXT, project,
+				"/" + name + FacetTests.FILE_EXT);
 		// URI uri = URI.createURI("platform:/resource/" + name + "/" + name
 		// + FacetTests.FILE_EXT);
 		// Resource resource = this.resourceSet.getResource(uri, true);
@@ -443,18 +449,18 @@ public class FacetTests {
 	}
 
 	private void checkValidation(final String name) throws Exception {
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/validation/" + name + FacetTests.FILE_EXT, project,
-				"/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name + FacetTests.FILE_EXT, project,
+				"/" + name + FacetTests.FILE_EXT);
 		wrongX(name, project, 1);
 	}
 
 	private IProject createWrongProjectFromTest001(final String name) throws Exception {
-		IProject projectToCreate = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/test001.querySet", projectToCreate, "/" + name
-				+ ".querySet", TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/test001" + FacetTests.FILE_EXT, projectToCreate,
-				"/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject projectToCreate = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/test001.querySet", projectToCreate, "/" + name
+				+ ".querySet");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/test001" + FacetTests.FILE_EXT, projectToCreate,
+				"/" + name + FacetTests.FILE_EXT);
 		changeQuerySetName(name, projectToCreate);
 		changeFacetsetName(name, projectToCreate);
 		return projectToCreate;
@@ -519,11 +525,11 @@ public class FacetTests {
 	@Test
 	public void compo() throws Exception {
 		final String name = "compo";
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile facetFile = FileUtils.copyFileFromBundle("resources/" + name + FacetTests.FILE_EXT,
-				projectToCreate, "/" + name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject projectToCreate = createTestProject(name);
+		IFile facetFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + FacetTests.FILE_EXT,
+				projectToCreate, "/" + name + FacetTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		// Create model 1
 		URI uriR1 = URI.createURI("platform:/resource/" + name + "/r1.xmi");
 		Resource r1 = this.resourceSet.createResource(uriR1);
@@ -643,7 +649,7 @@ public class FacetTests {
 	 * @throws InterruptedException
 	 */
 	@Test
-	public void bug307715v2() throws CoreException, IOException, InterruptedException {
+	public void bug307715v2() throws Exception {
 
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
@@ -656,22 +662,20 @@ public class FacetTests {
 		log.addLogListener(listener);
 		// Clean the workspace
 		ResourcesPlugin.getWorkspace().getRoot().delete(true, true, new NullProgressMonitor());
-		ResourcesPlugin.getWorkspace().build(IncrementalProjectBuilder.CLEAN_BUILD,
-				new NullProgressMonitor());
-		joinJobs();
+		ResourcesPlugin.getWorkspace().build(IncrementalProjectBuilder.CLEAN_BUILD, new NullProgressMonitor());
+		ProjectUtils.joinJobs(new NullProgressMonitor());
 		// create the project org.eclipse.modisco.java.queries
 		final IProject project = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject("org.eclipse.modisco.java.queries");
-		ProjectUtils.create(project, new NullProgressMonitor());
+		TestProjectUtils.create(project, new NullProgressMonitor());
 		Bundle javaQueriesBundle = Platform.getBundle("org.eclipse.modisco.java.queries");
 		// create the querySet
-		FileUtils.copyFileFromBundle("META-INF/MANIFEST.MF", project, "workspace/bug307715v2/META-INF/MANIFEST.MF",
-				javaQueriesBundle);
+		FileUtils.copyFileFromBundle(javaQueriesBundle, "META-INF/MANIFEST.MF", project, "workspace/bug307715v2/META-INF/MANIFEST.MF");
 		System.out.println(new File("src/").getCanonicalPath());
 		System.out.println(project.getLocation().toString());
-		FolderUtils.copyFolderFromBundle("/workspace/org.eclipse.modisco.java.queries/src/", Activator.getDefault(), "workspace/bug307715v2/src/", project);
-		FileUtils.copyFileFromBundle("textJavaQueries.querySet", project, "workspace/bug307715v2/"
-				+ "textJavaQueries.querySet", javaQueriesBundle);
+		TestFileUtils.deepCopy(TEST_BUNDLE, "/workspace/org.eclipse.modisco.java.queries/src/", project, "workspace/bug307715v2/src/");
+		FileUtils.copyFileFromBundle(javaQueriesBundle, "textJavaQueries.querySet", project, "workspace/bug307715v2/"
+				+ "textJavaQueries.querySet");
 		// addWSFile querySet
 		IFile f = project.getFile("textJavaQueries.querySet");
 		// ModelQuerySetCatalog.getSingleton().addWSFile(f);
@@ -694,15 +698,14 @@ public class FacetTests {
 	@Test
 	public void bug304798() throws Exception {
 		String name = "bug304798";
-		Bundle bundle = TEST_BUNDLE;
-		IProject project = ProjectUtils.createTestProject(name, bundle, ".");
-		IFile queryFile = FileUtils.copyFileFromBundle("/resources/" + name + FacetTests.QUERY_EXT,
-				project, "/" + name + FacetTests.QUERY_EXT, bundle);
-		IFile facetFile = FileUtils.copyFileFromBundle("/resources/" + name + FacetTests.FILE_EXT,
-				project, "/" + name + FacetTests.FILE_EXT, bundle);
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+		IFile queryFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "/resources/" + name + FacetTests.QUERY_EXT,
+				project, "/" + name + FacetTests.QUERY_EXT);
+		IFile facetFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "/resources/" + name + FacetTests.FILE_EXT,
+				project, "/" + name + FacetTests.FILE_EXT);
 		ProjectUtils.refresh(project);
-		FileUtils.checkNoMarkerOn(queryFile);
-		FileUtils.checkNoMarkerOn(facetFile);
+		TestFileUtils.checkNoMarkerOn(queryFile);
+		TestFileUtils.checkNoMarkerOn(facetFile);
 		project.getFile(name + FacetTests.QUERY_EXT).delete(true, new NullProgressMonitor());
 		ProjectUtils.refresh(project);
 		// IFile facetFile = project.getFile(name + FacetTests.FILE_EXT);
@@ -714,12 +717,11 @@ public class FacetTests {
 	@Test
 	public void bug308614() throws Exception {
 		String name = "bug308614";
-		Bundle bundle = TEST_BUNDLE;
-		IProject project = ProjectUtils.createTestProject(name, bundle, ".");
-		FileUtils.copyFileFromBundle("/resources/" + name + "_1" + FacetTests.FILE_EXT, project,
-				"/" + name + "_1" + FacetTests.FILE_EXT, bundle);
-		FileUtils.copyFileFromBundle("/resources/" + name + "_2" + FacetTests.FILE_EXT, project,
-				"/" + name + "_2" + FacetTests.FILE_EXT, bundle);
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "/resources/" + name + "_1" + FacetTests.FILE_EXT, project,
+				"/" + name + "_1" + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "/resources/" + name + "_2" + FacetTests.FILE_EXT, project,
+				"/" + name + "_2" + FacetTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		IFile facetFile1 = project.getFile(name + "_1" + FacetTests.FILE_EXT);
 		IMarker[] markers1 = facetFile1.findMarkers(EcoreCatalog.NS_URI_CONFLICT_MARKER, true,
@@ -730,7 +732,7 @@ public class FacetTests {
 		Assert.assertEquals(1, markers1.length + markers2.length);
 		project.build(IncrementalProjectBuilder.CLEAN_BUILD, new NullProgressMonitor());
 		project.build(IncrementalProjectBuilder.FULL_BUILD, new NullProgressMonitor());
-		joinJobs();
+		ProjectUtils.joinJobs(new NullProgressMonitor());
 		markers1 = facetFile1.findMarkers(EcoreCatalog.NS_URI_CONFLICT_MARKER, true,
 				IResource.DEPTH_INFINITE);
 		markers2 = facetFile2.findMarkers(EcoreCatalog.NS_URI_CONFLICT_MARKER, true,
@@ -768,7 +770,7 @@ public class FacetTests {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(pluginName);
 		ProjectUtils.refresh(project);
 		project.close(new NullProgressMonitor());
-		joinJobs();
+		ProjectUtils.joinJobs(new NullProgressMonitor());
 		project.open(new NullProgressMonitor());
 		ProjectUtils.refresh(project);
 		log.removeLogListener(listener);
@@ -782,19 +784,12 @@ public class FacetTests {
 		}
 	}
 
-	private void joinJobs() throws InterruptedException {
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_REFRESH, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
-	}
-
 	@Test
 	public void bug309657() throws Exception {
 		final String name = "bug309657";
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + FacetTests.FILE_EXT, project, name
-				+ FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + FacetTests.FILE_EXT, project, name
+				+ FacetTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		IFolder folder = project.getFolder("f1");
 		folder.create(true, true, new NullProgressMonitor());
@@ -826,14 +821,14 @@ public class FacetTests {
 		final String name = "bug309990";
 		String nsURI = "http://www.eclipse.org/MoDisco/facet/bug309990";
 		Assert.assertNull(EPackage.Registry.INSTANCE.get(nsURI));
-		IProject project = ProjectUtils.createTestProject(name, TEST_BUNDLE,
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE,
 				".");
-		FileUtils.copyFileFromBundle("resources/" + name + FacetTests.FILE_EXT, project, name
-				+ FacetTests.FILE_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + FacetTests.FILE_EXT, project, name
+				+ FacetTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		Assert.assertNotNull(EPackage.Registry.INSTANCE.get(nsURI));
-		FileUtils.copyFileFromBundle("resources/" + name + "_bis" + FacetTests.FILE_EXT, project,
-				name + FacetTests.FILE_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + "_bis" + FacetTests.FILE_EXT, project,
+				name + FacetTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		Assert.assertNotNull(EPackage.Registry.INSTANCE.get(nsURI + "_bis"));
 		Assert.assertNull(EPackage.Registry.INSTANCE.get(nsURI));
@@ -846,24 +841,22 @@ public class FacetTests {
 //	@Ignore // FIXME Bug 552989 temporary disable of inadequate Tycho pltaform init
 	@Test
 	public void bug310279() throws Exception {
-		IProject project = this.utils.createProject("310279");
+		IProject project = createTestProject("310279");
 
-		FileUtils.copyFileFromBundle("src/Bug310279.java", project, "src/Bug310279.java", TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug310279_1" + FacetTests.FILE_EXT, project,
-				"bug310279_1" + FacetTests.FILE_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug310279_2" + FacetTests.FILE_EXT, project,
-				"bug310279_2" + FacetTests.FILE_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug310279" + FacetTests.QUERY_EXT, project,
-				"bug310279" + FacetTests.QUERY_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/Bug310279.java", project, "src/Bug310279.java");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_1" + FacetTests.FILE_EXT, project,
+				"bug310279_1" + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_2" + FacetTests.FILE_EXT, project,
+				"bug310279_2" + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279" + FacetTests.QUERY_EXT, project,
+				"bug310279" + FacetTests.QUERY_EXT);
 		ProjectUtils.refresh(project);
-		joinJobs();
 		expectXMarkers("bug310279_1", project, 0);
 		expectXMarkers("bug310279_2", project, 0);
 
-		FileUtils.copyFileFromBundle("resources/bug310279_2" + FacetTests.QUERY_EXT, project,
-				"bug310279" + FacetTests.QUERY_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_2" + FacetTests.QUERY_EXT, project,
+				"bug310279" + FacetTests.QUERY_EXT);
 		ProjectUtils.refresh(project);
-		joinJobs();
 		expectXMarkers("bug310279_1", project, 1);
 		expectXMarkers("bug310279_2", project, 1);
 	}
@@ -874,19 +867,18 @@ public class FacetTests {
 		if (Platform.inDebugMode()) {
 			System.out.println("--- bug310279 ---");
 		}
-		IProject project = this.utils.createProject("310279");
+		IProject project = createTestProject("310279");
 
-		FileUtils.copyFileFromBundle("resources/bug310279_1" + FacetTests.FILE_EXT, project,
-				"bug310279_1" + FacetTests.FILE_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug310279_2" + FacetTests.FILE_EXT, project,
-				"bug310279_2" + FacetTests.FILE_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug310279_3" + FacetTests.QUERY_EXT, project,
-				"bug310279" + FacetTests.QUERY_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_1" + FacetTests.FILE_EXT, project,
+				"bug310279_1" + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_2" + FacetTests.FILE_EXT, project,
+				"bug310279_2" + FacetTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_3" + FacetTests.QUERY_EXT, project,
+				"bug310279" + FacetTests.QUERY_EXT);
 		if (Platform.inDebugMode()) {
 			System.out.println("--- bug310279 -> refresh ---");
 		}
 		ProjectUtils.refresh(project);
-		joinJobs();
 		IFile query = project.getFile("bug310279" + FacetTests.QUERY_EXT);
 		IMarker[] queryFileMarkers = query.findMarkers(AbstractMoDiscoCatalog.PROBLEM_MARKER, true,
 				IResource.DEPTH_INFINITE);
@@ -898,10 +890,9 @@ public class FacetTests {
 		if (Platform.inDebugMode()) {
 			System.out.println("--- update ---");
 		}
-		FileUtils.copyFileFromBundle("resources/bug310279_2" + FacetTests.QUERY_EXT, project,
-				"bug310279" + FacetTests.QUERY_EXT, TEST_BUNDLE);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug310279_2" + FacetTests.QUERY_EXT, project,
+				"bug310279" + FacetTests.QUERY_EXT);
 		ProjectUtils.refresh(project);
-		joinJobs();
 		wrongX("bug310279_1", project, 1, AbstractMoDiscoCatalog.BROKEN_REF_MARKER);
 		wrongX("bug310279_2", project, 1, AbstractMoDiscoCatalog.BROKEN_REF_MARKER);
 	}
@@ -912,12 +903,12 @@ public class FacetTests {
 	 */
 	@Test
 	public void bug311684() throws Exception {
-		IProject project = FacetTests.this.utils.createProject("311684");
-		FileUtils.copyFileFromBundle("src/Bug311684.java", project, "src/Bug311684.java", TEST_BUNDLE);
-		IFile queryFile = FileUtils.copyFileFromBundle("resources/bug311684_workspace"
-				+ FacetTests.QUERY_EXT, project, "bug311684" + FacetTests.QUERY_EXT, TEST_BUNDLE);
-		FileUtils.copyFileFromBundle("resources/bug311684" + FacetTests.FILE_EXT, project,
-				"bug311684" + FacetTests.FILE_EXT, TEST_BUNDLE);
+		IProject project = createTestProject("311684");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/Bug311684.java", project, "src/Bug311684.java");
+		IFile queryFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug311684_workspace"
+				+ FacetTests.QUERY_EXT, project, "bug311684" + FacetTests.QUERY_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug311684" + FacetTests.FILE_EXT, project,
+				"bug311684" + FacetTests.FILE_EXT);
 
 		FacetSetCatalog.getSingleton().waitUntilBuilt();
 		wrongX("bug311684", project, 1, IMarker.PROBLEM);

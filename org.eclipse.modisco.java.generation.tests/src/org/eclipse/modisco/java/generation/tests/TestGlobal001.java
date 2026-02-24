@@ -11,11 +11,9 @@
 package org.eclipse.modisco.java.generation.tests;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import org.eclipse.core.runtime.CoreException;
+
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.java.generation.tests.utils.DiffGeneratedJavaTest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -60,7 +58,7 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 	 * dropped by /org.eclipse.modisco.java.discoverer.tests/src/org/eclipse/modisco/java/discoverer/tests/TestSaveAll/saveAll
 	 */
 	@Test
-	public final void test001() throws URISyntaxException, CoreException, IOException {
+	public final void test001() throws Exception {
 	//	JavaModel2JavaTextUtils.eClassName2coverage = new HashMap<>();
 		File sourceJavaModel = getInputModelFile();
 		File targetJavaDirectory = prepareOutputDirectory();
@@ -72,7 +70,7 @@ public class TestGlobal001 extends DiffGeneratedJavaTest {
 		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
 				sourceJavaDirectory.listFiles().length > 0);
 
-		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+		boolean compareOldAndNewFiles = TestFileUtils.compareFolders(
 				sourceJavaDirectory, targetJavaDirectory, new JavaFileFilter(),
 				new JavaFileComparator());
 

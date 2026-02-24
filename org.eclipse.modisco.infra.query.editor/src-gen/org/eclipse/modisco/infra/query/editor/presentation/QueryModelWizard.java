@@ -40,9 +40,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
 import org.eclipse.modisco.infra.query.QueryFactory;
 import org.eclipse.modisco.infra.query.QueryPackage;
@@ -75,6 +75,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
 			.asList(QueryEditorPlugin.INSTANCE
 					.getString("_UI_QueryEditorFilenameExtensions").split("\\s*,\\s*"))); //$NON-NLS-1$ //$NON-NLS-2$
@@ -85,6 +86,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public static final String FORMATTED_FILE_EXTENSIONS = QueryEditorPlugin.INSTANCE.getString(
 			"_UI_QueryEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", "); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
@@ -94,6 +96,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected QueryPackage queryPackage = QueryPackage.eINSTANCE;
 
 	/**
@@ -102,6 +105,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected QueryFactory queryFactory = this.queryPackage.getQueryFactory();
 
 	/**
@@ -110,6 +114,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected QueryModelWizardNewFileCreationPage newFileCreationPage;
 
 	// /**
@@ -127,6 +132,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected IStructuredSelection selection;
 
 	/**
@@ -135,6 +141,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected IWorkbench workbench;
 
 	/**
@@ -143,6 +150,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected List<String> initialObjectNames;
 
 	private boolean openEditor = true;
@@ -153,6 +161,8 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
+	@Override
 	public void init(final IWorkbench workbench, final IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
@@ -161,6 +171,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 				.getImageDescriptor(QueryEditorPlugin.INSTANCE.getImage("full/wizban/NewQuery"))); //$NON-NLS-1$
 	}
 
+	@Deprecated
 	public void setOpenEditor(final boolean openEditor) {
 		this.openEditor = openEditor;
 
@@ -194,6 +205,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated NOT
 	 */
+	@Deprecated
 	protected EObject createInitialModel() {
 		ModelQuerySet rootObject = this.queryFactory.createModelQuerySet();
 		String modelQuerySetName = getModelFile().getName().replaceAll(".querySet$", ""); //$NON-NLS-1$ //$NON-NLS-2$
@@ -207,6 +219,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	@Override
 	public boolean performFinish() {
 		try {
@@ -274,6 +287,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 			if (activePart instanceof ISetSelectionTarget) {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
 				getShell().getDisplay().asyncExec(new Runnable() {
+					@Override
 					public void run() {
 						((ISetSelectionTarget) activePart).selectReveal(targetSelection);
 					}
@@ -309,6 +323,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public class QueryModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -355,7 +370,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 			}
 			if (valid) {
 				IPath containerFullPath = getContainerFullPath();
-				if (!ProjectUtils.isInMoDiscoProject(containerFullPath)) {
+				if (!MoDiscoProject.isInMoDiscoProject(containerFullPath)) {
 					setMessage(
 							Messages.QueryModelWizard_queryInNonMoDiscoProject,
 							IMessageProvider.WARNING);
@@ -600,6 +615,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	@Override
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
@@ -665,6 +681,7 @@ public class QueryModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public IFile getModelFile() {
 		return this.newFileCreationPage.getModelFile();
 	}

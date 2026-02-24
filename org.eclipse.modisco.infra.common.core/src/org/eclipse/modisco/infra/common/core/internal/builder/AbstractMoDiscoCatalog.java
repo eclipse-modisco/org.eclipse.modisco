@@ -41,6 +41,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Plugin;
@@ -53,15 +54,16 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.Diagnostic;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
+import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.protocol.ModiscoProtocolException;
 import org.eclipse.modisco.infra.common.core.internal.resource.BrokenRefException;
 import org.eclipse.modisco.infra.common.core.internal.resource.IMoDiscoResourceListener;
 import org.eclipse.modisco.infra.common.core.internal.resource.MoDiscoResourceSet;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.ModelUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
 import org.eclipse.osgi.util.NLS;
 import org.osgi.framework.Bundle;
@@ -1084,7 +1086,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			IResource resource = event.getResource();
 			if (resource instanceof IProject) {
 				IProject project = (IProject) resource;
-				if (ProjectUtils.isMoDiscoProject(project)) {
+				if (MoDiscoProject.isMoDiscoProject(project)) {
 					if (event.getType() == IResourceChangeEvent.PRE_CLOSE
 							|| event.getType() == IResourceChangeEvent.PRE_DELETE) {
 						final List<IFile> toBeRemoved = new ArrayList<IFile>();
@@ -1123,7 +1125,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 			int flags = projectDelta.getFlags();
 			if (kind == IResourceDelta.CHANGED && ((flags & IResourceDelta.OPEN) != 0)) {
 				IProject project = (IProject) projectDelta.getResource();
-				if (project.isOpen() && ProjectUtils.isMoDiscoProject(project)) {
+				if (project.isOpen() && MoDiscoProject.isMoDiscoProject(project)) {
 					project.accept(new IResourceVisitor() {
 						@Override
 						public boolean visit(final IResource visitedResource) throws CoreException {
@@ -1226,10 +1228,7 @@ public abstract class AbstractMoDiscoCatalog implements IMoDiscoResourceListener
 		try {
 			// ValidationJob.getInstance().join();
 			// CatalogJob.getInstance().join();
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_REFRESH, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
+			ProjectUtils.joinJobs(new NullProgressMonitor());
 		} catch (InterruptedException e) {
 			Logger.logError(e, "Unexpected error.", CommonModiscoActivator.getDefault()); //$NON-NLS-1$
 		}

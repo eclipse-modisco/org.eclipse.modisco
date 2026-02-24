@@ -25,7 +25,7 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.m2m.atl.adt.AtlNature;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 
 public class AtlProjectFactory {
 
@@ -56,7 +56,7 @@ public class AtlProjectFactory {
 	public void populateSourceFolder(final File src) throws CoreException, IOException {
 		File target = this.sourceFolder.getLocation().toFile();
 		if (target.exists()) {
-			FolderUtils.copyDirectory(src, target);
+			TestFileUtils.copyDirectory(src, target);
 		}
 		this.project.refreshLocal(IResource.DEPTH_INFINITE, null);
 	}
@@ -64,7 +64,7 @@ public class AtlProjectFactory {
 	public void populateReferenceFolder(final File src) throws CoreException, IOException {
 		File target = this.referenceFolder.getLocation().toFile();
 		if (target.exists()) {
-			FolderUtils.copyDirectory(src, target);
+			TestFileUtils.copyDirectory(src, target);
 		}
 		this.project.refreshLocal(IResource.DEPTH_INFINITE, null);
 	}

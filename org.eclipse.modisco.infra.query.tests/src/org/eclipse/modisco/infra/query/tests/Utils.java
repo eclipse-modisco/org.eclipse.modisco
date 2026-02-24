@@ -16,19 +16,22 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 
 /**
  * @author Gregoire DUPE (Mia-Software)
  * 
  */
+@Deprecated /* @deprecated use TestModelUtils */
 public final class Utils {
 	private Plugin plugin;
 
+	@Deprecated
 	public Utils(final Plugin plugin) {
 		this.plugin = plugin;
 	}
 
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestModelUtils.getEcorePackage */
 	public EPackage getEcorePackage() {
 		URI ecoreMmUri = URI.createURI("http://www.eclipse.org/emf/2002/Ecore"); //$NON-NLS-1$
 		Resource ecoreMmResource = new ResourceSetImpl().getResource(
@@ -36,8 +39,9 @@ public final class Utils {
 		return (EPackage) ecoreMmResource.getContents().get(0);
 	}
 
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestModelUtils.createTestProject */
 	public IProject createProject(final String projectName) throws Exception {
-		return ProjectUtils.createTestProject(projectName, this.plugin
+		return TestProjectUtils.createTestProject(projectName, this.plugin
 				.getBundle(), "."); //$NON-NLS-1$
 	}
 }

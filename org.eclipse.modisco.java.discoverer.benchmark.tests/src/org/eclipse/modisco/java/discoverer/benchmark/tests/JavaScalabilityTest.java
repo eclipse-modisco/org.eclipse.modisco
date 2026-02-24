@@ -14,24 +14,16 @@
 package org.eclipse.modisco.java.discoverer.benchmark.tests;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Enumeration;
 
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.jdt.launching.JavaRuntime;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.infra.discovery.benchmark.Discovery;
 import org.eclipse.modisco.infra.discovery.benchmark.MultiProjectBenchmark;
 import org.eclipse.modisco.java.discoverer.benchmark.RunBenchmark;
@@ -40,7 +32,6 @@ import org.eclipse.modisco.java.discoverer.benchmark.emf.client.JavaDiscovererIn
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.osgi.framework.Bundle;
 
 public class JavaScalabilityTest {
 
@@ -50,8 +41,7 @@ public class JavaScalabilityTest {
 	private IProject sourceCodeProject = null;
 
 	@Before
-	public void initResource() throws CoreException, IOException,
-			InterruptedException {
+	public void initResource() throws Exception {
 
 		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {
 		    throw new RuntimeException("skipped");
@@ -66,19 +56,11 @@ public class JavaScalabilityTest {
 			}
 			newSourceProject.create(new NullProgressMonitor());
 			newSourceProject.open(new NullProgressMonitor());
-			deepCopy("/workspace/scalabilityTest/", newSourceProject, "/"); //$NON-NLS-1$ //$NON-NLS-2$
+			TestFileUtils.deepCopy(Activator.getDefault().getBundle(), "/workspace/scalabilityTest/", newSourceProject, "/"); //$NON-NLS-1$ //$NON-NLS-2$
 			IJavaProject javaProject = JavaCore.create(newSourceProject);
-			addSystemLibraries(javaProject);
-			newSourceProject.refreshLocal(IResource.DEPTH_INFINITE,
-					new NullProgressMonitor());
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH,
-					null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-
+			TestProjectUtils.addSystemLibraries(javaProject, null);
+			ProjectUtils.refresh(newSourceProject);
 			this.sourceCodeProject = newSourceProject;
-
 		}
 	}
 
@@ -134,73 +116,4 @@ public class JavaScalabilityTest {
 		}
 
 	}
-
-	private static final void addSystemLibraries(final IJavaProject javaProject)
-			throws JavaModelException {
-		IClasspathEntry[] oldEntries = javaProject.getRawClasspath();
-		IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
-		System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
-		newEntries[oldEntries.length] = JavaRuntime
-				.getDefaultJREContainerEntry();
-		javaProject.setRawClasspath(newEntries, null);
-	}
-
-	/**
-	 * @param path
-	 * @param project
-	 * @param destinationPath
-	 * @throws CoreException
-	 * @throws IOException
-	 */
-	private void deepCopy(final String path, final IProject project,
-			final String destinationPath) throws CoreException, IOException {
-		Bundle bundle = Activator.getDefault().getBundle();
-		Enumeration<?> e = bundle.getEntryPaths(path);
-		if (e == null) {
-			try {
-				InputStream source = bundle.getEntry(path).openStream();
-				IFile javaFile = project.getFile(destinationPath);
-				if (javaFile.exists()) {
-					javaFile.delete(true, new NullProgressMonitor());
-				}
-				javaFile.create(source, true, new NullProgressMonitor());
-				// System.out.println("Success: " + path + " -> "
-				// + destinationPath);
-			} catch (Exception e1) {
-				Status status2 = new Status(IStatus.ERROR, Activator.PLUGIN_ID,
-						e1.getMessage(), e1);
-				Activator.getDefault().getLog().log(status2);
-			}
-		} else {
-			String subDestinationPath = "/"; //$NON-NLS-1$
-			if (!destinationPath.equals("/")) { //$NON-NLS-1$
-				IFolder folder = project.getFolder(destinationPath);
-				if (!folder.exists()) {
-					try {
-						folder.create(true, true, new NullProgressMonitor());
-					} catch (Exception e1) {
-						Status status2 = new Status(IStatus.ERROR,
-								Activator.PLUGIN_ID, e1.getMessage(), e1);
-						Activator.getDefault().getLog().log(status2);
-					}
-				}
-				subDestinationPath = folder.getProjectRelativePath().toString();
-			}
-			while (e.hasMoreElements()) {
-				Object object = e.nextElement();
-				if (object instanceof String) {
-					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
-						String dest = subDestinationPath
-								+ subpath.substring(path.length() - 1);
-						deepCopy(subpath, project, dest);
-					}
-				} else {
-					throw new RuntimeException("Unexpected element type"); //$NON-NLS-1$
-				}
-			}
-		}
-
-	}
-
 }

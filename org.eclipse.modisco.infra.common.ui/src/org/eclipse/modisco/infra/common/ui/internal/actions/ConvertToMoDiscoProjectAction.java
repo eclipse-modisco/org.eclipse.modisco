@@ -20,8 +20,8 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.custom.BusyIndicator;
 import org.eclipse.swt.widgets.Display;
@@ -32,10 +32,12 @@ public class ConvertToMoDiscoProjectAction implements IObjectActionDelegate {
 
 	private ISelection fSelection;
 
+	@Override
 	public void setActivePart(final IAction action, final IWorkbenchPart targetPart) {
 		// nothing
 	}
 
+	@Override
 	public void run(final IAction action) {
 		if (this.fSelection instanceof IStructuredSelection) {
 			IStructuredSelection structuredSelection = (IStructuredSelection) this.fSelection;
@@ -45,6 +47,7 @@ public class ConvertToMoDiscoProjectAction implements IObjectActionDelegate {
 				if (next instanceof IProject) {
 					final IProject project = (IProject) next;
 					BusyIndicator.showWhile(getDisplay(), new Runnable() {
+						@Override
 						public void run() {
 							convertProject(project);
 						}
@@ -66,6 +69,7 @@ public class ConvertToMoDiscoProjectAction implements IObjectActionDelegate {
 		}
 	}
 
+	@Override
 	public void selectionChanged(final IAction action, final ISelection selection) {
 		this.fSelection = selection;
 	}

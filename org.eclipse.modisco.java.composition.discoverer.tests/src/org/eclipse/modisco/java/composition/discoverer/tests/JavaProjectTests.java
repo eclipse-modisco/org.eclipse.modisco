@@ -12,26 +12,18 @@
  *******************************************************************************/
 package org.eclipse.modisco.java.composition.discoverer.tests;
 
-import java.io.InputStream;
-import java.util.Enumeration;
-
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.jdt.launching.JavaRuntime;
-import org.eclipse.modisco.facet.util.core.Logger;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.composition.discoverer.DiscoverKDMSourceAndJavaModelFromJavaProject;
@@ -46,22 +38,12 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.junit.Assert;
 import org.junit.Test;
-import org.osgi.framework.Bundle;
 
 public class JavaProjectTests
 {
 	private static final String PROJECT_NAME = JUnitPlugin.PLUGIN_ID + "_test001"; //$NON-NLS-1$	
 	private static final double MEGA = 1000000;
 	private static final long MAX_MEM_MB_AWAITED = 360;	// See Issue 1108
-
-	private static final void addSystemLibraries(final IJavaProject javaProject) throws JavaModelException {
-		IClasspathEntry[] oldEntries = javaProject.getRawClasspath();
-		IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
-		System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
-		newEntries[oldEntries.length] = JavaRuntime
-				.getDefaultJREContainerEntry();
-		javaProject.setRawClasspath(newEntries, null);
-	}
 	
 	protected static void wait(int delayTimeInMilliseconds) {
 		IWorkbench workbench = PlatformUI.getWorkbench();
@@ -103,61 +85,11 @@ public class JavaProjectTests
 		}
 		project.create(new NullProgressMonitor());
 		project.open(new NullProgressMonitor());
-		deepCopy("/workspace/test001/", project, "/"); //$NON-NLS-1$ //$NON-NLS-2$
+		TestFileUtils.deepCopy(Activator.getDefault().getBundle(), "/workspace/test001/", project, "/"); //$NON-NLS-1$ //$NON-NLS-2$
 		IJavaProject javaProject = JavaCore.create(project);
-		addSystemLibraries(javaProject);
-		project.refreshLocal(IResource.DEPTH_INFINITE, new NullProgressMonitor());
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH, null);
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
+		TestProjectUtils.addSystemLibraries(javaProject, null);
+		ProjectUtils.refresh(project);
 		return javaProject;
-	}
-
-	protected void deepCopy(final String path, final IProject projectTarget, final String destinationPath) throws Exception {
-		Bundle bundle = Activator.getDefault().getBundle();
-		System.out.println("deepCopy " + bundle.getSymbolicName() + "[" + path + "] to " + projectTarget.getName() + "[" + destinationPath + "]");
-		Enumeration<?> e = bundle.getEntryPaths(path);
-		if (e == null) {
-			try {
-				// destinationPath);
-				InputStream source = bundle.getEntry(path).openStream();
-				IFile javaFile = projectTarget.getFile(destinationPath);
-				if (javaFile.exists()) {
-					javaFile.delete(true, new NullProgressMonitor());
-				}
-				javaFile.create(source, true, new NullProgressMonitor());
-				// + destinationPath);
-			} catch (Exception e1) {
-				Logger.logError(e1, JUnitPlugin.getDefault());
-			}
-		} else {
-			String subDestinationPath = "/"; //$NON-NLS-1$
-			if (!destinationPath.equals("/")) { //$NON-NLS-1$
-				IFolder folder = projectTarget.getFolder(destinationPath);
-				if (!folder.exists()) {
-					try {
-						folder.create(true, true, new NullProgressMonitor());
-					} catch (Exception e1) {
-						Logger.logError(e1, JUnitPlugin.getDefault());
-					}
-				}
-				subDestinationPath = folder.getProjectRelativePath().toString();
-			}
-			while (e.hasMoreElements()) {
-				Object object = e.nextElement();
-				if (object instanceof String) {
-					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
-						String dest = subDestinationPath
-								+ subpath.substring(path.length() - 1);
-						deepCopy(subpath, projectTarget, dest);
-					}
-				} else {
-					throw new RuntimeException("Unexpected element type"); //$NON-NLS-1$
-				}
-			}
-		}
 	}
 
 	protected void deleteProject(IJavaProject javaProject) throws CoreException {

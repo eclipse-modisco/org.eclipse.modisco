@@ -25,6 +25,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.IJobManager;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -472,8 +473,9 @@ public class ImplementationClassInterface extends AbstractModelConstraint {
 			// wait for the Java build job to be finished, so that error markers
 			// are set
 			try {
-				Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-				Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
+				IJobManager jobManager = Job.getJobManager();
+				jobManager.join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
+				jobManager.join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
 			} catch (InterruptedException e) {
 				Logger.logError(e, Activator.getDefault());
 			}

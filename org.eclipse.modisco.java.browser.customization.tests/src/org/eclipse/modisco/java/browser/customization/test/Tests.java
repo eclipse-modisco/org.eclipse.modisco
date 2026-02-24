@@ -24,8 +24,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
@@ -102,6 +102,7 @@ public class Tests {
 			InterruptedException {
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -109,10 +110,10 @@ public class Tests {
 		ILog log = Platform.getLog(Platform
 				.getBundle("org.eclipse.modisco.infra.common.core")); //$NON-NLS-1$
 		log.addLogListener(listener);
-		ProjectUtils
-				.importPlugin(
+		ProjectUtils.importPlugin(
 						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"), //$NON-NLS-1$
 						new IFilter() {
+							@Override
 							public boolean filter(final Object object) {
 								boolean result = true;
 								if (object instanceof File) {

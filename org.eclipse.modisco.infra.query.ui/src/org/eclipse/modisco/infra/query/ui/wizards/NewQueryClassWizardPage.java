@@ -51,7 +51,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.StringUtils;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
@@ -82,10 +82,13 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 	 *            the editing domain to use to edit the query (may be
 	 *            <code>null</code>)
 	 */
+	@Deprecated
 	public NewQueryClassWizardPage(final EditingDomain editingDomain) {
 		this.editingDomain = editingDomain;
 	}
 
+	@Deprecated
+	@Override
 	public void init(final ModelQuerySet modelQuerySet, final ModelQuery modelQuery) {
 		IJavaProject javaProject = findJavaProject(modelQuerySet);
 
@@ -161,6 +164,8 @@ public class NewQueryClassWizardPage extends NewClassWizardPage implements
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public void apply(final ModelQuery modelQuery) {
 		try {
 			ICompilationUnit javaClass = createJavaClass(modelQuery);

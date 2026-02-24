@@ -22,8 +22,8 @@ import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.discovery.core.internal.catalog.DiscovererRegistry;
 import org.eclipse.modisco.infra.discovery.ui.Activator;
 import org.eclipse.modisco.infra.discovery.ui.Messages;
@@ -48,6 +48,7 @@ public class NewDiscovererWizard extends Wizard implements INewWizard {
 		setWindowTitle(Messages.NewDiscovererWizard_newMoDiscoDiscoverer);
 	}
 
+	@Override
 	public void init(final IWorkbench workbench, final IStructuredSelection selection) {
 		this.fSelection = selection;
 	}
@@ -75,6 +76,7 @@ public class NewDiscovererWizard extends Wizard implements INewWizard {
 		try {
 			getMainPage().preFinishPage();
 			getContainer().run(true, true, new IRunnableWithProgress() {
+				@Override
 				public void run(final IProgressMonitor monitor) throws InvocationTargetException,
 						InterruptedException {
 					getMainPage().finishPage(monitor);
@@ -139,6 +141,7 @@ public class NewDiscovererWizard extends Wizard implements INewWizard {
 			return;
 		}
 		display.asyncExec(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					IDE.openEditor(activePage, resource, true);

@@ -17,7 +17,7 @@ import java.util.Map;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.java.generation.Activator;
 import org.eclipse.modisco.java.generation.Messages;
 
@@ -46,7 +46,7 @@ public final class JavaUtils {
 			if (file.isDirectory()) {
 				formatJavaCode(file);
 			} else if (file.getName().endsWith(".java")) { //$NON-NLS-1$
-				String source = FolderUtils.getFileContent(file);
+				String source = FileUtils.getFileContent(file);
 				String target = formatJavaCode(source);
 
 				try {
@@ -102,7 +102,7 @@ public final class JavaUtils {
 		if (JavaUtils.sourceFormatter == null) {
 			// Take default Eclipse formatting options
 			// (getEclipseDefaultSettings returned Map up until 4.31)
-			Map<String, String> options = (Map<String, String>) org.eclipse.jdt.core.formatter.DefaultCodeFormatterConstants
+			Map<String, String> options = org.eclipse.jdt.core.formatter.DefaultCodeFormatterConstants
 					.getEclipseDefaultSettings();
 
 			// Initialize the compiler settings

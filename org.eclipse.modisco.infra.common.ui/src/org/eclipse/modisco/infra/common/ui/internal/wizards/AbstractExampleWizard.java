@@ -12,7 +12,6 @@
 package org.eclipse.modisco.infra.common.ui.internal.wizards;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
@@ -27,9 +26,8 @@ import org.eclipse.core.runtime.Plugin;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -43,25 +41,12 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 	private static final String CHECKSTYLE_NATURE = "net.sf.eclipsecs.core.CheckstyleNature"; //$NON-NLS-1$
 	private static final String CHECKSTYLE_BUILDER = "net.sf.eclipsecs.core.CheckstyleBuilder"; //$NON-NLS-1$
 
+	@Override
 	public void init(final IWorkbench workbench, final IStructuredSelection selection) {
 		// nothing
 	}
 
 	protected abstract Plugin getActivator();
-
-	private final IFilter checkstyleFilter = new IFilter() {
-		public boolean filter(final Object object) {
-			boolean result = true;
-			if (object instanceof File) {
-				File file = (File) object;
-				result = !file.getName().equals(".checkstyle"); //$NON-NLS-1$
-			} else if (object instanceof String) {
-				String str = (String) object;
-				result = !str.equals(".checkstyle"); //$NON-NLS-1$
-			}
-			return result;
-		}
-	};
 
 	@Override
 	public boolean performFinish() {
@@ -72,7 +57,7 @@ public abstract class AbstractExampleWizard extends Wizard implements INewWizard
 				try {
 					beforeImport();
 					IProject project = ProjectUtils.importPlugin(getActivator().getBundle(),
-							AbstractExampleWizard.this.checkstyleFilter);
+							FileUtils.getCheckstylefilter());
 					removeWizardExtension(project);
 					removeCheckstyleNatureAndBuilder(project);
 					changeBundleId(project);

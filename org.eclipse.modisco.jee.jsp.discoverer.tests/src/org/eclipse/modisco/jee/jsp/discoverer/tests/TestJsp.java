@@ -12,7 +12,6 @@
 package org.eclipse.modisco.jee.jsp.discoverer.tests;
 
 import static org.junit.Assert.assertTrue;
-import org.junit.Assert;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
@@ -22,7 +21,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.ComposedAttribute;
 import org.eclipse.modisco.jee.jsp.JSPAction;
 import org.eclipse.modisco.jee.jsp.JSPComment;
@@ -37,7 +36,7 @@ import org.eclipse.modisco.xml.Attribute;
 import org.eclipse.modisco.xml.CDATA;
 import org.eclipse.modisco.xml.Element;
 import org.eclipse.modisco.xml.Node;
-import org.eclipse.modisco.xml.Text;
+import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
@@ -112,7 +111,7 @@ public class TestJsp {
 		Assert.assertTrue(att4.getName().equalsIgnoreCase("att4")); //$NON-NLS-1$
 		JSPAction jspAction1 = (JSPAction) att4.getChildren().get(0);
 		jspAction1.getName().equalsIgnoreCase("myprefix:myaction"); //$NON-NLS-1$
-		((Attribute) jspAction1.getChildren().get(0)).getName()
+		jspAction1.getChildren().get(0).getName()
 				.equalsIgnoreCase("att1"); //$NON-NLS-1$
 		((Attribute) jspAction1.getChildren().get(0)).getValue()
 				.equalsIgnoreCase("value1"); //$NON-NLS-1$
@@ -122,7 +121,7 @@ public class TestJsp {
 		JSPAction jspAction2 = (JSPAction) tag1.getChildren().get(4);
 		Assert.assertTrue(jspAction2.isIsTagFragment());
 		Assert.assertTrue(jspAction2.getName().equalsIgnoreCase("fragmentJSPAction:action")); //$NON-NLS-1$
-		Assert.assertTrue(((Attribute) jspAction2.getChildren().get(0))
+		Assert.assertTrue(jspAction2.getChildren().get(0)
 				.getName().equalsIgnoreCase("isTagFragment")); //$NON-NLS-1$
 		Assert.assertTrue(((Attribute) jspAction2.getChildren().get(0))
 				.getValue().equalsIgnoreCase("true")); //$NON-NLS-1$
@@ -145,7 +144,7 @@ public class TestJsp {
 		JSPDirective jspDir1 = (JSPDirective) directiveSection.getChildren()
 				.get(0);
 		Assert.assertTrue(jspDir1.getName().equalsIgnoreCase("include")); //$NON-NLS-1$
-		Assert.assertTrue(((Attribute) jspDir1.getChildren().get(0)).getName()
+		Assert.assertTrue(jspDir1.getChildren().get(0).getName()
 				.equalsIgnoreCase("nameInclude")); //$NON-NLS-1$
 		Assert.assertTrue(((Attribute) jspDir1.getChildren().get(0)).getValue()
 				.equalsIgnoreCase("valueInclude")); //$NON-NLS-1$
@@ -153,7 +152,7 @@ public class TestJsp {
 		JSPDirective jspDir2 = (JSPDirective) directiveSection.getChildren()
 				.get(1);
 		Assert.assertTrue(jspDir2.getName().equalsIgnoreCase("page")); //$NON-NLS-1$
-		Assert.assertTrue(((Attribute) jspDir2.getChildren().get(0)).getName()
+		Assert.assertTrue(jspDir2.getChildren().get(0).getName()
 				.equalsIgnoreCase("filename")); //$NON-NLS-1$
 		Assert.assertTrue(((Attribute) jspDir2.getChildren().get(0)).getValue()
 				.equalsIgnoreCase("myFileName")); //$NON-NLS-1$
@@ -167,11 +166,11 @@ public class TestJsp {
 
 		JSPExpression jspExpr1 = (JSPExpression) expressionSection
 				.getChildren().get(0);
-		Assert.assertTrue(((Text) jspExpr1.getChildren().get(0)).getName()
+		Assert.assertTrue(jspExpr1.getChildren().get(0).getName()
 				.equalsIgnoreCase("myVariable")); //$NON-NLS-1$
 		JSPExpression jspExpr2 = (JSPExpression) expressionSection
 				.getChildren().get(1);
-		Assert.assertTrue(((Text) jspExpr2.getChildren().get(0)).getName()
+		Assert.assertTrue(jspExpr2.getChildren().get(0).getName()
 				.equalsIgnoreCase("myVariable")); //$NON-NLS-1$
 
 		// <SCRIPLET>
@@ -183,12 +182,12 @@ public class TestJsp {
 
 		JSPScriptlet jspScriplet1 = (JSPScriptlet) scripletSection
 				.getChildren().get(0);
-		Assert.assertTrue(((Text) jspScriplet1.getChildren().get(0)).getName()
+		Assert.assertTrue(jspScriplet1.getChildren().get(0).getName()
 				.equalsIgnoreCase("This is a JSP Scriplet")); //$NON-NLS-1$
 
 		JSPScriptlet jspScriplet2 = (JSPScriptlet) scripletSection
 				.getChildren().get(1);
-		Assert.assertTrue(((Text) jspScriplet2.getChildren().get(0)).getName()
+		Assert.assertTrue(jspScriplet2.getChildren().get(0).getName()
 				.equalsIgnoreCase("This is a JSP Scriplet")); //$NON-NLS-1$
 
 		// <DECLARATION>
@@ -200,12 +199,12 @@ public class TestJsp {
 
 		JSPDeclaration jspDecl1 = (JSPDeclaration) declarationSection
 				.getChildren().get(0);
-		Assert.assertTrue(((Text) jspDecl1.getChildren().get(0)).getName()
+		Assert.assertTrue(jspDecl1.getChildren().get(0).getName()
 				.equalsIgnoreCase("int myVariable = 0;")); //$NON-NLS-1$
 
 		JSPDeclaration jspDecl2 = (JSPDeclaration) declarationSection
 				.getChildren().get(1);
-		Assert.assertTrue(((Text) jspDecl2.getChildren().get(0)).getName()
+		Assert.assertTrue(jspDecl2.getChildren().get(0).getName()
 				.equalsIgnoreCase("int myVariable = 0;")); //$NON-NLS-1$
 
 		// <COMMENT>

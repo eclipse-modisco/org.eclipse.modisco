@@ -12,7 +12,6 @@
 package org.eclipse.modisco.jee.jsp.discoverer.tests;
 
 import static org.junit.Assert.assertTrue;
-import org.junit.Assert;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
@@ -21,10 +20,11 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.jee.jsp.Model;
 import org.eclipse.modisco.jee.jsp.Page;
 import org.eclipse.modisco.jee.jsp.discoverer.DiscoverJspModelFromResource;
+import org.junit.Assert;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 

@@ -13,11 +13,8 @@ package org.eclipse.modisco.java.generation.tests.utils;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Enumeration;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
@@ -28,9 +25,8 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.java.generation.files.GenerateJavaExtended;
 import org.eclipse.modisco.java.generation.tests.Activator;
 import org.eclipse.modisco.java.generation.tests.Messages;
@@ -44,10 +40,14 @@ import org.osgi.framework.Bundle;
  */
 public abstract class DiffGeneratedJavaTest {
 
+	private static final Bundle TEST_BUNDLE = Activator
+			.getDefault().getBundle();
+
 	protected final class JavaFileFilter implements FilenameFilter {
 		public JavaFileFilter() {
 		}
 
+		@Override
 		public boolean accept(final File file, final String fileName) {
 			return ((new File(file, fileName).isDirectory() && fileName
 					.indexOf("svn") == -1) || fileName.toLowerCase().endsWith(//$NON-NLS-1$
@@ -60,12 +60,10 @@ public abstract class DiffGeneratedJavaTest {
 	/**
 	 * Get the Java model for generation
 	 */
-	protected File getInputModelFile() throws CoreException, IOException {
+	protected File getInputModelFile() throws Exception {
 		IProject project = getWorkspaceAuxiliaryProject();
 
-		FileUtils.copyFileFromBundle(getJavaXmiFilePath(),
-				project, getJavaXmiFilePath(), Activator
-						.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, getJavaXmiFilePath(), project, getJavaXmiFilePath());
 		Path path = new Path(getJavaXmiFilePath());
 		IFile iFile = project.getFile(path);
 		File xmlFile = iFile.getLocation().toFile();
@@ -80,15 +78,14 @@ public abstract class DiffGeneratedJavaTest {
 	/**
 	 * Get the Java code reference folder
 	 */
-	protected File getJavaSourceDirectory() throws CoreException {
+	protected File getJavaSourceDirectory() throws Exception {
 		// Retrieving source code from another plugin : java discovery tests
 		// and deploy it in workspace (it cannot be used directly since
 		// potentially zipped)
 		IProject project = getWorkspaceAuxiliaryProject();
 
-		deepCopy(getCodeSourceReferencePath(),
-				getCodeSourceReferenceBundle(), project,
-				getDeployedCodeSourceReferencePath());
+		TestFileUtils.deepCopy(getCodeSourceReferenceBundle(), getCodeSourceReferencePath(),
+				project, getDeployedCodeSourceReferencePath());
 
 		Path path = new Path(getDeployedCodeSourceReferencePath());
 		IFile iFile = project.getFile(path);
@@ -101,59 +98,13 @@ public abstract class DiffGeneratedJavaTest {
 		return javaDirectory;
 	}
 
-	private void deepCopy(final String sourcePath, final Bundle sourceBundle,
-			final IProject destinationProject, final String destinationPath) {
-		Enumeration<?> e = sourceBundle.getEntryPaths(sourcePath);
-		if (e == null) {
-			try { // single file
-				InputStream source = sourceBundle.getEntry(sourcePath)
-						.openStream();
-				IFile javaFile = destinationProject.getFile(destinationPath);
-				if (javaFile.exists()) {
-					javaFile.delete(true, new NullProgressMonitor());
-				}
-				javaFile.create(source, true, new NullProgressMonitor());
-			} catch (Exception e1) {
-				Logger.logError(e1, Activator.getDefault());
-			}
-		} else {
-			String subDestinationPath = "/";
-			if (!destinationPath.equals("/")) {
-				IFolder folder = destinationProject.getFolder(destinationPath);
-				if (!folder.exists()) {
-					try {
-						folder.create(true, true, new NullProgressMonitor());
-					} catch (Exception e1) {
-						Logger.logError(e1, Activator.getDefault());
-					}
-				}
-				subDestinationPath = folder.getProjectRelativePath().toString();
-			}
-			while (e.hasMoreElements()) {
-				Object object = e.nextElement();
-				if (object instanceof String) {
-					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) {
-						String dest = subDestinationPath
-								+ subpath.substring(sourcePath.length() - 1);
-						deepCopy(subpath, sourceBundle, destinationProject,
-								dest);
-					}
-				} else {
-					throw new RuntimeException("Unexpected element type");
-				}
-			}
-		}
-	}
-
 	/**
 	 * Get The target folder for java generation
 	 *
 	 * @return
 	 */
 	protected File prepareOutputDirectory() {
-		IPath path = Platform.getStateLocation(Activator.getDefault()
-				.getBundle());
+		IPath path = Platform.getStateLocation(TEST_BUNDLE);
 		File outputDirectory = new File(path.toOSString(), "JavaOutput." + getClass().getName());
 		// String bundleLocation = Activator.getDefault().getBundle()
 		// .getLocation();
@@ -162,7 +113,7 @@ public abstract class DiffGeneratedJavaTest {
 		// File outputDirectory = new File(path.toOSString());
 
 		if (outputDirectory.exists()) {
-			FolderUtils.clearFolder(outputDirectory);
+			TestFileUtils.clearFolder(outputDirectory);
 		} else {
 			outputDirectory.mkdir();
 		}

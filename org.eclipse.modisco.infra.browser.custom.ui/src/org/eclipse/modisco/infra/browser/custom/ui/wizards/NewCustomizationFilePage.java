@@ -16,7 +16,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.infra.browser.custom.ui.Messages;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 
 public class NewCustomizationFilePage extends WizardNewFileCreationPage {
@@ -33,7 +33,7 @@ public class NewCustomizationFilePage extends WizardNewFileCreationPage {
 		boolean valid = super.validatePage();
 		if (valid) {
 			IPath containerFullPath = getContainerFullPath();
-			if (!ProjectUtils.isInMoDiscoProject(containerFullPath)) {
+			if (!MoDiscoProject.isInMoDiscoProject(containerFullPath)) {
 				setMessage(
 						Messages.NewCustomizationFilePage_customizationInNonMoDiscoProject,
 						IMessageProvider.WARNING);

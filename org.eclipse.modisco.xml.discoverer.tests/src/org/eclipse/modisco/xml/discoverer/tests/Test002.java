@@ -23,7 +23,7 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.infra.discovery.core.IDiscoveryManager;
 import org.eclipse.modisco.xml.CDATA;
 import org.eclipse.modisco.xml.Element;
@@ -33,9 +33,11 @@ import org.eclipse.modisco.xml.discoverer.XMLModelDiscoverer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 /** Basic test of discovering a XML model and testing root, attributes */
 public class Test002 {
+	private static final Bundle TEST_BUNDLE = Activator.getDefault().getBundle();
 	private static final int MAGIC_NUMBER = 3;
 	private static final String TEST2_XML = "Test002.xml"; //$NON-NLS-1$
 	private static final String RESOURCES_TEST2_XML = "resources/" + Test002.TEST2_XML; //$NON-NLS-1$
@@ -53,8 +55,7 @@ public class Test002 {
 			project.create(new NullProgressMonitor());
 			project.open(new NullProgressMonitor());
 
-			FileUtils.copyFileFromBundle(Test002.RESOURCES_TEST2_XML, project,
-					Test002.TEST2_XML, Activator.getDefault().getBundle());
+			FileUtils.copyFileFromBundle(TEST_BUNDLE, Test002.RESOURCES_TEST2_XML, project, Test002.TEST2_XML);
 			Path path = new Path(Test002.TEST2_XML);
 			IFile iFile = project.getFile(path);
 			File xmlFile = iFile.getLocation().toFile();

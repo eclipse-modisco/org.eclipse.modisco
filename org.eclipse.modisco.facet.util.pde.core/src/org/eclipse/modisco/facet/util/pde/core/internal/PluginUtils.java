@@ -62,8 +62,7 @@ import org.eclipse.jdt.core.JavaConventions;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.facet.util.core.internal.exported.FileUtils;
-import org.eclipse.modisco.facet.util.core.internal.exported.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.facet.util.core.internal.exported.IFilter;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.pde.core.plugin.IExtensions;
@@ -306,7 +305,7 @@ public final class PluginUtils {
 		final String path = qualifiedName.replaceAll("\\.", "/"); //$NON-NLS-1$ //$NON-NLS-2$
 		final IFile activatorFile = project
 				.getFile(new Path("src").append(path).addFileExtension("java")); //$NON-NLS-1$ //$NON-NLS-2$
-		FolderUtils.createFolder((IFolder) activatorFile.getParent());
+		FileUtils.createFolder((IFolder) activatorFile.getParent());
 		if (!activatorFile.exists()) {
 			final String template = FileUtils.getFileContents(Activator
 					.getDefault().getBundle(), PluginUtils.ACTIVATOR_TPL);

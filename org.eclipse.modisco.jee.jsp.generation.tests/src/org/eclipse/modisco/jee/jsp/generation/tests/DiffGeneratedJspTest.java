@@ -15,13 +15,10 @@ package org.eclipse.modisco.jee.jsp.generation.tests;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Enumeration;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
@@ -32,9 +29,8 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.jee.jsp.generation.files.GenerateJsp;
 import org.junit.Assert;
 import org.junit.Test;
@@ -45,6 +41,7 @@ import org.osgi.framework.Bundle;
  *
  */
 public class DiffGeneratedJspTest {
+	private static final Bundle TEST_BUNDLE = Activator.getDefault().getBundle();
 	private static final String JSP_DISCOVERER_TESTS_PLUGINID = org.eclipse.modisco.jee.jsp.discoverer.tests.Activator.PLUGIN_ID;
 	private static final String SOURCE_TEST_XML = "resources/org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi"; //$NON-NLS-1$
 	private static final String TARGET_TEST_XML = "org.eclipse.modisco.jee.jsp.discoverer.tests.jspxmi"; //$NON-NLS-1$
@@ -57,6 +54,7 @@ public class DiffGeneratedJspTest {
 			//
 		}
 
+		@Override
 		public boolean accept(final File file, final String fileName) {
 			if (new File(file, fileName).isDirectory()) {
 				return !".settings".equals(fileName) && (fileName.indexOf("svn") == -1); //$NON-NLS-1$
@@ -76,7 +74,7 @@ public class DiffGeneratedJspTest {
 	 * @throws CoreException
 	 */
 	@Test // (timeout = 5 * 60 * 1000)
-	public final void testJspFileExistence() throws URISyntaxException, CoreException, IOException {
+	public final void testJspFileExistence() throws Exception {
 		File sourceJspModel = getInputModelFile();
 		File targetJspDirectory = prepareOutputDirectory();
 		generateJspCode(sourceJspModel, targetJspDirectory);
@@ -87,7 +85,7 @@ public class DiffGeneratedJspTest {
 		Assert.assertTrue("Reference folder is empty", //$NON-NLS-1$
 				sourceJspDirectory.listFiles().length > 0);
 
-		boolean compareOldAndNewFiles = FolderUtils.compareFolders(
+		boolean compareOldAndNewFiles = TestFileUtils.compareFolders(
 				sourceJspDirectory, targetJspDirectory, new JspFileFilter(),
 				new JSPFileComparator());
 
@@ -101,12 +99,11 @@ public class DiffGeneratedJspTest {
 	/**
 	 * Get the Jsp model for generation
 	 */
-	private File getInputModelFile() throws CoreException, IOException {
+	private File getInputModelFile() throws Exception {
 		IProject project = getWorkspaceAuxiliaryProject();
 
-		FileUtils.copyFileFromBundle(DiffGeneratedJspTest.SOURCE_TEST_XML,
-				project, DiffGeneratedJspTest.TARGET_TEST_XML, Activator
-						.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, DiffGeneratedJspTest.SOURCE_TEST_XML,
+				project, DiffGeneratedJspTest.TARGET_TEST_XML);
 		Path path = new Path(DiffGeneratedJspTest.TARGET_TEST_XML);
 		IFile iFile = project.getFile(path);
 		File xmlFile = iFile.getLocation().toFile();
@@ -116,16 +113,14 @@ public class DiffGeneratedJspTest {
 	/**
 	 * Get the jsp code reference folder
 	 */
-	private File getJspSourceDirectory() throws CoreException {
+	private File getJspSourceDirectory() throws Exception {
 		// Retrieving source code from another plugin : jsp discovery tests
 		// and deploy it in workspace (it cannot be used directly since
 		// potentially zipped)
 		IProject project = getWorkspaceAuxiliaryProject();
-		Bundle jspDiscoveryTestsBundle = Platform
-				.getBundle(DiffGeneratedJspTest.JSP_DISCOVERER_TESTS_PLUGINID);
-		deepCopy(DiffGeneratedJspTest.RESOURCES_TEST1_JSP,
-				jspDiscoveryTestsBundle, project,
-				DiffGeneratedJspTest.DEPLOYED_TEST1_JSP);
+		Bundle jspDiscoveryTestsBundle = Platform.getBundle(DiffGeneratedJspTest.JSP_DISCOVERER_TESTS_PLUGINID);
+		TestFileUtils.deepCopy(jspDiscoveryTestsBundle, DiffGeneratedJspTest.RESOURCES_TEST1_JSP,
+				project, DiffGeneratedJspTest.DEPLOYED_TEST1_JSP);
 
 		File jspDirectory = project.getLocation().toFile();
 
@@ -135,59 +130,13 @@ public class DiffGeneratedJspTest {
 		return jspDirectory;
 	}
 
-	private void deepCopy(final String sourcePath, final Bundle sourceBundle,
-			final IProject destinationProject, final String destinationPath) {
-		Enumeration<?> e = sourceBundle.getEntryPaths(sourcePath);
-		if (e == null) {
-			try { // single file
-				InputStream source = sourceBundle.getEntry(sourcePath)
-						.openStream();
-				IFile jspFile = destinationProject.getFile(destinationPath);
-				if (jspFile.exists()) {
-					jspFile.delete(true, new NullProgressMonitor());
-				}
-				jspFile.create(source, true, new NullProgressMonitor());
-			} catch (Exception e1) {
-				Logger.logError(e1, Activator.getDefault());
-			}
-		} else {
-			String subDestinationPath = "/"; //$NON-NLS-1$
-			if (!destinationPath.equals("/")) { //$NON-NLS-1$
-				IFolder folder = destinationProject.getFolder(destinationPath);
-				if (!folder.exists()) {
-					try {
-						folder.create(true, true, new NullProgressMonitor());
-					} catch (Exception e1) {
-						Logger.logError(e1, Activator.getDefault());
-					}
-				}
-				subDestinationPath = folder.getProjectRelativePath().toString();
-			}
-			while (e.hasMoreElements()) {
-				Object object = e.nextElement();
-				if (object instanceof String) {
-					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
-						String dest = subDestinationPath
-								+ subpath.substring(sourcePath.length() - 1);
-						deepCopy(subpath, sourceBundle, destinationProject,
-								dest);
-					}
-				} else {
-					throw new RuntimeException("Unexpected element type"); //$NON-NLS-1$
-				}
-			}
-		}
-	}
-
 	/**
 	 * Get The target folder for jsp generation
 	 *
 	 * @return
 	 */
 	private File prepareOutputDirectory() {
-		IPath path = Platform.getStateLocation(Activator.getDefault()
-				.getBundle());
+		IPath path = Platform.getStateLocation(TEST_BUNDLE);
 		File outputDirectory = new File(path.toOSString(), "JspOutput"); //$NON-NLS-1$
 		// String bundleLocation = Activator.getDefault().getBundle()
 		// .getLocation();
@@ -196,7 +145,7 @@ public class DiffGeneratedJspTest {
 		// File outputDirectory = new File(path.toOSString());
 
 		if (outputDirectory.exists()) {
-			FolderUtils.clearFolder(outputDirectory);
+			TestFileUtils.clearFolder(outputDirectory);
 		} else {
 			outputDirectory.mkdir();
 		}

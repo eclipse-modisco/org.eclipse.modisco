@@ -20,15 +20,18 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
 import org.eclipse.modisco.infra.common.core.internal.builder.EcoreBuilder;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 public class EcoreCatalogTest {
 
+	private static final Bundle TEST_BUNDLE = Activator.getDefault().getBundle();
 	private static final String FILE_EXT = "." + EcoreBuilder.FILE_EXTENSION; //$NON-NLS-1$
 
 	/**
@@ -40,10 +43,10 @@ public class EcoreCatalogTest {
 	@Test
 	public void bug309657() throws Exception {
 		final String name = "bug309657"; //$NON-NLS-1$
-		IProject project = ProjectUtils.createTestProject(name, Activator.getDefault().getBundle(),
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE,
 				"."); //$NON-NLS-1$
-		FileUtils.copyFileFromBundle("resources/" + name + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$
-				project, name + EcoreCatalogTest.FILE_EXT, Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$
+				project, name + EcoreCatalogTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		IFolder folder = project.getFolder("f1"); //$NON-NLS-1$
 		folder.create(true, true, new NullProgressMonitor());
@@ -76,14 +79,14 @@ public class EcoreCatalogTest {
 		final String name = "bug309990"; //$NON-NLS-1$
 		String nsURI = "http://www.eclipse.org/MoDisco/bug309990"; //$NON-NLS-1$
 		Assert.assertNull(EPackage.Registry.INSTANCE.get(nsURI));
-		IProject project = ProjectUtils.createTestProject(name, Activator.getDefault().getBundle(),
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE,
 				"."); //$NON-NLS-1$
-		FileUtils.copyFileFromBundle("resources/" + name + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$
-				project, name + EcoreCatalogTest.FILE_EXT, Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$
+				project, name + EcoreCatalogTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		Assert.assertNotNull(EPackage.Registry.INSTANCE.get(nsURI));
-		FileUtils.copyFileFromBundle("resources/" + name + "_bis" + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$ //$NON-NLS-2$
-				project, name + EcoreCatalogTest.FILE_EXT, Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + "_bis" + EcoreCatalogTest.FILE_EXT, //$NON-NLS-1$ //$NON-NLS-2$
+				project, name + EcoreCatalogTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		Assert.assertNotNull(EPackage.Registry.INSTANCE.get(nsURI + "_bis")); //$NON-NLS-1$
 		Assert.assertNull(EPackage.Registry.INSTANCE.get(nsURI));

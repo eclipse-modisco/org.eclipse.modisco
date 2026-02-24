@@ -34,8 +34,8 @@ import org.eclipse.jdt.ui.JavaUI;
 import org.eclipse.jface.operation.IRunnableContext;
 import org.eclipse.jface.window.Window;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.SelectionDialog;
@@ -96,6 +96,7 @@ public final class JavaUtils {
 				try {
 
 					ResourcesPlugin.getWorkspace().run(new IWorkspaceRunnable() {
+						@Override
 						public void run(final IProgressMonitor monitor2) throws CoreException {
 							try {
 								tempproj[0] = ResourcesPlugin.getWorkspace().getRoot()
@@ -156,6 +157,7 @@ public final class JavaUtils {
 					protected IStatus run(final IProgressMonitor monitor1) {
 						try {
 							ResourcesPlugin.getWorkspace().run(new IWorkspaceRunnable() {
+								@Override
 								public void run(final IProgressMonitor monitor2)
 										throws CoreException {
 									try {

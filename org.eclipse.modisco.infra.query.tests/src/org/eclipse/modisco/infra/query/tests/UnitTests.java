@@ -37,10 +37,13 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
+import org.eclipse.modisco.common.tests.TestModelUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.facet.util.pde.core.internal.exported.exception.PdeCoreUtilsException;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.validation.ValidationJob;
 import org.eclipse.modisco.infra.query.JavaModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuery;
@@ -59,8 +62,11 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 public class UnitTests {
+
+	private static final Bundle TEST_BUNDLE = Activator.getDefault().getBundle();
 
 	private static final String FILE_EXT = ".querySet"; //$NON-NLS-1$
 
@@ -68,50 +74,44 @@ public class UnitTests {
 
 	private final ResourceSet resourceSet = new ResourceSetImpl();
 
-	private final Utils utils = new Utils(Activator.getDefault());
-	private final EPackage ecorePackage = this.utils.getEcorePackage();
+	private final EPackage ecorePackage = TestModelUtils.getEcorePackage();
 
 	@BeforeClass
 	public static void loadTarget() throws PdeCoreUtilsException {
 //		TargetPlatformUtils.loadTargetPlatform();
 	}
+
+	private IProject createTestProject(String name) throws Exception {
+		return TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+	}
 	
 	@Test
 	public void test001() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
+		IProject projectToCreate = createTestProject(name);
 		IFile file = projectToCreate.getFile(name + UnitTests.FILE_EXT);
 		createQueryFile(name, projectToCreate);
-		IFile javaFile = FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				projectToCreate,
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IFile javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
+				projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result = executeJavaQuery(name);
 		Assert.assertTrue(((String) result.get(0).getValue()) == "Test001"); //$NON-NLS-1$
 		changeQueryFile(projectToCreate, name);
-		javaFile = FileUtils
-				.copyFileFromBundle(
-						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-						projectToCreate,
-						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", Activator.getDefault().getBundle()); //$NON-NLS-1$
+		javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
+						projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result2 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result2.get(0).getValue()) == "Test002"); //$NON-NLS-1$
-		javaFile = FileUtils
-				.copyFileFromBundle(
-						"resources/Test002bis.java", //$NON-NLS-1$
-						projectToCreate,
-						"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", Activator.getDefault().getBundle()); //$NON-NLS-1$
+		javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/Test002bis.java", //$NON-NLS-1$
+						projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		List<ModelQueryResult> result3 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$
 	}
@@ -119,17 +119,14 @@ public class UnitTests {
 	@Test
 	public void simpleEval() throws Exception {
 		final String name = "test001"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
+		IProject projectToCreate = createTestProject(name);
 		IFile file = createQueryFile(name, projectToCreate);
-		IFile javaFile = FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				projectToCreate,
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IFile javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
+				projectToCreate,"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet mqs = catalog.getModelQuerySet(name);
 		ModelQuery mq = mqs.getQueries().get(0);
@@ -226,19 +223,15 @@ public class UnitTests {
 	@Test
 	public void osgiReload() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name //$NON-NLS-1$
-				+ UnitTests.FILE_EXT, projectToCreate, name + UnitTests.FILE_EXT, Activator
-				.getDefault().getBundle());
-		IFile javaFile = FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-				projectToCreate,
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name //$NON-NLS-1$
+				+ UnitTests.FILE_EXT, projectToCreate, name + UnitTests.FILE_EXT);
+		IFile javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE,  "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
+				projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		AbstractModelQuery modelQueryInst = null;
 		Assert.assertTrue("Query catalog must not be empty.", //$NON-NLS-1$
 				ModelQuerySetCatalog.getSingleton().getAllModelQuerySets().size() > 1);
@@ -253,14 +246,11 @@ public class UnitTests {
 				result.get(0).getSource() == this.ecorePackage);
 		Assert.assertTrue(result.get(0) != null);
 		Assert.assertTrue(((String) result.get(0).getValue()) == "Test002"); //$NON-NLS-1$
-		javaFile = FileUtils.copyFileFromBundle(
-				"resources/Test002bis.java", //$NON-NLS-1$
-				projectToCreate,
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE,  "resources/Test002bis.java", //$NON-NLS-1$
+				projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
 		List<ModelQueryResult> result3 = executeJavaQuery(name);
 		Assert.assertTrue(((String) result3.get(0).getValue()) == "Test002bis"); //$NON-NLS-1$
 		ModelQueryContext context2 = RuntimeFactory.eINSTANCE.createModelQueryContext();
@@ -272,12 +262,12 @@ public class UnitTests {
 	@Test
 	public void oclQueryTest() throws Exception {
 		String name = "oclQueryTest"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet modelQuerySet = catalog.getModelQuerySet(name);
 		ModelQuery modelQuery = modelQuerySet.getQuery("oclQueryTest"); //$NON-NLS-1$
@@ -292,12 +282,12 @@ public class UnitTests {
 	@Test
 	public void oclQueryTest2() throws Exception {
 		String name = "oclQueryTest2"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet modelQuerySet = catalog.getModelQuerySet(name);
 		ModelQuery modelQuery = modelQuerySet.getQuery("oclQueryTest"); //$NON-NLS-1$
@@ -312,12 +302,12 @@ public class UnitTests {
 	@Test
 	public void oclQueryTest3() throws Exception {
 		String name = "oclQueryTest3"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet modelQuerySet = catalog.getModelQuerySet(name);
 		ModelQuery modelQuery = modelQuerySet.getQuery("oclQueryTest"); //$NON-NLS-1$
@@ -337,7 +327,7 @@ public class UnitTests {
  *	@_T_e_s_t
 	public void emfmqQueryTest() throws Exception {
 		String name = "emfmqQueryTest"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
+		IProject projectToCreate = createProject(name);
 		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
 				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
 		IFile javaFile = FileUtils.copyFileFromBundle(
@@ -367,12 +357,12 @@ public class UnitTests {
 	@Test
 	public void jxpathQueryTest() throws Exception {
 		String name = "jxpathQueryTest"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet modelQuerySet = catalog.getModelQuerySet(name);
 		ModelQuery modelQuery = modelQuerySet.getQueries().get(0);
@@ -511,10 +501,9 @@ public class UnitTests {
 	private IMarker[] wrongX(final String name, final int nbOfExpectedMarkers,
 			final Runnable runnable) throws Exception {
 		IMarker[] markers = null;
-		IProject projectToCreate = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/validation/" + name //$NON-NLS-1$
-				+ UnitTests.FILE_EXT, projectToCreate, name + UnitTests.FILE_EXT, Activator
-				.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name //$NON-NLS-1$
+				+ UnitTests.FILE_EXT, projectToCreate, name + UnitTests.FILE_EXT);
 		runnable.run(projectToCreate);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
@@ -544,18 +533,15 @@ public class UnitTests {
 	@Test
 	public void resourceSet() throws Exception {
 		String name = "test002"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
-		IFile javaFile = FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-				projectToCreate,
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
+		IFile javaFile = FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java", //$NON-NLS-1$
+				projectToCreate, "src/org/eclipse/modisco/infra/query/tests/samples/Test002.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMoreMarkerOn(javaFile, NB_MARKERS_Q_FILE);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySet mqs = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 
 		URI ecoreMmUri = URI.createURI("http://www.eclipse.org/MoDisco/infra/query/0.8.incubation"); //$NON-NLS-1$
@@ -568,12 +554,12 @@ public class UnitTests {
 	@Test
 	public void resourceSet2() throws Exception {
 		String name = "resourceSet2"; //$NON-NLS-1$
-		IProject projectToCreate = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				projectToCreate, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject projectToCreate = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				projectToCreate, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(projectToCreate);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySet mqs = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 		EClass mqsEClass = getMqsMetaClass("platform:/plugin/org.eclipse.modisco.infra.query/model/query.ecore"); //$NON-NLS-1$
 		Assert.assertNotNull(mqs);
@@ -613,7 +599,7 @@ public class UnitTests {
 	// public void propertiesTest() {
 	// try {
 	// String name = "propertiesTest";
-	// IProject projectToCreate = this.utils.createProject(name);
+	// IProject projectToCreate = createProject(name);
 	// this.utils.copyFileFormBundle("resources/" + name + UnitTests.FILE_EXT,
 	// projectToCreate, name + UnitTests.FILE_EXT);
 	// this.utils.copyFileFormBundle("resources/" + name + ".mdProperties",
@@ -671,12 +657,8 @@ public class UnitTests {
 		wrongX(name, 1, new Runnable() {
 			@Override
 			public void run(final IProject project) throws Exception {
-				FileUtils
-						.copyFileFromBundle(
-								"src/org/eclipse/modisco/infra/query/tests/samples/WrongImplementationClassInterface.java", //$NON-NLS-1$
-								project,
-								"src/org/eclipse/modisco/infra/query/tests/samples/WrongImplementationClassInterface.java", //$NON-NLS-1$
-								Activator.getDefault().getBundle());
+				FileUtils.copyFileFromBundle(TEST_BUNDLE,  "src/org/eclipse/modisco/infra/query/tests/samples/WrongImplementationClassInterface.java", //$NON-NLS-1$
+								project, "src/org/eclipse/modisco/infra/query/tests/samples/WrongImplementationClassInterface.java"); //$NON-NLS-1$
 			}
 		});
 
@@ -693,12 +675,12 @@ public class UnitTests {
 	@Test
 	public void bug306724() throws Exception {
 		String name = "bug306724"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySet querySet = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 		Assert.assertNotNull(querySet);
 		project.close(new NullProgressMonitor());
@@ -707,7 +689,7 @@ public class UnitTests {
 		Assert.assertNull(querySet);
 		project.open(new NullProgressMonitor());
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		querySet = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 		Assert.assertNotNull(querySet);
 		project.delete(true, new NullProgressMonitor());
@@ -723,19 +705,17 @@ public class UnitTests {
 	@Test
 	public void bug307095() throws Exception {
 		final String name = "bug307095"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IFile queryFile = project.getFile(name + UnitTests.FILE_EXT);
 		IMarker[] markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
 				IResource.DEPTH_INFINITE);
 		Assert.assertEquals(1, markers.length);
-		FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
+				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
@@ -751,30 +731,26 @@ public class UnitTests {
 	@Test
 	public void bug307095v2() throws Exception {
 		final String name = "bug307095v2"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
-		FileUtils.copyFileFromBundle("resources/bug307095v2_Test001.java", //$NON-NLS-1$
-				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug307095v2_Test001.java", //$NON-NLS-1$
+				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IFile queryFile = project.getFile(name + UnitTests.FILE_EXT);
 		IMarker[] markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
 				IResource.DEPTH_INFINITE);
 		Assert.assertEquals(1, markers.length);
-		FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE,  "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
+				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
 				IResource.DEPTH_INFINITE);
 		Assert.assertEquals(0, markers.length);
-		FileUtils.copyFileFromBundle("resources/bug307095v2_Test001.java", //$NON-NLS-1$
-				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/bug307095v2_Test001.java", //$NON-NLS-1$
+				project, "src/org/eclipse/modisco/infra/query/tests/samples/Test001.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
@@ -791,13 +767,11 @@ public class UnitTests {
 	public void bug307095v3() throws Exception {
 		final String name = "bug307095v3"; //$NON-NLS-1$
 		// Create MoDisco project
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
-		FileUtils.copyFileFromBundle(
-				"src/org/eclipse/modisco/infra/query/tests/samples/Bug307095v3.java", //$NON-NLS-1$
-				project, "src/org/eclipse/modisco/infra/query/tests/samples/Bug307095v3.java", //$NON-NLS-1$
-				Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE,  "src/org/eclipse/modisco/infra/query/tests/samples/Bug307095v3.java", //$NON-NLS-1$
+				project, "src/org/eclipse/modisco/infra/query/tests/samples/Bug307095v3.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IFile queryFile = project.getFile(name + UnitTests.FILE_EXT);
@@ -805,14 +779,10 @@ public class UnitTests {
 				IResource.DEPTH_INFINITE);
 		Assert.assertEquals(1, markers.length);
 		// Create helper project
-		IProject projectHelper = ProjectUtils.createTestPluginProject(
-				name + "helper", Activator.getDefault().getBundle(), "."); //$NON-NLS-1$ //$NON-NLS-2$
-		FileUtils
-				.copyFileFromBundle(
-						"src/org/eclipse/modisco/infra/query/tests/samples/bug307095/HelperBug307095v3.java", //$NON-NLS-1$
-						projectHelper,
-						"src/org/eclipse/modisco/infra/query/tests/samples/bug307095/HelperBug307095v3.java", //$NON-NLS-1$
-						Activator.getDefault().getBundle());
+		IProject projectHelper = TestProjectUtils.createTestPluginProject(
+				name + "helper", TEST_BUNDLE, "."); //$NON-NLS-1$ //$NON-NLS-2$
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "src/org/eclipse/modisco/infra/query/tests/samples/bug307095/HelperBug307095v3.java", //$NON-NLS-1$
+						projectHelper, "src/org/eclipse/modisco/infra/query/tests/samples/bug307095/HelperBug307095v3.java"); //$NON-NLS-1$
 		ProjectUtils.refresh(projectHelper);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		markers = queryFile.findMarkers(ValidationJob.EMF_PROBLEM_MARKER, true,
@@ -831,11 +801,11 @@ public class UnitTests {
 		final String name = "bug307187"; //$NON-NLS-1$
 		final String dir1 = "1/"; //$NON-NLS-1$
 		final String dir2 = "2/"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, dir1 + name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, dir2 + name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, dir1 + name + UnitTests.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, dir2 + name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IFile queryFile1 = project.getFile(new Path(dir1 + name + UnitTests.FILE_EXT));
@@ -852,9 +822,9 @@ public class UnitTests {
 	@Test
 	public void bug309657() throws Exception {
 		final String name = "bug309657"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IFolder folder = project.getFolder("f1");
@@ -887,12 +857,12 @@ public class UnitTests {
 	@Test
 	public void bug310269() throws Exception {
 		final String name = "bug310269"; //$NON-NLS-1$
-		IProject project = this.utils.createProject(name);
-		IFile file = FileUtils.copyFileFromBundle("modisco/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project = createTestProject(name);
+		IFile file = FileUtils.copyFileFromBundle(TEST_BUNDLE, "modisco/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		FileUtils.checkNoMarkerOn(file);
+		TestFileUtils.checkNoMarkerOn(file);
 		ModelQuerySet mqs = ModelQuerySetCatalog.getSingleton().getModelQuerySet(name);
 		Assert.assertNotNull(mqs);
 		Assert.assertNotNull(mqs.eResource());
@@ -912,14 +882,14 @@ public class UnitTests {
 	@Test
 	public void bug310599() throws Exception {
 		final String name = "bug310599"; //$NON-NLS-1$
-		IProject project1 = this.utils.createProject(name + "_1");
-		IFile file1 = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project1, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project1 = createTestProject(name + "_1");
+		IFile file1 = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project1, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project1);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		IProject project2 = this.utils.createProject(name + "_2");
-		IFile file2 = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project2, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project2 = createTestProject(name + "_2");
+		IFile file2 = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project2, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project2);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IMarker[] markers1 = file1.findMarkers(null, true, IResource.DEPTH_INFINITE);
@@ -929,12 +899,12 @@ public class UnitTests {
 			project1.close(new NullProgressMonitor());
 			ProjectUtils.refresh(project2);
 			ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-			FileUtils.checkNoMarkerOn(file2);
+			TestFileUtils.checkNoMarkerOn(file2);
 		} else {
 			project2.close(new NullProgressMonitor());
 			ProjectUtils.refresh(project1);
 			ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-			FileUtils.checkNoMarkerOn(file1);
+			TestFileUtils.checkNoMarkerOn(file1);
 		}
 	}
 
@@ -946,19 +916,19 @@ public class UnitTests {
 	@Test
 	public void bug310599v2() throws Exception {
 		final String name = "bug310599"; //$NON-NLS-1$
-		IProject project1 = this.utils.createProject(name + "_1");
-		IFile file1 = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project1, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project1 = createTestProject(name + "_1");
+		IFile file1 = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project1, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project1);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		IProject project2 = this.utils.createProject(name + "_2");
-		IFile file2 = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project2, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project2 = createTestProject(name + "_2");
+		IFile file2 = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project2, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project2);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-		IProject project3 = this.utils.createProject(name + "_3");
-		IFile file3 = FileUtils.copyFileFromBundle("resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
-				project3, name + UnitTests.FILE_EXT, Activator.getDefault().getBundle());
+		IProject project3 = createTestProject(name + "_3");
+		IFile file3 = FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/" + name + UnitTests.FILE_EXT, //$NON-NLS-1$
+				project3, name + UnitTests.FILE_EXT);
 		ProjectUtils.refresh(project3);
 		ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
 		IMarker[] markers1 = file1.findMarkers(null, true, IResource.DEPTH_INFINITE);
@@ -970,19 +940,19 @@ public class UnitTests {
 			project2.close(new NullProgressMonitor());
 			ProjectUtils.refresh(project3);
 			ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-			FileUtils.checkNoMarkerOn(file3);
+			TestFileUtils.checkNoMarkerOn(file3);
 		} else if (markers2.length == 0) {
 			project2.close(new NullProgressMonitor());
 			project3.close(new NullProgressMonitor());
 			ProjectUtils.refresh(project1);
 			ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-			FileUtils.checkNoMarkerOn(file1);
+			TestFileUtils.checkNoMarkerOn(file1);
 		} else {
 			project3.close(new NullProgressMonitor());
 			project1.close(new NullProgressMonitor());
 			ProjectUtils.refresh(project2);
 			ModelQuerySetCatalog.getSingleton().waitUntilBuilt();
-			FileUtils.checkNoMarkerOn(file2);
+			TestFileUtils.checkNoMarkerOn(file2);
 		}
 	}
 

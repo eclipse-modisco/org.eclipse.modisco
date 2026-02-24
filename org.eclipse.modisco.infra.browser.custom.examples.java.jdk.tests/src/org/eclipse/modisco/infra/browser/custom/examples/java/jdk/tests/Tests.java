@@ -25,15 +25,14 @@ import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.IFilter;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
+import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
 import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -47,14 +46,14 @@ public class Tests {
 	@Test
 	public void emfHighlightuiCustom() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI + "/_example_EMFHighlight.uiCustom"); //$NON-NLS-1$
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void jdkAndEclipseFacets() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI
 				+ "/_example_jdkAndEclipseFacets.facetSet"); //$NON-NLS-1$
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 		FacetSetCatalog catalog = FacetSetCatalog.getSingleton();
 		FacetSet facetSet = catalog.getFacetSet("_example_jdkAndEclipseFacets"); //$NON-NLS-1$
 		Assert.assertNotNull(facetSet);
@@ -65,14 +64,14 @@ public class Tests {
 	public void jdkAndEclipseFacetsCustomization() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI
 				+ "/_example_jdkAndEclipseFacetsCustomization.uiCustom"); //$NON-NLS-1$
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
 	public void jdkAndEclipseQuerySet() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI
 				+ "/_example_jdkAndEclipseQuerySet.querySet"); //$NON-NLS-1$
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 		ModelQuerySetCatalog catalog = ModelQuerySetCatalog.getSingleton();
 		ModelQuerySet querySet = catalog
 				.getModelQuerySet("_example_jdkAndEclipseQuerySet"); //$NON-NLS-1$
@@ -83,7 +82,7 @@ public class Tests {
 	public void javaExample() throws Exception {
 		URI uri = URI.createURI(Tests.PLUGIN_URI
 				+ "/org.eclipse.gmf.runtime.diagram.ui.actions.javaxmi"); //$NON-NLS-1$
-		FileUtils.checkEMFResource(uri, 1);
+		TestFileUtils.checkEMFResource(uri, 1);
 	}
 
 	@Test
@@ -91,6 +90,7 @@ public class Tests {
 			InterruptedException {
 		final List<IStatus> statusList = new ArrayList<IStatus>();
 		ILogListener listener = new ILogListener() {
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				statusList.add(status);
 			}
@@ -98,10 +98,10 @@ public class Tests {
 		ILog log = Platform.getLog(Platform
 				.getBundle("org.eclipse.modisco.infra.common.core")); //$NON-NLS-1$
 		log.addLogListener(listener);
-		ProjectUtils
-				.importPlugin(
+		ProjectUtils.importPlugin(
 						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.java.jdk"), //$NON-NLS-1$
 						new IFilter() {
+							@Override
 							public boolean filter(final Object object) {
 								boolean result = true;
 								if (object instanceof File) {

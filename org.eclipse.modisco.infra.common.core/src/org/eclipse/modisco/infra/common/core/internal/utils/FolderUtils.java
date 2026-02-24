@@ -15,30 +15,25 @@ package org.eclipse.modisco.infra.common.core.internal.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Comparator;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.Plugin;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.osgi.framework.Bundle;
 
 /** @author Gabriel Barbier */
+@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.FileUtils or TestFileUtils */
 public final class FolderUtils {
 	private static final int COPY_BUFFER_SIZE = 512 * 1024;
 
@@ -75,6 +70,7 @@ public final class FolderUtils {
 		// prevent instantiation
 	}
 
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestFileUtils */
 	public static final void clearFolder(final File dirtyFolder) {
 		assert dirtyFolder != null;
 		assert dirtyFolder.exists();
@@ -98,17 +94,20 @@ public final class FolderUtils {
 	 * This method compares two folders (in fact the contents of these two
 	 * folders). It is recursive into each folder
 	 */
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestFileUtils */
 	public static final boolean compareFolders(final File folderSource, final File folderTarget) {
 		return FolderUtils.compareFolders(folderSource, folderTarget,
 				FolderUtils.configurationManagementFilter, FolderUtils.getDefaultFileComparator());
 	}
 
+	@Deprecated /* not used */
 	public static final boolean compareFolders(final File folderSource, final File folderTarget,
 			final FilenameFilter filter) {
 		return FolderUtils.compareFolders(folderSource, folderTarget, filter,
 				FolderUtils.getDefaultFileComparator());
 	}
 
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestFileUtils */
 	public static final boolean compareFolders(final File folderSource, final File folderTarget,
 			final FilenameFilter filter, final Comparator<File> fileComparison) {
 		assert ((folderSource != null) && (folderTarget != null));
@@ -117,7 +116,7 @@ public final class FolderUtils {
 		if (folderSource.equals(folderTarget)) {
 			result = true;
 		} else {
-			result = FolderUtils.recursiveCompareFolders(folderSource, folderTarget, filter,
+			result = recursiveCompareFolders(folderSource, folderTarget, filter,
 					fileComparison);
 			if (FolderUtils.debug && !result) {
 				Logger
@@ -128,10 +127,12 @@ public final class FolderUtils {
 		return result;
 	}
 
+	@Deprecated /* not used */
 	public static final boolean compareFiles(final File source, final File target) {
 		return FolderUtils.compareFiles(source, target, FolderUtils.getDefaultFileComparator());
 	}
 
+	@Deprecated /* not used */
 	private static final Comparator<File> getDefaultFileComparator() {
 		return new Comparator<File>() {
 			@Override
@@ -188,6 +189,7 @@ public final class FolderUtils {
 		};
 	}
 
+	@Deprecated
 	public static final boolean compareFiles(final File source, final File target,
 			final Comparator<File> fileComparator) {
 		assert ((source.isFile()) && (target.isFile()));
@@ -200,37 +202,16 @@ public final class FolderUtils {
 		return result;
 	}
 
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.TestFileUtils */
 	public static final String getFileContent(final File source) {
-		StringBuilder result = new StringBuilder();
-		BufferedReader sourceReader = null;
-		try {
-			sourceReader = new BufferedReader(new FileReader(source));
-			String sourceLine = sourceReader.readLine();
-			while (sourceLine != null) {
-				result.append(sourceLine);
-				result.append("\n"); //$NON-NLS-1$
-				sourceLine = sourceReader.readLine();
-			}
-		} catch (FileNotFoundException e) {
-			Logger.logError(e, CommonModiscoActivator.getDefault());
-		} catch (IOException e) {
-			Logger.logError(e, CommonModiscoActivator.getDefault());
-		} finally {
-			if (sourceReader != null) {
-				try {
-					sourceReader.close();
-				} catch (IOException e) {
-					Logger.logError(e, CommonModiscoActivator.getDefault());
-				}
-			}
-		}
-		return result.toString();
+		return org.eclipse.modisco.common.core.files.FileUtils.getFileContent(source);
 	}
 
 	/**
 	 * This method compares two folders (in fact the contents of these two
 	 * folders). It is recursive into each folder
 	 */
+	@Deprecated /* not used */
 	private static final boolean recursiveCompareFolders(final File folderSource,
 			final File folderTarget, final FilenameFilter filter,
 			final Comparator<File> fileComparison) {
@@ -299,6 +280,7 @@ public final class FolderUtils {
 		return result;
 	}
 
+	@Deprecated /* not used */
 	private static final File getCorrespondingTargetContent(final File sourceContent,
 			final File[] targetContents) {
 		File targetContent = null;
@@ -314,9 +296,10 @@ public final class FolderUtils {
 	 * Copies the source directory to the target directory. The target is
 	 * created if it does not exist.
 	 */
+	@Deprecated /* not used */
 	public static final void copyDirectory(final File srcDir, final File destDir)
 			throws IOException {
-		FolderUtils.copyDirectory(srcDir, destDir, new IFilter() {
+		FolderUtils.copyDirectory(srcDir, destDir, new org.eclipse.modisco.common.core.files.IFilter() {
 			@Override
 			public boolean filter(final Object object) {
 				return true;
@@ -324,8 +307,9 @@ public final class FolderUtils {
 		});
 	}
 
+	@Deprecated /* not used */
 	public static final void copyDirectory(final File srcDir, final File destDir,
-			final IFilter filter) throws IOException {
+			final org.eclipse.modisco.common.core.files.IFilter filter) throws IOException {
 		//
 		//	Build Map of folders to copy before copying to avoid recursion for Maven.
 		//
@@ -341,7 +325,7 @@ public final class FolderUtils {
 				if (!src.isDirectory()) {
 					File dest = new File(destDir2.getPath() + File.separator + src.getName());
 					if (filter.filter(dest)) {
-						FolderUtils.copyFile(src, dest);
+						org.eclipse.modisco.common.core.files.FileUtils.copyFile(src, dest);
 					}
 				}
 			}
@@ -349,8 +333,9 @@ public final class FolderUtils {
 	}
 
 	/* Recurse to gather the directories to be copied in src2dest */
+	@Deprecated /* not used */
 	private static final void copyDirectory2(final File srcDir, final File destDir,
-			final IFilter filter, Map<File, File> src2dest) throws IOException {
+			final org.eclipse.modisco.common.core.files.IFilter filter, Map<File, File> src2dest) throws IOException {
 		src2dest.put(srcDir, destDir);
 		for (File src : srcDir.listFiles()) {
 			if (src.isDirectory()) {
@@ -363,58 +348,16 @@ public final class FolderUtils {
 
 	}
 
-	public static void copyFolderFromBundle(final String sourcePath, final Plugin sourcePlugin,
-			final String destinationPath, final IProject project) throws IOException, CoreException {
-		FolderUtils.copyFolderFromBundle(sourcePath, sourcePlugin.getBundle(), destinationPath,
-				project);
-	}
-
 	/**
 	 * Copies the source directory to the target directory. The target is
 	 * created if it does not exist.
+	 * 
+	 * @Deprecated Use Plugin argument to avoid wrong 'bundle' on Tycho.
 	 */
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.tests.FileUtils.copyFolderFromBundle */
 	public static void copyFolderFromBundle(final String sourcePath, final Bundle sourceBundle,
-			final String destinationPath, final IProject project) throws IOException, CoreException {
-		Enumeration<?> e = sourceBundle.getEntryPaths(sourcePath);
-		if (e == null) {
-			// it should be a file (not a folder)
-			try {
-				InputStream source = sourceBundle.getEntry(sourcePath).openStream();
-				IFile javaFile = project.getFile(destinationPath);
-				if (javaFile.exists()) {
-					javaFile.delete(true, new NullProgressMonitor());
-				}
-				javaFile.create(source, true, new NullProgressMonitor());
-			} catch (Exception e1) {
-				Logger.logError(e1, CommonModiscoActivator.getDefault());
-			}
-		} else {
-			String subDestinationPath = "/"; //$NON-NLS-1$
-			if (!destinationPath.equals("/")) { //$NON-NLS-1$
-				IFolder folder = project.getFolder(destinationPath);
-				if (!folder.exists()) {
-					try {
-						folder.create(true, true, new NullProgressMonitor());
-					} catch (Exception e1) {
-						Logger.logError(e1, CommonModiscoActivator.getDefault());
-					}
-				}
-				subDestinationPath = folder.getProjectRelativePath().toString();
-			}
-			while (e.hasMoreElements()) {
-				Object object = e.nextElement();
-				if (object instanceof String) {
-					String subpath = (String) object;
-					if (!subpath.matches(".*/\\.svn/")) { //$NON-NLS-1$
-						String dest = subDestinationPath
-								+ subpath.substring(sourcePath.length() - 1);
-						FolderUtils.copyFolderFromBundle(subpath, sourceBundle, dest, project);
-					}
-				} else {
-					throw new RuntimeException("Unexpected element type"); //$NON-NLS-1$
-				}
-			}
-		}
+			final String targetPath, final IProject targetProject) throws IOException, CoreException {
+		org.eclipse.modisco.common.core.files.FileUtils.copyFolderFromBundle(sourceBundle, sourcePath, targetProject, targetPath);
 	}
 
 	/**
@@ -422,41 +365,9 @@ public final class FolderUtils {
 	 *
 	 * @return <code>true</code> if successful, <code>false</code> otherwise
 	 */
+	@Deprecated /* @deprecated use org.eclipse.modisco.common.core.files.FileUtils.copyFile */
 	public static final boolean copyFile(final File source, final File destination) {
-		boolean result = false;
-		FileInputStream sourceFile = null;
-		FileOutputStream destinationFile = null;
-		try {
-			// File creation
-			destination.createNewFile();
-			sourceFile = new FileInputStream(source);
-			destinationFile = new FileOutputStream(destination);
-			// 0.5 MiB buffer for reading
-			byte[] buffer = new byte[FolderUtils.COPY_BUFFER_SIZE];
-			int nbRead;
-			while ((nbRead = sourceFile.read(buffer)) != -1) {
-				destinationFile.write(buffer, 0, nbRead);
-			}
-
-			// Copied
-			result = true;
-		} catch (java.io.FileNotFoundException f) {
-			result = false;
-		} catch (java.io.IOException e) {
-			result = false;
-		} finally {
-			try {
-				if (sourceFile != null) {
-					sourceFile.close();
-				}
-				if (destinationFile != null) {
-					destinationFile.close();
-				}
-			} catch (Exception e) {
-				result = false;
-			}
-		}
-		return result;
+		return org.eclipse.modisco.common.core.files.FileUtils.copyFile(source, destination);
 	}
 
 	/**
@@ -467,6 +378,7 @@ public final class FolderUtils {
 	 * @throws IOException
 	 *             in case deletion is unsuccessful
 	 */
+	@Deprecated /* not used */
 	public static final void deleteDirectory(final File directory) throws IOException {
 		if (!directory.exists()) {
 			return;
@@ -482,6 +394,7 @@ public final class FolderUtils {
 		}
 	}
 
+	@Deprecated /* not used */
 	public static void createFolder(final IFolder folder) throws CoreException {
 		if (!folder.getParent().exists()) {
 			FolderUtils.createFolder((IFolder) folder.getParent());
@@ -499,6 +412,7 @@ public final class FolderUtils {
 	 * @param newContent
 	 * @throws IOException
 	 */
+	@Deprecated /* not used */
 	public static final void writeFileContent(final File source, final String newContent)
 			throws IOException {
 		FileWriter fw = new FileWriter(source, false);

@@ -15,7 +15,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
@@ -41,6 +40,9 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.infra.browser.custom.CustomViewFeature;
 import org.eclipse.modisco.infra.browser.custom.CustomizableFeatures;
 import org.eclipse.modisco.infra.browser.custom.DerivedFeatureValue;
@@ -54,8 +56,6 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.AttributeItem;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ItemsFactory;
 import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.facet.FacetAttribute;
 import org.eclipse.modisco.infra.facet.FacetSet;
 import org.eclipse.modisco.infra.facet.core.FacetSetCatalog;
@@ -63,14 +63,16 @@ import org.eclipse.modisco.infra.query.ModelQuery;
 import org.eclipse.modisco.infra.query.ModelQuerySet;
 import org.eclipse.modisco.infra.query.core.AbstractModelQuery;
 import org.eclipse.modisco.infra.query.core.ModelQuerySetCatalog;
-import org.eclipse.modisco.infra.query.core.exception.ModelQueryException;
 import org.eclipse.swt.widgets.Display;
 import org.junit.Assert;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 @SuppressWarnings({ "restriction", "nls" })
 public class BrowserCustomTest {
 
+	private static final Bundle TEST_BUNDLE = Activator
+			.getDefault().getBundle();
 	public static final String FILE_EXT = "."
 			+ CustomizationsCatalog.FILE_EXTENSION;
 
@@ -157,10 +159,9 @@ public class BrowserCustomTest {
 				.getRoot()
 				.getProject(
 						"testWorkspaceCustomizationHidesRegistryCustomization");
-		ProjectUtils.create(project, new NullProgressMonitor());
-		FileUtils.copyFileFromBundle("workspaceCustomization.uiCustom",
-				project, "testCustomization.uiCustom", Activator.getDefault()
-						.getBundle());
+		TestProjectUtils.create(project, new NullProgressMonitor());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, "workspaceCustomization.uiCustom",
+				project, "testCustomization.uiCustom");
 		ResourcesPlugin.getWorkspace().build(
 				IncrementalProjectBuilder.CLEAN_BUILD,
 				new NullProgressMonitor());
@@ -239,19 +240,14 @@ public class BrowserCustomTest {
 	}
 
 	@Test
-	public void testBug299277() throws CoreException, IOException,
-			InterruptedException, ModelQueryException {
+	public void testBug299277() throws Exception {
 		// CustomizationsCatalog.getInstance();
 		String projectName = "testBug299277";
 		IProject project = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject(projectName);
-		ProjectUtils.create(project, new NullProgressMonitor());
-		FileUtils.copyFileFromBundle(Activator.getDefault().getBundle()
-				.getSymbolicName()
-				+ BrowserCustomTest.FILE_EXT, project, Activator.getDefault()
-				.getBundle().getSymbolicName()
-				+ BrowserCustomTest.FILE_EXT, Activator.getDefault()
-				.getBundle());
+		TestProjectUtils.create(project, new NullProgressMonitor());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, TEST_BUNDLE.getSymbolicName() + BrowserCustomTest.FILE_EXT,
+				project, TEST_BUNDLE.getSymbolicName() + BrowserCustomTest.FILE_EXT);
 		ResourcesPlugin.getWorkspace().build(
 				IncrementalProjectBuilder.CLEAN_BUILD,
 				new NullProgressMonitor());
@@ -266,12 +262,12 @@ public class BrowserCustomTest {
 			MetamodelView currentMetamodelView = iter.next();
 			listOfWorkspaceCustomization.append(currentMetamodelView.getName());
 			if (currentMetamodelView.getName().equals(
-					Activator.getDefault().getBundle().getSymbolicName())) {
+					TEST_BUNDLE.getSymbolicName())) {
 				metamodelView = currentMetamodelView;
 			}
 		}
 		if (metamodelView == null) {
-			throw new RuntimeException(Activator.getDefault().getBundle()
+			throw new RuntimeException(TEST_BUNDLE
 					.getSymbolicName()
 					+ "not found. Available customizations are : \n"
 					+ listOfWorkspaceCustomization.toString());
@@ -294,18 +290,14 @@ public class BrowserCustomTest {
 	 * object as a query with the same name from the catalog.
 	 */
 	@Test
-	public void test001() throws CoreException, IOException,
+	public void test001() throws Exception,
 			InterruptedException {
 		String projectName = "test001";
 		IProject project = ResourcesPlugin.getWorkspace().getRoot()
 				.getProject(projectName);
-		ProjectUtils.create(project, new NullProgressMonitor());
-		FileUtils.copyFileFromBundle(Activator.getDefault().getBundle()
-				.getSymbolicName()
-				+ BrowserCustomTest.FILE_EXT, project, Activator.getDefault()
-				.getBundle().getSymbolicName()
-				+ BrowserCustomTest.FILE_EXT, Activator.getDefault()
-				.getBundle());
+		TestProjectUtils.create(project, new NullProgressMonitor());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, TEST_BUNDLE.getSymbolicName() + BrowserCustomTest.FILE_EXT,
+				project, TEST_BUNDLE.getSymbolicName() + BrowserCustomTest.FILE_EXT);
 		ResourcesPlugin.getWorkspace().build(
 				IncrementalProjectBuilder.CLEAN_BUILD,
 				new NullProgressMonitor());
@@ -319,7 +311,7 @@ public class BrowserCustomTest {
 		while (iter.hasNext()) {
 			MetamodelView currentMetamodelView = iter.next();
 			if (currentMetamodelView.getName().equals(
-					Activator.getDefault().getBundle().getSymbolicName())) {
+					TEST_BUNDLE.getSymbolicName())) {
 				metamodelView = currentMetamodelView;
 			}
 		}
@@ -364,12 +356,11 @@ public class BrowserCustomTest {
 	@Test
 	public void bug309657() throws Exception {
 		final String name = "bug309657"; //$NON-NLS-1$
-		IProject project = ProjectUtils.createTestProject(name,
+		IProject project = TestProjectUtils.createTestProject(name,
 				org.eclipse.modisco.infra.browser.custom.tests.Activator
 						.getDefault().getBundle(), ".");
-		FileUtils.copyFileFromBundle(name + BrowserCustomTest.FILE_EXT,
-				project, name + BrowserCustomTest.FILE_EXT, Activator
-						.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, name + BrowserCustomTest.FILE_EXT,
+				project, name + BrowserCustomTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		IFolder folder = project.getFolder("f1"); //$NON-NLS-1$
 		folder.create(true, true, new NullProgressMonitor());
@@ -402,7 +393,7 @@ public class BrowserCustomTest {
 	// nbOfExpectedMarkers) throws Exception {
 	// IMarker[] markers = null;
 	// IProject projectToCreate = this.utils.createProject(name);
-	//		FileUtils.copyFileFromBundle("resources/validation/" + name //$NON-NLS-1$
+	//		FileUtils.copyFileFromBundle(TEST_BUNDLE, "resources/validation/" + name //$NON-NLS-1$
 	// + UnitTests.FILE_EXT, projectToCreate, name + UnitTests.FILE_EXT,
 	// Activator
 	// .getDefault().getBundle());
@@ -445,11 +436,9 @@ public class BrowserCustomTest {
 	@Test
 	public void bug306724() throws Exception {
 		String name = "bug306724"; //$NON-NLS-1$
-		IProject project = ProjectUtils.createTestProject(name, Activator
-				.getDefault().getBundle(), ".");
-		FileUtils.copyFileFromBundle(name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
-				project, name + BrowserCustomTest.FILE_EXT, Activator
-						.getDefault().getBundle());
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
+				project, name + BrowserCustomTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		CustomizationsCatalog.getInstance().waitUntilBuilt();
 		MetamodelView customization = (MetamodelView) CustomizationsCatalog
@@ -482,14 +471,11 @@ public class BrowserCustomTest {
 		final String name = "bug307187"; //$NON-NLS-1$
 		final String dir1 = "1/"; //$NON-NLS-1$
 		final String dir2 = "2/"; //$NON-NLS-1$
-		IProject project = ProjectUtils.createTestProject(name, Activator
-				.getDefault().getBundle(), ".");
-		FileUtils.copyFileFromBundle(name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
-				project, dir1 + name + BrowserCustomTest.FILE_EXT, Activator
-						.getDefault().getBundle());
-		FileUtils.copyFileFromBundle(name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
-				project, dir2 + name + BrowserCustomTest.FILE_EXT, Activator
-						.getDefault().getBundle());
+		IProject project = TestProjectUtils.createTestProject(name, TEST_BUNDLE, ".");
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
+				project, dir1 + name + BrowserCustomTest.FILE_EXT);
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, name + BrowserCustomTest.FILE_EXT, //$NON-NLS-1$
+				project, dir2 + name + BrowserCustomTest.FILE_EXT);
 		ProjectUtils.refresh(project);
 		CustomizationsCatalog.getInstance().waitUntilBuilt();
 		IFile customizationFile1 = project.getFile(new Path(dir1 + name

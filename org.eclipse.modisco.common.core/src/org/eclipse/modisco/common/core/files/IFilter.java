@@ -9,8 +9,15 @@
  *    Gregoire DUPE (Mia-Software) - initial API and implementation
  *    Nicolas Bros (Mia-Software)
  *******************************************************************************/
-package org.eclipse.modisco.infra.common.core.internal.utils;
+package org.eclipse.modisco.common.core.files;
 
-@Deprecated /* @deprecated use org.eclipse.modisco.common.core.files.IFilter */
-public interface IFilter extends org.eclipse.modisco.common.core.files.IFilter {
+public interface IFilter {
+
+	/**
+	 * @param object
+	 *            an element to be filtered
+	 * @return false if the element must be filtered out.
+	 */
+	public boolean filter(Object object);
+
 }

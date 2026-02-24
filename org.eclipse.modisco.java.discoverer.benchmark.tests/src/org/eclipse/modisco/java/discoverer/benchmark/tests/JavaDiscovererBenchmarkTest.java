@@ -15,7 +15,6 @@
 package org.eclipse.modisco.java.discoverer.benchmark.tests;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,18 +28,20 @@ import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.modisco.infra.common.core.internal.utils.FileUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
-//import org.eclipse.modisco.java.discoverer.benchmark.Activator;
+import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.java.discoverer.benchmark.Report;
 import org.eclipse.modisco.java.discoverer.benchmark.RunBenchmark;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.osgi.framework.Bundle;
 
 
 public class JavaDiscovererBenchmarkTest {
+	private static final Bundle TEST_BUNDLE = Activator
+			.getDefault().getBundle();
 	private static final String PROJECT_NAME = "benchmark_discovery"; //$NON-NLS-1$
 	private ILogListener listener;
 	protected List<IStatus> loggedErrorWarningStatus = new ArrayList<IStatus>();
@@ -49,6 +50,7 @@ public class JavaDiscovererBenchmarkTest {
 	public void before() {
 		this.listener = new ILogListener() {
 
+			@Override
 			public void logging(final IStatus status, final String plugin) {
 				if (status.getSeverity() != IStatus.OK && status.getSeverity() != IStatus.INFO) {
 					JavaDiscovererBenchmarkTest.this.loggedErrorWarningStatus.add(status);
@@ -61,7 +63,7 @@ public class JavaDiscovererBenchmarkTest {
 
 //	@Ignore // FIXME Bug 552989
 	@Test(timeout = 25 * 60 * 1000)
-	public void test001() throws CoreException, IOException {
+	public void test001() throws Exception {
 		if (Boolean.parseBoolean(System.getenv().get("skip.long.junit.tests"))) {
 			throw new RuntimeException("skipped");
 		}
@@ -69,10 +71,9 @@ public class JavaDiscovererBenchmarkTest {
 		IWorkspace ws = ResourcesPlugin.getWorkspace();
 		IProject iProject = ws.getRoot().getProject(
 				JavaDiscovererBenchmarkTest.PROJECT_NAME);
-		ProjectUtils.create(iProject, new NullProgressMonitor());
+		TestProjectUtils.create(iProject, new NullProgressMonitor());
 		String filePath = "src/" + this.getClass().getName().replace('.', '/') + ".java"; //$NON-NLS-1$ //$NON-NLS-2$
-		FileUtils.copyFileFromBundle(filePath, iProject, filePath, Activator
-				.getDefault().getBundle());
+		FileUtils.copyFileFromBundle(TEST_BUNDLE, filePath, iProject, filePath);
 		RunBenchmark benchmark = new RunBenchmark();
 		IJavaProject aJavaProject = JavaCore.create(iProject);
 		benchmark.createReport(aJavaProject, new NullProgressMonitor());

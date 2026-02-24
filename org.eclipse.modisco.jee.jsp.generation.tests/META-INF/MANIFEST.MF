@@ -13,7 +13,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.modisco.jee,
  org.eclipse.modisco.jee.jsp.discoverer.tests,
  org.eclipse.modisco.jee.jsp,
- org.eclipse.modisco.facet.util.core
+ org.eclipse.modisco.facet.util.core,
+ org.eclipse.modisco.common.tests;bundle-version="1.6.0";visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.modisco.jee.jsp.generation.tests

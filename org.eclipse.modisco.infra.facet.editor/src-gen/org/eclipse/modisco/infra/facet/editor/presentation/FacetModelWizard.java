@@ -45,9 +45,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.common.core.Logger;
+import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
-import org.eclipse.modisco.infra.common.core.internal.utils.ProjectUtils;
 import org.eclipse.modisco.infra.facet.FacetFactory;
 import org.eclipse.modisco.infra.facet.FacetPackage;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -80,6 +80,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
 			.asList(FacetEditorPlugin.INSTANCE
 					.getString("_UI_FacetEditorFilenameExtensions").split( //$NON-NLS-1$
@@ -91,6 +92,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public static final String FORMATTED_FILE_EXTENSIONS = FacetEditorPlugin.INSTANCE.getString(
 			"_UI_FacetEditorFilenameExtensions").replaceAll( //$NON-NLS-1$
 			"\\s*,\\s*", ", "); //$NON-NLS-1$ //$NON-NLS-2$
@@ -101,6 +103,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected FacetPackage facetPackage = FacetPackage.eINSTANCE;
 
 	/**
@@ -109,6 +112,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected FacetFactory facetFactory = this.facetPackage.getFacetFactory();
 
 	/**
@@ -117,6 +121,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected FacetModelWizardNewFileCreationPage newFileCreationPage;
 
 	// /**
@@ -134,6 +139,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected IStructuredSelection selection;
 
 	/**
@@ -142,6 +148,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected IWorkbench workbench;
 
 	/**
@@ -150,6 +157,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected List<String> initialObjectNames;
 
 	/**
@@ -158,6 +166,8 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
+	@Override
 	public void init(final IWorkbench workbench, final IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
@@ -172,6 +182,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	protected Collection<String> getInitialObjectNames() {
 		if (this.initialObjectNames == null) {
 			this.initialObjectNames = new ArrayList<String>();
@@ -193,6 +204,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated NOT
 	 */
+	@Deprecated
 	protected EObject createInitialModel() {
 		FacetSet rootObject = this.facetFactory.createFacetSet();
 		String modelFacetSetName = getModelFile().getName().replaceAll(".facetSet$", ""); //$NON-NLS-1$ //$NON-NLS-2$
@@ -206,6 +218,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	@Override
 	public boolean performFinish() {
 		try {
@@ -273,6 +286,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 			if (activePart instanceof ISetSelectionTarget) {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
 				getShell().getDisplay().asyncExec(new Runnable() {
+					@Override
 					public void run() {
 						((ISetSelectionTarget) activePart).selectReveal(targetSelection);
 					}
@@ -304,6 +318,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public class FacetModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -350,7 +365,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 
 			if (valid) {
 				IPath containerFullPath = getContainerFullPath();
-				if (!ProjectUtils.isInMoDiscoProject(containerFullPath)) {
+				if (!MoDiscoProject.isInMoDiscoProject(containerFullPath)) {
 					setMessage(
 							Messages.FacetModelWizard_facetInNonMoDiscoProject,
 							IMessageProvider.WARNING);
@@ -588,6 +603,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	@Override
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
@@ -654,6 +670,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 	 * 
 	 * @generated
 	 */
+	@Deprecated
 	public IFile getModelFile() {
 		return this.newFileCreationPage.getModelFile();
 	}

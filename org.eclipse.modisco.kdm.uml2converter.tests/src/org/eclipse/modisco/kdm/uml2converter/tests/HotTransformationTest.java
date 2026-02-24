@@ -16,17 +16,16 @@ package org.eclipse.modisco.kdm.uml2converter.tests;
 import java.io.File;
 import java.io.InputStream;
 
-import org.junit.Assert;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.m2m.atl.core.IModel;
 import org.eclipse.m2m.atl.core.emf.EMFModel;
 import org.eclipse.m2m.atl.engine.parser.AtlParser;
-import org.eclipse.modisco.infra.common.core.internal.utils.FolderUtils;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.kdm.uml2converter.internal.KdmToUmlConverter;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -214,7 +213,7 @@ public class HotTransformationTest {
 				Assert.assertTrue(atlConvertedFile.exists());
 				if (this.export) {
 					final File exportedFile = new File("c:/exportedKdmToUmlConverted.atl"); //$NON-NLS-1$
-					FolderUtils.copyFile(atlConvertedFile.getLocation().toFile(), exportedFile);
+					FileUtils.copyFile(atlConvertedFile.getLocation().toFile(), exportedFile);
 				}
 			}
 		} finally {
