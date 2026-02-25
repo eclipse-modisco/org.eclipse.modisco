@@ -32,6 +32,8 @@ import org.eclipse.modisco.facet.util.pde.core.internal.exported.BuildProperties
  */
 public class FacetActionsImpl implements IFacetActions {
 
+	@Override
+	@Deprecated /* not used */
 	public void saveFacetSet(final FacetSet facetSet, final IFile file)
 			throws IOException, InvalidFacetSetException {
 		if (facetSet == null) {

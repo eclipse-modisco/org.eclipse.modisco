@@ -60,6 +60,7 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 	/**
 	 * The singleton instance of this {@link CatalogSetManager}.
 	 */
+	@Deprecated
 	public static final CatalogSetManager INSTANCE = new CatalogSetManager();
 
 	private final Map<Resource, Bundle> resourceToBundleMap = new HashMap<Resource, Bundle>();
@@ -68,12 +69,14 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 	private final List<ICatalogManager> catalogManagers = new ArrayList<ICatalogManager>();
 	private final CatalogSet catalogSet;
 
+	@Deprecated
 	public CatalogSetManager() {
 		this.resourceSet = new ResourceSetImpl();
 		this.catalogSet = CatalogFactory.eINSTANCE.createCatalogSet();
 		initRegisteredEntries();
 	}
 
+	@Deprecated
 	public CatalogSetManager(final ResourceSet resourceSet) {
 		this.resourceSet = resourceSet;
 		this.catalogSet = CatalogFactory.eINSTANCE.createCatalogSet();
@@ -133,6 +136,8 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 		}
 	}
 
+	@Deprecated
+	@Override
 	public CatalogSet getCatalogSet() {
 		return this.catalogSet;
 	}
@@ -141,6 +146,8 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 	 * @author Nicolas Guyomar
 	 * Modified by Emmanuelle Rouillé
 	 */
+	@Deprecated
+	@Override
 	public Bundle getBundleByResource(final Resource eResource) {
 		if (eResource == null) {
 			throw new IllegalArgumentException("The resource cannot be null"); //$NON-NLS-1$
@@ -151,11 +158,15 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 		return this.resourceToBundleMap.get(eResource);
 	}
 
+	@Override
+	@Deprecated /* not used */
 	public void registerModelDeclaration(final IFile file) throws InvalidFacetSetException {
 		PluginUtils.register(file, CatalogSetManager.MODEL_DECLARATION_EXTENSION_POINT_ID,
 				"modeldeclaration"); //$NON-NLS-1$
 	}
 
+	@Deprecated
+	@Override
 	public <T> List<T> getCatalogManagerByType(final Class<? extends T> catalogManagerClass) {
 		List<T> result = new ArrayList<T>();
 		for (ICatalogManager catalogManager : this.catalogManagers) {
@@ -172,18 +183,26 @@ public class CatalogSetManager implements ICatalogSetManager2, Adapter {
 		return result;
 	}
 
+	@Deprecated
+	@Override
 	public void notifyChanged(final Notification notification) {
 		// Nothing to do
 	}
 
+	@Deprecated
+	@Override
 	public Notifier getTarget() {
 		return this.resourceSet;
 	}
 
+	@Deprecated
+	@Override
 	public void setTarget(final Notifier newTarget) {
 		// Nothing to do
 	}
 
+	@Deprecated
+	@Override
 	public boolean isAdapterForType(final Object type) {
 		return type == ICatalogSetManager2.class;
 	}

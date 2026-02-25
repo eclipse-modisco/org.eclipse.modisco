@@ -63,6 +63,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.common.core.files.FileUtils;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.facet.util.core.internal.exported.IFilter;
 import org.eclipse.osgi.util.NLS;
 import org.eclipse.pde.core.plugin.IExtensions;
@@ -80,6 +81,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
+@Deprecated /* not used */
 public final class PluginUtils {
 
 	// This class has been copied from
@@ -97,6 +99,7 @@ public final class PluginUtils {
 	 *            the extension point that is used to register elements of this
 	 *            kind (elements must be declared with a "file" attribute)
 	 */
+	@Deprecated /* not used */
 	public static boolean isRegistered(final IFile elementFile, final String extensionPoint) {
 		final IProject project = elementFile.getProject();
 		final IPluginModelBase pluginModel = PluginRegistry.findModel(project);
@@ -159,6 +162,7 @@ public final class PluginUtils {
 	 * @throws TransformerException
 	 * @throws CoreException
 	 */
+	@Deprecated /* not used */
 	public static void register(final IFile file, final String extensionPointId,
 			final String elementName) {
 		if (isRegistered(file, extensionPointId)) {
@@ -246,6 +250,7 @@ public final class PluginUtils {
 	private static final String PDE_CLASSPATH_ID = "org.eclipse.pde.core.requiredPlugins"; //$NON-NLS-1$
 	private static final String PLUGIN_NATURE = "org.eclipse.pde.PluginNature"; //$NON-NLS-1$
 
+	@Deprecated /* not used */
 	private static void addPdeClassPath(final IProject project)
 			throws JavaModelException {
 		final IJavaProject javaProject = JavaCore.create(project);
@@ -267,6 +272,7 @@ public final class PluginUtils {
 	 *         statement
 	 * @throws IOException
 	 */
+	@Deprecated /* not used */
 	private static void createManifest(final IProject project)
 			throws CoreException, IOException {
 		final IFolder folder = project.getFolder("META-INF"); //$NON-NLS-1$
@@ -292,10 +298,12 @@ public final class PluginUtils {
 		}
 	}
 
+	@Deprecated /* not used */
 	private static String bundleActivatorQualifiedName(final String packageName) {
 		return packageName + '.' + PluginUtils.ACTIVATOR_NAME;
 	}
 
+	@Deprecated /* not used */
 	private static void createActivator(final IProject project)
 			throws CoreException, IOException {
 		final String packageName = PluginUtils.stringToValidPackageName(project
@@ -317,6 +325,7 @@ public final class PluginUtils {
 	}
 
 	/** Transform the given name into a valid package and bundle name */
+	@Deprecated /* not used */
 	private static String stringToValidPackageName(final String name) {
 		final StringBuilder builder = new StringBuilder();
 		char prev = ' ';
@@ -364,6 +373,7 @@ public final class PluginUtils {
 		return result;
 	}
 
+	@Deprecated /* not used */
 	private static void addPdeNature(final IProject project)
 			throws CoreException {
 		final String pluginNature = PluginUtils.PLUGIN_NATURE;
@@ -388,6 +398,7 @@ public final class PluginUtils {
 	 * @throws CoreException
 	 * @throws IOException
 	 */
+	@Deprecated /* not used */
 	public static void configureAsPluginProject(final IProject project)
 			throws CoreException, IOException {
 		PluginUtils.addPdeNature(project);
@@ -404,6 +415,7 @@ public final class PluginUtils {
 	 * @return True if the project is a plug-in project.
 	 * @throws CoreException
 	 */
+	@Deprecated /* not used */
 	public static boolean isPluginProject(final IProject project)
 			throws CoreException {
 		boolean result = false;
@@ -422,6 +434,7 @@ public final class PluginUtils {
 	 *         project.
 	 * @throws CoreException
 	 */
+	@Deprecated /* not used */
 	public static boolean isInPluginProject(final IPath path)
 			throws CoreException {
 		IProject project;
@@ -444,14 +457,11 @@ public final class PluginUtils {
 	 * @return the created project
 	 * @throws CoreException
 	 *             in case of error
+	 * @throws IOException 
 	 */
-	public static IProject importPlugin(final Bundle bundle) throws CoreException {
-		return PluginUtils.importPlugin(bundle, new IFilter<String>() {
-			@Override
-			public boolean filter(final String fileName) {
-				return true;
-			}
-		});
+	@Deprecated /* not used */
+	public static IProject importPlugin(final Bundle bundle) throws CoreException, IOException {
+		return ProjectUtils.importPlugin(bundle);
 	}
 
 	/**
@@ -465,6 +475,7 @@ public final class PluginUtils {
 	 * @throws CoreException
 	 *             in case of error
 	 */
+	@Deprecated /* not used */
 	public static IProject importPlugin(final Bundle bundle, final IFilter<String> filter) throws CoreException {
 		final IProject[] project = new IProject[1];
 		final IWorkspaceRunnable workspaceRunnable = new IWorkspaceRunnable() {
@@ -488,6 +499,7 @@ public final class PluginUtils {
 	 * @throws CoreException
 	 *             in case of error
 	 */
+	@Deprecated /* not used */
 	protected static IProject internalImportPlugin(final Bundle bundle, final IFilter<String> filter) throws CoreException {
 		final IProject project = createProjectWithUniqueName(bundle.getSymbolicName());
 		final List<IStatus> errors = new ArrayList<IStatus>();
@@ -503,6 +515,7 @@ public final class PluginUtils {
 		return project;
 	}
 	
+	@Deprecated /* not used */
 	private static void copyUrlToFile(final IProject project,
 			final List<IStatus> errors, final URL url) throws CoreException {
 		try {
@@ -541,6 +554,7 @@ public final class PluginUtils {
 		}
 	}
 
+	@Deprecated /* not used */
 	private static void createDir(final IFolder folder) throws CoreException {
 		final IContainer parent = folder.getParent();
 		if ((!parent.exists()) && parent instanceof IFolder) {
@@ -548,6 +562,8 @@ public final class PluginUtils {
 		}
 		folder.create(true, true, new NullProgressMonitor());
 	}
+
+	@Deprecated /* not used */
 	protected static void handleErrors(final List<IStatus> errors) throws CoreException {
 		if (!errors.isEmpty()) {
 			final IStatus[] statusArray = errors.toArray(new IStatus[errors.size()]);
@@ -557,6 +573,7 @@ public final class PluginUtils {
 		}
 	}
 
+	@Deprecated /* not used */
 	private static List<URL> getURLsToCopy(final Bundle bundle,
 			final IProject project, final String path,
 			final IFilter<String> filter, final List<IStatus> errors) {
@@ -584,6 +601,7 @@ public final class PluginUtils {
 		return result;
 	}
 
+	@Deprecated /* not used */
 	protected static IProject createProjectWithUniqueName(final String baseName) throws CoreException {
 		final IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		final IWorkspaceRoot root = workspace.getRoot();

@@ -30,6 +30,8 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.resources.ProjectScope;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -204,6 +206,22 @@ public class ProjectUtils {
 	}
 
 	/**
+	 * @author Gregoire DUPE (Mia-Software) - initial implementation
+	 */
+	public static void createBuildProperties(final IProject project) throws CoreException {
+		IFile buildFile = project.getFile("build.properties"); //$NON-NLS-1$
+		if (!buildFile.exists()) {
+			StringBuffer buildSB = new StringBuffer();
+			buildSB.append("source.. = src/\n"); //$NON-NLS-1$
+			buildSB.append("output.. = bin/\n"); //$NON-NLS-1$
+			buildSB.append("bin.includes = META-INF/,\\\n"); //$NON-NLS-1$
+			buildSB.append("               .\n"); //$NON-NLS-1$
+			InputStream source = new ByteArrayInputStream(buildSB.toString().getBytes());
+			buildFile.create(source, true, new NullProgressMonitor());
+		}
+	}
+
+	/**
 	 * @author Gregoire DUPE (Mia-Software) - Removing "Require-Bundle"
 	 *         statement
 	 */
@@ -260,6 +278,43 @@ public class ProjectUtils {
 		}
 		if (monitorDone) {
 			monitor.done();
+		}
+	}
+
+	protected static IProject createProjectWithUniqueName(final String baseName) throws CoreException {
+		final IWorkspace workspace = ResourcesPlugin.getWorkspace();
+		final IWorkspaceRoot root = workspace.getRoot();
+		IProject project = root.getProject(baseName);
+		if (project.exists()) {
+			int version = 1;
+			final int maxIter = 100;
+			while (project.exists() && version < maxIter) {
+				final String uniqueName = baseName + " (" + version + ')'; //$NON-NLS-1$
+				project = root.getProject(uniqueName);
+				version++;
+			}
+		}
+		project.create(new NullProgressMonitor());
+		project.open(new NullProgressMonitor());
+		return project;
+	}
+
+	public static void enableAPT(final IProject project) {
+		IJavaProject javaProject = JavaCore.create(project);
+		if (javaProject != null) {
+			try {
+				IScopeContext context = new ProjectScope(project);
+				IEclipsePreferences node = context.getNode(AptPreferenceConstants.APT_STRING_BASE
+						+ ".core"); //$NON-NLS-1$
+				node.put(AptPreferenceConstants.APT_ENABLED, "true"); //$NON-NLS-1$
+				node.sync();
+				IEclipsePreferences javaNode = context.getNode(JavaCore.PLUGIN_ID);
+				javaNode.put(AptPreferenceConstants.APT_PROCESSANNOTATIONS, "enabled"); //$NON-NLS-1$
+				javaNode.sync();
+			} catch (Exception e) {
+				Logger.logError(e, "Error enabling apt processing", //$NON-NLS-1$
+						Activator.getDefault());
+			}
 		}
 	}
 
@@ -375,39 +430,12 @@ public class ProjectUtils {
 		return project;
 	}
 
-	/**
-	 * @author Gregoire DUPE (Mia-Software) - initial implementation
-	 */
-	public static void createBuildProperties(final IProject project) throws CoreException {
-		IFile buildFile = project.getFile("build.properties"); //$NON-NLS-1$
-		if (!buildFile.exists()) {
-			StringBuffer buildSB = new StringBuffer();
-			buildSB.append("source.. = src/\n"); //$NON-NLS-1$
-			buildSB.append("output.. = bin/\n"); //$NON-NLS-1$
-			buildSB.append("bin.includes = META-INF/,\\\n"); //$NON-NLS-1$
-			buildSB.append("               .\n"); //$NON-NLS-1$
-			InputStream source = new ByteArrayInputStream(buildSB.toString().getBytes());
-			buildFile.create(source, true, new NullProgressMonitor());
-		}
-	}
-
-	public static void enableAPT(final IProject project) {
-		IJavaProject javaProject = JavaCore.create(project);
-		if (javaProject != null) {
-			try {
-				IScopeContext context = new ProjectScope(project);
-				IEclipsePreferences node = context.getNode(AptPreferenceConstants.APT_STRING_BASE
-						+ ".core"); //$NON-NLS-1$
-				node.put(AptPreferenceConstants.APT_ENABLED, "true"); //$NON-NLS-1$
-				node.sync();
-				IEclipsePreferences javaNode = context.getNode(JavaCore.PLUGIN_ID);
-				javaNode.put(AptPreferenceConstants.APT_PROCESSANNOTATIONS, "enabled"); //$NON-NLS-1$
-				javaNode.sync();
-			} catch (Exception e) {
-				Logger.logError(e, "Error enabling apt processing", //$NON-NLS-1$
-						Activator.getDefault());
-			}
-		}
+	public static void joinJobs(IProgressMonitor monitor) throws InterruptedException {
+		IJobManager jobManager = Job.getJobManager();
+		jobManager.join(ResourcesPlugin.FAMILY_MANUAL_REFRESH, monitor);
+		jobManager.join(ResourcesPlugin.FAMILY_AUTO_REFRESH, monitor);
+		jobManager.join(ResourcesPlugin.FAMILY_MANUAL_BUILD, monitor);
+		jobManager.join(ResourcesPlugin.FAMILY_AUTO_BUILD, monitor);
 	}
 
 	/** Transform the given name into a valid package and bundle name */
@@ -459,13 +487,5 @@ public class ProjectUtils {
 		NullProgressMonitor monitor = new NullProgressMonitor();
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 		joinJobs(monitor);
-	}
-
-	public static void joinJobs(IProgressMonitor monitor) throws InterruptedException {
-		IJobManager jobManager = Job.getJobManager();
-		jobManager.join(ResourcesPlugin.FAMILY_MANUAL_REFRESH, monitor);
-		jobManager.join(ResourcesPlugin.FAMILY_AUTO_REFRESH, monitor);
-		jobManager.join(ResourcesPlugin.FAMILY_MANUAL_BUILD, monitor);
-		jobManager.join(ResourcesPlugin.FAMILY_AUTO_BUILD, monitor);
 	}
 }

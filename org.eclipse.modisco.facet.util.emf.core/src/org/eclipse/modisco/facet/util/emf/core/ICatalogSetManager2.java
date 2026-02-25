@@ -37,6 +37,7 @@ public interface ICatalogSetManager2 {
 	 *
 	 * @return the set of registered {@link Catalog}s
 	 */
+	@Deprecated
 	CatalogSet getCatalogSet();
 
 	/**
@@ -51,6 +52,7 @@ public interface ICatalogSetManager2 {
 	 *
 	 * @author Nicolas Guyomar
 	 */
+	@Deprecated
 	Bundle getBundleByResource(Resource eResource);
 
 	/**
@@ -61,6 +63,7 @@ public interface ICatalogSetManager2 {
 	 *            the file to be registered as a "modelDeclaration"
 	 * @throws InvalidFacetSetException
 	 */
+	@Deprecated /* not used */
 	void registerModelDeclaration(IFile file) throws InvalidFacetSetException;
 
 	/**
@@ -68,6 +71,7 @@ public interface ICatalogSetManager2 {
 	 *
 	 * @return a list of {@link ICatalogManager}
 	 */
+	@Deprecated
 	<T> List<T> getCatalogManagerByType(Class<? extends T> catalogManagerClass);
 
 }
