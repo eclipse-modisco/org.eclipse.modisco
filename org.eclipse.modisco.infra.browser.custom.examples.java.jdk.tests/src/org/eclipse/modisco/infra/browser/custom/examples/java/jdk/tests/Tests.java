@@ -10,7 +10,6 @@
  *******************************************************************************/
 package org.eclipse.modisco.infra.browser.custom.examples.java.jdk.tests;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -100,21 +99,7 @@ public class Tests {
 		log.addLogListener(listener);
 		ProjectUtils.importPlugin(
 						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.java.jdk"), //$NON-NLS-1$
-						new IFilter() {
-							@Override
-							public boolean filter(final Object object) {
-								boolean result = true;
-								if (object instanceof File) {
-									File file = (File) object;
-									result = !file.getName().equals(
-											".checkstyle"); //$NON-NLS-1$
-								} else if (object instanceof String) {
-									String str = (String) object;
-									result = !str.equals(".checkstyle"); //$NON-NLS-1$
-								}
-								return result;
-							}
-						});
+						FileUtils.getCheckstylefilter());
 		IProject project = ResourcesPlugin
 				.getWorkspace()
 				.getRoot()

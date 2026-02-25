@@ -10,7 +10,6 @@
  */
 package org.eclipse.modisco.java.browser.customization.test;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +23,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.MultiStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.common.core.files.IFilter;
+import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.facet.Facet;
 import org.eclipse.modisco.infra.facet.FacetSet;
@@ -112,21 +111,7 @@ public class Tests {
 		log.addLogListener(listener);
 		ProjectUtils.importPlugin(
 						Platform.getBundle("org.eclipse.modisco.infra.browser.custom.examples.uml"), //$NON-NLS-1$
-						new IFilter() {
-							@Override
-							public boolean filter(final Object object) {
-								boolean result = true;
-								if (object instanceof File) {
-									File file = (File) object;
-									result = !file.getName().equals(
-											".checkstyle"); //$NON-NLS-1$
-								} else if (object instanceof String) {
-									String str = (String) object;
-									result = !str.equals(".checkstyle"); //$NON-NLS-1$
-								}
-								return result;
-							}
-						});
+						FileUtils.getCheckstylefilter());
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(
 				"org.eclipse.modisco.java.browser.customization"); //$NON-NLS-1$
 		ProjectUtils.refresh(project);

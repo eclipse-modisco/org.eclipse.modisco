@@ -37,18 +37,6 @@ import org.osgi.framework.Bundle;
  */
 public final class TestProjectUtils extends ProjectUtils
 {
-	private static final String JAVA_VERSION = "JavaSE-1.8"; //$NON-NLS-1$
-	
-	private static class MoDiscoCommonRuntimeException extends RuntimeException {
-	
-		private static final long serialVersionUID = -1350857942870483924L;
-	
-		public MoDiscoCommonRuntimeException(final String message, final Throwable cause) {
-			super(message, cause);
-		}
-	
-	}
-	
 	/**
 	 * Add the regular system library entries to javaProject if vmId is null, else add corresponding
 	 * entries for a probably bogus/erroneous specified VM.

@@ -46,7 +46,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.common.core.files.FileUtils;
-import org.eclipse.modisco.common.core.files.IFilter;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.common.tests.TestModelUtils;
@@ -616,20 +615,7 @@ public class FacetTests {
 		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.modisco.infra.facet.core"));
 		log.addLogListener(listener);
 		ProjectUtils.importPlugin(Platform.getBundle("org.eclipse.modisco.java.queries"),
-				new IFilter() {
-					@Override
-					public boolean filter(final Object object) {
-						boolean result = true;
-						if (object instanceof File) {
-							File file = (File) object;
-							result = !file.getName().equals(".checkstyle");
-						} else if (object instanceof String) {
-							String str = (String) object;
-							result = !str.equals(".checkstyle");
-						}
-						return result;
-					}
-				});
+				FileUtils.getCheckstylefilter());
 		log.removeLogListener(listener);
 		if (!statusList.isEmpty()) {
 			MultiStatus status = new MultiStatus(TEST_BUNDLE
@@ -753,20 +739,7 @@ public class FacetTests {
 		ILog log = Platform.getLog(Platform.getBundle("org.eclipse.modisco.infra.facet.core"));
 		log.addLogListener(listener);
 		String pluginName = "org.eclipse.modisco.infra.browser.custom.examples.java.jdk";
-		ProjectUtils.importPlugin(Platform.getBundle(pluginName), new IFilter() {
-			@Override
-			public boolean filter(final Object object) {
-				boolean result = true;
-				if (object instanceof File) {
-					File file = (File) object;
-					result = !file.getName().equals(".checkstyle");
-				} else if (object instanceof String) {
-					String str = (String) object;
-					result = !str.equals(".checkstyle");
-				}
-				return result;
-			}
-		});
+		ProjectUtils.importPlugin(Platform.getBundle(pluginName), FileUtils.getCheckstylefilter());
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(pluginName);
 		ProjectUtils.refresh(project);
 		project.close(new NullProgressMonitor());
