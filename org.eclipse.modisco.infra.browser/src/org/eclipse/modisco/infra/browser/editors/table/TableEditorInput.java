@@ -126,28 +126,33 @@ public class TableEditorInput implements IEditorInput {
 		return this.browserConfiguration;
 	}
 
+	@Override
 	public boolean exists() {
 		return false;
 	}
 
+	@Override
 	public ImageDescriptor getImageDescriptor() {
 		return null;
 	}
 
+	@Override
 	public String getName() {
 		return Messages.TableEditorInput_editorName_TableViewer;
 	}
 
+	@Override
 	public IPersistableElement getPersistable() {
 		return null;
 	}
 
+	@Override
 	public String getToolTipText() {
 		return Messages.TableEditorInput_tooltip_TableViewer;
 	}
 
-	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Class adapter) {
+	@Override
+	public <T> T getAdapter(final Class<T> adapter) {
 		return null;
 	}
 

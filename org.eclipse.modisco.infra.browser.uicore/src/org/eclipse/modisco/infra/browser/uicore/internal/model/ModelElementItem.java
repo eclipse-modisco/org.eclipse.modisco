@@ -75,6 +75,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	private int order = -1;
 
 	/** <strong>must be created using the {@link ItemsFactory factory}</strong> */
+	@Deprecated
 	public ModelElementItem(final EObject eObject, final ITreeElement treeParent,
 			final AppearanceConfiguration appearanceConfiguration) {
 		if (eObject == null) {
@@ -115,6 +116,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	private int cachedChildrenModCount = -1;
 	private List<Object> cachedChildren = null;
 
+	@Deprecated
+	@Override
 	public synchronized List<Object> getChildren() {
 		if (this.cachedChildren == null
 				|| this.cachedChildrenModCount != this.appearanceConfiguration.getModCount()) {
@@ -187,6 +190,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	 * @param children
 	 *            can add more children to this list
 	 */
+	@Deprecated
 	protected void addVirtualElements(final List<Object> children) {
 		// can be overloaded to add more virtual elements
 	}
@@ -373,6 +377,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/** Sort links by name */
 	private void sortLinks(final List<LinkItem> links) {
 		Collections.sort(links, new Comparator<LinkItem>() {
+			@Override
 			public int compare(final LinkItem o1, final LinkItem o2) {
 				final String name1 = o1.getReference().getName();
 				final String name2 = o2.getReference().getName();
@@ -384,6 +389,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/** Sort links by type */
 	private void sortLinksByType(final List<LinkItem> links) {
 		Collections.sort(links, new Comparator<LinkItem>() {
+			@Override
 			public int compare(final LinkItem o1, final LinkItem o2) {
 				final int r1 = getReferenceRank(o1.getReference());
 				final int r2 = getReferenceRank(o2.getReference());
@@ -393,6 +399,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	}
 
 	/** @return the rank of the given reference, used for sorting */
+	@Deprecated
 	public static int getReferenceRank(final EReference reference) {
 		final EReference opposite = reference.getEOpposite();
 		int rank;
@@ -431,6 +438,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/** Sort attributes by name */
 	private void sortAttributes(final List<AttributeItem> attributes) {
 		Collections.sort(attributes, new Comparator<AttributeItem>() {
+			@Override
 			public int compare(final AttributeItem o1, final AttributeItem o2) {
 				final String name1 = o1.getAttribute().getName();
 				final String name2 = o2.getAttribute().getName();
@@ -439,6 +447,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		});
 	}
 
+	@Deprecated
+	@Override
 	public String getText() {
 		final EClass eClass = this.fModelElement.eClass();
 
@@ -480,6 +490,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	}
 
 	/** Returns a unique ID associated to the element by the browser */
+	@Deprecated
 	public long getElementID() {
 		ElementID elementID = (ElementID) ElementIDAdapterFactory.getInstance().adapt(
 				this.fModelElement, ElementID.class);
@@ -487,6 +498,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	}
 
 	/** Return just the name that will be displayed (without the metaclass) */
+	@Deprecated
 	public String getName() {
 		return getDisplayName(this.fModelElement, this.appearanceConfiguration);
 	}
@@ -494,6 +506,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/**
 	 * Return the display name of the given model element (without the metaclass)
 	 */
+	@Deprecated
 	public static String getDisplayName(final EObject eObject,
 			final AppearanceConfiguration appearanceConfiguration) {
 		final CustomizationEngine customizationEngine = appearanceConfiguration
@@ -521,6 +534,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	 * @return a name for the associated {@link EObject} provided by an adapter registered in the
 	 *         registry
 	 */
+	@Deprecated
 	public static String getNameFromAdapter(final EObject eObject, final AdapterFactory adapter) {
 		final IItemLabelProvider itemLabelProvider;
 		// synchronized because the adapter is added to the EObject
@@ -545,6 +559,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	 * @return the name that was provided through a registered name provider for the given
 	 *         {@link EObject}
 	 */
+	@Deprecated
 	public static String getProvidedName(final EObject eObject) {
 		final NameProvidersRegistry nameProvidersRegistry = NameProvidersRegistry.getInstance();
 		final String name = nameProvidersRegistry.getName(eObject);
@@ -554,6 +569,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public boolean hasChildren() {
 		/*
 		 * Always return true so that there is no need to compute all children. Side effect: ghost
@@ -564,6 +581,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return true;
 	}
 
+	@Deprecated
+	@Override
 	public Color getForeground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -576,6 +595,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Color getBackground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -587,6 +608,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Font getFont() {
 		// apply potential font customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -599,6 +622,8 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Image getImage() {
 		// TODO: cache image? (the icon is starting to become expensive to
 		// retrieve)
@@ -624,6 +649,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	 *
 	 * @return an icon for the element or <code>null</code> if no icon is provided
 	 */
+	@Deprecated
 	public static Image getImageFor(final EObject eObject,
 			final AppearanceConfiguration appearanceConfiguration) {
 		try {
@@ -682,14 +708,18 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public ITreeElement getTreeParent() {
 		return this.treeParent;
 	}
 
+	@Deprecated
 	public void setTreeParent(final ITreeElement treeParent) {
 		this.treeParent = treeParent;
 	}
 
+	@Deprecated
 	public EObject getEObject() {
 		return this.fModelElement;
 	}
@@ -697,6 +727,7 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public boolean equals(final Object obj) {
 		if (obj instanceof ModelElementItem) {
@@ -709,15 +740,18 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public int hashCode() {
 		return this.fModelElement.hashCode();
 	}
 
+	@Deprecated
 	public int getOrder() {
 		return this.order;
 	}
 
+	@Deprecated
 	public void setOrder(final int order) {
 		this.order = order;
 	}
@@ -747,18 +781,22 @@ public class ModelElementItem implements ITreeElement, IAdaptable {
 		return result;
 	}
 
+	@Deprecated
+	@Override
 	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Class adapter) {
+	public <T> T getAdapter(final Class<T> adapter) {
 		if (adapter == EObject.class) {
-			return this.fModelElement;
+			return (T) this.fModelElement;
 		}
 		return null;
 	}
 
+	@Deprecated
 	public AppearanceConfiguration getAppearanceConfiguration() {
 		return this.appearanceConfiguration;
 	}
 
+	@Deprecated
 	@Override
 	public String toString() {
 		return ModelElementItem.class.getSimpleName() + "(" + getText() + ")"; //$NON-NLS-1$ //$NON-NLS-2$

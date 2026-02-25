@@ -63,6 +63,7 @@ public class FacetContext {
 	 * @param resources
 	 *            the resources that will be used to resolve {@link Shortcut}s
 	 */
+	@Deprecated
 	public void setResources(final Collection<Resource> resources) {
 		synchronized (this.resources) {
 			this.resources.clear();
@@ -92,6 +93,7 @@ public class FacetContext {
 		}
 	}
 
+	@Deprecated
 	public void addFacetSet(final FacetSet facetSet) {
 		// this.appliedFacetSet.add(facetSet);
 		for (Facet facet : facetSet.getFacets()) {
@@ -99,6 +101,7 @@ public class FacetContext {
 		}
 	}
 
+	@Deprecated
 	public void addFacet(final Facet facet) {
 		boolean contained;
 		synchronized (this.appliedFacets) {
@@ -119,6 +122,7 @@ public class FacetContext {
 		}
 	}
 
+	@Deprecated
 	public boolean isInstance(final EObject eObject, final Facet facet) throws ModelQueryException {
 		ModelQuery modelQuery = facet.getConditionQuery();
 		boolean result = false;
@@ -157,6 +161,7 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public Object get(final EObject eObject, final EStructuralFeature structuralFeature)
 			throws ModelQueryException, ModiscoFacetException {
 		if (structuralFeature == null) {
@@ -219,13 +224,13 @@ public class FacetContext {
 
 		if (result instanceof Collection<?> && !(result instanceof BasicEList<?>)) {
 			Collection<?> list = (Collection<?>) result;
-			@SuppressWarnings("unchecked")
-			BasicEList basicEList = new BasicEList(list);
+			BasicEList<?> basicEList = new BasicEList<>(list);
 			result = basicEList;
 		}
 		return result;
 	}
 
+	@Deprecated
 	protected List<EObject> allInstances(final EClass eClass) {
 		List<EObject> result = new ArrayList<EObject>();
 		MetaclassInstancesAdapterFactoryWithFacet.getInstance().setFacetContext(this);
@@ -239,6 +244,7 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public List<EStructuralFeature> getFacetFeatures(final EObject eObject) {
 		List<EStructuralFeature> result = new ArrayList<EStructuralFeature>();
 		for (Facet facet : getAppliedFacets()) {
@@ -254,12 +260,14 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public void addAll(final Collection<FacetSet> allFacetSets) {
 		for (FacetSet facetSet : allFacetSets) {
 			addFacetSet(facetSet);
 		}
 	}
 
+	@Deprecated
 	public EList<EAttribute> getAttributes(final EObject eObject) throws ModelQueryException {
 		EList<EAttribute> result = new BasicEList<EAttribute>();
 		for (Facet facet : getAppliedFacets()) {
@@ -275,6 +283,7 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public EList<EReference> getReferences(final EObject eObject) throws ModelQueryException {
 		EList<EReference> result = new BasicEList<EReference>();
 		for (Facet facet : getAppliedFacets()) {
@@ -291,6 +300,7 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public List<EClass> getMetaClasses() {
 		List<EClass> metaClasses = new ArrayList<EClass>();
 		synchronized (this.appliedFacets) {
@@ -299,6 +309,7 @@ public class FacetContext {
 		return metaClasses;
 	}
 
+	@Deprecated
 	public List<Facet> getFacets(final EObject eObject) {
 		List<Facet> result = new ArrayList<Facet>();
 		for (Facet facet : getAppliedFacets()) {
@@ -313,10 +324,12 @@ public class FacetContext {
 		return result;
 	}
 
+	@Deprecated
 	public Collection<Facet> getAppliedFacets() {
 		return new ArrayList<Facet>(this.appliedFacets);
 	}
 
+	@Deprecated
 	public void clear() {
 		synchronized (this.appliedFeatures) {
 			this.appliedFeatures.clear();
@@ -327,10 +340,12 @@ public class FacetContext {
 		notifyFacetsCleared();
 	}
 
+	@Deprecated
 	protected Collection<EStructuralFeature> getAppliedFeatures() {
 		return new ArrayList<EStructuralFeature>(this.appliedFeatures);
 	}
 
+	@Deprecated
 	public void addListener(final FacetContextListener listener) {
 		synchronized (this.fListeners) {
 			if (!this.fListeners.contains(listener)) {
@@ -339,12 +354,14 @@ public class FacetContext {
 		}
 	}
 
+	@Deprecated
 	public synchronized void removeListener(final FacetContextListener listener) {
 		synchronized (this.fListeners) {
 			this.fListeners.remove(listener);
 		}
 	}
 
+	@Deprecated
 	public void notifyFacetAdded(final Facet facet) {
 		// copy list to allow clients to modify the listener list
 		List<FacetContextListener> listeners = new ArrayList<FacetContextListener>(this.fListeners);
@@ -353,6 +370,7 @@ public class FacetContext {
 		}
 	}
 
+	@Deprecated
 	public void notifyFacetsCleared() {
 		// copy list to allow clients to modify the listener list
 		List<FacetContextListener> listeners = new ArrayList<FacetContextListener>(this.fListeners);

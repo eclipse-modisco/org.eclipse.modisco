@@ -23,17 +23,21 @@ import org.eclipse.modisco.infra.browser.uicore.internal.model.ModelElementItem;
 @Deprecated
 public class AdapterFactory implements IAdapterFactory {
 
+	@Override
+	@Deprecated
 	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Object adaptableObject, final Class adapterType) {
+	public <T> T getAdapter(final Object adaptableObject, final Class<T> adapterType) {
 		if (adapterType == EObject.class) {
 			if (adaptableObject instanceof ModelElementItem) {
 				ModelElementItem modelElementItem = (ModelElementItem) adaptableObject;
-				return modelElementItem.getEObject();
+				return (T) modelElementItem.getEObject();
 			}
 		}
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Class<?>[] getAdapterList() {
 		return new Class[] { EObject.class };
 	}

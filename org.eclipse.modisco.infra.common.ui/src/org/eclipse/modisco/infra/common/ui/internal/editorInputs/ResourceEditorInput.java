@@ -29,14 +29,17 @@ public class ResourceEditorInput implements IResourceEditorInput {
 		this.resource = resource;
 	}
 
+	@Override
 	public boolean exists() {
 		return false;
 	}
 
+	@Override
 	public ImageDescriptor getImageDescriptor() {
 		return ImageProvider.getInstance().getModiscoLogoDescriptor();
 	}
 
+	@Override
 	public String getName() {
 		URI uri = this.resource.getURI();
 		if (uri != null) {
@@ -48,19 +51,22 @@ public class ResourceEditorInput implements IResourceEditorInput {
 		return ""; //$NON-NLS-1$
 	}
 
+	@Override
 	public IPersistableElement getPersistable() {
 		return null;
 	}
 
+	@Override
 	public String getToolTipText() {
 		return getName();
 	}
 
-	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Class adapter) {
+	@Override
+	public <T> T getAdapter(final Class<T> adapter) {
 		return null;
 	}
 
+	@Override
 	public Resource getResource() {
 		return this.resource;
 	}

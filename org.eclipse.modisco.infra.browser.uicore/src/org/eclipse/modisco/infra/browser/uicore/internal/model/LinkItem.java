@@ -67,6 +67,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	 * @param browserConfiguration
 	 *            the configuration of the browser in which the model is displayed
 	 */
+	@Deprecated
 	public LinkItem(final EObject parent, final ITreeElement treeParent,
 			final EReference reference, final AppearanceConfiguration appearanceConfiguration) {
 		this.reference = reference;
@@ -78,15 +79,19 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	/**
 	 * @return the reference corresponding to the link
 	 */
+	@Deprecated
 	public EReference getReference() {
 		return this.reference;
 	}
 
 	/** @return the number of elements referenced by this link */
+	@Deprecated
 	public int getCount() {
 		return getChildrenElements().size();
 	}
 
+	@Deprecated
+	@Override
 	public String getText() {
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
 				.getCustomizationEngine();
@@ -116,6 +121,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	 *            if not <code>null</code>, specifies a customized name for the reference
 	 * @return a text describing the feature
 	 */
+	@Deprecated
 	public static String getStaticText(final EReference reference, final boolean showMultiplicity,
 			final boolean showOpposite, final String customizedName) {
 
@@ -154,6 +160,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return prefix + referenceName + multiplicity + opposite;
 	}
 
+	@Deprecated
 	public static String getMultiplicity(final EReference reference) {
 		final String multLow;
 		if (reference.isRequired()) {
@@ -170,6 +177,8 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return " [" + multLow + ".." + multHigh + "]"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 
+	@Deprecated
+	@Override
 	public Image getImage() {
 		// Customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -183,6 +192,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return getImageFor(this.reference);
 	}
 
+	@Deprecated
 	public static Image getImageFor(final EReference reference) {
 		if (reference instanceof FacetReference || reference instanceof Shortcut) {
 			return ImageProvider.getInstance().getFacetLinkIcon();
@@ -207,14 +217,19 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return ImageProvider.getInstance().getLinkIcon();
 	}
 
+	@Deprecated
 	public EObject getParent() {
 		return this.parent;
 	}
 
+	@Deprecated
+	@Override
 	public ITreeElement getTreeParent() {
 		return this.treeParent;
 	}
 
+	@Deprecated
+	@Override
 	public synchronized List<?> getChildren() {
 		if (this.cachedChildren == null
 				|| this.cachedChildrenModCount != this.appearanceConfiguration.getModCount()) {
@@ -233,11 +248,14 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return this.cachedChildren;
 	}
 
+	@Deprecated
+	@Override
 	public boolean hasChildren() {
 		return getChildrenElements().size() > 0;
 	}
 
 	/** Return the list of children, without any partitioning */
+	@Deprecated
 	public synchronized List<Object> getChildrenElements() {
 		if (this.cachedChildrenElements == null
 				|| this.cachedChildrenElementsModCount != this.appearanceConfiguration
@@ -302,6 +320,8 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return result;
 	}
 
+	@Deprecated
+	@Override
 	public Color getForeground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -318,6 +338,8 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Color getBackground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -330,6 +352,8 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Font getFont() {
 		// apply potential font customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -346,6 +370,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public boolean equals(final Object obj) {
 		if (obj instanceof LinkItem) {
@@ -358,6 +383,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public int hashCode() {
 		final int hashPrime1 = 47;
@@ -369,6 +395,7 @@ public class LinkItem implements ITreeElement, IAdaptable {
 	 * If the attribute is defined in a facet, then return this facet. Otherwise, return the parent
 	 * eClass of the attribute.
 	 */
+	@Deprecated
 	public EClass facetOrParentClass() {
 		if (this.reference instanceof FacetReference || this.reference instanceof Shortcut) {
 			Facet facet = (Facet) this.reference.eContainer();
@@ -377,14 +404,17 @@ public class LinkItem implements ITreeElement, IAdaptable {
 		return this.parent.eClass();
 	}
 
+	@Deprecated
+	@Override
 	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Class adapter) {
+	public <T> T getAdapter(final Class<T> adapter) {
 		if (adapter == EReference.class) {
-			return this.reference;
+			return (T) this.reference;
 		}
 		return null;
 	}
 
+	@Deprecated
 	@Override
 	public String toString() {
 		return LinkItem.class.getSimpleName() + "(" + getText() + ")"; //$NON-NLS-1$ //$NON-NLS-2$

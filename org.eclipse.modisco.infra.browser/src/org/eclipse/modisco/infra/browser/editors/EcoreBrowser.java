@@ -131,11 +131,11 @@ import org.eclipse.modisco.infra.browser.core.DragAndDropOnLinkCommand;
 import org.eclipse.modisco.infra.browser.core.DragAndDropOnModelElementCommand;
 import org.eclipse.modisco.infra.browser.core.InstancesForMetaclass;
 import org.eclipse.modisco.infra.browser.core.InstancesForMetaclasses;
+import org.eclipse.modisco.infra.browser.core.InstancesForMetaclasses.MetaclassesChangeListener;
 import org.eclipse.modisco.infra.browser.core.MetaclassList;
 import org.eclipse.modisco.infra.browser.core.ModelElementItemEx;
 import org.eclipse.modisco.infra.browser.core.QueryItem;
 import org.eclipse.modisco.infra.browser.core.SearchResults;
-import org.eclipse.modisco.infra.browser.core.InstancesForMetaclasses.MetaclassesChangeListener;
 import org.eclipse.modisco.infra.browser.custom.MetamodelView;
 import org.eclipse.modisco.infra.browser.custom.core.CustomizationsCatalog;
 import org.eclipse.modisco.infra.browser.dialogs.ErrorsDialog;
@@ -393,6 +393,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * This listens for when the Properties view becomes active
 	 */
 	private final IPartListener partListener = new IPartListener() {
+		@Override
 		public void partActivated(final IWorkbenchPart p) {
 			if (p instanceof PropertySheet) {
 				if (((PropertySheet) p).getCurrentPage() == EcoreBrowser.this
@@ -405,18 +406,22 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			}
 		}
 
+		@Override
 		public void partBroughtToTop(final IWorkbenchPart p) {
 			// Ignore.
 		}
 
+		@Override
 		public void partClosed(final IWorkbenchPart p) {
 			// Ignore.
 		}
 
+		@Override
 		public void partDeactivated(final IWorkbenchPart p) {
 			// Ignore.
 		}
 
+		@Override
 		public void partOpened(final IWorkbenchPart p) {
 			// Ignore.
 		}
@@ -439,6 +444,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 		if (theSelection != null && !theSelection.isEmpty()) {
 			Runnable runnable = new Runnable() {
+				@Override
 				public void run() {
 					if (EcoreBrowser.this.treeViewer != null) {
 						EcoreBrowser.this.treeViewer.setSelection(new StructuredSelection(
@@ -451,6 +457,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	}
 
 	/** @return the viewer as required by the {@link IViewerProvider} interface. */
+	@Override
 	public Viewer getViewer() {
 		return this.treeViewer;
 	}
@@ -518,6 +525,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 					}
 				} else {
 					Display.getDefault().asyncExec(new Runnable() {
+						@Override
 						public void run() {
 							MessageDialog.openWarning(getSite().getShell(),
 									Messages.EcoreBrowser_cannotOpenModelFromURI, NLS.bind(
@@ -532,6 +540,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			exception = e;
 			MoDiscoBrowserPlugin.logException(e);
 			Display.getDefault().asyncExec(new Runnable() {
+				@Override
 				public void run() {
 					MessageDialog.openError(EcoreBrowser.this.parentComposite.getShell(),
 							Messages.EcoreBrowser_errorLoadingModel, e.toString());
@@ -557,6 +566,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	@Override
 	protected void setPartName(final String partName) {
 		Display.getDefault().syncExec(new Runnable() {
+			@Override
 			public void run() {
 				EcoreBrowser.super.setPartName(partName);
 			}
@@ -607,6 +617,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		// keep track of the selection, to be able to restore it when using the
 		// "back" button
 		addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
 			public void selectionChanged(final SelectionChangedEvent event) {
 				markNavigationLocation();
 			}
@@ -674,6 +685,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			}
 
 			Display.getDefault().syncExec(new Runnable() {
+				@Override
 				public void run() {
 					getMetaclassViewer().setInput(
 							getBrowserConfiguration().getInstancesForMetaclasses());
@@ -749,6 +761,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			}
 		}
 		this.getSite().getShell().getDisplay().asyncExec(new Runnable() {
+			@Override
 			public void run() {
 				firePropertyChange(PROP_INPUT);
 			}
@@ -984,6 +997,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 								// get shell on UI thread
 								final Shell[] shell = new Shell[1];
 								Display.getDefault().syncExec(new Runnable() {
+									@Override
 									public void run() {
 										shell[0] = getSite().getShell();
 									}
@@ -1208,6 +1222,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		setupPreferredFont();
 
 		this.fontChangeListener = new IPropertyChangeListener() {
+			@Override
 			public void propertyChange(final PropertyChangeEvent event) {
 				if (event.getProperty().equals(JFaceResources.DIALOG_FONT)) {
 					setupPreferredFont();
@@ -1430,6 +1445,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 				// do only the minimum amount of work in the UI thread
 				Display.getDefault().syncExec(new Runnable() {
+					@Override
 					public void run() {
 						// do not try to restore selection
 						EcoreBrowser.this.treeViewer.setSelection(null);
@@ -1539,6 +1555,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		 * viewer. Keeps track of the tree selection for each metaclass, and
 		 * restores it when possible.
 		 */
+		@Override
 		public void selectionChanged(final SelectionChangedEvent event) {
 
 			// save the selection
@@ -1755,13 +1772,13 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	/** This is how the framework determines which interfaces we implement. */
 	@SuppressWarnings("unchecked")
 	@Override
-	public Object getAdapter(final Class key) {
+	public <T> T getAdapter(final Class<T> key) {
 		if (key.equals(IPropertySheetPage.class)) {
 			// Store the propertySheetPage to be able to call dispose() on it.
 			if (this.propertySheetPage == null) {
 				this.propertySheetPage = getPropertySheetPage();
 			}
-			return getPropertySheetPage();
+			return (T) getPropertySheetPage();
 		}
 		return super.getAdapter(key);
 	}
@@ -2008,11 +2025,13 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	}
 
 	/** This implements {@link org.eclipse.jface.viewers.ISelectionProvider}. */
+	@Override
 	public void addSelectionChangedListener(final ISelectionChangedListener listener) {
 		this.selectionChangedListeners.add(listener);
 	}
 
 	/** This implements {@link org.eclipse.jface.viewers.ISelectionProvider}. */
+	@Override
 	public void removeSelectionChangedListener(final ISelectionChangedListener listener) {
 		this.selectionChangedListeners.remove(listener);
 	}
@@ -2021,6 +2040,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * Returns the "unwrapped" selection of the editor, with Ecore elements
 	 * instead of the proxies used internally
 	 */
+	@Override
 	public ISelection getSelection() {
 		return BrowserUtils.unwrapSelection(this.editorSelection);
 	}
@@ -2035,6 +2055,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * set this editor's overall selection. Calling this result will notify the
 	 * listeners.
 	 */
+	@Override
 	public void setSelection(final ISelection selection) {
 		this.editorSelection = selection;
 
@@ -2063,6 +2084,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			this.selectionChangedListener = new ISelectionChangedListener() {
 				// This just notifies those things that are affected by the
 				// selection
+				@Override
 				public void selectionChanged(final SelectionChangedEvent selectionChangedEvent) {
 					setSelection(selectionChangedEvent.getSelection());
 				}
@@ -2111,6 +2133,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * This implements {@link org.eclipse.jface.action.IMenuListener} to help
 	 * fill the context menus with contributions from the Edit menu.
 	 */
+	@Override
 	public void menuAboutToShow(final IMenuManager menuManager) {
 		((IMenuListener) getEditorSite().getActionBarContributor()).menuAboutToShow(menuManager);
 	}
@@ -2274,9 +2297,11 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 */
 	private void delayedBrowseTo(final EObject modelElement) {
 		Listener refreshListener = new Listener() {
+			@Override
 			public void handleEvent(final Event event) {
 				removeRefreshListener(this);
 				Display.getDefault().asyncExec(new Runnable() {
+					@Override
 					public void run() {
 						TreePath treePath2 = findTreePathForElement(modelElement);
 						EcoreBrowser.this.treeViewer.setSelection(null);
@@ -2338,6 +2363,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	}
 
 	/** Implements {@link INavigationLocationProvider} */
+	@Override
 	public INavigationLocation createEmptyNavigationLocation() {
 		return new BrowserNavigationLocation(this);
 	}
@@ -2346,6 +2372,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * Implements {@link INavigationLocationProvider}. Create a location that
 	 * can be navigated back to, using the "back" button
 	 */
+	@Override
 	public INavigationLocation createNavigationLocation() {
 		// navigation to the first element of the selection
 		final EClass firstSelectedMetaclass = this.metaclassViewer.getFirstSelectedMetaclass();
@@ -2405,6 +2432,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 				@Override
 				protected IStatus run(final IProgressMonitor monitor) {
 					Display.getDefault().syncExec(new Runnable() {
+						@Override
 						public void run() {
 							internalRefreshTree();
 							if (metaclassViewerToo) {
@@ -2484,8 +2512,10 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 		if (this.fCustomizationEngineChangeListener == null) {
 			this.fCustomizationEngineChangeListener = new ChangeListener() {
+				@Override
 				public void changed() {
 					Display.getDefault().asyncExec(new Runnable() {
+						@Override
 						public void run() {
 							refreshDelayed(true);
 						}
@@ -2563,14 +2593,17 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 					reloadFacetsJob.schedule();
 				}
 
+				@Override
 				public void removed(final IFile file) {
 					changed();
 				}
 
+				@Override
 				public void changed(final EObject eObject, final IFile file) {
 					changed();
 				}
 
+				@Override
 				public void added(final EObject eObject, final IFile file) {
 					changed();
 				}
@@ -2579,6 +2612,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		}
 	}
 
+	@Override
 	public void modelChanged() {
 		getBrowserConfiguration().getAppearanceConfiguration().touch();
 		refreshDelayed(true);
@@ -2791,6 +2825,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			super(registry);
 		}
 
+		@Override
 		public EditingDomain getEditingDomain() {
 			return EcoreBrowser.this.getEditingDomain();
 		}
@@ -2830,8 +2865,10 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 			commandStack = new BasicCommandStack();
 		}
 		commandStack.addCommandStackListener(new CommandStackListener() {
+			@Override
 			public void commandStackChanged(final EventObject event) {
 				getParentComposite().getDisplay().asyncExec(new Runnable() {
+					@Override
 					public void run() {
 						firePropertyChange(IEditorPart.PROP_DIRTY);
 						// Try to select the affected objects.
@@ -2841,6 +2878,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 							// asyncExec is to make it happen after the
 							// refresh
 							Display.getDefault().asyncExec(new Runnable() {
+								@Override
 								public void run() {
 									try {
 										// avoid the view jumping around as
@@ -2889,6 +2927,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 	 * Implements {@link IGotoMarker}. Select the EObject corresponding to the
 	 * given marker
 	 */
+	@Override
 	public void gotoMarker(final IMarker marker) {
 		try {
 			if (marker.getType().equals(EValidator.MARKER)) {
@@ -2910,6 +2949,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		return this.parentComposite;
 	}
 
+	@Override
 	public EditingDomain getEditingDomain() {
 		return this.editingDomain;
 	}
@@ -3184,11 +3224,13 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 		control.addFocusListener(new FocusListener() {
 			private IContextActivation contextActivation = null;
 
+			@Override
 			public void focusGained(final FocusEvent event) {
 				this.contextActivation = contextService
 						.activateContext("org.eclipse.modisco.infra.browser.dummyContext"); //$NON-NLS-1$
 			}
 
+			@Override
 			public void focusLost(final FocusEvent event) {
 				if (this.contextActivation != null) {
 					contextService.deactivateContext(this.contextActivation);
@@ -3219,6 +3261,7 @@ public class EcoreBrowser extends EditorPart implements ISelectionProvider, IMen
 
 					if (EcoreBrowser.this.updateProblemIndication) {
 						getSite().getShell().getDisplay().asyncExec(new Runnable() {
+							@Override
 							public void run() {
 								updateProblemIndication();
 							}

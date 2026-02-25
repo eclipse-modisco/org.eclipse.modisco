@@ -65,6 +65,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	 *            the configuration of the browser in which the model is
 	 *            displayed
 	 */
+	@Deprecated
 	public AttributeItem(final EObject parent, final ITreeElement treeParent,
 			final EAttribute attribute, final AppearanceConfiguration appearanceConfiguration) {
 		this.parent = parent;
@@ -73,11 +74,13 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		this.appearanceConfiguration = appearanceConfiguration;
 	}
 
+	@Deprecated
 	public EAttribute getAttribute() {
 		return this.attribute;
 	}
 
 	/** @return the number of elements referenced by this attribute */
+	@Deprecated
 	public int getCount() {
 		if (this.cachedCount == -1) {
 			final Object value = localGet();
@@ -117,6 +120,8 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return this.cachedValue;
 	}
 
+	@Deprecated
+	@Override
 	public String getText() {
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
 				.getCustomizationEngine();
@@ -139,6 +144,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return staticText + strCount + " = " + strValue; //$NON-NLS-1$
 	}
 
+	@Deprecated
 	public String getValueText() {
 		String strValue;
 		if (!this.attribute.isMany()) {
@@ -166,6 +172,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	 *            attribute
 	 * @return a text describing the attribute
 	 */
+	@Deprecated
 	public static String getStaticText(final EAttribute attribute, final boolean showMultiplicity,
 			final String customizedName) {
 		String multiplicity = ""; //$NON-NLS-1$
@@ -202,6 +209,8 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return prefix + attributeName + multiplicity;
 	}
 
+	@Deprecated
+	@Override
 	public Image getImage() {
 		// Customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -218,18 +227,25 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return ImageProvider.getInstance().getAttributeIcon();
 	}
 
+	@Deprecated
 	public EObject getParent() {
 		return this.parent;
 	}
 
+	@Deprecated
+	@Override
 	public ITreeElement getTreeParent() {
 		return this.treeParent;
 	}
 
+	@Deprecated
+	@Override
 	public boolean hasChildren() {
 		return this.attribute.isMany() && getCount() > 0;
 	}
 
+	@Deprecated
+	@Override
 	public List<?> getChildren() {
 		if (this.attribute.isMany()) {
 			@SuppressWarnings("unchecked")
@@ -239,6 +255,8 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return Collections.EMPTY_LIST;
 	}
 
+	@Deprecated
+	@Override
 	public Color getForeground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -256,6 +274,8 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return null;
 	}
 
+	@Deprecated
+	@Override
 	public Color getBackground() {
 		// apply potential color customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -265,6 +285,8 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 		return color;
 	}
 
+	@Deprecated
+	@Override
 	public Font getFont() {
 		// apply potential font customization
 		final CustomizationEngine customizationEngine = this.appearanceConfiguration
@@ -278,6 +300,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public boolean equals(final Object obj) {
 		if (obj instanceof AttributeItem) {
@@ -290,6 +313,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	/**
 	 * equals and hashCode are used to restore the selection in the JFace viewer
 	 */
+	@Deprecated
 	@Override
 	public int hashCode() {
 		final int hashPrime1 = 47;
@@ -301,6 +325,7 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	 * If the attribute is defined in a facet, then return this facet.
 	 * Otherwise, return the parent eClass of the attribute.
 	 */
+	@Deprecated
 	public EClass facetOrParentClass() {
 		if (this.attribute instanceof FacetAttribute) {
 			Facet facet = (Facet) this.attribute.eContainer();
@@ -352,14 +377,17 @@ public class AttributeItem implements ITreeElement, IAdaptable {
 	// return this.itemPropertyDescriptors;
 	// }
 
+	@Override
+	@Deprecated
 	@SuppressWarnings("unchecked")
-	public Object getAdapter(final Class adapter) {
+	public <T> T getAdapter(final Class<T> adapter) {
 		if (adapter == EAttribute.class) {
-			return this.attribute;
+			return (T) this.attribute;
 		}
 		return null;
 	}
 
+	@Deprecated
 	@Override
 	public String toString() {
 		return AttributeItem.class.getSimpleName() + "(" + getText() + ")"; //$NON-NLS-1$ //$NON-NLS-2$

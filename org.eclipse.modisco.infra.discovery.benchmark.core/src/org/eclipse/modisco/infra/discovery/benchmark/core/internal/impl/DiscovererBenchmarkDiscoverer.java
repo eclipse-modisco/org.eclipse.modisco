@@ -421,7 +421,7 @@ public class DiscovererBenchmarkDiscoverer extends AbstractModelDiscoverer<IProj
 	 * @return the setter
 	 */
 	private static Method findSetter(
-			final Class<? extends AbstractModelDiscoverer> clazz,
+			@SuppressWarnings("rawtypes") final Class<? extends AbstractModelDiscoverer> clazz,
 			final String paramId) {
 		Method result = null;
 		for (Method method : clazz.getMethods()) {
