@@ -15,7 +15,7 @@ package org.eclipse.modisco.infra.common.core.internal.utils;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 
 /**
  * @author Gregoire DUPE (Mia-Software), Fabien Giquel (Mia-Software)

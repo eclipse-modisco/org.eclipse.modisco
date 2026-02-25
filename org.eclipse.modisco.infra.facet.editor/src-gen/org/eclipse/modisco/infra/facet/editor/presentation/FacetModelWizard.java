@@ -45,7 +45,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.utils.BuildPropertiesUtils;
 import org.eclipse.modisco.infra.common.core.internal.utils.PluginUtils;
 import org.eclipse.modisco.infra.facet.FacetFactory;
@@ -325,11 +325,13 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 		 * 
 		 * @generated
 		 */
+		@Deprecated
 		public FacetModelWizardNewFileCreationPage(final String pageId,
 				final IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 		
+		@Deprecated
 		@Override
 		public void createControl(final Composite parent) {
 			super.createControl(parent);
@@ -343,6 +345,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 		 * 
 		 * @generated NOT
 		 */
+		@Deprecated
 		@Override
 		protected boolean validatePage() {
 			boolean valid;
@@ -380,6 +383,7 @@ public class FacetModelWizard extends Wizard implements INewWizard {
 		 * 
 		 * @generated
 		 */
+		@Deprecated
 		public IFile getModelFile() {
 			return ResourcesPlugin.getWorkspace().getRoot()
 					.getFile(getContainerFullPath().append(getFileName()));

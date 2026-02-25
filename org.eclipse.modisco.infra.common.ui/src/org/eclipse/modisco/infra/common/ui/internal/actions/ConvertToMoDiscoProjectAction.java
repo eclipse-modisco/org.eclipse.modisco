@@ -21,7 +21,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.swt.custom.BusyIndicator;
 import org.eclipse.swt.widgets.Display;

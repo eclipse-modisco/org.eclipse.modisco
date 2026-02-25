@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.eclipse.modisco.facet.util.tests.swtbot
 Bundle-Name: MoDisco Facet Util for SwtBot
 Bundle-SymbolicName: org.eclipse.modisco.facet.util.tests.swtbot
 Bundle-Version: 1.6.0.qualifier

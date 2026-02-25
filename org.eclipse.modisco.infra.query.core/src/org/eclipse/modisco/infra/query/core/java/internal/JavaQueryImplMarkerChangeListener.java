@@ -35,7 +35,7 @@ import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.modisco.common.core.Logger;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.builder.CatalogJob;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.ModiscoCatalogChangeListener;
 import org.eclipse.modisco.infra.common.core.internal.builder.AbstractMoDiscoCatalog.NonValidFileListener;

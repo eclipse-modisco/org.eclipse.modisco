@@ -21,7 +21,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.eclipse.modisco.infra.common.ui.internal.Messages;
 import org.eclipse.modisco.infra.common.ui.internal.MoDiscoCommonUIPlugin;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;

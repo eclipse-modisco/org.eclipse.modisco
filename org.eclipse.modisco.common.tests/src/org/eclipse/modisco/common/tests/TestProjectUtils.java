@@ -29,7 +29,7 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
 import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.osgi.framework.Bundle;
 
 /**
@@ -42,17 +42,6 @@ public final class TestProjectUtils extends ProjectUtils
 	private static class MoDiscoCommonRuntimeException extends RuntimeException {
 	
 		private static final long serialVersionUID = -1350857942870483924L;
-	
-	/*	public MoDiscoCommonRuntimeException() {
-		}
-	
-		public MoDiscoCommonRuntimeException(final String message) {
-			super(message);
-		}
-	
-		public MoDiscoCommonRuntimeException(final Throwable cause) {
-			super(cause);
-		} */
 	
 		public MoDiscoCommonRuntimeException(final String message, final Throwable cause) {
 			super(message, cause);
@@ -131,16 +120,6 @@ public final class TestProjectUtils extends ProjectUtils
 		}
 		return projectToCreate;
 	}
-
-/*	public static IProject importPlugin(final Bundle bundle) throws CoreException, IOException {
-		return importPlugin(bundle, new IFilter() {
-			@Override
-			public boolean filter(final Object fileName) {
-				return true;
-			}
-		});
-	} */
-
 
 	private TestProjectUtils() {
 		throw new IllegalStateException();

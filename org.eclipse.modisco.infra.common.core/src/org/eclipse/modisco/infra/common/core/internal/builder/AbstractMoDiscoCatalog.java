@@ -58,7 +58,7 @@ import org.eclipse.modisco.common.core.files.FileUtils;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.infra.common.core.internal.CommonModiscoActivator;
 import org.eclipse.modisco.infra.common.core.internal.Messages;
-import org.eclipse.modisco.infra.common.core.internal.MoDiscoProject;
+import org.eclipse.modisco.infra.common.core.MoDiscoProject;
 import org.eclipse.modisco.infra.common.core.internal.protocol.ModiscoProtocolException;
 import org.eclipse.modisco.infra.common.core.internal.resource.BrokenRefException;
 import org.eclipse.modisco.infra.common.core.internal.resource.IMoDiscoResourceListener;

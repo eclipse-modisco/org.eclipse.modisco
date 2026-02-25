@@ -20,7 +20,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.modisco.facet.util.core,
  org.eclipse.modisco.common.core;bundle-version="1.6.0";visibility:=reexport
 Import-Package: org.xml.sax
-Export-Package: org.eclipse.modisco.infra.common.core.internal;
+Export-Package: org.eclipse.modisco.infra.common.core,
+ org.eclipse.modisco.infra.common.core.internal;
   x-friends:="org.eclipse.modisco.dev.core,
    org.eclipse.modisco.doc,
    org.eclipse.modisco.doc.source,
