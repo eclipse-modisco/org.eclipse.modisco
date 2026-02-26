@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Issue1082
+Bundle-SymbolicName: Issue1082
+Bundle-Version: 1.0.0.qualifier
+Export-Package: dummy
+Require-Bundle: org.eclipse.swt,
+ org.eclipse.jface,
+ org.eclipse.jdt.astview,
+ org.eclipse.jdt.core
+Automatic-Module-Name: Issue1082
+Bundle-RequiredExecutionEnvironment: JavaSE-21
