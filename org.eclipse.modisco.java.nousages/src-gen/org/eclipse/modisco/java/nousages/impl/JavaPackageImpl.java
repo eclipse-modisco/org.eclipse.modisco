@@ -1035,6 +1035,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractMethodDeclaration() {
 		if (abstractMethodDeclarationEClass == null) {
 			abstractMethodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(0);
@@ -1047,6 +1048,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodDeclaration_Body() {
         return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -1056,6 +1058,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodDeclaration_Parameters() {
         return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -1065,6 +1068,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodDeclaration_ThrownExceptions() {
         return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(2);
 	}
@@ -1074,6 +1078,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodDeclaration_TypeParameters() {
         return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(3);
 	}
@@ -1083,6 +1088,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractMethodInvocation() {
 		if (abstractMethodInvocationEClass == null) {
 			abstractMethodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(1);
@@ -1095,6 +1101,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodInvocation_Method() {
         return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(0);
 	}
@@ -1104,6 +1111,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodInvocation_Arguments() {
         return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(1);
 	}
@@ -1113,6 +1121,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractMethodInvocation_TypeArguments() {
         return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(2);
 	}
@@ -1122,6 +1131,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractTypeDeclaration() {
 		if (abstractTypeDeclarationEClass == null) {
 			abstractTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(2);
@@ -1134,6 +1144,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeDeclaration_BodyDeclarations() {
         return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -1143,6 +1154,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeDeclaration_CommentsBeforeBody() {
         return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -1152,6 +1164,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeDeclaration_CommentsAfterBody() {
         return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(2);
 	}
@@ -1161,6 +1174,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeDeclaration_Package() {
         return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(3);
 	}
@@ -1170,6 +1184,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeDeclaration_SuperInterfaces() {
         return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(4);
 	}
@@ -1179,6 +1194,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractTypeQualifiedExpression() {
 		if (abstractTypeQualifiedExpressionEClass == null) {
 			abstractTypeQualifiedExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(3);
@@ -1191,6 +1207,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTypeQualifiedExpression_Qualifier() {
         return (EReference)getAbstractTypeQualifiedExpression().getEStructuralFeatures().get(0);
 	}
@@ -1200,6 +1217,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractVariablesContainer() {
 		if (abstractVariablesContainerEClass == null) {
 			abstractVariablesContainerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(4);
@@ -1212,6 +1230,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractVariablesContainer_Type() {
         return (EReference)getAbstractVariablesContainer().getEStructuralFeatures().get(0);
 	}
@@ -1221,6 +1240,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractVariablesContainer_Fragments() {
         return (EReference)getAbstractVariablesContainer().getEStructuralFeatures().get(1);
 	}
@@ -1230,6 +1250,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotation() {
 		if (annotationEClass == null) {
 			annotationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(5);
@@ -1242,6 +1263,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotation_Type() {
         return (EReference)getAnnotation().getEStructuralFeatures().get(0);
 	}
@@ -1251,6 +1273,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotation_Values() {
         return (EReference)getAnnotation().getEStructuralFeatures().get(1);
 	}
@@ -1260,6 +1283,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArchive() {
 		if (archiveEClass == null) {
 			archiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(6);
@@ -1272,6 +1296,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArchive_OriginalFilePath() {
         return (EAttribute)getArchive().getEStructuralFeatures().get(0);
 	}
@@ -1281,6 +1306,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArchive_ClassFiles() {
         return (EReference)getArchive().getEStructuralFeatures().get(1);
 	}
@@ -1290,6 +1316,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArchive_Manifest() {
         return (EReference)getArchive().getEStructuralFeatures().get(2);
 	}
@@ -1299,6 +1326,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssertStatement() {
 		if (assertStatementEClass == null) {
 			assertStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(7);
@@ -1311,6 +1339,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssertStatement_Message() {
         return (EReference)getAssertStatement().getEStructuralFeatures().get(0);
 	}
@@ -1320,6 +1349,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssertStatement_Expression() {
         return (EReference)getAssertStatement().getEStructuralFeatures().get(1);
 	}
@@ -1329,6 +1359,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getASTNode() {
 		if (astNodeEClass == null) {
 			astNodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(8);
@@ -1341,6 +1372,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getASTNode_Comments() {
         return (EReference)getASTNode().getEStructuralFeatures().get(0);
 	}
@@ -1350,6 +1382,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getASTNode_OriginalCompilationUnit() {
         return (EReference)getASTNode().getEStructuralFeatures().get(1);
 	}
@@ -1359,6 +1392,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getASTNode_OriginalClassFile() {
         return (EReference)getASTNode().getEStructuralFeatures().get(2);
 	}
@@ -1368,6 +1402,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotationMemberValuePair() {
 		if (annotationMemberValuePairEClass == null) {
 			annotationMemberValuePairEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(9);
@@ -1380,6 +1415,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotationMemberValuePair_Member() {
         return (EReference)getAnnotationMemberValuePair().getEStructuralFeatures().get(0);
 	}
@@ -1389,6 +1425,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotationMemberValuePair_Value() {
         return (EReference)getAnnotationMemberValuePair().getEStructuralFeatures().get(1);
 	}
@@ -1398,6 +1435,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotationTypeDeclaration() {
 		if (annotationTypeDeclarationEClass == null) {
 			annotationTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(10);
@@ -1410,6 +1448,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotationTypeMemberDeclaration() {
 		if (annotationTypeMemberDeclarationEClass == null) {
 			annotationTypeMemberDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(11);
@@ -1422,6 +1461,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotationTypeMemberDeclaration_Default() {
         return (EReference)getAnnotationTypeMemberDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -1431,6 +1471,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotationTypeMemberDeclaration_Type() {
         return (EReference)getAnnotationTypeMemberDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -1440,6 +1481,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnonymousClassDeclaration() {
 		if (anonymousClassDeclarationEClass == null) {
 			anonymousClassDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(12);
@@ -1452,6 +1494,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnonymousClassDeclaration_BodyDeclarations() {
         return (EReference)getAnonymousClassDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -1461,6 +1504,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnonymousClassDeclaration_ClassInstanceCreation() {
         return (EReference)getAnonymousClassDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -1470,6 +1514,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayAccess() {
 		if (arrayAccessEClass == null) {
 			arrayAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(13);
@@ -1482,6 +1527,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayAccess_Array() {
         return (EReference)getArrayAccess().getEStructuralFeatures().get(0);
 	}
@@ -1491,6 +1537,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayAccess_Index() {
         return (EReference)getArrayAccess().getEStructuralFeatures().get(1);
 	}
@@ -1500,6 +1547,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayCreation() {
 		if (arrayCreationEClass == null) {
 			arrayCreationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(14);
@@ -1512,6 +1560,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayCreation_Dimensions() {
         return (EReference)getArrayCreation().getEStructuralFeatures().get(0);
 	}
@@ -1521,6 +1570,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayCreation_Initializer() {
         return (EReference)getArrayCreation().getEStructuralFeatures().get(1);
 	}
@@ -1530,6 +1580,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayCreation_Type() {
         return (EReference)getArrayCreation().getEStructuralFeatures().get(2);
 	}
@@ -1539,6 +1590,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayInitializer() {
 		if (arrayInitializerEClass == null) {
 			arrayInitializerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(15);
@@ -1551,6 +1603,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayInitializer_Expressions() {
         return (EReference)getArrayInitializer().getEStructuralFeatures().get(0);
 	}
@@ -1560,6 +1613,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayLengthAccess() {
 		if (arrayLengthAccessEClass == null) {
 			arrayLengthAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(16);
@@ -1572,6 +1626,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayLengthAccess_Array() {
         return (EReference)getArrayLengthAccess().getEStructuralFeatures().get(0);
 	}
@@ -1581,6 +1636,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayType() {
 		if (arrayTypeEClass == null) {
 			arrayTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(17);
@@ -1593,6 +1649,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArrayType_Dimensions() {
         return (EAttribute)getArrayType().getEStructuralFeatures().get(0);
 	}
@@ -1602,6 +1659,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayType_ElementType() {
         return (EReference)getArrayType().getEStructuralFeatures().get(1);
 	}
@@ -1611,6 +1669,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignment() {
 		if (assignmentEClass == null) {
 			assignmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(18);
@@ -1623,6 +1682,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignment_LeftHandSide() {
         return (EReference)getAssignment().getEStructuralFeatures().get(0);
 	}
@@ -1632,6 +1692,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssignment_Operator() {
         return (EAttribute)getAssignment().getEStructuralFeatures().get(1);
 	}
@@ -1641,6 +1702,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignment_RightHandSide() {
         return (EReference)getAssignment().getEStructuralFeatures().get(2);
 	}
@@ -1650,6 +1712,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBodyDeclaration() {
 		if (bodyDeclarationEClass == null) {
 			bodyDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(20);
@@ -1662,6 +1725,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBodyDeclaration_AbstractTypeDeclaration() {
         return (EReference)getBodyDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -1671,6 +1735,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBodyDeclaration_Annotations() {
         return (EReference)getBodyDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -1680,6 +1745,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBodyDeclaration_AnonymousClassDeclarationOwner() {
         return (EReference)getBodyDeclaration().getEStructuralFeatures().get(2);
 	}
@@ -1689,6 +1755,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBodyDeclaration_Modifier() {
         return (EReference)getBodyDeclaration().getEStructuralFeatures().get(3);
 	}
@@ -1698,6 +1765,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanLiteral() {
 		if (booleanLiteralEClass == null) {
 			booleanLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(21);
@@ -1710,6 +1778,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBooleanLiteral_Value() {
         return (EAttribute)getBooleanLiteral().getEStructuralFeatures().get(0);
 	}
@@ -1719,6 +1788,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlockComment() {
 		if (blockCommentEClass == null) {
 			blockCommentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(22);
@@ -1731,6 +1801,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlock() {
 		if (blockEClass == null) {
 			blockEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(23);
@@ -1743,6 +1814,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Statements() {
         return (EReference)getBlock().getEStructuralFeatures().get(0);
 	}
@@ -1752,6 +1824,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBreakStatement() {
 		if (breakStatementEClass == null) {
 			breakStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(24);
@@ -1764,6 +1837,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBreakStatement_Label() {
         return (EReference)getBreakStatement().getEStructuralFeatures().get(0);
 	}
@@ -1773,6 +1847,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCastExpression() {
 		if (castExpressionEClass == null) {
 			castExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(25);
@@ -1785,6 +1860,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCastExpression_Expression() {
         return (EReference)getCastExpression().getEStructuralFeatures().get(0);
 	}
@@ -1794,6 +1870,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCastExpression_Type() {
         return (EReference)getCastExpression().getEStructuralFeatures().get(1);
 	}
@@ -1803,6 +1880,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCatchClause() {
 		if (catchClauseEClass == null) {
 			catchClauseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(26);
@@ -1815,6 +1893,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCatchClause_Exception() {
         return (EReference)getCatchClause().getEStructuralFeatures().get(0);
 	}
@@ -1824,6 +1903,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCatchClause_Body() {
         return (EReference)getCatchClause().getEStructuralFeatures().get(1);
 	}
@@ -1833,6 +1913,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCharacterLiteral() {
 		if (characterLiteralEClass == null) {
 			characterLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(27);
@@ -1845,6 +1926,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCharacterLiteral_EscapedValue() {
         return (EAttribute)getCharacterLiteral().getEStructuralFeatures().get(0);
 	}
@@ -1854,6 +1936,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClassFile() {
 		if (classFileEClass == null) {
 			classFileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(28);
@@ -1866,6 +1949,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getClassFile_OriginalFilePath() {
         return (EAttribute)getClassFile().getEStructuralFeatures().get(0);
 	}
@@ -1875,6 +1959,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassFile_Type() {
         return (EReference)getClassFile().getEStructuralFeatures().get(1);
 	}
@@ -1884,6 +1969,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassFile_AttachedSource() {
         return (EReference)getClassFile().getEStructuralFeatures().get(2);
 	}
@@ -1893,6 +1979,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassFile_Package() {
         return (EReference)getClassFile().getEStructuralFeatures().get(3);
 	}
@@ -1902,6 +1989,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClassInstanceCreation() {
 		if (classInstanceCreationEClass == null) {
 			classInstanceCreationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(29);
@@ -1914,6 +2002,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassInstanceCreation_AnonymousClassDeclaration() {
         return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(0);
 	}
@@ -1923,6 +2012,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassInstanceCreation_Expression() {
         return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(1);
 	}
@@ -1932,6 +2022,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassInstanceCreation_Type() {
         return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(2);
 	}
@@ -1941,6 +2032,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConstructorDeclaration() {
 		if (constructorDeclarationEClass == null) {
 			constructorDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(30);
@@ -1953,6 +2045,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConditionalExpression() {
 		if (conditionalExpressionEClass == null) {
 			conditionalExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(31);
@@ -1965,6 +2058,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalExpression_ElseExpression() {
         return (EReference)getConditionalExpression().getEStructuralFeatures().get(0);
 	}
@@ -1974,6 +2068,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalExpression_Expression() {
         return (EReference)getConditionalExpression().getEStructuralFeatures().get(1);
 	}
@@ -1983,6 +2078,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalExpression_ThenExpression() {
         return (EReference)getConditionalExpression().getEStructuralFeatures().get(2);
 	}
@@ -1992,6 +2088,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConstructorInvocation() {
 		if (constructorInvocationEClass == null) {
 			constructorInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(32);
@@ -2004,6 +2101,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClassDeclaration() {
 		if (classDeclarationEClass == null) {
 			classDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(33);
@@ -2016,6 +2114,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassDeclaration_SuperClass() {
         return (EReference)getClassDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -2025,6 +2124,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComment() {
 		if (commentEClass == null) {
 			commentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(34);
@@ -2037,6 +2137,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComment_Content() {
         return (EAttribute)getComment().getEStructuralFeatures().get(0);
 	}
@@ -2046,6 +2147,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComment_EnclosedByParent() {
         return (EAttribute)getComment().getEStructuralFeatures().get(1);
 	}
@@ -2055,6 +2157,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComment_PrefixOfParent() {
         return (EAttribute)getComment().getEStructuralFeatures().get(2);
 	}
@@ -2064,6 +2167,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompilationUnit() {
 		if (compilationUnitEClass == null) {
 			compilationUnitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(35);
@@ -2076,6 +2180,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCompilationUnit_OriginalFilePath() {
         return (EAttribute)getCompilationUnit().getEStructuralFeatures().get(0);
 	}
@@ -2085,6 +2190,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompilationUnit_CommentList() {
         return (EReference)getCompilationUnit().getEStructuralFeatures().get(1);
 	}
@@ -2094,6 +2200,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompilationUnit_Imports() {
         return (EReference)getCompilationUnit().getEStructuralFeatures().get(2);
 	}
@@ -2103,6 +2210,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompilationUnit_Package() {
         return (EReference)getCompilationUnit().getEStructuralFeatures().get(3);
 	}
@@ -2112,6 +2220,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompilationUnit_Types() {
         return (EReference)getCompilationUnit().getEStructuralFeatures().get(4);
 	}
@@ -2121,6 +2230,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getContinueStatement() {
 		if (continueStatementEClass == null) {
 			continueStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(36);
@@ -2133,6 +2243,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContinueStatement_Label() {
         return (EReference)getContinueStatement().getEStructuralFeatures().get(0);
 	}
@@ -2142,6 +2253,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDoStatement() {
 		if (doStatementEClass == null) {
 			doStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(37);
@@ -2154,6 +2266,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDoStatement_Expression() {
         return (EReference)getDoStatement().getEStructuralFeatures().get(0);
 	}
@@ -2163,6 +2276,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDoStatement_Body() {
         return (EReference)getDoStatement().getEStructuralFeatures().get(1);
 	}
@@ -2172,6 +2286,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEmptyStatement() {
 		if (emptyStatementEClass == null) {
 			emptyStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(38);
@@ -2184,6 +2299,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnhancedForStatement() {
 		if (enhancedForStatementEClass == null) {
 			enhancedForStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(39);
@@ -2196,6 +2312,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnhancedForStatement_Body() {
         return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(0);
 	}
@@ -2205,6 +2322,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnhancedForStatement_Expression() {
         return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(1);
 	}
@@ -2214,6 +2332,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnhancedForStatement_Parameter() {
         return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(2);
 	}
@@ -2223,6 +2342,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumConstantDeclaration() {
 		if (enumConstantDeclarationEClass == null) {
 			enumConstantDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(40);
@@ -2235,6 +2355,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumConstantDeclaration_AnonymousClassDeclaration() {
         return (EReference)getEnumConstantDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -2244,6 +2365,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumConstantDeclaration_Arguments() {
         return (EReference)getEnumConstantDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -2253,6 +2375,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumDeclaration() {
 		if (enumDeclarationEClass == null) {
 			enumDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(41);
@@ -2265,6 +2388,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumDeclaration_EnumConstants() {
         return (EReference)getEnumDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -2274,6 +2398,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		if (expressionEClass == null) {
 			expressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(42);
@@ -2286,6 +2411,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionStatement() {
 		if (expressionStatementEClass == null) {
 			expressionStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(43);
@@ -2298,6 +2424,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpressionStatement_Expression() {
         return (EReference)getExpressionStatement().getEStructuralFeatures().get(0);
 	}
@@ -2307,6 +2434,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFieldAccess() {
 		if (fieldAccessEClass == null) {
 			fieldAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(44);
@@ -2319,6 +2447,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldAccess_Field() {
         return (EReference)getFieldAccess().getEStructuralFeatures().get(0);
 	}
@@ -2328,6 +2457,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldAccess_Expression() {
         return (EReference)getFieldAccess().getEStructuralFeatures().get(1);
 	}
@@ -2337,6 +2467,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFieldDeclaration() {
 		if (fieldDeclarationEClass == null) {
 			fieldDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(45);
@@ -2349,6 +2480,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getForStatement() {
 		if (forStatementEClass == null) {
 			forStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(46);
@@ -2361,6 +2493,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Expression() {
         return (EReference)getForStatement().getEStructuralFeatures().get(0);
 	}
@@ -2370,6 +2503,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Updaters() {
         return (EReference)getForStatement().getEStructuralFeatures().get(1);
 	}
@@ -2379,6 +2513,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Initializers() {
         return (EReference)getForStatement().getEStructuralFeatures().get(2);
 	}
@@ -2388,6 +2523,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Body() {
         return (EReference)getForStatement().getEStructuralFeatures().get(3);
 	}
@@ -2397,6 +2533,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIfStatement() {
 		if (ifStatementEClass == null) {
 			ifStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(47);
@@ -2409,6 +2546,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_Expression() {
         return (EReference)getIfStatement().getEStructuralFeatures().get(0);
 	}
@@ -2418,6 +2556,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ThenStatement() {
         return (EReference)getIfStatement().getEStructuralFeatures().get(1);
 	}
@@ -2427,6 +2566,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ElseStatement() {
         return (EReference)getIfStatement().getEStructuralFeatures().get(2);
 	}
@@ -2436,6 +2576,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImportDeclaration() {
 		if (importDeclarationEClass == null) {
 			importDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(48);
@@ -2448,6 +2589,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImportDeclaration_Static() {
         return (EAttribute)getImportDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -2457,6 +2599,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getImportDeclaration_ImportedElement() {
         return (EReference)getImportDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -2466,6 +2609,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInfixExpression() {
 		if (infixExpressionEClass == null) {
 			infixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(49);
@@ -2478,6 +2622,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInfixExpression_Operator() {
         return (EAttribute)getInfixExpression().getEStructuralFeatures().get(0);
 	}
@@ -2487,6 +2632,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInfixExpression_RightOperand() {
         return (EReference)getInfixExpression().getEStructuralFeatures().get(1);
 	}
@@ -2496,6 +2642,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInfixExpression_LeftOperand() {
         return (EReference)getInfixExpression().getEStructuralFeatures().get(2);
 	}
@@ -2505,6 +2652,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInfixExpression_ExtendedOperands() {
         return (EReference)getInfixExpression().getEStructuralFeatures().get(3);
 	}
@@ -2514,6 +2662,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInitializer() {
 		if (initializerEClass == null) {
 			initializerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(52);
@@ -2526,6 +2675,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInitializer_Body() {
         return (EReference)getInitializer().getEStructuralFeatures().get(0);
 	}
@@ -2535,6 +2685,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstanceofExpression() {
 		if (instanceofExpressionEClass == null) {
 			instanceofExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(53);
@@ -2547,6 +2698,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstanceofExpression_RightOperand() {
         return (EReference)getInstanceofExpression().getEStructuralFeatures().get(0);
 	}
@@ -2556,6 +2708,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstanceofExpression_LeftOperand() {
         return (EReference)getInstanceofExpression().getEStructuralFeatures().get(1);
 	}
@@ -2565,6 +2718,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceDeclaration() {
 		if (interfaceDeclarationEClass == null) {
 			interfaceDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(54);
@@ -2577,6 +2731,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getJavadoc() {
 		if (javadocEClass == null) {
 			javadocEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(55);
@@ -2589,6 +2744,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getJavadoc_Tags() {
         return (EReference)getJavadoc().getEStructuralFeatures().get(0);
 	}
@@ -2598,6 +2754,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLabeledStatement() {
 		if (labeledStatementEClass == null) {
 			labeledStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(56);
@@ -2610,6 +2767,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLabeledStatement_Body() {
         return (EReference)getLabeledStatement().getEStructuralFeatures().get(0);
 	}
@@ -2619,6 +2777,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLineComment() {
 		if (lineCommentEClass == null) {
 			lineCommentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(57);
@@ -2631,6 +2790,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getManifest() {
 		if (manifestEClass == null) {
 			manifestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(58);
@@ -2643,6 +2803,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getManifest_MainAttributes() {
         return (EReference)getManifest().getEStructuralFeatures().get(0);
 	}
@@ -2652,6 +2813,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getManifest_EntryAttributes() {
         return (EReference)getManifest().getEStructuralFeatures().get(1);
 	}
@@ -2661,6 +2823,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getManifestAttribute() {
 		if (manifestAttributeEClass == null) {
 			manifestAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(59);
@@ -2673,6 +2836,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getManifestAttribute_Key() {
         return (EAttribute)getManifestAttribute().getEStructuralFeatures().get(0);
 	}
@@ -2682,6 +2846,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getManifestAttribute_Value() {
         return (EAttribute)getManifestAttribute().getEStructuralFeatures().get(1);
 	}
@@ -2691,6 +2856,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getManifestEntry() {
 		if (manifestEntryEClass == null) {
 			manifestEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(60);
@@ -2703,6 +2869,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getManifestEntry_Name() {
         return (EAttribute)getManifestEntry().getEStructuralFeatures().get(0);
 	}
@@ -2712,6 +2879,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getManifestEntry_Attributes() {
         return (EReference)getManifestEntry().getEStructuralFeatures().get(1);
 	}
@@ -2721,6 +2889,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMemberRef() {
 		if (memberRefEClass == null) {
 			memberRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(61);
@@ -2733,6 +2902,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMemberRef_Member() {
         return (EReference)getMemberRef().getEStructuralFeatures().get(0);
 	}
@@ -2742,6 +2912,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMemberRef_Qualifier() {
         return (EReference)getMemberRef().getEStructuralFeatures().get(1);
 	}
@@ -2751,6 +2922,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodDeclaration() {
 		if (methodDeclarationEClass == null) {
 			methodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(62);
@@ -2763,6 +2935,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethodDeclaration_ExtraArrayDimensions() {
         return (EAttribute)getMethodDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -2772,6 +2945,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodDeclaration_ReturnType() {
         return (EReference)getMethodDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -2781,6 +2955,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodDeclaration_RedefinedMethodDeclaration() {
         return (EReference)getMethodDeclaration().getEStructuralFeatures().get(2);
 	}
@@ -2790,6 +2965,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodDeclaration_Redefinitions() {
         return (EReference)getMethodDeclaration().getEStructuralFeatures().get(3);
 	}
@@ -2799,6 +2975,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodInvocation() {
 		if (methodInvocationEClass == null) {
 			methodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(63);
@@ -2811,6 +2988,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodInvocation_Expression() {
         return (EReference)getMethodInvocation().getEStructuralFeatures().get(0);
 	}
@@ -2820,6 +2998,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodRef() {
 		if (methodRefEClass == null) {
 			methodRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(64);
@@ -2832,6 +3011,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodRef_Method() {
         return (EReference)getMethodRef().getEStructuralFeatures().get(0);
 	}
@@ -2841,6 +3021,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodRef_Qualifier() {
         return (EReference)getMethodRef().getEStructuralFeatures().get(1);
 	}
@@ -2850,6 +3031,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodRef_Parameters() {
         return (EReference)getMethodRef().getEStructuralFeatures().get(2);
 	}
@@ -2859,6 +3041,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodRefParameter() {
 		if (methodRefParameterEClass == null) {
 			methodRefParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(65);
@@ -2871,6 +3054,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethodRefParameter_Name() {
         return (EAttribute)getMethodRefParameter().getEStructuralFeatures().get(0);
 	}
@@ -2880,6 +3064,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethodRefParameter_Varargs() {
         return (EAttribute)getMethodRefParameter().getEStructuralFeatures().get(1);
 	}
@@ -2889,6 +3074,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodRefParameter_Type() {
         return (EReference)getMethodRefParameter().getEStructuralFeatures().get(2);
 	}
@@ -2898,6 +3084,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModel() {
 		if (modelEClass == null) {
 			modelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(66);
@@ -2910,6 +3097,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModel_Name() {
         return (EAttribute)getModel().getEStructuralFeatures().get(0);
 	}
@@ -2919,6 +3107,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_OwnedElements() {
         return (EReference)getModel().getEStructuralFeatures().get(1);
 	}
@@ -2928,6 +3117,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_OrphanTypes() {
         return (EReference)getModel().getEStructuralFeatures().get(2);
 	}
@@ -2937,6 +3127,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_UnresolvedItems() {
         return (EReference)getModel().getEStructuralFeatures().get(3);
 	}
@@ -2946,6 +3137,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_CompilationUnits() {
         return (EReference)getModel().getEStructuralFeatures().get(4);
 	}
@@ -2955,6 +3147,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_ClassFiles() {
         return (EReference)getModel().getEStructuralFeatures().get(5);
 	}
@@ -2964,6 +3157,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModel_Archives() {
         return (EReference)getModel().getEStructuralFeatures().get(6);
 	}
@@ -2973,6 +3167,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModifier() {
 		if (modifierEClass == null) {
 			modifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(67);
@@ -2985,6 +3180,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Visibility() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(0);
 	}
@@ -2994,6 +3190,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Inheritance() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(1);
 	}
@@ -3003,6 +3200,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Static() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(2);
 	}
@@ -3012,6 +3210,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Transient() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(3);
 	}
@@ -3021,6 +3220,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Volatile() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(4);
 	}
@@ -3030,6 +3230,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Native() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(5);
 	}
@@ -3039,6 +3240,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Strictfp() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(6);
 	}
@@ -3048,6 +3250,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModifier_Synchronized() {
         return (EAttribute)getModifier().getEStructuralFeatures().get(7);
 	}
@@ -3057,6 +3260,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModifier_BodyDeclaration() {
         return (EReference)getModifier().getEStructuralFeatures().get(8);
 	}
@@ -3066,6 +3270,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModifier_SingleVariableDeclaration() {
         return (EReference)getModifier().getEStructuralFeatures().get(9);
 	}
@@ -3075,6 +3280,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModifier_VariableDeclarationStatement() {
         return (EReference)getModifier().getEStructuralFeatures().get(10);
 	}
@@ -3084,6 +3290,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModifier_VariableDeclarationExpression() {
         return (EReference)getModifier().getEStructuralFeatures().get(11);
 	}
@@ -3093,6 +3300,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElement() {
 		if (namedElementEClass == null) {
 			namedElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(68);
@@ -3105,6 +3313,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Name() {
         return (EAttribute)getNamedElement().getEStructuralFeatures().get(0);
 	}
@@ -3114,6 +3323,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Proxy() {
         return (EAttribute)getNamedElement().getEStructuralFeatures().get(1);
 	}
@@ -3123,6 +3333,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamespaceAccess() {
 		if (namespaceAccessEClass == null) {
 			namespaceAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(69);
@@ -3135,6 +3346,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNumberLiteral() {
 		if (numberLiteralEClass == null) {
 			numberLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(70);
@@ -3147,6 +3359,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumberLiteral_TokenValue() {
         return (EAttribute)getNumberLiteral().getEStructuralFeatures().get(0);
 	}
@@ -3156,6 +3369,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNullLiteral() {
 		if (nullLiteralEClass == null) {
 			nullLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(71);
@@ -3168,6 +3382,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPackage() {
 		if (packageEClass == null) {
 			packageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(72);
@@ -3180,6 +3395,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackage_OwnedElements() {
         return (EReference)getPackage().getEStructuralFeatures().get(0);
 	}
@@ -3189,6 +3405,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackage_Model() {
         return (EReference)getPackage().getEStructuralFeatures().get(1);
 	}
@@ -3198,6 +3415,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackage_OwnedPackages() {
         return (EReference)getPackage().getEStructuralFeatures().get(2);
 	}
@@ -3207,6 +3425,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackage_Package() {
         return (EReference)getPackage().getEStructuralFeatures().get(3);
 	}
@@ -3216,6 +3435,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPackageAccess() {
 		if (packageAccessEClass == null) {
 			packageAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(73);
@@ -3228,6 +3448,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackageAccess_Package() {
         return (EReference)getPackageAccess().getEStructuralFeatures().get(0);
 	}
@@ -3237,6 +3458,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPackageAccess_Qualifier() {
         return (EReference)getPackageAccess().getEStructuralFeatures().get(1);
 	}
@@ -3246,6 +3468,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterizedType() {
 		if (parameterizedTypeEClass == null) {
 			parameterizedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(74);
@@ -3258,6 +3481,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameterizedType_Type() {
         return (EReference)getParameterizedType().getEStructuralFeatures().get(0);
 	}
@@ -3267,6 +3491,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameterizedType_TypeArguments() {
         return (EReference)getParameterizedType().getEStructuralFeatures().get(1);
 	}
@@ -3276,6 +3501,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParenthesizedExpression() {
 		if (parenthesizedExpressionEClass == null) {
 			parenthesizedExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(75);
@@ -3288,6 +3514,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParenthesizedExpression_Expression() {
         return (EReference)getParenthesizedExpression().getEStructuralFeatures().get(0);
 	}
@@ -3297,6 +3524,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPostfixExpression() {
 		if (postfixExpressionEClass == null) {
 			postfixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(76);
@@ -3309,6 +3537,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPostfixExpression_Operator() {
         return (EAttribute)getPostfixExpression().getEStructuralFeatures().get(0);
 	}
@@ -3318,6 +3547,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPostfixExpression_Operand() {
         return (EReference)getPostfixExpression().getEStructuralFeatures().get(1);
 	}
@@ -3327,6 +3557,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrefixExpression() {
 		if (prefixExpressionEClass == null) {
 			prefixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(78);
@@ -3339,6 +3570,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrefixExpression_Operator() {
         return (EAttribute)getPrefixExpression().getEStructuralFeatures().get(0);
 	}
@@ -3348,6 +3580,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPrefixExpression_Operand() {
         return (EReference)getPrefixExpression().getEStructuralFeatures().get(1);
 	}
@@ -3357,6 +3590,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveType() {
 		if (primitiveTypeEClass == null) {
 			primitiveTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(80);
@@ -3369,6 +3603,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeBoolean() {
 		if (primitiveTypeBooleanEClass == null) {
 			primitiveTypeBooleanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(81);
@@ -3381,6 +3616,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeByte() {
 		if (primitiveTypeByteEClass == null) {
 			primitiveTypeByteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(82);
@@ -3393,6 +3629,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeChar() {
 		if (primitiveTypeCharEClass == null) {
 			primitiveTypeCharEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(83);
@@ -3405,6 +3642,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeDouble() {
 		if (primitiveTypeDoubleEClass == null) {
 			primitiveTypeDoubleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(84);
@@ -3417,6 +3655,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeShort() {
 		if (primitiveTypeShortEClass == null) {
 			primitiveTypeShortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(85);
@@ -3429,6 +3668,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeFloat() {
 		if (primitiveTypeFloatEClass == null) {
 			primitiveTypeFloatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(86);
@@ -3441,6 +3681,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeInt() {
 		if (primitiveTypeIntEClass == null) {
 			primitiveTypeIntEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(87);
@@ -3453,6 +3694,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeLong() {
 		if (primitiveTypeLongEClass == null) {
 			primitiveTypeLongEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(88);
@@ -3465,6 +3707,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveTypeVoid() {
 		if (primitiveTypeVoidEClass == null) {
 			primitiveTypeVoidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(89);
@@ -3477,6 +3720,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getReturnStatement() {
 		if (returnStatementEClass == null) {
 			returnStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(90);
@@ -3489,6 +3733,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getReturnStatement_Expression() {
         return (EReference)getReturnStatement().getEStructuralFeatures().get(0);
 	}
@@ -3498,6 +3743,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSingleVariableAccess() {
 		if (singleVariableAccessEClass == null) {
 			singleVariableAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(91);
@@ -3510,6 +3756,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableAccess_Variable() {
         return (EReference)getSingleVariableAccess().getEStructuralFeatures().get(0);
 	}
@@ -3519,6 +3766,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableAccess_Qualifier() {
         return (EReference)getSingleVariableAccess().getEStructuralFeatures().get(1);
 	}
@@ -3528,6 +3776,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSingleVariableDeclaration() {
 		if (singleVariableDeclarationEClass == null) {
 			singleVariableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(92);
@@ -3540,6 +3789,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_Modifier() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -3549,6 +3799,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSingleVariableDeclaration_Varargs() {
         return (EAttribute)getSingleVariableDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -3558,6 +3809,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_Type() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(2);
 	}
@@ -3567,6 +3819,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_Annotations() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(3);
 	}
@@ -3576,6 +3829,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_MethodDeclaration() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(4);
 	}
@@ -3585,6 +3839,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_CatchClause() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(5);
 	}
@@ -3594,6 +3849,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSingleVariableDeclaration_EnhancedForStatement() {
         return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(6);
 	}
@@ -3603,6 +3859,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatement() {
 		if (statementEClass == null) {
 			statementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(93);
@@ -3615,6 +3872,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringLiteral() {
 		if (stringLiteralEClass == null) {
 			stringLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(94);
@@ -3627,6 +3885,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringLiteral_EscapedValue() {
         return (EAttribute)getStringLiteral().getEStructuralFeatures().get(0);
 	}
@@ -3636,6 +3895,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuperConstructorInvocation() {
 		if (superConstructorInvocationEClass == null) {
 			superConstructorInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(95);
@@ -3648,6 +3908,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperConstructorInvocation_Expression() {
         return (EReference)getSuperConstructorInvocation().getEStructuralFeatures().get(0);
 	}
@@ -3657,6 +3918,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuperFieldAccess() {
 		if (superFieldAccessEClass == null) {
 			superFieldAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(96);
@@ -3669,6 +3931,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperFieldAccess_Field() {
         return (EReference)getSuperFieldAccess().getEStructuralFeatures().get(0);
 	}
@@ -3678,6 +3941,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuperMethodInvocation() {
 		if (superMethodInvocationEClass == null) {
 			superMethodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(97);
@@ -3690,6 +3954,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSwitchCase() {
 		if (switchCaseEClass == null) {
 			switchCaseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(98);
@@ -3702,6 +3967,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSwitchCase_Default() {
         return (EAttribute)getSwitchCase().getEStructuralFeatures().get(0);
 	}
@@ -3711,6 +3977,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSwitchCase_Expression() {
         return (EReference)getSwitchCase().getEStructuralFeatures().get(1);
 	}
@@ -3720,6 +3987,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSwitchStatement() {
 		if (switchStatementEClass == null) {
 			switchStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(99);
@@ -3732,6 +4000,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSwitchStatement_Expression() {
         return (EReference)getSwitchStatement().getEStructuralFeatures().get(0);
 	}
@@ -3741,6 +4010,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSwitchStatement_Statements() {
         return (EReference)getSwitchStatement().getEStructuralFeatures().get(1);
 	}
@@ -3750,6 +4020,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSynchronizedStatement() {
 		if (synchronizedStatementEClass == null) {
 			synchronizedStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(100);
@@ -3762,6 +4033,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSynchronizedStatement_Body() {
         return (EReference)getSynchronizedStatement().getEStructuralFeatures().get(0);
 	}
@@ -3771,6 +4043,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSynchronizedStatement_Expression() {
         return (EReference)getSynchronizedStatement().getEStructuralFeatures().get(1);
 	}
@@ -3780,6 +4053,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTagElement() {
 		if (tagElementEClass == null) {
 			tagElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(101);
@@ -3792,6 +4066,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTagElement_TagName() {
         return (EAttribute)getTagElement().getEStructuralFeatures().get(0);
 	}
@@ -3801,6 +4076,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTagElement_Fragments() {
         return (EReference)getTagElement().getEStructuralFeatures().get(1);
 	}
@@ -3810,6 +4086,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTextElement() {
 		if (textElementEClass == null) {
 			textElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(102);
@@ -3822,6 +4099,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTextElement_Text() {
         return (EAttribute)getTextElement().getEStructuralFeatures().get(0);
 	}
@@ -3831,6 +4109,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThisExpression() {
 		if (thisExpressionEClass == null) {
 			thisExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(103);
@@ -3843,6 +4122,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThrowStatement() {
 		if (throwStatementEClass == null) {
 			throwStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(104);
@@ -3855,6 +4135,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getThrowStatement_Expression() {
         return (EReference)getThrowStatement().getEStructuralFeatures().get(0);
 	}
@@ -3864,6 +4145,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTryStatement() {
 		if (tryStatementEClass == null) {
 			tryStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(105);
@@ -3876,6 +4158,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTryStatement_Body() {
         return (EReference)getTryStatement().getEStructuralFeatures().get(0);
 	}
@@ -3885,6 +4168,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTryStatement_Finally() {
         return (EReference)getTryStatement().getEStructuralFeatures().get(1);
 	}
@@ -3894,6 +4178,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTryStatement_CatchClauses() {
         return (EReference)getTryStatement().getEStructuralFeatures().get(2);
 	}
@@ -3903,6 +4188,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getType() {
 		if (typeEClass == null) {
 			typeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(106);
@@ -3915,6 +4201,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeAccess() {
 		if (typeAccessEClass == null) {
 			typeAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(107);
@@ -3927,6 +4214,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeAccess_Type() {
         return (EReference)getTypeAccess().getEStructuralFeatures().get(0);
 	}
@@ -3936,6 +4224,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeAccess_Qualifier() {
         return (EReference)getTypeAccess().getEStructuralFeatures().get(1);
 	}
@@ -3945,6 +4234,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeDeclaration() {
 		if (typeDeclarationEClass == null) {
 			typeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(108);
@@ -3957,6 +4247,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclaration_TypeParameters() {
         return (EReference)getTypeDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -3966,6 +4257,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeDeclarationStatement() {
 		if (typeDeclarationStatementEClass == null) {
 			typeDeclarationStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(109);
@@ -3978,6 +4270,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclarationStatement_Declaration() {
         return (EReference)getTypeDeclarationStatement().getEStructuralFeatures().get(0);
 	}
@@ -3987,6 +4280,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeLiteral() {
 		if (typeLiteralEClass == null) {
 			typeLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(110);
@@ -3999,6 +4293,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeLiteral_Type() {
         return (EReference)getTypeLiteral().getEStructuralFeatures().get(0);
 	}
@@ -4008,6 +4303,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeParameter() {
 		if (typeParameterEClass == null) {
 			typeParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(111);
@@ -4020,6 +4316,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeParameter_Bounds() {
         return (EReference)getTypeParameter().getEStructuralFeatures().get(0);
 	}
@@ -4029,6 +4326,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedItem() {
 		if (unresolvedItemEClass == null) {
 			unresolvedItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(112);
@@ -4041,6 +4339,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedItemAccess() {
 		if (unresolvedItemAccessEClass == null) {
 			unresolvedItemAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(113);
@@ -4053,6 +4352,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnresolvedItemAccess_Element() {
         return (EReference)getUnresolvedItemAccess().getEStructuralFeatures().get(0);
 	}
@@ -4062,6 +4362,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUnresolvedItemAccess_Qualifier() {
         return (EReference)getUnresolvedItemAccess().getEStructuralFeatures().get(1);
 	}
@@ -4071,6 +4372,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedAnnotationDeclaration() {
 		if (unresolvedAnnotationDeclarationEClass == null) {
 			unresolvedAnnotationDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(114);
@@ -4083,6 +4385,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedAnnotationTypeMemberDeclaration() {
 		if (unresolvedAnnotationTypeMemberDeclarationEClass == null) {
 			unresolvedAnnotationTypeMemberDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(115);
@@ -4095,6 +4398,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedClassDeclaration() {
 		if (unresolvedClassDeclarationEClass == null) {
 			unresolvedClassDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(116);
@@ -4107,6 +4411,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedEnumDeclaration() {
 		if (unresolvedEnumDeclarationEClass == null) {
 			unresolvedEnumDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(117);
@@ -4119,6 +4424,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedInterfaceDeclaration() {
 		if (unresolvedInterfaceDeclarationEClass == null) {
 			unresolvedInterfaceDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(118);
@@ -4131,6 +4437,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedLabeledStatement() {
 		if (unresolvedLabeledStatementEClass == null) {
 			unresolvedLabeledStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(119);
@@ -4143,6 +4450,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedMethodDeclaration() {
 		if (unresolvedMethodDeclarationEClass == null) {
 			unresolvedMethodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(120);
@@ -4155,6 +4463,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedSingleVariableDeclaration() {
 		if (unresolvedSingleVariableDeclarationEClass == null) {
 			unresolvedSingleVariableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(121);
@@ -4167,6 +4476,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedType() {
 		if (unresolvedTypeEClass == null) {
 			unresolvedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(122);
@@ -4179,6 +4489,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedTypeDeclaration() {
 		if (unresolvedTypeDeclarationEClass == null) {
 			unresolvedTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(123);
@@ -4191,6 +4502,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnresolvedVariableDeclarationFragment() {
 		if (unresolvedVariableDeclarationFragmentEClass == null) {
 			unresolvedVariableDeclarationFragmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(124);
@@ -4203,6 +4515,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclaration() {
 		if (variableDeclarationEClass == null) {
 			variableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(125);
@@ -4215,6 +4528,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVariableDeclaration_ExtraArrayDimensions() {
         return (EAttribute)getVariableDeclaration().getEStructuralFeatures().get(0);
 	}
@@ -4224,6 +4538,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclaration_Initializer() {
         return (EReference)getVariableDeclaration().getEStructuralFeatures().get(1);
 	}
@@ -4233,6 +4548,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclarationExpression() {
 		if (variableDeclarationExpressionEClass == null) {
 			variableDeclarationExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(126);
@@ -4245,6 +4561,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclarationExpression_Modifier() {
         return (EReference)getVariableDeclarationExpression().getEStructuralFeatures().get(0);
 	}
@@ -4254,6 +4571,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclarationExpression_Annotations() {
         return (EReference)getVariableDeclarationExpression().getEStructuralFeatures().get(1);
 	}
@@ -4263,6 +4581,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclarationFragment() {
 		if (variableDeclarationFragmentEClass == null) {
 			variableDeclarationFragmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(127);
@@ -4275,6 +4594,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclarationFragment_VariablesContainer() {
         return (EReference)getVariableDeclarationFragment().getEStructuralFeatures().get(0);
 	}
@@ -4284,6 +4604,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclarationStatement() {
 		if (variableDeclarationStatementEClass == null) {
 			variableDeclarationStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(128);
@@ -4296,6 +4617,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVariableDeclarationStatement_ExtraArrayDimensions() {
         return (EAttribute)getVariableDeclarationStatement().getEStructuralFeatures().get(0);
 	}
@@ -4305,6 +4627,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclarationStatement_Modifier() {
         return (EReference)getVariableDeclarationStatement().getEStructuralFeatures().get(1);
 	}
@@ -4314,6 +4637,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableDeclarationStatement_Annotations() {
         return (EReference)getVariableDeclarationStatement().getEStructuralFeatures().get(2);
 	}
@@ -4323,6 +4647,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWildCardType() {
 		if (wildCardTypeEClass == null) {
 			wildCardTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(130);
@@ -4335,6 +4660,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWildCardType_UpperBound() {
         return (EAttribute)getWildCardType().getEStructuralFeatures().get(0);
 	}
@@ -4344,6 +4670,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWildCardType_Bound() {
         return (EReference)getWildCardType().getEStructuralFeatures().get(1);
 	}
@@ -4353,6 +4680,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWhileStatement() {
 		if (whileStatementEClass == null) {
 			whileStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(131);
@@ -4365,6 +4693,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileStatement_Expression() {
         return (EReference)getWhileStatement().getEStructuralFeatures().get(0);
 	}
@@ -4374,6 +4703,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileStatement_Body() {
         return (EReference)getWhileStatement().getEStructuralFeatures().get(1);
 	}
@@ -4383,6 +4713,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAssignmentKind() {
 		if (assignmentKindEEnum == null) {
 			assignmentKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(19);
@@ -4395,6 +4726,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getInfixExpressionKind() {
 		if (infixExpressionKindEEnum == null) {
 			infixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(50);
@@ -4407,6 +4739,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getInheritanceKind() {
 		if (inheritanceKindEEnum == null) {
 			inheritanceKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(51);
@@ -4419,6 +4752,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getPostfixExpressionKind() {
 		if (postfixExpressionKindEEnum == null) {
 			postfixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(77);
@@ -4431,6 +4765,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getPrefixExpressionKind() {
 		if (prefixExpressionKindEEnum == null) {
 			prefixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(79);
@@ -4443,6 +4778,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getVisibilityKind() {
 		if (visibilityKindEEnum == null) {
 			visibilityKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(129);
@@ -4455,6 +4791,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public JavaFactory getJavaFactory() {
 		return (JavaFactory)getEFactoryInstance();
 	}
@@ -4526,49 +4863,118 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 		}
 	}
 
+	@Override
 	public EReference getAbstractMethodDeclaration_Usages() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getAbstractMethodDeclaration_UsagesInDocComments() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getAnnotationTypeMemberDeclaration_Usages() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getLabeledStatement_UsagesInBreakStatements() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getLabeledStatement_UsagesInContinueStatements() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getNamedElement_UsagesInImports() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getPackage_UsagesInPackageAccess() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getType_UsagesInTypeAccess() {
 		// no usage references
 		return null;
 	}
 
+	@Override
 	public EReference getVariableDeclaration_UsageInVariableAccess() {
 		// no usage references
 		return null;
+	}
+
+	@Override
+	public EClass getCreationReference() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getCreationReference_Type() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getCreationReference_TypeArguments() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EClass getExpressionMethodReference() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getExpressionMethodReference_Expression() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getExpressionMethodReference_Method() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EClass getLambdaExpression() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getLambdaExpression_Body() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getLambdaExpression_Parameters() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EClass getMethodReference() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EClass getUnionType() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public EReference getUnionType_Types() {
+		throw new UnsupportedOperationException();
 	}
 
 } //JavaPackageImpl

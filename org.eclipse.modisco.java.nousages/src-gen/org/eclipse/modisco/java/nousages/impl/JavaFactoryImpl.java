@@ -20,9 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.nousages.meta.JavaFactory;
@@ -359,6 +357,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Annotation createAnnotation() {
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
@@ -369,6 +368,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Archive createArchive() {
 		ArchiveImpl archive = new ArchiveImpl();
 		return archive;
@@ -379,6 +379,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public AssertStatement createAssertStatement() {
 		AssertStatementImpl assertStatement = new AssertStatementImpl();
 		return assertStatement;
@@ -389,6 +390,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public AnnotationMemberValuePair createAnnotationMemberValuePair() {
 		AnnotationMemberValuePairImpl annotationMemberValuePair = new AnnotationMemberValuePairImpl();
 		return annotationMemberValuePair;
@@ -399,6 +401,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public AnnotationTypeDeclaration createAnnotationTypeDeclaration() {
 		AnnotationTypeDeclarationImpl annotationTypeDeclaration = new AnnotationTypeDeclarationImpl();
 		return annotationTypeDeclaration;
@@ -409,6 +412,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public AnnotationTypeMemberDeclaration createAnnotationTypeMemberDeclaration() {
 		AnnotationTypeMemberDeclarationImpl annotationTypeMemberDeclaration = new AnnotationTypeMemberDeclarationImpl();
 		return annotationTypeMemberDeclaration;
@@ -419,6 +423,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration createAnonymousClassDeclaration() {
 		AnonymousClassDeclarationImpl anonymousClassDeclaration = new AnonymousClassDeclarationImpl();
 		return anonymousClassDeclaration;
@@ -429,6 +434,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ArrayAccess createArrayAccess() {
 		ArrayAccessImpl arrayAccess = new ArrayAccessImpl();
 		return arrayAccess;
@@ -439,6 +445,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ArrayCreation createArrayCreation() {
 		ArrayCreationImpl arrayCreation = new ArrayCreationImpl();
 		return arrayCreation;
@@ -449,6 +456,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ArrayInitializer createArrayInitializer() {
 		ArrayInitializerImpl arrayInitializer = new ArrayInitializerImpl();
 		return arrayInitializer;
@@ -459,6 +467,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ArrayLengthAccess createArrayLengthAccess() {
 		ArrayLengthAccessImpl arrayLengthAccess = new ArrayLengthAccessImpl();
 		return arrayLengthAccess;
@@ -469,6 +478,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ArrayType createArrayType() {
 		ArrayTypeImpl arrayType = new ArrayTypeImpl();
 		return arrayType;
@@ -479,6 +489,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Assignment createAssignment() {
 		AssignmentImpl assignment = new AssignmentImpl();
 		return assignment;
@@ -489,6 +500,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public BooleanLiteral createBooleanLiteral() {
 		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
 		return booleanLiteral;
@@ -499,6 +511,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public BlockComment createBlockComment() {
 		BlockCommentImpl blockComment = new BlockCommentImpl();
 		return blockComment;
@@ -509,6 +522,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -519,6 +533,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public BreakStatement createBreakStatement() {
 		BreakStatementImpl breakStatement = new BreakStatementImpl();
 		return breakStatement;
@@ -529,6 +544,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public CastExpression createCastExpression() {
 		CastExpressionImpl castExpression = new CastExpressionImpl();
 		return castExpression;
@@ -539,6 +555,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public CatchClause createCatchClause() {
 		CatchClauseImpl catchClause = new CatchClauseImpl();
 		return catchClause;
@@ -549,6 +566,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public CharacterLiteral createCharacterLiteral() {
 		CharacterLiteralImpl characterLiteral = new CharacterLiteralImpl();
 		return characterLiteral;
@@ -559,6 +577,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ClassFile createClassFile() {
 		ClassFileImpl classFile = new ClassFileImpl();
 		return classFile;
@@ -569,6 +588,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ClassInstanceCreation createClassInstanceCreation() {
 		ClassInstanceCreationImpl classInstanceCreation = new ClassInstanceCreationImpl();
 		return classInstanceCreation;
@@ -579,6 +599,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ConstructorDeclaration createConstructorDeclaration() {
 		ConstructorDeclarationImpl constructorDeclaration = new ConstructorDeclarationImpl();
 		return constructorDeclaration;
@@ -589,6 +610,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ConditionalExpression createConditionalExpression() {
 		ConditionalExpressionImpl conditionalExpression = new ConditionalExpressionImpl();
 		return conditionalExpression;
@@ -599,6 +621,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ConstructorInvocation createConstructorInvocation() {
 		ConstructorInvocationImpl constructorInvocation = new ConstructorInvocationImpl();
 		return constructorInvocation;
@@ -609,6 +632,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ClassDeclaration createClassDeclaration() {
 		ClassDeclarationImpl classDeclaration = new ClassDeclarationImpl();
 		return classDeclaration;
@@ -619,6 +643,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public CompilationUnit createCompilationUnit() {
 		CompilationUnitImpl compilationUnit = new CompilationUnitImpl();
 		return compilationUnit;
@@ -629,6 +654,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ContinueStatement createContinueStatement() {
 		ContinueStatementImpl continueStatement = new ContinueStatementImpl();
 		return continueStatement;
@@ -639,6 +665,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public DoStatement createDoStatement() {
 		DoStatementImpl doStatement = new DoStatementImpl();
 		return doStatement;
@@ -649,6 +676,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public EmptyStatement createEmptyStatement() {
 		EmptyStatementImpl emptyStatement = new EmptyStatementImpl();
 		return emptyStatement;
@@ -659,6 +687,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public EnhancedForStatement createEnhancedForStatement() {
 		EnhancedForStatementImpl enhancedForStatement = new EnhancedForStatementImpl();
 		return enhancedForStatement;
@@ -669,6 +698,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public EnumConstantDeclaration createEnumConstantDeclaration() {
 		EnumConstantDeclarationImpl enumConstantDeclaration = new EnumConstantDeclarationImpl();
 		return enumConstantDeclaration;
@@ -679,6 +709,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public EnumDeclaration createEnumDeclaration() {
 		EnumDeclarationImpl enumDeclaration = new EnumDeclarationImpl();
 		return enumDeclaration;
@@ -689,6 +720,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ExpressionStatement createExpressionStatement() {
 		ExpressionStatementImpl expressionStatement = new ExpressionStatementImpl();
 		return expressionStatement;
@@ -699,6 +731,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public FieldAccess createFieldAccess() {
 		FieldAccessImpl fieldAccess = new FieldAccessImpl();
 		return fieldAccess;
@@ -709,6 +742,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public FieldDeclaration createFieldDeclaration() {
 		FieldDeclarationImpl fieldDeclaration = new FieldDeclarationImpl();
 		return fieldDeclaration;
@@ -719,6 +753,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ForStatement createForStatement() {
 		ForStatementImpl forStatement = new ForStatementImpl();
 		return forStatement;
@@ -729,6 +764,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public IfStatement createIfStatement() {
 		IfStatementImpl ifStatement = new IfStatementImpl();
 		return ifStatement;
@@ -739,6 +775,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ImportDeclaration createImportDeclaration() {
 		ImportDeclarationImpl importDeclaration = new ImportDeclarationImpl();
 		return importDeclaration;
@@ -749,6 +786,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public InfixExpression createInfixExpression() {
 		InfixExpressionImpl infixExpression = new InfixExpressionImpl();
 		return infixExpression;
@@ -759,6 +797,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Initializer createInitializer() {
 		InitializerImpl initializer = new InitializerImpl();
 		return initializer;
@@ -769,6 +808,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public InstanceofExpression createInstanceofExpression() {
 		InstanceofExpressionImpl instanceofExpression = new InstanceofExpressionImpl();
 		return instanceofExpression;
@@ -779,6 +819,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public InterfaceDeclaration createInterfaceDeclaration() {
 		InterfaceDeclarationImpl interfaceDeclaration = new InterfaceDeclarationImpl();
 		return interfaceDeclaration;
@@ -789,6 +830,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Javadoc createJavadoc() {
 		JavadocImpl javadoc = new JavadocImpl();
 		return javadoc;
@@ -799,6 +841,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public LabeledStatement createLabeledStatement() {
 		LabeledStatementImpl labeledStatement = new LabeledStatementImpl();
 		return labeledStatement;
@@ -809,6 +852,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public LineComment createLineComment() {
 		LineCommentImpl lineComment = new LineCommentImpl();
 		return lineComment;
@@ -819,6 +863,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Manifest createManifest() {
 		ManifestImpl manifest = new ManifestImpl();
 		return manifest;
@@ -829,6 +874,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ManifestAttribute createManifestAttribute() {
 		ManifestAttributeImpl manifestAttribute = new ManifestAttributeImpl();
 		return manifestAttribute;
@@ -839,6 +885,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ManifestEntry createManifestEntry() {
 		ManifestEntryImpl manifestEntry = new ManifestEntryImpl();
 		return manifestEntry;
@@ -849,6 +896,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public MemberRef createMemberRef() {
 		MemberRefImpl memberRef = new MemberRefImpl();
 		return memberRef;
@@ -859,6 +907,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public MethodDeclaration createMethodDeclaration() {
 		MethodDeclarationImpl methodDeclaration = new MethodDeclarationImpl();
 		return methodDeclaration;
@@ -869,6 +918,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public MethodInvocation createMethodInvocation() {
 		MethodInvocationImpl methodInvocation = new MethodInvocationImpl();
 		return methodInvocation;
@@ -879,6 +929,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public MethodRef createMethodRef() {
 		MethodRefImpl methodRef = new MethodRefImpl();
 		return methodRef;
@@ -889,6 +940,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public MethodRefParameter createMethodRefParameter() {
 		MethodRefParameterImpl methodRefParameter = new MethodRefParameterImpl();
 		return methodRefParameter;
@@ -899,6 +951,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Model createModel() {
 		ModelImpl model = new ModelImpl();
 		return model;
@@ -909,6 +962,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public Modifier createModifier() {
 		ModifierImpl modifier = new ModifierImpl();
 		return modifier;
@@ -919,6 +973,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public NumberLiteral createNumberLiteral() {
 		NumberLiteralImpl numberLiteral = new NumberLiteralImpl();
 		return numberLiteral;
@@ -929,6 +984,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public NullLiteral createNullLiteral() {
 		NullLiteralImpl nullLiteral = new NullLiteralImpl();
 		return nullLiteral;
@@ -939,6 +995,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package createPackage() {
 		PackageImpl package_ = new PackageImpl();
 		return package_;
@@ -949,6 +1006,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PackageAccess createPackageAccess() {
 		PackageAccessImpl packageAccess = new PackageAccessImpl();
 		return packageAccess;
@@ -959,6 +1017,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ParameterizedType createParameterizedType() {
 		ParameterizedTypeImpl parameterizedType = new ParameterizedTypeImpl();
 		return parameterizedType;
@@ -969,6 +1028,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ParenthesizedExpression createParenthesizedExpression() {
 		ParenthesizedExpressionImpl parenthesizedExpression = new ParenthesizedExpressionImpl();
 		return parenthesizedExpression;
@@ -979,6 +1039,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PostfixExpression createPostfixExpression() {
 		PostfixExpressionImpl postfixExpression = new PostfixExpressionImpl();
 		return postfixExpression;
@@ -989,6 +1050,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrefixExpression createPrefixExpression() {
 		PrefixExpressionImpl prefixExpression = new PrefixExpressionImpl();
 		return prefixExpression;
@@ -999,6 +1061,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveType createPrimitiveType() {
 		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
 		return primitiveType;
@@ -1009,6 +1072,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeBoolean createPrimitiveTypeBoolean() {
 		PrimitiveTypeBooleanImpl primitiveTypeBoolean = new PrimitiveTypeBooleanImpl();
 		return primitiveTypeBoolean;
@@ -1019,6 +1083,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeByte createPrimitiveTypeByte() {
 		PrimitiveTypeByteImpl primitiveTypeByte = new PrimitiveTypeByteImpl();
 		return primitiveTypeByte;
@@ -1029,6 +1094,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeChar createPrimitiveTypeChar() {
 		PrimitiveTypeCharImpl primitiveTypeChar = new PrimitiveTypeCharImpl();
 		return primitiveTypeChar;
@@ -1039,6 +1105,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeDouble createPrimitiveTypeDouble() {
 		PrimitiveTypeDoubleImpl primitiveTypeDouble = new PrimitiveTypeDoubleImpl();
 		return primitiveTypeDouble;
@@ -1049,6 +1116,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeShort createPrimitiveTypeShort() {
 		PrimitiveTypeShortImpl primitiveTypeShort = new PrimitiveTypeShortImpl();
 		return primitiveTypeShort;
@@ -1059,6 +1127,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeFloat createPrimitiveTypeFloat() {
 		PrimitiveTypeFloatImpl primitiveTypeFloat = new PrimitiveTypeFloatImpl();
 		return primitiveTypeFloat;
@@ -1069,6 +1138,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeInt createPrimitiveTypeInt() {
 		PrimitiveTypeIntImpl primitiveTypeInt = new PrimitiveTypeIntImpl();
 		return primitiveTypeInt;
@@ -1079,6 +1149,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeLong createPrimitiveTypeLong() {
 		PrimitiveTypeLongImpl primitiveTypeLong = new PrimitiveTypeLongImpl();
 		return primitiveTypeLong;
@@ -1089,6 +1160,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public PrimitiveTypeVoid createPrimitiveTypeVoid() {
 		PrimitiveTypeVoidImpl primitiveTypeVoid = new PrimitiveTypeVoidImpl();
 		return primitiveTypeVoid;
@@ -1099,6 +1171,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ReturnStatement createReturnStatement() {
 		ReturnStatementImpl returnStatement = new ReturnStatementImpl();
 		return returnStatement;
@@ -1109,6 +1182,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SingleVariableAccess createSingleVariableAccess() {
 		SingleVariableAccessImpl singleVariableAccess = new SingleVariableAccessImpl();
 		return singleVariableAccess;
@@ -1119,6 +1193,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration createSingleVariableDeclaration() {
 		SingleVariableDeclarationImpl singleVariableDeclaration = new SingleVariableDeclarationImpl();
 		return singleVariableDeclaration;
@@ -1129,6 +1204,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public StringLiteral createStringLiteral() {
 		StringLiteralImpl stringLiteral = new StringLiteralImpl();
 		return stringLiteral;
@@ -1139,6 +1215,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SuperConstructorInvocation createSuperConstructorInvocation() {
 		SuperConstructorInvocationImpl superConstructorInvocation = new SuperConstructorInvocationImpl();
 		return superConstructorInvocation;
@@ -1149,6 +1226,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SuperFieldAccess createSuperFieldAccess() {
 		SuperFieldAccessImpl superFieldAccess = new SuperFieldAccessImpl();
 		return superFieldAccess;
@@ -1159,6 +1237,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SuperMethodInvocation createSuperMethodInvocation() {
 		SuperMethodInvocationImpl superMethodInvocation = new SuperMethodInvocationImpl();
 		return superMethodInvocation;
@@ -1169,6 +1248,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SwitchCase createSwitchCase() {
 		SwitchCaseImpl switchCase = new SwitchCaseImpl();
 		return switchCase;
@@ -1179,6 +1259,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SwitchStatement createSwitchStatement() {
 		SwitchStatementImpl switchStatement = new SwitchStatementImpl();
 		return switchStatement;
@@ -1189,6 +1270,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public SynchronizedStatement createSynchronizedStatement() {
 		SynchronizedStatementImpl synchronizedStatement = new SynchronizedStatementImpl();
 		return synchronizedStatement;
@@ -1199,6 +1281,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TagElement createTagElement() {
 		TagElementImpl tagElement = new TagElementImpl();
 		return tagElement;
@@ -1209,6 +1292,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TextElement createTextElement() {
 		TextElementImpl textElement = new TextElementImpl();
 		return textElement;
@@ -1219,6 +1303,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ThisExpression createThisExpression() {
 		ThisExpressionImpl thisExpression = new ThisExpressionImpl();
 		return thisExpression;
@@ -1229,6 +1314,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public ThrowStatement createThrowStatement() {
 		ThrowStatementImpl throwStatement = new ThrowStatementImpl();
 		return throwStatement;
@@ -1239,6 +1325,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TryStatement createTryStatement() {
 		TryStatementImpl tryStatement = new TryStatementImpl();
 		return tryStatement;
@@ -1249,6 +1336,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TypeAccess createTypeAccess() {
 		TypeAccessImpl typeAccess = new TypeAccessImpl();
 		return typeAccess;
@@ -1259,6 +1347,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TypeDeclarationStatement createTypeDeclarationStatement() {
 		TypeDeclarationStatementImpl typeDeclarationStatement = new TypeDeclarationStatementImpl();
 		return typeDeclarationStatement;
@@ -1269,6 +1358,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TypeLiteral createTypeLiteral() {
 		TypeLiteralImpl typeLiteral = new TypeLiteralImpl();
 		return typeLiteral;
@@ -1279,6 +1369,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public TypeParameter createTypeParameter() {
 		TypeParameterImpl typeParameter = new TypeParameterImpl();
 		return typeParameter;
@@ -1289,6 +1380,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedItem createUnresolvedItem() {
 		UnresolvedItemImpl unresolvedItem = new UnresolvedItemImpl();
 		return unresolvedItem;
@@ -1299,6 +1391,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedItemAccess createUnresolvedItemAccess() {
 		UnresolvedItemAccessImpl unresolvedItemAccess = new UnresolvedItemAccessImpl();
 		return unresolvedItemAccess;
@@ -1309,6 +1402,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedAnnotationDeclaration createUnresolvedAnnotationDeclaration() {
 		UnresolvedAnnotationDeclarationImpl unresolvedAnnotationDeclaration = new UnresolvedAnnotationDeclarationImpl();
 		return unresolvedAnnotationDeclaration;
@@ -1319,6 +1413,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedAnnotationTypeMemberDeclaration createUnresolvedAnnotationTypeMemberDeclaration() {
 		UnresolvedAnnotationTypeMemberDeclarationImpl unresolvedAnnotationTypeMemberDeclaration = new UnresolvedAnnotationTypeMemberDeclarationImpl();
 		return unresolvedAnnotationTypeMemberDeclaration;
@@ -1329,6 +1424,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedClassDeclaration createUnresolvedClassDeclaration() {
 		UnresolvedClassDeclarationImpl unresolvedClassDeclaration = new UnresolvedClassDeclarationImpl();
 		return unresolvedClassDeclaration;
@@ -1339,6 +1435,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedEnumDeclaration createUnresolvedEnumDeclaration() {
 		UnresolvedEnumDeclarationImpl unresolvedEnumDeclaration = new UnresolvedEnumDeclarationImpl();
 		return unresolvedEnumDeclaration;
@@ -1349,6 +1446,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedInterfaceDeclaration createUnresolvedInterfaceDeclaration() {
 		UnresolvedInterfaceDeclarationImpl unresolvedInterfaceDeclaration = new UnresolvedInterfaceDeclarationImpl();
 		return unresolvedInterfaceDeclaration;
@@ -1359,6 +1457,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedLabeledStatement createUnresolvedLabeledStatement() {
 		UnresolvedLabeledStatementImpl unresolvedLabeledStatement = new UnresolvedLabeledStatementImpl();
 		return unresolvedLabeledStatement;
@@ -1369,6 +1468,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedMethodDeclaration createUnresolvedMethodDeclaration() {
 		UnresolvedMethodDeclarationImpl unresolvedMethodDeclaration = new UnresolvedMethodDeclarationImpl();
 		return unresolvedMethodDeclaration;
@@ -1379,6 +1479,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedSingleVariableDeclaration createUnresolvedSingleVariableDeclaration() {
 		UnresolvedSingleVariableDeclarationImpl unresolvedSingleVariableDeclaration = new UnresolvedSingleVariableDeclarationImpl();
 		return unresolvedSingleVariableDeclaration;
@@ -1389,6 +1490,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedType createUnresolvedType() {
 		UnresolvedTypeImpl unresolvedType = new UnresolvedTypeImpl();
 		return unresolvedType;
@@ -1399,6 +1501,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedTypeDeclaration createUnresolvedTypeDeclaration() {
 		UnresolvedTypeDeclarationImpl unresolvedTypeDeclaration = new UnresolvedTypeDeclarationImpl();
 		return unresolvedTypeDeclaration;
@@ -1409,6 +1512,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public UnresolvedVariableDeclarationFragment createUnresolvedVariableDeclarationFragment() {
 		UnresolvedVariableDeclarationFragmentImpl unresolvedVariableDeclarationFragment = new UnresolvedVariableDeclarationFragmentImpl();
 		return unresolvedVariableDeclarationFragment;
@@ -1419,6 +1523,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationExpression createVariableDeclarationExpression() {
 		VariableDeclarationExpressionImpl variableDeclarationExpression = new VariableDeclarationExpressionImpl();
 		return variableDeclarationExpression;
@@ -1429,6 +1534,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationFragment createVariableDeclarationFragment() {
 		VariableDeclarationFragmentImpl variableDeclarationFragment = new VariableDeclarationFragmentImpl();
 		return variableDeclarationFragment;
@@ -1439,6 +1545,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationStatement createVariableDeclarationStatement() {
 		VariableDeclarationStatementImpl variableDeclarationStatement = new VariableDeclarationStatementImpl();
 		return variableDeclarationStatement;
@@ -1449,6 +1556,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public WildCardType createWildCardType() {
 		WildCardTypeImpl wildCardType = new WildCardTypeImpl();
 		return wildCardType;
@@ -1459,6 +1567,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public WhileStatement createWhileStatement() {
 		WhileStatementImpl whileStatement = new WhileStatementImpl();
 		return whileStatement;
@@ -1613,6 +1722,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * 
 	 * @generated
 	 */
+	@Override
 	public JavaPackage getJavaPackage() {
 		return (JavaPackage) getEPackage();
 	}
@@ -1626,6 +1736,26 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	@Deprecated
 	public static JavaPackage getPackage() {
 		return JavaPackage.eINSTANCE;
+	}
+
+	@Override
+	public CreationReference createCreationReference() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public ExpressionMethodReference createExpressionMethodReference() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public LambdaExpression createLambdaExpression() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public UnionType createUnionType() {
+		throw new UnsupportedOperationException();
 	}
 
 } // JavaFactoryImpl
