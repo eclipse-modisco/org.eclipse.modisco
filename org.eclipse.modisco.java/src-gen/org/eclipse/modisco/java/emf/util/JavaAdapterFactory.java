@@ -59,12 +59,14 @@ import org.eclipse.modisco.java.ConditionalExpression;
 import org.eclipse.modisco.java.ConstructorDeclaration;
 import org.eclipse.modisco.java.ConstructorInvocation;
 import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
 import org.eclipse.modisco.java.DoStatement;
 import org.eclipse.modisco.java.EmptyStatement;
 import org.eclipse.modisco.java.EnhancedForStatement;
 import org.eclipse.modisco.java.EnumConstantDeclaration;
 import org.eclipse.modisco.java.EnumDeclaration;
 import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.ExpressionMethodReference;
 import org.eclipse.modisco.java.ExpressionStatement;
 import org.eclipse.modisco.java.FieldAccess;
 import org.eclipse.modisco.java.FieldDeclaration;
@@ -77,6 +79,7 @@ import org.eclipse.modisco.java.InstanceofExpression;
 import org.eclipse.modisco.java.InterfaceDeclaration;
 import org.eclipse.modisco.java.Javadoc;
 import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
 import org.eclipse.modisco.java.LineComment;
 import org.eclipse.modisco.java.Manifest;
 import org.eclipse.modisco.java.ManifestAttribute;
@@ -86,6 +89,7 @@ import org.eclipse.modisco.java.MethodDeclaration;
 import org.eclipse.modisco.java.MethodInvocation;
 import org.eclipse.modisco.java.MethodRef;
 import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.MethodReference;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.Modifier;
 import org.eclipse.modisco.java.NamedElement;
@@ -129,6 +133,7 @@ import org.eclipse.modisco.java.TypeDeclaration;
 import org.eclipse.modisco.java.TypeDeclarationStatement;
 import org.eclipse.modisco.java.TypeLiteral;
 import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
 import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
 import org.eclipse.modisco.java.UnresolvedClassDeclaration;
@@ -284,20 +289,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createAssignmentAdapter();
 			}
 			@Override
-			public Adapter caseBodyDeclaration(BodyDeclaration object) {
-				return createBodyDeclarationAdapter();
-			}
-			@Override
-			public Adapter caseBooleanLiteral(BooleanLiteral object) {
-				return createBooleanLiteralAdapter();
+			public Adapter caseBlock(Block object) {
+				return createBlockAdapter();
 			}
 			@Override
 			public Adapter caseBlockComment(BlockComment object) {
 				return createBlockCommentAdapter();
 			}
 			@Override
-			public Adapter caseBlock(Block object) {
-				return createBlockAdapter();
+			public Adapter caseBodyDeclaration(BodyDeclaration object) {
+				return createBodyDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseBooleanLiteral(BooleanLiteral object) {
+				return createBooleanLiteralAdapter();
 			}
 			@Override
 			public Adapter caseBreakStatement(BreakStatement object) {
@@ -316,28 +321,16 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createCharacterLiteralAdapter();
 			}
 			@Override
+			public Adapter caseClassDeclaration(ClassDeclaration object) {
+				return createClassDeclarationAdapter();
+			}
+			@Override
 			public Adapter caseClassFile(ClassFile object) {
 				return createClassFileAdapter();
 			}
 			@Override
 			public Adapter caseClassInstanceCreation(ClassInstanceCreation object) {
 				return createClassInstanceCreationAdapter();
-			}
-			@Override
-			public Adapter caseConstructorDeclaration(ConstructorDeclaration object) {
-				return createConstructorDeclarationAdapter();
-			}
-			@Override
-			public Adapter caseConditionalExpression(ConditionalExpression object) {
-				return createConditionalExpressionAdapter();
-			}
-			@Override
-			public Adapter caseConstructorInvocation(ConstructorInvocation object) {
-				return createConstructorInvocationAdapter();
-			}
-			@Override
-			public Adapter caseClassDeclaration(ClassDeclaration object) {
-				return createClassDeclarationAdapter();
 			}
 			@Override
 			public Adapter caseComment(Comment object) {
@@ -348,8 +341,24 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createCompilationUnitAdapter();
 			}
 			@Override
+			public Adapter caseConditionalExpression(ConditionalExpression object) {
+				return createConditionalExpressionAdapter();
+			}
+			@Override
+			public Adapter caseConstructorDeclaration(ConstructorDeclaration object) {
+				return createConstructorDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseConstructorInvocation(ConstructorInvocation object) {
+				return createConstructorInvocationAdapter();
+			}
+			@Override
 			public Adapter caseContinueStatement(ContinueStatement object) {
 				return createContinueStatementAdapter();
+			}
+			@Override
+			public Adapter caseCreationReference(CreationReference object) {
+				return createCreationReferenceAdapter();
 			}
 			@Override
 			public Adapter caseDoStatement(DoStatement object) {
@@ -374,6 +383,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpression(Expression object) {
 				return createExpressionAdapter();
+			}
+			@Override
+			public Adapter caseExpressionMethodReference(ExpressionMethodReference object) {
+				return createExpressionMethodReferenceAdapter();
 			}
 			@Override
 			public Adapter caseExpressionStatement(ExpressionStatement object) {
@@ -424,6 +437,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createLabeledStatementAdapter();
 			}
 			@Override
+			public Adapter caseLambdaExpression(LambdaExpression object) {
+				return createLambdaExpressionAdapter();
+			}
+			@Override
 			public Adapter caseLineComment(LineComment object) {
 				return createLineCommentAdapter();
 			}
@@ -458,6 +475,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMethodRefParameter(MethodRefParameter object) {
 				return createMethodRefParameterAdapter();
+			}
+			@Override
+			public Adapter caseMethodReference(MethodReference object) {
+				return createMethodReferenceAdapter();
 			}
 			@Override
 			public Adapter caseModel(Model object) {
@@ -634,6 +655,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTypeParameter(TypeParameter object) {
 				return createTypeParameterAdapter();
+			}
+			@Override
+			public Adapter caseUnionType(UnionType object) {
+				return createUnionTypeAdapter();
 			}
 			@Override
 			public Adapter caseUnresolvedItem(UnresolvedItem object) {
@@ -1012,6 +1037,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.MethodReference <em>Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.MethodReference
+	 * @generated
+	 */
+	public Adapter createMethodReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TagElement <em>Tag Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1330,6 +1369,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTypeParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UnionType <em>Union Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.UnionType
+	 * @generated
+	 */
+	public Adapter createUnionTypeAdapter() {
 		return null;
 	}
 
@@ -1894,6 +1947,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ExpressionMethodReference <em>Expression Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ExpressionMethodReference
+	 * @generated
+	 */
+	public Adapter createExpressionMethodReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.FieldAccess <em>Field Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2230,6 +2297,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CreationReference <em>Creation Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.CreationReference
+	 * @generated
+	 */
+	public Adapter createCreationReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.DoStatement <em>Do Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2324,6 +2405,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLabeledStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.LambdaExpression <em>Lambda Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.LambdaExpression
+	 * @generated
+	 */
+	public Adapter createLambdaExpressionAdapter() {
 		return null;
 	}
 

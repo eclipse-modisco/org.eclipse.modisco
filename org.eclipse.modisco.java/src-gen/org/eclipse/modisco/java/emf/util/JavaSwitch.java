@@ -57,12 +57,14 @@ import org.eclipse.modisco.java.ConditionalExpression;
 import org.eclipse.modisco.java.ConstructorDeclaration;
 import org.eclipse.modisco.java.ConstructorInvocation;
 import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
 import org.eclipse.modisco.java.DoStatement;
 import org.eclipse.modisco.java.EmptyStatement;
 import org.eclipse.modisco.java.EnhancedForStatement;
 import org.eclipse.modisco.java.EnumConstantDeclaration;
 import org.eclipse.modisco.java.EnumDeclaration;
 import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.ExpressionMethodReference;
 import org.eclipse.modisco.java.ExpressionStatement;
 import org.eclipse.modisco.java.FieldAccess;
 import org.eclipse.modisco.java.FieldDeclaration;
@@ -75,6 +77,7 @@ import org.eclipse.modisco.java.InstanceofExpression;
 import org.eclipse.modisco.java.InterfaceDeclaration;
 import org.eclipse.modisco.java.Javadoc;
 import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
 import org.eclipse.modisco.java.LineComment;
 import org.eclipse.modisco.java.Manifest;
 import org.eclipse.modisco.java.ManifestAttribute;
@@ -84,6 +87,7 @@ import org.eclipse.modisco.java.MethodDeclaration;
 import org.eclipse.modisco.java.MethodInvocation;
 import org.eclipse.modisco.java.MethodRef;
 import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.MethodReference;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.Modifier;
 import org.eclipse.modisco.java.NamedElement;
@@ -127,6 +131,7 @@ import org.eclipse.modisco.java.TypeDeclaration;
 import org.eclipse.modisco.java.TypeDeclarationStatement;
 import org.eclipse.modisco.java.TypeLiteral;
 import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
 import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
 import org.eclipse.modisco.java.UnresolvedClassDeclaration;
@@ -378,6 +383,22 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.BLOCK: {
+				Block block = (Block)theEObject;
+				T result = caseBlock(block);
+				if (result == null) result = caseStatement(block);
+				if (result == null) result = caseASTNode(block);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.BLOCK_COMMENT: {
+				BlockComment blockComment = (BlockComment)theEObject;
+				T result = caseBlockComment(blockComment);
+				if (result == null) result = caseComment(blockComment);
+				if (result == null) result = caseASTNode(blockComment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.BODY_DECLARATION: {
 				BodyDeclaration bodyDeclaration = (BodyDeclaration)theEObject;
 				T result = caseBodyDeclaration(bodyDeclaration);
@@ -391,22 +412,6 @@ public class JavaSwitch<T> {
 				T result = caseBooleanLiteral(booleanLiteral);
 				if (result == null) result = caseExpression(booleanLiteral);
 				if (result == null) result = caseASTNode(booleanLiteral);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.BLOCK_COMMENT: {
-				BlockComment blockComment = (BlockComment)theEObject;
-				T result = caseBlockComment(blockComment);
-				if (result == null) result = caseComment(blockComment);
-				if (result == null) result = caseASTNode(blockComment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.BLOCK: {
-				Block block = (Block)theEObject;
-				T result = caseBlock(block);
-				if (result == null) result = caseStatement(block);
-				if (result == null) result = caseASTNode(block);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -442,6 +447,18 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.CLASS_DECLARATION: {
+				ClassDeclaration classDeclaration = (ClassDeclaration)theEObject;
+				T result = caseClassDeclaration(classDeclaration);
+				if (result == null) result = caseTypeDeclaration(classDeclaration);
+				if (result == null) result = caseAbstractTypeDeclaration(classDeclaration);
+				if (result == null) result = caseBodyDeclaration(classDeclaration);
+				if (result == null) result = caseType(classDeclaration);
+				if (result == null) result = caseNamedElement(classDeclaration);
+				if (result == null) result = caseASTNode(classDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.CLASS_FILE: {
 				ClassFile classFile = (ClassFile)theEObject;
 				T result = caseClassFile(classFile);
@@ -456,45 +473,6 @@ public class JavaSwitch<T> {
 				if (result == null) result = caseExpression(classInstanceCreation);
 				if (result == null) result = caseAbstractMethodInvocation(classInstanceCreation);
 				if (result == null) result = caseASTNode(classInstanceCreation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONSTRUCTOR_DECLARATION: {
-				ConstructorDeclaration constructorDeclaration = (ConstructorDeclaration)theEObject;
-				T result = caseConstructorDeclaration(constructorDeclaration);
-				if (result == null) result = caseAbstractMethodDeclaration(constructorDeclaration);
-				if (result == null) result = caseBodyDeclaration(constructorDeclaration);
-				if (result == null) result = caseNamedElement(constructorDeclaration);
-				if (result == null) result = caseASTNode(constructorDeclaration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONDITIONAL_EXPRESSION: {
-				ConditionalExpression conditionalExpression = (ConditionalExpression)theEObject;
-				T result = caseConditionalExpression(conditionalExpression);
-				if (result == null) result = caseExpression(conditionalExpression);
-				if (result == null) result = caseASTNode(conditionalExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONSTRUCTOR_INVOCATION: {
-				ConstructorInvocation constructorInvocation = (ConstructorInvocation)theEObject;
-				T result = caseConstructorInvocation(constructorInvocation);
-				if (result == null) result = caseStatement(constructorInvocation);
-				if (result == null) result = caseAbstractMethodInvocation(constructorInvocation);
-				if (result == null) result = caseASTNode(constructorInvocation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CLASS_DECLARATION: {
-				ClassDeclaration classDeclaration = (ClassDeclaration)theEObject;
-				T result = caseClassDeclaration(classDeclaration);
-				if (result == null) result = caseTypeDeclaration(classDeclaration);
-				if (result == null) result = caseAbstractTypeDeclaration(classDeclaration);
-				if (result == null) result = caseBodyDeclaration(classDeclaration);
-				if (result == null) result = caseType(classDeclaration);
-				if (result == null) result = caseNamedElement(classDeclaration);
-				if (result == null) result = caseASTNode(classDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -513,11 +491,47 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.CONDITIONAL_EXPRESSION: {
+				ConditionalExpression conditionalExpression = (ConditionalExpression)theEObject;
+				T result = caseConditionalExpression(conditionalExpression);
+				if (result == null) result = caseExpression(conditionalExpression);
+				if (result == null) result = caseASTNode(conditionalExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CONSTRUCTOR_DECLARATION: {
+				ConstructorDeclaration constructorDeclaration = (ConstructorDeclaration)theEObject;
+				T result = caseConstructorDeclaration(constructorDeclaration);
+				if (result == null) result = caseAbstractMethodDeclaration(constructorDeclaration);
+				if (result == null) result = caseBodyDeclaration(constructorDeclaration);
+				if (result == null) result = caseNamedElement(constructorDeclaration);
+				if (result == null) result = caseASTNode(constructorDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CONSTRUCTOR_INVOCATION: {
+				ConstructorInvocation constructorInvocation = (ConstructorInvocation)theEObject;
+				T result = caseConstructorInvocation(constructorInvocation);
+				if (result == null) result = caseStatement(constructorInvocation);
+				if (result == null) result = caseAbstractMethodInvocation(constructorInvocation);
+				if (result == null) result = caseASTNode(constructorInvocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.CONTINUE_STATEMENT: {
 				ContinueStatement continueStatement = (ContinueStatement)theEObject;
 				T result = caseContinueStatement(continueStatement);
 				if (result == null) result = caseStatement(continueStatement);
 				if (result == null) result = caseASTNode(continueStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CREATION_REFERENCE: {
+				CreationReference creationReference = (CreationReference)theEObject;
+				T result = caseCreationReference(creationReference);
+				if (result == null) result = caseMethodReference(creationReference);
+				if (result == null) result = caseExpression(creationReference);
+				if (result == null) result = caseASTNode(creationReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -570,6 +584,15 @@ public class JavaSwitch<T> {
 				Expression expression = (Expression)theEObject;
 				T result = caseExpression(expression);
 				if (result == null) result = caseASTNode(expression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.EXPRESSION_METHOD_REFERENCE: {
+				ExpressionMethodReference expressionMethodReference = (ExpressionMethodReference)theEObject;
+				T result = caseExpressionMethodReference(expressionMethodReference);
+				if (result == null) result = caseMethodReference(expressionMethodReference);
+				if (result == null) result = caseExpression(expressionMethodReference);
+				if (result == null) result = caseASTNode(expressionMethodReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -676,6 +699,14 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.LAMBDA_EXPRESSION: {
+				LambdaExpression lambdaExpression = (LambdaExpression)theEObject;
+				T result = caseLambdaExpression(lambdaExpression);
+				if (result == null) result = caseExpression(lambdaExpression);
+				if (result == null) result = caseASTNode(lambdaExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.LINE_COMMENT: {
 				LineComment lineComment = (LineComment)theEObject;
 				T result = caseLineComment(lineComment);
@@ -739,6 +770,14 @@ public class JavaSwitch<T> {
 				MethodRefParameter methodRefParameter = (MethodRefParameter)theEObject;
 				T result = caseMethodRefParameter(methodRefParameter);
 				if (result == null) result = caseASTNode(methodRefParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.METHOD_REFERENCE: {
+				MethodReference methodReference = (MethodReference)theEObject;
+				T result = caseMethodReference(methodReference);
+				if (result == null) result = caseExpression(methodReference);
+				if (result == null) result = caseASTNode(methodReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1114,6 +1153,15 @@ public class JavaSwitch<T> {
 				if (result == null) result = caseType(typeParameter);
 				if (result == null) result = caseNamedElement(typeParameter);
 				if (result == null) result = caseASTNode(typeParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.UNION_TYPE: {
+				UnionType unionType = (UnionType)theEObject;
+				T result = caseUnionType(unionType);
+				if (result == null) result = caseType(unionType);
+				if (result == null) result = caseNamedElement(unionType);
+				if (result == null) result = caseASTNode(unionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1863,6 +1911,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Creation Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Creation Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCreationReference(CreationReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Do Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1949,6 +2012,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseExpression(Expression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpressionMethodReference(ExpressionMethodReference object) {
 		return null;
 	}
 
@@ -2133,6 +2211,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lambda Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lambda Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLambdaExpression(LambdaExpression object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Line Comment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2264,6 +2357,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseMethodRefParameter(MethodRefParameter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMethodReference(MethodReference object) {
 		return null;
 	}
 
@@ -2924,6 +3032,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseTypeParameter(TypeParameter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Union Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Union Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnionType(UnionType object) {
 		return null;
 	}
 

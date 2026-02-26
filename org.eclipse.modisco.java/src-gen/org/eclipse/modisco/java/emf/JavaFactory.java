@@ -49,11 +49,13 @@ import org.eclipse.modisco.java.ConditionalExpression;
 import org.eclipse.modisco.java.ConstructorDeclaration;
 import org.eclipse.modisco.java.ConstructorInvocation;
 import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
 import org.eclipse.modisco.java.DoStatement;
 import org.eclipse.modisco.java.EmptyStatement;
 import org.eclipse.modisco.java.EnhancedForStatement;
 import org.eclipse.modisco.java.EnumConstantDeclaration;
 import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExpressionMethodReference;
 import org.eclipse.modisco.java.ExpressionStatement;
 import org.eclipse.modisco.java.FieldAccess;
 import org.eclipse.modisco.java.FieldDeclaration;
@@ -66,6 +68,7 @@ import org.eclipse.modisco.java.InstanceofExpression;
 import org.eclipse.modisco.java.InterfaceDeclaration;
 import org.eclipse.modisco.java.Javadoc;
 import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
 import org.eclipse.modisco.java.LineComment;
 import org.eclipse.modisco.java.Manifest;
 import org.eclipse.modisco.java.ManifestAttribute;
@@ -113,6 +116,7 @@ import org.eclipse.modisco.java.TypeAccess;
 import org.eclipse.modisco.java.TypeDeclarationStatement;
 import org.eclipse.modisco.java.TypeLiteral;
 import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
 import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
 import org.eclipse.modisco.java.UnresolvedClassDeclaration;
@@ -403,6 +407,15 @@ public interface JavaFactory extends EFactory {
 	ContinueStatement createContinueStatement();
 
 	/**
+	 * Returns a new object of class '<em>Creation Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Creation Reference</em>'.
+	 * @generated
+	 */
+	CreationReference createCreationReference();
+
+	/**
 	 * Returns a new object of class '<em>Do Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -446,6 +459,15 @@ public interface JavaFactory extends EFactory {
 	 * @generated
 	 */
 	EnumDeclaration createEnumDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Expression Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Method Reference</em>'.
+	 * @generated
+	 */
+	ExpressionMethodReference createExpressionMethodReference();
 
 	/**
 	 * Returns a new object of class '<em>Expression Statement</em>'.
@@ -554,6 +576,15 @@ public interface JavaFactory extends EFactory {
 	 * @generated
 	 */
 	LabeledStatement createLabeledStatement();
+
+	/**
+	 * Returns a new object of class '<em>Lambda Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lambda Expression</em>'.
+	 * @generated
+	 */
+	LambdaExpression createLambdaExpression();
 
 	/**
 	 * Returns a new object of class '<em>Line Comment</em>'.
@@ -986,6 +1017,15 @@ public interface JavaFactory extends EFactory {
 	 * @generated
 	 */
 	TypeParameter createTypeParameter();
+
+	/**
+	 * Returns a new object of class '<em>Union Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Union Type</em>'.
+	 * @generated
+	 */
+	UnionType createUnionType();
 
 	/**
 	 * Returns a new object of class '<em>Unresolved Item</em>'.

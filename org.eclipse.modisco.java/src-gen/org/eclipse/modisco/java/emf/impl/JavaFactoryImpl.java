@@ -57,11 +57,13 @@ import org.eclipse.modisco.java.ConditionalExpression;
 import org.eclipse.modisco.java.ConstructorDeclaration;
 import org.eclipse.modisco.java.ConstructorInvocation;
 import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
 import org.eclipse.modisco.java.DoStatement;
 import org.eclipse.modisco.java.EmptyStatement;
 import org.eclipse.modisco.java.EnhancedForStatement;
 import org.eclipse.modisco.java.EnumConstantDeclaration;
 import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExpressionMethodReference;
 import org.eclipse.modisco.java.ExpressionStatement;
 import org.eclipse.modisco.java.FieldAccess;
 import org.eclipse.modisco.java.FieldDeclaration;
@@ -76,6 +78,7 @@ import org.eclipse.modisco.java.InstanceofExpression;
 import org.eclipse.modisco.java.InterfaceDeclaration;
 import org.eclipse.modisco.java.Javadoc;
 import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
 import org.eclipse.modisco.java.LineComment;
 import org.eclipse.modisco.java.Manifest;
 import org.eclipse.modisco.java.ManifestAttribute;
@@ -125,6 +128,7 @@ import org.eclipse.modisco.java.TypeAccess;
 import org.eclipse.modisco.java.TypeDeclarationStatement;
 import org.eclipse.modisco.java.TypeLiteral;
 import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
 import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
 import org.eclipse.modisco.java.UnresolvedClassDeclaration;
@@ -205,26 +209,28 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 			case JavaPackage.ARRAY_LENGTH_ACCESS: return createArrayLengthAccess();
 			case JavaPackage.ARRAY_TYPE: return createArrayType();
 			case JavaPackage.ASSIGNMENT: return createAssignment();
-			case JavaPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
-			case JavaPackage.BLOCK_COMMENT: return createBlockComment();
 			case JavaPackage.BLOCK: return createBlock();
+			case JavaPackage.BLOCK_COMMENT: return createBlockComment();
+			case JavaPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
 			case JavaPackage.BREAK_STATEMENT: return createBreakStatement();
 			case JavaPackage.CAST_EXPRESSION: return createCastExpression();
 			case JavaPackage.CATCH_CLAUSE: return createCatchClause();
 			case JavaPackage.CHARACTER_LITERAL: return createCharacterLiteral();
+			case JavaPackage.CLASS_DECLARATION: return createClassDeclaration();
 			case JavaPackage.CLASS_FILE: return createClassFile();
 			case JavaPackage.CLASS_INSTANCE_CREATION: return createClassInstanceCreation();
-			case JavaPackage.CONSTRUCTOR_DECLARATION: return createConstructorDeclaration();
-			case JavaPackage.CONDITIONAL_EXPRESSION: return createConditionalExpression();
-			case JavaPackage.CONSTRUCTOR_INVOCATION: return createConstructorInvocation();
-			case JavaPackage.CLASS_DECLARATION: return createClassDeclaration();
 			case JavaPackage.COMPILATION_UNIT: return createCompilationUnit();
+			case JavaPackage.CONDITIONAL_EXPRESSION: return createConditionalExpression();
+			case JavaPackage.CONSTRUCTOR_DECLARATION: return createConstructorDeclaration();
+			case JavaPackage.CONSTRUCTOR_INVOCATION: return createConstructorInvocation();
 			case JavaPackage.CONTINUE_STATEMENT: return createContinueStatement();
+			case JavaPackage.CREATION_REFERENCE: return createCreationReference();
 			case JavaPackage.DO_STATEMENT: return createDoStatement();
 			case JavaPackage.EMPTY_STATEMENT: return createEmptyStatement();
 			case JavaPackage.ENHANCED_FOR_STATEMENT: return createEnhancedForStatement();
 			case JavaPackage.ENUM_CONSTANT_DECLARATION: return createEnumConstantDeclaration();
 			case JavaPackage.ENUM_DECLARATION: return createEnumDeclaration();
+			case JavaPackage.EXPRESSION_METHOD_REFERENCE: return createExpressionMethodReference();
 			case JavaPackage.EXPRESSION_STATEMENT: return createExpressionStatement();
 			case JavaPackage.FIELD_ACCESS: return createFieldAccess();
 			case JavaPackage.FIELD_DECLARATION: return createFieldDeclaration();
@@ -237,6 +243,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 			case JavaPackage.INTERFACE_DECLARATION: return createInterfaceDeclaration();
 			case JavaPackage.JAVADOC: return createJavadoc();
 			case JavaPackage.LABELED_STATEMENT: return createLabeledStatement();
+			case JavaPackage.LAMBDA_EXPRESSION: return createLambdaExpression();
 			case JavaPackage.LINE_COMMENT: return createLineComment();
 			case JavaPackage.MANIFEST: return createManifest();
 			case JavaPackage.MANIFEST_ATTRIBUTE: return createManifestAttribute();
@@ -285,6 +292,7 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 			case JavaPackage.TYPE_DECLARATION_STATEMENT: return createTypeDeclarationStatement();
 			case JavaPackage.TYPE_LITERAL: return createTypeLiteral();
 			case JavaPackage.TYPE_PARAMETER: return createTypeParameter();
+			case JavaPackage.UNION_TYPE: return createUnionType();
 			case JavaPackage.UNRESOLVED_ITEM: return createUnresolvedItem();
 			case JavaPackage.UNRESOLVED_ITEM_ACCESS: return createUnresolvedItemAccess();
 			case JavaPackage.UNRESOLVED_ANNOTATION_DECLARATION: return createUnresolvedAnnotationDeclaration();
@@ -672,6 +680,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	 * @generated
 	 */
 	@Override
+	public CreationReference createCreationReference() {
+		CreationReferenceImpl creationReference = new CreationReferenceImpl();
+		return creationReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public DoStatement createDoStatement() {
 		DoStatementImpl doStatement = new DoStatementImpl();
 		return doStatement;
@@ -719,6 +738,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	public EnumDeclaration createEnumDeclaration() {
 		EnumDeclarationImpl enumDeclaration = new EnumDeclarationImpl();
 		return enumDeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ExpressionMethodReference createExpressionMethodReference() {
+		ExpressionMethodReferenceImpl expressionMethodReference = new ExpressionMethodReferenceImpl();
+		return expressionMethodReference;
 	}
 
 	/**
@@ -851,6 +881,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	public LabeledStatement createLabeledStatement() {
 		LabeledStatementImpl labeledStatement = new LabeledStatementImpl();
 		return labeledStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LambdaExpression createLambdaExpression() {
+		LambdaExpressionImpl lambdaExpression = new LambdaExpressionImpl();
+		return lambdaExpression;
 	}
 
 	/**
@@ -1379,6 +1420,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	public TypeParameter createTypeParameter() {
 		TypeParameterImpl typeParameter = new TypeParameterImpl();
 		return typeParameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UnionType createUnionType() {
+		UnionTypeImpl unionType = new UnionTypeImpl();
+		return unionType;
 	}
 
 	/**

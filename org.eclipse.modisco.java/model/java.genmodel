@@ -151,6 +151,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//Assignment/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Assignment/rightHandSide"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Block/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="java.ecore#//BlockComment"/>
     <genClasses image="false" ecoreClass="java.ecore#//BodyDeclaration">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference java.ecore#//BodyDeclaration/abstractTypeDeclaration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//BodyDeclaration/annotations"/>
@@ -159,10 +163,6 @@
     </genClasses>
     <genClasses ecoreClass="java.ecore#//BooleanLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//BooleanLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="java.ecore#//BlockComment"/>
-    <genClasses ecoreClass="java.ecore#//Block">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Block/statements"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//BreakStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//BreakStatement/label"/>
@@ -178,6 +178,9 @@
     <genClasses ecoreClass="java.ecore#//CharacterLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//CharacterLiteral/escapedValue"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//ClassDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ClassDeclaration/superClass"/>
+    </genClasses>
     <genClasses ecoreClass="java.ecore#//ClassFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//ClassFile/originalFilePath"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//ClassFile/type"/>
@@ -188,16 +191,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ClassInstanceCreation/anonymousClassDeclaration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ClassInstanceCreation/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ClassInstanceCreation/type"/>
-    </genClasses>
-    <genClasses ecoreClass="java.ecore#//ConstructorDeclaration"/>
-    <genClasses ecoreClass="java.ecore#//ConditionalExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/elseExpression"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/expression"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/thenExpression"/>
-    </genClasses>
-    <genClasses ecoreClass="java.ecore#//ConstructorInvocation"/>
-    <genClasses ecoreClass="java.ecore#//ClassDeclaration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ClassDeclaration/superClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="java.ecore#//Comment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//Comment/content"/>
@@ -211,8 +204,19 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//CompilationUnit/package"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//CompilationUnit/types"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//ConditionalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/elseExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ConditionalExpression/thenExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="java.ecore#//ConstructorDeclaration"/>
+    <genClasses ecoreClass="java.ecore#//ConstructorInvocation"/>
     <genClasses ecoreClass="java.ecore#//ContinueStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//ContinueStatement/label"/>
+    </genClasses>
+    <genClasses ecoreClass="java.ecore#//CreationReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//CreationReference/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//CreationReference/typeArguments"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//DoStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//DoStatement/expression"/>
@@ -232,6 +236,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//EnumDeclaration/enumConstants"/>
     </genClasses>
     <genClasses image="false" ecoreClass="java.ecore#//Expression"/>
+    <genClasses ecoreClass="java.ecore#//ExpressionMethodReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ExpressionMethodReference/expression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//ExpressionMethodReference/method"/>
+    </genClasses>
     <genClasses ecoreClass="java.ecore#//ExpressionStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ExpressionStatement/expression"/>
     </genClasses>
@@ -277,6 +285,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//LabeledStatement/usagesInBreakStatements"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//LabeledStatement/usagesInContinueStatements"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//LambdaExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//LambdaExpression/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//LambdaExpression/parameters"/>
+    </genClasses>
     <genClasses ecoreClass="java.ecore#//LineComment"/>
     <genClasses ecoreClass="java.ecore#//Manifest">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Manifest/mainAttributes"/>
@@ -313,6 +325,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//MethodRefParameter/varargs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//MethodRefParameter/type"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="java.ecore#//MethodReference"/>
     <genClasses ecoreClass="java.ecore#//Model">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//Model/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Model/ownedElements"/>
@@ -455,6 +468,9 @@
     </genClasses>
     <genClasses ecoreClass="java.ecore#//TypeParameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//TypeParameter/bounds"/>
+    </genClasses>
+    <genClasses ecoreClass="java.ecore#//UnionType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//UnionType/types"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//UnresolvedItem"/>
     <genClasses ecoreClass="java.ecore#//UnresolvedItemAccess">

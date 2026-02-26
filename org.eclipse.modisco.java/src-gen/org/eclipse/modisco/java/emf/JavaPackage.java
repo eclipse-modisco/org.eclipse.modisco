@@ -128,7 +128,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 65;
+	int NAMED_ELEMENT = 69;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -201,7 +201,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBodyDeclaration()
 	 * @generated
 	 */
-	int BODY_DECLARATION = 19;
+	int BODY_DECLARATION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -709,7 +709,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 41;
+	int EXPRESSION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -1038,7 +1038,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getStatement()
 	 * @generated
 	 */
-	int STATEMENT = 88;
+	int STATEMENT = 92;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -1849,7 +1849,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 101;
+	int TYPE = 105;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -2104,52 +2104,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBooleanLiteral()
 	 * @generated
 	 */
-	int BOOLEAN_LITERAL = 20;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__COMMENTS = EXPRESSION__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Boolean Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+	int BOOLEAN_LITERAL = 22;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CommentImpl <em>Comment</em>}' class.
@@ -2159,7 +2114,72 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getComment()
 	 * @generated
 	 */
-	int COMMENT = 33;
+	int COMMENT = 30;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockCommentImpl <em>Block Comment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.BlockCommentImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlockComment()
+	 * @generated
+	 */
+	int BLOCK_COMMENT = 20;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockImpl <em>Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.BlockImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlock()
+	 * @generated
+	 */
+	int BLOCK = 19;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__COMMENTS = STATEMENT__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__ORIGINAL_COMPILATION_UNIT = STATEMENT__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__ORIGINAL_CLASS_FILE = STATEMENT__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Statements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK__STATEMENTS = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -2225,16 +2245,6 @@ public interface JavaPackage extends EPackage {
 	int COMMENT_FEATURE_COUNT = AST_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockCommentImpl <em>Block Comment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.java.emf.impl.BlockCommentImpl
-	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlockComment()
-	 * @generated
-	 */
-	int BLOCK_COMMENT = 21;
-
-	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2298,23 +2308,13 @@ public interface JavaPackage extends EPackage {
 	int BLOCK_COMMENT_FEATURE_COUNT = COMMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BlockImpl <em>Block</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.java.emf.impl.BlockImpl
-	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getBlock()
-	 * @generated
-	 */
-	int BLOCK = 22;
-
-	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK__COMMENTS = STATEMENT__COMMENTS;
+	int BOOLEAN_LITERAL__COMMENTS = EXPRESSION__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
@@ -2323,7 +2323,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK__ORIGINAL_COMPILATION_UNIT = STATEMENT__ORIGINAL_COMPILATION_UNIT;
+	int BOOLEAN_LITERAL__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
@@ -2332,25 +2332,25 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK__ORIGINAL_CLASS_FILE = STATEMENT__ORIGINAL_CLASS_FILE;
+	int BOOLEAN_LITERAL__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
 
 	/**
-	 * The feature id for the '<em><b>Statements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK__STATEMENTS = STATEMENT_FEATURE_COUNT + 0;
+	int BOOLEAN_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Block</em>' class.
+	 * The number of structural features of the '<em>Boolean Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCK_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+	int BOOLEAN_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.BreakStatementImpl <em>Break Statement</em>}' class.
@@ -2598,106 +2598,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassFile()
 	 * @generated
 	 */
-	int CLASS_FILE = 27;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__COMMENTS = NAMED_ELEMENT__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__ORIGINAL_COMPILATION_UNIT = NAMED_ELEMENT__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__ORIGINAL_CLASS_FILE = NAMED_ELEMENT__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__PROXY = NAMED_ELEMENT__PROXY;
-
-	/**
-	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__USAGES_IN_IMPORTS = NAMED_ELEMENT__USAGES_IN_IMPORTS;
-
-	/**
-	 * The feature id for the '<em><b>Original File Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__ORIGINAL_FILE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Attached Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__ATTACHED_SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Package</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE__PACKAGE = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Class File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_FILE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CLASS_FILE = 28;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl <em>Class Instance Creation</em>}' class.
@@ -2707,97 +2608,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassInstanceCreation()
 	 * @generated
 	 */
-	int CLASS_INSTANCE_CREATION = 28;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__COMMENTS = EXPRESSION__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__METHOD = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Type Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS = EXPRESSION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Anonymous Class Declaration</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION = EXPRESSION_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION__TYPE = EXPRESSION_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Class Instance Creation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_INSTANCE_CREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 6;
+	int CLASS_INSTANCE_CREATION = 29;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConstructorDeclarationImpl <em>Constructor Declaration</em>}' class.
@@ -2807,160 +2618,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConstructorDeclaration()
 	 * @generated
 	 */
-	int CONSTRUCTOR_DECLARATION = 29;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__COMMENTS = ABSTRACT_METHOD_DECLARATION__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__ORIGINAL_COMPILATION_UNIT = ABSTRACT_METHOD_DECLARATION__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__ORIGINAL_CLASS_FILE = ABSTRACT_METHOD_DECLARATION__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__NAME = ABSTRACT_METHOD_DECLARATION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__PROXY = ABSTRACT_METHOD_DECLARATION__PROXY;
-
-	/**
-	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__USAGES_IN_IMPORTS = ABSTRACT_METHOD_DECLARATION__USAGES_IN_IMPORTS;
-
-	/**
-	 * The feature id for the '<em><b>Abstract Type Declaration</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__ABSTRACT_TYPE_DECLARATION = ABSTRACT_METHOD_DECLARATION__ABSTRACT_TYPE_DECLARATION;
-
-	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__ANNOTATIONS = ABSTRACT_METHOD_DECLARATION__ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Anonymous Class Declaration Owner</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = ABSTRACT_METHOD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__MODIFIER = ABSTRACT_METHOD_DECLARATION__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Body</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__BODY = ABSTRACT_METHOD_DECLARATION__BODY;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__PARAMETERS = ABSTRACT_METHOD_DECLARATION__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Thrown Exceptions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__THROWN_EXCEPTIONS = ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Type Parameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__TYPE_PARAMETERS = ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Usages In Doc Comments</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__USAGES_IN_DOC_COMMENTS = ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Usages</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION__USAGES = ABSTRACT_METHOD_DECLARATION__USAGES;
-
-	/**
-	 * The number of structural features of the '<em>Constructor Declaration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_DECLARATION_FEATURE_COUNT = ABSTRACT_METHOD_DECLARATION_FEATURE_COUNT + 0;
+	int CONSTRUCTOR_DECLARATION = 33;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
@@ -2970,70 +2628,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConditionalExpression()
 	 * @generated
 	 */
-	int CONDITIONAL_EXPRESSION = 30;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__COMMENTS = EXPRESSION__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Else Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__ELSE_EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Then Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION__THEN_EXPRESSION = EXPRESSION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Conditional Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+	int CONDITIONAL_EXPRESSION = 32;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl <em>Constructor Invocation</em>}' class.
@@ -3043,70 +2638,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getConstructorInvocation()
 	 * @generated
 	 */
-	int CONSTRUCTOR_INVOCATION = 31;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__COMMENTS = STATEMENT__COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__ORIGINAL_COMPILATION_UNIT = STATEMENT__ORIGINAL_COMPILATION_UNIT;
-
-	/**
-	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__ORIGINAL_CLASS_FILE = STATEMENT__ORIGINAL_CLASS_FILE;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__METHOD = STATEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__ARGUMENTS = STATEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Type Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS = STATEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Constructor Invocation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRUCTOR_INVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+	int CONSTRUCTOR_INVOCATION = 34;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.TypeDeclarationImpl <em>Type Declaration</em>}' class.
@@ -3116,7 +2648,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclaration()
 	 * @generated
 	 */
-	int TYPE_DECLARATION = 103;
+	int TYPE_DECLARATION = 107;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3288,7 +2820,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getClassDeclaration()
 	 * @generated
 	 */
-	int CLASS_DECLARATION = 32;
+	int CLASS_DECLARATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3462,6 +2994,195 @@ public interface JavaPackage extends EPackage {
 	int CLASS_DECLARATION_FEATURE_COUNT = TYPE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__COMMENTS = NAMED_ELEMENT__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__ORIGINAL_COMPILATION_UNIT = NAMED_ELEMENT__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__ORIGINAL_CLASS_FILE = NAMED_ELEMENT__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__PROXY = NAMED_ELEMENT__PROXY;
+
+	/**
+	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__USAGES_IN_IMPORTS = NAMED_ELEMENT__USAGES_IN_IMPORTS;
+
+	/**
+	 * The feature id for the '<em><b>Original File Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__ORIGINAL_FILE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Attached Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__ATTACHED_SOURCE = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE__PACKAGE = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Class File</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_FILE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__COMMENTS = EXPRESSION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__METHOD = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Anonymous Class Declaration</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__ANONYMOUS_CLASS_DECLARATION = EXPRESSION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION__TYPE = EXPRESSION_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Class Instance Creation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_INSTANCE_CREATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 6;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl <em>Compilation Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3469,7 +3190,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCompilationUnit()
 	 * @generated
 	 */
-	int COMPILATION_UNIT = 34;
+	int COMPILATION_UNIT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3580,6 +3301,285 @@ public interface JavaPackage extends EPackage {
 	int COMPILATION_UNIT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__COMMENTS = EXPRESSION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Else Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__ELSE_EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Then Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION__THEN_EXPRESSION = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Conditional Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__COMMENTS = ABSTRACT_METHOD_DECLARATION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__ORIGINAL_COMPILATION_UNIT = ABSTRACT_METHOD_DECLARATION__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__ORIGINAL_CLASS_FILE = ABSTRACT_METHOD_DECLARATION__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__NAME = ABSTRACT_METHOD_DECLARATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__PROXY = ABSTRACT_METHOD_DECLARATION__PROXY;
+
+	/**
+	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__USAGES_IN_IMPORTS = ABSTRACT_METHOD_DECLARATION__USAGES_IN_IMPORTS;
+
+	/**
+	 * The feature id for the '<em><b>Abstract Type Declaration</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__ABSTRACT_TYPE_DECLARATION = ABSTRACT_METHOD_DECLARATION__ABSTRACT_TYPE_DECLARATION;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__ANNOTATIONS = ABSTRACT_METHOD_DECLARATION__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Anonymous Class Declaration Owner</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER = ABSTRACT_METHOD_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__MODIFIER = ABSTRACT_METHOD_DECLARATION__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__BODY = ABSTRACT_METHOD_DECLARATION__BODY;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__PARAMETERS = ABSTRACT_METHOD_DECLARATION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Thrown Exceptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__THROWN_EXCEPTIONS = ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Type Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__TYPE_PARAMETERS = ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Usages In Doc Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__USAGES_IN_DOC_COMMENTS = ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Usages</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION__USAGES = ABSTRACT_METHOD_DECLARATION__USAGES;
+
+	/**
+	 * The number of structural features of the '<em>Constructor Declaration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_DECLARATION_FEATURE_COUNT = ABSTRACT_METHOD_DECLARATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__COMMENTS = STATEMENT__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__ORIGINAL_COMPILATION_UNIT = STATEMENT__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__ORIGINAL_CLASS_FILE = STATEMENT__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__METHOD = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__ARGUMENTS = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS = STATEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Constructor Invocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRUCTOR_INVOCATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ContinueStatementImpl <em>Continue Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3635,6 +3635,116 @@ public interface JavaPackage extends EPackage {
 	int CONTINUE_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.MethodReferenceImpl <em>Method Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.MethodReferenceImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodReference()
+	 * @generated
+	 */
+	int METHOD_REFERENCE = 66;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_REFERENCE__COMMENTS = EXPRESSION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_REFERENCE__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_REFERENCE__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The number of structural features of the '<em>Method Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.CreationReferenceImpl <em>Creation Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.CreationReferenceImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getCreationReference()
+	 * @generated
+	 */
+	int CREATION_REFERENCE = 36;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE__COMMENTS = METHOD_REFERENCE__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE__ORIGINAL_COMPILATION_UNIT = METHOD_REFERENCE__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE__ORIGINAL_CLASS_FILE = METHOD_REFERENCE__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE__TYPE = METHOD_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Arguments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE__TYPE_ARGUMENTS = METHOD_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Creation Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATION_REFERENCE_FEATURE_COUNT = METHOD_REFERENCE_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.DoStatementImpl <em>Do Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3642,7 +3752,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getDoStatement()
 	 * @generated
 	 */
-	int DO_STATEMENT = 36;
+	int DO_STATEMENT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3706,7 +3816,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEmptyStatement()
 	 * @generated
 	 */
-	int EMPTY_STATEMENT = 37;
+	int EMPTY_STATEMENT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3752,7 +3862,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnhancedForStatement()
 	 * @generated
 	 */
-	int ENHANCED_FOR_STATEMENT = 38;
+	int ENHANCED_FOR_STATEMENT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3825,7 +3935,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnumConstantDeclaration()
 	 * @generated
 	 */
-	int ENUM_CONSTANT_DECLARATION = 39;
+	int ENUM_CONSTANT_DECLARATION = 40;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -3979,7 +4089,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getEnumDeclaration()
 	 * @generated
 	 */
-	int ENUM_DECLARATION = 40;
+	int ENUM_DECLARATION = 41;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4144,6 +4254,70 @@ public interface JavaPackage extends EPackage {
 	int ENUM_DECLARATION_FEATURE_COUNT = ABSTRACT_TYPE_DECLARATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ExpressionMethodReferenceImpl <em>Expression Method Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.ExpressionMethodReferenceImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getExpressionMethodReference()
+	 * @generated
+	 */
+	int EXPRESSION_METHOD_REFERENCE = 43;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE__COMMENTS = METHOD_REFERENCE__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE__ORIGINAL_COMPILATION_UNIT = METHOD_REFERENCE__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE__ORIGINAL_CLASS_FILE = METHOD_REFERENCE__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE__EXPRESSION = METHOD_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE__METHOD = METHOD_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Expression Method Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_METHOD_REFERENCE_FEATURE_COUNT = METHOD_REFERENCE_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.ExpressionStatementImpl <em>Expression Statement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4151,7 +4325,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getExpressionStatement()
 	 * @generated
 	 */
-	int EXPRESSION_STATEMENT = 42;
+	int EXPRESSION_STATEMENT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4206,7 +4380,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getFieldAccess()
 	 * @generated
 	 */
-	int FIELD_ACCESS = 43;
+	int FIELD_ACCESS = 45;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4270,7 +4444,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getFieldDeclaration()
 	 * @generated
 	 */
-	int FIELD_DECLARATION = 44;
+	int FIELD_DECLARATION = 46;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4397,7 +4571,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getForStatement()
 	 * @generated
 	 */
-	int FOR_STATEMENT = 45;
+	int FOR_STATEMENT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4479,7 +4653,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getIfStatement()
 	 * @generated
 	 */
-	int IF_STATEMENT = 46;
+	int IF_STATEMENT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4552,7 +4726,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getImportDeclaration()
 	 * @generated
 	 */
-	int IMPORT_DECLARATION = 47;
+	int IMPORT_DECLARATION = 49;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4616,7 +4790,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInfixExpression()
 	 * @generated
 	 */
-	int INFIX_EXPRESSION = 48;
+	int INFIX_EXPRESSION = 50;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4698,7 +4872,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInitializer()
 	 * @generated
 	 */
-	int INITIALIZER = 49;
+	int INITIALIZER = 51;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4816,7 +4990,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInstanceofExpression()
 	 * @generated
 	 */
-	int INSTANCEOF_EXPRESSION = 50;
+	int INSTANCEOF_EXPRESSION = 52;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -4880,7 +5054,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInterfaceDeclaration()
 	 * @generated
 	 */
-	int INTERFACE_DECLARATION = 51;
+	int INTERFACE_DECLARATION = 53;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5052,7 +5226,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getJavadoc()
 	 * @generated
 	 */
-	int JAVADOC = 52;
+	int JAVADOC = 54;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5134,7 +5308,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getLabeledStatement()
 	 * @generated
 	 */
-	int LABELED_STATEMENT = 53;
+	int LABELED_STATEMENT = 55;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5227,6 +5401,70 @@ public interface JavaPackage extends EPackage {
 	int LABELED_STATEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.LambdaExpressionImpl <em>Lambda Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.LambdaExpressionImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getLambdaExpression()
+	 * @generated
+	 */
+	int LAMBDA_EXPRESSION = 56;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION__COMMENTS = EXPRESSION__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION__ORIGINAL_COMPILATION_UNIT = EXPRESSION__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION__ORIGINAL_CLASS_FILE = EXPRESSION__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION__PARAMETERS = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Lambda Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMBDA_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.LineCommentImpl <em>Line Comment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5234,7 +5472,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getLineComment()
 	 * @generated
 	 */
-	int LINE_COMMENT = 54;
+	int LINE_COMMENT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5307,7 +5545,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifest()
 	 * @generated
 	 */
-	int MANIFEST = 55;
+	int MANIFEST = 58;
 
 	/**
 	 * The feature id for the '<em><b>Main Attributes</b></em>' containment reference list.
@@ -5344,7 +5582,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifestAttribute()
 	 * @generated
 	 */
-	int MANIFEST_ATTRIBUTE = 56;
+	int MANIFEST_ATTRIBUTE = 59;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -5381,7 +5619,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getManifestEntry()
 	 * @generated
 	 */
-	int MANIFEST_ENTRY = 57;
+	int MANIFEST_ENTRY = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5418,7 +5656,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMemberRef()
 	 * @generated
 	 */
-	int MEMBER_REF = 58;
+	int MEMBER_REF = 61;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5482,7 +5720,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodDeclaration()
 	 * @generated
 	 */
-	int METHOD_DECLARATION = 59;
+	int METHOD_DECLARATION = 62;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5681,7 +5919,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodInvocation()
 	 * @generated
 	 */
-	int METHOD_INVOCATION = 60;
+	int METHOD_INVOCATION = 63;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5763,7 +6001,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodRef()
 	 * @generated
 	 */
-	int METHOD_REF = 61;
+	int METHOD_REF = 64;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5836,7 +6074,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getMethodRefParameter()
 	 * @generated
 	 */
-	int METHOD_REF_PARAMETER = 62;
+	int METHOD_REF_PARAMETER = 65;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -5909,7 +6147,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getModel()
 	 * @generated
 	 */
-	int MODEL = 63;
+	int MODEL = 67;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5991,7 +6229,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getModifier()
 	 * @generated
 	 */
-	int MODIFIER = 64;
+	int MODIFIER = 68;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6145,7 +6383,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNamespaceAccess()
 	 * @generated
 	 */
-	int NAMESPACE_ACCESS = 66;
+	int NAMESPACE_ACCESS = 70;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6191,7 +6429,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNumberLiteral()
 	 * @generated
 	 */
-	int NUMBER_LITERAL = 67;
+	int NUMBER_LITERAL = 71;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6246,7 +6484,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getNullLiteral()
 	 * @generated
 	 */
-	int NULL_LITERAL = 68;
+	int NULL_LITERAL = 72;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6292,7 +6530,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPackage()
 	 * @generated
 	 */
-	int PACKAGE = 69;
+	int PACKAGE = 73;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6410,7 +6648,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPackageAccess()
 	 * @generated
 	 */
-	int PACKAGE_ACCESS = 70;
+	int PACKAGE_ACCESS = 74;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6474,7 +6712,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getParameterizedType()
 	 * @generated
 	 */
-	int PARAMETERIZED_TYPE = 71;
+	int PARAMETERIZED_TYPE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6574,7 +6812,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getParenthesizedExpression()
 	 * @generated
 	 */
-	int PARENTHESIZED_EXPRESSION = 72;
+	int PARENTHESIZED_EXPRESSION = 76;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6629,7 +6867,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpression()
 	 * @generated
 	 */
-	int POSTFIX_EXPRESSION = 73;
+	int POSTFIX_EXPRESSION = 77;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6693,7 +6931,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpression()
 	 * @generated
 	 */
-	int PREFIX_EXPRESSION = 74;
+	int PREFIX_EXPRESSION = 78;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6757,7 +6995,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveType()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE = 75;
+	int PRIMITIVE_TYPE = 79;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6839,7 +7077,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeBoolean()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_BOOLEAN = 76;
+	int PRIMITIVE_TYPE_BOOLEAN = 80;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -6921,7 +7159,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeByte()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_BYTE = 77;
+	int PRIMITIVE_TYPE_BYTE = 81;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7003,7 +7241,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeChar()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_CHAR = 78;
+	int PRIMITIVE_TYPE_CHAR = 82;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7085,7 +7323,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeDouble()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_DOUBLE = 79;
+	int PRIMITIVE_TYPE_DOUBLE = 83;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7167,7 +7405,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeShort()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_SHORT = 80;
+	int PRIMITIVE_TYPE_SHORT = 84;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7249,7 +7487,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeFloat()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_FLOAT = 81;
+	int PRIMITIVE_TYPE_FLOAT = 85;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7331,7 +7569,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeInt()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_INT = 82;
+	int PRIMITIVE_TYPE_INT = 86;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7413,7 +7651,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeLong()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_LONG = 83;
+	int PRIMITIVE_TYPE_LONG = 87;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7495,7 +7733,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrimitiveTypeVoid()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE_VOID = 84;
+	int PRIMITIVE_TYPE_VOID = 88;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7577,7 +7815,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getReturnStatement()
 	 * @generated
 	 */
-	int RETURN_STATEMENT = 85;
+	int RETURN_STATEMENT = 89;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7632,7 +7870,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableAccess()
 	 * @generated
 	 */
-	int SINGLE_VARIABLE_ACCESS = 86;
+	int SINGLE_VARIABLE_ACCESS = 90;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7696,7 +7934,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclaration()
 	 * @generated
 	 */
-	int VARIABLE_DECLARATION = 120;
+	int VARIABLE_DECLARATION = 125;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7796,7 +8034,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSingleVariableDeclaration()
 	 * @generated
 	 */
-	int SINGLE_VARIABLE_DECLARATION = 87;
+	int SINGLE_VARIABLE_DECLARATION = 91;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -7959,7 +8197,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getStringLiteral()
 	 * @generated
 	 */
-	int STRING_LITERAL = 89;
+	int STRING_LITERAL = 93;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8014,7 +8252,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperConstructorInvocation()
 	 * @generated
 	 */
-	int SUPER_CONSTRUCTOR_INVOCATION = 90;
+	int SUPER_CONSTRUCTOR_INVOCATION = 94;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8096,7 +8334,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperFieldAccess()
 	 * @generated
 	 */
-	int SUPER_FIELD_ACCESS = 91;
+	int SUPER_FIELD_ACCESS = 95;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8160,7 +8398,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSuperMethodInvocation()
 	 * @generated
 	 */
-	int SUPER_METHOD_INVOCATION = 92;
+	int SUPER_METHOD_INVOCATION = 96;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8242,7 +8480,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSwitchCase()
 	 * @generated
 	 */
-	int SWITCH_CASE = 93;
+	int SWITCH_CASE = 97;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8306,7 +8544,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSwitchStatement()
 	 * @generated
 	 */
-	int SWITCH_STATEMENT = 94;
+	int SWITCH_STATEMENT = 98;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8370,7 +8608,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getSynchronizedStatement()
 	 * @generated
 	 */
-	int SYNCHRONIZED_STATEMENT = 95;
+	int SYNCHRONIZED_STATEMENT = 99;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8434,7 +8672,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTagElement()
 	 * @generated
 	 */
-	int TAG_ELEMENT = 96;
+	int TAG_ELEMENT = 100;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8498,7 +8736,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTextElement()
 	 * @generated
 	 */
-	int TEXT_ELEMENT = 97;
+	int TEXT_ELEMENT = 101;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8553,7 +8791,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getThisExpression()
 	 * @generated
 	 */
-	int THIS_EXPRESSION = 98;
+	int THIS_EXPRESSION = 102;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8608,7 +8846,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getThrowStatement()
 	 * @generated
 	 */
-	int THROW_STATEMENT = 99;
+	int THROW_STATEMENT = 103;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8663,7 +8901,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTryStatement()
 	 * @generated
 	 */
-	int TRY_STATEMENT = 100;
+	int TRY_STATEMENT = 104;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8736,7 +8974,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeAccess()
 	 * @generated
 	 */
-	int TYPE_ACCESS = 102;
+	int TYPE_ACCESS = 106;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8800,7 +9038,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeDeclarationStatement()
 	 * @generated
 	 */
-	int TYPE_DECLARATION_STATEMENT = 104;
+	int TYPE_DECLARATION_STATEMENT = 108;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8855,7 +9093,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeLiteral()
 	 * @generated
 	 */
-	int TYPE_LITERAL = 105;
+	int TYPE_LITERAL = 109;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8910,7 +9148,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getTypeParameter()
 	 * @generated
 	 */
-	int TYPE_PARAMETER = 106;
+	int TYPE_PARAMETER = 110;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -8994,6 +9232,97 @@ public interface JavaPackage extends EPackage {
 	int TYPE_PARAMETER_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnionTypeImpl <em>Union Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.modisco.java.emf.impl.UnionTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnionType()
+	 * @generated
+	 */
+	int UNION_TYPE = 111;
+
+	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__COMMENTS = TYPE__COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__ORIGINAL_COMPILATION_UNIT = TYPE__ORIGINAL_COMPILATION_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__ORIGINAL_CLASS_FILE = TYPE__ORIGINAL_CLASS_FILE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__PROXY = TYPE__PROXY;
+
+	/**
+	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__USAGES_IN_IMPORTS = TYPE__USAGES_IN_IMPORTS;
+
+	/**
+	 * The feature id for the '<em><b>Usages In Type Access</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__USAGES_IN_TYPE_ACCESS = TYPE__USAGES_IN_TYPE_ACCESS;
+
+	/**
+	 * The feature id for the '<em><b>Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE__TYPES = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Union Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.UnresolvedItemImpl <em>Unresolved Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9001,7 +9330,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItem()
 	 * @generated
 	 */
-	int UNRESOLVED_ITEM = 107;
+	int UNRESOLVED_ITEM = 112;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9074,7 +9403,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedItemAccess()
 	 * @generated
 	 */
-	int UNRESOLVED_ITEM_ACCESS = 108;
+	int UNRESOLVED_ITEM_ACCESS = 113;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9138,7 +9467,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_ANNOTATION_DECLARATION = 109;
+	int UNRESOLVED_ANNOTATION_DECLARATION = 114;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9301,7 +9630,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedAnnotationTypeMemberDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION = 110;
+	int UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION = 115;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9437,7 +9766,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedClassDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_CLASS_DECLARATION = 111;
+	int UNRESOLVED_CLASS_DECLARATION = 116;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9618,7 +9947,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedEnumDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_ENUM_DECLARATION = 112;
+	int UNRESOLVED_ENUM_DECLARATION = 117;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9790,7 +10119,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedInterfaceDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_INTERFACE_DECLARATION = 113;
+	int UNRESOLVED_INTERFACE_DECLARATION = 118;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -9962,7 +10291,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedLabeledStatement()
 	 * @generated
 	 */
-	int UNRESOLVED_LABELED_STATEMENT = 114;
+	int UNRESOLVED_LABELED_STATEMENT = 119;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10062,7 +10391,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedMethodDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_METHOD_DECLARATION = 115;
+	int UNRESOLVED_METHOD_DECLARATION = 120;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10261,7 +10590,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedSingleVariableDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_SINGLE_VARIABLE_DECLARATION = 116;
+	int UNRESOLVED_SINGLE_VARIABLE_DECLARATION = 121;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10424,7 +10753,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedType()
 	 * @generated
 	 */
-	int UNRESOLVED_TYPE = 117;
+	int UNRESOLVED_TYPE = 122;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10506,7 +10835,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedTypeDeclaration()
 	 * @generated
 	 */
-	int UNRESOLVED_TYPE_DECLARATION = 118;
+	int UNRESOLVED_TYPE_DECLARATION = 123;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10669,7 +10998,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationFragment()
 	 * @generated
 	 */
-	int VARIABLE_DECLARATION_FRAGMENT = 122;
+	int VARIABLE_DECLARATION_FRAGMENT = 127;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10778,7 +11107,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getUnresolvedVariableDeclarationFragment()
 	 * @generated
 	 */
-	int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT = 119;
+	int UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT = 124;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10887,7 +11216,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationExpression()
 	 * @generated
 	 */
-	int VARIABLE_DECLARATION_EXPRESSION = 121;
+	int VARIABLE_DECLARATION_EXPRESSION = 126;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -10969,7 +11298,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVariableDeclarationStatement()
 	 * @generated
 	 */
-	int VARIABLE_DECLARATION_STATEMENT = 123;
+	int VARIABLE_DECLARATION_STATEMENT = 128;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -11060,7 +11389,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWildCardType()
 	 * @generated
 	 */
-	int WILD_CARD_TYPE = 124;
+	int WILD_CARD_TYPE = 129;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -11160,7 +11489,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWhileStatement()
 	 * @generated
 	 */
-	int WHILE_STATEMENT = 125;
+	int WHILE_STATEMENT = 130;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -11224,7 +11553,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getAssignmentKind()
 	 * @generated
 	 */
-	int ASSIGNMENT_KIND = 126;
+	int ASSIGNMENT_KIND = 131;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.InfixExpressionKind <em>Infix Expression Kind</em>}' enum.
@@ -11234,7 +11563,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInfixExpressionKind()
 	 * @generated
 	 */
-	int INFIX_EXPRESSION_KIND = 127;
+	int INFIX_EXPRESSION_KIND = 132;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.InheritanceKind <em>Inheritance Kind</em>}' enum.
@@ -11244,7 +11573,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getInheritanceKind()
 	 * @generated
 	 */
-	int INHERITANCE_KIND = 128;
+	int INHERITANCE_KIND = 133;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.PostfixExpressionKind <em>Postfix Expression Kind</em>}' enum.
@@ -11254,7 +11583,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPostfixExpressionKind()
 	 * @generated
 	 */
-	int POSTFIX_EXPRESSION_KIND = 129;
+	int POSTFIX_EXPRESSION_KIND = 134;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.PrefixExpressionKind <em>Prefix Expression Kind</em>}' enum.
@@ -11264,7 +11593,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getPrefixExpressionKind()
 	 * @generated
 	 */
-	int PREFIX_EXPRESSION_KIND = 130;
+	int PREFIX_EXPRESSION_KIND = 135;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.VisibilityKind <em>Visibility Kind</em>}' enum.
@@ -11274,7 +11603,7 @@ public interface JavaPackage extends EPackage {
 	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 131;
+	int VISIBILITY_KIND = 136;
 
 
 	/**
@@ -12496,6 +12825,38 @@ public interface JavaPackage extends EPackage {
 	EReference getContinueStatement_Label();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.CreationReference <em>Creation Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Creation Reference</em>'.
+	 * @see org.eclipse.modisco.java.CreationReference
+	 * @generated
+	 */
+	EClass getCreationReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.CreationReference#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.eclipse.modisco.java.CreationReference#getType()
+	 * @see #getCreationReference()
+	 * @generated
+	 */
+	EReference getCreationReference_Type();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.CreationReference#getTypeArguments <em>Type Arguments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Type Arguments</em>'.
+	 * @see org.eclipse.modisco.java.CreationReference#getTypeArguments()
+	 * @see #getCreationReference()
+	 * @generated
+	 */
+	EReference getCreationReference_TypeArguments();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.DoStatement <em>Do Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12642,6 +13003,38 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExpression();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ExpressionMethodReference <em>Expression Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression Method Reference</em>'.
+	 * @see org.eclipse.modisco.java.ExpressionMethodReference
+	 * @generated
+	 */
+	EClass getExpressionMethodReference();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.ExpressionMethodReference#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see org.eclipse.modisco.java.ExpressionMethodReference#getExpression()
+	 * @see #getExpressionMethodReference()
+	 * @generated
+	 */
+	EReference getExpressionMethodReference_Expression();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.modisco.java.ExpressionMethodReference#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Method</em>'.
+	 * @see org.eclipse.modisco.java.ExpressionMethodReference#getMethod()
+	 * @see #getExpressionMethodReference()
+	 * @generated
+	 */
+	EReference getExpressionMethodReference_Method();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.ExpressionStatement <em>Expression Statement</em>}'.
@@ -13017,6 +13410,38 @@ public interface JavaPackage extends EPackage {
 	EReference getLabeledStatement_UsagesInContinueStatements();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.LambdaExpression <em>Lambda Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Lambda Expression</em>'.
+	 * @see org.eclipse.modisco.java.LambdaExpression
+	 * @generated
+	 */
+	EClass getLambdaExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.LambdaExpression#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see org.eclipse.modisco.java.LambdaExpression#getBody()
+	 * @see #getLambdaExpression()
+	 * @generated
+	 */
+	EReference getLambdaExpression_Body();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.modisco.java.LambdaExpression#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see org.eclipse.modisco.java.LambdaExpression#getParameters()
+	 * @see #getLambdaExpression()
+	 * @generated
+	 */
+	EReference getLambdaExpression_Parameters();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.LineComment <em>Line Comment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13314,6 +13739,16 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMethodRefParameter_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.MethodReference <em>Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Method Reference</em>'.
+	 * @see org.eclipse.modisco.java.MethodReference
+	 * @generated
+	 */
+	EClass getMethodReference();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.Model <em>Model</em>}'.
@@ -14524,6 +14959,27 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTypeParameter_Bounds();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnionType <em>Union Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Union Type</em>'.
+	 * @see org.eclipse.modisco.java.UnionType
+	 * @generated
+	 */
+	EClass getUnionType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.modisco.java.UnionType#getTypes <em>Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Types</em>'.
+	 * @see org.eclipse.modisco.java.UnionType#getTypes()
+	 * @see #getUnionType()
+	 * @generated
+	 */
+	EReference getUnionType_Types();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.UnresolvedItem <em>Unresolved Item</em>}'.
