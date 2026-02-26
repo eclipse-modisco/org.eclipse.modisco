@@ -174,9 +174,12 @@ public final class TestFileUtils
 				InputStream source = sourceBundle.getEntry(sourcePath).openStream();
 				IFile javaFile = targetProject.getFile(targetPath);
 				if (javaFile.exists()) {
-					javaFile.delete(true, new NullProgressMonitor());
+				//	javaFile.delete(true, new NullProgressMonitor());		-- deleting .project is a really bad idea
+					javaFile.setContents(source, true, true, new NullProgressMonitor());
 				}
-				javaFile.create(source, true, new NullProgressMonitor());
+				else {
+					javaFile.create(source, true, new NullProgressMonitor());
+				}
 				// + destinationPath);
 			} catch (Exception e1) {
 				Logger.logError(e1, Activator.getDefault());
