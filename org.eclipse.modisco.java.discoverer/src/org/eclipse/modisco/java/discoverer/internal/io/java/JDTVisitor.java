@@ -20,15 +20,20 @@
 
 package org.eclipse.modisco.java.discoverer.internal.io.java;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -299,6 +304,7 @@ public class JDTVisitor extends ASTVisitor {
 		if (element == null) {
 			element = this.factory.createAnnotationTypeDeclaration();
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -328,6 +334,7 @@ public class JDTVisitor extends ASTVisitor {
 		if (element == null) {
 			element = this.factory.createAnnotationTypeMemberDeclaration();
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -357,6 +364,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.AnonymousClassDeclaration node) {
 		AnonymousClassDeclaration element = this.factory.createAnonymousClassDeclaration();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -377,6 +385,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ArrayAccess node) {
 		ArrayAccess element = this.factory.createArrayAccess();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -400,6 +409,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ArrayCreation node) {
 		ArrayCreation element = this.factory.createArrayCreation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -429,6 +439,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ArrayInitializer node) {
 		ArrayInitializer element = this.factory.createArrayInitializer();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -475,6 +486,7 @@ public class JDTVisitor extends ASTVisitor {
 			TypeAccess typAcc = this.factory.createTypeAccess();
 			typAcc.setType(type);
 
+			debug(typAcc, node);
 			this.binding.put(node, typAcc);
 		}
 	}
@@ -482,6 +494,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.AssertStatement node) {
 		AssertStatement element = this.factory.createAssertStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -504,6 +517,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.Assignment node) {
 		Assignment element = this.factory.createAssignment();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -532,6 +546,7 @@ public class JDTVisitor extends ASTVisitor {
 		}
 
 		Block element = this.factory.createBlock();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -571,6 +586,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.BooleanLiteral node) {
 		BooleanLiteral element = this.factory.createBooleanLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -3130,6 +3146,137 @@ public class JDTVisitor extends ASTVisitor {
 
 	public BindingManager getGlobalBindings() {
 		return this.globalBindings;
+	}
+
+	private static Map<Class<? extends org.eclipse.jdt.core.dom.ASTNode>, DebugClassMapping> jMap = new HashMap<>();
+
+	private static class DebugFeatureMapping
+	{
+		private Method jMethod;
+		private EStructuralFeature eStructuralFeature;
+		public DebugFeatureMapping(Method jMethod, EStructuralFeature eStructuralFeature) {
+			this.jMethod = jMethod;
+			this.eStructuralFeature = eStructuralFeature;
+		}
+		
+		@Override
+		public String toString() {
+			return eStructuralFeature.getEContainingClass().getName() + "::" + eStructuralFeature.getName() + " <= " + jMethod;
+		}
+	}
+	
+	private static class DebugClassMapping
+	{
+		private Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass;
+		private EClass eClass;
+		private Map<Method, DebugFeatureMapping> jMethod2mapping = new HashMap<>();
+		private List<Field> jFields = new ArrayList<>();
+		private List<Field> jOtherFields = new ArrayList<>();
+		private List<Method> jMethods = new ArrayList<>();
+		private List<Method> jOtherMethods = new ArrayList<>();
+		private List<EStructuralFeature> eStructuralFeatures = new ArrayList<>();
+
+		public DebugClassMapping(Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass, EClass eClass) {
+			this.jClass = jClass;
+			this.eClass = eClass;
+			analyzeFieldsAndMethods(jClass);
+			if (eClass != null) {
+				analyzeEStructuralFeatures(eClass);
+				for (int jIndex = jMethods.size(); --jIndex >= 0; ) {
+					DebugFeatureMapping mapping = null;
+					Method jMethod = jMethods.get(jIndex);
+					String jName = jMethod.getName();
+					if (jName.startsWith("get")) {
+						jName = jName.substring(3);
+					}
+					for (int eIndex = eStructuralFeatures.size(); --eIndex >= 0; ) {
+						EStructuralFeature eStructuralFeature = eStructuralFeatures.get(eIndex);
+						String eName = eStructuralFeature.getName();
+						if (eName.equalsIgnoreCase(jName)) {
+							mapping = new DebugFeatureMapping(jMethod, eStructuralFeature);
+							jMethod2mapping.put(jMethod, mapping);
+							jMethods.remove(jIndex);
+							eStructuralFeatures.remove(eIndex);
+							break;
+						}					
+					}
+				}
+			}
+			System.out.println(toString());
+		}
+
+		private void analyzeEStructuralFeatures(EClass eClass) {
+			eStructuralFeatures.addAll(eClass.getEAllStructuralFeatures());
+		}
+
+		private void analyzeFieldsAndMethods(Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass) {
+			Class<?> jSuperclass = jClass.getSuperclass();
+			if (org.eclipse.jdt.core.dom.ASTNode.class.isAssignableFrom(jSuperclass)) {
+				analyzeFieldsAndMethods((Class<? extends org.eclipse.jdt.core.dom.ASTNode>)jSuperclass);
+			}
+			for (Field jField : jClass.getDeclaredFields()) {
+				int modifiers = jField.getModifiers();
+				if (java.lang.reflect.Modifier.isFinal(modifiers)
+					|| java.lang.reflect.Modifier.isStatic(modifiers)) {
+					jOtherFields.add(jField);
+				}
+				else {
+					jFields.add(jField);
+				}
+			}
+			for (Method jMethod : jClass.getDeclaredMethods()) {
+				int modifiers = jMethod.getModifiers();
+				if ((jMethod.getParameters().length > 0)
+					|| java.lang.reflect.Modifier.isFinal(modifiers)
+					|| java.lang.reflect.Modifier.isStatic(modifiers)) {
+					jOtherMethods.add(jMethod);
+				}
+				else {
+					jMethods.add(jMethod);
+				}
+			}
+		}
+
+		@Override
+		public String toString() {
+			StringBuilder s = new StringBuilder();
+			if (eClass != null) {
+				s.append(eClass.getName() + " <= " + jClass.getName());
+			}
+			else {
+				s.append(" <= " + jClass.getName());
+			}
+			for (DebugFeatureMapping mapping : jMethod2mapping.values()) {
+				s.append("\n\t" + mapping.toString()); //.getName() + " : " + jField.getType());
+			}
+			for (EStructuralFeature eStructuralFeature : eStructuralFeatures) {
+				s.append("\n\t\t" + eStructuralFeature.getEContainingClass().getName() + "::" + eStructuralFeature.getName() + " : " + eStructuralFeature.getEType());
+			}
+			for (Field jField : jFields) {
+				s.append("\n\t\t" + jField); //.getName() + " : " + jField.getType());
+			}
+			for (Method jMethod : jMethods) {
+				s.append("\n\t\t" + jMethod); //.getName() + " : " + jMethod.getReturnType());
+			}
+		//	for (Field jField : jOtherFields) {
+		//		s.append("\n\t\t" + jField); //.getName() + " : " + jField.getType());
+		//	}
+		//	for (Method jMethod : jOtherMethods) {
+		//		s.append("\n\t\t" + jMethod); //.getName() + " : " + jMethod.getReturnType());
+		//	}
+			return s.toString();
+		}
+	}
+	
+	
+	private static void debug(ASTNode element, org.eclipse.jdt.core.dom.ASTNode node) {
+		Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass = node.getClass();
+		DebugClassMapping debugMapping = jMap.get(jClass);
+		if (debugMapping == null) {
+			debugMapping = new DebugClassMapping(node.getClass(), element.eClass());
+			jMap.put(jClass, debugMapping);
+		}
+		
 	}
 
 }
