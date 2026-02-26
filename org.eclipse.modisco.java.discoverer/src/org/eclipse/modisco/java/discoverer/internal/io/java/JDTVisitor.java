@@ -42,12 +42,45 @@ import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.ITypeRoot;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.CaseDefaultExpression;
+import org.eclipse.jdt.core.dom.CreationReference;
+import org.eclipse.jdt.core.dom.Dimension;
+import org.eclipse.jdt.core.dom.EitherOrMultiPattern;
+import org.eclipse.jdt.core.dom.ExportsDirective;
+import org.eclipse.jdt.core.dom.ExpressionMethodReference;
+import org.eclipse.jdt.core.dom.GuardedPattern;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IExtendedModifier;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
+import org.eclipse.jdt.core.dom.ImplicitTypeDeclaration;
+import org.eclipse.jdt.core.dom.IntersectionType;
+import org.eclipse.jdt.core.dom.JavaDocRegion;
+import org.eclipse.jdt.core.dom.JavaDocTextElement;
+import org.eclipse.jdt.core.dom.LambdaExpression;
+import org.eclipse.jdt.core.dom.ModuleDeclaration;
+import org.eclipse.jdt.core.dom.ModuleModifier;
+import org.eclipse.jdt.core.dom.ModuleQualifiedName;
+import org.eclipse.jdt.core.dom.NameQualifiedType;
+import org.eclipse.jdt.core.dom.NullPattern;
+import org.eclipse.jdt.core.dom.OpensDirective;
+import org.eclipse.jdt.core.dom.PatternInstanceofExpression;
+import org.eclipse.jdt.core.dom.ProvidesDirective;
 import org.eclipse.jdt.core.dom.QualifiedName;
+import org.eclipse.jdt.core.dom.QualifiedType;
+import org.eclipse.jdt.core.dom.RecordDeclaration;
+import org.eclipse.jdt.core.dom.RecordPattern;
+import org.eclipse.jdt.core.dom.RequiresDirective;
 import org.eclipse.jdt.core.dom.SimpleName;
+import org.eclipse.jdt.core.dom.SuperMethodReference;
+import org.eclipse.jdt.core.dom.SwitchExpression;
+import org.eclipse.jdt.core.dom.TagProperty;
+import org.eclipse.jdt.core.dom.TextBlock;
+import org.eclipse.jdt.core.dom.TypeMethodReference;
+import org.eclipse.jdt.core.dom.TypePattern;
+import org.eclipse.jdt.core.dom.UnionType;
+import org.eclipse.jdt.core.dom.UsesDirective;
+import org.eclipse.jdt.core.dom.YieldStatement;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
@@ -59,6 +92,7 @@ import org.eclipse.modisco.java.discoverer.internal.io.java.binding.JDTDelegateB
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
 import org.eclipse.modisco.java.discoverer.internal.io.library.LibraryReader;
 import org.eclipse.modisco.java.emf.JavaFactory;
+import org.eclipse.modisco.java.emf.JavaPackage;
 
 /**
  * The main class for populating the Java model from the JDT model.
@@ -3189,6 +3223,9 @@ public class JDTVisitor extends ASTVisitor {
 					if (jName.startsWith("get")) {
 						jName = jName.substring(3);
 					}
+					else if (jName.startsWith("is")) {
+						jName = jName.substring(2);
+					}
 					for (int eIndex = eStructuralFeatures.size(); --eIndex >= 0; ) {
 						EStructuralFeature eStructuralFeature = eStructuralFeatures.get(eIndex);
 						String eName = eStructuralFeature.getName();
@@ -3277,6 +3314,424 @@ public class JDTVisitor extends ASTVisitor {
 			jMap.put(jClass, debugMapping);
 		}
 		
+	}
+	
+	private static void debug(EClass eClass, org.eclipse.jdt.core.dom.ASTNode node) {
+		Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass = node.getClass();
+		DebugClassMapping debugMapping = jMap.get(jClass);
+		if (debugMapping == null) {
+			debugMapping = new DebugClassMapping(node.getClass(), eClass);
+			jMap.put(jClass, debugMapping);
+		}
+		
+	}
+
+	@Override
+	public boolean visit(CaseDefaultExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(CreationReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(Dimension node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ExportsDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ExpressionMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(GuardedPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(IntersectionType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(JavaDocRegion node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(JavaDocTextElement node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(LambdaExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.Modifier node) {
+		debug(JavaPackage.eINSTANCE.getModifier(), node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ModuleDeclaration node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ModuleModifier node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(NameQualifiedType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(NullPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(OpensDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(PatternInstanceofExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ProvidesDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(QualifiedType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ModuleQualifiedName node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(RequiresDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(RecordDeclaration node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(RecordPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(EitherOrMultiPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(SuperMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(SwitchExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(TagProperty node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(TextBlock node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(TypeMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(TypePattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(UnionType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(UsesDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(YieldStatement node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(ImplicitTypeDeclaration implicitTypeDeclaration) {
+		debug((EClass)null, implicitTypeDeclaration);		// TODO Auto-generated method stub
+		return super.visit(implicitTypeDeclaration);
+	}
+
+	@Override
+	public void endVisit(CaseDefaultExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(CreationReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ExportsDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ExpressionMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(Dimension node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(GuardedPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(JavaDocRegion node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(JavaDocTextElement node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(LambdaExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.Modifier node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ModuleDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ModuleModifier node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(NameQualifiedType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(NullPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(OpensDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(PatternInstanceofExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ProvidesDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(QualifiedType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ModuleQualifiedName node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(RequiresDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(RecordDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(RecordPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(EitherOrMultiPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(SuperMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(SwitchExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(TagProperty node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(TextBlock node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(TypeMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(TypePattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(UnionType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(UsesDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(IntersectionType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(YieldStatement node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(ImplicitTypeDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 }
