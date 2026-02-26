@@ -45,13 +45,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InfixExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InfixExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InfixExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InfixExpressionImpl#getExtendedOperands <em>Extended Operands</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -130,6 +130,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InfixExpressionKind getOperator() {
 		return operator;
 	}
@@ -139,6 +140,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(InfixExpressionKind newOperator) {
 		InfixExpressionKind oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -151,6 +153,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRightOperand() {
 		return rightOperand;
 	}
@@ -175,6 +178,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightOperand(Expression newRightOperand) {
 		if (newRightOperand != rightOperand) {
 			NotificationChain msgs = null;
@@ -194,6 +198,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftOperand() {
 		return leftOperand;
 	}
@@ -218,6 +223,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftOperand(Expression newLeftOperand) {
 		if (newLeftOperand != leftOperand) {
 			NotificationChain msgs = null;
@@ -237,6 +243,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getExtendedOperands() {
 		if (extendedOperands == null) {
 			extendedOperands = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.INFIX_EXPRESSION__EXTENDED_OPERANDS);
@@ -361,7 +368,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (operator: ");
 		result.append(operator);
 		result.append(')');

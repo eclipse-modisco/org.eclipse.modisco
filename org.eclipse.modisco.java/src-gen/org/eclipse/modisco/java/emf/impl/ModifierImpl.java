@@ -44,6 +44,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getInheritance <em>Inheritance</em>}</li>
@@ -58,7 +59,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ModifierImpl#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -247,6 +247,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisibilityKind getVisibility() {
 		return visibility;
 	}
@@ -256,6 +257,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisibility(VisibilityKind newVisibility) {
 		VisibilityKind oldVisibility = visibility;
 		visibility = newVisibility == null ? VISIBILITY_EDEFAULT : newVisibility;
@@ -268,6 +270,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InheritanceKind getInheritance() {
 		return inheritance;
 	}
@@ -277,6 +280,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInheritance(InheritanceKind newInheritance) {
 		InheritanceKind oldInheritance = inheritance;
 		inheritance = newInheritance == null ? INHERITANCE_EDEFAULT : newInheritance;
@@ -289,6 +293,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return static_;
 	}
@@ -298,6 +303,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatic(boolean newStatic) {
 		boolean oldStatic = static_;
 		static_ = newStatic;
@@ -310,6 +316,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTransient() {
 		return transient_;
 	}
@@ -319,6 +326,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransient(boolean newTransient) {
 		boolean oldTransient = transient_;
 		transient_ = newTransient;
@@ -331,6 +339,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVolatile() {
 		return volatile_;
 	}
@@ -340,6 +349,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVolatile(boolean newVolatile) {
 		boolean oldVolatile = volatile_;
 		volatile_ = newVolatile;
@@ -352,6 +362,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNative() {
 		return native_;
 	}
@@ -361,6 +372,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNative(boolean newNative) {
 		boolean oldNative = native_;
 		native_ = newNative;
@@ -373,6 +385,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStrictfp() {
 		return strictfp_;
 	}
@@ -382,6 +395,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrictfp(boolean newStrictfp) {
 		boolean oldStrictfp = strictfp_;
 		strictfp_ = newStrictfp;
@@ -394,6 +408,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSynchronized() {
 		return synchronized_;
 	}
@@ -403,6 +418,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSynchronized(boolean newSynchronized) {
 		boolean oldSynchronized = synchronized_;
 		synchronized_ = newSynchronized;
@@ -415,9 +431,10 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BodyDeclaration getBodyDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__BODY_DECLARATION) return null;
-		return (BodyDeclaration)eContainer();
+		return (BodyDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -435,6 +452,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodyDeclaration(BodyDeclaration newBodyDeclaration) {
 		if (newBodyDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__BODY_DECLARATION && newBodyDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newBodyDeclaration))
@@ -456,9 +474,10 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration getSingleVariableDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__SINGLE_VARIABLE_DECLARATION) return null;
-		return (SingleVariableDeclaration)eContainer();
+		return (SingleVariableDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -476,6 +495,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSingleVariableDeclaration(SingleVariableDeclaration newSingleVariableDeclaration) {
 		if (newSingleVariableDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__SINGLE_VARIABLE_DECLARATION && newSingleVariableDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newSingleVariableDeclaration))
@@ -497,9 +517,10 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationStatement getVariableDeclarationStatement() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_STATEMENT) return null;
-		return (VariableDeclarationStatement)eContainer();
+		return (VariableDeclarationStatement)eInternalContainer();
 	}
 
 	/**
@@ -517,6 +538,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableDeclarationStatement(VariableDeclarationStatement newVariableDeclarationStatement) {
 		if (newVariableDeclarationStatement != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_STATEMENT && newVariableDeclarationStatement != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableDeclarationStatement))
@@ -538,9 +560,10 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationExpression getVariableDeclarationExpression() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_EXPRESSION) return null;
-		return (VariableDeclarationExpression)eContainer();
+		return (VariableDeclarationExpression)eInternalContainer();
 	}
 
 	/**
@@ -558,6 +581,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableDeclarationExpression(VariableDeclarationExpression newVariableDeclarationExpression) {
 		if (newVariableDeclarationExpression != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_EXPRESSION && newVariableDeclarationExpression != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableDeclarationExpression))
@@ -819,7 +843,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (visibility: ");
 		result.append(visibility);
 		result.append(", inheritance: ");

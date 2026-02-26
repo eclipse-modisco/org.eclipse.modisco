@@ -33,12 +33,12 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.LabeledStatement#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getLabeledStatement()
  * @model

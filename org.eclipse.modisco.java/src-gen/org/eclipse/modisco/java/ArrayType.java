@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ArrayType#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ArrayType#getElementType <em>Element Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayType()
  * @model

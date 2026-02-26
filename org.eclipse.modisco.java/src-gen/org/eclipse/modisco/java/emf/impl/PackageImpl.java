@@ -42,6 +42,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getOwnedElements <em>Owned Elements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getModel <em>Model</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageImpl#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -108,6 +108,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AbstractTypeDeclaration> getOwnedElements() {
 		if (ownedElements == null) {
 			ownedElements = new EObjectContainmentWithInverseEList<AbstractTypeDeclaration>(AbstractTypeDeclaration.class, this, JavaPackage.PACKAGE__OWNED_ELEMENTS, JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE);
@@ -120,9 +121,10 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Model getModel() {
 		if (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL) return null;
-		return (Model)eContainer();
+		return (Model)eInternalContainer();
 	}
 
 	/**
@@ -140,6 +142,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModel(Model newModel) {
 		if (newModel != eInternalContainer() || (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL && newModel != null)) {
 			if (EcoreUtil.isAncestor(this, newModel))
@@ -161,6 +164,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.modisco.java.Package> getOwnedPackages() {
 		if (ownedPackages == null) {
 			ownedPackages = new EObjectContainmentWithInverseEList<org.eclipse.modisco.java.Package>(org.eclipse.modisco.java.Package.class, this, JavaPackage.PACKAGE__OWNED_PACKAGES, JavaPackage.PACKAGE__PACKAGE);
@@ -173,9 +177,10 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE) return null;
-		return (org.eclipse.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eInternalContainer();
 	}
 
 	/**
@@ -193,6 +198,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
@@ -214,6 +220,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageAccess> getUsagesInPackageAccess() {
 		if (usagesInPackageAccess == null) {
 			usagesInPackageAccess = new EObjectWithInverseResolvingEList<PackageAccess>(PackageAccess.class, this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, JavaPackage.PACKAGE_ACCESS__PACKAGE);

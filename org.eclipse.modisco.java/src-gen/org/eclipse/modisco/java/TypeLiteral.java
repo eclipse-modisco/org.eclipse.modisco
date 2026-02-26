@@ -30,10 +30,10 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.TypeLiteral#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeLiteral()
  * @model

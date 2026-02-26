@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.ASTNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.TagElement#getTagName <em>Tag Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.TagElement#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getTagElement()
  * @model

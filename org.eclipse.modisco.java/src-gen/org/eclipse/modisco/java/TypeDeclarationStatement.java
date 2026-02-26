@@ -30,10 +30,10 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.TypeDeclarationStatement#getDeclaration <em>Declaration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getTypeDeclarationStatement()
  * @model

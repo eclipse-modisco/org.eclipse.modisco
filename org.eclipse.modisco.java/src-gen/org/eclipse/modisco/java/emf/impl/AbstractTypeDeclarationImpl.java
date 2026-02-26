@@ -45,6 +45,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -132,6 +132,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getUsagesInTypeAccess() {
 		if (usagesInTypeAccess == null) {
 			usagesInTypeAccess = new EObjectWithInverseResolvingEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS, JavaPackage.TYPE_ACCESS__TYPE);
@@ -145,6 +146,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BodyDeclaration> getBodyDeclarations() {
 		if (bodyDeclarations == null) {
 			bodyDeclarations = new EObjectContainmentWithInverseEList<BodyDeclaration>(BodyDeclaration.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS, JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION);
@@ -157,6 +159,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentsBeforeBody() {
 		if (commentsBeforeBody == null) {
 			commentsBeforeBody = new EObjectContainmentEList<Comment>(Comment.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY);
@@ -169,6 +172,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentsAfterBody() {
 		if (commentsAfterBody == null) {
 			commentsAfterBody = new EObjectContainmentEList<Comment>(Comment.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_AFTER_BODY);
@@ -181,9 +185,10 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE) return null;
-		return (org.eclipse.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eInternalContainer();
 	}
 
 	/**
@@ -201,6 +206,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
@@ -222,6 +228,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getSuperInterfaces() {
 		if (superInterfaces == null) {
 			superInterfaces = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES);

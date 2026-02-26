@@ -45,11 +45,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ManifestImpl#getMainAttributes <em>Main Attributes</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ManifestImpl#getEntryAttributes <em>Entry Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public class ManifestImpl extends MinimalEObjectImpl implements Manifest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManifestAttribute> getMainAttributes() {
 		if (mainAttributes == null) {
 			mainAttributes = new EObjectContainmentEList<ManifestAttribute>(ManifestAttribute.class, this, JavaPackage.MANIFEST__MAIN_ATTRIBUTES);
@@ -110,6 +111,7 @@ public class ManifestImpl extends MinimalEObjectImpl implements Manifest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManifestEntry> getEntryAttributes() {
 		if (entryAttributes == null) {
 			entryAttributes = new EObjectContainmentEList<ManifestEntry>(ManifestEntry.class, this, JavaPackage.MANIFEST__ENTRY_ATTRIBUTES);

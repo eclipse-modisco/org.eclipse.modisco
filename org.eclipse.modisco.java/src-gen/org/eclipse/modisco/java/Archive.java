@@ -32,12 +32,12 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Archive#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Archive#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Archive#getManifest <em>Manifest</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getArchive()
  * @model

@@ -35,11 +35,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <em><b>Package Access</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageAccessImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PackageAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
@@ -122,6 +123,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != package_) {
 			NotificationChain msgs = null;
@@ -140,6 +142,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageAccess getQualifier() {
 		return qualifier;
 	}
@@ -162,6 +165,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(PackageAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;

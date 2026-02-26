@@ -34,12 +34,12 @@ import org.eclipse.modisco.java.CompilationUnit;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ASTNode#getComments <em>Comments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ASTNode#getOriginalCompilationUnit <em>Original Compilation Unit</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ASTNode#getOriginalClassFile <em>Original Class File</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getASTNode()
  * @model abstract="true"

@@ -31,11 +31,11 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.MemberRef#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.MemberRef#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getMemberRef()
  * @model

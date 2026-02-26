@@ -47,6 +47,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl#getCommentList <em>Comment List</em>}</li>
@@ -54,7 +55,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.CompilationUnitImpl#getTypes <em>Types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -143,6 +143,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
@@ -152,6 +153,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
@@ -164,6 +166,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentList() {
 		if (commentList == null) {
 			commentList = new EObjectResolvingEList<Comment>(Comment.class, this, JavaPackage.COMPILATION_UNIT__COMMENT_LIST);
@@ -176,6 +179,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImportDeclaration> getImports() {
 		if (imports == null) {
 			imports = new EObjectContainmentEList<ImportDeclaration>(ImportDeclaration.class, this, JavaPackage.COMPILATION_UNIT__IMPORTS);
@@ -188,6 +192,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
@@ -214,6 +219,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
@@ -226,6 +232,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AbstractTypeDeclaration> getTypes() {
 		if (types == null) {
 			types = new EObjectResolvingEList<AbstractTypeDeclaration>(AbstractTypeDeclaration.class, this, JavaPackage.COMPILATION_UNIT__TYPES);
@@ -359,7 +366,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements Compilation
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');

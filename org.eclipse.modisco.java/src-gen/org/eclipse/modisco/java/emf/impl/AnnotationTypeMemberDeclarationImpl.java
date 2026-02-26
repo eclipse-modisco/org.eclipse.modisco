@@ -46,12 +46,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationTypeMemberDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefault() {
 		return default_;
 	}
@@ -134,6 +135,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(Expression newDefault) {
 		if (newDefault != default_) {
 			NotificationChain msgs = null;
@@ -153,6 +155,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -177,6 +180,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -196,6 +200,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AnnotationMemberValuePair> getUsages() {
 		if (usages == null) {
 			usages = new EObjectWithInverseResolvingEList<AnnotationMemberValuePair>(AnnotationMemberValuePair.class, this, JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER);

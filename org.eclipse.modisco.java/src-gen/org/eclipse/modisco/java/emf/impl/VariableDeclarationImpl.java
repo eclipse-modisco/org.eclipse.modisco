@@ -45,12 +45,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationImpl#getInitializer <em>Initializer</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationImpl#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -119,6 +119,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return extraArrayDimensions;
 	}
@@ -128,6 +129,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		int oldExtraArrayDimensions = extraArrayDimensions;
 		extraArrayDimensions = newExtraArrayDimensions;
@@ -140,6 +142,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitializer() {
 		return initializer;
 	}
@@ -164,6 +167,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(Expression newInitializer) {
 		if (newInitializer != initializer) {
 			NotificationChain msgs = null;
@@ -183,6 +187,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SingleVariableAccess> getUsageInVariableAccess() {
 		if (usageInVariableAccess == null) {
 			usageInVariableAccess = new EObjectWithInverseResolvingEList<SingleVariableAccess>(SingleVariableAccess.class, this, JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE);
@@ -310,7 +315,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (extraArrayDimensions: ");
 		result.append(extraArrayDimensions);
 		result.append(')');

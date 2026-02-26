@@ -45,13 +45,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getUpdaters <em>Updaters</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getInitializers <em>Initializers</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ForStatementImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -120,6 +120,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -144,6 +145,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -163,6 +165,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getUpdaters() {
 		if (updaters == null) {
 			updaters = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.FOR_STATEMENT__UPDATERS);
@@ -175,6 +178,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getInitializers() {
 		if (initializers == null) {
 			initializers = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.FOR_STATEMENT__INITIALIZERS);
@@ -187,6 +191,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return body;
 	}
@@ -211,6 +216,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;

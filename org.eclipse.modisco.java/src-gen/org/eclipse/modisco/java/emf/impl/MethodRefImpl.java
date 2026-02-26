@@ -46,12 +46,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodRefImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodRefImpl#getQualifier <em>Qualifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodRefImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -151,6 +152,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -170,6 +172,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return qualifier;
 	}
@@ -194,6 +197,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;
@@ -213,6 +217,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodRefParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<MethodRefParameter>(MethodRefParameter.class, this, JavaPackage.METHOD_REF__PARAMETERS);

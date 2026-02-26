@@ -44,12 +44,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#isProxy <em>Proxy</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.NamedElementImpl#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -128,6 +128,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -137,6 +138,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -149,6 +151,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isProxy() {
 		return proxy;
 	}
@@ -158,6 +161,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProxy(boolean newProxy) {
 		boolean oldProxy = proxy;
 		proxy = newProxy;
@@ -170,6 +174,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ImportDeclaration> getUsagesInImports() {
 		if (usagesInImports == null) {
 			usagesInImports = new EObjectWithInverseResolvingEList<ImportDeclaration>(ImportDeclaration.class, this, JavaPackage.NAMED_ELEMENT__USAGES_IN_IMPORTS, JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT);
@@ -295,7 +300,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", proxy: ");

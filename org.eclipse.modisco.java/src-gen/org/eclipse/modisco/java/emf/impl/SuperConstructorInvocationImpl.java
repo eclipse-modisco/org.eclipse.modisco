@@ -47,13 +47,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SuperConstructorInvocationImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -122,6 +122,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -163,6 +164,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -182,6 +184,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.SUPER_CONSTRUCTOR_INVOCATION__ARGUMENTS);
@@ -194,6 +197,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		if (typeArguments == null) {
 			typeArguments = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.SUPER_CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS);
@@ -206,6 +210,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -230,6 +235,7 @@ public class SuperConstructorInvocationImpl extends StatementImpl implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;

@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.common.util.AbstractEnumerator;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.modisco.java.InheritanceKind;
 
@@ -36,7 +37,8 @@ import org.eclipse.modisco.java.InheritanceKind;
  * @model
  * @generated
  */
-public enum InheritanceKind implements Enumerator {
+public enum InheritanceKind implements Enumerator
+{
 	/**
 	 * The '<em><b>None</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -45,8 +47,7 @@ public enum InheritanceKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NONE(1, "none", "none"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	NONE(1, "none", "none"),
 	/**
 	 * The '<em><b>Abstract</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -55,8 +56,7 @@ public enum InheritanceKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ABSTRACT(2, "abstract", "abstract"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	ABSTRACT(2, "abstract", "abstract"),
 	/**
 	 * The '<em><b>Final</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -65,15 +65,11 @@ public enum InheritanceKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FINAL(3, "final", "final"); //$NON-NLS-1$ //$NON-NLS-2$
+	FINAL(3, "final", "final");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NONE
 	 * @model name="none"
@@ -85,10 +81,6 @@ public enum InheritanceKind implements Enumerator {
 	/**
 	 * The '<em><b>Abstract</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Abstract</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ABSTRACT
 	 * @model name="abstract"
@@ -100,10 +92,6 @@ public enum InheritanceKind implements Enumerator {
 	/**
 	 * The '<em><b>Final</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Final</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FINAL
 	 * @model name="final"
@@ -137,6 +125,8 @@ public enum InheritanceKind implements Enumerator {
 	 * Returns the '<em><b>Inheritance Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InheritanceKind get(String literal) {
@@ -153,6 +143,8 @@ public enum InheritanceKind implements Enumerator {
 	 * Returns the '<em><b>Inheritance Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InheritanceKind getByName(String name) {
@@ -169,6 +161,8 @@ public enum InheritanceKind implements Enumerator {
 	 * Returns the '<em><b>Inheritance Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InheritanceKind get(int value) {
@@ -218,6 +212,7 @@ public enum InheritanceKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -227,6 +222,7 @@ public enum InheritanceKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -236,6 +232,7 @@ public enum InheritanceKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -250,5 +247,4 @@ public enum InheritanceKind implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-	
-} //InheritanceKind
+}

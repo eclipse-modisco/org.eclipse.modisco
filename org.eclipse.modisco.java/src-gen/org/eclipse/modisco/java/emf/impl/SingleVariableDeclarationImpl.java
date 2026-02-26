@@ -50,6 +50,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#isVarargs <em>Varargs</em>}</li>
@@ -59,7 +60,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getCatchClause <em>Catch Clause</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SingleVariableDeclarationImpl#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -138,6 +138,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return modifier;
 	}
@@ -162,6 +163,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		if (newModifier != modifier) {
 			NotificationChain msgs = null;
@@ -181,6 +183,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVarargs() {
 		return varargs;
 	}
@@ -190,6 +193,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVarargs(boolean newVarargs) {
 		boolean oldVarargs = varargs;
 		varargs = newVarargs;
@@ -202,6 +206,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -226,6 +231,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -245,6 +251,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, JavaPackage.SINGLE_VARIABLE_DECLARATION__ANNOTATIONS);
@@ -257,9 +264,10 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethodDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION) return null;
-		return (AbstractMethodDeclaration)eContainer();
+		return (AbstractMethodDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -277,6 +285,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodDeclaration(AbstractMethodDeclaration newMethodDeclaration) {
 		if (newMethodDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION && newMethodDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newMethodDeclaration))
@@ -298,9 +307,10 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatchClause getCatchClause() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE) return null;
-		return (CatchClause)eContainer();
+		return (CatchClause)eInternalContainer();
 	}
 
 	/**
@@ -318,6 +328,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCatchClause(CatchClause newCatchClause) {
 		if (newCatchClause != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE && newCatchClause != null)) {
 			if (EcoreUtil.isAncestor(this, newCatchClause))
@@ -339,9 +350,10 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnhancedForStatement getEnhancedForStatement() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT) return null;
-		return (EnhancedForStatement)eContainer();
+		return (EnhancedForStatement)eInternalContainer();
 	}
 
 	/**
@@ -359,6 +371,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnhancedForStatement(EnhancedForStatement newEnhancedForStatement) {
 		if (newEnhancedForStatement != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT && newEnhancedForStatement != null)) {
 			if (EcoreUtil.isAncestor(this, newEnhancedForStatement))
@@ -574,7 +587,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (varargs: ");
 		result.append(varargs);
 		result.append(')');

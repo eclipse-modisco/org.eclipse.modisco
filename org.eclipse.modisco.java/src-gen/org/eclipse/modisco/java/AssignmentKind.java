@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.common.util.AbstractEnumerator;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.modisco.java.AssignmentKind;
 
@@ -36,7 +37,8 @@ import org.eclipse.modisco.java.AssignmentKind;
  * @model
  * @generated
  */
-public enum AssignmentKind implements Enumerator {
+public enum AssignmentKind implements Enumerator
+{
 	/**
 	 * The '<em><b>ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -45,8 +47,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ASSIGN(1, "ASSIGN", "="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	ASSIGN(1, "ASSIGN", "="),
 	/**
 	 * The '<em><b>PLUS ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -55,8 +56,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLUS_ASSIGN(2, "PLUS_ASSIGN", "+="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	PLUS_ASSIGN(2, "PLUS_ASSIGN", "+="),
 	/**
 	 * The '<em><b>MINUS ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -65,8 +65,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MINUS_ASSIGN(3, "MINUS_ASSIGN", "-="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	MINUS_ASSIGN(3, "MINUS_ASSIGN", "-="),
 	/**
 	 * The '<em><b>TIMES ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -75,8 +74,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TIMES_ASSIGN(4, "TIMES_ASSIGN", "*="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	TIMES_ASSIGN(4, "TIMES_ASSIGN", "*="),
 	/**
 	 * The '<em><b>DIVIDE ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -85,8 +83,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIVIDE_ASSIGN(5, "DIVIDE_ASSIGN", "/="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	DIVIDE_ASSIGN(5, "DIVIDE_ASSIGN", "/="),
 	/**
 	 * The '<em><b>BIT AND ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -95,8 +92,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BIT_AND_ASSIGN(6, "BIT_AND_ASSIGN", "&="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	BIT_AND_ASSIGN(6, "BIT_AND_ASSIGN", "&="),
 	/**
 	 * The '<em><b>BIT OR ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -105,8 +101,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BIT_OR_ASSIGN(7, "BIT_OR_ASSIGN", "|="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	BIT_OR_ASSIGN(7, "BIT_OR_ASSIGN", "|="),
 	/**
 	 * The '<em><b>BIT XOR ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -115,8 +110,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BIT_XOR_ASSIGN(8, "BIT_XOR_ASSIGN", "^="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	BIT_XOR_ASSIGN(8, "BIT_XOR_ASSIGN", "^="),
 	/**
 	 * The '<em><b>REMAINDER ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -125,8 +119,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REMAINDER_ASSIGN(9, "REMAINDER_ASSIGN", "%="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	REMAINDER_ASSIGN(9, "REMAINDER_ASSIGN", "%="),
 	/**
 	 * The '<em><b>LEFT SHIFT ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -135,8 +128,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LEFT_SHIFT_ASSIGN(10, "LEFT_SHIFT_ASSIGN", "<<="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	LEFT_SHIFT_ASSIGN(10, "LEFT_SHIFT_ASSIGN", "<<="),
 	/**
 	 * The '<em><b>RIGHT SHIFT SIGNED ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -145,8 +137,7 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT_SHIFT_SIGNED_ASSIGN(11, "RIGHT_SHIFT_SIGNED_ASSIGN", ">>="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	RIGHT_SHIFT_SIGNED_ASSIGN(11, "RIGHT_SHIFT_SIGNED_ASSIGN", ">>="),
 	/**
 	 * The '<em><b>RIGHT SHIFT UNSIGNED ASSIGN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -155,15 +146,11 @@ public enum AssignmentKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT_SHIFT_UNSIGNED_ASSIGN(12, "RIGHT_SHIFT_UNSIGNED_ASSIGN", ">>>="); //$NON-NLS-1$ //$NON-NLS-2$
+	RIGHT_SHIFT_UNSIGNED_ASSIGN(12, "RIGHT_SHIFT_UNSIGNED_ASSIGN", ">>>=");
 
 	/**
 	 * The '<em><b>ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ASSIGN
 	 * @model literal="="
@@ -175,10 +162,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>PLUS ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PLUS ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PLUS_ASSIGN
 	 * @model literal="+="
@@ -190,10 +173,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>MINUS ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MINUS ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MINUS_ASSIGN
 	 * @model literal="-="
@@ -205,10 +184,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>TIMES ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>TIMES ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TIMES_ASSIGN
 	 * @model literal="*="
@@ -220,10 +195,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>DIVIDE ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DIVIDE ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DIVIDE_ASSIGN
 	 * @model literal="/="
@@ -235,13 +206,9 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>BIT AND ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>BIT AND ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BIT_AND_ASSIGN
-	 * @model literal="&="
+	 * @model literal="&amp;="
 	 * @generated
 	 * @ordered
 	 */
@@ -250,10 +217,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>BIT OR ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>BIT OR ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BIT_OR_ASSIGN
 	 * @model literal="|="
@@ -265,10 +228,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>BIT XOR ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>BIT XOR ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BIT_XOR_ASSIGN
 	 * @model literal="^="
@@ -280,10 +239,6 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>REMAINDER ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>REMAINDER ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #REMAINDER_ASSIGN
 	 * @model literal="%="
@@ -295,13 +250,9 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>LEFT SHIFT ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LEFT SHIFT ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LEFT_SHIFT_ASSIGN
-	 * @model literal="<<="
+	 * @model literal="&lt;&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -310,13 +261,9 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>RIGHT SHIFT SIGNED ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RIGHT SHIFT SIGNED ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_SIGNED_ASSIGN
-	 * @model literal=">>="
+	 * @model literal="&gt;&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -325,13 +272,9 @@ public enum AssignmentKind implements Enumerator {
 	/**
 	 * The '<em><b>RIGHT SHIFT UNSIGNED ASSIGN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RIGHT SHIFT UNSIGNED ASSIGN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_UNSIGNED_ASSIGN
-	 * @model literal=">>>="
+	 * @model literal="&gt;&gt;&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -371,6 +314,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind get(String literal) {
@@ -387,6 +332,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind getByName(String name) {
@@ -403,6 +350,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind get(int value) {
@@ -461,6 +410,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -470,6 +420,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -479,6 +430,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -493,5 +445,4 @@ public enum AssignmentKind implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-	
-} //AssignmentKind
+}

@@ -38,12 +38,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.IfStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.IfStatementImpl#getThenStatement <em>Then Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.IfStatementImpl#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -102,6 +102,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -126,6 +127,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -145,6 +147,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getThenStatement() {
 		return thenStatement;
 	}
@@ -169,6 +172,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThenStatement(Statement newThenStatement) {
 		if (newThenStatement != thenStatement) {
 			NotificationChain msgs = null;
@@ -188,6 +192,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getElseStatement() {
 		return elseStatement;
 	}
@@ -212,6 +217,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElseStatement(Statement newElseStatement) {
 		if (newElseStatement != elseStatement) {
 			NotificationChain msgs = null;

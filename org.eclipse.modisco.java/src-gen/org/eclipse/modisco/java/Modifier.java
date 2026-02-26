@@ -35,6 +35,7 @@ import org.eclipse.modisco.java.VisibilityKind;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Modifier#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Modifier#getInheritance <em>Inheritance</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.modisco.java.VisibilityKind;
  *   <li>{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Modifier#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getModifier()
  * @model

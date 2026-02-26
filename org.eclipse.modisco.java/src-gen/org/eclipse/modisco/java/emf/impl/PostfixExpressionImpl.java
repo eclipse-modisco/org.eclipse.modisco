@@ -38,11 +38,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PostfixExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.PostfixExpressionImpl#getOperand <em>Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -101,6 +101,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PostfixExpressionKind getOperator() {
 		return operator;
 	}
@@ -110,6 +111,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(PostfixExpressionKind newOperator) {
 		PostfixExpressionKind oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -122,6 +124,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getOperand() {
 		return operand;
 	}
@@ -146,6 +149,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperand(Expression newOperand) {
 		if (newOperand != operand) {
 			NotificationChain msgs = null;
@@ -251,7 +255,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (operator: ");
 		result.append(operator);
 		result.append(')');

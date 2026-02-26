@@ -43,13 +43,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -128,6 +128,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
@@ -137,6 +138,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
@@ -149,6 +151,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -175,6 +178,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AbstractTypeDeclaration newType) {
 		AbstractTypeDeclaration oldType = type;
 		type = newType;
@@ -187,6 +191,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompilationUnit getAttachedSource() {
 		if (attachedSource != null && attachedSource.eIsProxy()) {
 			InternalEObject oldAttachedSource = (InternalEObject)attachedSource;
@@ -213,6 +218,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttachedSource(CompilationUnit newAttachedSource) {
 		CompilationUnit oldAttachedSource = attachedSource;
 		attachedSource = newAttachedSource;
@@ -225,6 +231,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
@@ -251,6 +258,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
@@ -358,7 +366,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');

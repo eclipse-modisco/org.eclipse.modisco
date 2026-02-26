@@ -36,6 +36,7 @@ import org.eclipse.modisco.java.TypeParameter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.modisco.java.TypeParameter;
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodDeclaration()
  * @model abstract="true"

@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayTypeImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayTypeImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getDimensions() {
 		return dimensions;
 	}
@@ -107,6 +108,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDimensions(int newDimensions) {
 		int oldDimensions = dimensions;
 		dimensions = newDimensions;
@@ -119,6 +121,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getElementType() {
 		return elementType;
 	}
@@ -143,6 +146,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElementType(TypeAccess newElementType) {
 		if (newElementType != elementType) {
 			NotificationChain msgs = null;
@@ -248,7 +252,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (dimensions: ");
 		result.append(dimensions);
 		result.append(')');

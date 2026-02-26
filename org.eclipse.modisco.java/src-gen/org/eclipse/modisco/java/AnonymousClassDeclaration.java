@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.ClassInstanceCreation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AnonymousClassDeclaration#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AnonymousClassDeclaration#getClassInstanceCreation <em>Class Instance Creation</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getAnonymousClassDeclaration()
  * @model

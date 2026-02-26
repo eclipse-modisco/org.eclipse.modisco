@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ManifestAttribute#getKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ManifestAttribute#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getManifestAttribute()
  * @model

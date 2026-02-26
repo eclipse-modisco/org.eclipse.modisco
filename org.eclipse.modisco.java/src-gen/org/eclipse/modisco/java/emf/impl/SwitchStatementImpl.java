@@ -45,11 +45,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SwitchStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SwitchStatementImpl#getStatements <em>Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -122,6 +123,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -141,6 +143,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Statement> getStatements() {
 		if (statements == null) {
 			statements = new EObjectContainmentEList<Statement>(Statement.class, this, JavaPackage.SWITCH_STATEMENT__STATEMENTS);

@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.common.util.AbstractEnumerator;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.modisco.java.PrefixExpressionKind;
 
@@ -36,7 +37,8 @@ import org.eclipse.modisco.java.PrefixExpressionKind;
  * @model
  * @generated
  */
-public enum PrefixExpressionKind implements Enumerator {
+public enum PrefixExpressionKind implements Enumerator
+{
 	/**
 	 * The '<em><b>INCREMENT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -45,8 +47,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INCREMENT(1, "INCREMENT", "++"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	INCREMENT(1, "INCREMENT", "++"),
 	/**
 	 * The '<em><b>DECREMENT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -55,8 +56,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DECREMENT(2, "DECREMENT", "--"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	DECREMENT(2, "DECREMENT", "--"),
 	/**
 	 * The '<em><b>PLUS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -65,8 +65,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLUS(3, "PLUS", "+"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	PLUS(3, "PLUS", "+"),
 	/**
 	 * The '<em><b>MINUS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -75,8 +74,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MINUS(4, "MINUS", "-"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	MINUS(4, "MINUS", "-"),
 	/**
 	 * The '<em><b>COMPLEMENT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -85,8 +83,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	COMPLEMENT(5, "COMPLEMENT", "~"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	COMPLEMENT(5, "COMPLEMENT", "~"),
 	/**
 	 * The '<em><b>NOT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -95,15 +92,11 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT(6, "NOT", "!"); //$NON-NLS-1$ //$NON-NLS-2$
+	NOT(6, "NOT", "!");
 
 	/**
 	 * The '<em><b>INCREMENT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>INCREMENT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #INCREMENT
 	 * @model literal="++"
@@ -115,10 +108,6 @@ public enum PrefixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>DECREMENT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DECREMENT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DECREMENT
 	 * @model literal="--"
@@ -130,10 +119,6 @@ public enum PrefixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>PLUS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PLUS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PLUS
 	 * @model literal="+"
@@ -145,10 +130,6 @@ public enum PrefixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>MINUS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MINUS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MINUS
 	 * @model literal="-"
@@ -160,10 +141,6 @@ public enum PrefixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>COMPLEMENT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>COMPLEMENT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #COMPLEMENT
 	 * @model literal="~"
@@ -175,10 +152,6 @@ public enum PrefixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>NOT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>NOT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NOT
 	 * @model literal="!"
@@ -215,6 +188,8 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Prefix Expression Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PrefixExpressionKind get(String literal) {
@@ -231,6 +206,8 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Prefix Expression Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PrefixExpressionKind getByName(String name) {
@@ -247,6 +224,8 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Prefix Expression Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static PrefixExpressionKind get(int value) {
@@ -299,6 +278,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -308,6 +288,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -317,6 +298,7 @@ public enum PrefixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -331,5 +313,4 @@ public enum PrefixExpressionKind implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-	
-} //PrefixExpressionKind
+}

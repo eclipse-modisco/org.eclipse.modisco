@@ -41,10 +41,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumDeclarationImpl#getEnumConstants <em>Enum Constants</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class EnumDeclarationImpl extends AbstractTypeDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EnumConstantDeclaration> getEnumConstants() {
 		if (enumConstants == null) {
 			enumConstants = new EObjectContainmentEList<EnumConstantDeclaration>(EnumConstantDeclaration.class, this, JavaPackage.ENUM_DECLARATION__ENUM_CONSTANTS);

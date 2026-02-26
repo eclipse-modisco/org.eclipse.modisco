@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Annotation#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Annotation#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getAnnotation()
  * @model

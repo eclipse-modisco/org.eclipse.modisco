@@ -37,11 +37,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ImportDeclarationImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ImportDeclarationImpl#getImportedElement <em>Imported Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +100,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return static_;
 	}
@@ -109,6 +110,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatic(boolean newStatic) {
 		boolean oldStatic = static_;
 		static_ = newStatic;
@@ -121,6 +123,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getImportedElement() {
 		if (importedElement != null && importedElement.eIsProxy()) {
 			InternalEObject oldImportedElement = (InternalEObject)importedElement;
@@ -162,6 +165,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportedElement(NamedElement newImportedElement) {
 		if (newImportedElement != importedElement) {
 			NotificationChain msgs = null;
@@ -284,7 +288,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (static: ");
 		result.append(static_);
 		result.append(')');

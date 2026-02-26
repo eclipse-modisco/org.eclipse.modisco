@@ -36,6 +36,7 @@ import org.eclipse.modisco.java.VariableDeclaration;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.SingleVariableDeclaration#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.SingleVariableDeclaration#isVarargs <em>Varargs</em>}</li>
@@ -45,7 +46,6 @@ import org.eclipse.modisco.java.VariableDeclaration;
  *   <li>{@link org.eclipse.modisco.java.SingleVariableDeclaration#getCatchClause <em>Catch Clause</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.SingleVariableDeclaration#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getSingleVariableDeclaration()
  * @model

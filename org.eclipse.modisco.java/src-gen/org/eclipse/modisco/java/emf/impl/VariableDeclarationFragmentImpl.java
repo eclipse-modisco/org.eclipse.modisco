@@ -35,10 +35,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,9 +68,10 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractVariablesContainer getVariablesContainer() {
 		if (eContainerFeatureID() != JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER) return null;
-		return (AbstractVariablesContainer)eContainer();
+		return (AbstractVariablesContainer)eInternalContainer();
 	}
 
 	/**
@@ -88,6 +89,7 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariablesContainer(AbstractVariablesContainer newVariablesContainer) {
 		if (newVariablesContainer != eInternalContainer() || (eContainerFeatureID() != JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER && newVariablesContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newVariablesContainer))

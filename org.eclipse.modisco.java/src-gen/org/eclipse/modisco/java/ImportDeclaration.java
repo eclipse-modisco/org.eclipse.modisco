@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ImportDeclaration#isStatic <em>Static</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getImportDeclaration()
  * @model

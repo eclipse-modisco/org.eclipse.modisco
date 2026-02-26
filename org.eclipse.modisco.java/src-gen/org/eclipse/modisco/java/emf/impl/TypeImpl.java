@@ -41,10 +41,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TypeImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public abstract class TypeImpl extends NamedElementImpl implements Type {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getUsagesInTypeAccess() {
 		if (usagesInTypeAccess == null) {
 			usagesInTypeAccess = new EObjectWithInverseResolvingEList<TypeAccess>(TypeAccess.class, this, JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS, JavaPackage.TYPE_ACCESS__TYPE);

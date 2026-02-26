@@ -37,11 +37,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SwitchCaseImpl#isDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.SwitchCaseImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +100,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDefault() {
 		return default_;
 	}
@@ -109,6 +110,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(boolean newDefault) {
 		boolean oldDefault = default_;
 		default_ = newDefault;
@@ -121,6 +123,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -145,6 +148,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -250,7 +254,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (default: ");
 		result.append(default_);
 		result.append(')');

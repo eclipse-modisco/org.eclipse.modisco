@@ -41,10 +41,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArrayInitializerImpl#getExpressions <em>Expressions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class ArrayInitializerImpl extends ExpressionImpl implements ArrayInitial
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getExpressions() {
 		if (expressions == null) {
 			expressions = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.ARRAY_INITIALIZER__EXPRESSIONS);

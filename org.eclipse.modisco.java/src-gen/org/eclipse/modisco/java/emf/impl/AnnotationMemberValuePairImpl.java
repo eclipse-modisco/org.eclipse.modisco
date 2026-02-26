@@ -38,11 +38,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationMemberValuePairImpl#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationMemberValuePairImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnnotationTypeMemberDeclaration getMember() {
 		if (member != null && member.eIsProxy()) {
 			InternalEObject oldMember = (InternalEObject)member;
@@ -132,6 +133,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMember(AnnotationTypeMemberDeclaration newMember) {
 		if (newMember != member) {
 			NotificationChain msgs = null;
@@ -151,6 +153,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getValue() {
 		return value;
 	}
@@ -175,6 +178,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Expression newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

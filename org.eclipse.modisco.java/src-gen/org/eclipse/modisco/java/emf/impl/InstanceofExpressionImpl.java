@@ -38,11 +38,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.InstanceofExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getRightOperand() {
 		return rightOperand;
 	}
@@ -115,6 +116,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightOperand(TypeAccess newRightOperand) {
 		if (newRightOperand != rightOperand) {
 			NotificationChain msgs = null;
@@ -134,6 +136,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftOperand() {
 		return leftOperand;
 	}
@@ -158,6 +161,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftOperand(Expression newLeftOperand) {
 		if (newLeftOperand != leftOperand) {
 			NotificationChain msgs = null;

@@ -31,11 +31,11 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getAnnotationMemberValuePair()
  * @model

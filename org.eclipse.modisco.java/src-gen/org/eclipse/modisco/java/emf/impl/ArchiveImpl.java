@@ -44,12 +44,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -116,6 +116,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
@@ -125,6 +126,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
@@ -137,6 +139,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClassFile> getClassFiles() {
 		if (classFiles == null) {
 			classFiles = new EObjectContainmentEList<ClassFile>(ClassFile.class, this, JavaPackage.ARCHIVE__CLASS_FILES);
@@ -149,6 +152,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifest getManifest() {
 		return manifest;
 	}
@@ -173,6 +177,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManifest(Manifest newManifest) {
 		if (newManifest != manifest) {
 			NotificationChain msgs = null;
@@ -292,7 +297,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');

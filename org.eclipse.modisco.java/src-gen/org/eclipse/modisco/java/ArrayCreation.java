@@ -32,12 +32,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getInitializer <em>Initializer</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ArrayCreation#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getArrayCreation()
  * @model

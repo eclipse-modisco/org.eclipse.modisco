@@ -39,12 +39,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnhancedForStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnhancedForStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnhancedForStatementImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,6 +103,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return body;
 	}
@@ -127,6 +128,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
@@ -146,6 +148,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -170,6 +173,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -189,6 +193,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration getParameter() {
 		return parameter;
 	}
@@ -213,6 +218,7 @@ public class EnhancedForStatementImpl extends StatementImpl implements EnhancedF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(SingleVariableDeclaration newParameter) {
 		if (newParameter != parameter) {
 			NotificationChain msgs = null;

@@ -31,13 +31,13 @@ import org.eclipse.modisco.java.InfixExpressionKind;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.InfixExpression#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.InfixExpression#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.InfixExpression#getLeftOperand <em>Left Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.InfixExpression#getExtendedOperands <em>Extended Operands</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getInfixExpression()
  * @model

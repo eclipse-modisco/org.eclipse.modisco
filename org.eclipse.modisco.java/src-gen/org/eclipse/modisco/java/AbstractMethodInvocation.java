@@ -33,12 +33,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getAbstractMethodInvocation()
  * @model abstract="true"

@@ -29,12 +29,12 @@ import org.eclipse.modisco.java.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getElseExpression <em>Else Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ConditionalExpression#getThenExpression <em>Then Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getConditionalExpression()
  * @model

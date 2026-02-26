@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.ManifestAttribute;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ManifestEntry#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ManifestEntry#getAttributes <em>Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getManifestEntry()
  * @model

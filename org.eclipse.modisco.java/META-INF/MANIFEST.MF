@@ -8,13 +8,12 @@ Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;bundle-version="2.5.0",
- org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.5.0";visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0";visibility:=reexport,
  org.eclipse.modisco.infra.common.core,
  org.eclipse.modisco.facet.util.core
 Bundle-ActivationPolicy: lazy
-Export-Package: 
- org.eclipse.modisco.java,
+Export-Package: org.eclipse.modisco.java,
  org.eclipse.modisco.java.emf,
  org.eclipse.modisco.java.emf.impl;x-internal:=true,
  org.eclipse.modisco.java.emf.util,

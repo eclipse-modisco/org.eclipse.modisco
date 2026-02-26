@@ -33,6 +33,7 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getCommentList <em>Comment List</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.modisco.java.NamedElement;
  *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.CompilationUnit#getTypes <em>Types</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getCompilationUnit()
  * @model

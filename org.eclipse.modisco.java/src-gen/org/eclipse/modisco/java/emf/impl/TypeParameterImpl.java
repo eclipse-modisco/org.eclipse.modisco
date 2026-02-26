@@ -41,10 +41,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TypeParameterImpl#getBounds <em>Bounds</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getBounds() {
 		if (bounds == null) {
 			bounds = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.TYPE_PARAMETER__BOUNDS);

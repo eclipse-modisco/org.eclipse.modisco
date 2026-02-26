@@ -49,13 +49,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getFragments <em>Fragments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.VariableDeclarationExpressionImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -124,6 +124,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -148,6 +149,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -167,6 +169,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentWithInverseEList<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, JavaPackage.VARIABLE_DECLARATION_EXPRESSION__FRAGMENTS, JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);
@@ -179,6 +182,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return modifier;
 	}
@@ -203,6 +207,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		if (newModifier != modifier) {
 			NotificationChain msgs = null;
@@ -222,6 +227,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, JavaPackage.VARIABLE_DECLARATION_EXPRESSION__ANNOTATIONS);

@@ -28,8 +28,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Primitive Type Float</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -44,11 +44,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TagElementImpl#getTagName <em>Tag Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TagElementImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -107,6 +107,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTagName() {
 		return tagName;
 	}
@@ -116,6 +117,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTagName(String newTagName) {
 		String oldTagName = tagName;
 		tagName = newTagName;
@@ -128,6 +130,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ASTNode> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentEList<ASTNode>(ASTNode.class, this, JavaPackage.TAG_ELEMENT__FRAGMENTS);
@@ -228,7 +231,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (tagName: ");
 		result.append(tagName);
 		result.append(')');

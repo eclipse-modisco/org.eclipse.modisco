@@ -39,11 +39,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.UnresolvedItemAccessImpl#getElement <em>Element</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.UnresolvedItemAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -92,6 +92,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnresolvedItem getElement() {
 		if (element != null && element.eIsProxy()) {
 			InternalEObject oldElement = (InternalEObject)element;
@@ -118,6 +119,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElement(UnresolvedItem newElement) {
 		UnresolvedItem oldElement = element;
 		element = newElement;
@@ -130,6 +132,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ASTNode getQualifier() {
 		return qualifier;
 	}
@@ -154,6 +157,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(ASTNode newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;

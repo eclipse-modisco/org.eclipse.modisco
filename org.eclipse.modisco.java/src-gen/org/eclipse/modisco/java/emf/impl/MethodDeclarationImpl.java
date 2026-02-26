@@ -44,13 +44,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getReturnType <em>Return Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.MethodDeclarationImpl#getRedefinitions <em>Redefinitions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -129,6 +129,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return extraArrayDimensions;
 	}
@@ -138,6 +139,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		int oldExtraArrayDimensions = extraArrayDimensions;
 		extraArrayDimensions = newExtraArrayDimensions;
@@ -150,6 +152,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getReturnType() {
 		return returnType;
 	}
@@ -174,6 +177,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnType(TypeAccess newReturnType) {
 		if (newReturnType != returnType) {
 			NotificationChain msgs = null;
@@ -193,6 +197,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodDeclaration getRedefinedMethodDeclaration() {
 		if (redefinedMethodDeclaration != null && redefinedMethodDeclaration.eIsProxy()) {
 			InternalEObject oldRedefinedMethodDeclaration = (InternalEObject)redefinedMethodDeclaration;
@@ -234,6 +239,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRedefinedMethodDeclaration(MethodDeclaration newRedefinedMethodDeclaration) {
 		if (newRedefinedMethodDeclaration != redefinedMethodDeclaration) {
 			NotificationChain msgs = null;
@@ -253,6 +259,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodDeclaration> getRedefinitions() {
 		if (redefinitions == null) {
 			redefinitions = new EObjectWithInverseResolvingEList<MethodDeclaration>(MethodDeclaration.class, this, JavaPackage.METHOD_DECLARATION__REDEFINITIONS, JavaPackage.METHOD_DECLARATION__REDEFINED_METHOD_DECLARATION);
@@ -397,7 +404,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl impleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (extraArrayDimensions: ");
 		result.append(extraArrayDimensions);
 		result.append(')');

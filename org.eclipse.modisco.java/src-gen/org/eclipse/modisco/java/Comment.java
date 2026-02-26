@@ -29,12 +29,12 @@ import org.eclipse.modisco.java.ASTNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Comment#getContent <em>Content</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Comment#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Comment#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.emf.JavaPackage#getComment()
  * @model abstract="true"

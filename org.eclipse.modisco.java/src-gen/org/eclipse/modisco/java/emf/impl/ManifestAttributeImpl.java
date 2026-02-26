@@ -36,11 +36,11 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ManifestAttributeImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ManifestAttributeImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,6 +109,7 @@ public class ManifestAttributeImpl extends MinimalEObjectImpl implements Manifes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKey() {
 		return key;
 	}
@@ -118,6 +119,7 @@ public class ManifestAttributeImpl extends MinimalEObjectImpl implements Manifes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(String newKey) {
 		String oldKey = key;
 		key = newKey;
@@ -130,6 +132,7 @@ public class ManifestAttributeImpl extends MinimalEObjectImpl implements Manifes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -139,6 +142,7 @@ public class ManifestAttributeImpl extends MinimalEObjectImpl implements Manifes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -223,7 +227,7 @@ public class ManifestAttributeImpl extends MinimalEObjectImpl implements Manifes
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (key: ");
 		result.append(key);
 		result.append(", value: ");

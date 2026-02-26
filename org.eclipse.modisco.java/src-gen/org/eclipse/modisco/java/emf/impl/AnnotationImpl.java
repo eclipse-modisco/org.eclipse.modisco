@@ -45,11 +45,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnnotationImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -122,6 +123,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -141,6 +143,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AnnotationMemberValuePair> getValues() {
 		if (values == null) {
 			values = new EObjectContainmentEList<AnnotationMemberValuePair>(AnnotationMemberValuePair.class, this, JavaPackage.ANNOTATION__VALUES);

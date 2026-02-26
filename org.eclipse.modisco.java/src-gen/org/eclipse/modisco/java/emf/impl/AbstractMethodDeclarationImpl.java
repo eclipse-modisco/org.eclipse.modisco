@@ -46,6 +46,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl#getParameters <em>Parameters</em>}</li>
@@ -54,7 +55,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AbstractMethodDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -143,6 +143,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return body;
 	}
@@ -167,6 +168,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
@@ -186,6 +188,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SingleVariableDeclaration> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentWithInverseEList<SingleVariableDeclaration>(SingleVariableDeclaration.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__PARAMETERS, JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION);
@@ -198,6 +201,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getThrownExceptions() {
 		if (thrownExceptions == null) {
 			thrownExceptions = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS);
@@ -210,6 +214,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeParameter> getTypeParameters() {
 		if (typeParameters == null) {
 			typeParameters = new EObjectContainmentEList<TypeParameter>(TypeParameter.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS);
@@ -222,6 +227,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodRef> getUsagesInDocComments() {
 		if (usagesInDocComments == null) {
 			usagesInDocComments = new EObjectWithInverseResolvingEList<MethodRef>(MethodRef.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, JavaPackage.METHOD_REF__METHOD);
@@ -234,6 +240,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AbstractMethodInvocation> getUsages() {
 		if (usages == null) {
 			usages = new EObjectWithInverseResolvingEList<AbstractMethodInvocation>(AbstractMethodInvocation.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES, JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD);

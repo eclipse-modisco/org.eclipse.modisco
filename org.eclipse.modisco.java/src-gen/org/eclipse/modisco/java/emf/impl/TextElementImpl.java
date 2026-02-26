@@ -34,10 +34,10 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TextElementImpl#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -86,6 +86,7 @@ public class TextElementImpl extends ASTNodeImpl implements TextElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return text;
 	}
@@ -95,6 +96,7 @@ public class TextElementImpl extends ASTNodeImpl implements TextElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		String oldText = text;
 		text = newText;
@@ -169,7 +171,7 @@ public class TextElementImpl extends ASTNodeImpl implements TextElement {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (text: ");
 		result.append(text);
 		result.append(')');

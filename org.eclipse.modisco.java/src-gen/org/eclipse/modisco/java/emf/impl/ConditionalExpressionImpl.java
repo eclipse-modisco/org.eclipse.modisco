@@ -37,12 +37,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getElseExpression <em>Else Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConditionalExpressionImpl#getThenExpression <em>Then Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -101,6 +101,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getElseExpression() {
 		return elseExpression;
 	}
@@ -125,6 +126,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElseExpression(Expression newElseExpression) {
 		if (newElseExpression != elseExpression) {
 			NotificationChain msgs = null;
@@ -144,6 +146,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -168,6 +171,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -187,6 +191,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getThenExpression() {
 		return thenExpression;
 	}
@@ -211,6 +216,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThenExpression(Expression newThenExpression) {
 		if (newThenExpression != thenExpression) {
 			NotificationChain msgs = null;

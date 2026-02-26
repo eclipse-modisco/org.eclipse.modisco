@@ -47,12 +47,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ConstructorInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -111,6 +111,7 @@ public class ConstructorInvocationImpl extends StatementImpl implements Construc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -152,6 +153,7 @@ public class ConstructorInvocationImpl extends StatementImpl implements Construc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -171,6 +173,7 @@ public class ConstructorInvocationImpl extends StatementImpl implements Construc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.CONSTRUCTOR_INVOCATION__ARGUMENTS);
@@ -183,6 +186,7 @@ public class ConstructorInvocationImpl extends StatementImpl implements Construc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		if (typeArguments == null) {
 			typeArguments = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.CONSTRUCTOR_INVOCATION__TYPE_ARGUMENTS);

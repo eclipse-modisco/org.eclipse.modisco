@@ -37,11 +37,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl#isUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,6 +100,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUpperBound() {
 		return upperBound;
 	}
@@ -109,6 +110,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperBound(boolean newUpperBound) {
 		boolean oldUpperBound = upperBound;
 		upperBound = newUpperBound;
@@ -121,6 +123,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getBound() {
 		return bound;
 	}
@@ -145,6 +148,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBound(TypeAccess newBound) {
 		if (newBound != bound) {
 			NotificationChain msgs = null;
@@ -250,7 +254,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (upperBound: ");
 		result.append(upperBound);
 		result.append(')');

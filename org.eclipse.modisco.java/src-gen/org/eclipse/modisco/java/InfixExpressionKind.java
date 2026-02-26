@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.common.util.AbstractEnumerator;
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.modisco.java.InfixExpressionKind;
 
@@ -36,7 +37,8 @@ import org.eclipse.modisco.java.InfixExpressionKind;
  * @model
  * @generated
  */
-public enum InfixExpressionKind implements Enumerator {
+public enum InfixExpressionKind implements Enumerator
+{
 	/**
 	 * The '<em><b>TIMES</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -45,8 +47,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TIMES(1, "TIMES", "*"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	TIMES(1, "TIMES", "*"),
 	/**
 	 * The '<em><b>DIVIDE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -55,8 +56,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIVIDE(2, "DIVIDE", "/"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	DIVIDE(2, "DIVIDE", "/"),
 	/**
 	 * The '<em><b>REMAINDER</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -65,8 +65,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REMAINDER(3, "REMAINDER", "%"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	REMAINDER(3, "REMAINDER", "%"),
 	/**
 	 * The '<em><b>PLUS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -75,8 +74,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLUS(4, "PLUS", "+"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	PLUS(4, "PLUS", "+"),
 	/**
 	 * The '<em><b>MINUS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -85,8 +83,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MINUS(5, "MINUS", "-"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	MINUS(5, "MINUS", "-"),
 	/**
 	 * The '<em><b>LEFT SHIFT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -95,8 +92,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LEFT_SHIFT(6, "LEFT_SHIFT", "<<"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	LEFT_SHIFT(6, "LEFT_SHIFT", "<<"),
 	/**
 	 * The '<em><b>RIGHT SHIFT SIGNED</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -105,8 +101,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT_SHIFT_SIGNED(7, "RIGHT_SHIFT_SIGNED", ">>"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	RIGHT_SHIFT_SIGNED(7, "RIGHT_SHIFT_SIGNED", ">>"),
 	/**
 	 * The '<em><b>RIGHT SHIFT UNSIGNED</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -115,8 +110,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RIGHT_SHIFT_UNSIGNED(8, "RIGHT_SHIFT_UNSIGNED", ">>>"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	RIGHT_SHIFT_UNSIGNED(8, "RIGHT_SHIFT_UNSIGNED", ">>>"),
 	/**
 	 * The '<em><b>LESS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -125,8 +119,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LESS(9, "LESS", "<"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	LESS(9, "LESS", "<"),
 	/**
 	 * The '<em><b>GREATER</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -135,8 +128,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GREATER(10, "GREATER", ">"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	GREATER(10, "GREATER", ">"),
 	/**
 	 * The '<em><b>LESS EQUALS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -145,8 +137,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LESS_EQUALS(11, "LESS_EQUALS", "<="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	LESS_EQUALS(11, "LESS_EQUALS", "<="),
 	/**
 	 * The '<em><b>GREATER EQUALS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -155,8 +146,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GREATER_EQUALS(12, "GREATER_EQUALS", ">="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	GREATER_EQUALS(12, "GREATER_EQUALS", ">="),
 	/**
 	 * The '<em><b>EQUALS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -165,8 +155,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EQUALS(13, "EQUALS", "=="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	EQUALS(13, "EQUALS", "=="),
 	/**
 	 * The '<em><b>NOT EQUALS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -175,8 +164,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT_EQUALS(14, "NOT_EQUALS", "!="), //$NON-NLS-1$ //$NON-NLS-2$
-
+	NOT_EQUALS(14, "NOT_EQUALS", "!="),
 	/**
 	 * The '<em><b>XOR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -185,8 +173,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	XOR(15, "XOR", "^"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	XOR(15, "XOR", "^"),
 	/**
 	 * The '<em><b>AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -195,8 +182,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(16, "AND", "&"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	AND(16, "AND", "&"),
 	/**
 	 * The '<em><b>OR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -205,8 +191,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OR(17, "OR", "|"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	OR(17, "OR", "|"),
 	/**
 	 * The '<em><b>CONDITIONAL AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -215,8 +200,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CONDITIONAL_AND(18, "CONDITIONAL_AND", "&&"), //$NON-NLS-1$ //$NON-NLS-2$
-
+	CONDITIONAL_AND(18, "CONDITIONAL_AND", "&&"),
 	/**
 	 * The '<em><b>CONDITIONAL OR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -225,15 +209,11 @@ public enum InfixExpressionKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CONDITIONAL_OR(19, "CONDITIONAL_OR", "||"); //$NON-NLS-1$ //$NON-NLS-2$
+	CONDITIONAL_OR(19, "CONDITIONAL_OR", "||");
 
 	/**
 	 * The '<em><b>TIMES</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>TIMES</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TIMES
 	 * @model literal="*"
@@ -245,10 +225,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>DIVIDE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DIVIDE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DIVIDE
 	 * @model literal="/"
@@ -260,10 +236,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>REMAINDER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>REMAINDER</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #REMAINDER
 	 * @model literal="%"
@@ -275,10 +247,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>PLUS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PLUS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PLUS
 	 * @model literal="+"
@@ -290,10 +258,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>MINUS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MINUS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MINUS
 	 * @model literal="-"
@@ -305,13 +269,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>LEFT SHIFT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LEFT SHIFT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LEFT_SHIFT
-	 * @model literal="<<"
+	 * @model literal="&lt;&lt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -320,13 +280,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>RIGHT SHIFT SIGNED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RIGHT SHIFT SIGNED</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_SIGNED
-	 * @model literal=">>"
+	 * @model literal="&gt;&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -335,13 +291,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>RIGHT SHIFT UNSIGNED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RIGHT SHIFT UNSIGNED</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_UNSIGNED
-	 * @model literal=">>>"
+	 * @model literal="&gt;&gt;&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -350,13 +302,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>LESS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LESS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LESS
-	 * @model literal="<"
+	 * @model literal="&lt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -365,13 +313,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>GREATER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>GREATER</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GREATER
-	 * @model literal=">"
+	 * @model literal="&gt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -380,13 +324,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>LESS EQUALS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LESS EQUALS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LESS_EQUALS
-	 * @model literal="<="
+	 * @model literal="&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -395,13 +335,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>GREATER EQUALS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>GREATER EQUALS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GREATER_EQUALS
-	 * @model literal=">="
+	 * @model literal="&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -410,10 +346,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>EQUALS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>EQUALS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #EQUALS
 	 * @model literal="=="
@@ -425,10 +357,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>NOT EQUALS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>NOT EQUALS</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NOT_EQUALS
 	 * @model literal="!="
@@ -440,10 +368,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>XOR</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>XOR</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #XOR
 	 * @model literal="^"
@@ -455,13 +379,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>AND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #AND
-	 * @model literal="&"
+	 * @model literal="&amp;"
 	 * @generated
 	 * @ordered
 	 */
@@ -470,10 +390,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>OR</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>OR</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #OR
 	 * @model literal="|"
@@ -485,13 +401,9 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>CONDITIONAL AND</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>CONDITIONAL AND</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CONDITIONAL_AND
-	 * @model literal="&&"
+	 * @model literal="&amp;&amp;"
 	 * @generated
 	 * @ordered
 	 */
@@ -500,10 +412,6 @@ public enum InfixExpressionKind implements Enumerator {
 	/**
 	 * The '<em><b>CONDITIONAL OR</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>CONDITIONAL OR</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CONDITIONAL_OR
 	 * @model literal="||"
@@ -553,6 +461,8 @@ public enum InfixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Infix Expression Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InfixExpressionKind get(String literal) {
@@ -569,6 +479,8 @@ public enum InfixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Infix Expression Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InfixExpressionKind getByName(String name) {
@@ -585,6 +497,8 @@ public enum InfixExpressionKind implements Enumerator {
 	 * Returns the '<em><b>Infix Expression Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static InfixExpressionKind get(int value) {
@@ -650,6 +564,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -659,6 +574,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -668,6 +584,7 @@ public enum InfixExpressionKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}
@@ -682,5 +599,4 @@ public enum InfixExpressionKind implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-	
-} //InfixExpressionKind
+}

@@ -46,12 +46,12 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.LabeledStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.LabeledStatementImpl#getUsagesInBreakStatements <em>Usages In Break Statements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.LabeledStatementImpl#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return body;
 	}
@@ -134,6 +135,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
@@ -153,6 +155,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BreakStatement> getUsagesInBreakStatements() {
 		if (usagesInBreakStatements == null) {
 			usagesInBreakStatements = new EObjectWithInverseResolvingEList<BreakStatement>(BreakStatement.class, this, JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS, JavaPackage.BREAK_STATEMENT__LABEL);
@@ -165,6 +168,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ContinueStatement> getUsagesInContinueStatements() {
 		if (usagesInContinueStatements == null) {
 			usagesInContinueStatements = new EObjectWithInverseResolvingEList<ContinueStatement>(ContinueStatement.class, this, JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, JavaPackage.CONTINUE_STATEMENT__LABEL);

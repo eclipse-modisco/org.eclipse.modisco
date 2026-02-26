@@ -40,11 +40,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TypeAccessImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.TypeAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -93,6 +93,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -134,6 +135,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -153,6 +155,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamespaceAccess getQualifier() {
 		return qualifier;
 	}
@@ -177,6 +180,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(NamespaceAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;

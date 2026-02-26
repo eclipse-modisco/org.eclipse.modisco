@@ -48,6 +48,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
@@ -55,7 +56,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -144,6 +144,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return extraArrayDimensions;
 	}
@@ -153,6 +154,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		int oldExtraArrayDimensions = extraArrayDimensions;
 		extraArrayDimensions = newExtraArrayDimensions;
@@ -165,6 +167,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitializer() {
 		return initializer;
 	}
@@ -189,6 +192,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(Expression newInitializer) {
 		if (newInitializer != initializer) {
 			NotificationChain msgs = null;
@@ -208,6 +212,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SingleVariableAccess> getUsageInVariableAccess() {
 		if (usageInVariableAccess == null) {
 			usageInVariableAccess = new EObjectWithInverseResolvingEList<SingleVariableAccess>(SingleVariableAccess.class, this, JavaPackage.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS, JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE);
@@ -220,6 +225,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclaration() {
 		return anonymousClassDeclaration;
 	}
@@ -244,6 +250,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclaration(AnonymousClassDeclaration newAnonymousClassDeclaration) {
 		if (newAnonymousClassDeclaration != anonymousClassDeclaration) {
 			NotificationChain msgs = null;
@@ -263,6 +270,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.ENUM_CONSTANT_DECLARATION__ARGUMENTS);
@@ -451,7 +459,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (extraArrayDimensions: ");
 		result.append(extraArrayDimensions);
 		result.append(')');

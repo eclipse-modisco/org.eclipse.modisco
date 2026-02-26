@@ -48,6 +48,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl#getArguments <em>Arguments</em>}</li>
@@ -56,7 +57,6 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.ClassInstanceCreationImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -145,6 +145,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -186,6 +187,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
@@ -205,6 +207,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.CLASS_INSTANCE_CREATION__ARGUMENTS);
@@ -217,6 +220,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		if (typeArguments == null) {
 			typeArguments = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.CLASS_INSTANCE_CREATION__TYPE_ARGUMENTS);
@@ -229,6 +233,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclaration() {
 		return anonymousClassDeclaration;
 	}
@@ -253,6 +258,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclaration(AnonymousClassDeclaration newAnonymousClassDeclaration) {
 		if (newAnonymousClassDeclaration != anonymousClassDeclaration) {
 			NotificationChain msgs = null;
@@ -272,6 +278,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -296,6 +303,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -315,6 +323,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -339,6 +348,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

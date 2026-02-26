@@ -48,13 +48,13 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl#getAbstractTypeDeclaration <em>Abstract Type Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl#getAnonymousClassDeclarationOwner <em>Anonymous Class Declaration Owner</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.BodyDeclarationImpl#getModifier <em>Modifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,9 +103,10 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getAbstractTypeDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION) return null;
-		return (AbstractTypeDeclaration)eContainer();
+		return (AbstractTypeDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -123,6 +124,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstractTypeDeclaration(AbstractTypeDeclaration newAbstractTypeDeclaration) {
 		if (newAbstractTypeDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION && newAbstractTypeDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newAbstractTypeDeclaration))
@@ -144,6 +146,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, JavaPackage.BODY_DECLARATION__ANNOTATIONS);
@@ -156,9 +159,10 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclarationOwner() {
 		if (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER) return null;
-		return (AnonymousClassDeclaration)eContainer();
+		return (AnonymousClassDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -176,6 +180,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclarationOwner(AnonymousClassDeclaration newAnonymousClassDeclarationOwner) {
 		if (newAnonymousClassDeclarationOwner != eInternalContainer() || (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER && newAnonymousClassDeclarationOwner != null)) {
 			if (EcoreUtil.isAncestor(this, newAnonymousClassDeclarationOwner))
@@ -197,6 +202,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return modifier;
 	}
@@ -221,6 +227,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		if (newModifier != modifier) {
 			NotificationChain msgs = null;

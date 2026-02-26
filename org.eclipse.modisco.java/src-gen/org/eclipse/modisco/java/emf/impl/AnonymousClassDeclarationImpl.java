@@ -46,11 +46,11 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnonymousClassDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.impl.AnonymousClassDeclarationImpl#getClassInstanceCreation <em>Class Instance Creation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,6 +89,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BodyDeclaration> getBodyDeclarations() {
 		if (bodyDeclarations == null) {
 			bodyDeclarations = new EObjectContainmentWithInverseEList<BodyDeclaration>(BodyDeclaration.class, this, JavaPackage.ANONYMOUS_CLASS_DECLARATION__BODY_DECLARATIONS, JavaPackage.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER);
@@ -101,9 +102,10 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClassInstanceCreation getClassInstanceCreation() {
 		if (eContainerFeatureID() != JavaPackage.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION) return null;
-		return (ClassInstanceCreation)eContainer();
+		return (ClassInstanceCreation)eInternalContainer();
 	}
 
 	/**
@@ -121,6 +123,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassInstanceCreation(ClassInstanceCreation newClassInstanceCreation) {
 		if (newClassInstanceCreation != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION && newClassInstanceCreation != null)) {
 			if (EcoreUtil.isAncestor(this, newClassInstanceCreation))
