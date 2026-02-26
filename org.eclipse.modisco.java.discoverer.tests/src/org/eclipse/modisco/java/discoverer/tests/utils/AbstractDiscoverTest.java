@@ -14,15 +14,14 @@ package org.eclipse.modisco.java.discoverer.tests.utils;
 import java.util.Iterator;
 
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
+import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.common.tests.TestProjectUtils;
 import org.eclipse.modisco.java.Model;
@@ -58,13 +57,7 @@ public abstract class AbstractDiscoverTest {
 			TestFileUtils.deepCopy(Activator.getDefault().getBundle(), getSourcesReferencePath(), project, "/"); //$NON-NLS-1$
 			IJavaProject javaProject = JavaCore.create(project);
 			TestProjectUtils.addSystemLibraries(javaProject, null);
-			project.refreshLocal(IResource.DEPTH_INFINITE,
-					new NullProgressMonitor());
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_REFRESH,
-					null);
-			Job.getJobManager().join(ResourcesPlugin.FAMILY_MANUAL_BUILD, null);
+			ProjectUtils.refresh(project);
 			loadResource(javaProject);
 			EList<EObject> i = this.resource.getContents();
 			for (Iterator<EObject> iterator = i.iterator(); iterator.hasNext()
