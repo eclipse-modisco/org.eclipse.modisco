@@ -107,7 +107,10 @@ public class Issue1082moreJava
 	}
 
 	private void discoverClassFile(IClassFile iClassFile) throws DiscoveryException {
+	//	CompilationUnit ast = SharedASTProviderCore.getAST(iClassFile, SharedASTProviderCore.WAIT_YES, null);
+	//	CompilationUnit ast = CoreASTProvider.getAST(iClassFile, null);
 		DiscoverJavaModelFromClassFile discover = new DiscoverJavaModelFromClassFile();
+		discover.setDiscoverExpressions(true);
 		discover.discoverElement(iClassFile, new NullProgressMonitor());
 		Resource resource = discover.getTargetModel();
 		System.out.println(iClassFile + " => " + resource.toString());

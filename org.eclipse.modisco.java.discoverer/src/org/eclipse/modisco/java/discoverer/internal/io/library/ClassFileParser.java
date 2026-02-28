@@ -121,6 +121,8 @@ public class ClassFileParser {
 	 * variable definition.
 	 */
 	private IMember currentlyVisitedJavaElement = null;
+	
+	private final JDTVisitor jdtVisitor;
 
 	public ClassFileParser(final JavaFactory factory, final Model resultModel,
 			final BindingManager globalBindings, final TypeFinder typeFinder, final String filePath) {
@@ -129,6 +131,7 @@ public class ClassFileParser {
 		setGlobalBindings(globalBindings);
 		this.typeFinder = typeFinder;
 		this.filePath = filePath;
+		this.jdtVisitor = new JDTVisitor(factory, resultModel, globalBindings, filePath, null, false, true, true);
 	}
 
 	/**
