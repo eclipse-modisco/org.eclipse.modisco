@@ -24,6 +24,7 @@ import java.util.Map;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.AbstractTypeDeclaration;
@@ -462,9 +463,12 @@ public class BindingManager {
 			// declaring the super interfaces
 			if (binding.getSuperInterfaces() != null) {
 				for (ClassBinding anInterface : binding.getSuperInterfaces()) {
-					InterfaceDeclaration superInterface = (InterfaceDeclaration) getTypeDeclaration(
-							anInterface, model1);
+					AbstractTypeDeclaration superInterface = (AbstractTypeDeclaration) getTypeDeclaration(anInterface, model1);
 					if (superInterface != null) {
+						if (!(superInterface instanceof InterfaceDeclaration)) {
+							// See Issue 1113 - JDT gets it wrong.
+							Logger.logInfo("Issue 1113 : Unexpected " + superInterface.eClass().getName() + " " + superInterface.getName(), JavaActivator.getDefault());
+						}
 						TypeAccess typAcc = this.factory.createTypeAccess();
 						typAcc.setType(superInterface);
 						((AbstractTypeDeclaration) result).getSuperInterfaces().add(typAcc);

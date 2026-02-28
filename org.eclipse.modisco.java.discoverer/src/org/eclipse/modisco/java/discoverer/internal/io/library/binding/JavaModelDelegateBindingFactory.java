@@ -110,7 +110,8 @@ public final class JavaModelDelegateBindingFactory {
 				if (type != null) {
 					return getClassBinding(type, visitor);
 				}
-				break;
+				// https://github.com/eclipse-jdt/eclipse.jdt.core/issues/4884 - off-classpath entries may return null
+				break;			// Issue 1113 cannot determine isInterface. Seems harmless.
 
 			case Signature.WILDCARD_TYPE_SIGNATURE:
 				return getBindingForWildCardType(sig, visitor);
