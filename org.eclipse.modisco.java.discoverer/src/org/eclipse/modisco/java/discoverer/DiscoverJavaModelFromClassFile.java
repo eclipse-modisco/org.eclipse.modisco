@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
+import org.eclipse.modisco.infra.discovery.core.annotations.Parameter;
 import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
@@ -34,6 +35,18 @@ public class DiscoverJavaModelFromClassFile extends AbstractModelDiscoverer<ICla
 
 	public static final String ID = "org.eclipse.modisco.java.discoverer.class"; //$NON-NLS-1$
 
+	private boolean fDiscoverExpressions;
+
+	protected boolean isDiscoverExpressions() {
+		return this.fDiscoverExpressions;
+	}
+
+	@Parameter(name = "DISCOVER_EXPRESSIONS", requiresInputValue = false, description = "Whether to discover the full expression AST. The standard behavior discovers just the class structure.")
+	public void setDiscoverExpressions(final boolean discoverExpressions) {
+		this.fDiscoverExpressions = discoverExpressions;
+	}
+
+	@Override
 	public boolean isApplicableTo(final IClassFile classFile) {
 		return classFile.exists();
 	}
