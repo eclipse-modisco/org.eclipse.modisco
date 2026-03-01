@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.TypeDeclarationImpl#getTypeParameters <em>Type Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public abstract class TypeDeclarationImpl extends AbstractTypeDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeParameter> getTypeParameters() {
 		return (EList<TypeParameter>)eGet(JavaPackage.eINSTANCE.getTypeDeclaration_TypeParameters(), true);
 	}

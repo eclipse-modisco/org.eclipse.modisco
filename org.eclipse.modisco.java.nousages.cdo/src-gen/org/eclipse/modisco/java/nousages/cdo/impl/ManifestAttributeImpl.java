@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ManifestAttributeImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ManifestAttributeImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -71,6 +71,7 @@ public class ManifestAttributeImpl extends CDOObjectImpl implements ManifestAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKey() {
 		return (String)eGet(JavaPackage.eINSTANCE.getManifestAttribute_Key(), true);
 	}
@@ -80,6 +81,7 @@ public class ManifestAttributeImpl extends CDOObjectImpl implements ManifestAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(String newKey) {
 		eSet(JavaPackage.eINSTANCE.getManifestAttribute_Key(), newKey);
 	}
@@ -89,6 +91,7 @@ public class ManifestAttributeImpl extends CDOObjectImpl implements ManifestAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return (String)eGet(JavaPackage.eINSTANCE.getManifestAttribute_Value(), true);
 	}
@@ -98,6 +101,7 @@ public class ManifestAttributeImpl extends CDOObjectImpl implements ManifestAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		eSet(JavaPackage.eINSTANCE.getManifestAttribute_Value(), newValue);
 	}

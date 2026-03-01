@@ -36,10 +36,10 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnumDeclarationImpl#getEnumConstants <em>Enum Constants</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -34,20 +34,17 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Type Parameter</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.TypeParameterImpl#getBounds
- * <em>Bounds</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.TypeParameterImpl#getBounds <em>Bounds</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 	/**
-	 * The cached value of the '{@link #getBounds() <em>Bounds</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getBounds() <em>Bounds</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getBounds()
 	 * @generated
 	 * @ordered
@@ -56,7 +53,6 @@ public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected TypeParameterImpl() {
@@ -65,7 +61,6 @@ public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -75,88 +70,82 @@ public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getBounds() {
 		if (bounds == null) {
-			bounds = new EObjectContainmentEList<TypeAccess>(TypeAccess.class,
-					this, JavaPackage.TYPE_PARAMETER__BOUNDS);
+			bounds = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.TYPE_PARAMETER__BOUNDS);
 		}
 		return bounds;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.TYPE_PARAMETER__BOUNDS:
-			return ((InternalEList<?>) getBounds()).basicRemove(otherEnd, msgs);
+			case JavaPackage.TYPE_PARAMETER__BOUNDS:
+				return ((InternalEList<?>)getBounds()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.TYPE_PARAMETER__BOUNDS:
-			return getBounds();
+			case JavaPackage.TYPE_PARAMETER__BOUNDS:
+				return getBounds();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.TYPE_PARAMETER__BOUNDS:
-			getBounds().clear();
-			getBounds().addAll((Collection<? extends TypeAccess>) newValue);
-			return;
+			case JavaPackage.TYPE_PARAMETER__BOUNDS:
+				getBounds().clear();
+				getBounds().addAll((Collection<? extends TypeAccess>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.TYPE_PARAMETER__BOUNDS:
-			getBounds().clear();
-			return;
+			case JavaPackage.TYPE_PARAMETER__BOUNDS:
+				getBounds().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.TYPE_PARAMETER__BOUNDS:
-			return bounds != null && !bounds.isEmpty();
+			case JavaPackage.TYPE_PARAMETER__BOUNDS:
+				return bounds != null && !bounds.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

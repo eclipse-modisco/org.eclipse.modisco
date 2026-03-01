@@ -27,12 +27,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodInvocation#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractMethodInvocation()
  * @model abstract="true"
@@ -41,6 +41,7 @@ import org.eclipse.modisco.java.TypeAccess;
 public interface AbstractMethodInvocation extends ASTNode {
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Method</em>' reference isn't clear,
@@ -50,7 +51,8 @@ public interface AbstractMethodInvocation extends ASTNode {
 	 * @return the value of the '<em>Method</em>' reference.
 	 * @see #setMethod(AbstractMethodDeclaration)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractMethodInvocation_Method()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages
+	 * @model opposite="usages" required="true" ordered="false"
 	 * @generated
 	 */
 	AbstractMethodDeclaration getMethod();

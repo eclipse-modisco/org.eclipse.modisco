@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ReturnStatementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getReturnStatement_Expression(), true);
 	}
@@ -68,6 +69,7 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getReturnStatement_Expression(), newExpression);
 	}

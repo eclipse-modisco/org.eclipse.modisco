@@ -43,6 +43,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
@@ -50,7 +51,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -446,8 +446,8 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (extraArrayDimensions: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (extraArrayDimensions: ");
 		result.append(extraArrayDimensions);
 		result.append(')');
 		return result.toString();

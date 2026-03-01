@@ -35,6 +35,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModelImpl#getOwnedElements <em>Owned Elements</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModelImpl#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModelImpl#getArchives <em>Archives</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(JavaPackage.eINSTANCE.getModel_Name(), true);
 	}
@@ -92,6 +93,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(JavaPackage.eINSTANCE.getModel_Name(), newName);
 	}
@@ -102,6 +104,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<org.eclipse.modisco.java.Package> getOwnedElements() {
 		return (EList<org.eclipse.modisco.java.Package>)eGet(JavaPackage.eINSTANCE.getModel_OwnedElements(), true);
 	}
@@ -112,6 +115,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Type> getOrphanTypes() {
 		return (EList<Type>)eGet(JavaPackage.eINSTANCE.getModel_OrphanTypes(), true);
 	}
@@ -122,6 +126,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<UnresolvedItem> getUnresolvedItems() {
 		return (EList<UnresolvedItem>)eGet(JavaPackage.eINSTANCE.getModel_UnresolvedItems(), true);
 	}
@@ -132,6 +137,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<CompilationUnit> getCompilationUnits() {
 		return (EList<CompilationUnit>)eGet(JavaPackage.eINSTANCE.getModel_CompilationUnits(), true);
 	}
@@ -142,6 +148,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ClassFile> getClassFiles() {
 		return (EList<ClassFile>)eGet(JavaPackage.eINSTANCE.getModel_ClassFiles(), true);
 	}
@@ -152,6 +159,7 @@ public class ModelImpl extends CDOObjectImpl implements Model {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Archive> getArchives() {
 		return (EList<Archive>)eGet(JavaPackage.eINSTANCE.getModel_Archives(), true);
 	}

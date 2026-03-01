@@ -24,12 +24,12 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.IfStatement#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.IfStatement#getThenStatement <em>Then Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.IfStatement#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getIfStatement()
  * @model

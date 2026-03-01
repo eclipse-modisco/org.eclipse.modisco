@@ -24,8 +24,6 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Primitive Type Long</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

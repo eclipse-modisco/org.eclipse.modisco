@@ -6,13 +6,14 @@ Bundle-Version: 1.6.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.modisco.java;bundle-version="0.7.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.modisco.java.emf.classic,
+Export-Package: org.eclipse.modisco.java,
+ org.eclipse.modisco.java.emf.classic,
  org.eclipse.modisco.java.emf.classic.impl;x-internal:=true,
  org.eclipse.modisco.java.emf.classic.util;x-internal:=true
 Automatic-Module-Name: org.eclipse.modisco.java.classiceobject

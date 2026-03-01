@@ -36,937 +36,1090 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected String packageFilename = "java.ecore"; //$NON-NLS-1$
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass abstractMethodDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass abstractMethodInvocationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractTagElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractTextElementEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass abstractTypeDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass abstractTypeQualifiedExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass abstractVariablesContainerEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass annotatableTypeEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass annotationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass archiveEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass assertStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass astNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass annotationMemberValuePairEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass annotationTypeDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass annotationTypeMemberDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass anonymousClassDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass arrayAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass arrayCreationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass arrayInitializerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass arrayLengthAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass arrayTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass assignmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass bodyDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass booleanLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass blockCommentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass blockEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass breakStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass caseDefaultExpressionEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass castExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass catchClauseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass characterLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass classFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass classInstanceCreationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass constructorDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass conditionalExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass constructorInvocationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass classDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass commentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass compilationUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass continueStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass creationReferenceEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass doStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eitherOrMultiPatternEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass emptyStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass enhancedForStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass enumConstantDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass enumDeclarationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exportsDirectiveEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass expressionEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expressionMethodReferenceEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass expressionStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass fieldAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass fieldDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass forStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass guardedPatternEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass ifStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass implicitTypeDeclarationEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass importDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass infixExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass initializerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass instanceofExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass interfaceDeclarationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intersectionTypeEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass javadocEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass javaDocRegionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass javaDocTextElementEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass labeledStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lambdaExpressionEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass lineCommentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass manifestEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass manifestAttributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass manifestEntryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass memberRefEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass methodDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass methodInvocationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass methodRefEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass methodRefParameterEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodReferenceEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass modelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass modifierEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleDeclarationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleDirectiveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleModifierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleQualifiedNameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modulePackageAccessEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nameQualifiedTypeEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass namedElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass namespaceAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass numberLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass nullLiteralEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nullPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass opensDirectiveEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass packageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass packageAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass parameterizedTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass parenthesizedExpressionEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass patternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass patternInstanceofExpressionEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass postfixExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass prefixExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeBooleanEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeByteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeCharEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeDoubleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeShortEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeFloatEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeIntEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeLongEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass primitiveTypeVoidEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass providesDirectiveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass qualifiedTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass recordDeclarationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass recordPatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requiresDirectiveEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass returnStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleTypeEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass singleVariableAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass singleVariableDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass statementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass stringLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass superConstructorInvocationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass superFieldAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass superMethodInvocationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass superMethodReferenceEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass switchCaseEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass switchExpressionEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass switchStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass synchronizedStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass tagElementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tagPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textBlockEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass textElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass thisExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass throwStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass tryStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeDeclarationStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeLiteralEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typeMethodReferenceEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass typeParameterEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typePatternEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unionTypeEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedItemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedItemAccessEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedAnnotationDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedAnnotationTypeMemberDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedClassDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedEnumDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedInterfaceDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedLabeledStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedMethodDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedSingleVariableDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedTypeDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass unresolvedVariableDeclarationFragmentEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass usesDirectiveEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass variableDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass variableDeclarationExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass variableDeclarationFragmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass variableDeclarationStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass wildCardTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass whileStatementEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yieldStatementEClass = null;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum assignmentKindEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum infixExpressionKindEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum inheritanceKindEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum postfixExpressionKindEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum prefixExpressionKindEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EEnum visibilityKindEEnum = null;
@@ -992,7 +1145,6 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private static boolean isInited = false;
@@ -1011,14 +1163,11 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * @generated
 	 */
 	public static JavaPackage init() {
-		if (isInited)
-			return (JavaPackage) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI);
+		if (isInited) return (JavaPackage)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI);
 
 		// Obtain or create and register package
-		JavaPackageImpl theJavaPackage = (JavaPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof JavaPackageImpl ? EPackage.Registry.INSTANCE
-				.get(eNS_URI) : new JavaPackageImpl());
+		Object registeredJavaPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		JavaPackageImpl theJavaPackage = registeredJavaPackage instanceof JavaPackageImpl ? (JavaPackageImpl)registeredJavaPackage : new JavaPackageImpl();
 
 		isInited = true;
 
@@ -1038,4041 +1187,3903 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAbstractMethodDeclaration() {
 		if (abstractMethodDeclarationEClass == null) {
-			abstractMethodDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(0);
+			abstractMethodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(0);
 		}
 		return abstractMethodDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodDeclaration_Body() {
-		return (EReference) getAbstractMethodDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodDeclaration_Parameters() {
-		return (EReference) getAbstractMethodDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodDeclaration_ThrownExceptions() {
-		return (EReference) getAbstractMethodDeclaration()
-				.getEStructuralFeatures().get(2);
+        return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodDeclaration_TypeParameters() {
-		return (EReference) getAbstractMethodDeclaration()
-				.getEStructuralFeatures().get(3);
+        return (EReference)getAbstractMethodDeclaration().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAbstractMethodInvocation() {
 		if (abstractMethodInvocationEClass == null) {
-			abstractMethodInvocationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(1);
+			abstractMethodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(1);
 		}
 		return abstractMethodInvocationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodInvocation_Method() {
-		return (EReference) getAbstractMethodInvocation()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodInvocation_Arguments() {
-		return (EReference) getAbstractMethodInvocation()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractMethodInvocation_TypeArguments() {
-		return (EReference) getAbstractMethodInvocation()
-				.getEStructuralFeatures().get(2);
+        return (EReference)getAbstractMethodInvocation().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAbstractTagElement() {
+		if (abstractTagElementEClass == null) {
+			abstractTagElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(2);
+		}
+		return abstractTagElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAbstractTextElement() {
+		if (abstractTextElementEClass == null) {
+			abstractTextElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(3);
+		}
+		return abstractTextElementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAbstractTypeDeclaration() {
 		if (abstractTypeDeclarationEClass == null) {
-			abstractTypeDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(2);
+			abstractTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(4);
 		}
 		return abstractTypeDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeDeclaration_BodyDeclarations() {
-		return (EReference) getAbstractTypeDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeDeclaration_CommentsBeforeBody() {
-		return (EReference) getAbstractTypeDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeDeclaration_CommentsAfterBody() {
-		return (EReference) getAbstractTypeDeclaration()
-				.getEStructuralFeatures().get(2);
+        return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeDeclaration_Package() {
-		return (EReference) getAbstractTypeDeclaration()
-				.getEStructuralFeatures().get(3);
+        return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeDeclaration_SuperInterfaces() {
-		return (EReference) getAbstractTypeDeclaration()
-				.getEStructuralFeatures().get(4);
+        return (EReference)getAbstractTypeDeclaration().getEStructuralFeatures().get(4);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAbstractTypeQualifiedExpression() {
 		if (abstractTypeQualifiedExpressionEClass == null) {
-			abstractTypeQualifiedExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(3);
+			abstractTypeQualifiedExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(5);
 		}
 		return abstractTypeQualifiedExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractTypeQualifiedExpression_Qualifier() {
-		return (EReference) getAbstractTypeQualifiedExpression()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAbstractTypeQualifiedExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAbstractVariablesContainer() {
 		if (abstractVariablesContainerEClass == null) {
-			abstractVariablesContainerEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(4);
+			abstractVariablesContainerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(6);
 		}
 		return abstractVariablesContainerEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractVariablesContainer_Type() {
-		return (EReference) getAbstractVariablesContainer()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAbstractVariablesContainer().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAbstractVariablesContainer_Fragments() {
-		return (EReference) getAbstractVariablesContainer()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAbstractVariablesContainer().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAnnotatableType() {
+		if (annotatableTypeEClass == null) {
+			annotatableTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(7);
+		}
+		return annotatableTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAnnotation() {
 		if (annotationEClass == null) {
-			annotationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(5);
+			annotationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(8);
 		}
 		return annotationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotation_Type() {
-		return (EReference) getAnnotation().getEStructuralFeatures().get(0);
+        return (EReference)getAnnotation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotation_Values() {
-		return (EReference) getAnnotation().getEStructuralFeatures().get(1);
+        return (EReference)getAnnotation().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArchive() {
 		if (archiveEClass == null) {
-			archiveEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(6);
+			archiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(9);
 		}
 		return archiveEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getArchive_OriginalFilePath() {
-		return (EAttribute) getArchive().getEStructuralFeatures().get(0);
+        return (EAttribute)getArchive().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArchive_ClassFiles() {
-		return (EReference) getArchive().getEStructuralFeatures().get(1);
+        return (EReference)getArchive().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArchive_Manifest() {
-		return (EReference) getArchive().getEStructuralFeatures().get(2);
+        return (EReference)getArchive().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAssertStatement() {
 		if (assertStatementEClass == null) {
-			assertStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(7);
+			assertStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(10);
 		}
 		return assertStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAssertStatement_Message() {
-		return (EReference) getAssertStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getAssertStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAssertStatement_Expression() {
-		return (EReference) getAssertStatement().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getAssertStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getASTNode() {
 		if (astNodeEClass == null) {
-			astNodeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(8);
+			astNodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(11);
 		}
 		return astNodeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getASTNode_Comments() {
-		return (EReference) getASTNode().getEStructuralFeatures().get(0);
+        return (EReference)getASTNode().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getASTNode_OriginalCompilationUnit() {
-		return (EReference) getASTNode().getEStructuralFeatures().get(1);
+        return (EReference)getASTNode().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getASTNode_OriginalClassFile() {
-		return (EReference) getASTNode().getEStructuralFeatures().get(2);
+        return (EReference)getASTNode().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAnnotationMemberValuePair() {
 		if (annotationMemberValuePairEClass == null) {
-			annotationMemberValuePairEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(9);
+			annotationMemberValuePairEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(12);
 		}
 		return annotationMemberValuePairEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotationMemberValuePair_Member() {
-		return (EReference) getAnnotationMemberValuePair()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAnnotationMemberValuePair().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotationMemberValuePair_Value() {
-		return (EReference) getAnnotationMemberValuePair()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAnnotationMemberValuePair().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAnnotationTypeDeclaration() {
 		if (annotationTypeDeclarationEClass == null) {
-			annotationTypeDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(10);
+			annotationTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(13);
 		}
 		return annotationTypeDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAnnotationTypeMemberDeclaration() {
 		if (annotationTypeMemberDeclarationEClass == null) {
-			annotationTypeMemberDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(11);
+			annotationTypeMemberDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(14);
 		}
 		return annotationTypeMemberDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotationTypeMemberDeclaration_Default() {
-		return (EReference) getAnnotationTypeMemberDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAnnotationTypeMemberDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnnotationTypeMemberDeclaration_Type() {
-		return (EReference) getAnnotationTypeMemberDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAnnotationTypeMemberDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAnonymousClassDeclaration() {
 		if (anonymousClassDeclarationEClass == null) {
-			anonymousClassDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(12);
+			anonymousClassDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(15);
 		}
 		return anonymousClassDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnonymousClassDeclaration_BodyDeclarations() {
-		return (EReference) getAnonymousClassDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getAnonymousClassDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAnonymousClassDeclaration_ClassInstanceCreation() {
-		return (EReference) getAnonymousClassDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getAnonymousClassDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArrayAccess() {
 		if (arrayAccessEClass == null) {
-			arrayAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(13);
+			arrayAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(16);
 		}
 		return arrayAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayAccess_Array() {
-		return (EReference) getArrayAccess().getEStructuralFeatures().get(0);
+        return (EReference)getArrayAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayAccess_Index() {
-		return (EReference) getArrayAccess().getEStructuralFeatures().get(1);
+        return (EReference)getArrayAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArrayCreation() {
 		if (arrayCreationEClass == null) {
-			arrayCreationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(14);
+			arrayCreationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(17);
 		}
 		return arrayCreationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayCreation_Dimensions() {
-		return (EReference) getArrayCreation().getEStructuralFeatures().get(0);
+        return (EReference)getArrayCreation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayCreation_Initializer() {
-		return (EReference) getArrayCreation().getEStructuralFeatures().get(1);
+        return (EReference)getArrayCreation().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayCreation_Type() {
-		return (EReference) getArrayCreation().getEStructuralFeatures().get(2);
+        return (EReference)getArrayCreation().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArrayInitializer() {
 		if (arrayInitializerEClass == null) {
-			arrayInitializerEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(15);
+			arrayInitializerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(18);
 		}
 		return arrayInitializerEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayInitializer_Expressions() {
-		return (EReference) getArrayInitializer().getEStructuralFeatures().get(
-				0);
+        return (EReference)getArrayInitializer().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArrayLengthAccess() {
 		if (arrayLengthAccessEClass == null) {
-			arrayLengthAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(16);
+			arrayLengthAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(19);
 		}
 		return arrayLengthAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayLengthAccess_Array() {
-		return (EReference) getArrayLengthAccess().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getArrayLengthAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getArrayType() {
 		if (arrayTypeEClass == null) {
-			arrayTypeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(17);
+			arrayTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(20);
 		}
 		return arrayTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getArrayType_Dimensions() {
-		return (EAttribute) getArrayType().getEStructuralFeatures().get(0);
+        return (EAttribute)getArrayType().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getArrayType_ElementType() {
-		return (EReference) getArrayType().getEStructuralFeatures().get(1);
+        return (EReference)getArrayType().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getAssignment() {
 		if (assignmentEClass == null) {
-			assignmentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(18);
+			assignmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(21);
 		}
 		return assignmentEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAssignment_LeftHandSide() {
-		return (EReference) getAssignment().getEStructuralFeatures().get(0);
+        return (EReference)getAssignment().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getAssignment_Operator() {
-		return (EAttribute) getAssignment().getEStructuralFeatures().get(1);
+        return (EAttribute)getAssignment().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getAssignment_RightHandSide() {
-		return (EReference) getAssignment().getEStructuralFeatures().get(2);
+        return (EReference)getAssignment().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getBodyDeclaration() {
 		if (bodyDeclarationEClass == null) {
-			bodyDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(20);
+			bodyDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(25);
 		}
 		return bodyDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBodyDeclaration_AbstractTypeDeclaration() {
-		return (EReference) getBodyDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getBodyDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBodyDeclaration_Annotations() {
-		return (EReference) getBodyDeclaration().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getBodyDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBodyDeclaration_AnonymousClassDeclarationOwner() {
-		return (EReference) getBodyDeclaration().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getBodyDeclaration().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBodyDeclaration_Modifier() {
-		return (EReference) getBodyDeclaration().getEStructuralFeatures()
-				.get(3);
+        return (EReference)getBodyDeclaration().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getBooleanLiteral() {
 		if (booleanLiteralEClass == null) {
-			booleanLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(21);
+			booleanLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(26);
 		}
 		return booleanLiteralEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getBooleanLiteral_Value() {
-		return (EAttribute) getBooleanLiteral().getEStructuralFeatures().get(0);
+        return (EAttribute)getBooleanLiteral().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getBlockComment() {
 		if (blockCommentEClass == null) {
-			blockCommentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(22);
+			blockCommentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(24);
 		}
 		return blockCommentEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getBlock() {
 		if (blockEClass == null) {
-			blockEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(23);
+			blockEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(23);
 		}
 		return blockEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBlock_Statements() {
-		return (EReference) getBlock().getEStructuralFeatures().get(0);
+        return (EReference)getBlock().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getBreakStatement() {
 		if (breakStatementEClass == null) {
-			breakStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(24);
+			breakStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(27);
 		}
 		return breakStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getBreakStatement_Label() {
-		return (EReference) getBreakStatement().getEStructuralFeatures().get(0);
+        return (EReference)getBreakStatement().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCaseDefaultExpression() {
+		if (caseDefaultExpressionEClass == null) {
+			caseDefaultExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(28);
+		}
+		return caseDefaultExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getCastExpression() {
 		if (castExpressionEClass == null) {
-			castExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(25);
+			castExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(29);
 		}
 		return castExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCastExpression_Expression() {
-		return (EReference) getCastExpression().getEStructuralFeatures().get(0);
+        return (EReference)getCastExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCastExpression_Type() {
-		return (EReference) getCastExpression().getEStructuralFeatures().get(1);
+        return (EReference)getCastExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getCatchClause() {
 		if (catchClauseEClass == null) {
-			catchClauseEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(26);
+			catchClauseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(30);
 		}
 		return catchClauseEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCatchClause_Exception() {
-		return (EReference) getCatchClause().getEStructuralFeatures().get(0);
+        return (EReference)getCatchClause().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCatchClause_Body() {
-		return (EReference) getCatchClause().getEStructuralFeatures().get(1);
+        return (EReference)getCatchClause().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getCharacterLiteral() {
 		if (characterLiteralEClass == null) {
-			characterLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(27);
+			characterLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(31);
 		}
 		return characterLiteralEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getCharacterLiteral_EscapedValue() {
-		return (EAttribute) getCharacterLiteral().getEStructuralFeatures().get(
-				0);
+        return (EAttribute)getCharacterLiteral().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getClassFile() {
 		if (classFileEClass == null) {
-			classFileEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(28);
+			classFileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(33);
 		}
 		return classFileEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getClassFile_OriginalFilePath() {
-		return (EAttribute) getClassFile().getEStructuralFeatures().get(0);
+        return (EAttribute)getClassFile().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassFile_Type() {
-		return (EReference) getClassFile().getEStructuralFeatures().get(1);
+        return (EReference)getClassFile().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassFile_AttachedSource() {
-		return (EReference) getClassFile().getEStructuralFeatures().get(2);
+        return (EReference)getClassFile().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassFile_Package() {
-		return (EReference) getClassFile().getEStructuralFeatures().get(3);
+        return (EReference)getClassFile().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getClassInstanceCreation() {
 		if (classInstanceCreationEClass == null) {
-			classInstanceCreationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(29);
+			classInstanceCreationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(34);
 		}
 		return classInstanceCreationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassInstanceCreation_AnonymousClassDeclaration() {
-		return (EReference) getClassInstanceCreation().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassInstanceCreation_Expression() {
-		return (EReference) getClassInstanceCreation().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassInstanceCreation_Type() {
-		return (EReference) getClassInstanceCreation().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getClassInstanceCreation().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getConstructorDeclaration() {
 		if (constructorDeclarationEClass == null) {
-			constructorDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(30);
+			constructorDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(38);
 		}
 		return constructorDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getConditionalExpression() {
 		if (conditionalExpressionEClass == null) {
-			conditionalExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(31);
+			conditionalExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(37);
 		}
 		return conditionalExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getConditionalExpression_ElseExpression() {
-		return (EReference) getConditionalExpression().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getConditionalExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getConditionalExpression_Expression() {
-		return (EReference) getConditionalExpression().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getConditionalExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getConditionalExpression_ThenExpression() {
-		return (EReference) getConditionalExpression().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getConditionalExpression().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getConstructorInvocation() {
 		if (constructorInvocationEClass == null) {
-			constructorInvocationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(32);
+			constructorInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(39);
 		}
 		return constructorInvocationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getClassDeclaration() {
 		if (classDeclarationEClass == null) {
-			classDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(33);
+			classDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(32);
 		}
 		return classDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getClassDeclaration_SuperClass() {
-		return (EReference) getClassDeclaration().getEStructuralFeatures().get(
-				0);
+        return (EReference)getClassDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getComment() {
 		if (commentEClass == null) {
-			commentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(34);
+			commentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(35);
 		}
 		return commentEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getComment_Content() {
-		return (EAttribute) getComment().getEStructuralFeatures().get(0);
+        return (EAttribute)getComment().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getComment_EnclosedByParent() {
-		return (EAttribute) getComment().getEStructuralFeatures().get(1);
+        return (EAttribute)getComment().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getComment_PrefixOfParent() {
-		return (EAttribute) getComment().getEStructuralFeatures().get(2);
+        return (EAttribute)getComment().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getCompilationUnit() {
 		if (compilationUnitEClass == null) {
-			compilationUnitEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(35);
+			compilationUnitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(36);
 		}
 		return compilationUnitEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getCompilationUnit_OriginalFilePath() {
-		return (EAttribute) getCompilationUnit().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getCompilationUnit().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCompilationUnit_CommentList() {
-		return (EReference) getCompilationUnit().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getCompilationUnit().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCompilationUnit_Imports() {
-		return (EReference) getCompilationUnit().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getCompilationUnit().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCompilationUnit_Package() {
-		return (EReference) getCompilationUnit().getEStructuralFeatures()
-				.get(3);
+        return (EReference)getCompilationUnit().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getCompilationUnit_Types() {
-		return (EReference) getCompilationUnit().getEStructuralFeatures()
-				.get(4);
+        return (EReference)getCompilationUnit().getEStructuralFeatures().get(4);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getContinueStatement() {
 		if (continueStatementEClass == null) {
-			continueStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(36);
+			continueStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(40);
 		}
 		return continueStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getContinueStatement_Label() {
-		return (EReference) getContinueStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getContinueStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getDoStatement() {
 		if (doStatementEClass == null) {
-			doStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(37);
+			doStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(42);
 		}
 		return doStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getDoStatement_Expression() {
-		return (EReference) getDoStatement().getEStructuralFeatures().get(0);
+        return (EReference)getDoStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getDoStatement_Body() {
-		return (EReference) getDoStatement().getEStructuralFeatures().get(1);
+        return (EReference)getDoStatement().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEitherOrMultiPattern() {
+		if (eitherOrMultiPatternEClass == null) {
+			eitherOrMultiPatternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(43);
+		}
+		return eitherOrMultiPatternEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getEmptyStatement() {
 		if (emptyStatementEClass == null) {
-			emptyStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(38);
+			emptyStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(44);
 		}
 		return emptyStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getEnhancedForStatement() {
 		if (enhancedForStatementEClass == null) {
-			enhancedForStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(39);
+			enhancedForStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(45);
 		}
 		return enhancedForStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnhancedForStatement_Body() {
-		return (EReference) getEnhancedForStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnhancedForStatement_Expression() {
-		return (EReference) getEnhancedForStatement().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnhancedForStatement_Parameter() {
-		return (EReference) getEnhancedForStatement().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getEnhancedForStatement().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getEnumConstantDeclaration() {
 		if (enumConstantDeclarationEClass == null) {
-			enumConstantDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(40);
+			enumConstantDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(46);
 		}
 		return enumConstantDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnumConstantDeclaration_AnonymousClassDeclaration() {
-		return (EReference) getEnumConstantDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getEnumConstantDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnumConstantDeclaration_Arguments() {
-		return (EReference) getEnumConstantDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getEnumConstantDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getEnumDeclaration() {
 		if (enumDeclarationEClass == null) {
-			enumDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(41);
+			enumDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(47);
 		}
 		return enumDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getEnumDeclaration_EnumConstants() {
-		return (EReference) getEnumDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getEnumDeclaration().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getExportsDirective() {
+		if (exportsDirectiveEClass == null) {
+			exportsDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(48);
+		}
+		return exportsDirectiveEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getExpression() {
 		if (expressionEClass == null) {
-			expressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(42);
+			expressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(49);
 		}
 		return expressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getExpressionStatement() {
 		if (expressionStatementEClass == null) {
-			expressionStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(43);
+			expressionStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(51);
 		}
 		return expressionStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getExpressionStatement_Expression() {
-		return (EReference) getExpressionStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getExpressionStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getFieldAccess() {
 		if (fieldAccessEClass == null) {
-			fieldAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(44);
+			fieldAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(52);
 		}
 		return fieldAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getFieldAccess_Field() {
-		return (EReference) getFieldAccess().getEStructuralFeatures().get(0);
+        return (EReference)getFieldAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getFieldAccess_Expression() {
-		return (EReference) getFieldAccess().getEStructuralFeatures().get(1);
+        return (EReference)getFieldAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getFieldDeclaration() {
 		if (fieldDeclarationEClass == null) {
-			fieldDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(45);
+			fieldDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(53);
 		}
 		return fieldDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getForStatement() {
 		if (forStatementEClass == null) {
-			forStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(46);
+			forStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(54);
 		}
 		return forStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getForStatement_Expression() {
-		return (EReference) getForStatement().getEStructuralFeatures().get(0);
+        return (EReference)getForStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getForStatement_Updaters() {
-		return (EReference) getForStatement().getEStructuralFeatures().get(1);
+        return (EReference)getForStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getForStatement_Initializers() {
-		return (EReference) getForStatement().getEStructuralFeatures().get(2);
+        return (EReference)getForStatement().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getForStatement_Body() {
-		return (EReference) getForStatement().getEStructuralFeatures().get(3);
+        return (EReference)getForStatement().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getGuardedPattern() {
+		if (guardedPatternEClass == null) {
+			guardedPatternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(55);
+		}
+		return guardedPatternEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getIfStatement() {
 		if (ifStatementEClass == null) {
-			ifStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(47);
+			ifStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(56);
 		}
 		return ifStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getIfStatement_Expression() {
-		return (EReference) getIfStatement().getEStructuralFeatures().get(0);
+        return (EReference)getIfStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getIfStatement_ThenStatement() {
-		return (EReference) getIfStatement().getEStructuralFeatures().get(1);
+        return (EReference)getIfStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getIfStatement_ElseStatement() {
-		return (EReference) getIfStatement().getEStructuralFeatures().get(2);
+        return (EReference)getIfStatement().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImplicitTypeDeclaration() {
+		if (implicitTypeDeclarationEClass == null) {
+			implicitTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(57);
+		}
+		return implicitTypeDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getImportDeclaration() {
 		if (importDeclarationEClass == null) {
-			importDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(48);
+			importDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(58);
 		}
 		return importDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getImportDeclaration_Static() {
-		return (EAttribute) getImportDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getImportDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getImportDeclaration_ImportedElement() {
-		return (EReference) getImportDeclaration().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getImportDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getInfixExpression() {
 		if (infixExpressionEClass == null) {
-			infixExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(49);
+			infixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(59);
 		}
 		return infixExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getInfixExpression_Operator() {
-		return (EAttribute) getInfixExpression().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getInfixExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInfixExpression_RightOperand() {
-		return (EReference) getInfixExpression().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getInfixExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInfixExpression_LeftOperand() {
-		return (EReference) getInfixExpression().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getInfixExpression().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInfixExpression_ExtendedOperands() {
-		return (EReference) getInfixExpression().getEStructuralFeatures()
-				.get(3);
+        return (EReference)getInfixExpression().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getInitializer() {
 		if (initializerEClass == null) {
-			initializerEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(52);
+			initializerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(62);
 		}
 		return initializerEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInitializer_Body() {
-		return (EReference) getInitializer().getEStructuralFeatures().get(0);
+        return (EReference)getInitializer().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getInstanceofExpression() {
 		if (instanceofExpressionEClass == null) {
-			instanceofExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(53);
+			instanceofExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(63);
 		}
 		return instanceofExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInstanceofExpression_RightOperand() {
-		return (EReference) getInstanceofExpression().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getInstanceofExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getInstanceofExpression_LeftOperand() {
-		return (EReference) getInstanceofExpression().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getInstanceofExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getInterfaceDeclaration() {
 		if (interfaceDeclarationEClass == null) {
-			interfaceDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(54);
+			interfaceDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(64);
 		}
 		return interfaceDeclarationEClass;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getIntersectionType() {
+		if (intersectionTypeEClass == null) {
+			intersectionTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(65);
+		}
+		return intersectionTypeEClass;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getJavadoc() {
 		if (javadocEClass == null) {
-			javadocEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(55);
+			javadocEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(66);
 		}
 		return javadocEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getJavadoc_Tags() {
-		return (EReference) getJavadoc().getEStructuralFeatures().get(0);
+        return (EReference)getJavadoc().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getJavaDocRegion() {
+		if (javaDocRegionEClass == null) {
+			javaDocRegionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(67);
+		}
+		return javaDocRegionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getJavaDocTextElement() {
+		if (javaDocTextElementEClass == null) {
+			javaDocTextElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(68);
+		}
+		return javaDocTextElementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getLabeledStatement() {
 		if (labeledStatementEClass == null) {
-			labeledStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(56);
+			labeledStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(69);
 		}
 		return labeledStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getLabeledStatement_Body() {
-		return (EReference) getLabeledStatement().getEStructuralFeatures().get(
-				0);
+        return (EReference)getLabeledStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getLineComment() {
 		if (lineCommentEClass == null) {
-			lineCommentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(57);
+			lineCommentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(71);
 		}
 		return lineCommentEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getManifest() {
 		if (manifestEClass == null) {
-			manifestEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(58);
+			manifestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(72);
 		}
 		return manifestEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getManifest_MainAttributes() {
-		return (EReference) getManifest().getEStructuralFeatures().get(0);
+        return (EReference)getManifest().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getManifest_EntryAttributes() {
-		return (EReference) getManifest().getEStructuralFeatures().get(1);
+        return (EReference)getManifest().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getManifestAttribute() {
 		if (manifestAttributeEClass == null) {
-			manifestAttributeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(59);
+			manifestAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(73);
 		}
 		return manifestAttributeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getManifestAttribute_Key() {
-		return (EAttribute) getManifestAttribute().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getManifestAttribute().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getManifestAttribute_Value() {
-		return (EAttribute) getManifestAttribute().getEStructuralFeatures()
-				.get(1);
+        return (EAttribute)getManifestAttribute().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getManifestEntry() {
 		if (manifestEntryEClass == null) {
-			manifestEntryEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(60);
+			manifestEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(74);
 		}
 		return manifestEntryEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getManifestEntry_Name() {
-		return (EAttribute) getManifestEntry().getEStructuralFeatures().get(0);
+        return (EAttribute)getManifestEntry().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getManifestEntry_Attributes() {
-		return (EReference) getManifestEntry().getEStructuralFeatures().get(1);
+        return (EReference)getManifestEntry().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getMemberRef() {
 		if (memberRefEClass == null) {
-			memberRefEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(61);
+			memberRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(75);
 		}
 		return memberRefEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMemberRef_Member() {
-		return (EReference) getMemberRef().getEStructuralFeatures().get(0);
+        return (EReference)getMemberRef().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMemberRef_Qualifier() {
-		return (EReference) getMemberRef().getEStructuralFeatures().get(1);
+        return (EReference)getMemberRef().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getMethodDeclaration() {
 		if (methodDeclarationEClass == null) {
-			methodDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(62);
+			methodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(76);
 		}
 		return methodDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getMethodDeclaration_ExtraArrayDimensions() {
-		return (EAttribute) getMethodDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getMethodDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodDeclaration_ReturnType() {
-		return (EReference) getMethodDeclaration().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getMethodDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodDeclaration_RedefinedMethodDeclaration() {
-		return (EReference) getMethodDeclaration().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getMethodDeclaration().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodDeclaration_Redefinitions() {
-		return (EReference) getMethodDeclaration().getEStructuralFeatures()
-				.get(3);
+        return (EReference)getMethodDeclaration().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getMethodInvocation() {
 		if (methodInvocationEClass == null) {
-			methodInvocationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(63);
+			methodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(77);
 		}
 		return methodInvocationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodInvocation_Expression() {
-		return (EReference) getMethodInvocation().getEStructuralFeatures().get(
-				0);
+        return (EReference)getMethodInvocation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getMethodRef() {
 		if (methodRefEClass == null) {
-			methodRefEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(64);
+			methodRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(78);
 		}
 		return methodRefEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodRef_Method() {
-		return (EReference) getMethodRef().getEStructuralFeatures().get(0);
+        return (EReference)getMethodRef().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodRef_Qualifier() {
-		return (EReference) getMethodRef().getEStructuralFeatures().get(1);
+        return (EReference)getMethodRef().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodRef_Parameters() {
-		return (EReference) getMethodRef().getEStructuralFeatures().get(2);
+        return (EReference)getMethodRef().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getMethodRefParameter() {
 		if (methodRefParameterEClass == null) {
-			methodRefParameterEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(65);
+			methodRefParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(79);
 		}
 		return methodRefParameterEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getMethodRefParameter_Name() {
-		return (EAttribute) getMethodRefParameter().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getMethodRefParameter().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getMethodRefParameter_Varargs() {
-		return (EAttribute) getMethodRefParameter().getEStructuralFeatures()
-				.get(1);
+        return (EAttribute)getMethodRefParameter().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getMethodRefParameter_Type() {
-		return (EReference) getMethodRefParameter().getEStructuralFeatures()
-				.get(2);
+        return (EReference)getMethodRefParameter().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getModel() {
 		if (modelEClass == null) {
-			modelEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(66);
+			modelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(81);
 		}
 		return modelEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModel_Name() {
-		return (EAttribute) getModel().getEStructuralFeatures().get(0);
+        return (EAttribute)getModel().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_OwnedElements() {
-		return (EReference) getModel().getEStructuralFeatures().get(1);
+        return (EReference)getModel().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_OrphanTypes() {
-		return (EReference) getModel().getEStructuralFeatures().get(2);
+        return (EReference)getModel().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_UnresolvedItems() {
-		return (EReference) getModel().getEStructuralFeatures().get(3);
+        return (EReference)getModel().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_CompilationUnits() {
-		return (EReference) getModel().getEStructuralFeatures().get(4);
+        return (EReference)getModel().getEStructuralFeatures().get(4);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_ClassFiles() {
-		return (EReference) getModel().getEStructuralFeatures().get(5);
+        return (EReference)getModel().getEStructuralFeatures().get(5);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModel_Archives() {
-		return (EReference) getModel().getEStructuralFeatures().get(6);
+        return (EReference)getModel().getEStructuralFeatures().get(6);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getModifier() {
 		if (modifierEClass == null) {
-			modifierEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(67);
+			modifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(82);
 		}
 		return modifierEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Visibility() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(0);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Inheritance() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(1);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Static() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(2);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Transient() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(3);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Volatile() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(4);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(4);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Native() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(5);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(5);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Strictfp() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(6);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(6);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getModifier_Synchronized() {
-		return (EAttribute) getModifier().getEStructuralFeatures().get(7);
+        return (EAttribute)getModifier().getEStructuralFeatures().get(7);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModifier_BodyDeclaration() {
-		return (EReference) getModifier().getEStructuralFeatures().get(8);
+        return (EReference)getModifier().getEStructuralFeatures().get(8);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModifier_SingleVariableDeclaration() {
-		return (EReference) getModifier().getEStructuralFeatures().get(9);
+        return (EReference)getModifier().getEStructuralFeatures().get(9);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModifier_VariableDeclarationStatement() {
-		return (EReference) getModifier().getEStructuralFeatures().get(10);
+        return (EReference)getModifier().getEStructuralFeatures().get(10);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getModifier_VariableDeclarationExpression() {
-		return (EReference) getModifier().getEStructuralFeatures().get(11);
+        return (EReference)getModifier().getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModuleDeclaration() {
+		if (moduleDeclarationEClass == null) {
+			moduleDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(83);
+		}
+		return moduleDeclarationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModuleDirective() {
+		if (moduleDirectiveEClass == null) {
+			moduleDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(84);
+		}
+		return moduleDirectiveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModuleModifier() {
+		if (moduleModifierEClass == null) {
+			moduleModifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(85);
+		}
+		return moduleModifierEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModuleQualifiedName() {
+		if (moduleQualifiedNameEClass == null) {
+			moduleQualifiedNameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(86);
+		}
+		return moduleQualifiedNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getName_() {
+		if (nameEClass == null) {
+			nameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(87);
+		}
+		return nameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModulePackageAccess() {
+		if (modulePackageAccessEClass == null) {
+			modulePackageAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(88);
+		}
+		return modulePackageAccessEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNameQualifiedType() {
+		if (nameQualifiedTypeEClass == null) {
+			nameQualifiedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(89);
+		}
+		return nameQualifiedTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getNamedElement() {
 		if (namedElementEClass == null) {
-			namedElementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(68);
+			namedElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(90);
 		}
 		return namedElementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getNamedElement_Name() {
-		return (EAttribute) getNamedElement().getEStructuralFeatures().get(0);
+        return (EAttribute)getNamedElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getNamedElement_Proxy() {
-		return (EAttribute) getNamedElement().getEStructuralFeatures().get(1);
+        return (EAttribute)getNamedElement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getNamespaceAccess() {
 		if (namespaceAccessEClass == null) {
-			namespaceAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(69);
+			namespaceAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(91);
 		}
 		return namespaceAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getNumberLiteral() {
 		if (numberLiteralEClass == null) {
-			numberLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(70);
+			numberLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(92);
 		}
 		return numberLiteralEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getNumberLiteral_TokenValue() {
-		return (EAttribute) getNumberLiteral().getEStructuralFeatures().get(0);
+        return (EAttribute)getNumberLiteral().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getNullLiteral() {
 		if (nullLiteralEClass == null) {
-			nullLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(71);
+			nullLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(93);
 		}
 		return nullLiteralEClass;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNullPattern() {
+		if (nullPatternEClass == null) {
+			nullPatternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(94);
+		}
+		return nullPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getOpensDirective() {
+		if (opensDirectiveEClass == null) {
+			opensDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(95);
+		}
+		return opensDirectiveEClass;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPackage() {
 		if (packageEClass == null) {
-			packageEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(72);
+			packageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(96);
 		}
 		return packageEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackage_OwnedElements() {
-		return (EReference) getPackage().getEStructuralFeatures().get(0);
+        return (EReference)getPackage().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackage_Model() {
-		return (EReference) getPackage().getEStructuralFeatures().get(1);
+        return (EReference)getPackage().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackage_OwnedPackages() {
-		return (EReference) getPackage().getEStructuralFeatures().get(2);
+        return (EReference)getPackage().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackage_Package() {
-		return (EReference) getPackage().getEStructuralFeatures().get(3);
+        return (EReference)getPackage().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPackageAccess() {
 		if (packageAccessEClass == null) {
-			packageAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(73);
+			packageAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(97);
 		}
 		return packageAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackageAccess_Package() {
-		return (EReference) getPackageAccess().getEStructuralFeatures().get(0);
+        return (EReference)getPackageAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPackageAccess_Qualifier() {
-		return (EReference) getPackageAccess().getEStructuralFeatures().get(1);
+        return (EReference)getPackageAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getParameterizedType() {
 		if (parameterizedTypeEClass == null) {
-			parameterizedTypeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(74);
+			parameterizedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(98);
 		}
 		return parameterizedTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getParameterizedType_Type() {
-		return (EReference) getParameterizedType().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getParameterizedType().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getParameterizedType_TypeArguments() {
-		return (EReference) getParameterizedType().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getParameterizedType().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getParenthesizedExpression() {
 		if (parenthesizedExpressionEClass == null) {
-			parenthesizedExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(75);
+			parenthesizedExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(99);
 		}
 		return parenthesizedExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getParenthesizedExpression_Expression() {
-		return (EReference) getParenthesizedExpression()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getParenthesizedExpression().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPattern() {
+		if (patternEClass == null) {
+			patternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(100);
+		}
+		return patternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPatternInstanceofExpression() {
+		if (patternInstanceofExpressionEClass == null) {
+			patternInstanceofExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(101);
+		}
+		return patternInstanceofExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPostfixExpression() {
 		if (postfixExpressionEClass == null) {
-			postfixExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(76);
+			postfixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(102);
 		}
 		return postfixExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getPostfixExpression_Operator() {
-		return (EAttribute) getPostfixExpression().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getPostfixExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPostfixExpression_Operand() {
-		return (EReference) getPostfixExpression().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getPostfixExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrefixExpression() {
 		if (prefixExpressionEClass == null) {
-			prefixExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(78);
+			prefixExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(104);
 		}
 		return prefixExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getPrefixExpression_Operator() {
-		return (EAttribute) getPrefixExpression().getEStructuralFeatures().get(
-				0);
+        return (EAttribute)getPrefixExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getPrefixExpression_Operand() {
-		return (EReference) getPrefixExpression().getEStructuralFeatures().get(
-				1);
+        return (EReference)getPrefixExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveType() {
 		if (primitiveTypeEClass == null) {
-			primitiveTypeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(80);
+			primitiveTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(106);
 		}
 		return primitiveTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeBoolean() {
 		if (primitiveTypeBooleanEClass == null) {
-			primitiveTypeBooleanEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(81);
+			primitiveTypeBooleanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(107);
 		}
 		return primitiveTypeBooleanEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeByte() {
 		if (primitiveTypeByteEClass == null) {
-			primitiveTypeByteEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(82);
+			primitiveTypeByteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(108);
 		}
 		return primitiveTypeByteEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeChar() {
 		if (primitiveTypeCharEClass == null) {
-			primitiveTypeCharEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(83);
+			primitiveTypeCharEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(109);
 		}
 		return primitiveTypeCharEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeDouble() {
 		if (primitiveTypeDoubleEClass == null) {
-			primitiveTypeDoubleEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(84);
+			primitiveTypeDoubleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(110);
 		}
 		return primitiveTypeDoubleEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeShort() {
 		if (primitiveTypeShortEClass == null) {
-			primitiveTypeShortEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(85);
+			primitiveTypeShortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(111);
 		}
 		return primitiveTypeShortEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeFloat() {
 		if (primitiveTypeFloatEClass == null) {
-			primitiveTypeFloatEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(86);
+			primitiveTypeFloatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(112);
 		}
 		return primitiveTypeFloatEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeInt() {
 		if (primitiveTypeIntEClass == null) {
-			primitiveTypeIntEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(87);
+			primitiveTypeIntEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(113);
 		}
 		return primitiveTypeIntEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeLong() {
 		if (primitiveTypeLongEClass == null) {
-			primitiveTypeLongEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(88);
+			primitiveTypeLongEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(114);
 		}
 		return primitiveTypeLongEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getPrimitiveTypeVoid() {
 		if (primitiveTypeVoidEClass == null) {
-			primitiveTypeVoidEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(89);
+			primitiveTypeVoidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(115);
 		}
 		return primitiveTypeVoidEClass;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getProvidesDirective() {
+		if (providesDirectiveEClass == null) {
+			providesDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(116);
+		}
+		return providesDirectiveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getQualifiedType() {
+		if (qualifiedTypeEClass == null) {
+			qualifiedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(117);
+		}
+		return qualifiedTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRecordDeclaration() {
+		if (recordDeclarationEClass == null) {
+			recordDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(118);
+		}
+		return recordDeclarationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRecordPattern() {
+		if (recordPatternEClass == null) {
+			recordPatternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(119);
+		}
+		return recordPatternEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRequiresDirective() {
+		if (requiresDirectiveEClass == null) {
+			requiresDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(120);
+		}
+		return requiresDirectiveEClass;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getReturnStatement() {
 		if (returnStatementEClass == null) {
-			returnStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(90);
+			returnStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(121);
 		}
 		return returnStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getReturnStatement_Expression() {
-		return (EReference) getReturnStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getReturnStatement().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSimpleType() {
+		if (simpleTypeEClass == null) {
+			simpleTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(122);
+		}
+		return simpleTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSingleVariableAccess() {
 		if (singleVariableAccessEClass == null) {
-			singleVariableAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(91);
+			singleVariableAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(123);
 		}
 		return singleVariableAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableAccess_Variable() {
-		return (EReference) getSingleVariableAccess().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getSingleVariableAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableAccess_Qualifier() {
-		return (EReference) getSingleVariableAccess().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getSingleVariableAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSingleVariableDeclaration() {
 		if (singleVariableDeclarationEClass == null) {
-			singleVariableDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(92);
+			singleVariableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(124);
 		}
 		return singleVariableDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_Modifier() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getSingleVariableDeclaration_Varargs() {
-		return (EAttribute) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(1);
+        return (EAttribute)getSingleVariableDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_Type() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(2);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_Annotations() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(3);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(3);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_MethodDeclaration() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(4);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(4);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_CatchClause() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(5);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(5);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSingleVariableDeclaration_EnhancedForStatement() {
-		return (EReference) getSingleVariableDeclaration()
-				.getEStructuralFeatures().get(6);
+        return (EReference)getSingleVariableDeclaration().getEStructuralFeatures().get(6);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getStatement() {
 		if (statementEClass == null) {
-			statementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(93);
+			statementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(125);
 		}
 		return statementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getStringLiteral() {
 		if (stringLiteralEClass == null) {
-			stringLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(94);
+			stringLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(126);
 		}
 		return stringLiteralEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getStringLiteral_EscapedValue() {
-		return (EAttribute) getStringLiteral().getEStructuralFeatures().get(0);
+        return (EAttribute)getStringLiteral().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSuperConstructorInvocation() {
 		if (superConstructorInvocationEClass == null) {
-			superConstructorInvocationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(95);
+			superConstructorInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(127);
 		}
 		return superConstructorInvocationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSuperConstructorInvocation_Expression() {
-		return (EReference) getSuperConstructorInvocation()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getSuperConstructorInvocation().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSuperFieldAccess() {
 		if (superFieldAccessEClass == null) {
-			superFieldAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(96);
+			superFieldAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(128);
 		}
 		return superFieldAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSuperFieldAccess_Field() {
-		return (EReference) getSuperFieldAccess().getEStructuralFeatures().get(
-				0);
+        return (EReference)getSuperFieldAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSuperMethodInvocation() {
 		if (superMethodInvocationEClass == null) {
-			superMethodInvocationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(97);
+			superMethodInvocationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(129);
 		}
 		return superMethodInvocationEClass;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSuperMethodReference() {
+		if (superMethodReferenceEClass == null) {
+			superMethodReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(130);
+		}
+		return superMethodReferenceEClass;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSwitchCase() {
 		if (switchCaseEClass == null) {
-			switchCaseEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(98);
+			switchCaseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(131);
 		}
 		return switchCaseEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getSwitchCase_Default() {
-		return (EAttribute) getSwitchCase().getEStructuralFeatures().get(0);
+        return (EAttribute)getSwitchCase().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSwitchCase_Expression() {
-		return (EReference) getSwitchCase().getEStructuralFeatures().get(1);
+        return (EReference)getSwitchCase().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSwitchExpression() {
+		if (switchExpressionEClass == null) {
+			switchExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(132);
+		}
+		return switchExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSwitchStatement() {
 		if (switchStatementEClass == null) {
-			switchStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(99);
+			switchStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(133);
 		}
 		return switchStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSwitchStatement_Expression() {
-		return (EReference) getSwitchStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getSwitchStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSwitchStatement_Statements() {
-		return (EReference) getSwitchStatement().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getSwitchStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getSynchronizedStatement() {
 		if (synchronizedStatementEClass == null) {
-			synchronizedStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(100);
+			synchronizedStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(134);
 		}
 		return synchronizedStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSynchronizedStatement_Body() {
-		return (EReference) getSynchronizedStatement().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getSynchronizedStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getSynchronizedStatement_Expression() {
-		return (EReference) getSynchronizedStatement().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getSynchronizedStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTagElement() {
 		if (tagElementEClass == null) {
-			tagElementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(101);
+			tagElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(135);
 		}
 		return tagElementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getTagElement_TagName() {
-		return (EAttribute) getTagElement().getEStructuralFeatures().get(0);
+        return (EAttribute)getTagElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTagElement_Fragments() {
-		return (EReference) getTagElement().getEStructuralFeatures().get(1);
+        return (EReference)getTagElement().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTagProperty() {
+		if (tagPropertyEClass == null) {
+			tagPropertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(136);
+		}
+		return tagPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTextBlock() {
+		if (textBlockEClass == null) {
+			textBlockEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(137);
+		}
+		return textBlockEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTextElement() {
 		if (textElementEClass == null) {
-			textElementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(102);
+			textElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(138);
 		}
 		return textElementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getTextElement_Text() {
-		return (EAttribute) getTextElement().getEStructuralFeatures().get(0);
+        return (EAttribute)getTextElement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getThisExpression() {
 		if (thisExpressionEClass == null) {
-			thisExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(103);
+			thisExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(139);
 		}
 		return thisExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getThrowStatement() {
 		if (throwStatementEClass == null) {
-			throwStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(104);
+			throwStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(140);
 		}
 		return throwStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getThrowStatement_Expression() {
-		return (EReference) getThrowStatement().getEStructuralFeatures().get(0);
+        return (EReference)getThrowStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTryStatement() {
 		if (tryStatementEClass == null) {
-			tryStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(105);
+			tryStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(141);
 		}
 		return tryStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTryStatement_Body() {
-		return (EReference) getTryStatement().getEStructuralFeatures().get(0);
+        return (EReference)getTryStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTryStatement_Finally() {
-		return (EReference) getTryStatement().getEStructuralFeatures().get(1);
+        return (EReference)getTryStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTryStatement_CatchClauses() {
-		return (EReference) getTryStatement().getEStructuralFeatures().get(2);
+        return (EReference)getTryStatement().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getType() {
 		if (typeEClass == null) {
-			typeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(106);
+			typeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(142);
 		}
 		return typeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTypeAccess() {
 		if (typeAccessEClass == null) {
-			typeAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(107);
+			typeAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(143);
 		}
 		return typeAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeAccess_Type() {
-		return (EReference) getTypeAccess().getEStructuralFeatures().get(0);
+        return (EReference)getTypeAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeAccess_Qualifier() {
-		return (EReference) getTypeAccess().getEStructuralFeatures().get(1);
+        return (EReference)getTypeAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTypeDeclaration() {
 		if (typeDeclarationEClass == null) {
-			typeDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(108);
+			typeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(144);
 		}
 		return typeDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeDeclaration_TypeParameters() {
-		return (EReference) getTypeDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getTypeDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTypeDeclarationStatement() {
 		if (typeDeclarationStatementEClass == null) {
-			typeDeclarationStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(109);
+			typeDeclarationStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(145);
 		}
 		return typeDeclarationStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeDeclarationStatement_Declaration() {
-		return (EReference) getTypeDeclarationStatement()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getTypeDeclarationStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTypeLiteral() {
 		if (typeLiteralEClass == null) {
-			typeLiteralEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(110);
+			typeLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(146);
 		}
 		return typeLiteralEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeLiteral_Type() {
-		return (EReference) getTypeLiteral().getEStructuralFeatures().get(0);
+        return (EReference)getTypeLiteral().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTypeMethodReference() {
+		if (typeMethodReferenceEClass == null) {
+			typeMethodReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(147);
+		}
+		return typeMethodReferenceEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getTypeParameter() {
 		if (typeParameterEClass == null) {
-			typeParameterEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(111);
+			typeParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(148);
 		}
 		return typeParameterEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getTypeParameter_Bounds() {
-		return (EReference) getTypeParameter().getEStructuralFeatures().get(0);
+        return (EReference)getTypeParameter().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTypePattern() {
+		if (typePatternEClass == null) {
+			typePatternEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(149);
+		}
+		return typePatternEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedItem() {
 		if (unresolvedItemEClass == null) {
-			unresolvedItemEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(112);
+			unresolvedItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(151);
 		}
 		return unresolvedItemEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedItemAccess() {
 		if (unresolvedItemAccessEClass == null) {
-			unresolvedItemAccessEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(113);
+			unresolvedItemAccessEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(152);
 		}
 		return unresolvedItemAccessEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getUnresolvedItemAccess_Element() {
-		return (EReference) getUnresolvedItemAccess().getEStructuralFeatures()
-				.get(0);
+        return (EReference)getUnresolvedItemAccess().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getUnresolvedItemAccess_Qualifier() {
-		return (EReference) getUnresolvedItemAccess().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getUnresolvedItemAccess().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedAnnotationDeclaration() {
 		if (unresolvedAnnotationDeclarationEClass == null) {
-			unresolvedAnnotationDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(114);
+			unresolvedAnnotationDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(153);
 		}
 		return unresolvedAnnotationDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedAnnotationTypeMemberDeclaration() {
 		if (unresolvedAnnotationTypeMemberDeclarationEClass == null) {
-			unresolvedAnnotationTypeMemberDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(115);
+			unresolvedAnnotationTypeMemberDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(154);
 		}
 		return unresolvedAnnotationTypeMemberDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedClassDeclaration() {
 		if (unresolvedClassDeclarationEClass == null) {
-			unresolvedClassDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(116);
+			unresolvedClassDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(155);
 		}
 		return unresolvedClassDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedEnumDeclaration() {
 		if (unresolvedEnumDeclarationEClass == null) {
-			unresolvedEnumDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(117);
+			unresolvedEnumDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(156);
 		}
 		return unresolvedEnumDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedInterfaceDeclaration() {
 		if (unresolvedInterfaceDeclarationEClass == null) {
-			unresolvedInterfaceDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(118);
+			unresolvedInterfaceDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(157);
 		}
 		return unresolvedInterfaceDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedLabeledStatement() {
 		if (unresolvedLabeledStatementEClass == null) {
-			unresolvedLabeledStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(119);
+			unresolvedLabeledStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(158);
 		}
 		return unresolvedLabeledStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedMethodDeclaration() {
 		if (unresolvedMethodDeclarationEClass == null) {
-			unresolvedMethodDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(120);
+			unresolvedMethodDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(159);
 		}
 		return unresolvedMethodDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedSingleVariableDeclaration() {
 		if (unresolvedSingleVariableDeclarationEClass == null) {
-			unresolvedSingleVariableDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(121);
+			unresolvedSingleVariableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(160);
 		}
 		return unresolvedSingleVariableDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedType() {
 		if (unresolvedTypeEClass == null) {
-			unresolvedTypeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(122);
+			unresolvedTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(161);
 		}
 		return unresolvedTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedTypeDeclaration() {
 		if (unresolvedTypeDeclarationEClass == null) {
-			unresolvedTypeDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(123);
+			unresolvedTypeDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(162);
 		}
 		return unresolvedTypeDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getUnresolvedVariableDeclarationFragment() {
 		if (unresolvedVariableDeclarationFragmentEClass == null) {
-			unresolvedVariableDeclarationFragmentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(124);
+			unresolvedVariableDeclarationFragmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(163);
 		}
 		return unresolvedVariableDeclarationFragmentEClass;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUsesDirective() {
+		if (usesDirectiveEClass == null) {
+			usesDirectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(164);
+		}
+		return usesDirectiveEClass;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getVariableDeclaration() {
 		if (variableDeclarationEClass == null) {
-			variableDeclarationEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(125);
+			variableDeclarationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(165);
 		}
 		return variableDeclarationEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getVariableDeclaration_ExtraArrayDimensions() {
-		return (EAttribute) getVariableDeclaration().getEStructuralFeatures()
-				.get(0);
+        return (EAttribute)getVariableDeclaration().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclaration_Initializer() {
-		return (EReference) getVariableDeclaration().getEStructuralFeatures()
-				.get(1);
+        return (EReference)getVariableDeclaration().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getVariableDeclarationExpression() {
 		if (variableDeclarationExpressionEClass == null) {
-			variableDeclarationExpressionEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(126);
+			variableDeclarationExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(166);
 		}
 		return variableDeclarationExpressionEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclarationExpression_Modifier() {
-		return (EReference) getVariableDeclarationExpression()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getVariableDeclarationExpression().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclarationExpression_Annotations() {
-		return (EReference) getVariableDeclarationExpression()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getVariableDeclarationExpression().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getVariableDeclarationFragment() {
 		if (variableDeclarationFragmentEClass == null) {
-			variableDeclarationFragmentEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(127);
+			variableDeclarationFragmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(167);
 		}
 		return variableDeclarationFragmentEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclarationFragment_VariablesContainer() {
-		return (EReference) getVariableDeclarationFragment()
-				.getEStructuralFeatures().get(0);
+        return (EReference)getVariableDeclarationFragment().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getVariableDeclarationStatement() {
 		if (variableDeclarationStatementEClass == null) {
-			variableDeclarationStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(128);
+			variableDeclarationStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(168);
 		}
 		return variableDeclarationStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getVariableDeclarationStatement_ExtraArrayDimensions() {
-		return (EAttribute) getVariableDeclarationStatement()
-				.getEStructuralFeatures().get(0);
+        return (EAttribute)getVariableDeclarationStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclarationStatement_Modifier() {
-		return (EReference) getVariableDeclarationStatement()
-				.getEStructuralFeatures().get(1);
+        return (EReference)getVariableDeclarationStatement().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getVariableDeclarationStatement_Annotations() {
-		return (EReference) getVariableDeclarationStatement()
-				.getEStructuralFeatures().get(2);
+        return (EReference)getVariableDeclarationStatement().getEStructuralFeatures().get(2);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getWildCardType() {
 		if (wildCardTypeEClass == null) {
-			wildCardTypeEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(130);
+			wildCardTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(170);
 		}
 		return wildCardTypeEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EAttribute getWildCardType_UpperBound() {
-		return (EAttribute) getWildCardType().getEStructuralFeatures().get(0);
+        return (EAttribute)getWildCardType().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getWildCardType_Bound() {
-		return (EReference) getWildCardType().getEStructuralFeatures().get(1);
+        return (EReference)getWildCardType().getEStructuralFeatures().get(1);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EClass getWhileStatement() {
 		if (whileStatementEClass == null) {
-			whileStatementEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(131);
+			whileStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(171);
 		}
 		return whileStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getWhileStatement_Expression() {
-		return (EReference) getWhileStatement().getEStructuralFeatures().get(0);
+        return (EReference)getWhileStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EReference getWhileStatement_Body() {
-		return (EReference) getWhileStatement().getEStructuralFeatures().get(1);
+        return (EReference)getWhileStatement().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getYieldStatement() {
+		if (yieldStatementEClass == null) {
+			yieldStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(172);
+		}
+		return yieldStatementEClass;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getAssignmentKind() {
 		if (assignmentKindEEnum == null) {
-			assignmentKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(19);
+			assignmentKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(22);
 		}
 		return assignmentKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getInfixExpressionKind() {
 		if (infixExpressionKindEEnum == null) {
-			infixExpressionKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(50);
+			infixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(60);
 		}
 		return infixExpressionKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getInheritanceKind() {
 		if (inheritanceKindEEnum == null) {
-			inheritanceKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(51);
+			inheritanceKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(61);
 		}
 		return inheritanceKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getPostfixExpressionKind() {
 		if (postfixExpressionKindEEnum == null) {
-			postfixExpressionKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(77);
+			postfixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(103);
 		}
 		return postfixExpressionKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getPrefixExpressionKind() {
 		if (prefixExpressionKindEEnum == null) {
-			prefixExpressionKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(79);
+			prefixExpressionKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(105);
 		}
 		return prefixExpressionKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EEnum getVisibilityKind() {
 		if (visibilityKindEEnum == null) {
-			visibilityKindEEnum = (EEnum) EPackage.Registry.INSTANCE
-					.getEPackage(JavaPackage.eNS_URI).getEClassifiers()
-					.get(129);
+			visibilityKindEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(169);
 		}
 		return visibilityKindEEnum;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public JavaFactory getJavaFactory() {
-		return (JavaFactory) getEFactoryInstance();
+		return (JavaFactory)getEFactoryInstance();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private boolean isLoaded = false;
@@ -5084,58 +5095,52 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * @generated
 	 */
 	public void loadPackage() {
-		if (isLoaded)
-			return;
+		if (isLoaded) return;
 		isLoaded = true;
 
 		URL url = getClass().getResource(packageFilename);
 		if (url == null) {
-			throw new RuntimeException(
-					"Missing serialized package: " + packageFilename); //$NON-NLS-1$
+			throw new RuntimeException("Missing serialized package: " + packageFilename);
 		}
 		URI uri = URI.createURI(url.toString());
 		Resource resource = new EcoreResourceFactoryImpl().createResource(uri);
 		try {
 			resource.load(null);
-		} catch (IOException exception) {
+		}
+		catch (IOException exception) {
 			throw new WrappedException(exception);
 		}
-		initializeFromLoadedEPackage(this, (EPackage) resource.getContents()
-				.get(0));
+		initializeFromLoadedEPackage(this, (EPackage)resource.getContents().get(0));
 		createResource(eNS_URI);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private boolean isFixed = false;
 
 	/**
-	 * Fixes up the loaded package, to make it appear as if it had been
-	 * programmatically built. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Fixes up the loaded package, to make it appear as if it had been programmatically built.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void fixPackageContents() {
-		if (isFixed)
-			return;
+		if (isFixed) return;
 		isFixed = true;
 		fixEClassifiers();
 	}
 
 	/**
-	 * Sets the instance class on the given classifier. <!-- begin-user-doc -->
+	 * Sets the instance class on the given classifier.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected void fixInstanceClass(EClassifier eClassifier) {
 		if (eClassifier.getInstanceClassName() == null) {
-			eClassifier
-					.setInstanceClassName("org.eclipse.modisco.java." + eClassifier.getName()); //$NON-NLS-1$
+			eClassifier.setInstanceClassName("org.eclipse.modisco.java." + eClassifier.getName());
 			setGeneratedClassName(eClassifier);
 		}
 	}

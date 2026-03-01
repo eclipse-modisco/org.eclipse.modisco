@@ -25,8 +25,6 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Unresolved Item</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

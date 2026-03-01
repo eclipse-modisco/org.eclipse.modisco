@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TypeParameterImpl#getBounds <em>Bounds</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class TypeParameterImpl extends TypeImpl implements TypeParameter {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getBounds() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getTypeParameter_Bounds(), true);
 	}

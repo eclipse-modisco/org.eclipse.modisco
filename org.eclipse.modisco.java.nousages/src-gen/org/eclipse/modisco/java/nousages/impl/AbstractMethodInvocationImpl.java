@@ -42,12 +42,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -106,6 +106,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -132,11 +133,14 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(AbstractMethodDeclaration newMethod) {
+	public NotificationChain basicSetMethod(AbstractMethodDeclaration newMethod, NotificationChain msgs) {
 		AbstractMethodDeclaration oldMethod = method;
 		method = newMethod;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD, oldMethod, method));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD, oldMethod, newMethod);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -144,6 +148,27 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public void setMethod(AbstractMethodDeclaration newMethod) {
+		if (newMethod != method) {
+			NotificationChain msgs = null;
+			if (method != null)
+				msgs = ((InternalEObject)method).eInverseRemove(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
+			if (newMethod != null)
+				msgs = ((InternalEObject)newMethod).eInverseAdd(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
+			msgs = basicSetMethod(newMethod, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD, newMethod, newMethod));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.ABSTRACT_METHOD_INVOCATION__ARGUMENTS);
@@ -156,6 +181,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		if (typeArguments == null) {
 			typeArguments = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS);
@@ -169,8 +195,26 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD:
+				if (method != null)
+					msgs = ((InternalEObject)method).eInverseRemove(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES, AbstractMethodDeclaration.class, msgs);
+				return basicSetMethod((AbstractMethodDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD:
+				return basicSetMethod(null, msgs);
 			case JavaPackage.ABSTRACT_METHOD_INVOCATION__ARGUMENTS:
 				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_METHOD_INVOCATION__TYPE_ARGUMENTS:

@@ -32,13 +32,13 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.BodyDeclarationImpl#getAbstractTypeDeclaration <em>Abstract Type Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.BodyDeclarationImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.BodyDeclarationImpl#getAnonymousClassDeclarationOwner <em>Anonymous Class Declaration Owner</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.BodyDeclarationImpl#getModifier <em>Modifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,6 +67,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getAbstractTypeDeclaration() {
 		return (AbstractTypeDeclaration)eGet(JavaPackage.eINSTANCE.getBodyDeclaration_AbstractTypeDeclaration(), true);
 	}
@@ -76,6 +77,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstractTypeDeclaration(AbstractTypeDeclaration newAbstractTypeDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getBodyDeclaration_AbstractTypeDeclaration(), newAbstractTypeDeclaration);
 	}
@@ -86,6 +88,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Annotation> getAnnotations() {
 		return (EList<Annotation>)eGet(JavaPackage.eINSTANCE.getBodyDeclaration_Annotations(), true);
 	}
@@ -95,6 +98,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclarationOwner() {
 		return (AnonymousClassDeclaration)eGet(JavaPackage.eINSTANCE.getBodyDeclaration_AnonymousClassDeclarationOwner(), true);
 	}
@@ -104,6 +108,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclarationOwner(AnonymousClassDeclaration newAnonymousClassDeclarationOwner) {
 		eSet(JavaPackage.eINSTANCE.getBodyDeclaration_AnonymousClassDeclarationOwner(), newAnonymousClassDeclarationOwner);
 	}
@@ -113,6 +118,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return (Modifier)eGet(JavaPackage.eINSTANCE.getBodyDeclaration_Modifier(), true);
 	}
@@ -122,6 +128,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		eSet(JavaPackage.eINSTANCE.getBodyDeclaration_Modifier(), newModifier);
 	}

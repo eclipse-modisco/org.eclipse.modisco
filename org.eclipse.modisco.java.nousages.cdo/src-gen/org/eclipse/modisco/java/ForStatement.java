@@ -25,13 +25,13 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ForStatement#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ForStatement#getUpdaters <em>Updaters</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ForStatement#getInitializers <em>Initializers</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ForStatement#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getForStatement()
  * @model

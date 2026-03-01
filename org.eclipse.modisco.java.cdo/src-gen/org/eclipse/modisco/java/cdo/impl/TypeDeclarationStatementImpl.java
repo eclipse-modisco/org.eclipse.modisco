@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TypeDeclarationStatementImpl#getDeclaration <em>Declaration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class TypeDeclarationStatementImpl extends StatementImpl implements TypeD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getDeclaration() {
 		return (AbstractTypeDeclaration)eGet(JavaPackage.eINSTANCE.getTypeDeclarationStatement_Declaration(), true);
 	}
@@ -68,6 +69,7 @@ public class TypeDeclarationStatementImpl extends StatementImpl implements TypeD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclaration(AbstractTypeDeclaration newDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getTypeDeclarationStatement_Declaration(), newDeclaration);
 	}

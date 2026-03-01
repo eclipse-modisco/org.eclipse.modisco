@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.JavadocImpl#getTags <em>Tags</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class JavadocImpl extends CommentImpl implements Javadoc {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TagElement> getTags() {
 		return (EList<TagElement>)eGet(JavaPackage.eINSTANCE.getJavadoc_Tags(), true);
 	}

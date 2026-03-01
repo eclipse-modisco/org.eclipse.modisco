@@ -33,6 +33,7 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationStatementImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationStatementImpl#getFragments <em>Fragments</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationStatementImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationStatementImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,6 +69,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), true);
 	}
@@ -78,6 +79,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), newType);
 	}
@@ -88,6 +90,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		return (EList<VariableDeclarationFragment>)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Fragments(), true);
 	}
@@ -97,6 +100,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getVariableDeclarationStatement_ExtraArrayDimensions(), true);
 	}
@@ -106,6 +110,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclarationStatement_ExtraArrayDimensions(), newExtraArrayDimensions);
 	}
@@ -115,6 +120,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return (Modifier)eGet(JavaPackage.eINSTANCE.getVariableDeclarationStatement_Modifier(), true);
 	}
@@ -124,6 +130,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclarationStatement_Modifier(), newModifier);
 	}
@@ -134,6 +141,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Annotation> getAnnotations() {
 		return (EList<Annotation>)eGet(JavaPackage.eINSTANCE.getVariableDeclarationStatement_Annotations(), true);
 	}

@@ -33,10 +33,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.SuperFieldAccessImpl#getField <em>Field</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class SuperFieldAccessImpl extends AbstractTypeQualifiedExpressionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableAccess getField() {
 		return field;
 	}
@@ -99,6 +100,7 @@ public class SuperFieldAccessImpl extends AbstractTypeQualifiedExpressionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setField(SingleVariableAccess newField) {
 		if (newField != field) {
 			NotificationChain msgs = null;

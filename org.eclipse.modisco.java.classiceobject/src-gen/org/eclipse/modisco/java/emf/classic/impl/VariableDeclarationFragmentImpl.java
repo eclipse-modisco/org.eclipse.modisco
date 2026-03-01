@@ -34,10 +34,10 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,7 +68,7 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	 */
 	public AbstractVariablesContainer getVariablesContainer() {
 		if (eContainerFeatureID() != JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER) return null;
-		return (AbstractVariablesContainer)eContainer();
+		return (AbstractVariablesContainer)eInternalContainer();
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	public void setVariablesContainer(AbstractVariablesContainer newVariablesContainer) {
 		if (newVariablesContainer != eInternalContainer() || (eContainerFeatureID() != JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER && newVariablesContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newVariablesContainer))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

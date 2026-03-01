@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnonymousClassDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnonymousClassDeclarationImpl#getClassInstanceCreation <em>Class Instance Creation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +64,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<BodyDeclaration> getBodyDeclarations() {
 		return (EList<BodyDeclaration>)eGet(JavaPackage.eINSTANCE.getAnonymousClassDeclaration_BodyDeclarations(), true);
 	}
@@ -73,6 +74,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClassInstanceCreation getClassInstanceCreation() {
 		return (ClassInstanceCreation)eGet(JavaPackage.eINSTANCE.getAnonymousClassDeclaration_ClassInstanceCreation(), true);
 	}
@@ -82,6 +84,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassInstanceCreation(ClassInstanceCreation newClassInstanceCreation) {
 		eSet(JavaPackage.eINSTANCE.getAnonymousClassDeclaration_ClassInstanceCreation(), newClassInstanceCreation);
 	}

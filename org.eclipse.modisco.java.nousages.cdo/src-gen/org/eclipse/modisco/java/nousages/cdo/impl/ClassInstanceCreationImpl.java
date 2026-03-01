@@ -33,6 +33,7 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassInstanceCreationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassInstanceCreationImpl#getArguments <em>Arguments</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassInstanceCreationImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassInstanceCreationImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -70,6 +70,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		return (AbstractMethodDeclaration)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), true);
 	}
@@ -79,6 +80,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		eSet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), newMethod);
 	}
@@ -89,6 +91,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getArguments() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Arguments(), true);
 	}
@@ -99,6 +102,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_TypeArguments(), true);
 	}
@@ -108,6 +112,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclaration() {
 		return (AnonymousClassDeclaration)eGet(JavaPackage.eINSTANCE.getClassInstanceCreation_AnonymousClassDeclaration(), true);
 	}
@@ -117,6 +122,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclaration(AnonymousClassDeclaration newAnonymousClassDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getClassInstanceCreation_AnonymousClassDeclaration(), newAnonymousClassDeclaration);
 	}
@@ -126,6 +132,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getClassInstanceCreation_Expression(), true);
 	}
@@ -135,6 +142,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getClassInstanceCreation_Expression(), newExpression);
 	}
@@ -144,6 +152,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getClassInstanceCreation_Type(), true);
 	}
@@ -153,6 +162,7 @@ public class ClassInstanceCreationImpl extends ExpressionImpl implements ClassIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getClassInstanceCreation_Type(), newType);
 	}

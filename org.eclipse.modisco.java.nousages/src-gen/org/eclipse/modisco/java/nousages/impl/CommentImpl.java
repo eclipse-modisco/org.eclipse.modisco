@@ -30,12 +30,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CommentImpl#getContent <em>Content</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CommentImpl#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CommentImpl#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -124,6 +124,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContent() {
 		return content;
 	}
@@ -133,6 +134,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContent(String newContent) {
 		String oldContent = content;
 		content = newContent;
@@ -145,6 +147,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEnclosedByParent() {
 		return enclosedByParent;
 	}
@@ -154,6 +157,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosedByParent(boolean newEnclosedByParent) {
 		boolean oldEnclosedByParent = enclosedByParent;
 		enclosedByParent = newEnclosedByParent;
@@ -166,6 +170,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPrefixOfParent() {
 		return prefixOfParent;
 	}
@@ -175,6 +180,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefixOfParent(boolean newPrefixOfParent) {
 		boolean oldPrefixOfParent = prefixOfParent;
 		prefixOfParent = newPrefixOfParent;
@@ -269,12 +275,12 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (content: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (content: ");
 		result.append(content);
-		result.append(", enclosedByParent: "); //$NON-NLS-1$
+		result.append(", enclosedByParent: ");
 		result.append(enclosedByParent);
-		result.append(", prefixOfParent: "); //$NON-NLS-1$
+		result.append(", prefixOfParent: ");
 		result.append(prefixOfParent);
 		result.append(')');
 		return result.toString();

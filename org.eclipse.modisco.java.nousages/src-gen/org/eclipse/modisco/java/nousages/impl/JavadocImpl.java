@@ -37,10 +37,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.JavadocImpl#getTags <em>Tags</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,6 +79,7 @@ public class JavadocImpl extends CommentImpl implements Javadoc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TagElement> getTags() {
 		if (tags == null) {
 			tags = new EObjectContainmentEList<TagElement>(TagElement.class, this, JavaPackage.JAVADOC__TAGS);

@@ -30,13 +30,13 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InfixExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InfixExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InfixExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InfixExpressionImpl#getExtendedOperands <em>Extended Operands</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InfixExpressionKind getOperator() {
 		return (InfixExpressionKind)eGet(JavaPackage.eINSTANCE.getInfixExpression_Operator(), true);
 	}
@@ -74,6 +75,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(InfixExpressionKind newOperator) {
 		eSet(JavaPackage.eINSTANCE.getInfixExpression_Operator(), newOperator);
 	}
@@ -83,6 +85,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRightOperand() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getInfixExpression_RightOperand(), true);
 	}
@@ -92,6 +95,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightOperand(Expression newRightOperand) {
 		eSet(JavaPackage.eINSTANCE.getInfixExpression_RightOperand(), newRightOperand);
 	}
@@ -101,6 +105,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftOperand() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getInfixExpression_LeftOperand(), true);
 	}
@@ -110,6 +115,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftOperand(Expression newLeftOperand) {
 		eSet(JavaPackage.eINSTANCE.getInfixExpression_LeftOperand(), newLeftOperand);
 	}
@@ -120,6 +126,7 @@ public class InfixExpressionImpl extends ExpressionImpl implements InfixExpressi
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getExtendedOperands() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getInfixExpression_ExtendedOperands(), true);
 	}

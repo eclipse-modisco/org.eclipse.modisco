@@ -24,17 +24,17 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.WildCardType#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getWildCardType()
  * @model
  * @generated
  */
-public interface WildCardType extends Type {
+public interface WildCardType extends AnnotatableType {
 	/**
 	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->

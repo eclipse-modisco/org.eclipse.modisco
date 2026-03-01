@@ -39,6 +39,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ModifierImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ModifierImpl#getInheritance <em>Inheritance</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ModifierImpl#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ModifierImpl#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -412,7 +412,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 */
 	public BodyDeclaration getBodyDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__BODY_DECLARATION) return null;
-		return (BodyDeclaration)eContainer();
+		return (BodyDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -433,7 +433,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public void setBodyDeclaration(BodyDeclaration newBodyDeclaration) {
 		if (newBodyDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__BODY_DECLARATION && newBodyDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newBodyDeclaration))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -453,7 +453,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 */
 	public SingleVariableDeclaration getSingleVariableDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__SINGLE_VARIABLE_DECLARATION) return null;
-		return (SingleVariableDeclaration)eContainer();
+		return (SingleVariableDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -474,7 +474,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public void setSingleVariableDeclaration(SingleVariableDeclaration newSingleVariableDeclaration) {
 		if (newSingleVariableDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__SINGLE_VARIABLE_DECLARATION && newSingleVariableDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newSingleVariableDeclaration))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -494,7 +494,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 */
 	public VariableDeclarationStatement getVariableDeclarationStatement() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_STATEMENT) return null;
-		return (VariableDeclarationStatement)eContainer();
+		return (VariableDeclarationStatement)eInternalContainer();
 	}
 
 	/**
@@ -515,7 +515,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public void setVariableDeclarationStatement(VariableDeclarationStatement newVariableDeclarationStatement) {
 		if (newVariableDeclarationStatement != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_STATEMENT && newVariableDeclarationStatement != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableDeclarationStatement))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -535,7 +535,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 */
 	public VariableDeclarationExpression getVariableDeclarationExpression() {
 		if (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_EXPRESSION) return null;
-		return (VariableDeclarationExpression)eContainer();
+		return (VariableDeclarationExpression)eInternalContainer();
 	}
 
 	/**
@@ -556,7 +556,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public void setVariableDeclarationExpression(VariableDeclarationExpression newVariableDeclarationExpression) {
 		if (newVariableDeclarationExpression != eInternalContainer() || (eContainerFeatureID() != JavaPackage.MODIFIER__VARIABLE_DECLARATION_EXPRESSION && newVariableDeclarationExpression != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableDeclarationExpression))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -814,22 +814,22 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (visibility: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (visibility: ");
 		result.append(visibility);
-		result.append(", inheritance: "); //$NON-NLS-1$
+		result.append(", inheritance: ");
 		result.append(inheritance);
-		result.append(", static: "); //$NON-NLS-1$
+		result.append(", static: ");
 		result.append(static_);
-		result.append(", transient: "); //$NON-NLS-1$
+		result.append(", transient: ");
 		result.append(transient_);
-		result.append(", volatile: "); //$NON-NLS-1$
+		result.append(", volatile: ");
 		result.append(volatile_);
-		result.append(", native: "); //$NON-NLS-1$
+		result.append(", native: ");
 		result.append(native_);
-		result.append(", strictfp: "); //$NON-NLS-1$
+		result.append(", strictfp: ");
 		result.append(strictfp_);
-		result.append(", synchronized: "); //$NON-NLS-1$
+		result.append(", synchronized: ");
 		result.append(synchronized_);
 		result.append(')');
 		return result.toString();

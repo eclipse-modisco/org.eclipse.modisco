@@ -25,11 +25,11 @@ import org.eclipse.modisco.java.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.TypeAccess#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.TypeAccess#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getTypeAccess()
  * @model
@@ -38,6 +38,7 @@ import org.eclipse.modisco.java.Type;
 public interface TypeAccess extends Expression, NamespaceAccess {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.Type#getUsagesInTypeAccess <em>Usages In Type Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' reference isn't clear,
@@ -47,7 +48,8 @@ public interface TypeAccess extends Expression, NamespaceAccess {
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(Type)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getTypeAccess_Type()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.Type#getUsagesInTypeAccess
+	 * @model opposite="usagesInTypeAccess" required="true" ordered="false"
 	 * @generated
 	 */
 	Type getType();

@@ -31,13 +31,14 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Enum Constant Declaration</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.EnumConstantDeclarationImpl#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +65,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), true);
 	}
@@ -72,6 +74,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), newExtraArrayDimensions);
 	}
@@ -80,6 +83,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitializer() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), true);
 	}
@@ -88,6 +92,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(Expression newInitializer) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), newInitializer);
 	}
@@ -96,6 +101,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclaration() {
 		return (AnonymousClassDeclaration)eGet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration(), true);
 	}
@@ -104,6 +110,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclaration(
 			AnonymousClassDeclaration newAnonymousClassDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration(), newAnonymousClassDeclaration);
@@ -114,6 +121,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getArguments() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_Arguments(), true);
 	}
@@ -128,6 +136,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 			switch (derivedFeatureID) {
 				case JavaPackage.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS: return JavaPackage.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS;
 				case JavaPackage.ENUM_CONSTANT_DECLARATION__INITIALIZER: return JavaPackage.VARIABLE_DECLARATION__INITIALIZER;
+				case JavaPackage.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS: return JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS;
 				default: return -1;
 			}
 		}
@@ -144,6 +153,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements
 			switch (baseFeatureID) {
 				case JavaPackage.VARIABLE_DECLARATION__EXTRA_ARRAY_DIMENSIONS: return JavaPackage.ENUM_CONSTANT_DECLARATION__EXTRA_ARRAY_DIMENSIONS;
 				case JavaPackage.VARIABLE_DECLARATION__INITIALIZER: return JavaPackage.ENUM_CONSTANT_DECLARATION__INITIALIZER;
+				case JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS: return JavaPackage.ENUM_CONSTANT_DECLARATION__USAGE_IN_VARIABLE_ACCESS;
 				default: return -1;
 			}
 		}

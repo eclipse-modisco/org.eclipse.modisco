@@ -29,15 +29,15 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.TagElementImpl#getTagName <em>Tag Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.TagElementImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class TagElementImpl extends ASTNodeImpl implements TagElement {
+public class TagElementImpl extends AbstractTagElementImpl implements TagElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,6 +62,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTagName() {
 		return (String)eGet(JavaPackage.eINSTANCE.getTagElement_TagName(), true);
 	}
@@ -71,6 +72,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTagName(String newTagName) {
 		eSet(JavaPackage.eINSTANCE.getTagElement_TagName(), newTagName);
 	}
@@ -81,6 +83,7 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ASTNode> getFragments() {
 		return (EList<ASTNode>)eGet(JavaPackage.eINSTANCE.getTagElement_Fragments(), true);
 	}

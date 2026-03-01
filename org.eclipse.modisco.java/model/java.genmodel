@@ -540,9 +540,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//VariableDeclarationStatement/modifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//VariableDeclarationStatement/annotations"/>
     </genClasses>
-    <genClasses ecoreClass="java.ecore#//WildcardType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//WildcardType/upperBound"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WildcardType/bound"/>
+    <genClasses ecoreClass="java.ecore#//WildCardType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//WildCardType/upperBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WildCardType/bound"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//WhileStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WhileStatement/expression"/>

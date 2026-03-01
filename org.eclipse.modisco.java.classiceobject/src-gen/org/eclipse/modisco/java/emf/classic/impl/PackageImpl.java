@@ -42,6 +42,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.PackageImpl#getOwnedElements <em>Owned Elements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.PackageImpl#getModel <em>Model</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.PackageImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.PackageImpl#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -122,7 +122,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 */
 	public Model getModel() {
 		if (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL) return null;
-		return (Model)eContainer();
+		return (Model)eInternalContainer();
 	}
 
 	/**
@@ -143,7 +143,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	public void setModel(Model newModel) {
 		if (newModel != eInternalContainer() || (eContainerFeatureID() != JavaPackage.PACKAGE__MODEL && newModel != null)) {
 			if (EcoreUtil.isAncestor(this, newModel))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -175,7 +175,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	 */
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE) return null;
-		return (org.eclipse.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eInternalContainer();
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class PackageImpl extends NamedElementImpl implements org.eclipse.modisco
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.PACKAGE__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

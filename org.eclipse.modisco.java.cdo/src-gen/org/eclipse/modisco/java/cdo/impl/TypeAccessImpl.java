@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TypeAccessImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TypeAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		return (Type)eGet(JavaPackage.eINSTANCE.getTypeAccess_Type(), true);
 	}
@@ -70,6 +71,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		eSet(JavaPackage.eINSTANCE.getTypeAccess_Type(), newType);
 	}
@@ -79,6 +81,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamespaceAccess getQualifier() {
 		return (NamespaceAccess)eGet(JavaPackage.eINSTANCE.getTypeAccess_Qualifier(), true);
 	}
@@ -88,6 +91,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(NamespaceAccess newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getTypeAccess_Qualifier(), newQualifier);
 	}

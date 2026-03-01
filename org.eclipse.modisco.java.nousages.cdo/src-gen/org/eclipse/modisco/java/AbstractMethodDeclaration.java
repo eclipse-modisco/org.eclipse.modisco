@@ -28,13 +28,15 @@ import org.eclipse.modisco.java.TypeParameter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getThrownExceptions <em>Thrown Exceptions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getTypeParameters <em>Type Parameters</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractMethodDeclaration()
  * @model abstract="true"
@@ -116,5 +118,33 @@ public interface AbstractMethodDeclaration extends BodyDeclaration {
 	 * @generated
 	 */
 	EList<TypeParameter> getTypeParameters();
+
+	/**
+	 * Returns the value of the '<em><b>Usages In Doc Comments</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.MethodRef}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.MethodRef#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usages In Doc Comments</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractMethodDeclaration_UsagesInDocComments()
+	 * @see org.eclipse.modisco.java.MethodRef#getMethod
+	 * @model opposite="method" ordered="false"
+	 * @generated
+	 */
+	EList<MethodRef> getUsagesInDocComments();
+
+	/**
+	 * Returns the value of the '<em><b>Usages</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.AbstractMethodInvocation}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractMethodInvocation#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usages</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractMethodDeclaration_Usages()
+	 * @see org.eclipse.modisco.java.AbstractMethodInvocation#getMethod
+	 * @model opposite="method" ordered="false"
+	 * @generated
+	 */
+	EList<AbstractMethodInvocation> getUsages();
 
 } // AbstractMethodDeclaration

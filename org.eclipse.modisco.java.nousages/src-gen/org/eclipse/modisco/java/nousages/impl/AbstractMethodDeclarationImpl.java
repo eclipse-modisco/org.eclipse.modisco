@@ -47,13 +47,15 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getThrownExceptions <em>Thrown Exceptions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getTypeParameters <em>Type Parameters</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractMethodDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -99,6 +101,26 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	protected EList<TypeParameter> typeParameters;
 
 	/**
+	 * The cached value of the '{@link #getUsagesInDocComments() <em>Usages In Doc Comments</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsagesInDocComments()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MethodRef> usagesInDocComments;
+
+	/**
+	 * The cached value of the '{@link #getUsages() <em>Usages</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AbstractMethodInvocation> usages;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,6 +144,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return body;
 	}
@@ -146,6 +169,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
@@ -165,6 +189,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SingleVariableDeclaration> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentWithInverseEList<SingleVariableDeclaration>(SingleVariableDeclaration.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__PARAMETERS, JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION);
@@ -177,6 +202,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getThrownExceptions() {
 		if (thrownExceptions == null) {
 			thrownExceptions = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__THROWN_EXCEPTIONS);
@@ -189,11 +215,38 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeParameter> getTypeParameters() {
 		if (typeParameters == null) {
 			typeParameters = new EObjectContainmentEList<TypeParameter>(TypeParameter.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS);
 		}
 		return typeParameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<MethodRef> getUsagesInDocComments() {
+		if (usagesInDocComments == null) {
+			usagesInDocComments = new EObjectWithInverseResolvingEList<MethodRef>(MethodRef.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, JavaPackage.METHOD_REF__METHOD);
+		}
+		return usagesInDocComments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<AbstractMethodInvocation> getUsages() {
+		if (usages == null) {
+			usages = new EObjectWithInverseResolvingEList<AbstractMethodInvocation>(AbstractMethodInvocation.class, this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES, JavaPackage.ABSTRACT_METHOD_INVOCATION__METHOD);
+		}
+		return usages;
 	}
 
 	/**
@@ -207,6 +260,10 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 		switch (featureID) {
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION__PARAMETERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParameters()).basicAdd(otherEnd, msgs);
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsagesInDocComments()).basicAdd(otherEnd, msgs);
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsages()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -227,6 +284,10 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 				return ((InternalEList<?>)getThrownExceptions()).basicRemove(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS:
 				return ((InternalEList<?>)getTypeParameters()).basicRemove(otherEnd, msgs);
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				return ((InternalEList<?>)getUsagesInDocComments()).basicRemove(otherEnd, msgs);
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				return ((InternalEList<?>)getUsages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -247,6 +308,10 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 				return getThrownExceptions();
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS:
 				return getTypeParameters();
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				return getUsagesInDocComments();
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				return getUsages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -275,6 +340,14 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 				getTypeParameters().clear();
 				getTypeParameters().addAll((Collection<? extends TypeParameter>)newValue);
 				return;
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				getUsagesInDocComments().clear();
+				getUsagesInDocComments().addAll((Collection<? extends MethodRef>)newValue);
+				return;
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				getUsages().clear();
+				getUsages().addAll((Collection<? extends AbstractMethodInvocation>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -299,6 +372,12 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS:
 				getTypeParameters().clear();
 				return;
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				getUsagesInDocComments().clear();
+				return;
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				getUsages().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -319,6 +398,10 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 				return thrownExceptions != null && !thrownExceptions.isEmpty();
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION__TYPE_PARAMETERS:
 				return typeParameters != null && !typeParameters.isEmpty();
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS:
+				return usagesInDocComments != null && !usagesInDocComments.isEmpty();
+			case JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES:
+				return usages != null && !usages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

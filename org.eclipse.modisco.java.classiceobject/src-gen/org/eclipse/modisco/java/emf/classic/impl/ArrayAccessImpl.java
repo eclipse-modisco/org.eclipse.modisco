@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArrayAccessImpl#getArray <em>Array</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArrayAccessImpl#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

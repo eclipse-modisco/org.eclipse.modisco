@@ -24,11 +24,11 @@ import org.eclipse.modisco.java.PackageAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.PackageAccess#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.PackageAccess#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getPackageAccess()
  * @model
@@ -37,6 +37,7 @@ import org.eclipse.modisco.java.PackageAccess;
 public interface PackageAccess extends NamespaceAccess {
 	/**
 	 * Returns the value of the '<em><b>Package</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.Package#getUsagesInPackageAccess <em>Usages In Package Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Package</em>' reference isn't clear,
@@ -46,7 +47,8 @@ public interface PackageAccess extends NamespaceAccess {
 	 * @return the value of the '<em>Package</em>' reference.
 	 * @see #setPackage(org.eclipse.modisco.java.Package)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getPackageAccess_Package()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.Package#getUsagesInPackageAccess
+	 * @model opposite="usagesInPackageAccess" required="true" ordered="false"
 	 * @generated
 	 */
 	org.eclipse.modisco.java.Package getPackage();

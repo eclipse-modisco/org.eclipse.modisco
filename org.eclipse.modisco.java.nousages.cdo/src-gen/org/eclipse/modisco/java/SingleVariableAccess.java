@@ -24,11 +24,11 @@ import org.eclipse.modisco.java.VariableDeclaration;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.SingleVariableAccess#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getSingleVariableAccess()
  * @model
@@ -37,6 +37,7 @@ import org.eclipse.modisco.java.VariableDeclaration;
 public interface SingleVariableAccess extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variable</em>' reference isn't clear,
@@ -46,7 +47,8 @@ public interface SingleVariableAccess extends Expression {
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(VariableDeclaration)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getSingleVariableAccess_Variable()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess
+	 * @model opposite="usageInVariableAccess" required="true" ordered="false"
 	 * @generated
 	 */
 	VariableDeclaration getVariable();

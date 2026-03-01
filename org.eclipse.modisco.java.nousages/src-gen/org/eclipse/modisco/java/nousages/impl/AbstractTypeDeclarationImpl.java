@@ -46,18 +46,29 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getCommentsBeforeBody <em>Comments Before Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getCommentsAfterBody <em>Comments After Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl implements AbstractTypeDeclaration {
+	/**
+	 * The cached value of the '{@link #getUsagesInTypeAccess() <em>Usages In Type Access</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsagesInTypeAccess()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TypeAccess> usagesInTypeAccess;
+
 	/**
 	 * The cached value of the '{@link #getBodyDeclarations() <em>Body Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -122,6 +133,20 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EList<TypeAccess> getUsagesInTypeAccess() {
+		if (usagesInTypeAccess == null) {
+			usagesInTypeAccess = new EObjectWithInverseResolvingEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS, JavaPackage.TYPE_ACCESS__TYPE);
+		}
+		return usagesInTypeAccess;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<BodyDeclaration> getBodyDeclarations() {
 		if (bodyDeclarations == null) {
 			bodyDeclarations = new EObjectContainmentWithInverseEList<BodyDeclaration>(BodyDeclaration.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS, JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION);
@@ -134,6 +159,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentsBeforeBody() {
 		if (commentsBeforeBody == null) {
 			commentsBeforeBody = new EObjectContainmentEList<Comment>(Comment.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY);
@@ -146,6 +172,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentsAfterBody() {
 		if (commentsAfterBody == null) {
 			commentsAfterBody = new EObjectContainmentEList<Comment>(Comment.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_AFTER_BODY);
@@ -158,9 +185,10 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE) return null;
-		return (org.eclipse.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eInternalContainer();
 	}
 
 	/**
@@ -178,10 +206,11 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -199,6 +228,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeAccess> getSuperInterfaces() {
 		if (superInterfaces == null) {
 			superInterfaces = new EObjectContainmentEList<TypeAccess>(TypeAccess.class, this, JavaPackage.ABSTRACT_TYPE_DECLARATION__SUPER_INTERFACES);
@@ -215,6 +245,8 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsagesInTypeAccess()).basicAdd(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBodyDeclarations()).basicAdd(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE:
@@ -233,6 +265,8 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				return ((InternalEList<?>)getUsagesInTypeAccess()).basicRemove(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				return ((InternalEList<?>)getBodyDeclarations()).basicRemove(otherEnd, msgs);
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY:
@@ -269,6 +303,8 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				return getUsagesInTypeAccess();
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				return getBodyDeclarations();
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY:
@@ -292,6 +328,10 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				getUsagesInTypeAccess().clear();
+				getUsagesInTypeAccess().addAll((Collection<? extends TypeAccess>)newValue);
+				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				getBodyDeclarations().clear();
 				getBodyDeclarations().addAll((Collection<? extends BodyDeclaration>)newValue);
@@ -323,6 +363,9 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				getUsagesInTypeAccess().clear();
+				return;
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				getBodyDeclarations().clear();
 				return;
@@ -350,6 +393,8 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS:
+				return usagesInTypeAccess != null && !usagesInTypeAccess.isEmpty();
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__BODY_DECLARATIONS:
 				return bodyDeclarations != null && !bodyDeclarations.isEmpty();
 			case JavaPackage.ABSTRACT_TYPE_DECLARATION__COMMENTS_BEFORE_BODY:
@@ -362,6 +407,38 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 				return superInterfaces != null && !superInterfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Type.class) {
+			switch (derivedFeatureID) {
+				case JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS: return JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Type.class) {
+			switch (baseFeatureID) {
+				case JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS: return JavaPackage.ABSTRACT_TYPE_DECLARATION__USAGES_IN_TYPE_ACCESS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //AbstractTypeDeclarationImpl

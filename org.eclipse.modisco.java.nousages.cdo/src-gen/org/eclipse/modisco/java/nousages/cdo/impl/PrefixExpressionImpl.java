@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PrefixExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PrefixExpressionImpl#getOperand <em>Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class PrefixExpressionImpl extends ExpressionImpl implements PrefixExpres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrefixExpressionKind getOperator() {
 		return (PrefixExpressionKind)eGet(JavaPackage.eINSTANCE.getPrefixExpression_Operator(), true);
 	}
@@ -70,6 +71,7 @@ public class PrefixExpressionImpl extends ExpressionImpl implements PrefixExpres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(PrefixExpressionKind newOperator) {
 		eSet(JavaPackage.eINSTANCE.getPrefixExpression_Operator(), newOperator);
 	}
@@ -79,6 +81,7 @@ public class PrefixExpressionImpl extends ExpressionImpl implements PrefixExpres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getOperand() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getPrefixExpression_Operand(), true);
 	}
@@ -88,6 +91,7 @@ public class PrefixExpressionImpl extends ExpressionImpl implements PrefixExpres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperand(Expression newOperand) {
 		eSet(JavaPackage.eINSTANCE.getPrefixExpression_Operand(), newOperand);
 	}

@@ -31,12 +31,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.LabeledStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.LabeledStatementImpl#getUsagesInBreakStatements <em>Usages In Break Statements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.LabeledStatementImpl#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getLabeledStatement_Body(), true);
 	}
@@ -74,6 +75,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		eSet(JavaPackage.eINSTANCE.getLabeledStatement_Body(), newBody);
 	}
@@ -84,6 +86,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<BreakStatement> getUsagesInBreakStatements() {
 		return (EList<BreakStatement>)eGet(JavaPackage.eINSTANCE.getLabeledStatement_UsagesInBreakStatements(), true);
 	}
@@ -94,6 +97,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements LabeledSta
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ContinueStatement> getUsagesInContinueStatements() {
 		return (EList<ContinueStatement>)eGet(JavaPackage.eINSTANCE.getLabeledStatement_UsagesInContinueStatements(), true);
 	}

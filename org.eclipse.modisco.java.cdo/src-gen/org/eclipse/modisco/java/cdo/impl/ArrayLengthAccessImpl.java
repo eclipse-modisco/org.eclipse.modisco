@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayLengthAccessImpl#getArray <em>Array</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class ArrayLengthAccessImpl extends ExpressionImpl implements ArrayLength
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getArray() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getArrayLengthAccess_Array(), true);
 	}
@@ -68,6 +69,7 @@ public class ArrayLengthAccessImpl extends ExpressionImpl implements ArrayLength
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArray(Expression newArray) {
 		eSet(JavaPackage.eINSTANCE.getArrayLengthAccess_Array(), newArray);
 	}

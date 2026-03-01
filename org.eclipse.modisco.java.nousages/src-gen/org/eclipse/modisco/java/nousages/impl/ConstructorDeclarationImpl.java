@@ -27,16 +27,13 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Constructor Declaration</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
- * 
+ *
  * @generated
  */
 public class ConstructorDeclarationImpl extends AbstractMethodDeclarationImpl
 		implements ConstructorDeclaration {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ConstructorDeclarationImpl() {
@@ -45,7 +42,6 @@ public class ConstructorDeclarationImpl extends AbstractMethodDeclarationImpl
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

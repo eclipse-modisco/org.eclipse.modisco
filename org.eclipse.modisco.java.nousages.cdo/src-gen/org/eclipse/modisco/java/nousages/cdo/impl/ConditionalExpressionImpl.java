@@ -27,12 +27,12 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ConditionalExpressionImpl#getElseExpression <em>Else Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ConditionalExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ConditionalExpressionImpl#getThenExpression <em>Then Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getElseExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getConditionalExpression_ElseExpression(), true);
 	}
@@ -70,6 +71,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElseExpression(Expression newElseExpression) {
 		eSet(JavaPackage.eINSTANCE.getConditionalExpression_ElseExpression(), newElseExpression);
 	}
@@ -79,6 +81,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getConditionalExpression_Expression(), true);
 	}
@@ -88,6 +91,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getConditionalExpression_Expression(), newExpression);
 	}
@@ -97,6 +101,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getThenExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getConditionalExpression_ThenExpression(), true);
 	}
@@ -106,6 +111,7 @@ public class ConditionalExpressionImpl extends ExpressionImpl implements Conditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThenExpression(Expression newThenExpression) {
 		eSet(JavaPackage.eINSTANCE.getConditionalExpression_ThenExpression(), newThenExpression);
 	}

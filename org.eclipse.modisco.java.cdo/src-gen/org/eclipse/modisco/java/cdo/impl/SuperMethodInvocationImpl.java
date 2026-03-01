@@ -32,12 +32,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SuperMethodInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SuperMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SuperMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,6 +66,7 @@ public class SuperMethodInvocationImpl extends AbstractTypeQualifiedExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		return (AbstractMethodDeclaration)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), true);
 	}
@@ -75,6 +76,7 @@ public class SuperMethodInvocationImpl extends AbstractTypeQualifiedExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		eSet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), newMethod);
 	}
@@ -85,6 +87,7 @@ public class SuperMethodInvocationImpl extends AbstractTypeQualifiedExpressionIm
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getArguments() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Arguments(), true);
 	}
@@ -95,6 +98,7 @@ public class SuperMethodInvocationImpl extends AbstractTypeQualifiedExpressionIm
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_TypeArguments(), true);
 	}

@@ -758,7 +758,7 @@
     <eLiterals name="private" value="3"/>
     <eLiterals name="protected" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WildcardType" eSuperTypes="#//AnnotatableType">
+  <eClassifiers xsi:type="ecore:EClass" name="WildCardType" eSuperTypes="#//AnnotatableType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bound" ordered="false"

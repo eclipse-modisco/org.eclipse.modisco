@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SynchronizedStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SynchronizedStatementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class SynchronizedStatementImpl extends StatementImpl implements Synchron
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getSynchronizedStatement_Body(), true);
 	}
@@ -70,6 +71,7 @@ public class SynchronizedStatementImpl extends StatementImpl implements Synchron
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		eSet(JavaPackage.eINSTANCE.getSynchronizedStatement_Body(), newBody);
 	}
@@ -79,6 +81,7 @@ public class SynchronizedStatementImpl extends StatementImpl implements Synchron
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getSynchronizedStatement_Expression(), true);
 	}
@@ -88,6 +91,7 @@ public class SynchronizedStatementImpl extends StatementImpl implements Synchron
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getSynchronizedStatement_Expression(), newExpression);
 	}

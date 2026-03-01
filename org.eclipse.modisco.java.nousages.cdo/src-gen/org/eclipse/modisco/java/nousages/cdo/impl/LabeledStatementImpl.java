@@ -30,10 +30,12 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Labeled Statement</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.LabeledStatementImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.LabeledStatementImpl#getUsagesInBreakStatements <em>Usages In Break Statements</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.LabeledStatementImpl#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +62,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getLabeledStatement_Body(), true);
 	}
@@ -68,6 +71,7 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		eSet(JavaPackage.eINSTANCE.getLabeledStatement_Body(), newBody);
 	}

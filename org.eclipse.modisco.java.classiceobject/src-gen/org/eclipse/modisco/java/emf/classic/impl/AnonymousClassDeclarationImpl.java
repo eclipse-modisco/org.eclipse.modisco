@@ -41,11 +41,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnonymousClassDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnonymousClassDeclarationImpl#getClassInstanceCreation <em>Class Instance Creation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,7 +98,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	 */
 	public ClassInstanceCreation getClassInstanceCreation() {
 		if (eContainerFeatureID() != JavaPackage.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION) return null;
-		return (ClassInstanceCreation)eContainer();
+		return (ClassInstanceCreation)eInternalContainer();
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class AnonymousClassDeclarationImpl extends ASTNodeImpl implements Anonym
 	public void setClassInstanceCreation(ClassInstanceCreation newClassInstanceCreation) {
 		if (newClassInstanceCreation != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ANONYMOUS_CLASS_DECLARATION__CLASS_INSTANCE_CREATION && newClassInstanceCreation != null)) {
 			if (EcoreUtil.isAncestor(this, newClassInstanceCreation))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

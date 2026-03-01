@@ -25,10 +25,10 @@ import org.eclipse.modisco.java.TagElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Javadoc#getTags <em>Tags</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getJavadoc()
  * @model

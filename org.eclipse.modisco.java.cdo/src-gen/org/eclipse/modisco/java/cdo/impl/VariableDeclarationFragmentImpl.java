@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractVariablesContainer getVariablesContainer() {
 		return (AbstractVariablesContainer)eGet(JavaPackage.eINSTANCE.getVariableDeclarationFragment_VariablesContainer(), true);
 	}
@@ -68,6 +69,7 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariablesContainer(AbstractVariablesContainer newVariablesContainer) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclarationFragment_VariablesContainer(), newVariablesContainer);
 	}

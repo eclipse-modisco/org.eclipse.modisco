@@ -28,15 +28,15 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Wild Card Type</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.WildCardTypeImpl#isUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.WildCardTypeImpl#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class WildCardTypeImpl extends TypeImpl implements WildCardType {
+public class WildCardTypeImpl extends AnnotatableTypeImpl implements WildCardType {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -58,6 +58,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUpperBound() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getWildCardType_UpperBound(), true);
 	}
@@ -66,6 +67,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperBound(boolean newUpperBound) {
 		eSet(JavaPackage.eINSTANCE.getWildCardType_UpperBound(), newUpperBound);
 	}
@@ -74,6 +76,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getBound() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getWildCardType_Bound(), true);
 	}
@@ -82,6 +85,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBound(TypeAccess newBound) {
 		eSet(JavaPackage.eINSTANCE.getWildCardType_Bound(), newBound);
 	}

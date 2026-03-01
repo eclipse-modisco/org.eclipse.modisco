@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.SingleVariableAccessImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.SingleVariableAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclaration getVariable() {
 		if (variable != null && variable.eIsProxy()) {
 			InternalEObject oldVariable = (InternalEObject)variable;
@@ -113,11 +114,14 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariable(VariableDeclaration newVariable) {
+	public NotificationChain basicSetVariable(VariableDeclaration newVariable, NotificationChain msgs) {
 		VariableDeclaration oldVariable = variable;
 		variable = newVariable;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE, oldVariable, variable));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE, oldVariable, newVariable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -125,6 +129,27 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public void setVariable(VariableDeclaration newVariable) {
+		if (newVariable != variable) {
+			NotificationChain msgs = null;
+			if (variable != null)
+				msgs = ((InternalEObject)variable).eInverseRemove(this, JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, VariableDeclaration.class, msgs);
+			if (newVariable != null)
+				msgs = ((InternalEObject)newVariable).eInverseAdd(this, JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, VariableDeclaration.class, msgs);
+			msgs = basicSetVariable(newVariable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE, newVariable, newVariable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Expression getQualifier() {
 		return qualifier;
 	}
@@ -149,6 +174,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(Expression newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;
@@ -169,8 +195,26 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE:
+				if (variable != null)
+					msgs = ((InternalEObject)variable).eInverseRemove(this, JavaPackage.VARIABLE_DECLARATION__USAGE_IN_VARIABLE_ACCESS, VariableDeclaration.class, msgs);
+				return basicSetVariable((VariableDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.SINGLE_VARIABLE_ACCESS__VARIABLE:
+				return basicSetVariable(null, msgs);
 			case JavaPackage.SINGLE_VARIABLE_ACCESS__QUALIFIER:
 				return basicSetQualifier(null, msgs);
 		}

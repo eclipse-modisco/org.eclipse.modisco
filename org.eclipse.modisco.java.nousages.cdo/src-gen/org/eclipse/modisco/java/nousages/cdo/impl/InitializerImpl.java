@@ -28,10 +28,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Initializer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.InitializerImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -57,6 +57,7 @@ public class InitializerImpl extends BodyDeclarationImpl implements Initializer 
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getInitializer_Body(), true);
 	}
@@ -65,6 +66,7 @@ public class InitializerImpl extends BodyDeclarationImpl implements Initializer 
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		eSet(JavaPackage.eINSTANCE.getInitializer_Body(), newBody);
 	}

@@ -41,11 +41,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ManifestEntryImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ManifestEntryImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -104,6 +104,7 @@ public class ManifestEntryImpl extends EObjectImpl implements ManifestEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -113,6 +114,7 @@ public class ManifestEntryImpl extends EObjectImpl implements ManifestEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -125,6 +127,7 @@ public class ManifestEntryImpl extends EObjectImpl implements ManifestEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManifestAttribute> getAttributes() {
 		if (attributes == null) {
 			attributes = new EObjectContainmentEList<ManifestAttribute>(ManifestAttribute.class, this, JavaPackage.MANIFEST_ENTRY__ATTRIBUTES);
@@ -225,8 +228,8 @@ public class ManifestEntryImpl extends EObjectImpl implements ManifestEntry {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

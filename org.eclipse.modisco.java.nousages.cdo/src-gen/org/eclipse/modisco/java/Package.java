@@ -27,13 +27,14 @@ import org.eclipse.modisco.java.Package;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Package#getOwnedElements <em>Owned Elements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Package#getModel <em>Model</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Package#getOwnedPackages <em>Owned Packages</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Package#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.Package#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getPackage()
  * @model
@@ -131,5 +132,19 @@ public interface Package extends NamedElement {
 	 * @generated
 	 */
 	void setPackage(Package value);
+
+	/**
+	 * Returns the value of the '<em><b>Usages In Package Access</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.PackageAccess}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.PackageAccess#getPackage <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usages In Package Access</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getPackage_UsagesInPackageAccess()
+	 * @see org.eclipse.modisco.java.PackageAccess#getPackage
+	 * @model opposite="package" ordered="false"
+	 * @generated
+	 */
+	EList<PackageAccess> getUsagesInPackageAccess();
 
 } // Package

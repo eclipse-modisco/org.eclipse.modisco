@@ -24,12 +24,12 @@ import org.eclipse.modisco.java.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Assignment#getLeftHandSide <em>Left Hand Side</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Assignment#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Assignment#getRightHandSide <em>Right Hand Side</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAssignment()
  * @model

@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MemberRefImpl#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MemberRefImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember() {
 		if (member != null && member.eIsProxy()) {
 			InternalEObject oldMember = (InternalEObject)member;
@@ -113,6 +114,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMember(NamedElement newMember) {
 		NamedElement oldMember = member;
 		member = newMember;
@@ -125,6 +127,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return qualifier;
 	}
@@ -149,6 +152,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;

@@ -24,10 +24,10 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.BreakStatement#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getBreakStatement()
  * @model
@@ -36,6 +36,7 @@ import org.eclipse.modisco.java.Statement;
 public interface BreakStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements <em>Usages In Break Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Label</em>' reference isn't clear,
@@ -45,7 +46,8 @@ public interface BreakStatement extends Statement {
 	 * @return the value of the '<em>Label</em>' reference.
 	 * @see #setLabel(LabeledStatement)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getBreakStatement_Label()
-	 * @model ordered="false"
+	 * @see org.eclipse.modisco.java.LabeledStatement#getUsagesInBreakStatements
+	 * @model opposite="usagesInBreakStatements" ordered="false"
 	 * @generated
 	 */
 	LabeledStatement getLabel();

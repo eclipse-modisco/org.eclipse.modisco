@@ -46,6 +46,7 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ModelImpl#getOwnedElements <em>Owned Elements</em>}</li>
@@ -55,7 +56,6 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ModelImpl#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ModelImpl#getArchives <em>Archives</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -164,6 +164,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -173,6 +174,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -185,6 +187,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.modisco.java.Package> getOwnedElements() {
 		if (ownedElements == null) {
 			ownedElements = new EObjectContainmentWithInverseEList<org.eclipse.modisco.java.Package>(org.eclipse.modisco.java.Package.class, this, JavaPackage.MODEL__OWNED_ELEMENTS, JavaPackage.PACKAGE__MODEL);
@@ -197,6 +200,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> getOrphanTypes() {
 		if (orphanTypes == null) {
 			orphanTypes = new EObjectContainmentEList<Type>(Type.class, this, JavaPackage.MODEL__ORPHAN_TYPES);
@@ -209,6 +213,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UnresolvedItem> getUnresolvedItems() {
 		if (unresolvedItems == null) {
 			unresolvedItems = new EObjectContainmentEList<UnresolvedItem>(UnresolvedItem.class, this, JavaPackage.MODEL__UNRESOLVED_ITEMS);
@@ -221,6 +226,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CompilationUnit> getCompilationUnits() {
 		if (compilationUnits == null) {
 			compilationUnits = new EObjectContainmentEList<CompilationUnit>(CompilationUnit.class, this, JavaPackage.MODEL__COMPILATION_UNITS);
@@ -233,6 +239,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ClassFile> getClassFiles() {
 		if (classFiles == null) {
 			classFiles = new EObjectContainmentEList<ClassFile>(ClassFile.class, this, JavaPackage.MODEL__CLASS_FILES);
@@ -245,6 +252,7 @@ public class ModelImpl extends EObjectImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Archive> getArchives() {
 		if (archives == null) {
 			archives = new EObjectContainmentEList<Archive>(Archive.class, this, JavaPackage.MODEL__ARCHIVES);
@@ -425,8 +433,8 @@ public class ModelImpl extends EObjectImpl implements Model {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

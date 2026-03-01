@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MemberRefImpl#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MemberRefImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember() {
 		return (NamedElement)eGet(JavaPackage.eINSTANCE.getMemberRef_Member(), true);
 	}
@@ -70,6 +71,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMember(NamedElement newMember) {
 		eSet(JavaPackage.eINSTANCE.getMemberRef_Member(), newMember);
 	}
@@ -79,6 +81,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getMemberRef_Qualifier(), true);
 	}
@@ -88,6 +91,7 @@ public class MemberRefImpl extends ASTNodeImpl implements MemberRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getMemberRef_Qualifier(), newQualifier);
 	}

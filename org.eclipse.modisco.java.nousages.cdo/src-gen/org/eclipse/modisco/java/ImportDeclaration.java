@@ -24,11 +24,11 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ImportDeclaration#isStatic <em>Static</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getImportDeclaration()
  * @model
@@ -63,6 +63,7 @@ public interface ImportDeclaration extends ASTNode {
 
 	/**
 	 * Returns the value of the '<em><b>Imported Element</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Imported Element</em>' reference isn't clear,
@@ -72,7 +73,8 @@ public interface ImportDeclaration extends ASTNode {
 	 * @return the value of the '<em>Imported Element</em>' reference.
 	 * @see #setImportedElement(NamedElement)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getImportDeclaration_ImportedElement()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.NamedElement#getUsagesInImports
+	 * @model opposite="usagesInImports" required="true" ordered="false"
 	 * @generated
 	 */
 	NamedElement getImportedElement();

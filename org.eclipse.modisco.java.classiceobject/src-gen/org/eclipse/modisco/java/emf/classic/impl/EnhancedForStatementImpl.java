@@ -34,12 +34,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnhancedForStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnhancedForStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.EnhancedForStatementImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

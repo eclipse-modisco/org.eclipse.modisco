@@ -33,11 +33,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayAccessImpl#getArray <em>Array</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayAccessImpl#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -86,6 +86,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getArray() {
 		return array;
 	}
@@ -110,6 +111,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArray(Expression newArray) {
 		if (newArray != array) {
 			NotificationChain msgs = null;
@@ -129,6 +131,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getIndex() {
 		return index;
 	}
@@ -153,6 +156,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndex(Expression newIndex) {
 		if (newIndex != index) {
 			NotificationChain msgs = null;

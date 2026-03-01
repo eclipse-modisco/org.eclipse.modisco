@@ -27,11 +27,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayAccessImpl#getArray <em>Array</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayAccessImpl#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getArray() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getArrayAccess_Array(), true);
 	}
@@ -69,6 +70,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArray(Expression newArray) {
 		eSet(JavaPackage.eINSTANCE.getArrayAccess_Array(), newArray);
 	}
@@ -78,6 +80,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getIndex() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getArrayAccess_Index(), true);
 	}
@@ -87,6 +90,7 @@ public class ArrayAccessImpl extends ExpressionImpl implements ArrayAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIndex(Expression newIndex) {
 		eSet(JavaPackage.eINSTANCE.getArrayAccess_Index(), newIndex);
 	}

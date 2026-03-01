@@ -40,12 +40,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -290,8 +290,8 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (originalFilePath: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');
 		return result.toString();

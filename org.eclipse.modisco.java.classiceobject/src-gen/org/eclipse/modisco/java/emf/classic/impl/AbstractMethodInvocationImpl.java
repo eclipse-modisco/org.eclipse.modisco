@@ -41,12 +41,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractMethodInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

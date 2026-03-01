@@ -31,12 +31,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayCreationImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayCreationImpl#getInitializer <em>Initializer</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayCreationImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,6 +66,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getDimensions() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getArrayCreation_Dimensions(), true);
 	}
@@ -75,6 +76,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayInitializer getInitializer() {
 		return (ArrayInitializer)eGet(JavaPackage.eINSTANCE.getArrayCreation_Initializer(), true);
 	}
@@ -84,6 +86,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(ArrayInitializer newInitializer) {
 		eSet(JavaPackage.eINSTANCE.getArrayCreation_Initializer(), newInitializer);
 	}
@@ -93,6 +96,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getArrayCreation_Type(), true);
 	}
@@ -102,6 +106,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getArrayCreation_Type(), newType);
 	}

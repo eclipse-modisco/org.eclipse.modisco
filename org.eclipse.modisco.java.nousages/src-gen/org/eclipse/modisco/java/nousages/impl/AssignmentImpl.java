@@ -34,12 +34,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AssignmentImpl#getLeftHandSide <em>Left Hand Side</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AssignmentImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AssignmentImpl#getRightHandSide <em>Right Hand Side</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -108,6 +108,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftHandSide() {
 		return leftHandSide;
 	}
@@ -132,6 +133,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftHandSide(Expression newLeftHandSide) {
 		if (newLeftHandSide != leftHandSide) {
 			NotificationChain msgs = null;
@@ -151,6 +153,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentKind getOperator() {
 		return operator;
 	}
@@ -160,6 +163,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(AssignmentKind newOperator) {
 		AssignmentKind oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
@@ -172,6 +176,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRightHandSide() {
 		return rightHandSide;
 	}
@@ -196,6 +201,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightHandSide(Expression newRightHandSide) {
 		if (newRightHandSide != rightHandSide) {
 			NotificationChain msgs = null;
@@ -313,8 +319,8 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (operator: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (operator: ");
 		result.append(operator);
 		result.append(')');
 		return result.toString();

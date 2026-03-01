@@ -37,21 +37,20 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Labeled Statement</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.LabeledStatementImpl#getBody
- * <em>Body</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.LabeledStatementImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.LabeledStatementImpl#getUsagesInBreakStatements <em>Usages In Break Statements</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.LabeledStatementImpl#getUsagesInContinueStatements <em>Usages In Continue Statements</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class LabeledStatementImpl extends NamedElementImpl implements
 		LabeledStatement {
 	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getBody()
 	 * @generated
 	 * @ordered
@@ -59,8 +58,26 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 	protected Statement body;
 
 	/**
+	 * The cached value of the '{@link #getUsagesInBreakStatements() <em>Usages In Break Statements</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsagesInBreakStatements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BreakStatement> usagesInBreakStatements;
+	/**
+	 * The cached value of the '{@link #getUsagesInContinueStatements() <em>Usages In Continue Statements</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsagesInContinueStatements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ContinueStatement> usagesInContinueStatements;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected LabeledStatementImpl() {
@@ -69,7 +86,6 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -79,16 +95,15 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return body;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetBody(Statement newBody,
@@ -96,112 +111,122 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 		Statement oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, JavaPackage.LABELED_STATEMENT__BODY,
-					oldBody, newBody);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.LABELED_STATEMENT__BODY, oldBody, newBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
-				msgs = ((InternalEObject) body).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- JavaPackage.LABELED_STATEMENT__BODY, null,
-						msgs);
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.LABELED_STATEMENT__BODY, null, msgs);
 			if (newBody != null)
-				msgs = ((InternalEObject) newBody).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- JavaPackage.LABELED_STATEMENT__BODY, null,
-						msgs);
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.LABELED_STATEMENT__BODY, null, msgs);
 			msgs = basicSetBody(newBody, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.LABELED_STATEMENT__BODY, newBody, newBody));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.LABELED_STATEMENT__BODY, newBody, newBody));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.LABELED_STATEMENT__BODY:
-			return basicSetBody(null, msgs);
+			case JavaPackage.LABELED_STATEMENT__BODY:
+				return basicSetBody(null, msgs);
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				return ((InternalEList<?>)getUsagesInBreakStatements()).basicRemove(otherEnd, msgs);
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				return ((InternalEList<?>)getUsagesInContinueStatements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.LABELED_STATEMENT__BODY:
-			return getBody();
+			case JavaPackage.LABELED_STATEMENT__BODY:
+				return getBody();
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				return getUsagesInBreakStatements();
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				return getUsagesInContinueStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.LABELED_STATEMENT__BODY:
-			setBody((Statement) newValue);
-			return;
+			case JavaPackage.LABELED_STATEMENT__BODY:
+				setBody((Statement)newValue);
+				return;
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				getUsagesInBreakStatements().clear();
+				getUsagesInBreakStatements().addAll((Collection<? extends BreakStatement>)newValue);
+				return;
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				getUsagesInContinueStatements().clear();
+				getUsagesInContinueStatements().addAll((Collection<? extends ContinueStatement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.LABELED_STATEMENT__BODY:
-			setBody((Statement) null);
-			return;
+			case JavaPackage.LABELED_STATEMENT__BODY:
+				setBody((Statement)null);
+				return;
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				getUsagesInBreakStatements().clear();
+				return;
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				getUsagesInContinueStatements().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.LABELED_STATEMENT__BODY:
-			return body != null;
+			case JavaPackage.LABELED_STATEMENT__BODY:
+				return body != null;
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				return usagesInBreakStatements != null && !usagesInBreakStatements.isEmpty();
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				return usagesInContinueStatements != null && !usagesInContinueStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -214,6 +239,23 @@ public class LabeledStatementImpl extends NamedElementImpl implements
 	public EList<ContinueStatement> getUsagesInContinueStatements() {
 		// no usage references
 		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_BREAK_STATEMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsagesInBreakStatements()).basicAdd(otherEnd, msgs);
+			case JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUsagesInContinueStatements()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	public EList<ImportDeclaration> getUsagesInImports() {

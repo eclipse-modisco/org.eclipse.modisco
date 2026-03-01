@@ -29,11 +29,12 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationImpl#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationImpl#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +63,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), true);
 	}
@@ -71,6 +73,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), newExtraArrayDimensions);
 	}
@@ -80,6 +83,7 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitializer() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), true);
 	}
@@ -89,8 +93,20 @@ public abstract class VariableDeclarationImpl extends NamedElementImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(Expression newInitializer) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), newInitializer);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<SingleVariableAccess> getUsageInVariableAccess() {
+		return (EList<SingleVariableAccess>)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_UsageInVariableAccess(), true);
 	}
 
 } //VariableDeclarationImpl

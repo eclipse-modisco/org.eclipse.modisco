@@ -31,12 +31,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.MethodRefImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.MethodRefImpl#getQualifier <em>Qualifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.MethodRefImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		return (AbstractMethodDeclaration)eGet(JavaPackage.eINSTANCE.getMethodRef_Method(), true);
 	}
@@ -74,6 +75,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		eSet(JavaPackage.eINSTANCE.getMethodRef_Method(), newMethod);
 	}
@@ -83,6 +85,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getMethodRef_Qualifier(), true);
 	}
@@ -92,6 +95,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getMethodRef_Qualifier(), newQualifier);
 	}
@@ -102,6 +106,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<MethodRefParameter> getParameters() {
 		return (EList<MethodRefParameter>)eGet(JavaPackage.eINSTANCE.getMethodRef_Parameters(), true);
 	}

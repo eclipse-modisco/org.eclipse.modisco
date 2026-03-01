@@ -32,23 +32,18 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Array Type</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ArrayTypeImpl#getDimensions
- * <em>Dimensions</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ArrayTypeImpl#getElementType
- * <em>Element Type</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayTypeImpl#getDimensions <em>Dimensions</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayTypeImpl#getElementType <em>Element Type</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	/**
-	 * The default value of the '{@link #getDimensions() <em>Dimensions</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getDimensions() <em>Dimensions</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getDimensions()
 	 * @generated
 	 * @ordered
@@ -56,9 +51,8 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	protected static final int DIMENSIONS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getDimensions() <em>Dimensions</em>}'
-	 * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getDimensions() <em>Dimensions</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getDimensions()
 	 * @generated
 	 * @ordered
@@ -66,9 +60,8 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	protected int dimensions = DIMENSIONS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getElementType() <em>Element Type</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getElementType()
 	 * @generated
 	 * @ordered
@@ -77,7 +70,6 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ArrayTypeImpl() {
@@ -86,7 +78,6 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -96,39 +87,36 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public int getDimensions() {
 		return dimensions;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setDimensions(int newDimensions) {
 		int oldDimensions = dimensions;
 		dimensions = newDimensions;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ARRAY_TYPE__DIMENSIONS, oldDimensions,
-					dimensions));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ARRAY_TYPE__DIMENSIONS, oldDimensions, dimensions));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getElementType() {
 		return elementType;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetElementType(TypeAccess newElementType,
@@ -136,139 +124,119 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 		TypeAccess oldElementType = elementType;
 		elementType = newElementType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, JavaPackage.ARRAY_TYPE__ELEMENT_TYPE,
-					oldElementType, newElementType);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, oldElementType, newElementType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setElementType(TypeAccess newElementType) {
 		if (newElementType != elementType) {
 			NotificationChain msgs = null;
 			if (elementType != null)
-				msgs = ((InternalEObject) elementType).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE
-								- JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, null,
-						msgs);
+				msgs = ((InternalEObject)elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, null, msgs);
 			if (newElementType != null)
-				msgs = ((InternalEObject) newElementType).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE
-								- JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, null,
-						msgs);
+				msgs = ((InternalEObject)newElementType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, null, msgs);
 			msgs = basicSetElementType(newElementType, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, newElementType,
-					newElementType));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ARRAY_TYPE__ELEMENT_TYPE, newElementType, newElementType));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
-			return basicSetElementType(null, msgs);
+			case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
+				return basicSetElementType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.ARRAY_TYPE__DIMENSIONS:
-			return getDimensions();
-		case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
-			return getElementType();
+			case JavaPackage.ARRAY_TYPE__DIMENSIONS:
+				return getDimensions();
+			case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
+				return getElementType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.ARRAY_TYPE__DIMENSIONS:
-			setDimensions((Integer) newValue);
-			return;
-		case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
-			setElementType((TypeAccess) newValue);
-			return;
+			case JavaPackage.ARRAY_TYPE__DIMENSIONS:
+				setDimensions((Integer)newValue);
+				return;
+			case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
+				setElementType((TypeAccess)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ARRAY_TYPE__DIMENSIONS:
-			setDimensions(DIMENSIONS_EDEFAULT);
-			return;
-		case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
-			setElementType((TypeAccess) null);
-			return;
+			case JavaPackage.ARRAY_TYPE__DIMENSIONS:
+				setDimensions(DIMENSIONS_EDEFAULT);
+				return;
+			case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
+				setElementType((TypeAccess)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ARRAY_TYPE__DIMENSIONS:
-			return dimensions != DIMENSIONS_EDEFAULT;
-		case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
-			return elementType != null;
+			case JavaPackage.ARRAY_TYPE__DIMENSIONS:
+				return dimensions != DIMENSIONS_EDEFAULT;
+			case JavaPackage.ARRAY_TYPE__ELEMENT_TYPE:
+				return elementType != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (dimensions: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (dimensions: ");
 		result.append(dimensions);
 		result.append(')');
 		return result.toString();

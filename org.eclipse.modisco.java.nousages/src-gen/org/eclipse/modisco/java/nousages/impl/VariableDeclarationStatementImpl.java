@@ -45,6 +45,7 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.VariableDeclarationStatementImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.VariableDeclarationStatementImpl#getFragments <em>Fragments</em>}</li>
@@ -52,7 +53,6 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.VariableDeclarationStatementImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.VariableDeclarationStatementImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -141,6 +141,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -165,6 +166,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -184,6 +186,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentWithInverseEList<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, JavaPackage.VARIABLE_DECLARATION_STATEMENT__FRAGMENTS, JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);
@@ -196,6 +199,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return extraArrayDimensions;
 	}
@@ -205,6 +209,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		int oldExtraArrayDimensions = extraArrayDimensions;
 		extraArrayDimensions = newExtraArrayDimensions;
@@ -217,6 +222,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return modifier;
 	}
@@ -241,6 +247,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		if (newModifier != modifier) {
 			NotificationChain msgs = null;
@@ -260,6 +267,7 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, JavaPackage.VARIABLE_DECLARATION_STATEMENT__ANNOTATIONS);
@@ -450,8 +458,8 @@ public class VariableDeclarationStatementImpl extends StatementImpl implements V
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (extraArrayDimensions: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (extraArrayDimensions: ");
 		result.append(extraArrayDimensions);
 		result.append(')');
 		return result.toString();

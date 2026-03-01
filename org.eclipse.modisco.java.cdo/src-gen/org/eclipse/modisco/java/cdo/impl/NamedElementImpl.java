@@ -29,12 +29,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.NamedElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.NamedElementImpl#isProxy <em>Proxy</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.NamedElementImpl#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(JavaPackage.eINSTANCE.getNamedElement_Name(), true);
 	}
@@ -72,6 +73,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(JavaPackage.eINSTANCE.getNamedElement_Name(), newName);
 	}
@@ -81,6 +83,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isProxy() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getNamedElement_Proxy(), true);
 	}
@@ -90,6 +93,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProxy(boolean newProxy) {
 		eSet(JavaPackage.eINSTANCE.getNamedElement_Proxy(), newProxy);
 	}
@@ -100,6 +104,7 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ImportDeclaration> getUsagesInImports() {
 		return (EList<ImportDeclaration>)eGet(JavaPackage.eINSTANCE.getNamedElement_UsagesInImports(), true);
 	}

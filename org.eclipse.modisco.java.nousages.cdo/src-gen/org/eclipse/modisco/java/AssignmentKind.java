@@ -235,7 +235,7 @@ public enum AssignmentKind implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BIT_AND_ASSIGN
-	 * @model literal="&="
+	 * @model literal="&amp;="
 	 * @generated
 	 * @ordered
 	 */
@@ -295,7 +295,7 @@ public enum AssignmentKind implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LEFT_SHIFT_ASSIGN
-	 * @model literal="<<="
+	 * @model literal="&lt;&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -310,7 +310,7 @@ public enum AssignmentKind implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_SIGNED_ASSIGN
-	 * @model literal=">>="
+	 * @model literal="&gt;&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -325,7 +325,7 @@ public enum AssignmentKind implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RIGHT_SHIFT_UNSIGNED_ASSIGN
-	 * @model literal=">>>="
+	 * @model literal="&gt;&gt;&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -365,6 +365,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind get(String literal) {
@@ -381,6 +383,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind getByName(String name) {
@@ -397,6 +401,8 @@ public enum AssignmentKind implements Enumerator {
 	 * Returns the '<em><b>Assignment Kind</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AssignmentKind get(int value) {
@@ -455,6 +461,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -464,6 +471,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -473,6 +481,7 @@ public enum AssignmentKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

@@ -26,10 +26,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.BooleanLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,6 +58,7 @@ public class BooleanLiteralImpl extends ExpressionImpl implements BooleanLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isValue() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getBooleanLiteral_Value(), true);
 	}
@@ -67,6 +68,7 @@ public class BooleanLiteralImpl extends ExpressionImpl implements BooleanLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(boolean newValue) {
 		eSet(JavaPackage.eINSTANCE.getBooleanLiteral_Value(), newValue);
 	}

@@ -26,16 +26,13 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Interface Declaration</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
- * 
+ *
  * @generated
  */
 public class InterfaceDeclarationImpl extends TypeDeclarationImpl implements
 		InterfaceDeclaration {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected InterfaceDeclarationImpl() {
@@ -44,7 +41,6 @@ public class InterfaceDeclarationImpl extends TypeDeclarationImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

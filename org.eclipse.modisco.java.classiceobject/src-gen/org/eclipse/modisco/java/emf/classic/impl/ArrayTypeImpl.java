@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArrayTypeImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ArrayTypeImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -245,8 +245,8 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (dimensions: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (dimensions: ");
 		result.append(dimensions);
 		result.append(')');
 		return result.toString();

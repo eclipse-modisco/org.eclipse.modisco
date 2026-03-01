@@ -23,10 +23,10 @@ import org.eclipse.modisco.java.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.NumberLiteral#getTokenValue <em>Token Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getNumberLiteral()
  * @model

@@ -29,13 +29,14 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Package</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PackageImpl#getOwnedElements <em>Owned Elements</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PackageImpl#getModel <em>Model</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PackageImpl#getOwnedPackages <em>Owned Packages</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PackageImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.PackageImpl#getUsagesInPackageAccess <em>Usages In Package Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +64,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractTypeDeclaration> getOwnedElements() {
 		return (EList<AbstractTypeDeclaration>)eGet(JavaPackage.eINSTANCE.getPackage_OwnedElements(), true);
 	}
@@ -71,6 +73,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Model getModel() {
 		return (Model)eGet(JavaPackage.eINSTANCE.getPackage_Model(), true);
 	}
@@ -79,6 +82,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModel(Model newModel) {
 		eSet(JavaPackage.eINSTANCE.getPackage_Model(), newModel);
 	}
@@ -88,6 +92,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<org.eclipse.modisco.java.Package> getOwnedPackages() {
 		return (EList<org.eclipse.modisco.java.Package>)eGet(JavaPackage.eINSTANCE.getPackage_OwnedPackages(), true);
 	}
@@ -96,6 +101,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		return (org.eclipse.modisco.java.Package)eGet(JavaPackage.eINSTANCE.getPackage_Package(), true);
 	}
@@ -104,6 +110,7 @@ public class PackageImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		eSet(JavaPackage.eINSTANCE.getPackage_Package(), newPackage);
 	}

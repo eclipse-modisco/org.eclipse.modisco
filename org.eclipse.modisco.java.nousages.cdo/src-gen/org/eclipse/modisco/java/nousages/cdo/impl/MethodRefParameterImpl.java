@@ -27,12 +27,12 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodRefParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodRefParameterImpl#isVarargs <em>Varargs</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodRefParameterImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(JavaPackage.eINSTANCE.getMethodRefParameter_Name(), true);
 	}
@@ -70,6 +71,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(JavaPackage.eINSTANCE.getMethodRefParameter_Name(), newName);
 	}
@@ -79,6 +81,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVarargs() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getMethodRefParameter_Varargs(), true);
 	}
@@ -88,6 +91,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVarargs(boolean newVarargs) {
 		eSet(JavaPackage.eINSTANCE.getMethodRefParameter_Varargs(), newVarargs);
 	}
@@ -97,6 +101,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getMethodRefParameter_Type(), true);
 	}
@@ -106,6 +111,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getMethodRefParameter_Type(), newType);
 	}

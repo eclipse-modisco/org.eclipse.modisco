@@ -26,10 +26,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CharacterLiteralImpl#getEscapedValue <em>Escaped Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,6 +58,7 @@ public class CharacterLiteralImpl extends ExpressionImpl implements CharacterLit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEscapedValue() {
 		return (String)eGet(JavaPackage.eINSTANCE.getCharacterLiteral_EscapedValue(), true);
 	}
@@ -67,6 +68,7 @@ public class CharacterLiteralImpl extends ExpressionImpl implements CharacterLit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEscapedValue(String newEscapedValue) {
 		eSet(JavaPackage.eINSTANCE.getCharacterLiteral_EscapedValue(), newEscapedValue);
 	}

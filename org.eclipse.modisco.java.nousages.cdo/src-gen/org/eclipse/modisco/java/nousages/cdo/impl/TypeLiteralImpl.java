@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.TypeLiteralImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class TypeLiteralImpl extends ExpressionImpl implements TypeLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getTypeLiteral_Type(), true);
 	}
@@ -68,6 +69,7 @@ public class TypeLiteralImpl extends ExpressionImpl implements TypeLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getTypeLiteral_Type(), newType);
 	}

@@ -32,6 +32,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.EnumConstantDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.EnumConstantDeclarationImpl#getInitializer <em>Initializer</em>}</li>
@@ -39,7 +40,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.EnumConstantDeclarationImpl#getAnonymousClassDeclaration <em>Anonymous Class Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.EnumConstantDeclarationImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +68,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), true);
 	}
@@ -77,6 +78,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_ExtraArrayDimensions(), newExtraArrayDimensions);
 	}
@@ -86,6 +88,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitializer() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), true);
 	}
@@ -95,6 +98,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(Expression newInitializer) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclaration_Initializer(), newInitializer);
 	}
@@ -105,6 +109,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<SingleVariableAccess> getUsageInVariableAccess() {
 		return (EList<SingleVariableAccess>)eGet(JavaPackage.eINSTANCE.getVariableDeclaration_UsageInVariableAccess(), true);
 	}
@@ -114,6 +119,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnonymousClassDeclaration getAnonymousClassDeclaration() {
 		return (AnonymousClassDeclaration)eGet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration(), true);
 	}
@@ -123,6 +129,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnonymousClassDeclaration(AnonymousClassDeclaration newAnonymousClassDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_AnonymousClassDeclaration(), newAnonymousClassDeclaration);
 	}
@@ -133,6 +140,7 @@ public class EnumConstantDeclarationImpl extends BodyDeclarationImpl implements 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getArguments() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getEnumConstantDeclaration_Arguments(), true);
 	}

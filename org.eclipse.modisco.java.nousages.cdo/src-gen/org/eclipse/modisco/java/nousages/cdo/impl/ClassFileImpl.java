@@ -29,13 +29,13 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Class File</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassFileImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return (String)eGet(JavaPackage.eINSTANCE.getClassFile_OriginalFilePath(), true);
 	}
@@ -69,6 +70,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		eSet(JavaPackage.eINSTANCE.getClassFile_OriginalFilePath(), newOriginalFilePath);
 	}
@@ -77,6 +79,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getType() {
 		return (AbstractTypeDeclaration)eGet(JavaPackage.eINSTANCE.getClassFile_Type(), true);
 	}
@@ -85,6 +88,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(AbstractTypeDeclaration newType) {
 		eSet(JavaPackage.eINSTANCE.getClassFile_Type(), newType);
 	}
@@ -93,6 +97,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompilationUnit getAttachedSource() {
 		return (CompilationUnit)eGet(JavaPackage.eINSTANCE.getClassFile_AttachedSource(), true);
 	}
@@ -101,6 +106,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttachedSource(CompilationUnit newAttachedSource) {
 		eSet(JavaPackage.eINSTANCE.getClassFile_AttachedSource(), newAttachedSource);
 	}
@@ -109,6 +115,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		return (org.eclipse.modisco.java.Package)eGet(JavaPackage.eINSTANCE.getClassFile_Package(), true);
 	}
@@ -117,6 +124,7 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		eSet(JavaPackage.eINSTANCE.getClassFile_Package(), newPackage);
 	}

@@ -29,20 +29,17 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Variable Declaration Fragment</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationFragmentImpl#getVariablesContainer
- * <em>Variables Container</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.VariableDeclarationFragmentImpl#getVariablesContainer <em>Variables Container</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl
 		implements VariableDeclarationFragment {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected VariableDeclarationFragmentImpl() {
@@ -51,7 +48,6 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -61,26 +57,21 @@ public class VariableDeclarationFragmentImpl extends VariableDeclarationImpl
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public AbstractVariablesContainer getVariablesContainer() {
-		return (AbstractVariablesContainer) eGet(
-				JavaPackage.eINSTANCE
-						.getVariableDeclarationFragment_VariablesContainer(),
-				true);
+		return (AbstractVariablesContainer)eGet(JavaPackage.eINSTANCE.getVariableDeclarationFragment_VariablesContainer(), true);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setVariablesContainer(
 			AbstractVariablesContainer newVariablesContainer) {
-		eSet(JavaPackage.eINSTANCE
-				.getVariableDeclarationFragment_VariablesContainer(),
-				newVariablesContainer);
+		eSet(JavaPackage.eINSTANCE.getVariableDeclarationFragment_VariablesContainer(), newVariablesContainer);
 	}
 
 	public EList<SingleVariableAccess> getUsageInVariableAccess() {

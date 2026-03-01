@@ -30,6 +30,7 @@ import org.eclipse.modisco.java.UnresolvedItem;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.Model#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Model#getOwnedElements <em>Owned Elements</em>}</li>
@@ -39,7 +40,6 @@ import org.eclipse.modisco.java.UnresolvedItem;
  *   <li>{@link org.eclipse.modisco.java.Model#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.Model#getArchives <em>Archives</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getModel()
  * @model

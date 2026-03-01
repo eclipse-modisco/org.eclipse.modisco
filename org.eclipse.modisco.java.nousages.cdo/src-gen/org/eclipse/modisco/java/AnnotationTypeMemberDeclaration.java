@@ -14,6 +14,7 @@
  */
 package org.eclipse.modisco.java;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.modisco.java.BodyDeclaration;
 import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.TypeAccess;
@@ -25,11 +26,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAnnotationTypeMemberDeclaration()
  * @model
@@ -87,5 +89,19 @@ public interface AnnotationTypeMemberDeclaration extends BodyDeclaration {
 	 * @generated
 	 */
 	void setType(TypeAccess value);
+
+	/**
+	 * Returns the value of the '<em><b>Usages</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.AnnotationMemberValuePair}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getMember <em>Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usages</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAnnotationTypeMemberDeclaration_Usages()
+	 * @see org.eclipse.modisco.java.AnnotationMemberValuePair#getMember
+	 * @model opposite="member" ordered="false"
+	 * @generated
+	 */
+	EList<AnnotationMemberValuePair> getUsages();
 
 } // AnnotationTypeMemberDeclaration

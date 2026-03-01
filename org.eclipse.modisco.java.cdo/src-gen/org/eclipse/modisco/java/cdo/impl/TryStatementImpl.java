@@ -30,12 +30,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TryStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TryStatementImpl#getFinally <em>Finally</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TryStatementImpl#getCatchClauses <em>Catch Clauses</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +64,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getTryStatement_Body(), true);
 	}
@@ -73,6 +74,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		eSet(JavaPackage.eINSTANCE.getTryStatement_Body(), newBody);
 	}
@@ -82,6 +84,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getFinally() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getTryStatement_Finally(), true);
 	}
@@ -91,6 +94,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinally(Block newFinally) {
 		eSet(JavaPackage.eINSTANCE.getTryStatement_Finally(), newFinally);
 	}
@@ -101,6 +105,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<CatchClause> getCatchClauses() {
 		return (EList<CatchClause>)eGet(JavaPackage.eINSTANCE.getTryStatement_CatchClauses(), true);
 	}

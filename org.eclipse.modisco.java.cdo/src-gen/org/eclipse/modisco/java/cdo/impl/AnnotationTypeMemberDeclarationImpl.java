@@ -31,12 +31,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnnotationTypeMemberDeclarationImpl#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnnotationTypeMemberDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnnotationTypeMemberDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getDefault() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAnnotationTypeMemberDeclaration_Default(), true);
 	}
@@ -74,6 +75,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(Expression newDefault) {
 		eSet(JavaPackage.eINSTANCE.getAnnotationTypeMemberDeclaration_Default(), newDefault);
 	}
@@ -83,6 +85,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAnnotationTypeMemberDeclaration_Type(), true);
 	}
@@ -92,6 +95,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAnnotationTypeMemberDeclaration_Type(), newType);
 	}
@@ -102,6 +106,7 @@ public class AnnotationTypeMemberDeclarationImpl extends BodyDeclarationImpl imp
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AnnotationMemberValuePair> getUsages() {
 		return (EList<AnnotationMemberValuePair>)eGet(JavaPackage.eINSTANCE.getAnnotationTypeMemberDeclaration_Usages(), true);
 	}

@@ -32,6 +32,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModifierImpl#getVisibility <em>Visibility</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModifierImpl#getInheritance <em>Inheritance</em>}</li>
@@ -46,7 +47,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModifierImpl#getVariableDeclarationStatement <em>Variable Declaration Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ModifierImpl#getVariableDeclarationExpression <em>Variable Declaration Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisibilityKind getVisibility() {
 		return (VisibilityKind)eGet(JavaPackage.eINSTANCE.getModifier_Visibility(), true);
 	}
@@ -84,6 +85,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisibility(VisibilityKind newVisibility) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Visibility(), newVisibility);
 	}
@@ -93,6 +95,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InheritanceKind getInheritance() {
 		return (InheritanceKind)eGet(JavaPackage.eINSTANCE.getModifier_Inheritance(), true);
 	}
@@ -102,6 +105,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInheritance(InheritanceKind newInheritance) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Inheritance(), newInheritance);
 	}
@@ -111,6 +115,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Static(), true);
 	}
@@ -120,6 +125,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatic(boolean newStatic) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Static(), newStatic);
 	}
@@ -129,6 +135,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTransient() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Transient(), true);
 	}
@@ -138,6 +145,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransient(boolean newTransient) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Transient(), newTransient);
 	}
@@ -147,6 +155,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVolatile() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Volatile(), true);
 	}
@@ -156,6 +165,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVolatile(boolean newVolatile) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Volatile(), newVolatile);
 	}
@@ -165,6 +175,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNative() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Native(), true);
 	}
@@ -174,6 +185,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNative(boolean newNative) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Native(), newNative);
 	}
@@ -183,6 +195,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStrictfp() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Strictfp(), true);
 	}
@@ -192,6 +205,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStrictfp(boolean newStrictfp) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Strictfp(), newStrictfp);
 	}
@@ -201,6 +215,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSynchronized() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getModifier_Synchronized(), true);
 	}
@@ -210,6 +225,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSynchronized(boolean newSynchronized) {
 		eSet(JavaPackage.eINSTANCE.getModifier_Synchronized(), newSynchronized);
 	}
@@ -219,6 +235,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BodyDeclaration getBodyDeclaration() {
 		return (BodyDeclaration)eGet(JavaPackage.eINSTANCE.getModifier_BodyDeclaration(), true);
 	}
@@ -228,6 +245,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodyDeclaration(BodyDeclaration newBodyDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getModifier_BodyDeclaration(), newBodyDeclaration);
 	}
@@ -237,6 +255,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration getSingleVariableDeclaration() {
 		return (SingleVariableDeclaration)eGet(JavaPackage.eINSTANCE.getModifier_SingleVariableDeclaration(), true);
 	}
@@ -246,6 +265,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSingleVariableDeclaration(SingleVariableDeclaration newSingleVariableDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getModifier_SingleVariableDeclaration(), newSingleVariableDeclaration);
 	}
@@ -255,6 +275,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationStatement getVariableDeclarationStatement() {
 		return (VariableDeclarationStatement)eGet(JavaPackage.eINSTANCE.getModifier_VariableDeclarationStatement(), true);
 	}
@@ -264,6 +285,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableDeclarationStatement(VariableDeclarationStatement newVariableDeclarationStatement) {
 		eSet(JavaPackage.eINSTANCE.getModifier_VariableDeclarationStatement(), newVariableDeclarationStatement);
 	}
@@ -273,6 +295,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclarationExpression getVariableDeclarationExpression() {
 		return (VariableDeclarationExpression)eGet(JavaPackage.eINSTANCE.getModifier_VariableDeclarationExpression(), true);
 	}
@@ -282,6 +305,7 @@ public class ModifierImpl extends ASTNodeImpl implements Modifier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableDeclarationExpression(VariableDeclarationExpression newVariableDeclarationExpression) {
 		eSet(JavaPackage.eINSTANCE.getModifier_VariableDeclarationExpression(), newVariableDeclarationExpression);
 	}

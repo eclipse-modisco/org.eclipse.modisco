@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayInitializerImpl#getExpressions <em>Expressions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class ArrayInitializerImpl extends ExpressionImpl implements ArrayInitial
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getExpressions() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getArrayInitializer_Expressions(), true);
 	}

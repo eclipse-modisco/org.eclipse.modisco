@@ -27,12 +27,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.MethodRef#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.MethodRef#getQualifier <em>Qualifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.MethodRef#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getMethodRef()
  * @model
@@ -41,6 +41,7 @@ import org.eclipse.modisco.java.TypeAccess;
 public interface MethodRef extends ASTNode {
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments <em>Usages In Doc Comments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Method</em>' reference isn't clear,
@@ -50,7 +51,8 @@ public interface MethodRef extends ASTNode {
 	 * @return the value of the '<em>Method</em>' reference.
 	 * @see #setMethod(AbstractMethodDeclaration)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getMethodRef_Method()
-	 * @model required="true" ordered="false"
+	 * @see org.eclipse.modisco.java.AbstractMethodDeclaration#getUsagesInDocComments
+	 * @model opposite="usagesInDocComments" required="true" ordered="false"
 	 * @generated
 	 */
 	AbstractMethodDeclaration getMethod();

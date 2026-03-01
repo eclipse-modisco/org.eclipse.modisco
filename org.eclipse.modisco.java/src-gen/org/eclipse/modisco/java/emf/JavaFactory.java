@@ -21,6 +21,149 @@
 package org.eclipse.modisco.java.emf;
 
 import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.modisco.java.Annotation;
+import org.eclipse.modisco.java.AnnotationMemberValuePair;
+import org.eclipse.modisco.java.AnnotationTypeDeclaration;
+import org.eclipse.modisco.java.AnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.AnonymousClassDeclaration;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.ArrayAccess;
+import org.eclipse.modisco.java.ArrayCreation;
+import org.eclipse.modisco.java.ArrayInitializer;
+import org.eclipse.modisco.java.ArrayLengthAccess;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.AssertStatement;
+import org.eclipse.modisco.java.Assignment;
+import org.eclipse.modisco.java.Block;
+import org.eclipse.modisco.java.BlockComment;
+import org.eclipse.modisco.java.BooleanLiteral;
+import org.eclipse.modisco.java.BreakStatement;
+import org.eclipse.modisco.java.CaseDefaultExpression;
+import org.eclipse.modisco.java.CastExpression;
+import org.eclipse.modisco.java.CatchClause;
+import org.eclipse.modisco.java.CharacterLiteral;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassFile;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.ConditionalExpression;
+import org.eclipse.modisco.java.ConstructorDeclaration;
+import org.eclipse.modisco.java.ConstructorInvocation;
+import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
+import org.eclipse.modisco.java.DoStatement;
+import org.eclipse.modisco.java.EitherOrMultiPattern;
+import org.eclipse.modisco.java.EmptyStatement;
+import org.eclipse.modisco.java.EnhancedForStatement;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExportsDirective;
+import org.eclipse.modisco.java.ExpressionMethodReference;
+import org.eclipse.modisco.java.ExpressionStatement;
+import org.eclipse.modisco.java.FieldAccess;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.ForStatement;
+import org.eclipse.modisco.java.GuardedPattern;
+import org.eclipse.modisco.java.IfStatement;
+import org.eclipse.modisco.java.ImplicitTypeDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.InfixExpression;
+import org.eclipse.modisco.java.Initializer;
+import org.eclipse.modisco.java.InstanceofExpression;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.IntersectionType;
+import org.eclipse.modisco.java.JavaDocRegion;
+import org.eclipse.modisco.java.JavaDocTextElement;
+import org.eclipse.modisco.java.Javadoc;
+import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
+import org.eclipse.modisco.java.LineComment;
+import org.eclipse.modisco.java.Manifest;
+import org.eclipse.modisco.java.ManifestAttribute;
+import org.eclipse.modisco.java.ManifestEntry;
+import org.eclipse.modisco.java.MemberRef;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodInvocation;
+import org.eclipse.modisco.java.MethodRef;
+import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.Modifier;
+import org.eclipse.modisco.java.ModuleDeclaration;
+import org.eclipse.modisco.java.ModuleModifier;
+import org.eclipse.modisco.java.ModuleQualifiedName;
+import org.eclipse.modisco.java.NameQualifiedType;
+import org.eclipse.modisco.java.NullLiteral;
+import org.eclipse.modisco.java.NullPattern;
+import org.eclipse.modisco.java.NumberLiteral;
+import org.eclipse.modisco.java.OpensDirective;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.ParameterizedType;
+import org.eclipse.modisco.java.ParenthesizedExpression;
+import org.eclipse.modisco.java.PatternInstanceofExpression;
+import org.eclipse.modisco.java.PostfixExpression;
+import org.eclipse.modisco.java.PrefixExpression;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.PrimitiveTypeBoolean;
+import org.eclipse.modisco.java.PrimitiveTypeByte;
+import org.eclipse.modisco.java.PrimitiveTypeChar;
+import org.eclipse.modisco.java.PrimitiveTypeDouble;
+import org.eclipse.modisco.java.PrimitiveTypeFloat;
+import org.eclipse.modisco.java.PrimitiveTypeInt;
+import org.eclipse.modisco.java.PrimitiveTypeLong;
+import org.eclipse.modisco.java.PrimitiveTypeShort;
+import org.eclipse.modisco.java.PrimitiveTypeVoid;
+import org.eclipse.modisco.java.ProvidesDirective;
+import org.eclipse.modisco.java.QualifiedType;
+import org.eclipse.modisco.java.RecordDeclaration;
+import org.eclipse.modisco.java.RecordPattern;
+import org.eclipse.modisco.java.RequiresDirective;
+import org.eclipse.modisco.java.ReturnStatement;
+import org.eclipse.modisco.java.SimpleType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.StringLiteral;
+import org.eclipse.modisco.java.SuperConstructorInvocation;
+import org.eclipse.modisco.java.SuperFieldAccess;
+import org.eclipse.modisco.java.SuperMethodInvocation;
+import org.eclipse.modisco.java.SuperMethodReference;
+import org.eclipse.modisco.java.SwitchCase;
+import org.eclipse.modisco.java.SwitchExpression;
+import org.eclipse.modisco.java.SwitchStatement;
+import org.eclipse.modisco.java.SynchronizedStatement;
+import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.TagProperty;
+import org.eclipse.modisco.java.TextBlock;
+import org.eclipse.modisco.java.TextElement;
+import org.eclipse.modisco.java.ThisExpression;
+import org.eclipse.modisco.java.ThrowStatement;
+import org.eclipse.modisco.java.TryStatement;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.TypeDeclarationStatement;
+import org.eclipse.modisco.java.TypeLiteral;
+import org.eclipse.modisco.java.TypeMethodReference;
+import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.TypePattern;
+import org.eclipse.modisco.java.UnionType;
+import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
+import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.UnresolvedClassDeclaration;
+import org.eclipse.modisco.java.UnresolvedEnumDeclaration;
+import org.eclipse.modisco.java.UnresolvedInterfaceDeclaration;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.UnresolvedLabeledStatement;
+import org.eclipse.modisco.java.UnresolvedMethodDeclaration;
+import org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration;
+import org.eclipse.modisco.java.UnresolvedType;
+import org.eclipse.modisco.java.UnresolvedTypeDeclaration;
+import org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment;
+import org.eclipse.modisco.java.UsesDirective;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
+import org.eclipse.modisco.java.WhileStatement;
+import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.YieldStatement;
 import org.eclipse.modisco.java.*;
 
 /**
@@ -1310,13 +1453,13 @@ public interface JavaFactory extends EFactory {
 	VariableDeclarationStatement createVariableDeclarationStatement();
 
 	/**
-	 * Returns a new object of class '<em>Wildcard Type</em>'.
+	 * Returns a new object of class '<em>Wild Card Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wildcard Type</em>'.
+	 * @return a new object of class '<em>Wild Card Type</em>'.
 	 * @generated
 	 */
-	WildcardType createWildcardType();
+	WildCardType createWildCardType();
 
 	/**
 	 * Returns a new object of class '<em>While Statement</em>'.

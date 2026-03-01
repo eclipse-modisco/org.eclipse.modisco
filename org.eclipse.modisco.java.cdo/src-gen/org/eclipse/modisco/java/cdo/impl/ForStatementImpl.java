@@ -30,13 +30,13 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ForStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ForStatementImpl#getUpdaters <em>Updaters</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ForStatementImpl#getInitializers <em>Initializers</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ForStatementImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getForStatement_Expression(), true);
 	}
@@ -74,6 +75,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getForStatement_Expression(), newExpression);
 	}
@@ -84,6 +86,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getUpdaters() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getForStatement_Updaters(), true);
 	}
@@ -94,6 +97,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getInitializers() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getForStatement_Initializers(), true);
 	}
@@ -103,6 +107,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getForStatement_Body(), true);
 	}
@@ -112,6 +117,7 @@ public class ForStatementImpl extends StatementImpl implements ForStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		eSet(JavaPackage.eINSTANCE.getForStatement_Body(), newBody);
 	}

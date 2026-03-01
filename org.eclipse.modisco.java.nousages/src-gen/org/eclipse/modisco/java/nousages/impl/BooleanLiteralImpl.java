@@ -30,10 +30,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.BooleanLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class BooleanLiteralImpl extends ExpressionImpl implements BooleanLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isValue() {
 		return value;
 	}
@@ -91,6 +92,7 @@ public class BooleanLiteralImpl extends ExpressionImpl implements BooleanLiteral
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(boolean newValue) {
 		boolean oldValue = value;
 		value = newValue;
@@ -165,8 +167,8 @@ public class BooleanLiteralImpl extends ExpressionImpl implements BooleanLiteral
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

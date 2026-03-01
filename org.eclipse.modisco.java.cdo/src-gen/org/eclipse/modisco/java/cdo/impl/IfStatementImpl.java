@@ -28,12 +28,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.IfStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.IfStatementImpl#getThenStatement <em>Then Statement</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.IfStatementImpl#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getIfStatement_Expression(), true);
 	}
@@ -71,6 +72,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getIfStatement_Expression(), newExpression);
 	}
@@ -80,6 +82,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getThenStatement() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getIfStatement_ThenStatement(), true);
 	}
@@ -89,6 +92,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThenStatement(Statement newThenStatement) {
 		eSet(JavaPackage.eINSTANCE.getIfStatement_ThenStatement(), newThenStatement);
 	}
@@ -98,6 +102,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getElseStatement() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getIfStatement_ElseStatement(), true);
 	}
@@ -107,6 +112,7 @@ public class IfStatementImpl extends StatementImpl implements IfStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElseStatement(Statement newElseStatement) {
 		eSet(JavaPackage.eINSTANCE.getIfStatement_ElseStatement(), newElseStatement);
 	}

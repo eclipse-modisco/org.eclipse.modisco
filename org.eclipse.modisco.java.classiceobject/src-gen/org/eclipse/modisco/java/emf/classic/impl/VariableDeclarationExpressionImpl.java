@@ -44,13 +44,13 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.VariableDeclarationExpressionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.VariableDeclarationExpressionImpl#getFragments <em>Fragments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.VariableDeclarationExpressionImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.VariableDeclarationExpressionImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

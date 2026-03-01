@@ -25,11 +25,11 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AnnotationMemberValuePair#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAnnotationMemberValuePair()
  * @model
@@ -38,6 +38,7 @@ import org.eclipse.modisco.java.NamedElement;
 public interface AnnotationMemberValuePair extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Member</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getUsages <em>Usages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Member</em>' reference isn't clear,
@@ -47,7 +48,8 @@ public interface AnnotationMemberValuePair extends NamedElement {
 	 * @return the value of the '<em>Member</em>' reference.
 	 * @see #setMember(AnnotationTypeMemberDeclaration)
 	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAnnotationMemberValuePair_Member()
-	 * @model ordered="false"
+	 * @see org.eclipse.modisco.java.AnnotationTypeMemberDeclaration#getUsages
+	 * @model opposite="usages" ordered="false"
 	 * @generated
 	 */
 	AnnotationTypeMemberDeclaration getMember();

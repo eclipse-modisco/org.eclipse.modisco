@@ -24,11 +24,11 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.InstanceofExpression#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.InstanceofExpression#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getInstanceofExpression()
  * @model

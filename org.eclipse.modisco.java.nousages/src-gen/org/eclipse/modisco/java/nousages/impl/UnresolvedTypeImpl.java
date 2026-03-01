@@ -26,15 +26,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Unresolved Type</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
- * 
+ *
  * @generated
  */
 public class UnresolvedTypeImpl extends TypeImpl implements UnresolvedType {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected UnresolvedTypeImpl() {
@@ -43,7 +40,6 @@ public class UnresolvedTypeImpl extends TypeImpl implements UnresolvedType {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

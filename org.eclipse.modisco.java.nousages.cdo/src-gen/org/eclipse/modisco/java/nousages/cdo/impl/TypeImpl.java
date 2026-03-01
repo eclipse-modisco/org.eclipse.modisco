@@ -27,7 +27,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * An implementation of the model object '<em><b>Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
+ * The following features are implemented:
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.TypeImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -49,6 +53,17 @@ public abstract class TypeImpl extends NamedElementImpl implements Type {
 	@Override
 	protected EClass eStaticClass() {
 		return JavaPackage.eINSTANCE.getType();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<TypeAccess> getUsagesInTypeAccess() {
+		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getType_UsagesInTypeAccess(), true);
 	}
 
 } //TypeImpl

@@ -40,12 +40,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.TryStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.TryStatementImpl#getFinally <em>Finally</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.TryStatementImpl#getCatchClauses <em>Catch Clauses</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

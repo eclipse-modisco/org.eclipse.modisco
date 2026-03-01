@@ -33,12 +33,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefParameterImpl#isVarargs <em>Varargs</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefParameterImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -117,6 +117,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -126,6 +127,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -138,6 +140,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVarargs() {
 		return varargs;
 	}
@@ -147,6 +150,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVarargs(boolean newVarargs) {
 		boolean oldVarargs = varargs;
 		varargs = newVarargs;
@@ -159,6 +163,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -183,6 +188,7 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -298,10 +304,10 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
-		result.append(", varargs: "); //$NON-NLS-1$
+		result.append(", varargs: ");
 		result.append(varargs);
 		result.append(')');
 		return result.toString();

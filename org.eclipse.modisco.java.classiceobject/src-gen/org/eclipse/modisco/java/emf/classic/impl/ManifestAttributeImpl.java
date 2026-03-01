@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ManifestAttributeImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ManifestAttributeImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -217,10 +217,10 @@ public class ManifestAttributeImpl extends EObjectImpl implements ManifestAttrib
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (key: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (key: ");
 		result.append(key);
-		result.append(", value: "); //$NON-NLS-1$
+		result.append(", value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

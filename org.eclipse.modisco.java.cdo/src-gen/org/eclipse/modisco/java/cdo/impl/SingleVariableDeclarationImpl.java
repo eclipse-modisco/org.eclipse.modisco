@@ -34,6 +34,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SingleVariableDeclarationImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SingleVariableDeclarationImpl#isVarargs <em>Varargs</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SingleVariableDeclarationImpl#getCatchClause <em>Catch Clause</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SingleVariableDeclarationImpl#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return (Modifier)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Modifier(), true);
 	}
@@ -81,6 +82,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Modifier(), newModifier);
 	}
@@ -90,6 +92,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isVarargs() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Varargs(), true);
 	}
@@ -99,6 +102,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVarargs(boolean newVarargs) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Varargs(), newVarargs);
 	}
@@ -108,6 +112,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Type(), true);
 	}
@@ -117,6 +122,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Type(), newType);
 	}
@@ -127,6 +133,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Annotation> getAnnotations() {
 		return (EList<Annotation>)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_Annotations(), true);
 	}
@@ -136,6 +143,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethodDeclaration() {
 		return (AbstractMethodDeclaration)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_MethodDeclaration(), true);
 	}
@@ -145,6 +153,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodDeclaration(AbstractMethodDeclaration newMethodDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_MethodDeclaration(), newMethodDeclaration);
 	}
@@ -154,6 +163,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CatchClause getCatchClause() {
 		return (CatchClause)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_CatchClause(), true);
 	}
@@ -163,6 +173,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCatchClause(CatchClause newCatchClause) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_CatchClause(), newCatchClause);
 	}
@@ -172,6 +183,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnhancedForStatement getEnhancedForStatement() {
 		return (EnhancedForStatement)eGet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_EnhancedForStatement(), true);
 	}
@@ -181,6 +193,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnhancedForStatement(EnhancedForStatement newEnhancedForStatement) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableDeclaration_EnhancedForStatement(), newEnhancedForStatement);
 	}

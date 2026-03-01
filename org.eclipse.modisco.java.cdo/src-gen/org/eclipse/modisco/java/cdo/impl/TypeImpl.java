@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TypeImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public abstract class TypeImpl extends NamedElementImpl implements Type {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getUsagesInTypeAccess() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getType_UsagesInTypeAccess(), true);
 	}

@@ -26,10 +26,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.TextElementImpl#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,6 +58,7 @@ public class TextElementImpl extends ASTNodeImpl implements TextElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return (String)eGet(JavaPackage.eINSTANCE.getTextElement_Text(), true);
 	}
@@ -67,6 +68,7 @@ public class TextElementImpl extends ASTNodeImpl implements TextElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		eSet(JavaPackage.eINSTANCE.getTextElement_Text(), newText);
 	}

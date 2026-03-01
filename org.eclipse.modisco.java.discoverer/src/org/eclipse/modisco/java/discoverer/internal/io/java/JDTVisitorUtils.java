@@ -43,7 +43,9 @@ import org.eclipse.modisco.java.PackageAccess;
 import org.eclipse.modisco.java.ParameterizedType;
 import org.eclipse.modisco.java.PrimitiveType;
 import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.Type;
 import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedItemAccess;
 import org.eclipse.modisco.java.WildCardType;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -512,6 +514,13 @@ public final class JDTVisitorUtils {
 			((PendingElement) node).setClientNode(typAcc);
 			((PendingElement) node).setLinkName("type"); //$NON-NLS-1$
 			return typAcc;
+		}
+	}
+	public static Type completeTypeAccess2(final ASTNode node, final JDTVisitor visitor) {
+		if (node instanceof UnionType) {
+			return (UnionType) node;
+		} else  {
+			throw new UnsupportedOperationException();		// XXX
 		}
 	}
 

@@ -42,12 +42,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayCreationImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayCreationImpl#getInitializer <em>Initializer</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayCreationImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -106,6 +106,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getDimensions() {
 		if (dimensions == null) {
 			dimensions = new EObjectContainmentEList<Expression>(Expression.class, this, JavaPackage.ARRAY_CREATION__DIMENSIONS);
@@ -118,6 +119,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayInitializer getInitializer() {
 		return initializer;
 	}
@@ -142,6 +144,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitializer(ArrayInitializer newInitializer) {
 		if (newInitializer != initializer) {
 			NotificationChain msgs = null;
@@ -161,6 +164,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -185,6 +189,7 @@ public class ArrayCreationImpl extends ExpressionImpl implements ArrayCreation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

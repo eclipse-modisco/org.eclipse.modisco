@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.AbstractTypeQualifiedExpressionImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public abstract class AbstractTypeQualifiedExpressionImpl extends ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAbstractTypeQualifiedExpression_Qualifier(), true);
 	}
@@ -68,6 +69,7 @@ public abstract class AbstractTypeQualifiedExpressionImpl extends ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getAbstractTypeQualifiedExpression_Qualifier(), newQualifier);
 	}

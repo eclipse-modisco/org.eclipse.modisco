@@ -32,20 +32,17 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Initializer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.InitializerImpl#getBody
- * <em>Body</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.InitializerImpl#getBody <em>Body</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class InitializerImpl extends BodyDeclarationImpl implements Initializer {
 	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getBody()
 	 * @generated
 	 * @ordered
@@ -54,7 +51,6 @@ public class InitializerImpl extends BodyDeclarationImpl implements Initializer 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected InitializerImpl() {
@@ -63,7 +59,6 @@ public class InitializerImpl extends BodyDeclarationImpl implements Initializer 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -73,126 +68,110 @@ public class InitializerImpl extends BodyDeclarationImpl implements Initializer 
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return body;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetBody(Block newBody, NotificationChain msgs) {
 		Block oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, JavaPackage.INITIALIZER__BODY, oldBody,
-					newBody);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.INITIALIZER__BODY, oldBody, newBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
-				msgs = ((InternalEObject) body).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - JavaPackage.INITIALIZER__BODY,
-						null, msgs);
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.INITIALIZER__BODY, null, msgs);
 			if (newBody != null)
-				msgs = ((InternalEObject) newBody).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - JavaPackage.INITIALIZER__BODY,
-						null, msgs);
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.INITIALIZER__BODY, null, msgs);
 			msgs = basicSetBody(newBody, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.INITIALIZER__BODY, newBody, newBody));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.INITIALIZER__BODY, newBody, newBody));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.INITIALIZER__BODY:
-			return basicSetBody(null, msgs);
+			case JavaPackage.INITIALIZER__BODY:
+				return basicSetBody(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.INITIALIZER__BODY:
-			return getBody();
+			case JavaPackage.INITIALIZER__BODY:
+				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.INITIALIZER__BODY:
-			setBody((Block) newValue);
-			return;
+			case JavaPackage.INITIALIZER__BODY:
+				setBody((Block)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.INITIALIZER__BODY:
-			setBody((Block) null);
-			return;
+			case JavaPackage.INITIALIZER__BODY:
+				setBody((Block)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.INITIALIZER__BODY:
-			return body != null;
+			case JavaPackage.INITIALIZER__BODY:
+				return body != null;
 		}
 		return super.eIsSet(featureID);
 	}

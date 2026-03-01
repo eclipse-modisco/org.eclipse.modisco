@@ -1209,7 +1209,7 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass wildcardTypeEClass = null;
+	private EClass wildCardTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -5624,11 +5624,11 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getWildcardType() {
-		if (wildcardTypeEClass == null) {
-			wildcardTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(170);
+	public EClass getWildCardType() {
+		if (wildCardTypeEClass == null) {
+			wildCardTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(JavaPackage.eNS_URI).getEClassifiers().get(170);
 		}
-		return wildcardTypeEClass;
+		return wildCardTypeEClass;
 	}
 
 	/**
@@ -5637,8 +5637,8 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getWildcardType_UpperBound() {
-        return (EAttribute)getWildcardType().getEStructuralFeatures().get(0);
+	public EAttribute getWildCardType_UpperBound() {
+        return (EAttribute)getWildCardType().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5647,8 +5647,8 @@ public class JavaPackageImpl extends EPackageImpl implements JavaPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWildcardType_Bound() {
-        return (EReference)getWildcardType().getEStructuralFeatures().get(1);
+	public EReference getWildCardType_Bound() {
+        return (EReference)getWildCardType().getEStructuralFeatures().get(1);
 	}
 
 	/**

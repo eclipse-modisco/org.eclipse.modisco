@@ -29,12 +29,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.CommentImpl#getContent <em>Content</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.CommentImpl#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.CommentImpl#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -268,12 +268,12 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (content: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (content: ");
 		result.append(content);
-		result.append(", enclosedByParent: "); //$NON-NLS-1$
+		result.append(", enclosedByParent: ");
 		result.append(enclosedByParent);
-		result.append(", prefixOfParent: "); //$NON-NLS-1$
+		result.append(", prefixOfParent: ");
 		result.append(prefixOfParent);
 		result.append(')');
 		return result.toString();

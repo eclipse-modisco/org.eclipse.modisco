@@ -27,11 +27,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.SwitchCaseImpl#isDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.SwitchCaseImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDefault() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getSwitchCase_Default(), true);
 	}
@@ -69,6 +70,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(boolean newDefault) {
 		eSet(JavaPackage.eINSTANCE.getSwitchCase_Default(), newDefault);
 	}
@@ -78,6 +80,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getSwitchCase_Expression(), true);
 	}
@@ -87,6 +90,7 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getSwitchCase_Expression(), newExpression);
 	}

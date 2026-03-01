@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.AnnotationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.AnnotationImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAnnotation_Type(), true);
 	}
@@ -72,6 +73,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAnnotation_Type(), newType);
 	}
@@ -82,6 +84,7 @@ public class AnnotationImpl extends ExpressionImpl implements Annotation {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AnnotationMemberValuePair> getValues() {
 		return (EList<AnnotationMemberValuePair>)eGet(JavaPackage.eINSTANCE.getAnnotation_Values(), true);
 	}

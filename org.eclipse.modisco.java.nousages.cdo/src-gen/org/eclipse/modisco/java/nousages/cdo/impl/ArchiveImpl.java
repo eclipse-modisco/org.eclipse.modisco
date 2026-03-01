@@ -29,12 +29,12 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Archive</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return (String)eGet(JavaPackage.eINSTANCE.getArchive_OriginalFilePath(), true);
 	}
@@ -68,6 +69,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		eSet(JavaPackage.eINSTANCE.getArchive_OriginalFilePath(), newOriginalFilePath);
 	}
@@ -77,6 +79,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ClassFile> getClassFiles() {
 		return (EList<ClassFile>)eGet(JavaPackage.eINSTANCE.getArchive_ClassFiles(), true);
 	}
@@ -85,6 +88,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifest getManifest() {
 		return (Manifest)eGet(JavaPackage.eINSTANCE.getArchive_Manifest(), true);
 	}
@@ -93,6 +97,7 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManifest(Manifest newManifest) {
 		eSet(JavaPackage.eINSTANCE.getArchive_Manifest(), newManifest);
 	}

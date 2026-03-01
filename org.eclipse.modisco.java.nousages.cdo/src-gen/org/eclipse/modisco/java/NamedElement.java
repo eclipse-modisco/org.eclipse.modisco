@@ -14,6 +14,7 @@
  */
 package org.eclipse.modisco.java;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.modisco.java.ASTNode;
 
 /**
@@ -23,11 +24,12 @@ import org.eclipse.modisco.java.ASTNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.NamedElement#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.NamedElement#isProxy <em>Proxy</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.NamedElement#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getNamedElement()
  * @model abstract="true"
@@ -85,5 +87,19 @@ public interface NamedElement extends ASTNode {
 	 * @generated
 	 */
 	void setProxy(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Usages In Imports</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.ImportDeclaration}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.ImportDeclaration#getImportedElement <em>Imported Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usages In Imports</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getNamedElement_UsagesInImports()
+	 * @see org.eclipse.modisco.java.ImportDeclaration#getImportedElement
+	 * @model opposite="importedElement" ordered="false"
+	 * @generated
+	 */
+	EList<ImportDeclaration> getUsagesInImports();
 
 } // NamedElement

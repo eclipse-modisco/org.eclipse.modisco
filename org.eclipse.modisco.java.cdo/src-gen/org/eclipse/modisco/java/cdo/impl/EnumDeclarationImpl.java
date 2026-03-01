@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.EnumDeclarationImpl#getEnumConstants <em>Enum Constants</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class EnumDeclarationImpl extends AbstractTypeDeclarationImpl implements 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<EnumConstantDeclaration> getEnumConstants() {
 		return (EList<EnumConstantDeclaration>)eGet(JavaPackage.eINSTANCE.getEnumDeclaration_EnumConstants(), true);
 	}

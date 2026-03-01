@@ -33,10 +33,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TypeDeclarationStatementImpl#getDeclaration <em>Declaration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class TypeDeclarationStatementImpl extends StatementImpl implements TypeD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getDeclaration() {
 		return declaration;
 	}
@@ -99,6 +100,7 @@ public class TypeDeclarationStatementImpl extends StatementImpl implements TypeD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclaration(AbstractTypeDeclaration newDeclaration) {
 		if (newDeclaration != declaration) {
 			NotificationChain msgs = null;

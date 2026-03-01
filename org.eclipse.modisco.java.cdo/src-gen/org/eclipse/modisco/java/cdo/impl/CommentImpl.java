@@ -26,12 +26,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.CommentImpl#getContent <em>Content</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.CommentImpl#isEnclosedByParent <em>Enclosed By Parent</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.CommentImpl#isPrefixOfParent <em>Prefix Of Parent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContent() {
 		return (String)eGet(JavaPackage.eINSTANCE.getComment_Content(), true);
 	}
@@ -69,6 +70,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContent(String newContent) {
 		eSet(JavaPackage.eINSTANCE.getComment_Content(), newContent);
 	}
@@ -78,6 +80,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEnclosedByParent() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getComment_EnclosedByParent(), true);
 	}
@@ -87,6 +90,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosedByParent(boolean newEnclosedByParent) {
 		eSet(JavaPackage.eINSTANCE.getComment_EnclosedByParent(), newEnclosedByParent);
 	}
@@ -96,6 +100,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPrefixOfParent() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getComment_PrefixOfParent(), true);
 	}
@@ -105,6 +110,7 @@ public abstract class CommentImpl extends ASTNodeImpl implements Comment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefixOfParent(boolean newPrefixOfParent) {
 		eSet(JavaPackage.eINSTANCE.getComment_PrefixOfParent(), newPrefixOfParent);
 	}

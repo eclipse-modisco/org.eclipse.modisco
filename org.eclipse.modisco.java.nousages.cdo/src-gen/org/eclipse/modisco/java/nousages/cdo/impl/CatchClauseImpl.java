@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CatchClauseImpl#getException <em>Exception</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CatchClauseImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration getException() {
 		return (SingleVariableDeclaration)eGet(JavaPackage.eINSTANCE.getCatchClause_Exception(), true);
 	}
@@ -70,6 +71,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setException(SingleVariableDeclaration newException) {
 		eSet(JavaPackage.eINSTANCE.getCatchClause_Exception(), newException);
 	}
@@ -79,6 +81,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getCatchClause_Body(), true);
 	}
@@ -88,6 +91,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		eSet(JavaPackage.eINSTANCE.getCatchClause_Body(), newBody);
 	}

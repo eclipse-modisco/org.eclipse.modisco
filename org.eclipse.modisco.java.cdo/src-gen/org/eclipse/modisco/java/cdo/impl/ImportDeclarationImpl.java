@@ -27,11 +27,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ImportDeclarationImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ImportDeclarationImpl#getImportedElement <em>Imported Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return (Boolean)eGet(JavaPackage.eINSTANCE.getImportDeclaration_Static(), true);
 	}
@@ -69,6 +70,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatic(boolean newStatic) {
 		eSet(JavaPackage.eINSTANCE.getImportDeclaration_Static(), newStatic);
 	}
@@ -78,6 +80,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getImportedElement() {
 		return (NamedElement)eGet(JavaPackage.eINSTANCE.getImportDeclaration_ImportedElement(), true);
 	}
@@ -87,6 +90,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportedElement(NamedElement newImportedElement) {
 		eSet(JavaPackage.eINSTANCE.getImportDeclaration_ImportedElement(), newImportedElement);
 	}

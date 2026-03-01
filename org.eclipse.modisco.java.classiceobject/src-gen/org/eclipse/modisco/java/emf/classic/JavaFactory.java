@@ -15,19 +15,19 @@
  */
 package org.eclipse.modisco.java.emf.classic;
 
-import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.modisco.java.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
+ * @extends org.eclipse.modisco.java.emf.JavaFactory
  * <!-- end-user-doc -->
  * @see org.eclipse.modisco.java.emf.classic.JavaPackage
  * @generated
  */
 public interface JavaFactory extends
-		org.eclipse.modisco.java.emf.JavaFactory {
+	org.eclipse.modisco.java.emf.JavaFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -43,6 +43,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Annotation</em>'.
 	 * @generated
 	 */
+	@Override
 	Annotation createAnnotation();
 
 	/**
@@ -52,6 +53,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Archive</em>'.
 	 * @generated
 	 */
+	@Override
 	Archive createArchive();
 
 	/**
@@ -61,6 +63,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Assert Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	AssertStatement createAssertStatement();
 
 	/**
@@ -70,6 +73,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Annotation Member Value Pair</em>'.
 	 * @generated
 	 */
+	@Override
 	AnnotationMemberValuePair createAnnotationMemberValuePair();
 
 	/**
@@ -79,6 +83,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Annotation Type Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	AnnotationTypeDeclaration createAnnotationTypeDeclaration();
 
 	/**
@@ -88,6 +93,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Annotation Type Member Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	AnnotationTypeMemberDeclaration createAnnotationTypeMemberDeclaration();
 
 	/**
@@ -97,6 +103,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Anonymous Class Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	AnonymousClassDeclaration createAnonymousClassDeclaration();
 
 	/**
@@ -106,6 +113,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Array Access</em>'.
 	 * @generated
 	 */
+	@Override
 	ArrayAccess createArrayAccess();
 
 	/**
@@ -115,6 +123,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Array Creation</em>'.
 	 * @generated
 	 */
+	@Override
 	ArrayCreation createArrayCreation();
 
 	/**
@@ -124,6 +133,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Array Initializer</em>'.
 	 * @generated
 	 */
+	@Override
 	ArrayInitializer createArrayInitializer();
 
 	/**
@@ -133,6 +143,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Array Length Access</em>'.
 	 * @generated
 	 */
+	@Override
 	ArrayLengthAccess createArrayLengthAccess();
 
 	/**
@@ -142,6 +153,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Array Type</em>'.
 	 * @generated
 	 */
+	@Override
 	ArrayType createArrayType();
 
 	/**
@@ -151,6 +163,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Assignment</em>'.
 	 * @generated
 	 */
+	@Override
 	Assignment createAssignment();
 
 	/**
@@ -160,6 +173,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Boolean Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	BooleanLiteral createBooleanLiteral();
 
 	/**
@@ -169,6 +183,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Block Comment</em>'.
 	 * @generated
 	 */
+	@Override
 	BlockComment createBlockComment();
 
 	/**
@@ -178,6 +193,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Block</em>'.
 	 * @generated
 	 */
+	@Override
 	Block createBlock();
 
 	/**
@@ -187,7 +203,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Break Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	BreakStatement createBreakStatement();
+
+	/**
+	 * Returns a new object of class '<em>Case Default Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Case Default Expression</em>'.
+	 * @generated
+	 */
+	@Override
+	CaseDefaultExpression createCaseDefaultExpression();
 
 	/**
 	 * Returns a new object of class '<em>Cast Expression</em>'.
@@ -196,6 +223,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Cast Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	CastExpression createCastExpression();
 
 	/**
@@ -205,6 +233,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Catch Clause</em>'.
 	 * @generated
 	 */
+	@Override
 	CatchClause createCatchClause();
 
 	/**
@@ -214,6 +243,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Character Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	CharacterLiteral createCharacterLiteral();
 
 	/**
@@ -223,6 +253,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Class File</em>'.
 	 * @generated
 	 */
+	@Override
 	ClassFile createClassFile();
 
 	/**
@@ -232,6 +263,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Class Instance Creation</em>'.
 	 * @generated
 	 */
+	@Override
 	ClassInstanceCreation createClassInstanceCreation();
 
 	/**
@@ -241,6 +273,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Constructor Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	ConstructorDeclaration createConstructorDeclaration();
 
 	/**
@@ -250,6 +283,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Conditional Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	ConditionalExpression createConditionalExpression();
 
 	/**
@@ -259,6 +293,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Constructor Invocation</em>'.
 	 * @generated
 	 */
+	@Override
 	ConstructorInvocation createConstructorInvocation();
 
 	/**
@@ -268,6 +303,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Class Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	ClassDeclaration createClassDeclaration();
 
 	/**
@@ -277,6 +313,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Compilation Unit</em>'.
 	 * @generated
 	 */
+	@Override
 	CompilationUnit createCompilationUnit();
 
 	/**
@@ -286,7 +323,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Continue Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	ContinueStatement createContinueStatement();
+
+	/**
+	 * Returns a new object of class '<em>Creation Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Creation Reference</em>'.
+	 * @generated
+	 */
+	@Override
+	CreationReference createCreationReference();
 
 	/**
 	 * Returns a new object of class '<em>Do Statement</em>'.
@@ -295,7 +343,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Do Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	DoStatement createDoStatement();
+
+	/**
+	 * Returns a new object of class '<em>Either Or Multi Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Either Or Multi Pattern</em>'.
+	 * @generated
+	 */
+	@Override
+	EitherOrMultiPattern createEitherOrMultiPattern();
 
 	/**
 	 * Returns a new object of class '<em>Empty Statement</em>'.
@@ -304,6 +363,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Empty Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	EmptyStatement createEmptyStatement();
 
 	/**
@@ -313,6 +373,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Enhanced For Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	EnhancedForStatement createEnhancedForStatement();
 
 	/**
@@ -322,6 +383,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Enum Constant Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	EnumConstantDeclaration createEnumConstantDeclaration();
 
 	/**
@@ -331,7 +393,28 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Enum Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	EnumDeclaration createEnumDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Exports Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exports Directive</em>'.
+	 * @generated
+	 */
+	@Override
+	ExportsDirective createExportsDirective();
+
+	/**
+	 * Returns a new object of class '<em>Expression Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Method Reference</em>'.
+	 * @generated
+	 */
+	@Override
+	ExpressionMethodReference createExpressionMethodReference();
 
 	/**
 	 * Returns a new object of class '<em>Expression Statement</em>'.
@@ -340,6 +423,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Expression Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	ExpressionStatement createExpressionStatement();
 
 	/**
@@ -349,6 +433,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Field Access</em>'.
 	 * @generated
 	 */
+	@Override
 	FieldAccess createFieldAccess();
 
 	/**
@@ -358,6 +443,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Field Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	FieldDeclaration createFieldDeclaration();
 
 	/**
@@ -367,7 +453,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>For Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	ForStatement createForStatement();
+
+	/**
+	 * Returns a new object of class '<em>Guarded Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Guarded Pattern</em>'.
+	 * @generated
+	 */
+	@Override
+	GuardedPattern createGuardedPattern();
 
 	/**
 	 * Returns a new object of class '<em>If Statement</em>'.
@@ -376,7 +473,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>If Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	IfStatement createIfStatement();
+
+	/**
+	 * Returns a new object of class '<em>Implicit Type Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implicit Type Declaration</em>'.
+	 * @generated
+	 */
+	@Override
+	ImplicitTypeDeclaration createImplicitTypeDeclaration();
 
 	/**
 	 * Returns a new object of class '<em>Import Declaration</em>'.
@@ -385,6 +493,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Import Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	ImportDeclaration createImportDeclaration();
 
 	/**
@@ -394,6 +503,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Infix Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	InfixExpression createInfixExpression();
 
 	/**
@@ -403,6 +513,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Initializer</em>'.
 	 * @generated
 	 */
+	@Override
 	Initializer createInitializer();
 
 	/**
@@ -412,6 +523,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Instanceof Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	InstanceofExpression createInstanceofExpression();
 
 	/**
@@ -421,7 +533,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Interface Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	InterfaceDeclaration createInterfaceDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Intersection Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Intersection Type</em>'.
+	 * @generated
+	 */
+	@Override
+	IntersectionType createIntersectionType();
 
 	/**
 	 * Returns a new object of class '<em>Javadoc</em>'.
@@ -430,7 +553,28 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Javadoc</em>'.
 	 * @generated
 	 */
+	@Override
 	Javadoc createJavadoc();
+
+	/**
+	 * Returns a new object of class '<em>Doc Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Doc Region</em>'.
+	 * @generated
+	 */
+	@Override
+	JavaDocRegion createJavaDocRegion();
+
+	/**
+	 * Returns a new object of class '<em>Doc Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Doc Text Element</em>'.
+	 * @generated
+	 */
+	@Override
+	JavaDocTextElement createJavaDocTextElement();
 
 	/**
 	 * Returns a new object of class '<em>Labeled Statement</em>'.
@@ -439,7 +583,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Labeled Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	LabeledStatement createLabeledStatement();
+
+	/**
+	 * Returns a new object of class '<em>Lambda Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lambda Expression</em>'.
+	 * @generated
+	 */
+	@Override
+	LambdaExpression createLambdaExpression();
 
 	/**
 	 * Returns a new object of class '<em>Line Comment</em>'.
@@ -448,6 +603,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Line Comment</em>'.
 	 * @generated
 	 */
+	@Override
 	LineComment createLineComment();
 
 	/**
@@ -457,6 +613,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Manifest</em>'.
 	 * @generated
 	 */
+	@Override
 	Manifest createManifest();
 
 	/**
@@ -466,6 +623,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Manifest Attribute</em>'.
 	 * @generated
 	 */
+	@Override
 	ManifestAttribute createManifestAttribute();
 
 	/**
@@ -475,6 +633,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Manifest Entry</em>'.
 	 * @generated
 	 */
+	@Override
 	ManifestEntry createManifestEntry();
 
 	/**
@@ -484,6 +643,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Member Ref</em>'.
 	 * @generated
 	 */
+	@Override
 	MemberRef createMemberRef();
 
 	/**
@@ -493,6 +653,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Method Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	MethodDeclaration createMethodDeclaration();
 
 	/**
@@ -502,6 +663,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Method Invocation</em>'.
 	 * @generated
 	 */
+	@Override
 	MethodInvocation createMethodInvocation();
 
 	/**
@@ -511,6 +673,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Method Ref</em>'.
 	 * @generated
 	 */
+	@Override
 	MethodRef createMethodRef();
 
 	/**
@@ -520,6 +683,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Method Ref Parameter</em>'.
 	 * @generated
 	 */
+	@Override
 	MethodRefParameter createMethodRefParameter();
 
 	/**
@@ -529,6 +693,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Model</em>'.
 	 * @generated
 	 */
+	@Override
 	Model createModel();
 
 	/**
@@ -538,7 +703,48 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Modifier</em>'.
 	 * @generated
 	 */
+	@Override
 	Modifier createModifier();
+
+	/**
+	 * Returns a new object of class '<em>Module Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Declaration</em>'.
+	 * @generated
+	 */
+	@Override
+	ModuleDeclaration createModuleDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Module Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Modifier</em>'.
+	 * @generated
+	 */
+	@Override
+	ModuleModifier createModuleModifier();
+
+	/**
+	 * Returns a new object of class '<em>Module Qualified Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Qualified Name</em>'.
+	 * @generated
+	 */
+	@Override
+	ModuleQualifiedName createModuleQualifiedName();
+
+	/**
+	 * Returns a new object of class '<em>Name Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Name Qualified Type</em>'.
+	 * @generated
+	 */
+	@Override
+	NameQualifiedType createNameQualifiedType();
 
 	/**
 	 * Returns a new object of class '<em>Number Literal</em>'.
@@ -547,6 +753,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Number Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	NumberLiteral createNumberLiteral();
 
 	/**
@@ -556,7 +763,28 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Null Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	NullLiteral createNullLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Null Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Null Pattern</em>'.
+	 * @generated
+	 */
+	@Override
+	NullPattern createNullPattern();
+
+	/**
+	 * Returns a new object of class '<em>Opens Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Opens Directive</em>'.
+	 * @generated
+	 */
+	@Override
+	OpensDirective createOpensDirective();
 
 	/**
 	 * Returns a new object of class '<em>Package</em>'.
@@ -565,6 +793,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Package</em>'.
 	 * @generated
 	 */
+	@Override
 	org.eclipse.modisco.java.Package createPackage();
 
 	/**
@@ -574,6 +803,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Package Access</em>'.
 	 * @generated
 	 */
+	@Override
 	PackageAccess createPackageAccess();
 
 	/**
@@ -583,6 +813,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Parameterized Type</em>'.
 	 * @generated
 	 */
+	@Override
 	ParameterizedType createParameterizedType();
 
 	/**
@@ -592,7 +823,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Parenthesized Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	ParenthesizedExpression createParenthesizedExpression();
+
+	/**
+	 * Returns a new object of class '<em>Pattern Instanceof Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pattern Instanceof Expression</em>'.
+	 * @generated
+	 */
+	@Override
+	PatternInstanceofExpression createPatternInstanceofExpression();
 
 	/**
 	 * Returns a new object of class '<em>Postfix Expression</em>'.
@@ -601,6 +843,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Postfix Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	PostfixExpression createPostfixExpression();
 
 	/**
@@ -610,6 +853,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Prefix Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	PrefixExpression createPrefixExpression();
 
 	/**
@@ -619,6 +863,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveType createPrimitiveType();
 
 	/**
@@ -628,6 +873,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Boolean</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeBoolean createPrimitiveTypeBoolean();
 
 	/**
@@ -637,6 +883,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Byte</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeByte createPrimitiveTypeByte();
 
 	/**
@@ -646,6 +893,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Char</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeChar createPrimitiveTypeChar();
 
 	/**
@@ -655,6 +903,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Double</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeDouble createPrimitiveTypeDouble();
 
 	/**
@@ -664,6 +913,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Short</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeShort createPrimitiveTypeShort();
 
 	/**
@@ -673,6 +923,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Float</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeFloat createPrimitiveTypeFloat();
 
 	/**
@@ -682,6 +933,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Int</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeInt createPrimitiveTypeInt();
 
 	/**
@@ -691,6 +943,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Long</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeLong createPrimitiveTypeLong();
 
 	/**
@@ -700,7 +953,58 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Primitive Type Void</em>'.
 	 * @generated
 	 */
+	@Override
 	PrimitiveTypeVoid createPrimitiveTypeVoid();
+
+	/**
+	 * Returns a new object of class '<em>Provides Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Provides Directive</em>'.
+	 * @generated
+	 */
+	@Override
+	ProvidesDirective createProvidesDirective();
+
+	/**
+	 * Returns a new object of class '<em>Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Qualified Type</em>'.
+	 * @generated
+	 */
+	@Override
+	QualifiedType createQualifiedType();
+
+	/**
+	 * Returns a new object of class '<em>Record Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Record Declaration</em>'.
+	 * @generated
+	 */
+	@Override
+	RecordDeclaration createRecordDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Record Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Record Pattern</em>'.
+	 * @generated
+	 */
+	@Override
+	RecordPattern createRecordPattern();
+
+	/**
+	 * Returns a new object of class '<em>Requires Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requires Directive</em>'.
+	 * @generated
+	 */
+	@Override
+	RequiresDirective createRequiresDirective();
 
 	/**
 	 * Returns a new object of class '<em>Return Statement</em>'.
@@ -709,7 +1013,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Return Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	ReturnStatement createReturnStatement();
+
+	/**
+	 * Returns a new object of class '<em>Simple Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Type</em>'.
+	 * @generated
+	 */
+	@Override
+	SimpleType createSimpleType();
 
 	/**
 	 * Returns a new object of class '<em>Single Variable Access</em>'.
@@ -718,6 +1033,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Single Variable Access</em>'.
 	 * @generated
 	 */
+	@Override
 	SingleVariableAccess createSingleVariableAccess();
 
 	/**
@@ -727,6 +1043,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Single Variable Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	SingleVariableDeclaration createSingleVariableDeclaration();
 
 	/**
@@ -736,6 +1053,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>String Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	StringLiteral createStringLiteral();
 
 	/**
@@ -745,6 +1063,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Super Constructor Invocation</em>'.
 	 * @generated
 	 */
+	@Override
 	SuperConstructorInvocation createSuperConstructorInvocation();
 
 	/**
@@ -754,6 +1073,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Super Field Access</em>'.
 	 * @generated
 	 */
+	@Override
 	SuperFieldAccess createSuperFieldAccess();
 
 	/**
@@ -763,7 +1083,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Super Method Invocation</em>'.
 	 * @generated
 	 */
+	@Override
 	SuperMethodInvocation createSuperMethodInvocation();
+
+	/**
+	 * Returns a new object of class '<em>Super Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Super Method Reference</em>'.
+	 * @generated
+	 */
+	@Override
+	SuperMethodReference createSuperMethodReference();
 
 	/**
 	 * Returns a new object of class '<em>Switch Case</em>'.
@@ -772,7 +1103,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Switch Case</em>'.
 	 * @generated
 	 */
+	@Override
 	SwitchCase createSwitchCase();
+
+	/**
+	 * Returns a new object of class '<em>Switch Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Switch Expression</em>'.
+	 * @generated
+	 */
+	@Override
+	SwitchExpression createSwitchExpression();
 
 	/**
 	 * Returns a new object of class '<em>Switch Statement</em>'.
@@ -781,6 +1123,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Switch Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	SwitchStatement createSwitchStatement();
 
 	/**
@@ -790,6 +1133,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Synchronized Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	SynchronizedStatement createSynchronizedStatement();
 
 	/**
@@ -799,7 +1143,28 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Tag Element</em>'.
 	 * @generated
 	 */
+	@Override
 	TagElement createTagElement();
+
+	/**
+	 * Returns a new object of class '<em>Tag Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tag Property</em>'.
+	 * @generated
+	 */
+	@Override
+	TagProperty createTagProperty();
+
+	/**
+	 * Returns a new object of class '<em>Text Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Block</em>'.
+	 * @generated
+	 */
+	@Override
+	TextBlock createTextBlock();
 
 	/**
 	 * Returns a new object of class '<em>Text Element</em>'.
@@ -808,6 +1173,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Text Element</em>'.
 	 * @generated
 	 */
+	@Override
 	TextElement createTextElement();
 
 	/**
@@ -817,6 +1183,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>This Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	ThisExpression createThisExpression();
 
 	/**
@@ -826,6 +1193,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Throw Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	ThrowStatement createThrowStatement();
 
 	/**
@@ -835,6 +1203,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Try Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	TryStatement createTryStatement();
 
 	/**
@@ -844,6 +1213,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Type Access</em>'.
 	 * @generated
 	 */
+	@Override
 	TypeAccess createTypeAccess();
 
 	/**
@@ -853,6 +1223,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Type Declaration Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	TypeDeclarationStatement createTypeDeclarationStatement();
 
 	/**
@@ -862,7 +1233,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Type Literal</em>'.
 	 * @generated
 	 */
+	@Override
 	TypeLiteral createTypeLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Type Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Method Reference</em>'.
+	 * @generated
+	 */
+	@Override
+	TypeMethodReference createTypeMethodReference();
 
 	/**
 	 * Returns a new object of class '<em>Type Parameter</em>'.
@@ -871,7 +1253,28 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Type Parameter</em>'.
 	 * @generated
 	 */
+	@Override
 	TypeParameter createTypeParameter();
+
+	/**
+	 * Returns a new object of class '<em>Type Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Pattern</em>'.
+	 * @generated
+	 */
+	@Override
+	TypePattern createTypePattern();
+
+	/**
+	 * Returns a new object of class '<em>Union Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Union Type</em>'.
+	 * @generated
+	 */
+	@Override
+	UnionType createUnionType();
 
 	/**
 	 * Returns a new object of class '<em>Unresolved Item</em>'.
@@ -880,6 +1283,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Item</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedItem createUnresolvedItem();
 
 	/**
@@ -889,6 +1293,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Item Access</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedItemAccess createUnresolvedItemAccess();
 
 	/**
@@ -898,6 +1303,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Annotation Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedAnnotationDeclaration createUnresolvedAnnotationDeclaration();
 
 	/**
@@ -907,6 +1313,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Annotation Type Member Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedAnnotationTypeMemberDeclaration createUnresolvedAnnotationTypeMemberDeclaration();
 
 	/**
@@ -916,6 +1323,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Class Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedClassDeclaration createUnresolvedClassDeclaration();
 
 	/**
@@ -925,6 +1333,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Enum Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedEnumDeclaration createUnresolvedEnumDeclaration();
 
 	/**
@@ -934,6 +1343,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Interface Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedInterfaceDeclaration createUnresolvedInterfaceDeclaration();
 
 	/**
@@ -943,6 +1353,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Labeled Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedLabeledStatement createUnresolvedLabeledStatement();
 
 	/**
@@ -952,6 +1363,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Method Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedMethodDeclaration createUnresolvedMethodDeclaration();
 
 	/**
@@ -961,6 +1373,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Single Variable Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedSingleVariableDeclaration createUnresolvedSingleVariableDeclaration();
 
 	/**
@@ -970,6 +1383,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Type</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedType createUnresolvedType();
 
 	/**
@@ -979,6 +1393,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Type Declaration</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedTypeDeclaration createUnresolvedTypeDeclaration();
 
 	/**
@@ -988,7 +1403,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Unresolved Variable Declaration Fragment</em>'.
 	 * @generated
 	 */
+	@Override
 	UnresolvedVariableDeclarationFragment createUnresolvedVariableDeclarationFragment();
+
+	/**
+	 * Returns a new object of class '<em>Uses Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Uses Directive</em>'.
+	 * @generated
+	 */
+	@Override
+	UsesDirective createUsesDirective();
 
 	/**
 	 * Returns a new object of class '<em>Variable Declaration Expression</em>'.
@@ -997,6 +1423,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Variable Declaration Expression</em>'.
 	 * @generated
 	 */
+	@Override
 	VariableDeclarationExpression createVariableDeclarationExpression();
 
 	/**
@@ -1006,6 +1433,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Variable Declaration Fragment</em>'.
 	 * @generated
 	 */
+	@Override
 	VariableDeclarationFragment createVariableDeclarationFragment();
 
 	/**
@@ -1015,6 +1443,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Variable Declaration Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	VariableDeclarationStatement createVariableDeclarationStatement();
 
 	/**
@@ -1024,6 +1453,7 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>Wild Card Type</em>'.
 	 * @generated
 	 */
+	@Override
 	WildCardType createWildCardType();
 
 	/**
@@ -1033,7 +1463,18 @@ public interface JavaFactory extends
 	 * @return a new object of class '<em>While Statement</em>'.
 	 * @generated
 	 */
+	@Override
 	WhileStatement createWhileStatement();
+
+	/**
+	 * Returns a new object of class '<em>Yield Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Yield Statement</em>'.
+	 * @generated
+	 */
+	@Override
+	YieldStatement createYieldStatement();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -1042,6 +1483,7 @@ public interface JavaFactory extends
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
+	@Override
 	JavaPackage getJavaPackage();
 
 } //JavaFactory

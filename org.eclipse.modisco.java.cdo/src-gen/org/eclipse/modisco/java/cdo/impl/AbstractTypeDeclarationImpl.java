@@ -32,6 +32,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -70,6 +70,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getUsagesInTypeAccess() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getType_UsagesInTypeAccess(), true);
 	}
@@ -80,6 +81,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<BodyDeclaration> getBodyDeclarations() {
 		return (EList<BodyDeclaration>)eGet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_BodyDeclarations(), true);
 	}
@@ -90,6 +92,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Comment> getCommentsBeforeBody() {
 		return (EList<Comment>)eGet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_CommentsBeforeBody(), true);
 	}
@@ -100,6 +103,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Comment> getCommentsAfterBody() {
 		return (EList<Comment>)eGet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_CommentsAfterBody(), true);
 	}
@@ -109,6 +113,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		return (org.eclipse.modisco.java.Package)eGet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_Package(), true);
 	}
@@ -118,6 +123,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		eSet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_Package(), newPackage);
 	}
@@ -128,6 +134,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getSuperInterfaces() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getAbstractTypeDeclaration_SuperInterfaces(), true);
 	}

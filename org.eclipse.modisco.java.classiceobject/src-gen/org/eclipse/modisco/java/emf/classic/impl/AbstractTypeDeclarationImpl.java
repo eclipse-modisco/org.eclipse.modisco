@@ -45,6 +45,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractTypeDeclarationImpl#getUsagesInTypeAccess <em>Usages In Type Access</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractTypeDeclarationImpl#getBodyDeclarations <em>Body Declarations</em>}</li>
@@ -53,7 +54,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractTypeDeclarationImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AbstractTypeDeclarationImpl#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -182,7 +182,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	 */
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE) return null;
-		return (org.eclipse.modisco.java.Package)eContainer();
+		return (org.eclipse.modisco.java.Package)eInternalContainer();
 	}
 
 	/**
@@ -203,7 +203,7 @@ public abstract class AbstractTypeDeclarationImpl extends BodyDeclarationImpl im
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		if (newPackage != eInternalContainer() || (eContainerFeatureID() != JavaPackage.ABSTRACT_TYPE_DECLARATION__PACKAGE && newPackage != null)) {
 			if (EcoreUtil.isAncestor(this, newPackage))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

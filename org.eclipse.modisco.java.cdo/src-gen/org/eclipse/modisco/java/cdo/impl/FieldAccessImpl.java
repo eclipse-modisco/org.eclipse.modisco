@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.FieldAccessImpl#getField <em>Field</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.FieldAccessImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableAccess getField() {
 		return (SingleVariableAccess)eGet(JavaPackage.eINSTANCE.getFieldAccess_Field(), true);
 	}
@@ -70,6 +71,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setField(SingleVariableAccess newField) {
 		eSet(JavaPackage.eINSTANCE.getFieldAccess_Field(), newField);
 	}
@@ -79,6 +81,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getFieldAccess_Expression(), true);
 	}
@@ -88,6 +91,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getFieldAccess_Expression(), newExpression);
 	}

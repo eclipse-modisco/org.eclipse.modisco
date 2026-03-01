@@ -41,12 +41,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TryStatementImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TryStatementImpl#getFinally <em>Finally</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TryStatementImpl#getCatchClauses <em>Catch Clauses</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -105,6 +105,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return body;
 	}
@@ -129,6 +130,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
@@ -148,6 +150,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getFinally() {
 		return finally_;
 	}
@@ -172,6 +175,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinally(Block newFinally) {
 		if (newFinally != finally_) {
 			NotificationChain msgs = null;
@@ -191,6 +195,7 @@ public class TryStatementImpl extends StatementImpl implements TryStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CatchClause> getCatchClauses() {
 		if (catchClauses == null) {
 			catchClauses = new EObjectContainmentEList<CatchClause>(CatchClause.class, this, JavaPackage.TRY_STATEMENT__CATCH_CLAUSES);

@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.SingleVariableAccessImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.SingleVariableAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclaration getVariable() {
 		return (VariableDeclaration)eGet(JavaPackage.eINSTANCE.getSingleVariableAccess_Variable(), true);
 	}
@@ -70,6 +71,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(VariableDeclaration newVariable) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableAccess_Variable(), newVariable);
 	}
@@ -79,6 +81,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getQualifier() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getSingleVariableAccess_Qualifier(), true);
 	}
@@ -88,6 +91,7 @@ public class SingleVariableAccessImpl extends ExpressionImpl implements SingleVa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(Expression newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getSingleVariableAccess_Qualifier(), newQualifier);
 	}

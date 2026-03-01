@@ -31,12 +31,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		return (AbstractMethodDeclaration)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), true);
 	}
@@ -74,6 +75,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(AbstractMethodDeclaration newMethod) {
 		eSet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Method(), newMethod);
 	}
@@ -84,6 +86,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Expression> getArguments() {
 		return (EList<Expression>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_Arguments(), true);
 	}
@@ -94,6 +97,7 @@ public abstract class AbstractMethodInvocationImpl extends ASTNodeImpl implement
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getAbstractMethodInvocation_TypeArguments(), true);
 	}

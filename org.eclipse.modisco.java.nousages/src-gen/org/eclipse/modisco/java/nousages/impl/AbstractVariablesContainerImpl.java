@@ -41,11 +41,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractVariablesContainerImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractVariablesContainerImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -118,6 +119,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -137,6 +139,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentWithInverseEList<VariableDeclarationFragment>(VariableDeclarationFragment.class, this, JavaPackage.ABSTRACT_VARIABLES_CONTAINER__FRAGMENTS, JavaPackage.VARIABLE_DECLARATION_FRAGMENT__VARIABLES_CONTAINER);

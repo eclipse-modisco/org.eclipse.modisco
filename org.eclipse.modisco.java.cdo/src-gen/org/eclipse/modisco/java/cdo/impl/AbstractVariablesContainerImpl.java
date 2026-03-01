@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractVariablesContainerImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractVariablesContainerImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), true);
 	}
@@ -72,6 +73,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), newType);
 	}
@@ -82,6 +84,7 @@ public abstract class AbstractVariablesContainerImpl extends ASTNodeImpl impleme
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		return (EList<VariableDeclarationFragment>)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Fragments(), true);
 	}

@@ -42,12 +42,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ASTNodeImpl#getComments <em>Comments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ASTNodeImpl#getOriginalCompilationUnit <em>Original Compilation Unit</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ASTNodeImpl#getOriginalClassFile <em>Original Class File</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InstanceofExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.InstanceofExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getRightOperand() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getInstanceofExpression_RightOperand(), true);
 	}
@@ -70,6 +71,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightOperand(TypeAccess newRightOperand) {
 		eSet(JavaPackage.eINSTANCE.getInstanceofExpression_RightOperand(), newRightOperand);
 	}
@@ -79,6 +81,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftOperand() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getInstanceofExpression_LeftOperand(), true);
 	}
@@ -88,6 +91,7 @@ public class InstanceofExpressionImpl extends ExpressionImpl implements Instance
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftOperand(Expression newLeftOperand) {
 		eSet(JavaPackage.eINSTANCE.getInstanceofExpression_LeftOperand(), newLeftOperand);
 	}

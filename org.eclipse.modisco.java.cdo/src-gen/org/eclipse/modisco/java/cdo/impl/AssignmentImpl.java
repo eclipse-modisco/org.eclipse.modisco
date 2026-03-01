@@ -28,12 +28,12 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AssignmentImpl#getLeftHandSide <em>Left Hand Side</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AssignmentImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AssignmentImpl#getRightHandSide <em>Right Hand Side</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLeftHandSide() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAssignment_LeftHandSide(), true);
 	}
@@ -71,6 +72,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLeftHandSide(Expression newLeftHandSide) {
 		eSet(JavaPackage.eINSTANCE.getAssignment_LeftHandSide(), newLeftHandSide);
 	}
@@ -80,6 +82,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentKind getOperator() {
 		return (AssignmentKind)eGet(JavaPackage.eINSTANCE.getAssignment_Operator(), true);
 	}
@@ -89,6 +92,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(AssignmentKind newOperator) {
 		eSet(JavaPackage.eINSTANCE.getAssignment_Operator(), newOperator);
 	}
@@ -98,6 +102,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRightHandSide() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAssignment_RightHandSide(), true);
 	}
@@ -107,6 +112,7 @@ public class AssignmentImpl extends ExpressionImpl implements Assignment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRightHandSide(Expression newRightHandSide) {
 		eSet(JavaPackage.eINSTANCE.getAssignment_RightHandSide(), newRightHandSide);
 	}

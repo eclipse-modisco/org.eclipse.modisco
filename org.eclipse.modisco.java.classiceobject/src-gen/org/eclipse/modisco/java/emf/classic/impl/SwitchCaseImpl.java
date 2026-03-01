@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SwitchCaseImpl#isDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SwitchCaseImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -245,8 +245,8 @@ public class SwitchCaseImpl extends StatementImpl implements SwitchCase {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (default: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (default: ");
 		result.append(default_);
 		result.append(')');
 		return result.toString();

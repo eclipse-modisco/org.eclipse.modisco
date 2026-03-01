@@ -33,10 +33,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.AbstractTypeQualifiedExpressionImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public abstract class AbstractTypeQualifiedExpressionImpl extends ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return qualifier;
 	}
@@ -99,6 +100,7 @@ public abstract class AbstractTypeQualifiedExpressionImpl extends ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;

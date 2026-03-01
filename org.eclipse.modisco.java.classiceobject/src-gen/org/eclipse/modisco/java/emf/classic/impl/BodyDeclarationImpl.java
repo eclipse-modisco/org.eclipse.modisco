@@ -43,13 +43,13 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.BodyDeclarationImpl#getAbstractTypeDeclaration <em>Abstract Type Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.BodyDeclarationImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.BodyDeclarationImpl#getAnonymousClassDeclarationOwner <em>Anonymous Class Declaration Owner</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.BodyDeclarationImpl#getModifier <em>Modifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -100,7 +100,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 */
 	public AbstractTypeDeclaration getAbstractTypeDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION) return null;
-		return (AbstractTypeDeclaration)eContainer();
+		return (AbstractTypeDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -121,7 +121,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	public void setAbstractTypeDeclaration(AbstractTypeDeclaration newAbstractTypeDeclaration) {
 		if (newAbstractTypeDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ABSTRACT_TYPE_DECLARATION && newAbstractTypeDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newAbstractTypeDeclaration))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -153,7 +153,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	 */
 	public AnonymousClassDeclaration getAnonymousClassDeclarationOwner() {
 		if (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER) return null;
-		return (AnonymousClassDeclaration)eContainer();
+		return (AnonymousClassDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -174,7 +174,7 @@ public abstract class BodyDeclarationImpl extends NamedElementImpl implements Bo
 	public void setAnonymousClassDeclarationOwner(AnonymousClassDeclaration newAnonymousClassDeclarationOwner) {
 		if (newAnonymousClassDeclarationOwner != eInternalContainer() || (eContainerFeatureID() != JavaPackage.BODY_DECLARATION__ANONYMOUS_CLASS_DECLARATION_OWNER && newAnonymousClassDeclarationOwner != null)) {
 			if (EcoreUtil.isAncestor(this, newAnonymousClassDeclarationOwner))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);

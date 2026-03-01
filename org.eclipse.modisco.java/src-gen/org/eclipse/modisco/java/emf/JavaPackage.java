@@ -13406,14 +13406,14 @@ public interface JavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.WildcardTypeImpl <em>Wildcard Type</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl <em>Wild Card Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.modisco.java.emf.impl.WildcardTypeImpl
-	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWildcardType()
+	 * @see org.eclipse.modisco.java.emf.impl.WildCardTypeImpl
+	 * @see org.eclipse.modisco.java.emf.impl.JavaPackageImpl#getWildCardType()
 	 * @generated
 	 */
-	int WILDCARD_TYPE = 164;
+	int WILD_CARD_TYPE = 164;
 
 	/**
 	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
@@ -13422,7 +13422,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__COMMENTS = ANNOTATABLE_TYPE__COMMENTS;
+	int WILD_CARD_TYPE__COMMENTS = ANNOTATABLE_TYPE__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Original Compilation Unit</b></em>' reference.
@@ -13431,7 +13431,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__ORIGINAL_COMPILATION_UNIT = ANNOTATABLE_TYPE__ORIGINAL_COMPILATION_UNIT;
+	int WILD_CARD_TYPE__ORIGINAL_COMPILATION_UNIT = ANNOTATABLE_TYPE__ORIGINAL_COMPILATION_UNIT;
 
 	/**
 	 * The feature id for the '<em><b>Original Class File</b></em>' reference.
@@ -13440,7 +13440,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__ORIGINAL_CLASS_FILE = ANNOTATABLE_TYPE__ORIGINAL_CLASS_FILE;
+	int WILD_CARD_TYPE__ORIGINAL_CLASS_FILE = ANNOTATABLE_TYPE__ORIGINAL_CLASS_FILE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -13449,7 +13449,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__NAME = ANNOTATABLE_TYPE__NAME;
+	int WILD_CARD_TYPE__NAME = ANNOTATABLE_TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Proxy</b></em>' attribute.
@@ -13458,7 +13458,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__PROXY = ANNOTATABLE_TYPE__PROXY;
+	int WILD_CARD_TYPE__PROXY = ANNOTATABLE_TYPE__PROXY;
 
 	/**
 	 * The feature id for the '<em><b>Usages In Imports</b></em>' reference list.
@@ -13467,7 +13467,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__USAGES_IN_IMPORTS = ANNOTATABLE_TYPE__USAGES_IN_IMPORTS;
+	int WILD_CARD_TYPE__USAGES_IN_IMPORTS = ANNOTATABLE_TYPE__USAGES_IN_IMPORTS;
 
 	/**
 	 * The feature id for the '<em><b>Usages In Type Access</b></em>' reference list.
@@ -13476,7 +13476,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__USAGES_IN_TYPE_ACCESS = ANNOTATABLE_TYPE__USAGES_IN_TYPE_ACCESS;
+	int WILD_CARD_TYPE__USAGES_IN_TYPE_ACCESS = ANNOTATABLE_TYPE__USAGES_IN_TYPE_ACCESS;
 
 	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
@@ -13485,7 +13485,7 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__UPPER_BOUND = ANNOTATABLE_TYPE_FEATURE_COUNT + 0;
+	int WILD_CARD_TYPE__UPPER_BOUND = ANNOTATABLE_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Bound</b></em>' containment reference.
@@ -13494,16 +13494,16 @@ public interface JavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE__BOUND = ANNOTATABLE_TYPE_FEATURE_COUNT + 1;
+	int WILD_CARD_TYPE__BOUND = ANNOTATABLE_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Wildcard Type</em>' class.
+	 * The number of structural features of the '<em>Wild Card Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WILDCARD_TYPE_FEATURE_COUNT = ANNOTATABLE_TYPE_FEATURE_COUNT + 2;
+	int WILD_CARD_TYPE_FEATURE_COUNT = ANNOTATABLE_TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.modisco.java.emf.impl.WhileStatementImpl <em>While Statement</em>}' class.
@@ -17693,36 +17693,36 @@ public interface JavaPackage extends EPackage {
 	EReference getVariableDeclarationStatement_Annotations();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.modisco.java.WildcardType <em>Wildcard Type</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.modisco.java.WildCardType <em>Wild Card Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wildcard Type</em>'.
-	 * @see org.eclipse.modisco.java.WildcardType
+	 * @return the meta object for class '<em>Wild Card Type</em>'.
+	 * @see org.eclipse.modisco.java.WildCardType
 	 * @generated
 	 */
-	EClass getWildcardType();
+	EClass getWildCardType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.WildcardType#isUpperBound <em>Upper Bound</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.modisco.java.WildCardType#isUpperBound <em>Upper Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
-	 * @see org.eclipse.modisco.java.WildcardType#isUpperBound()
-	 * @see #getWildcardType()
+	 * @see org.eclipse.modisco.java.WildCardType#isUpperBound()
+	 * @see #getWildCardType()
 	 * @generated
 	 */
-	EAttribute getWildcardType_UpperBound();
+	EAttribute getWildCardType_UpperBound();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.WildcardType#getBound <em>Bound</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.modisco.java.WildCardType#getBound <em>Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Bound</em>'.
-	 * @see org.eclipse.modisco.java.WildcardType#getBound()
-	 * @see #getWildcardType()
+	 * @see org.eclipse.modisco.java.WildCardType#getBound()
+	 * @see #getWildCardType()
 	 * @generated
 	 */
-	EReference getWildcardType_Bound();
+	EReference getWildCardType_Bound();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.modisco.java.WhileStatement <em>While Statement</em>}'.

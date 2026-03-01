@@ -32,13 +32,13 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ClassFileImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -347,8 +347,8 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (originalFilePath: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');
 		return result.toString();

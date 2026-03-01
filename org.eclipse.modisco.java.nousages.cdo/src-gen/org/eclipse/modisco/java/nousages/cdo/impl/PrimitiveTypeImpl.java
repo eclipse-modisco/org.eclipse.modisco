@@ -26,12 +26,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Primitive Type</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class PrimitiveTypeImpl extends TypeImpl implements PrimitiveType {
+public class PrimitiveTypeImpl extends AnnotatableTypeImpl implements PrimitiveType {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated

@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CatchClauseImpl#getException <em>Exception</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CatchClauseImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleVariableDeclaration getException() {
 		return exception;
 	}
@@ -111,6 +112,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setException(SingleVariableDeclaration newException) {
 		if (newException != exception) {
 			NotificationChain msgs = null;
@@ -130,6 +132,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return body;
 	}
@@ -154,6 +157,7 @@ public class CatchClauseImpl extends StatementImpl implements CatchClause {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;

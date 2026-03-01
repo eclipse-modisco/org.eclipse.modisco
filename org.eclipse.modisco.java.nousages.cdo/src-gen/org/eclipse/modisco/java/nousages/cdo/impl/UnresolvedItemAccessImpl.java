@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.UnresolvedItemAccessImpl#getElement <em>Element</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.UnresolvedItemAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnresolvedItem getElement() {
 		return (UnresolvedItem)eGet(JavaPackage.eINSTANCE.getUnresolvedItemAccess_Element(), true);
 	}
@@ -70,6 +71,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElement(UnresolvedItem newElement) {
 		eSet(JavaPackage.eINSTANCE.getUnresolvedItemAccess_Element(), newElement);
 	}
@@ -79,6 +81,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ASTNode getQualifier() {
 		return (ASTNode)eGet(JavaPackage.eINSTANCE.getUnresolvedItemAccess_Qualifier(), true);
 	}
@@ -88,6 +91,7 @@ public class UnresolvedItemAccessImpl extends ExpressionImpl implements Unresolv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(ASTNode newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getUnresolvedItemAccess_Qualifier(), newQualifier);
 	}

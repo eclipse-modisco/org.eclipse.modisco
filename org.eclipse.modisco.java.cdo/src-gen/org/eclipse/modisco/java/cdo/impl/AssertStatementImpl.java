@@ -27,11 +27,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AssertStatementImpl#getMessage <em>Message</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AssertStatementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class AssertStatementImpl extends StatementImpl implements AssertStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMessage() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAssertStatement_Message(), true);
 	}
@@ -69,6 +70,7 @@ public class AssertStatementImpl extends StatementImpl implements AssertStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessage(Expression newMessage) {
 		eSet(JavaPackage.eINSTANCE.getAssertStatement_Message(), newMessage);
 	}
@@ -78,6 +80,7 @@ public class AssertStatementImpl extends StatementImpl implements AssertStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAssertStatement_Expression(), true);
 	}
@@ -87,6 +90,7 @@ public class AssertStatementImpl extends StatementImpl implements AssertStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getAssertStatement_Expression(), newExpression);
 	}

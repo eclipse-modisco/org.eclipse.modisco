@@ -27,12 +27,12 @@ import org.eclipse.modisco.java.Statement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.VariableDeclarationStatement#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getVariableDeclarationStatement()
  * @model

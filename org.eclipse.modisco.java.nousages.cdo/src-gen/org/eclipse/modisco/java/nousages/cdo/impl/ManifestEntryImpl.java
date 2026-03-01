@@ -31,11 +31,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ManifestEntryImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ManifestEntryImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,6 +74,7 @@ public class ManifestEntryImpl extends CDOObjectImpl implements ManifestEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return (String)eGet(JavaPackage.eINSTANCE.getManifestEntry_Name(), true);
 	}
@@ -83,6 +84,7 @@ public class ManifestEntryImpl extends CDOObjectImpl implements ManifestEntry {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		eSet(JavaPackage.eINSTANCE.getManifestEntry_Name(), newName);
 	}
@@ -93,6 +95,7 @@ public class ManifestEntryImpl extends CDOObjectImpl implements ManifestEntry {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ManifestAttribute> getAttributes() {
 		return (EList<ManifestAttribute>)eGet(JavaPackage.eINSTANCE.getManifestEntry_Attributes(), true);
 	}

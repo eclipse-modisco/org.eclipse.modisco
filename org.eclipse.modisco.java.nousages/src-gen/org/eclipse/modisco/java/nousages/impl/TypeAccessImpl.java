@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TypeAccessImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TypeAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -113,11 +114,14 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.TYPE_ACCESS__TYPE, oldType, type));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.TYPE_ACCESS__TYPE, oldType, newType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -125,6 +129,27 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public void setType(Type newType) {
+		if (newType != type) {
+			NotificationChain msgs = null;
+			if (type != null)
+				msgs = ((InternalEObject)type).eInverseRemove(this, JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS, Type.class, msgs);
+			if (newType != null)
+				msgs = ((InternalEObject)newType).eInverseAdd(this, JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS, Type.class, msgs);
+			msgs = basicSetType(newType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.TYPE_ACCESS__TYPE, newType, newType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NamespaceAccess getQualifier() {
 		return qualifier;
 	}
@@ -149,6 +174,7 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(NamespaceAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;
@@ -169,8 +195,26 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.TYPE_ACCESS__TYPE:
+				if (type != null)
+					msgs = ((InternalEObject)type).eInverseRemove(this, JavaPackage.TYPE__USAGES_IN_TYPE_ACCESS, Type.class, msgs);
+				return basicSetType((Type)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.TYPE_ACCESS__TYPE:
+				return basicSetType(null, msgs);
 			case JavaPackage.TYPE_ACCESS__QUALIFIER:
 				return basicSetQualifier(null, msgs);
 		}

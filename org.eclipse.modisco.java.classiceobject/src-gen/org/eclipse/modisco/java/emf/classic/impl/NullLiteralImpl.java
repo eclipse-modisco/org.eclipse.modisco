@@ -23,8 +23,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Null Literal</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

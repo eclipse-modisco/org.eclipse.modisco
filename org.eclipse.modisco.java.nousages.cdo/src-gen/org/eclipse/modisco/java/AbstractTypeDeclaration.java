@@ -27,6 +27,7 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getBodyDeclarations <em>Body Declarations</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getCommentsBeforeBody <em>Comments Before Body</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.modisco.java.TypeAccess;
  *   <li>{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractTypeDeclaration#getSuperInterfaces <em>Super Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractTypeDeclaration()
  * @model abstract="true"

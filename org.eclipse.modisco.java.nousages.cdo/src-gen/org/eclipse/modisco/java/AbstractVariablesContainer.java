@@ -26,11 +26,11 @@ import org.eclipse.modisco.java.VariableDeclarationFragment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.AbstractVariablesContainer#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.AbstractVariablesContainer#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getAbstractVariablesContainer()
  * @model abstract="true"

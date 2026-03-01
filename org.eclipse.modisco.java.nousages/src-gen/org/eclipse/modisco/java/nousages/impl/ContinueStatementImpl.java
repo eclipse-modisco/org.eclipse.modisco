@@ -33,10 +33,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ContinueStatementImpl#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class ContinueStatementImpl extends StatementImpl implements ContinueStat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LabeledStatement getLabel() {
 		if (label != null && label.eIsProxy()) {
 			InternalEObject oldLabel = (InternalEObject)label;
@@ -101,11 +102,64 @@ public class ContinueStatementImpl extends StatementImpl implements ContinueStat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLabel(LabeledStatement newLabel) {
+	public NotificationChain basicSetLabel(LabeledStatement newLabel, NotificationChain msgs) {
 		LabeledStatement oldLabel = label;
 		label = newLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CONTINUE_STATEMENT__LABEL, oldLabel, label));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.CONTINUE_STATEMENT__LABEL, oldLabel, newLabel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLabel(LabeledStatement newLabel) {
+		if (newLabel != label) {
+			NotificationChain msgs = null;
+			if (label != null)
+				msgs = ((InternalEObject)label).eInverseRemove(this, JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, LabeledStatement.class, msgs);
+			if (newLabel != null)
+				msgs = ((InternalEObject)newLabel).eInverseAdd(this, JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, LabeledStatement.class, msgs);
+			msgs = basicSetLabel(newLabel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CONTINUE_STATEMENT__LABEL, newLabel, newLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.CONTINUE_STATEMENT__LABEL:
+				if (label != null)
+					msgs = ((InternalEObject)label).eInverseRemove(this, JavaPackage.LABELED_STATEMENT__USAGES_IN_CONTINUE_STATEMENTS, LabeledStatement.class, msgs);
+				return basicSetLabel((LabeledStatement)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.CONTINUE_STATEMENT__LABEL:
+				return basicSetLabel(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

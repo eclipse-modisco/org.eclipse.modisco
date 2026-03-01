@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.PackageAccessImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.PackageAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -85,6 +85,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
 			InternalEObject oldPackage = (InternalEObject)package_;
@@ -111,11 +112,14 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
+	public NotificationChain basicSetPackage(org.eclipse.modisco.java.Package newPackage, NotificationChain msgs) {
 		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.PACKAGE_ACCESS__PACKAGE, oldPackage, package_));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.PACKAGE_ACCESS__PACKAGE, oldPackage, newPackage);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -123,6 +127,27 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
+		if (newPackage != package_) {
+			NotificationChain msgs = null;
+			if (package_ != null)
+				msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
+			if (newPackage != null)
+				msgs = ((InternalEObject)newPackage).eInverseAdd(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
+			msgs = basicSetPackage(newPackage, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.PACKAGE_ACCESS__PACKAGE, newPackage, newPackage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PackageAccess getQualifier() {
 		return qualifier;
 	}
@@ -147,6 +172,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(PackageAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;
@@ -167,8 +193,26 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.PACKAGE_ACCESS__PACKAGE:
+				if (package_ != null)
+					msgs = ((InternalEObject)package_).eInverseRemove(this, JavaPackage.PACKAGE__USAGES_IN_PACKAGE_ACCESS, org.eclipse.modisco.java.Package.class, msgs);
+				return basicSetPackage((org.eclipse.modisco.java.Package)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.PACKAGE_ACCESS__PACKAGE:
+				return basicSetPackage(null, msgs);
 			case JavaPackage.PACKAGE_ACCESS__QUALIFIER:
 				return basicSetQualifier(null, msgs);
 		}

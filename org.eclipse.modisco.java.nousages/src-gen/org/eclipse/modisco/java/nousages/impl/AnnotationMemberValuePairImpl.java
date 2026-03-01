@@ -33,16 +33,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Annotation Member Value Pair</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.AnnotationMemberValuePairImpl#getMember
- * <em>Member</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.AnnotationMemberValuePairImpl#getValue
- * <em>Value</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.AnnotationMemberValuePairImpl#getMember <em>Member</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.AnnotationMemberValuePairImpl#getValue <em>Value</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
@@ -50,7 +46,6 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 	/**
 	 * The cached value of the '{@link #getMember() <em>Member</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getMember()
 	 * @generated
 	 * @ordered
@@ -58,9 +53,8 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 	protected AnnotationTypeMemberDeclaration member;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
@@ -69,7 +63,6 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected AnnotationMemberValuePairImpl() {
@@ -78,7 +71,6 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -88,18 +80,16 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public AnnotationTypeMemberDeclaration getMember() {
 		if (member != null && member.eIsProxy()) {
-			InternalEObject oldMember = (InternalEObject) member;
-			member = (AnnotationTypeMemberDeclaration) eResolveProxy(oldMember);
+			InternalEObject oldMember = (InternalEObject)member;
+			member = (AnnotationTypeMemberDeclaration)eResolveProxy(oldMember);
 			if (member != oldMember) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER,
-							oldMember, member));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER, oldMember, member));
 			}
 		}
 		return member;
@@ -107,7 +97,6 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public AnnotationTypeMemberDeclaration basicGetMember() {
@@ -115,31 +104,50 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMember(AnnotationTypeMemberDeclaration newMember) {
+	public NotificationChain basicSetMember(AnnotationTypeMemberDeclaration newMember, NotificationChain msgs) {
 		AnnotationTypeMemberDeclaration oldMember = member;
 		member = newMember;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER,
-					oldMember, member));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER, oldMember, newMember);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
+	public void setMember(AnnotationTypeMemberDeclaration newMember) {
+		if (newMember != member) {
+			NotificationChain msgs = null;
+			if (member != null)
+				msgs = ((InternalEObject)member).eInverseRemove(this, JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, AnnotationTypeMemberDeclaration.class, msgs);
+			if (newMember != null)
+				msgs = ((InternalEObject)newMember).eInverseAdd(this, JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, AnnotationTypeMemberDeclaration.class, msgs);
+			msgs = basicSetMember(newMember, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER, newMember, newMember));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Expression getValue() {
 		return value;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetValue(Expression newValue,
@@ -147,130 +155,124 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements
 		Expression oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, oldValue,
-					newValue);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, oldValue, newValue);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setValue(Expression newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject) value)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE,
-								null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject) newValue)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE,
-								null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, newValue,
-					newValue));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE, newValue, newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				if (member != null)
+					msgs = ((InternalEObject)member).eInverseRemove(this, JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION__USAGES, AnnotationTypeMemberDeclaration.class, msgs);
+				return basicSetMember((AnnotationTypeMemberDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
-			return basicSetValue(null, msgs);
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				return basicSetMember(null, msgs);
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
+				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
-			if (resolve)
-				return getMember();
-			return basicGetMember();
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
-			return getValue();
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				if (resolve) return getMember();
+				return basicGetMember();
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
-			setMember((AnnotationTypeMemberDeclaration) newValue);
-			return;
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
-			setValue((Expression) newValue);
-			return;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				setMember((AnnotationTypeMemberDeclaration)newValue);
+				return;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
+				setValue((Expression)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
-			setMember((AnnotationTypeMemberDeclaration) null);
-			return;
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
-			setValue((Expression) null);
-			return;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				setMember((AnnotationTypeMemberDeclaration)null);
+				return;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
+				setValue((Expression)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
-			return member != null;
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
-			return value != null;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__MEMBER:
+				return member != null;
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}

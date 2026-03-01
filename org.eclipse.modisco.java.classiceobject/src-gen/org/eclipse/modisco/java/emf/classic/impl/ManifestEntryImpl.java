@@ -40,11 +40,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ManifestEntryImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.ManifestEntryImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -224,8 +224,8 @@ public class ManifestEntryImpl extends EObjectImpl implements ManifestEntry {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

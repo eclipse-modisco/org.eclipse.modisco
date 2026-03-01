@@ -26,11 +26,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.PackageAccessImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.PackageAccessImpl#getQualifier <em>Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		return (org.eclipse.modisco.java.Package)eGet(JavaPackage.eINSTANCE.getPackageAccess_Package(), true);
 	}
@@ -68,6 +69,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		eSet(JavaPackage.eINSTANCE.getPackageAccess_Package(), newPackage);
 	}
@@ -77,6 +79,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageAccess getQualifier() {
 		return (PackageAccess)eGet(JavaPackage.eINSTANCE.getPackageAccess_Qualifier(), true);
 	}
@@ -86,6 +89,7 @@ public class PackageAccessImpl extends NamespaceAccessImpl implements PackageAcc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(PackageAccess newQualifier) {
 		eSet(JavaPackage.eINSTANCE.getPackageAccess_Qualifier(), newQualifier);
 	}

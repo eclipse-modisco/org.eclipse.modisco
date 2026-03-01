@@ -19,6 +19,174 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.AbstractMethodDeclaration;
+import org.eclipse.modisco.java.AbstractMethodInvocation;
+import org.eclipse.modisco.java.AbstractTagElement;
+import org.eclipse.modisco.java.AbstractTextElement;
+import org.eclipse.modisco.java.AbstractTypeDeclaration;
+import org.eclipse.modisco.java.AbstractTypeQualifiedExpression;
+import org.eclipse.modisco.java.AbstractVariablesContainer;
+import org.eclipse.modisco.java.AnnotatableType;
+import org.eclipse.modisco.java.Annotation;
+import org.eclipse.modisco.java.AnnotationMemberValuePair;
+import org.eclipse.modisco.java.AnnotationTypeDeclaration;
+import org.eclipse.modisco.java.AnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.AnonymousClassDeclaration;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.ArrayAccess;
+import org.eclipse.modisco.java.ArrayCreation;
+import org.eclipse.modisco.java.ArrayInitializer;
+import org.eclipse.modisco.java.ArrayLengthAccess;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.AssertStatement;
+import org.eclipse.modisco.java.Assignment;
+import org.eclipse.modisco.java.Block;
+import org.eclipse.modisco.java.BlockComment;
+import org.eclipse.modisco.java.BodyDeclaration;
+import org.eclipse.modisco.java.BooleanLiteral;
+import org.eclipse.modisco.java.BreakStatement;
+import org.eclipse.modisco.java.CaseDefaultExpression;
+import org.eclipse.modisco.java.CastExpression;
+import org.eclipse.modisco.java.CatchClause;
+import org.eclipse.modisco.java.CharacterLiteral;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassFile;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.Comment;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.ConditionalExpression;
+import org.eclipse.modisco.java.ConstructorDeclaration;
+import org.eclipse.modisco.java.ConstructorInvocation;
+import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
+import org.eclipse.modisco.java.DoStatement;
+import org.eclipse.modisco.java.EitherOrMultiPattern;
+import org.eclipse.modisco.java.EmptyStatement;
+import org.eclipse.modisco.java.EnhancedForStatement;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExportsDirective;
+import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.ExpressionMethodReference;
+import org.eclipse.modisco.java.ExpressionStatement;
+import org.eclipse.modisco.java.FieldAccess;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.ForStatement;
+import org.eclipse.modisco.java.GuardedPattern;
+import org.eclipse.modisco.java.IfStatement;
+import org.eclipse.modisco.java.ImplicitTypeDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.InfixExpression;
+import org.eclipse.modisco.java.Initializer;
+import org.eclipse.modisco.java.InstanceofExpression;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.IntersectionType;
+import org.eclipse.modisco.java.JavaDocRegion;
+import org.eclipse.modisco.java.JavaDocTextElement;
+import org.eclipse.modisco.java.Javadoc;
+import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
+import org.eclipse.modisco.java.LineComment;
+import org.eclipse.modisco.java.Manifest;
+import org.eclipse.modisco.java.ManifestAttribute;
+import org.eclipse.modisco.java.ManifestEntry;
+import org.eclipse.modisco.java.MemberRef;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodInvocation;
+import org.eclipse.modisco.java.MethodRef;
+import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.MethodReference;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.Modifier;
+import org.eclipse.modisco.java.ModuleDeclaration;
+import org.eclipse.modisco.java.ModuleDirective;
+import org.eclipse.modisco.java.ModuleModifier;
+import org.eclipse.modisco.java.ModulePackageAccess;
+import org.eclipse.modisco.java.ModuleQualifiedName;
+import org.eclipse.modisco.java.Name;
+import org.eclipse.modisco.java.NameQualifiedType;
+import org.eclipse.modisco.java.NamedElement;
+import org.eclipse.modisco.java.NamespaceAccess;
+import org.eclipse.modisco.java.NullLiteral;
+import org.eclipse.modisco.java.NullPattern;
+import org.eclipse.modisco.java.NumberLiteral;
+import org.eclipse.modisco.java.OpensDirective;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.ParameterizedType;
+import org.eclipse.modisco.java.ParenthesizedExpression;
+import org.eclipse.modisco.java.Pattern;
+import org.eclipse.modisco.java.PatternInstanceofExpression;
+import org.eclipse.modisco.java.PostfixExpression;
+import org.eclipse.modisco.java.PrefixExpression;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.PrimitiveTypeBoolean;
+import org.eclipse.modisco.java.PrimitiveTypeByte;
+import org.eclipse.modisco.java.PrimitiveTypeChar;
+import org.eclipse.modisco.java.PrimitiveTypeDouble;
+import org.eclipse.modisco.java.PrimitiveTypeFloat;
+import org.eclipse.modisco.java.PrimitiveTypeInt;
+import org.eclipse.modisco.java.PrimitiveTypeLong;
+import org.eclipse.modisco.java.PrimitiveTypeShort;
+import org.eclipse.modisco.java.PrimitiveTypeVoid;
+import org.eclipse.modisco.java.ProvidesDirective;
+import org.eclipse.modisco.java.QualifiedType;
+import org.eclipse.modisco.java.RecordDeclaration;
+import org.eclipse.modisco.java.RecordPattern;
+import org.eclipse.modisco.java.RequiresDirective;
+import org.eclipse.modisco.java.ReturnStatement;
+import org.eclipse.modisco.java.SimpleType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.Statement;
+import org.eclipse.modisco.java.StringLiteral;
+import org.eclipse.modisco.java.SuperConstructorInvocation;
+import org.eclipse.modisco.java.SuperFieldAccess;
+import org.eclipse.modisco.java.SuperMethodInvocation;
+import org.eclipse.modisco.java.SuperMethodReference;
+import org.eclipse.modisco.java.SwitchCase;
+import org.eclipse.modisco.java.SwitchExpression;
+import org.eclipse.modisco.java.SwitchStatement;
+import org.eclipse.modisco.java.SynchronizedStatement;
+import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.TagProperty;
+import org.eclipse.modisco.java.TextBlock;
+import org.eclipse.modisco.java.TextElement;
+import org.eclipse.modisco.java.ThisExpression;
+import org.eclipse.modisco.java.ThrowStatement;
+import org.eclipse.modisco.java.TryStatement;
+import org.eclipse.modisco.java.Type;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.TypeDeclaration;
+import org.eclipse.modisco.java.TypeDeclarationStatement;
+import org.eclipse.modisco.java.TypeLiteral;
+import org.eclipse.modisco.java.TypeMethodReference;
+import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.TypePattern;
+import org.eclipse.modisco.java.UnionType;
+import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
+import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.UnresolvedClassDeclaration;
+import org.eclipse.modisco.java.UnresolvedEnumDeclaration;
+import org.eclipse.modisco.java.UnresolvedInterfaceDeclaration;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.UnresolvedLabeledStatement;
+import org.eclipse.modisco.java.UnresolvedMethodDeclaration;
+import org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration;
+import org.eclipse.modisco.java.UnresolvedType;
+import org.eclipse.modisco.java.UnresolvedTypeDeclaration;
+import org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment;
+import org.eclipse.modisco.java.UsesDirective;
+import org.eclipse.modisco.java.VariableDeclaration;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
+import org.eclipse.modisco.java.WhileStatement;
+import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.YieldStatement;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.emf.classic.JavaPackage;
 
@@ -35,7 +203,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * @see org.eclipse.modisco.java.emf.classic.JavaPackage
  * @generated
  */
-public class JavaSwitch<T> {
+public class JavaSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -57,14 +225,16 @@ public class JavaSwitch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
+	 * @param ePackage the package in question.
+	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
-	public T doSwitch(EObject theEObject) {
-		return doSwitch(theEObject.eClass(), theEObject);
+	@Override
+	protected boolean isSwitchFor(EPackage ePackage) {
+		return ePackage == modelPackage;
 	}
 
 	/**
@@ -74,26 +244,7 @@ public class JavaSwitch<T> {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	protected T doSwitch(EClass theEClass, EObject theEObject) {
-		if (theEClass.eContainer() == modelPackage) {
-			return doSwitch(theEClass.getClassifierID(), theEObject);
-		}
-		else {
-			List<EClass> eSuperTypes = theEClass.getESuperTypes();
-			return
-				eSuperTypes.isEmpty() ?
-					defaultCase(theEObject) :
-					doSwitch(eSuperTypes.get(0), theEObject);
-		}
-	}
-
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
+	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case JavaPackage.ABSTRACT_METHOD_DECLARATION: {
@@ -109,6 +260,20 @@ public class JavaSwitch<T> {
 				AbstractMethodInvocation abstractMethodInvocation = (AbstractMethodInvocation)theEObject;
 				T result = caseAbstractMethodInvocation(abstractMethodInvocation);
 				if (result == null) result = caseASTNode(abstractMethodInvocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.ABSTRACT_TAG_ELEMENT: {
+				AbstractTagElement abstractTagElement = (AbstractTagElement)theEObject;
+				T result = caseAbstractTagElement(abstractTagElement);
+				if (result == null) result = caseASTNode(abstractTagElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.ABSTRACT_TEXT_ELEMENT: {
+				AbstractTextElement abstractTextElement = (AbstractTextElement)theEObject;
+				T result = caseAbstractTextElement(abstractTextElement);
+				if (result == null) result = caseASTNode(abstractTextElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,6 +299,15 @@ public class JavaSwitch<T> {
 				AbstractVariablesContainer abstractVariablesContainer = (AbstractVariablesContainer)theEObject;
 				T result = caseAbstractVariablesContainer(abstractVariablesContainer);
 				if (result == null) result = caseASTNode(abstractVariablesContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.ANNOTATABLE_TYPE: {
+				AnnotatableType annotatableType = (AnnotatableType)theEObject;
+				T result = caseAnnotatableType(annotatableType);
+				if (result == null) result = caseType(annotatableType);
+				if (result == null) result = caseNamedElement(annotatableType);
+				if (result == null) result = caseASTNode(annotatableType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -251,6 +425,22 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.BLOCK: {
+				Block block = (Block)theEObject;
+				T result = caseBlock(block);
+				if (result == null) result = caseStatement(block);
+				if (result == null) result = caseASTNode(block);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.BLOCK_COMMENT: {
+				BlockComment blockComment = (BlockComment)theEObject;
+				T result = caseBlockComment(blockComment);
+				if (result == null) result = caseComment(blockComment);
+				if (result == null) result = caseASTNode(blockComment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.BODY_DECLARATION: {
 				BodyDeclaration bodyDeclaration = (BodyDeclaration)theEObject;
 				T result = caseBodyDeclaration(bodyDeclaration);
@@ -267,27 +457,19 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case JavaPackage.BLOCK_COMMENT: {
-				BlockComment blockComment = (BlockComment)theEObject;
-				T result = caseBlockComment(blockComment);
-				if (result == null) result = caseComment(blockComment);
-				if (result == null) result = caseASTNode(blockComment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.BLOCK: {
-				Block block = (Block)theEObject;
-				T result = caseBlock(block);
-				if (result == null) result = caseStatement(block);
-				if (result == null) result = caseASTNode(block);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case JavaPackage.BREAK_STATEMENT: {
 				BreakStatement breakStatement = (BreakStatement)theEObject;
 				T result = caseBreakStatement(breakStatement);
 				if (result == null) result = caseStatement(breakStatement);
 				if (result == null) result = caseASTNode(breakStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CASE_DEFAULT_EXPRESSION: {
+				CaseDefaultExpression caseDefaultExpression = (CaseDefaultExpression)theEObject;
+				T result = caseCaseDefaultExpression(caseDefaultExpression);
+				if (result == null) result = caseExpression(caseDefaultExpression);
+				if (result == null) result = caseASTNode(caseDefaultExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,6 +497,18 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.CLASS_DECLARATION: {
+				ClassDeclaration classDeclaration = (ClassDeclaration)theEObject;
+				T result = caseClassDeclaration(classDeclaration);
+				if (result == null) result = caseTypeDeclaration(classDeclaration);
+				if (result == null) result = caseAbstractTypeDeclaration(classDeclaration);
+				if (result == null) result = caseBodyDeclaration(classDeclaration);
+				if (result == null) result = caseType(classDeclaration);
+				if (result == null) result = caseNamedElement(classDeclaration);
+				if (result == null) result = caseASTNode(classDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.CLASS_FILE: {
 				ClassFile classFile = (ClassFile)theEObject;
 				T result = caseClassFile(classFile);
@@ -329,45 +523,6 @@ public class JavaSwitch<T> {
 				if (result == null) result = caseExpression(classInstanceCreation);
 				if (result == null) result = caseAbstractMethodInvocation(classInstanceCreation);
 				if (result == null) result = caseASTNode(classInstanceCreation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONSTRUCTOR_DECLARATION: {
-				ConstructorDeclaration constructorDeclaration = (ConstructorDeclaration)theEObject;
-				T result = caseConstructorDeclaration(constructorDeclaration);
-				if (result == null) result = caseAbstractMethodDeclaration(constructorDeclaration);
-				if (result == null) result = caseBodyDeclaration(constructorDeclaration);
-				if (result == null) result = caseNamedElement(constructorDeclaration);
-				if (result == null) result = caseASTNode(constructorDeclaration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONDITIONAL_EXPRESSION: {
-				ConditionalExpression conditionalExpression = (ConditionalExpression)theEObject;
-				T result = caseConditionalExpression(conditionalExpression);
-				if (result == null) result = caseExpression(conditionalExpression);
-				if (result == null) result = caseASTNode(conditionalExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CONSTRUCTOR_INVOCATION: {
-				ConstructorInvocation constructorInvocation = (ConstructorInvocation)theEObject;
-				T result = caseConstructorInvocation(constructorInvocation);
-				if (result == null) result = caseStatement(constructorInvocation);
-				if (result == null) result = caseAbstractMethodInvocation(constructorInvocation);
-				if (result == null) result = caseASTNode(constructorInvocation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case JavaPackage.CLASS_DECLARATION: {
-				ClassDeclaration classDeclaration = (ClassDeclaration)theEObject;
-				T result = caseClassDeclaration(classDeclaration);
-				if (result == null) result = caseTypeDeclaration(classDeclaration);
-				if (result == null) result = caseAbstractTypeDeclaration(classDeclaration);
-				if (result == null) result = caseBodyDeclaration(classDeclaration);
-				if (result == null) result = caseType(classDeclaration);
-				if (result == null) result = caseNamedElement(classDeclaration);
-				if (result == null) result = caseASTNode(classDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -386,6 +541,33 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.CONDITIONAL_EXPRESSION: {
+				ConditionalExpression conditionalExpression = (ConditionalExpression)theEObject;
+				T result = caseConditionalExpression(conditionalExpression);
+				if (result == null) result = caseExpression(conditionalExpression);
+				if (result == null) result = caseASTNode(conditionalExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CONSTRUCTOR_DECLARATION: {
+				ConstructorDeclaration constructorDeclaration = (ConstructorDeclaration)theEObject;
+				T result = caseConstructorDeclaration(constructorDeclaration);
+				if (result == null) result = caseAbstractMethodDeclaration(constructorDeclaration);
+				if (result == null) result = caseBodyDeclaration(constructorDeclaration);
+				if (result == null) result = caseNamedElement(constructorDeclaration);
+				if (result == null) result = caseASTNode(constructorDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.CONSTRUCTOR_INVOCATION: {
+				ConstructorInvocation constructorInvocation = (ConstructorInvocation)theEObject;
+				T result = caseConstructorInvocation(constructorInvocation);
+				if (result == null) result = caseStatement(constructorInvocation);
+				if (result == null) result = caseAbstractMethodInvocation(constructorInvocation);
+				if (result == null) result = caseASTNode(constructorInvocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.CONTINUE_STATEMENT: {
 				ContinueStatement continueStatement = (ContinueStatement)theEObject;
 				T result = caseContinueStatement(continueStatement);
@@ -394,11 +576,29 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.CREATION_REFERENCE: {
+				CreationReference creationReference = (CreationReference)theEObject;
+				T result = caseCreationReference(creationReference);
+				if (result == null) result = caseMethodReference(creationReference);
+				if (result == null) result = caseExpression(creationReference);
+				if (result == null) result = caseASTNode(creationReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.DO_STATEMENT: {
 				DoStatement doStatement = (DoStatement)theEObject;
 				T result = caseDoStatement(doStatement);
 				if (result == null) result = caseStatement(doStatement);
 				if (result == null) result = caseASTNode(doStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.EITHER_OR_MULTI_PATTERN: {
+				EitherOrMultiPattern eitherOrMultiPattern = (EitherOrMultiPattern)theEObject;
+				T result = caseEitherOrMultiPattern(eitherOrMultiPattern);
+				if (result == null) result = casePattern(eitherOrMultiPattern);
+				if (result == null) result = caseExpression(eitherOrMultiPattern);
+				if (result == null) result = caseASTNode(eitherOrMultiPattern);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -439,10 +639,28 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.EXPORTS_DIRECTIVE: {
+				ExportsDirective exportsDirective = (ExportsDirective)theEObject;
+				T result = caseExportsDirective(exportsDirective);
+				if (result == null) result = caseModulePackageAccess(exportsDirective);
+				if (result == null) result = caseModuleDirective(exportsDirective);
+				if (result == null) result = caseASTNode(exportsDirective);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.EXPRESSION: {
 				Expression expression = (Expression)theEObject;
 				T result = caseExpression(expression);
 				if (result == null) result = caseASTNode(expression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.EXPRESSION_METHOD_REFERENCE: {
+				ExpressionMethodReference expressionMethodReference = (ExpressionMethodReference)theEObject;
+				T result = caseExpressionMethodReference(expressionMethodReference);
+				if (result == null) result = caseMethodReference(expressionMethodReference);
+				if (result == null) result = caseExpression(expressionMethodReference);
+				if (result == null) result = caseASTNode(expressionMethodReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -480,11 +698,31 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.GUARDED_PATTERN: {
+				GuardedPattern guardedPattern = (GuardedPattern)theEObject;
+				T result = caseGuardedPattern(guardedPattern);
+				if (result == null) result = casePattern(guardedPattern);
+				if (result == null) result = caseExpression(guardedPattern);
+				if (result == null) result = caseASTNode(guardedPattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.IF_STATEMENT: {
 				IfStatement ifStatement = (IfStatement)theEObject;
 				T result = caseIfStatement(ifStatement);
 				if (result == null) result = caseStatement(ifStatement);
 				if (result == null) result = caseASTNode(ifStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.IMPLICIT_TYPE_DECLARATION: {
+				ImplicitTypeDeclaration implicitTypeDeclaration = (ImplicitTypeDeclaration)theEObject;
+				T result = caseImplicitTypeDeclaration(implicitTypeDeclaration);
+				if (result == null) result = caseAbstractTypeDeclaration(implicitTypeDeclaration);
+				if (result == null) result = caseBodyDeclaration(implicitTypeDeclaration);
+				if (result == null) result = caseType(implicitTypeDeclaration);
+				if (result == null) result = caseNamedElement(implicitTypeDeclaration);
+				if (result == null) result = caseASTNode(implicitTypeDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -532,11 +770,36 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.INTERSECTION_TYPE: {
+				IntersectionType intersectionType = (IntersectionType)theEObject;
+				T result = caseIntersectionType(intersectionType);
+				if (result == null) result = caseType(intersectionType);
+				if (result == null) result = caseNamedElement(intersectionType);
+				if (result == null) result = caseASTNode(intersectionType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.JAVADOC: {
 				Javadoc javadoc = (Javadoc)theEObject;
 				T result = caseJavadoc(javadoc);
 				if (result == null) result = caseComment(javadoc);
 				if (result == null) result = caseASTNode(javadoc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.JAVA_DOC_REGION: {
+				JavaDocRegion javaDocRegion = (JavaDocRegion)theEObject;
+				T result = caseJavaDocRegion(javaDocRegion);
+				if (result == null) result = caseAbstractTagElement(javaDocRegion);
+				if (result == null) result = caseASTNode(javaDocRegion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.JAVA_DOC_TEXT_ELEMENT: {
+				JavaDocTextElement javaDocTextElement = (JavaDocTextElement)theEObject;
+				T result = caseJavaDocTextElement(javaDocTextElement);
+				if (result == null) result = caseAbstractTextElement(javaDocTextElement);
+				if (result == null) result = caseASTNode(javaDocTextElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -546,6 +809,14 @@ public class JavaSwitch<T> {
 				if (result == null) result = caseNamedElement(labeledStatement);
 				if (result == null) result = caseStatement(labeledStatement);
 				if (result == null) result = caseASTNode(labeledStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.LAMBDA_EXPRESSION: {
+				LambdaExpression lambdaExpression = (LambdaExpression)theEObject;
+				T result = caseLambdaExpression(lambdaExpression);
+				if (result == null) result = caseExpression(lambdaExpression);
+				if (result == null) result = caseASTNode(lambdaExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -615,6 +886,14 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.METHOD_REFERENCE: {
+				MethodReference methodReference = (MethodReference)theEObject;
+				T result = caseMethodReference(methodReference);
+				if (result == null) result = caseExpression(methodReference);
+				if (result == null) result = caseASTNode(methodReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.MODEL: {
 				Model model = (Model)theEObject;
 				T result = caseModel(model);
@@ -625,6 +904,62 @@ public class JavaSwitch<T> {
 				Modifier modifier = (Modifier)theEObject;
 				T result = caseModifier(modifier);
 				if (result == null) result = caseASTNode(modifier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.MODULE_DECLARATION: {
+				ModuleDeclaration moduleDeclaration = (ModuleDeclaration)theEObject;
+				T result = caseModuleDeclaration(moduleDeclaration);
+				if (result == null) result = caseASTNode(moduleDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.MODULE_DIRECTIVE: {
+				ModuleDirective moduleDirective = (ModuleDirective)theEObject;
+				T result = caseModuleDirective(moduleDirective);
+				if (result == null) result = caseASTNode(moduleDirective);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.MODULE_MODIFIER: {
+				ModuleModifier moduleModifier = (ModuleModifier)theEObject;
+				T result = caseModuleModifier(moduleModifier);
+				if (result == null) result = caseASTNode(moduleModifier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.MODULE_QUALIFIED_NAME: {
+				ModuleQualifiedName moduleQualifiedName = (ModuleQualifiedName)theEObject;
+				T result = caseModuleQualifiedName(moduleQualifiedName);
+				if (result == null) result = caseName(moduleQualifiedName);
+				if (result == null) result = caseExpression(moduleQualifiedName);
+				if (result == null) result = caseASTNode(moduleQualifiedName);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.NAME: {
+				Name name = (Name)theEObject;
+				T result = caseName(name);
+				if (result == null) result = caseExpression(name);
+				if (result == null) result = caseASTNode(name);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.MODULE_PACKAGE_ACCESS: {
+				ModulePackageAccess modulePackageAccess = (ModulePackageAccess)theEObject;
+				T result = caseModulePackageAccess(modulePackageAccess);
+				if (result == null) result = caseModuleDirective(modulePackageAccess);
+				if (result == null) result = caseASTNode(modulePackageAccess);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.NAME_QUALIFIED_TYPE: {
+				NameQualifiedType nameQualifiedType = (NameQualifiedType)theEObject;
+				T result = caseNameQualifiedType(nameQualifiedType);
+				if (result == null) result = caseAnnotatableType(nameQualifiedType);
+				if (result == null) result = caseType(nameQualifiedType);
+				if (result == null) result = caseNamedElement(nameQualifiedType);
+				if (result == null) result = caseASTNode(nameQualifiedType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -655,6 +990,24 @@ public class JavaSwitch<T> {
 				T result = caseNullLiteral(nullLiteral);
 				if (result == null) result = caseExpression(nullLiteral);
 				if (result == null) result = caseASTNode(nullLiteral);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.NULL_PATTERN: {
+				NullPattern nullPattern = (NullPattern)theEObject;
+				T result = caseNullPattern(nullPattern);
+				if (result == null) result = casePattern(nullPattern);
+				if (result == null) result = caseExpression(nullPattern);
+				if (result == null) result = caseASTNode(nullPattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.OPENS_DIRECTIVE: {
+				OpensDirective opensDirective = (OpensDirective)theEObject;
+				T result = caseOpensDirective(opensDirective);
+				if (result == null) result = caseModulePackageAccess(opensDirective);
+				if (result == null) result = caseModuleDirective(opensDirective);
+				if (result == null) result = caseASTNode(opensDirective);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -691,6 +1044,22 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.PATTERN: {
+				Pattern pattern = (Pattern)theEObject;
+				T result = casePattern(pattern);
+				if (result == null) result = caseExpression(pattern);
+				if (result == null) result = caseASTNode(pattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.PATTERN_INSTANCEOF_EXPRESSION: {
+				PatternInstanceofExpression patternInstanceofExpression = (PatternInstanceofExpression)theEObject;
+				T result = casePatternInstanceofExpression(patternInstanceofExpression);
+				if (result == null) result = caseExpression(patternInstanceofExpression);
+				if (result == null) result = caseASTNode(patternInstanceofExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.POSTFIX_EXPRESSION: {
 				PostfixExpression postfixExpression = (PostfixExpression)theEObject;
 				T result = casePostfixExpression(postfixExpression);
@@ -710,6 +1079,7 @@ public class JavaSwitch<T> {
 			case JavaPackage.PRIMITIVE_TYPE: {
 				PrimitiveType primitiveType = (PrimitiveType)theEObject;
 				T result = casePrimitiveType(primitiveType);
+				if (result == null) result = caseAnnotatableType(primitiveType);
 				if (result == null) result = caseType(primitiveType);
 				if (result == null) result = caseNamedElement(primitiveType);
 				if (result == null) result = caseASTNode(primitiveType);
@@ -720,6 +1090,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeBoolean primitiveTypeBoolean = (PrimitiveTypeBoolean)theEObject;
 				T result = casePrimitiveTypeBoolean(primitiveTypeBoolean);
 				if (result == null) result = casePrimitiveType(primitiveTypeBoolean);
+				if (result == null) result = caseAnnotatableType(primitiveTypeBoolean);
 				if (result == null) result = caseType(primitiveTypeBoolean);
 				if (result == null) result = caseNamedElement(primitiveTypeBoolean);
 				if (result == null) result = caseASTNode(primitiveTypeBoolean);
@@ -730,6 +1101,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeByte primitiveTypeByte = (PrimitiveTypeByte)theEObject;
 				T result = casePrimitiveTypeByte(primitiveTypeByte);
 				if (result == null) result = casePrimitiveType(primitiveTypeByte);
+				if (result == null) result = caseAnnotatableType(primitiveTypeByte);
 				if (result == null) result = caseType(primitiveTypeByte);
 				if (result == null) result = caseNamedElement(primitiveTypeByte);
 				if (result == null) result = caseASTNode(primitiveTypeByte);
@@ -740,6 +1112,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeChar primitiveTypeChar = (PrimitiveTypeChar)theEObject;
 				T result = casePrimitiveTypeChar(primitiveTypeChar);
 				if (result == null) result = casePrimitiveType(primitiveTypeChar);
+				if (result == null) result = caseAnnotatableType(primitiveTypeChar);
 				if (result == null) result = caseType(primitiveTypeChar);
 				if (result == null) result = caseNamedElement(primitiveTypeChar);
 				if (result == null) result = caseASTNode(primitiveTypeChar);
@@ -750,6 +1123,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeDouble primitiveTypeDouble = (PrimitiveTypeDouble)theEObject;
 				T result = casePrimitiveTypeDouble(primitiveTypeDouble);
 				if (result == null) result = casePrimitiveType(primitiveTypeDouble);
+				if (result == null) result = caseAnnotatableType(primitiveTypeDouble);
 				if (result == null) result = caseType(primitiveTypeDouble);
 				if (result == null) result = caseNamedElement(primitiveTypeDouble);
 				if (result == null) result = caseASTNode(primitiveTypeDouble);
@@ -760,6 +1134,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeShort primitiveTypeShort = (PrimitiveTypeShort)theEObject;
 				T result = casePrimitiveTypeShort(primitiveTypeShort);
 				if (result == null) result = casePrimitiveType(primitiveTypeShort);
+				if (result == null) result = caseAnnotatableType(primitiveTypeShort);
 				if (result == null) result = caseType(primitiveTypeShort);
 				if (result == null) result = caseNamedElement(primitiveTypeShort);
 				if (result == null) result = caseASTNode(primitiveTypeShort);
@@ -770,6 +1145,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeFloat primitiveTypeFloat = (PrimitiveTypeFloat)theEObject;
 				T result = casePrimitiveTypeFloat(primitiveTypeFloat);
 				if (result == null) result = casePrimitiveType(primitiveTypeFloat);
+				if (result == null) result = caseAnnotatableType(primitiveTypeFloat);
 				if (result == null) result = caseType(primitiveTypeFloat);
 				if (result == null) result = caseNamedElement(primitiveTypeFloat);
 				if (result == null) result = caseASTNode(primitiveTypeFloat);
@@ -780,6 +1156,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeInt primitiveTypeInt = (PrimitiveTypeInt)theEObject;
 				T result = casePrimitiveTypeInt(primitiveTypeInt);
 				if (result == null) result = casePrimitiveType(primitiveTypeInt);
+				if (result == null) result = caseAnnotatableType(primitiveTypeInt);
 				if (result == null) result = caseType(primitiveTypeInt);
 				if (result == null) result = caseNamedElement(primitiveTypeInt);
 				if (result == null) result = caseASTNode(primitiveTypeInt);
@@ -790,6 +1167,7 @@ public class JavaSwitch<T> {
 				PrimitiveTypeLong primitiveTypeLong = (PrimitiveTypeLong)theEObject;
 				T result = casePrimitiveTypeLong(primitiveTypeLong);
 				if (result == null) result = casePrimitiveType(primitiveTypeLong);
+				if (result == null) result = caseAnnotatableType(primitiveTypeLong);
 				if (result == null) result = caseType(primitiveTypeLong);
 				if (result == null) result = caseNamedElement(primitiveTypeLong);
 				if (result == null) result = caseASTNode(primitiveTypeLong);
@@ -800,9 +1178,56 @@ public class JavaSwitch<T> {
 				PrimitiveTypeVoid primitiveTypeVoid = (PrimitiveTypeVoid)theEObject;
 				T result = casePrimitiveTypeVoid(primitiveTypeVoid);
 				if (result == null) result = casePrimitiveType(primitiveTypeVoid);
+				if (result == null) result = caseAnnotatableType(primitiveTypeVoid);
 				if (result == null) result = caseType(primitiveTypeVoid);
 				if (result == null) result = caseNamedElement(primitiveTypeVoid);
 				if (result == null) result = caseASTNode(primitiveTypeVoid);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.PROVIDES_DIRECTIVE: {
+				ProvidesDirective providesDirective = (ProvidesDirective)theEObject;
+				T result = caseProvidesDirective(providesDirective);
+				if (result == null) result = caseModuleDirective(providesDirective);
+				if (result == null) result = caseASTNode(providesDirective);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.QUALIFIED_TYPE: {
+				QualifiedType qualifiedType = (QualifiedType)theEObject;
+				T result = caseQualifiedType(qualifiedType);
+				if (result == null) result = caseAnnotatableType(qualifiedType);
+				if (result == null) result = caseType(qualifiedType);
+				if (result == null) result = caseNamedElement(qualifiedType);
+				if (result == null) result = caseASTNode(qualifiedType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.RECORD_DECLARATION: {
+				RecordDeclaration recordDeclaration = (RecordDeclaration)theEObject;
+				T result = caseRecordDeclaration(recordDeclaration);
+				if (result == null) result = caseAbstractTypeDeclaration(recordDeclaration);
+				if (result == null) result = caseBodyDeclaration(recordDeclaration);
+				if (result == null) result = caseType(recordDeclaration);
+				if (result == null) result = caseNamedElement(recordDeclaration);
+				if (result == null) result = caseASTNode(recordDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.RECORD_PATTERN: {
+				RecordPattern recordPattern = (RecordPattern)theEObject;
+				T result = caseRecordPattern(recordPattern);
+				if (result == null) result = casePattern(recordPattern);
+				if (result == null) result = caseExpression(recordPattern);
+				if (result == null) result = caseASTNode(recordPattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.REQUIRES_DIRECTIVE: {
+				RequiresDirective requiresDirective = (RequiresDirective)theEObject;
+				T result = caseRequiresDirective(requiresDirective);
+				if (result == null) result = caseModuleDirective(requiresDirective);
+				if (result == null) result = caseASTNode(requiresDirective);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -811,6 +1236,16 @@ public class JavaSwitch<T> {
 				T result = caseReturnStatement(returnStatement);
 				if (result == null) result = caseStatement(returnStatement);
 				if (result == null) result = caseASTNode(returnStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.SIMPLE_TYPE: {
+				SimpleType simpleType = (SimpleType)theEObject;
+				T result = caseSimpleType(simpleType);
+				if (result == null) result = caseAnnotatableType(simpleType);
+				if (result == null) result = caseType(simpleType);
+				if (result == null) result = caseNamedElement(simpleType);
+				if (result == null) result = caseASTNode(simpleType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -874,11 +1309,28 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.SUPER_METHOD_REFERENCE: {
+				SuperMethodReference superMethodReference = (SuperMethodReference)theEObject;
+				T result = caseSuperMethodReference(superMethodReference);
+				if (result == null) result = caseMethodReference(superMethodReference);
+				if (result == null) result = caseExpression(superMethodReference);
+				if (result == null) result = caseASTNode(superMethodReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.SWITCH_CASE: {
 				SwitchCase switchCase = (SwitchCase)theEObject;
 				T result = caseSwitchCase(switchCase);
 				if (result == null) result = caseStatement(switchCase);
 				if (result == null) result = caseASTNode(switchCase);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.SWITCH_EXPRESSION: {
+				SwitchExpression switchExpression = (SwitchExpression)theEObject;
+				T result = caseSwitchExpression(switchExpression);
+				if (result == null) result = caseExpression(switchExpression);
+				if (result == null) result = caseASTNode(switchExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -901,7 +1353,23 @@ public class JavaSwitch<T> {
 			case JavaPackage.TAG_ELEMENT: {
 				TagElement tagElement = (TagElement)theEObject;
 				T result = caseTagElement(tagElement);
+				if (result == null) result = caseAbstractTagElement(tagElement);
 				if (result == null) result = caseASTNode(tagElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.TAG_PROPERTY: {
+				TagProperty tagProperty = (TagProperty)theEObject;
+				T result = caseTagProperty(tagProperty);
+				if (result == null) result = caseASTNode(tagProperty);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.TEXT_BLOCK: {
+				TextBlock textBlock = (TextBlock)theEObject;
+				T result = caseTextBlock(textBlock);
+				if (result == null) result = caseExpression(textBlock);
+				if (result == null) result = caseASTNode(textBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -981,12 +1449,39 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.TYPE_METHOD_REFERENCE: {
+				TypeMethodReference typeMethodReference = (TypeMethodReference)theEObject;
+				T result = caseTypeMethodReference(typeMethodReference);
+				if (result == null) result = caseMethodReference(typeMethodReference);
+				if (result == null) result = caseExpression(typeMethodReference);
+				if (result == null) result = caseASTNode(typeMethodReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.TYPE_PARAMETER: {
 				TypeParameter typeParameter = (TypeParameter)theEObject;
 				T result = caseTypeParameter(typeParameter);
 				if (result == null) result = caseType(typeParameter);
 				if (result == null) result = caseNamedElement(typeParameter);
 				if (result == null) result = caseASTNode(typeParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.TYPE_PATTERN: {
+				TypePattern typePattern = (TypePattern)theEObject;
+				T result = caseTypePattern(typePattern);
+				if (result == null) result = casePattern(typePattern);
+				if (result == null) result = caseExpression(typePattern);
+				if (result == null) result = caseASTNode(typePattern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.UNION_TYPE: {
+				UnionType unionType = (UnionType)theEObject;
+				T result = caseUnionType(unionType);
+				if (result == null) result = caseType(unionType);
+				if (result == null) result = caseNamedElement(unionType);
+				if (result == null) result = caseASTNode(unionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1139,6 +1634,14 @@ public class JavaSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case JavaPackage.USES_DIRECTIVE: {
+				UsesDirective usesDirective = (UsesDirective)theEObject;
+				T result = caseUsesDirective(usesDirective);
+				if (result == null) result = caseModuleDirective(usesDirective);
+				if (result == null) result = caseASTNode(usesDirective);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case JavaPackage.VARIABLE_DECLARATION: {
 				VariableDeclaration variableDeclaration = (VariableDeclaration)theEObject;
 				T result = caseVariableDeclaration(variableDeclaration);
@@ -1177,6 +1680,7 @@ public class JavaSwitch<T> {
 			case JavaPackage.WILD_CARD_TYPE: {
 				WildCardType wildCardType = (WildCardType)theEObject;
 				T result = caseWildCardType(wildCardType);
+				if (result == null) result = caseAnnotatableType(wildCardType);
 				if (result == null) result = caseType(wildCardType);
 				if (result == null) result = caseNamedElement(wildCardType);
 				if (result == null) result = caseASTNode(wildCardType);
@@ -1188,6 +1692,14 @@ public class JavaSwitch<T> {
 				T result = caseWhileStatement(whileStatement);
 				if (result == null) result = caseStatement(whileStatement);
 				if (result == null) result = caseASTNode(whileStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case JavaPackage.YIELD_STATEMENT: {
+				YieldStatement yieldStatement = (YieldStatement)theEObject;
+				T result = caseYieldStatement(yieldStatement);
+				if (result == null) result = caseStatement(yieldStatement);
+				if (result == null) result = caseASTNode(yieldStatement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1222,6 +1734,36 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseAbstractMethodInvocation(AbstractMethodInvocation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Tag Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Tag Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTagElement(AbstractTagElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Text Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTextElement(AbstractTextElement object) {
 		return null;
 	}
 
@@ -1267,6 +1809,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseAbstractVariablesContainer(AbstractVariablesContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Annotatable Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Annotatable Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnnotatableType(AnnotatableType object) {
 		return null;
 	}
 
@@ -1556,6 +2113,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Case Default Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Case Default Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCaseDefaultExpression(CaseDefaultExpression object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cast Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1736,6 +2308,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Creation Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Creation Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCreationReference(CreationReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Do Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1747,6 +2334,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseDoStatement(DoStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Either Or Multi Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Either Or Multi Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEitherOrMultiPattern(EitherOrMultiPattern object) {
 		return null;
 	}
 
@@ -1811,6 +2413,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Exports Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Exports Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExportsDirective(ExportsDirective object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1822,6 +2439,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseExpression(Expression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpressionMethodReference(ExpressionMethodReference object) {
 		return null;
 	}
 
@@ -1886,6 +2518,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Guarded Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Guarded Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGuardedPattern(GuardedPattern object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>If Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1897,6 +2544,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseIfStatement(IfStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implicit Type Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implicit Type Declaration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplicitTypeDeclaration(ImplicitTypeDeclaration object) {
 		return null;
 	}
 
@@ -1976,6 +2638,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Intersection Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Intersection Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntersectionType(IntersectionType object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Javadoc</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1991,6 +2668,36 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Doc Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Doc Region</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaDocRegion(JavaDocRegion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Doc Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Doc Text Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaDocTextElement(JavaDocTextElement object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Labeled Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2002,6 +2709,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseLabeledStatement(LabeledStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lambda Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lambda Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLambdaExpression(LambdaExpression object) {
 		return null;
 	}
 
@@ -2141,6 +2863,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMethodReference(MethodReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2167,6 +2904,111 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseModifier(Modifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Declaration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleDeclaration(ModuleDeclaration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleDirective(ModuleDirective object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Modifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleModifier(ModuleModifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Qualified Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Qualified Name</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleQualifiedName(ModuleQualifiedName object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Name</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseName(Name object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Package Access</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Package Access</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModulePackageAccess(ModulePackageAccess object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Name Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Name Qualified Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNameQualifiedType(NameQualifiedType object) {
 		return null;
 	}
 
@@ -2231,6 +3073,36 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Null Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Null Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNullPattern(NullPattern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Opens Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Opens Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOpensDirective(OpensDirective object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2287,6 +3159,36 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseParenthesizedExpression(ParenthesizedExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePattern(Pattern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pattern Instanceof Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pattern Instanceof Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePatternInstanceofExpression(PatternInstanceofExpression object) {
 		return null;
 	}
 
@@ -2471,6 +3373,81 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Provides Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Provides Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProvidesDirective(ProvidesDirective object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Qualified Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQualifiedType(QualifiedType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Record Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Record Declaration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecordDeclaration(RecordDeclaration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Record Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Record Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecordPattern(RecordPattern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requires Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requires Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequiresDirective(RequiresDirective object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Return Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2482,6 +3459,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseReturnStatement(ReturnStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleType(SimpleType object) {
 		return null;
 	}
 
@@ -2591,6 +3583,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Super Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Super Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSuperMethodReference(SuperMethodReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Switch Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2602,6 +3609,21 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseSwitchCase(SwitchCase object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Switch Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Switch Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSwitchExpression(SwitchExpression object) {
 		return null;
 	}
 
@@ -2647,6 +3669,36 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseTagElement(TagElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tag Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tag Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTagProperty(TagProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Block</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextBlock(TextBlock object) {
 		return null;
 	}
 
@@ -2786,6 +3838,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type Method Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypeMethodReference(TypeMethodReference object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Type Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2797,6 +3864,36 @@ public class JavaSwitch<T> {
 	 * @generated
 	 */
 	public T caseTypeParameter(TypeParameter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type Pattern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypePattern(TypePattern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Union Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Union Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnionType(UnionType object) {
 		return null;
 	}
 
@@ -2996,6 +4093,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Uses Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Uses Directive</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUsesDirective(UsesDirective object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Variable Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3086,6 +4198,21 @@ public class JavaSwitch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Yield Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Yield Statement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYieldStatement(YieldStatement object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3096,6 +4223,7 @@ public class JavaSwitch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
+	@Override
 	public T defaultCase(EObject object) {
 		return null;
 	}

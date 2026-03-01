@@ -24,11 +24,11 @@ import org.eclipse.modisco.java.PrefixExpressionKind;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.PrefixExpression#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.PrefixExpression#getOperand <em>Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getPrefixExpression()
  * @model

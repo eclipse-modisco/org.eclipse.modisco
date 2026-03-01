@@ -42,12 +42,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SuperMethodInvocationImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SuperMethodInvocationImpl#getArguments <em>Arguments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SuperMethodInvocationImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

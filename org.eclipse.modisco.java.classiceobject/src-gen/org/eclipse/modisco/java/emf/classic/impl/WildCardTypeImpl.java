@@ -32,15 +32,15 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.WildCardTypeImpl#isUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.WildCardTypeImpl#getBound <em>Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class WildCardTypeImpl extends TypeImpl implements WildCardType {
+public class WildCardTypeImpl extends AnnotatableTypeImpl implements WildCardType {
 	/**
 	 * The default value of the '{@link #isUpperBound() <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -245,8 +245,8 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (upperBound: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (upperBound: ");
 		result.append(upperBound);
 		result.append(')');
 		return result.toString();

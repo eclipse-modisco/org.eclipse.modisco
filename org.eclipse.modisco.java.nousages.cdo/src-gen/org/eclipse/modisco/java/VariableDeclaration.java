@@ -14,6 +14,7 @@
  */
 package org.eclipse.modisco.java;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.NamedElement;
 
@@ -24,11 +25,12 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getInitializer <em>Initializer</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.VariableDeclaration#getUsageInVariableAccess <em>Usage In Variable Access</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getVariableDeclaration()
  * @model abstract="true"
@@ -86,5 +88,19 @@ public interface VariableDeclaration extends NamedElement {
 	 * @generated
 	 */
 	void setInitializer(Expression value);
+
+	/**
+	 * Returns the value of the '<em><b>Usage In Variable Access</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.modisco.java.SingleVariableAccess}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.modisco.java.SingleVariableAccess#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Usage In Variable Access</em>' reference list.
+	 * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getVariableDeclaration_UsageInVariableAccess()
+	 * @see org.eclipse.modisco.java.SingleVariableAccess#getVariable
+	 * @model opposite="variable" ordered="false"
+	 * @generated
+	 */
+	EList<SingleVariableAccess> getUsageInVariableAccess();
 
 } // VariableDeclaration

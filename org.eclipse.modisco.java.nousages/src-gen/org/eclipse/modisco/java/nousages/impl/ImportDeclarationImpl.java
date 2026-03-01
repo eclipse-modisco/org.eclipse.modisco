@@ -33,11 +33,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ImportDeclarationImpl#isStatic <em>Static</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ImportDeclarationImpl#getImportedElement <em>Imported Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -96,6 +96,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return static_;
 	}
@@ -105,6 +106,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatic(boolean newStatic) {
 		boolean oldStatic = static_;
 		static_ = newStatic;
@@ -117,6 +119,7 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getImportedElement() {
 		if (importedElement != null && importedElement.eIsProxy()) {
 			InternalEObject oldImportedElement = (InternalEObject)importedElement;
@@ -143,11 +146,64 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImportedElement(NamedElement newImportedElement) {
+	public NotificationChain basicSetImportedElement(NamedElement newImportedElement, NotificationChain msgs) {
 		NamedElement oldImportedElement = importedElement;
 		importedElement = newImportedElement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT, oldImportedElement, importedElement));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT, oldImportedElement, newImportedElement);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImportedElement(NamedElement newImportedElement) {
+		if (newImportedElement != importedElement) {
+			NotificationChain msgs = null;
+			if (importedElement != null)
+				msgs = ((InternalEObject)importedElement).eInverseRemove(this, JavaPackage.NAMED_ELEMENT__USAGES_IN_IMPORTS, NamedElement.class, msgs);
+			if (newImportedElement != null)
+				msgs = ((InternalEObject)newImportedElement).eInverseAdd(this, JavaPackage.NAMED_ELEMENT__USAGES_IN_IMPORTS, NamedElement.class, msgs);
+			msgs = basicSetImportedElement(newImportedElement, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT, newImportedElement, newImportedElement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT:
+				if (importedElement != null)
+					msgs = ((InternalEObject)importedElement).eInverseRemove(this, JavaPackage.NAMED_ELEMENT__USAGES_IN_IMPORTS, NamedElement.class, msgs);
+				return basicSetImportedElement((NamedElement)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.IMPORT_DECLARATION__IMPORTED_ELEMENT:
+				return basicSetImportedElement(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -228,8 +284,8 @@ public class ImportDeclarationImpl extends ASTNodeImpl implements ImportDeclarat
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (static: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (static: ");
 		result.append(static_);
 		result.append(')');
 		return result.toString();

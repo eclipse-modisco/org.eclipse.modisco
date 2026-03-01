@@ -32,12 +32,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.MethodRefParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.MethodRefParameterImpl#isVarargs <em>Varargs</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.MethodRefParameterImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -297,10 +297,10 @@ public class MethodRefParameterImpl extends ASTNodeImpl implements MethodRefPara
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
-		result.append(", varargs: "); //$NON-NLS-1$
+		result.append(", varargs: ");
 		result.append(varargs);
 		result.append(')');
 		return result.toString();

@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.WhileStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.WhileStatementImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class WhileStatementImpl extends StatementImpl implements WhileStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getWhileStatement_Expression(), true);
 	}
@@ -70,6 +71,7 @@ public class WhileStatementImpl extends StatementImpl implements WhileStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getWhileStatement_Expression(), newExpression);
 	}
@@ -79,6 +81,7 @@ public class WhileStatementImpl extends StatementImpl implements WhileStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getBody() {
 		return (Statement)eGet(JavaPackage.eINSTANCE.getWhileStatement_Body(), true);
 	}
@@ -88,6 +91,7 @@ public class WhileStatementImpl extends StatementImpl implements WhileStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Statement newBody) {
 		eSet(JavaPackage.eINSTANCE.getWhileStatement_Body(), newBody);
 	}

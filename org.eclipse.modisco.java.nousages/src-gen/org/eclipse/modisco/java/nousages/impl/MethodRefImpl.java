@@ -42,12 +42,12 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefImpl#getQualifier <em>Qualifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.MethodRefImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -106,6 +106,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractMethodDeclaration getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -132,11 +133,14 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(AbstractMethodDeclaration newMethod) {
+	public NotificationChain basicSetMethod(AbstractMethodDeclaration newMethod, NotificationChain msgs) {
 		AbstractMethodDeclaration oldMethod = method;
 		method = newMethod;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.METHOD_REF__METHOD, oldMethod, method));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.METHOD_REF__METHOD, oldMethod, newMethod);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -144,6 +148,27 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public void setMethod(AbstractMethodDeclaration newMethod) {
+		if (newMethod != method) {
+			NotificationChain msgs = null;
+			if (method != null)
+				msgs = ((InternalEObject)method).eInverseRemove(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, AbstractMethodDeclaration.class, msgs);
+			if (newMethod != null)
+				msgs = ((InternalEObject)newMethod).eInverseAdd(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, AbstractMethodDeclaration.class, msgs);
+			msgs = basicSetMethod(newMethod, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.METHOD_REF__METHOD, newMethod, newMethod));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public TypeAccess getQualifier() {
 		return qualifier;
 	}
@@ -168,6 +193,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(TypeAccess newQualifier) {
 		if (newQualifier != qualifier) {
 			NotificationChain msgs = null;
@@ -187,6 +213,7 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MethodRefParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<MethodRefParameter>(MethodRefParameter.class, this, JavaPackage.METHOD_REF__PARAMETERS);
@@ -200,8 +227,26 @@ public class MethodRefImpl extends ASTNodeImpl implements MethodRef {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JavaPackage.METHOD_REF__METHOD:
+				if (method != null)
+					msgs = ((InternalEObject)method).eInverseRemove(this, JavaPackage.ABSTRACT_METHOD_DECLARATION__USAGES_IN_DOC_COMMENTS, AbstractMethodDeclaration.class, msgs);
+				return basicSetMethod((AbstractMethodDeclaration)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case JavaPackage.METHOD_REF__METHOD:
+				return basicSetMethod(null, msgs);
 			case JavaPackage.METHOD_REF__QUALIFIER:
 				return basicSetQualifier(null, msgs);
 			case JavaPackage.METHOD_REF__PARAMETERS:

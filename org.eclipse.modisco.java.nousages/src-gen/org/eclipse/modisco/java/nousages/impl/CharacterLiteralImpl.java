@@ -30,10 +30,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CharacterLiteralImpl#getEscapedValue <em>Escaped Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class CharacterLiteralImpl extends ExpressionImpl implements CharacterLit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEscapedValue() {
 		return escapedValue;
 	}
@@ -91,6 +92,7 @@ public class CharacterLiteralImpl extends ExpressionImpl implements CharacterLit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEscapedValue(String newEscapedValue) {
 		String oldEscapedValue = escapedValue;
 		escapedValue = newEscapedValue;
@@ -165,8 +167,8 @@ public class CharacterLiteralImpl extends ExpressionImpl implements CharacterLit
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (escapedValue: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (escapedValue: ");
 		result.append(escapedValue);
 		result.append(')');
 		return result.toString();

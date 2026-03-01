@@ -30,11 +30,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SwitchStatementImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.SwitchStatementImpl#getStatements <em>Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getSwitchStatement_Expression(), true);
 	}
@@ -72,6 +73,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getSwitchStatement_Expression(), newExpression);
 	}
@@ -82,6 +84,7 @@ public class SwitchStatementImpl extends StatementImpl implements SwitchStatemen
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Statement> getStatements() {
 		return (EList<Statement>)eGet(JavaPackage.eINSTANCE.getSwitchStatement_Statements(), true);
 	}

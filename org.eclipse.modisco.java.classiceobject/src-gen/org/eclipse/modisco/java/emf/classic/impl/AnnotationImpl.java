@@ -40,11 +40,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnnotationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnnotationImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

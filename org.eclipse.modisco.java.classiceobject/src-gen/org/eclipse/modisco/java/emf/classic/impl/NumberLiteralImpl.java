@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.NumberLiteralImpl#getTokenValue <em>Token Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -164,8 +164,8 @@ public class NumberLiteralImpl extends ExpressionImpl implements NumberLiteral {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tokenValue: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (tokenValue: ");
 		result.append(tokenValue);
 		result.append(')');
 		return result.toString();

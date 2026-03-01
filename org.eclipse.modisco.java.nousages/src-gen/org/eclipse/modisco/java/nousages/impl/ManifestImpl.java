@@ -40,11 +40,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ManifestImpl#getMainAttributes <em>Main Attributes</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ManifestImpl#getEntryAttributes <em>Entry Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -93,6 +93,7 @@ public class ManifestImpl extends EObjectImpl implements Manifest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManifestAttribute> getMainAttributes() {
 		if (mainAttributes == null) {
 			mainAttributes = new EObjectContainmentEList<ManifestAttribute>(ManifestAttribute.class, this, JavaPackage.MANIFEST__MAIN_ATTRIBUTES);
@@ -105,6 +106,7 @@ public class ManifestImpl extends EObjectImpl implements Manifest {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ManifestEntry> getEntryAttributes() {
 		if (entryAttributes == null) {
 			entryAttributes = new EObjectContainmentEList<ManifestEntry>(ManifestEntry.class, this, JavaPackage.MANIFEST__ENTRY_ATTRIBUTES);

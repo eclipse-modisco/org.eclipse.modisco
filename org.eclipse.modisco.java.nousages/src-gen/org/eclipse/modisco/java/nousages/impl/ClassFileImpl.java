@@ -32,29 +32,21 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Class File</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getOriginalFilePath
- * <em>Original File Path</em>}</li>
- * <li>{@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getType
- * <em>Type</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getAttachedSource
- * <em>Attached Source</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getPackage
- * <em>Package</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getAttachedSource <em>Attached Source</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ClassFileImpl#getPackage <em>Package</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	/**
-	 * The default value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The default value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -62,10 +54,9 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	protected static final String ORIGINAL_FILE_PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -75,7 +66,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -83,10 +73,9 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	protected AbstractTypeDeclaration type;
 
 	/**
-	 * The cached value of the '{@link #getAttachedSource()
-	 * <em>Attached Source</em>}' reference. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getAttachedSource() <em>Attached Source</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getAttachedSource()
 	 * @generated
 	 * @ordered
@@ -94,9 +83,8 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 	protected CompilationUnit attachedSource;
 
 	/**
-	 * The cached value of the '{@link #getPackage() <em>Package</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPackage() <em>Package</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getPackage()
 	 * @generated
 	 * @ordered
@@ -105,7 +93,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ClassFileImpl() {
@@ -114,7 +101,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -124,40 +110,37 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH,
-					oldOriginalFilePath, originalFilePath));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH, oldOriginalFilePath, originalFilePath));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public AbstractTypeDeclaration getType() {
 		if (type != null && type.eIsProxy()) {
-			InternalEObject oldType = (InternalEObject) type;
-			type = (AbstractTypeDeclaration) eResolveProxy(oldType);
+			InternalEObject oldType = (InternalEObject)type;
+			type = (AbstractTypeDeclaration)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							JavaPackage.CLASS_FILE__TYPE, oldType, type));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.CLASS_FILE__TYPE, oldType, type));
 			}
 		}
 		return type;
@@ -165,7 +148,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public AbstractTypeDeclaration basicGetType() {
@@ -174,31 +156,28 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setType(AbstractTypeDeclaration newType) {
 		AbstractTypeDeclaration oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.CLASS_FILE__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CLASS_FILE__TYPE, oldType, type));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public CompilationUnit getAttachedSource() {
 		if (attachedSource != null && attachedSource.eIsProxy()) {
-			InternalEObject oldAttachedSource = (InternalEObject) attachedSource;
-			attachedSource = (CompilationUnit) eResolveProxy(oldAttachedSource);
+			InternalEObject oldAttachedSource = (InternalEObject)attachedSource;
+			attachedSource = (CompilationUnit)eResolveProxy(oldAttachedSource);
 			if (attachedSource != oldAttachedSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							JavaPackage.CLASS_FILE__ATTACHED_SOURCE,
-							oldAttachedSource, attachedSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.CLASS_FILE__ATTACHED_SOURCE, oldAttachedSource, attachedSource));
 			}
 		}
 		return attachedSource;
@@ -206,7 +185,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public CompilationUnit basicGetAttachedSource() {
@@ -215,32 +193,28 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setAttachedSource(CompilationUnit newAttachedSource) {
 		CompilationUnit oldAttachedSource = attachedSource;
 		attachedSource = newAttachedSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.CLASS_FILE__ATTACHED_SOURCE, oldAttachedSource,
-					attachedSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CLASS_FILE__ATTACHED_SOURCE, oldAttachedSource, attachedSource));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
-			InternalEObject oldPackage = (InternalEObject) package_;
-			package_ = (org.eclipse.modisco.java.Package) eResolveProxy(oldPackage);
+			InternalEObject oldPackage = (InternalEObject)package_;
+			package_ = (org.eclipse.modisco.java.Package)eResolveProxy(oldPackage);
 			if (package_ != oldPackage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							JavaPackage.CLASS_FILE__PACKAGE, oldPackage,
-							package_));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.CLASS_FILE__PACKAGE, oldPackage, package_));
 			}
 		}
 		return package_;
@@ -248,7 +222,6 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public org.eclipse.modisco.java.Package basicGetPackage() {
@@ -257,124 +230,113 @@ public class ClassFileImpl extends NamedElementImpl implements ClassFile {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.CLASS_FILE__PACKAGE, oldPackage, package_));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.CLASS_FILE__PACKAGE, oldPackage, package_));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
-			return getOriginalFilePath();
-		case JavaPackage.CLASS_FILE__TYPE:
-			if (resolve)
-				return getType();
-			return basicGetType();
-		case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
-			if (resolve)
-				return getAttachedSource();
-			return basicGetAttachedSource();
-		case JavaPackage.CLASS_FILE__PACKAGE:
-			if (resolve)
-				return getPackage();
-			return basicGetPackage();
+			case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
+				return getOriginalFilePath();
+			case JavaPackage.CLASS_FILE__TYPE:
+				if (resolve) return getType();
+				return basicGetType();
+			case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
+				if (resolve) return getAttachedSource();
+				return basicGetAttachedSource();
+			case JavaPackage.CLASS_FILE__PACKAGE:
+				if (resolve) return getPackage();
+				return basicGetPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
-			setOriginalFilePath((String) newValue);
-			return;
-		case JavaPackage.CLASS_FILE__TYPE:
-			setType((AbstractTypeDeclaration) newValue);
-			return;
-		case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
-			setAttachedSource((CompilationUnit) newValue);
-			return;
-		case JavaPackage.CLASS_FILE__PACKAGE:
-			setPackage((org.eclipse.modisco.java.Package) newValue);
-			return;
+			case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
+				setOriginalFilePath((String)newValue);
+				return;
+			case JavaPackage.CLASS_FILE__TYPE:
+				setType((AbstractTypeDeclaration)newValue);
+				return;
+			case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
+				setAttachedSource((CompilationUnit)newValue);
+				return;
+			case JavaPackage.CLASS_FILE__PACKAGE:
+				setPackage((org.eclipse.modisco.java.Package)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
-			setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
-			return;
-		case JavaPackage.CLASS_FILE__TYPE:
-			setType((AbstractTypeDeclaration) null);
-			return;
-		case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
-			setAttachedSource((CompilationUnit) null);
-			return;
-		case JavaPackage.CLASS_FILE__PACKAGE:
-			setPackage((org.eclipse.modisco.java.Package) null);
-			return;
+			case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
+				setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
+				return;
+			case JavaPackage.CLASS_FILE__TYPE:
+				setType((AbstractTypeDeclaration)null);
+				return;
+			case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
+				setAttachedSource((CompilationUnit)null);
+				return;
+			case JavaPackage.CLASS_FILE__PACKAGE:
+				setPackage((org.eclipse.modisco.java.Package)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
-			return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null
-					: !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
-		case JavaPackage.CLASS_FILE__TYPE:
-			return type != null;
-		case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
-			return attachedSource != null;
-		case JavaPackage.CLASS_FILE__PACKAGE:
-			return package_ != null;
+			case JavaPackage.CLASS_FILE__ORIGINAL_FILE_PATH:
+				return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null : !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
+			case JavaPackage.CLASS_FILE__TYPE:
+				return type != null;
+			case JavaPackage.CLASS_FILE__ATTACHED_SOURCE:
+				return attachedSource != null;
+			case JavaPackage.CLASS_FILE__PACKAGE:
+				return package_ != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (originalFilePath: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');
 		return result.toString();

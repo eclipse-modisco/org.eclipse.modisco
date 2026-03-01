@@ -34,6 +34,7 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodDeclarationImpl#getBody <em>Body</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodDeclarationImpl#getParameters <em>Parameters</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodDeclarationImpl#getUsagesInDocComments <em>Usages In Doc Comments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AbstractMethodDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -71,6 +71,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBody() {
 		return (Block)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_Body(), true);
 	}
@@ -80,6 +81,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(Block newBody) {
 		eSet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_Body(), newBody);
 	}
@@ -90,6 +92,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<SingleVariableDeclaration> getParameters() {
 		return (EList<SingleVariableDeclaration>)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_Parameters(), true);
 	}
@@ -100,6 +103,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getThrownExceptions() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_ThrownExceptions(), true);
 	}
@@ -110,6 +114,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeParameter> getTypeParameters() {
 		return (EList<TypeParameter>)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_TypeParameters(), true);
 	}
@@ -120,6 +125,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<MethodRef> getUsagesInDocComments() {
 		return (EList<MethodRef>)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_UsagesInDocComments(), true);
 	}
@@ -130,6 +136,7 @@ public abstract class AbstractMethodDeclarationImpl extends BodyDeclarationImpl 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractMethodInvocation> getUsages() {
 		return (EList<AbstractMethodInvocation>)eGet(JavaPackage.eINSTANCE.getAbstractMethodDeclaration_Usages(), true);
 	}

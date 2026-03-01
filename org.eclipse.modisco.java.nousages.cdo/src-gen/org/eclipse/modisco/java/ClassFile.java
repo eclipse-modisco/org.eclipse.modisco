@@ -25,13 +25,13 @@ import org.eclipse.modisco.java.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ClassFile#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ClassFile#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ClassFile#getAttachedSource <em>Attached Source</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ClassFile#getPackage <em>Package</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getClassFile()
  * @model

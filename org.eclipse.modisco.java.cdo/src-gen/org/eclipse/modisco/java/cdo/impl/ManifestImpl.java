@@ -32,11 +32,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ManifestImpl#getMainAttributes <em>Main Attributes</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ManifestImpl#getEntryAttributes <em>Entry Attributes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,6 +76,7 @@ public class ManifestImpl extends CDOObjectImpl implements Manifest {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ManifestAttribute> getMainAttributes() {
 		return (EList<ManifestAttribute>)eGet(JavaPackage.eINSTANCE.getManifest_MainAttributes(), true);
 	}
@@ -86,6 +87,7 @@ public class ManifestImpl extends CDOObjectImpl implements Manifest {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ManifestEntry> getEntryAttributes() {
 		return (EList<ManifestEntry>)eGet(JavaPackage.eINSTANCE.getManifest_EntryAttributes(), true);
 	}

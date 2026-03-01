@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.ContinueStatementImpl#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class ContinueStatementImpl extends StatementImpl implements ContinueStat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LabeledStatement getLabel() {
 		return (LabeledStatement)eGet(JavaPackage.eINSTANCE.getContinueStatement_Label(), true);
 	}
@@ -68,6 +69,7 @@ public class ContinueStatementImpl extends StatementImpl implements ContinueStat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(LabeledStatement newLabel) {
 		eSet(JavaPackage.eINSTANCE.getContinueStatement_Label(), newLabel);
 	}

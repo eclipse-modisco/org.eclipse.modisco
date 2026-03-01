@@ -39,15 +39,15 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.TagElementImpl#getTagName <em>Tag Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.TagElementImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class TagElementImpl extends ASTNodeImpl implements TagElement {
+public class TagElementImpl extends AbstractTagElementImpl implements TagElement {
 	/**
 	 * The default value of the '{@link #getTagName() <em>Tag Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -223,8 +223,8 @@ public class TagElementImpl extends ASTNodeImpl implements TagElement {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tagName: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (tagName: ");
 		result.append(tagName);
 		result.append(')');
 		return result.toString();

@@ -38,34 +38,23 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Compilation Unit</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getOriginalFilePath
- * <em>Original File Path</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getCommentList
- * <em>Comment List</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getImports
- * <em>Imports</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getPackage
- * <em>Package</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getTypes
- * <em>Types</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getCommentList <em>Comment List</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.CompilationUnitImpl#getTypes <em>Types</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class CompilationUnitImpl extends NamedElementImpl implements
 		CompilationUnit {
 	/**
-	 * The default value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The default value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -73,10 +62,9 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	protected static final String ORIGINAL_FILE_PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -84,9 +72,8 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	protected String originalFilePath = ORIGINAL_FILE_PATH_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCommentList() <em>Comment List</em>}'
-	 * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getCommentList() <em>Comment List</em>}' reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCommentList()
 	 * @generated
 	 * @ordered
@@ -94,9 +81,8 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	protected EList<Comment> commentList;
 
 	/**
-	 * The cached value of the '{@link #getImports() <em>Imports</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getImports()
 	 * @generated
 	 * @ordered
@@ -104,9 +90,8 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	protected EList<ImportDeclaration> imports;
 
 	/**
-	 * The cached value of the '{@link #getPackage() <em>Package</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPackage() <em>Package</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getPackage()
 	 * @generated
 	 * @ordered
@@ -114,9 +99,8 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	protected org.eclipse.modisco.java.Package package_;
 
 	/**
-	 * The cached value of the '{@link #getTypes() <em>Types</em>}' reference
-	 * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getTypes() <em>Types</em>}' reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTypes()
 	 * @generated
 	 * @ordered
@@ -125,7 +109,6 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected CompilationUnitImpl() {
@@ -134,7 +117,6 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -144,68 +126,61 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH,
-					oldOriginalFilePath, originalFilePath));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH, oldOriginalFilePath, originalFilePath));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getCommentList() {
 		if (commentList == null) {
-			commentList = new EObjectResolvingEList<Comment>(Comment.class,
-					this, JavaPackage.COMPILATION_UNIT__COMMENT_LIST);
+			commentList = new EObjectResolvingEList<Comment>(Comment.class, this, JavaPackage.COMPILATION_UNIT__COMMENT_LIST);
 		}
 		return commentList;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public EList<ImportDeclaration> getImports() {
 		if (imports == null) {
-			imports = new EObjectContainmentEList<ImportDeclaration>(
-					ImportDeclaration.class, this,
-					JavaPackage.COMPILATION_UNIT__IMPORTS);
+			imports = new EObjectContainmentEList<ImportDeclaration>(ImportDeclaration.class, this, JavaPackage.COMPILATION_UNIT__IMPORTS);
 		}
 		return imports;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		if (package_ != null && package_.eIsProxy()) {
-			InternalEObject oldPackage = (InternalEObject) package_;
-			package_ = (org.eclipse.modisco.java.Package) eResolveProxy(oldPackage);
+			InternalEObject oldPackage = (InternalEObject)package_;
+			package_ = (org.eclipse.modisco.java.Package)eResolveProxy(oldPackage);
 			if (package_ != oldPackage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							JavaPackage.COMPILATION_UNIT__PACKAGE, oldPackage,
-							package_));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JavaPackage.COMPILATION_UNIT__PACKAGE, oldPackage, package_));
 			}
 		}
 		return package_;
@@ -213,7 +188,6 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public org.eclipse.modisco.java.Package basicGetPackage() {
@@ -222,166 +196,151 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		org.eclipse.modisco.java.Package oldPackage = package_;
 		package_ = newPackage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.COMPILATION_UNIT__PACKAGE, oldPackage, package_));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.COMPILATION_UNIT__PACKAGE, oldPackage, package_));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public EList<AbstractTypeDeclaration> getTypes() {
 		if (types == null) {
-			types = new EObjectResolvingEList<AbstractTypeDeclaration>(
-					AbstractTypeDeclaration.class, this,
-					JavaPackage.COMPILATION_UNIT__TYPES);
+			types = new EObjectResolvingEList<AbstractTypeDeclaration>(AbstractTypeDeclaration.class, this, JavaPackage.COMPILATION_UNIT__TYPES);
 		}
 		return types;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.COMPILATION_UNIT__IMPORTS:
-			return ((InternalEList<?>) getImports())
-					.basicRemove(otherEnd, msgs);
+			case JavaPackage.COMPILATION_UNIT__IMPORTS:
+				return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
-			return getOriginalFilePath();
-		case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
-			return getCommentList();
-		case JavaPackage.COMPILATION_UNIT__IMPORTS:
-			return getImports();
-		case JavaPackage.COMPILATION_UNIT__PACKAGE:
-			if (resolve)
-				return getPackage();
-			return basicGetPackage();
-		case JavaPackage.COMPILATION_UNIT__TYPES:
-			return getTypes();
+			case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
+				return getOriginalFilePath();
+			case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
+				return getCommentList();
+			case JavaPackage.COMPILATION_UNIT__IMPORTS:
+				return getImports();
+			case JavaPackage.COMPILATION_UNIT__PACKAGE:
+				if (resolve) return getPackage();
+				return basicGetPackage();
+			case JavaPackage.COMPILATION_UNIT__TYPES:
+				return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
-			setOriginalFilePath((String) newValue);
-			return;
-		case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
-			getCommentList().clear();
-			getCommentList().addAll((Collection<? extends Comment>) newValue);
-			return;
-		case JavaPackage.COMPILATION_UNIT__IMPORTS:
-			getImports().clear();
-			getImports().addAll(
-					(Collection<? extends ImportDeclaration>) newValue);
-			return;
-		case JavaPackage.COMPILATION_UNIT__PACKAGE:
-			setPackage((org.eclipse.modisco.java.Package) newValue);
-			return;
-		case JavaPackage.COMPILATION_UNIT__TYPES:
-			getTypes().clear();
-			getTypes().addAll(
-					(Collection<? extends AbstractTypeDeclaration>) newValue);
-			return;
+			case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
+				setOriginalFilePath((String)newValue);
+				return;
+			case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
+				getCommentList().clear();
+				getCommentList().addAll((Collection<? extends Comment>)newValue);
+				return;
+			case JavaPackage.COMPILATION_UNIT__IMPORTS:
+				getImports().clear();
+				getImports().addAll((Collection<? extends ImportDeclaration>)newValue);
+				return;
+			case JavaPackage.COMPILATION_UNIT__PACKAGE:
+				setPackage((org.eclipse.modisco.java.Package)newValue);
+				return;
+			case JavaPackage.COMPILATION_UNIT__TYPES:
+				getTypes().clear();
+				getTypes().addAll((Collection<? extends AbstractTypeDeclaration>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
-			setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
-			return;
-		case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
-			getCommentList().clear();
-			return;
-		case JavaPackage.COMPILATION_UNIT__IMPORTS:
-			getImports().clear();
-			return;
-		case JavaPackage.COMPILATION_UNIT__PACKAGE:
-			setPackage((org.eclipse.modisco.java.Package) null);
-			return;
-		case JavaPackage.COMPILATION_UNIT__TYPES:
-			getTypes().clear();
-			return;
+			case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
+				setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
+				return;
+			case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
+				getCommentList().clear();
+				return;
+			case JavaPackage.COMPILATION_UNIT__IMPORTS:
+				getImports().clear();
+				return;
+			case JavaPackage.COMPILATION_UNIT__PACKAGE:
+				setPackage((org.eclipse.modisco.java.Package)null);
+				return;
+			case JavaPackage.COMPILATION_UNIT__TYPES:
+				getTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
-			return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null
-					: !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
-		case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
-			return commentList != null && !commentList.isEmpty();
-		case JavaPackage.COMPILATION_UNIT__IMPORTS:
-			return imports != null && !imports.isEmpty();
-		case JavaPackage.COMPILATION_UNIT__PACKAGE:
-			return package_ != null;
-		case JavaPackage.COMPILATION_UNIT__TYPES:
-			return types != null && !types.isEmpty();
+			case JavaPackage.COMPILATION_UNIT__ORIGINAL_FILE_PATH:
+				return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null : !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
+			case JavaPackage.COMPILATION_UNIT__COMMENT_LIST:
+				return commentList != null && !commentList.isEmpty();
+			case JavaPackage.COMPILATION_UNIT__IMPORTS:
+				return imports != null && !imports.isEmpty();
+			case JavaPackage.COMPILATION_UNIT__PACKAGE:
+				return package_ != null;
+			case JavaPackage.COMPILATION_UNIT__TYPES:
+				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (originalFilePath: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');
 		return result.toString();

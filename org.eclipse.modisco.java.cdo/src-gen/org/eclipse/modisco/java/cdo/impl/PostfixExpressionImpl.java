@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.PostfixExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.PostfixExpressionImpl#getOperand <em>Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PostfixExpressionKind getOperator() {
 		return (PostfixExpressionKind)eGet(JavaPackage.eINSTANCE.getPostfixExpression_Operator(), true);
 	}
@@ -70,6 +71,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(PostfixExpressionKind newOperator) {
 		eSet(JavaPackage.eINSTANCE.getPostfixExpression_Operator(), newOperator);
 	}
@@ -79,6 +81,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getOperand() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getPostfixExpression_Operand(), true);
 	}
@@ -88,6 +91,7 @@ public class PostfixExpressionImpl extends ExpressionImpl implements PostfixExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperand(Expression newOperand) {
 		eSet(JavaPackage.eINSTANCE.getPostfixExpression_Operand(), newOperand);
 	}

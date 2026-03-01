@@ -29,6 +29,7 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Compilation Unit</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CompilationUnitImpl#getOriginalFilePath <em>Original File Path</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CompilationUnitImpl#getCommentList <em>Comment List</em>}</li>
@@ -36,7 +37,6 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CompilationUnitImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CompilationUnitImpl#getTypes <em>Types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return (String)eGet(JavaPackage.eINSTANCE.getCompilationUnit_OriginalFilePath(), true);
 	}
@@ -71,6 +72,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		eSet(JavaPackage.eINSTANCE.getCompilationUnit_OriginalFilePath(), newOriginalFilePath);
 	}
@@ -80,6 +82,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Comment> getCommentList() {
 		return (EList<Comment>)eGet(JavaPackage.eINSTANCE.getCompilationUnit_CommentList(), true);
 	}
@@ -89,6 +92,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<ImportDeclaration> getImports() {
 		return (EList<ImportDeclaration>)eGet(JavaPackage.eINSTANCE.getCompilationUnit_Imports(), true);
 	}
@@ -97,6 +101,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.modisco.java.Package getPackage() {
 		return (org.eclipse.modisco.java.Package)eGet(JavaPackage.eINSTANCE.getCompilationUnit_Package(), true);
 	}
@@ -105,6 +110,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPackage(org.eclipse.modisco.java.Package newPackage) {
 		eSet(JavaPackage.eINSTANCE.getCompilationUnit_Package(), newPackage);
 	}
@@ -114,6 +120,7 @@ public class CompilationUnitImpl extends NamedElementImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<AbstractTypeDeclaration> getTypes() {
 		return (EList<AbstractTypeDeclaration>)eGet(JavaPackage.eINSTANCE.getCompilationUnit_Types(), true);
 	}

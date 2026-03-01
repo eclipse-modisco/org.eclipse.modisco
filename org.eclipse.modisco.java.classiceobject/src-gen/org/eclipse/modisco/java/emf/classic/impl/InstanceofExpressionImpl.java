@@ -33,11 +33,11 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.InstanceofExpressionImpl#getRightOperand <em>Right Operand</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.InstanceofExpressionImpl#getLeftOperand <em>Left Operand</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

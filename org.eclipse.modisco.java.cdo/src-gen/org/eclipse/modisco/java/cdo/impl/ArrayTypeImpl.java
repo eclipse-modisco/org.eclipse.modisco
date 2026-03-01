@@ -27,11 +27,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayTypeImpl#getDimensions <em>Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ArrayTypeImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getArrayType_Dimensions(), true);
 	}
@@ -69,6 +70,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDimensions(int newDimensions) {
 		eSet(JavaPackage.eINSTANCE.getArrayType_Dimensions(), newDimensions);
 	}
@@ -78,6 +80,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getElementType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getArrayType_ElementType(), true);
 	}
@@ -87,6 +90,7 @@ public class ArrayTypeImpl extends TypeImpl implements ArrayType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElementType(TypeAccess newElementType) {
 		eSet(JavaPackage.eINSTANCE.getArrayType_ElementType(), newElementType);
 	}

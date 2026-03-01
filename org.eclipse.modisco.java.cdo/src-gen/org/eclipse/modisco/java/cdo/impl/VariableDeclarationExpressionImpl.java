@@ -33,13 +33,13 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.VariableDeclarationExpressionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.VariableDeclarationExpressionImpl#getFragments <em>Fragments</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.VariableDeclarationExpressionImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.VariableDeclarationExpressionImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +68,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), true);
 	}
@@ -77,6 +78,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), newType);
 	}
@@ -87,6 +89,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		return (EList<VariableDeclarationFragment>)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Fragments(), true);
 	}
@@ -96,6 +99,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modifier getModifier() {
 		return (Modifier)eGet(JavaPackage.eINSTANCE.getVariableDeclarationExpression_Modifier(), true);
 	}
@@ -105,6 +109,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModifier(Modifier newModifier) {
 		eSet(JavaPackage.eINSTANCE.getVariableDeclarationExpression_Modifier(), newModifier);
 	}
@@ -115,6 +120,7 @@ public class VariableDeclarationExpressionImpl extends ExpressionImpl implements
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Annotation> getAnnotations() {
 		return (EList<Annotation>)eGet(JavaPackage.eINSTANCE.getVariableDeclarationExpression_Annotations(), true);
 	}

@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnnotationMemberValuePairImpl#getMember <em>Member</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.AnnotationMemberValuePairImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnnotationTypeMemberDeclaration getMember() {
 		return (AnnotationTypeMemberDeclaration)eGet(JavaPackage.eINSTANCE.getAnnotationMemberValuePair_Member(), true);
 	}
@@ -70,6 +71,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMember(AnnotationTypeMemberDeclaration newMember) {
 		eSet(JavaPackage.eINSTANCE.getAnnotationMemberValuePair_Member(), newMember);
 	}
@@ -79,6 +81,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getValue() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getAnnotationMemberValuePair_Value(), true);
 	}
@@ -88,6 +91,7 @@ public class AnnotationMemberValuePairImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Expression newValue) {
 		eSet(JavaPackage.eINSTANCE.getAnnotationMemberValuePair_Value(), newValue);
 	}

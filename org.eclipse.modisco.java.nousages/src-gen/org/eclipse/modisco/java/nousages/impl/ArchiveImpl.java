@@ -37,27 +37,20 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <em><b>Archive</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getOriginalFilePath
- * <em>Original File Path</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getClassFiles
- * <em>Class Files</em>}</li>
- * <li>
- * {@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getManifest
- * <em>Manifest</em>}</li>
- * </ul>
  * </p>
- * 
+ * <ul>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getOriginalFilePath <em>Original File Path</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getClassFiles <em>Class Files</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArchiveImpl#getManifest <em>Manifest</em>}</li>
+ * </ul>
+ *
  * @generated
  */
 public class ArchiveImpl extends NamedElementImpl implements Archive {
 	/**
-	 * The default value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The default value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -65,10 +58,9 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	protected static final String ORIGINAL_FILE_PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getOriginalFilePath()
-	 * <em>Original File Path</em>}' attribute. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getOriginalFilePath() <em>Original File Path</em>}' attribute.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getOriginalFilePath()
 	 * @generated
 	 * @ordered
@@ -76,9 +68,8 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	protected String originalFilePath = ORIGINAL_FILE_PATH_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getClassFiles() <em>Class Files</em>}'
-	 * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getClassFiles() <em>Class Files</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getClassFiles()
 	 * @generated
 	 * @ordered
@@ -86,9 +77,8 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 	protected EList<ClassFile> classFiles;
 
 	/**
-	 * The cached value of the '{@link #getManifest() <em>Manifest</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getManifest() <em>Manifest</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getManifest()
 	 * @generated
 	 * @ordered
@@ -97,7 +87,6 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ArchiveImpl() {
@@ -106,7 +95,6 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -116,52 +104,48 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public String getOriginalFilePath() {
 		return originalFilePath;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setOriginalFilePath(String newOriginalFilePath) {
 		String oldOriginalFilePath = originalFilePath;
 		originalFilePath = newOriginalFilePath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH,
-					oldOriginalFilePath, originalFilePath));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH, oldOriginalFilePath, originalFilePath));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public EList<ClassFile> getClassFiles() {
 		if (classFiles == null) {
-			classFiles = new EObjectContainmentEList<ClassFile>(
-					ClassFile.class, this, JavaPackage.ARCHIVE__CLASS_FILES);
+			classFiles = new EObjectContainmentEList<ClassFile>(ClassFile.class, this, JavaPackage.ARCHIVE__CLASS_FILES);
 		}
 		return classFiles;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public Manifest getManifest() {
 		return manifest;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetManifest(Manifest newManifest,
@@ -169,152 +153,133 @@ public class ArchiveImpl extends NamedElementImpl implements Archive {
 		Manifest oldManifest = manifest;
 		manifest = newManifest;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, JavaPackage.ARCHIVE__MANIFEST,
-					oldManifest, newManifest);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.ARCHIVE__MANIFEST, oldManifest, newManifest);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
+	@Override
 	public void setManifest(Manifest newManifest) {
 		if (newManifest != manifest) {
 			NotificationChain msgs = null;
 			if (manifest != null)
-				msgs = ((InternalEObject) manifest).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - JavaPackage.ARCHIVE__MANIFEST,
-						null, msgs);
+				msgs = ((InternalEObject)manifest).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ARCHIVE__MANIFEST, null, msgs);
 			if (newManifest != null)
-				msgs = ((InternalEObject) newManifest).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - JavaPackage.ARCHIVE__MANIFEST,
-						null, msgs);
+				msgs = ((InternalEObject)newManifest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.ARCHIVE__MANIFEST, null, msgs);
 			msgs = basicSetManifest(newManifest, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					JavaPackage.ARCHIVE__MANIFEST, newManifest, newManifest));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.ARCHIVE__MANIFEST, newManifest, newManifest));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case JavaPackage.ARCHIVE__CLASS_FILES:
-			return ((InternalEList<?>) getClassFiles()).basicRemove(otherEnd,
-					msgs);
-		case JavaPackage.ARCHIVE__MANIFEST:
-			return basicSetManifest(null, msgs);
+			case JavaPackage.ARCHIVE__CLASS_FILES:
+				return ((InternalEList<?>)getClassFiles()).basicRemove(otherEnd, msgs);
+			case JavaPackage.ARCHIVE__MANIFEST:
+				return basicSetManifest(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
-			return getOriginalFilePath();
-		case JavaPackage.ARCHIVE__CLASS_FILES:
-			return getClassFiles();
-		case JavaPackage.ARCHIVE__MANIFEST:
-			return getManifest();
+			case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
+				return getOriginalFilePath();
+			case JavaPackage.ARCHIVE__CLASS_FILES:
+				return getClassFiles();
+			case JavaPackage.ARCHIVE__MANIFEST:
+				return getManifest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
-			setOriginalFilePath((String) newValue);
-			return;
-		case JavaPackage.ARCHIVE__CLASS_FILES:
-			getClassFiles().clear();
-			getClassFiles().addAll((Collection<? extends ClassFile>) newValue);
-			return;
-		case JavaPackage.ARCHIVE__MANIFEST:
-			setManifest((Manifest) newValue);
-			return;
+			case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
+				setOriginalFilePath((String)newValue);
+				return;
+			case JavaPackage.ARCHIVE__CLASS_FILES:
+				getClassFiles().clear();
+				getClassFiles().addAll((Collection<? extends ClassFile>)newValue);
+				return;
+			case JavaPackage.ARCHIVE__MANIFEST:
+				setManifest((Manifest)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
-			setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
-			return;
-		case JavaPackage.ARCHIVE__CLASS_FILES:
-			getClassFiles().clear();
-			return;
-		case JavaPackage.ARCHIVE__MANIFEST:
-			setManifest((Manifest) null);
-			return;
+			case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
+				setOriginalFilePath(ORIGINAL_FILE_PATH_EDEFAULT);
+				return;
+			case JavaPackage.ARCHIVE__CLASS_FILES:
+				getClassFiles().clear();
+				return;
+			case JavaPackage.ARCHIVE__MANIFEST:
+				setManifest((Manifest)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
-			return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null
-					: !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
-		case JavaPackage.ARCHIVE__CLASS_FILES:
-			return classFiles != null && !classFiles.isEmpty();
-		case JavaPackage.ARCHIVE__MANIFEST:
-			return manifest != null;
+			case JavaPackage.ARCHIVE__ORIGINAL_FILE_PATH:
+				return ORIGINAL_FILE_PATH_EDEFAULT == null ? originalFilePath != null : !ORIGINAL_FILE_PATH_EDEFAULT.equals(originalFilePath);
+			case JavaPackage.ARCHIVE__CLASS_FILES:
+				return classFiles != null && !classFiles.isEmpty();
+			case JavaPackage.ARCHIVE__MANIFEST:
+				return manifest != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (originalFilePath: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (originalFilePath: ");
 		result.append(originalFilePath);
 		result.append(')');
 		return result.toString();

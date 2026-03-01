@@ -28,11 +28,11 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CastExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.CastExpressionImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return (Expression)eGet(JavaPackage.eINSTANCE.getCastExpression_Expression(), true);
 	}
@@ -70,6 +71,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		eSet(JavaPackage.eINSTANCE.getCastExpression_Expression(), newExpression);
 	}
@@ -79,6 +81,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getCastExpression_Type(), true);
 	}
@@ -88,6 +91,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getCastExpression_Type(), newType);
 	}

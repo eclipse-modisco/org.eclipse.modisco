@@ -27,10 +27,10 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.BreakStatementImpl#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,6 +59,7 @@ public class BreakStatementImpl extends StatementImpl implements BreakStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LabeledStatement getLabel() {
 		return (LabeledStatement)eGet(JavaPackage.eINSTANCE.getBreakStatement_Label(), true);
 	}
@@ -68,6 +69,7 @@ public class BreakStatementImpl extends StatementImpl implements BreakStatement 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(LabeledStatement newLabel) {
 		eSet(JavaPackage.eINSTANCE.getBreakStatement_Label(), newLabel);
 	}

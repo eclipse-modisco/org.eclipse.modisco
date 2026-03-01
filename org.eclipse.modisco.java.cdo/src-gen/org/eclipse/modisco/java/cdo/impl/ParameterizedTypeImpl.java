@@ -29,11 +29,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ParameterizedTypeImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.ParameterizedTypeImpl#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class ParameterizedTypeImpl extends TypeImpl implements ParameterizedType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getParameterizedType_Type(), true);
 	}
@@ -71,6 +72,7 @@ public class ParameterizedTypeImpl extends TypeImpl implements ParameterizedType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getParameterizedType_Type(), newType);
 	}
@@ -81,6 +83,7 @@ public class ParameterizedTypeImpl extends TypeImpl implements ParameterizedType
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<TypeAccess> getTypeArguments() {
 		return (EList<TypeAccess>)eGet(JavaPackage.eINSTANCE.getParameterizedType_TypeArguments(), true);
 	}

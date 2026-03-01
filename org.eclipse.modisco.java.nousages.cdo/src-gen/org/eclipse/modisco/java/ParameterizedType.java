@@ -25,11 +25,11 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.ParameterizedType#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.ParameterizedType#getTypeArguments <em>Type Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getParameterizedType()
  * @model

@@ -34,11 +34,11 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CastExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.CastExpressionImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -111,6 +112,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
@@ -130,6 +132,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return type;
 	}
@@ -154,6 +157,7 @@ public class CastExpressionImpl extends ExpressionImpl implements CastExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;

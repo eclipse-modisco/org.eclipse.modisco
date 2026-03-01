@@ -39,12 +39,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.NamedElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.NamedElementImpl#isProxy <em>Proxy</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.NamedElementImpl#getUsagesInImports <em>Usages In Imports</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -290,10 +290,10 @@ public abstract class NamedElementImpl extends ASTNodeImpl implements NamedEleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
 		result.append(name);
-		result.append(", proxy: "); //$NON-NLS-1$
+		result.append(", proxy: ");
 		result.append(proxy);
 		result.append(')');
 		return result.toString();

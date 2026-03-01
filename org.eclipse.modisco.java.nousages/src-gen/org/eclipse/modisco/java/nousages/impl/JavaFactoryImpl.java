@@ -22,6 +22,155 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.modisco.java.Annotation;
+import org.eclipse.modisco.java.AnnotationMemberValuePair;
+import org.eclipse.modisco.java.AnnotationTypeDeclaration;
+import org.eclipse.modisco.java.AnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.AnonymousClassDeclaration;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.ArrayAccess;
+import org.eclipse.modisco.java.ArrayCreation;
+import org.eclipse.modisco.java.ArrayInitializer;
+import org.eclipse.modisco.java.ArrayLengthAccess;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.AssertStatement;
+import org.eclipse.modisco.java.Assignment;
+import org.eclipse.modisco.java.AssignmentKind;
+import org.eclipse.modisco.java.Block;
+import org.eclipse.modisco.java.BlockComment;
+import org.eclipse.modisco.java.BooleanLiteral;
+import org.eclipse.modisco.java.BreakStatement;
+import org.eclipse.modisco.java.CaseDefaultExpression;
+import org.eclipse.modisco.java.CastExpression;
+import org.eclipse.modisco.java.CatchClause;
+import org.eclipse.modisco.java.CharacterLiteral;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassFile;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.ConditionalExpression;
+import org.eclipse.modisco.java.ConstructorDeclaration;
+import org.eclipse.modisco.java.ConstructorInvocation;
+import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
+import org.eclipse.modisco.java.DoStatement;
+import org.eclipse.modisco.java.EitherOrMultiPattern;
+import org.eclipse.modisco.java.EmptyStatement;
+import org.eclipse.modisco.java.EnhancedForStatement;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExportsDirective;
+import org.eclipse.modisco.java.ExpressionMethodReference;
+import org.eclipse.modisco.java.ExpressionStatement;
+import org.eclipse.modisco.java.FieldAccess;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.ForStatement;
+import org.eclipse.modisco.java.GuardedPattern;
+import org.eclipse.modisco.java.IfStatement;
+import org.eclipse.modisco.java.ImplicitTypeDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.InfixExpression;
+import org.eclipse.modisco.java.InfixExpressionKind;
+import org.eclipse.modisco.java.InheritanceKind;
+import org.eclipse.modisco.java.Initializer;
+import org.eclipse.modisco.java.InstanceofExpression;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.IntersectionType;
+import org.eclipse.modisco.java.JavaDocRegion;
+import org.eclipse.modisco.java.JavaDocTextElement;
+import org.eclipse.modisco.java.Javadoc;
+import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
+import org.eclipse.modisco.java.LineComment;
+import org.eclipse.modisco.java.Manifest;
+import org.eclipse.modisco.java.ManifestAttribute;
+import org.eclipse.modisco.java.ManifestEntry;
+import org.eclipse.modisco.java.MemberRef;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodInvocation;
+import org.eclipse.modisco.java.MethodRef;
+import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.Modifier;
+import org.eclipse.modisco.java.ModuleDeclaration;
+import org.eclipse.modisco.java.ModuleModifier;
+import org.eclipse.modisco.java.ModuleQualifiedName;
+import org.eclipse.modisco.java.NameQualifiedType;
+import org.eclipse.modisco.java.NullLiteral;
+import org.eclipse.modisco.java.NullPattern;
+import org.eclipse.modisco.java.NumberLiteral;
+import org.eclipse.modisco.java.OpensDirective;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.ParameterizedType;
+import org.eclipse.modisco.java.ParenthesizedExpression;
+import org.eclipse.modisco.java.PatternInstanceofExpression;
+import org.eclipse.modisco.java.PostfixExpression;
+import org.eclipse.modisco.java.PostfixExpressionKind;
+import org.eclipse.modisco.java.PrefixExpression;
+import org.eclipse.modisco.java.PrefixExpressionKind;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.PrimitiveTypeBoolean;
+import org.eclipse.modisco.java.PrimitiveTypeByte;
+import org.eclipse.modisco.java.PrimitiveTypeChar;
+import org.eclipse.modisco.java.PrimitiveTypeDouble;
+import org.eclipse.modisco.java.PrimitiveTypeFloat;
+import org.eclipse.modisco.java.PrimitiveTypeInt;
+import org.eclipse.modisco.java.PrimitiveTypeLong;
+import org.eclipse.modisco.java.PrimitiveTypeShort;
+import org.eclipse.modisco.java.PrimitiveTypeVoid;
+import org.eclipse.modisco.java.ProvidesDirective;
+import org.eclipse.modisco.java.QualifiedType;
+import org.eclipse.modisco.java.RecordDeclaration;
+import org.eclipse.modisco.java.RecordPattern;
+import org.eclipse.modisco.java.RequiresDirective;
+import org.eclipse.modisco.java.ReturnStatement;
+import org.eclipse.modisco.java.SimpleType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.StringLiteral;
+import org.eclipse.modisco.java.SuperConstructorInvocation;
+import org.eclipse.modisco.java.SuperFieldAccess;
+import org.eclipse.modisco.java.SuperMethodInvocation;
+import org.eclipse.modisco.java.SuperMethodReference;
+import org.eclipse.modisco.java.SwitchCase;
+import org.eclipse.modisco.java.SwitchExpression;
+import org.eclipse.modisco.java.SwitchStatement;
+import org.eclipse.modisco.java.SynchronizedStatement;
+import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.TagProperty;
+import org.eclipse.modisco.java.TextBlock;
+import org.eclipse.modisco.java.TextElement;
+import org.eclipse.modisco.java.ThisExpression;
+import org.eclipse.modisco.java.ThrowStatement;
+import org.eclipse.modisco.java.TryStatement;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.TypeDeclarationStatement;
+import org.eclipse.modisco.java.TypeLiteral;
+import org.eclipse.modisco.java.TypeMethodReference;
+import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.TypePattern;
+import org.eclipse.modisco.java.UnionType;
+import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
+import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.UnresolvedClassDeclaration;
+import org.eclipse.modisco.java.UnresolvedEnumDeclaration;
+import org.eclipse.modisco.java.UnresolvedInterfaceDeclaration;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.UnresolvedLabeledStatement;
+import org.eclipse.modisco.java.UnresolvedMethodDeclaration;
+import org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration;
+import org.eclipse.modisco.java.UnresolvedType;
+import org.eclipse.modisco.java.UnresolvedTypeDeclaration;
+import org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment;
+import org.eclipse.modisco.java.UsesDirective;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
+import org.eclipse.modisco.java.VisibilityKind;
+import org.eclipse.modisco.java.WhileStatement;
+import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.YieldStatement;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.nousages.meta.JavaFactory;
 import org.eclipse.modisco.java.nousages.meta.JavaPackage;
@@ -29,33 +178,32 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	/**
-	 * Creates the default factory implementation. <!-- begin-user-doc --> <!--
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static JavaFactory init() {
 		try {
-			JavaFactory theJavaFactory = (JavaFactory) EPackage.Registry.INSTANCE
-					.getEFactory("http://www.eclipse.org/MoDisco/Java/0.2.incubation/java-noopposites"); //$NON-NLS-1$
+			JavaFactory theJavaFactory = (JavaFactory)EPackage.Registry.INSTANCE.getEFactory(JavaPackage.eNS_URI);
 			if (theJavaFactory != null) {
 				return theJavaFactory;
 			}
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new JavaFactoryImpl();
 	}
 
 	/**
-	 * Creates an instance of the factory. <!-- begin-user-doc --> <!--
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public JavaFactoryImpl() {
@@ -64,297 +212,210 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case JavaPackage.ANNOTATION:
-			return createAnnotation();
-		case JavaPackage.ARCHIVE:
-			return createArchive();
-		case JavaPackage.ASSERT_STATEMENT:
-			return createAssertStatement();
-		case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR:
-			return createAnnotationMemberValuePair();
-		case JavaPackage.ANNOTATION_TYPE_DECLARATION:
-			return createAnnotationTypeDeclaration();
-		case JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION:
-			return createAnnotationTypeMemberDeclaration();
-		case JavaPackage.ANONYMOUS_CLASS_DECLARATION:
-			return createAnonymousClassDeclaration();
-		case JavaPackage.ARRAY_ACCESS:
-			return createArrayAccess();
-		case JavaPackage.ARRAY_CREATION:
-			return createArrayCreation();
-		case JavaPackage.ARRAY_INITIALIZER:
-			return createArrayInitializer();
-		case JavaPackage.ARRAY_LENGTH_ACCESS:
-			return createArrayLengthAccess();
-		case JavaPackage.ARRAY_TYPE:
-			return createArrayType();
-		case JavaPackage.ASSIGNMENT:
-			return createAssignment();
-		case JavaPackage.BOOLEAN_LITERAL:
-			return createBooleanLiteral();
-		case JavaPackage.BLOCK_COMMENT:
-			return createBlockComment();
-		case JavaPackage.BLOCK:
-			return createBlock();
-		case JavaPackage.BREAK_STATEMENT:
-			return createBreakStatement();
-		case JavaPackage.CAST_EXPRESSION:
-			return createCastExpression();
-		case JavaPackage.CATCH_CLAUSE:
-			return createCatchClause();
-		case JavaPackage.CHARACTER_LITERAL:
-			return createCharacterLiteral();
-		case JavaPackage.CLASS_FILE:
-			return createClassFile();
-		case JavaPackage.CLASS_INSTANCE_CREATION:
-			return createClassInstanceCreation();
-		case JavaPackage.CONSTRUCTOR_DECLARATION:
-			return createConstructorDeclaration();
-		case JavaPackage.CONDITIONAL_EXPRESSION:
-			return createConditionalExpression();
-		case JavaPackage.CONSTRUCTOR_INVOCATION:
-			return createConstructorInvocation();
-		case JavaPackage.CLASS_DECLARATION:
-			return createClassDeclaration();
-		case JavaPackage.COMPILATION_UNIT:
-			return createCompilationUnit();
-		case JavaPackage.CONTINUE_STATEMENT:
-			return createContinueStatement();
-		case JavaPackage.DO_STATEMENT:
-			return createDoStatement();
-		case JavaPackage.EMPTY_STATEMENT:
-			return createEmptyStatement();
-		case JavaPackage.ENHANCED_FOR_STATEMENT:
-			return createEnhancedForStatement();
-		case JavaPackage.ENUM_CONSTANT_DECLARATION:
-			return createEnumConstantDeclaration();
-		case JavaPackage.ENUM_DECLARATION:
-			return createEnumDeclaration();
-		case JavaPackage.EXPRESSION_STATEMENT:
-			return createExpressionStatement();
-		case JavaPackage.FIELD_ACCESS:
-			return createFieldAccess();
-		case JavaPackage.FIELD_DECLARATION:
-			return createFieldDeclaration();
-		case JavaPackage.FOR_STATEMENT:
-			return createForStatement();
-		case JavaPackage.IF_STATEMENT:
-			return createIfStatement();
-		case JavaPackage.IMPORT_DECLARATION:
-			return createImportDeclaration();
-		case JavaPackage.INFIX_EXPRESSION:
-			return createInfixExpression();
-		case JavaPackage.INITIALIZER:
-			return createInitializer();
-		case JavaPackage.INSTANCEOF_EXPRESSION:
-			return createInstanceofExpression();
-		case JavaPackage.INTERFACE_DECLARATION:
-			return createInterfaceDeclaration();
-		case JavaPackage.JAVADOC:
-			return createJavadoc();
-		case JavaPackage.LABELED_STATEMENT:
-			return createLabeledStatement();
-		case JavaPackage.LINE_COMMENT:
-			return createLineComment();
-		case JavaPackage.MANIFEST:
-			return createManifest();
-		case JavaPackage.MANIFEST_ATTRIBUTE:
-			return createManifestAttribute();
-		case JavaPackage.MANIFEST_ENTRY:
-			return createManifestEntry();
-		case JavaPackage.MEMBER_REF:
-			return createMemberRef();
-		case JavaPackage.METHOD_DECLARATION:
-			return createMethodDeclaration();
-		case JavaPackage.METHOD_INVOCATION:
-			return createMethodInvocation();
-		case JavaPackage.METHOD_REF:
-			return createMethodRef();
-		case JavaPackage.METHOD_REF_PARAMETER:
-			return createMethodRefParameter();
-		case JavaPackage.MODEL:
-			return createModel();
-		case JavaPackage.MODIFIER:
-			return createModifier();
-		case JavaPackage.NUMBER_LITERAL:
-			return createNumberLiteral();
-		case JavaPackage.NULL_LITERAL:
-			return createNullLiteral();
-		case JavaPackage.PACKAGE:
-			return createPackage();
-		case JavaPackage.PACKAGE_ACCESS:
-			return createPackageAccess();
-		case JavaPackage.PARAMETERIZED_TYPE:
-			return createParameterizedType();
-		case JavaPackage.PARENTHESIZED_EXPRESSION:
-			return createParenthesizedExpression();
-		case JavaPackage.POSTFIX_EXPRESSION:
-			return createPostfixExpression();
-		case JavaPackage.PREFIX_EXPRESSION:
-			return createPrefixExpression();
-		case JavaPackage.PRIMITIVE_TYPE:
-			return createPrimitiveType();
-		case JavaPackage.PRIMITIVE_TYPE_BOOLEAN:
-			return createPrimitiveTypeBoolean();
-		case JavaPackage.PRIMITIVE_TYPE_BYTE:
-			return createPrimitiveTypeByte();
-		case JavaPackage.PRIMITIVE_TYPE_CHAR:
-			return createPrimitiveTypeChar();
-		case JavaPackage.PRIMITIVE_TYPE_DOUBLE:
-			return createPrimitiveTypeDouble();
-		case JavaPackage.PRIMITIVE_TYPE_SHORT:
-			return createPrimitiveTypeShort();
-		case JavaPackage.PRIMITIVE_TYPE_FLOAT:
-			return createPrimitiveTypeFloat();
-		case JavaPackage.PRIMITIVE_TYPE_INT:
-			return createPrimitiveTypeInt();
-		case JavaPackage.PRIMITIVE_TYPE_LONG:
-			return createPrimitiveTypeLong();
-		case JavaPackage.PRIMITIVE_TYPE_VOID:
-			return createPrimitiveTypeVoid();
-		case JavaPackage.RETURN_STATEMENT:
-			return createReturnStatement();
-		case JavaPackage.SINGLE_VARIABLE_ACCESS:
-			return createSingleVariableAccess();
-		case JavaPackage.SINGLE_VARIABLE_DECLARATION:
-			return createSingleVariableDeclaration();
-		case JavaPackage.STRING_LITERAL:
-			return createStringLiteral();
-		case JavaPackage.SUPER_CONSTRUCTOR_INVOCATION:
-			return createSuperConstructorInvocation();
-		case JavaPackage.SUPER_FIELD_ACCESS:
-			return createSuperFieldAccess();
-		case JavaPackage.SUPER_METHOD_INVOCATION:
-			return createSuperMethodInvocation();
-		case JavaPackage.SWITCH_CASE:
-			return createSwitchCase();
-		case JavaPackage.SWITCH_STATEMENT:
-			return createSwitchStatement();
-		case JavaPackage.SYNCHRONIZED_STATEMENT:
-			return createSynchronizedStatement();
-		case JavaPackage.TAG_ELEMENT:
-			return createTagElement();
-		case JavaPackage.TEXT_ELEMENT:
-			return createTextElement();
-		case JavaPackage.THIS_EXPRESSION:
-			return createThisExpression();
-		case JavaPackage.THROW_STATEMENT:
-			return createThrowStatement();
-		case JavaPackage.TRY_STATEMENT:
-			return createTryStatement();
-		case JavaPackage.TYPE_ACCESS:
-			return createTypeAccess();
-		case JavaPackage.TYPE_DECLARATION_STATEMENT:
-			return createTypeDeclarationStatement();
-		case JavaPackage.TYPE_LITERAL:
-			return createTypeLiteral();
-		case JavaPackage.TYPE_PARAMETER:
-			return createTypeParameter();
-		case JavaPackage.UNRESOLVED_ITEM:
-			return createUnresolvedItem();
-		case JavaPackage.UNRESOLVED_ITEM_ACCESS:
-			return createUnresolvedItemAccess();
-		case JavaPackage.UNRESOLVED_ANNOTATION_DECLARATION:
-			return createUnresolvedAnnotationDeclaration();
-		case JavaPackage.UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION:
-			return createUnresolvedAnnotationTypeMemberDeclaration();
-		case JavaPackage.UNRESOLVED_CLASS_DECLARATION:
-			return createUnresolvedClassDeclaration();
-		case JavaPackage.UNRESOLVED_ENUM_DECLARATION:
-			return createUnresolvedEnumDeclaration();
-		case JavaPackage.UNRESOLVED_INTERFACE_DECLARATION:
-			return createUnresolvedInterfaceDeclaration();
-		case JavaPackage.UNRESOLVED_LABELED_STATEMENT:
-			return createUnresolvedLabeledStatement();
-		case JavaPackage.UNRESOLVED_METHOD_DECLARATION:
-			return createUnresolvedMethodDeclaration();
-		case JavaPackage.UNRESOLVED_SINGLE_VARIABLE_DECLARATION:
-			return createUnresolvedSingleVariableDeclaration();
-		case JavaPackage.UNRESOLVED_TYPE:
-			return createUnresolvedType();
-		case JavaPackage.UNRESOLVED_TYPE_DECLARATION:
-			return createUnresolvedTypeDeclaration();
-		case JavaPackage.UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT:
-			return createUnresolvedVariableDeclarationFragment();
-		case JavaPackage.VARIABLE_DECLARATION_EXPRESSION:
-			return createVariableDeclarationExpression();
-		case JavaPackage.VARIABLE_DECLARATION_FRAGMENT:
-			return createVariableDeclarationFragment();
-		case JavaPackage.VARIABLE_DECLARATION_STATEMENT:
-			return createVariableDeclarationStatement();
-		case JavaPackage.WILD_CARD_TYPE:
-			return createWildCardType();
-		case JavaPackage.WHILE_STATEMENT:
-			return createWhileStatement();
-		default:
-			throw new IllegalArgumentException(
-					"The class '" + eClass.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+			case JavaPackage.ANNOTATION: return createAnnotation();
+			case JavaPackage.ARCHIVE: return createArchive();
+			case JavaPackage.ASSERT_STATEMENT: return createAssertStatement();
+			case JavaPackage.ANNOTATION_MEMBER_VALUE_PAIR: return createAnnotationMemberValuePair();
+			case JavaPackage.ANNOTATION_TYPE_DECLARATION: return createAnnotationTypeDeclaration();
+			case JavaPackage.ANNOTATION_TYPE_MEMBER_DECLARATION: return createAnnotationTypeMemberDeclaration();
+			case JavaPackage.ANONYMOUS_CLASS_DECLARATION: return createAnonymousClassDeclaration();
+			case JavaPackage.ARRAY_ACCESS: return createArrayAccess();
+			case JavaPackage.ARRAY_CREATION: return createArrayCreation();
+			case JavaPackage.ARRAY_INITIALIZER: return createArrayInitializer();
+			case JavaPackage.ARRAY_LENGTH_ACCESS: return createArrayLengthAccess();
+			case JavaPackage.ARRAY_TYPE: return createArrayType();
+			case JavaPackage.ASSIGNMENT: return createAssignment();
+			case JavaPackage.BLOCK: return createBlock();
+			case JavaPackage.BLOCK_COMMENT: return createBlockComment();
+			case JavaPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
+			case JavaPackage.BREAK_STATEMENT: return createBreakStatement();
+			case JavaPackage.CASE_DEFAULT_EXPRESSION: return createCaseDefaultExpression();
+			case JavaPackage.CAST_EXPRESSION: return createCastExpression();
+			case JavaPackage.CATCH_CLAUSE: return createCatchClause();
+			case JavaPackage.CHARACTER_LITERAL: return createCharacterLiteral();
+			case JavaPackage.CLASS_DECLARATION: return createClassDeclaration();
+			case JavaPackage.CLASS_FILE: return createClassFile();
+			case JavaPackage.CLASS_INSTANCE_CREATION: return createClassInstanceCreation();
+			case JavaPackage.COMPILATION_UNIT: return createCompilationUnit();
+			case JavaPackage.CONDITIONAL_EXPRESSION: return createConditionalExpression();
+			case JavaPackage.CONSTRUCTOR_DECLARATION: return createConstructorDeclaration();
+			case JavaPackage.CONSTRUCTOR_INVOCATION: return createConstructorInvocation();
+			case JavaPackage.CONTINUE_STATEMENT: return createContinueStatement();
+			case JavaPackage.CREATION_REFERENCE: return createCreationReference();
+			case JavaPackage.DO_STATEMENT: return createDoStatement();
+			case JavaPackage.EITHER_OR_MULTI_PATTERN: return createEitherOrMultiPattern();
+			case JavaPackage.EMPTY_STATEMENT: return createEmptyStatement();
+			case JavaPackage.ENHANCED_FOR_STATEMENT: return createEnhancedForStatement();
+			case JavaPackage.ENUM_CONSTANT_DECLARATION: return createEnumConstantDeclaration();
+			case JavaPackage.ENUM_DECLARATION: return createEnumDeclaration();
+			case JavaPackage.EXPORTS_DIRECTIVE: return createExportsDirective();
+			case JavaPackage.EXPRESSION_METHOD_REFERENCE: return createExpressionMethodReference();
+			case JavaPackage.EXPRESSION_STATEMENT: return createExpressionStatement();
+			case JavaPackage.FIELD_ACCESS: return createFieldAccess();
+			case JavaPackage.FIELD_DECLARATION: return createFieldDeclaration();
+			case JavaPackage.FOR_STATEMENT: return createForStatement();
+			case JavaPackage.GUARDED_PATTERN: return createGuardedPattern();
+			case JavaPackage.IF_STATEMENT: return createIfStatement();
+			case JavaPackage.IMPLICIT_TYPE_DECLARATION: return createImplicitTypeDeclaration();
+			case JavaPackage.IMPORT_DECLARATION: return createImportDeclaration();
+			case JavaPackage.INFIX_EXPRESSION: return createInfixExpression();
+			case JavaPackage.INITIALIZER: return createInitializer();
+			case JavaPackage.INSTANCEOF_EXPRESSION: return createInstanceofExpression();
+			case JavaPackage.INTERFACE_DECLARATION: return createInterfaceDeclaration();
+			case JavaPackage.INTERSECTION_TYPE: return createIntersectionType();
+			case JavaPackage.JAVADOC: return createJavadoc();
+			case JavaPackage.JAVA_DOC_REGION: return createJavaDocRegion();
+			case JavaPackage.JAVA_DOC_TEXT_ELEMENT: return createJavaDocTextElement();
+			case JavaPackage.LABELED_STATEMENT: return createLabeledStatement();
+			case JavaPackage.LAMBDA_EXPRESSION: return createLambdaExpression();
+			case JavaPackage.LINE_COMMENT: return createLineComment();
+			case JavaPackage.MANIFEST: return createManifest();
+			case JavaPackage.MANIFEST_ATTRIBUTE: return createManifestAttribute();
+			case JavaPackage.MANIFEST_ENTRY: return createManifestEntry();
+			case JavaPackage.MEMBER_REF: return createMemberRef();
+			case JavaPackage.METHOD_DECLARATION: return createMethodDeclaration();
+			case JavaPackage.METHOD_INVOCATION: return createMethodInvocation();
+			case JavaPackage.METHOD_REF: return createMethodRef();
+			case JavaPackage.METHOD_REF_PARAMETER: return createMethodRefParameter();
+			case JavaPackage.MODEL: return createModel();
+			case JavaPackage.MODIFIER: return createModifier();
+			case JavaPackage.MODULE_DECLARATION: return createModuleDeclaration();
+			case JavaPackage.MODULE_MODIFIER: return createModuleModifier();
+			case JavaPackage.MODULE_QUALIFIED_NAME: return createModuleQualifiedName();
+			case JavaPackage.NAME_QUALIFIED_TYPE: return createNameQualifiedType();
+			case JavaPackage.NUMBER_LITERAL: return createNumberLiteral();
+			case JavaPackage.NULL_LITERAL: return createNullLiteral();
+			case JavaPackage.NULL_PATTERN: return createNullPattern();
+			case JavaPackage.OPENS_DIRECTIVE: return createOpensDirective();
+			case JavaPackage.PACKAGE: return createPackage();
+			case JavaPackage.PACKAGE_ACCESS: return createPackageAccess();
+			case JavaPackage.PARAMETERIZED_TYPE: return createParameterizedType();
+			case JavaPackage.PARENTHESIZED_EXPRESSION: return createParenthesizedExpression();
+			case JavaPackage.PATTERN_INSTANCEOF_EXPRESSION: return createPatternInstanceofExpression();
+			case JavaPackage.POSTFIX_EXPRESSION: return createPostfixExpression();
+			case JavaPackage.PREFIX_EXPRESSION: return createPrefixExpression();
+			case JavaPackage.PRIMITIVE_TYPE: return createPrimitiveType();
+			case JavaPackage.PRIMITIVE_TYPE_BOOLEAN: return createPrimitiveTypeBoolean();
+			case JavaPackage.PRIMITIVE_TYPE_BYTE: return createPrimitiveTypeByte();
+			case JavaPackage.PRIMITIVE_TYPE_CHAR: return createPrimitiveTypeChar();
+			case JavaPackage.PRIMITIVE_TYPE_DOUBLE: return createPrimitiveTypeDouble();
+			case JavaPackage.PRIMITIVE_TYPE_SHORT: return createPrimitiveTypeShort();
+			case JavaPackage.PRIMITIVE_TYPE_FLOAT: return createPrimitiveTypeFloat();
+			case JavaPackage.PRIMITIVE_TYPE_INT: return createPrimitiveTypeInt();
+			case JavaPackage.PRIMITIVE_TYPE_LONG: return createPrimitiveTypeLong();
+			case JavaPackage.PRIMITIVE_TYPE_VOID: return createPrimitiveTypeVoid();
+			case JavaPackage.PROVIDES_DIRECTIVE: return createProvidesDirective();
+			case JavaPackage.QUALIFIED_TYPE: return createQualifiedType();
+			case JavaPackage.RECORD_DECLARATION: return createRecordDeclaration();
+			case JavaPackage.RECORD_PATTERN: return createRecordPattern();
+			case JavaPackage.REQUIRES_DIRECTIVE: return createRequiresDirective();
+			case JavaPackage.RETURN_STATEMENT: return createReturnStatement();
+			case JavaPackage.SIMPLE_TYPE: return createSimpleType();
+			case JavaPackage.SINGLE_VARIABLE_ACCESS: return createSingleVariableAccess();
+			case JavaPackage.SINGLE_VARIABLE_DECLARATION: return createSingleVariableDeclaration();
+			case JavaPackage.STRING_LITERAL: return createStringLiteral();
+			case JavaPackage.SUPER_CONSTRUCTOR_INVOCATION: return createSuperConstructorInvocation();
+			case JavaPackage.SUPER_FIELD_ACCESS: return createSuperFieldAccess();
+			case JavaPackage.SUPER_METHOD_INVOCATION: return createSuperMethodInvocation();
+			case JavaPackage.SUPER_METHOD_REFERENCE: return createSuperMethodReference();
+			case JavaPackage.SWITCH_CASE: return createSwitchCase();
+			case JavaPackage.SWITCH_EXPRESSION: return createSwitchExpression();
+			case JavaPackage.SWITCH_STATEMENT: return createSwitchStatement();
+			case JavaPackage.SYNCHRONIZED_STATEMENT: return createSynchronizedStatement();
+			case JavaPackage.TAG_ELEMENT: return createTagElement();
+			case JavaPackage.TAG_PROPERTY: return createTagProperty();
+			case JavaPackage.TEXT_BLOCK: return createTextBlock();
+			case JavaPackage.TEXT_ELEMENT: return createTextElement();
+			case JavaPackage.THIS_EXPRESSION: return createThisExpression();
+			case JavaPackage.THROW_STATEMENT: return createThrowStatement();
+			case JavaPackage.TRY_STATEMENT: return createTryStatement();
+			case JavaPackage.TYPE_ACCESS: return createTypeAccess();
+			case JavaPackage.TYPE_DECLARATION_STATEMENT: return createTypeDeclarationStatement();
+			case JavaPackage.TYPE_LITERAL: return createTypeLiteral();
+			case JavaPackage.TYPE_METHOD_REFERENCE: return createTypeMethodReference();
+			case JavaPackage.TYPE_PARAMETER: return createTypeParameter();
+			case JavaPackage.TYPE_PATTERN: return createTypePattern();
+			case JavaPackage.UNION_TYPE: return createUnionType();
+			case JavaPackage.UNRESOLVED_ITEM: return createUnresolvedItem();
+			case JavaPackage.UNRESOLVED_ITEM_ACCESS: return createUnresolvedItemAccess();
+			case JavaPackage.UNRESOLVED_ANNOTATION_DECLARATION: return createUnresolvedAnnotationDeclaration();
+			case JavaPackage.UNRESOLVED_ANNOTATION_TYPE_MEMBER_DECLARATION: return createUnresolvedAnnotationTypeMemberDeclaration();
+			case JavaPackage.UNRESOLVED_CLASS_DECLARATION: return createUnresolvedClassDeclaration();
+			case JavaPackage.UNRESOLVED_ENUM_DECLARATION: return createUnresolvedEnumDeclaration();
+			case JavaPackage.UNRESOLVED_INTERFACE_DECLARATION: return createUnresolvedInterfaceDeclaration();
+			case JavaPackage.UNRESOLVED_LABELED_STATEMENT: return createUnresolvedLabeledStatement();
+			case JavaPackage.UNRESOLVED_METHOD_DECLARATION: return createUnresolvedMethodDeclaration();
+			case JavaPackage.UNRESOLVED_SINGLE_VARIABLE_DECLARATION: return createUnresolvedSingleVariableDeclaration();
+			case JavaPackage.UNRESOLVED_TYPE: return createUnresolvedType();
+			case JavaPackage.UNRESOLVED_TYPE_DECLARATION: return createUnresolvedTypeDeclaration();
+			case JavaPackage.UNRESOLVED_VARIABLE_DECLARATION_FRAGMENT: return createUnresolvedVariableDeclarationFragment();
+			case JavaPackage.USES_DIRECTIVE: return createUsesDirective();
+			case JavaPackage.VARIABLE_DECLARATION_EXPRESSION: return createVariableDeclarationExpression();
+			case JavaPackage.VARIABLE_DECLARATION_FRAGMENT: return createVariableDeclarationFragment();
+			case JavaPackage.VARIABLE_DECLARATION_STATEMENT: return createVariableDeclarationStatement();
+			case JavaPackage.WILD_CARD_TYPE: return createWildCardType();
+			case JavaPackage.WHILE_STATEMENT: return createWhileStatement();
+			case JavaPackage.YIELD_STATEMENT: return createYieldStatement();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case JavaPackage.ASSIGNMENT_KIND:
-			return createAssignmentKindFromString(eDataType, initialValue);
-		case JavaPackage.INFIX_EXPRESSION_KIND:
-			return createInfixExpressionKindFromString(eDataType, initialValue);
-		case JavaPackage.INHERITANCE_KIND:
-			return createInheritanceKindFromString(eDataType, initialValue);
-		case JavaPackage.POSTFIX_EXPRESSION_KIND:
-			return createPostfixExpressionKindFromString(eDataType,
-					initialValue);
-		case JavaPackage.PREFIX_EXPRESSION_KIND:
-			return createPrefixExpressionKindFromString(eDataType, initialValue);
-		case JavaPackage.VISIBILITY_KIND:
-			return createVisibilityKindFromString(eDataType, initialValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" //$NON-NLS-1$
-					+ eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$
+			case JavaPackage.ASSIGNMENT_KIND:
+				return createAssignmentKindFromString(eDataType, initialValue);
+			case JavaPackage.INFIX_EXPRESSION_KIND:
+				return createInfixExpressionKindFromString(eDataType, initialValue);
+			case JavaPackage.INHERITANCE_KIND:
+				return createInheritanceKindFromString(eDataType, initialValue);
+			case JavaPackage.POSTFIX_EXPRESSION_KIND:
+				return createPostfixExpressionKindFromString(eDataType, initialValue);
+			case JavaPackage.PREFIX_EXPRESSION_KIND:
+				return createPrefixExpressionKindFromString(eDataType, initialValue);
+			case JavaPackage.VISIBILITY_KIND:
+				return createVisibilityKindFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case JavaPackage.ASSIGNMENT_KIND:
-			return convertAssignmentKindToString(eDataType, instanceValue);
-		case JavaPackage.INFIX_EXPRESSION_KIND:
-			return convertInfixExpressionKindToString(eDataType, instanceValue);
-		case JavaPackage.INHERITANCE_KIND:
-			return convertInheritanceKindToString(eDataType, instanceValue);
-		case JavaPackage.POSTFIX_EXPRESSION_KIND:
-			return convertPostfixExpressionKindToString(eDataType,
-					instanceValue);
-		case JavaPackage.PREFIX_EXPRESSION_KIND:
-			return convertPrefixExpressionKindToString(eDataType, instanceValue);
-		case JavaPackage.VISIBILITY_KIND:
-			return convertVisibilityKindToString(eDataType, instanceValue);
-		default:
-			throw new IllegalArgumentException(
-					"The datatype '" + eDataType.getName() + "' is not a valid classifier"); //$NON-NLS-1$ //$NON-NLS-2$
+			case JavaPackage.ASSIGNMENT_KIND:
+				return convertAssignmentKindToString(eDataType, instanceValue);
+			case JavaPackage.INFIX_EXPRESSION_KIND:
+				return convertInfixExpressionKindToString(eDataType, instanceValue);
+			case JavaPackage.INHERITANCE_KIND:
+				return convertInheritanceKindToString(eDataType, instanceValue);
+			case JavaPackage.POSTFIX_EXPRESSION_KIND:
+				return convertPostfixExpressionKindToString(eDataType, instanceValue);
+			case JavaPackage.PREFIX_EXPRESSION_KIND:
+				return convertPrefixExpressionKindToString(eDataType, instanceValue);
+			case JavaPackage.VISIBILITY_KIND:
+				return convertVisibilityKindToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -365,7 +426,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -376,7 +436,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -387,7 +446,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -398,7 +456,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -409,7 +466,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -420,7 +476,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -431,7 +486,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -442,7 +496,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -453,7 +506,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -464,7 +516,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -475,7 +526,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -486,7 +536,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -497,7 +546,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -508,7 +556,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -519,7 +566,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -530,7 +576,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -540,8 +585,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CaseDefaultExpression createCaseDefaultExpression() {
+		CaseDefaultExpressionImpl caseDefaultExpression = new CaseDefaultExpressionImpl();
+		return caseDefaultExpression;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -552,7 +607,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -563,7 +617,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -574,7 +627,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -585,7 +637,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -596,7 +647,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -607,7 +657,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -618,7 +667,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -629,7 +677,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -640,7 +687,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -651,7 +697,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -662,7 +707,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -672,8 +716,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EitherOrMultiPattern createEitherOrMultiPattern() {
+		EitherOrMultiPatternImpl eitherOrMultiPattern = new EitherOrMultiPatternImpl();
+		return eitherOrMultiPattern;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -684,7 +738,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -695,7 +748,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -706,7 +758,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -716,8 +767,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ExportsDirective createExportsDirective() {
+		ExportsDirectiveImpl exportsDirective = new ExportsDirectiveImpl();
+		return exportsDirective;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -728,7 +789,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -739,7 +799,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -750,7 +809,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -760,8 +818,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public GuardedPattern createGuardedPattern() {
+		GuardedPatternImpl guardedPattern = new GuardedPatternImpl();
+		return guardedPattern;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -771,8 +839,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ImplicitTypeDeclaration createImplicitTypeDeclaration() {
+		ImplicitTypeDeclarationImpl implicitTypeDeclaration = new ImplicitTypeDeclarationImpl();
+		return implicitTypeDeclaration;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -783,7 +861,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -794,7 +871,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -805,7 +881,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -816,7 +891,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -826,8 +900,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IntersectionType createIntersectionType() {
+		IntersectionTypeImpl intersectionType = new IntersectionTypeImpl();
+		return intersectionType;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -837,8 +921,29 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public JavaDocRegion createJavaDocRegion() {
+		JavaDocRegionImpl javaDocRegion = new JavaDocRegionImpl();
+		return javaDocRegion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public JavaDocTextElement createJavaDocTextElement() {
+		JavaDocTextElementImpl javaDocTextElement = new JavaDocTextElementImpl();
+		return javaDocTextElement;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -849,7 +954,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -860,7 +964,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -871,7 +974,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -882,7 +984,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -893,7 +994,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -904,7 +1004,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -915,7 +1014,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -926,7 +1024,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -937,7 +1034,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -948,7 +1044,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -959,7 +1054,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -969,8 +1063,51 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ModuleDeclaration createModuleDeclaration() {
+		ModuleDeclarationImpl moduleDeclaration = new ModuleDeclarationImpl();
+		return moduleDeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ModuleModifier createModuleModifier() {
+		ModuleModifierImpl moduleModifier = new ModuleModifierImpl();
+		return moduleModifier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ModuleQualifiedName createModuleQualifiedName() {
+		ModuleQualifiedNameImpl moduleQualifiedName = new ModuleQualifiedNameImpl();
+		return moduleQualifiedName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NameQualifiedType createNameQualifiedType() {
+		NameQualifiedTypeImpl nameQualifiedType = new NameQualifiedTypeImpl();
+		return nameQualifiedType;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -981,7 +1118,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -991,8 +1127,29 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NullPattern createNullPattern() {
+		NullPatternImpl nullPattern = new NullPatternImpl();
+		return nullPattern;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OpensDirective createOpensDirective() {
+		OpensDirectiveImpl opensDirective = new OpensDirectiveImpl();
+		return opensDirective;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1003,7 +1160,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1014,7 +1170,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1025,7 +1180,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1035,8 +1189,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PatternInstanceofExpression createPatternInstanceofExpression() {
+		PatternInstanceofExpressionImpl patternInstanceofExpression = new PatternInstanceofExpressionImpl();
+		return patternInstanceofExpression;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1047,7 +1211,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1058,7 +1221,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1069,7 +1231,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1080,7 +1241,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1091,7 +1251,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1102,7 +1261,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1113,7 +1271,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1124,7 +1281,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1135,7 +1291,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1146,7 +1301,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1157,7 +1311,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1167,8 +1320,62 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ProvidesDirective createProvidesDirective() {
+		ProvidesDirectiveImpl providesDirective = new ProvidesDirectiveImpl();
+		return providesDirective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public QualifiedType createQualifiedType() {
+		QualifiedTypeImpl qualifiedType = new QualifiedTypeImpl();
+		return qualifiedType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RecordDeclaration createRecordDeclaration() {
+		RecordDeclarationImpl recordDeclaration = new RecordDeclarationImpl();
+		return recordDeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RecordPattern createRecordPattern() {
+		RecordPatternImpl recordPattern = new RecordPatternImpl();
+		return recordPattern;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RequiresDirective createRequiresDirective() {
+		RequiresDirectiveImpl requiresDirective = new RequiresDirectiveImpl();
+		return requiresDirective;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1178,8 +1385,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SimpleType createSimpleType() {
+		SimpleTypeImpl simpleType = new SimpleTypeImpl();
+		return simpleType;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1190,7 +1407,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1201,7 +1417,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1212,7 +1427,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1223,7 +1437,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1234,7 +1447,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1244,8 +1456,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SuperMethodReference createSuperMethodReference() {
+		SuperMethodReferenceImpl superMethodReference = new SuperMethodReferenceImpl();
+		return superMethodReference;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1255,8 +1477,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SwitchExpression createSwitchExpression() {
+		SwitchExpressionImpl switchExpression = new SwitchExpressionImpl();
+		return switchExpression;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1267,7 +1499,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1278,7 +1509,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1288,8 +1518,29 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TagProperty createTagProperty() {
+		TagPropertyImpl tagProperty = new TagPropertyImpl();
+		return tagProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TextBlock createTextBlock() {
+		TextBlockImpl textBlock = new TextBlockImpl();
+		return textBlock;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1300,7 +1551,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1311,7 +1561,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1322,7 +1571,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1333,7 +1581,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1344,7 +1591,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1355,7 +1601,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1365,8 +1610,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TypeMethodReference createTypeMethodReference() {
+		TypeMethodReferenceImpl typeMethodReference = new TypeMethodReferenceImpl();
+		return typeMethodReference;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1376,8 +1631,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TypePattern createTypePattern() {
+		TypePatternImpl typePattern = new TypePatternImpl();
+		return typePattern;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1388,7 +1653,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1399,7 +1663,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1410,7 +1673,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1421,7 +1683,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1432,7 +1693,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1443,7 +1703,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1454,7 +1713,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1465,7 +1723,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1476,7 +1733,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1487,7 +1743,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1498,7 +1753,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1509,7 +1763,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1519,8 +1772,18 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UsesDirective createUsesDirective() {
+		UsesDirectiveImpl usesDirective = new UsesDirectiveImpl();
+		return usesDirective;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1531,7 +1794,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1542,7 +1804,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1553,7 +1814,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1564,7 +1824,6 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -1574,22 +1833,29 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public YieldStatement createYieldStatement() {
+		YieldStatementImpl yieldStatement = new YieldStatementImpl();
+		return yieldStatement;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public AssignmentKind createAssignmentKindFromString(EDataType eDataType,
 			String initialValue) {
 		AssignmentKind result = AssignmentKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertAssignmentKindToString(EDataType eDataType,
@@ -1599,21 +1865,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public InfixExpressionKind createInfixExpressionKindFromString(
 			EDataType eDataType, String initialValue) {
 		InfixExpressionKind result = InfixExpressionKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertInfixExpressionKindToString(EDataType eDataType,
@@ -1623,21 +1885,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public InheritanceKind createInheritanceKindFromString(EDataType eDataType,
 			String initialValue) {
 		InheritanceKind result = InheritanceKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertInheritanceKindToString(EDataType eDataType,
@@ -1647,21 +1905,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public PostfixExpressionKind createPostfixExpressionKindFromString(
 			EDataType eDataType, String initialValue) {
 		PostfixExpressionKind result = PostfixExpressionKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertPostfixExpressionKindToString(EDataType eDataType,
@@ -1671,21 +1925,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public PrefixExpressionKind createPrefixExpressionKindFromString(
 			EDataType eDataType, String initialValue) {
 		PrefixExpressionKind result = PrefixExpressionKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertPrefixExpressionKindToString(EDataType eDataType,
@@ -1695,21 +1945,17 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public VisibilityKind createVisibilityKindFromString(EDataType eDataType,
 			String initialValue) {
 		VisibilityKind result = VisibilityKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertVisibilityKindToString(EDataType eDataType,
@@ -1719,17 +1965,15 @@ public class JavaFactoryImpl extends EFactoryImpl implements JavaFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public JavaPackage getJavaPackage() {
-		return (JavaPackage) getEPackage();
+		return (JavaPackage)getEPackage();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @deprecated
 	 * @generated
 	 */

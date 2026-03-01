@@ -33,10 +33,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.ArrayLengthAccessImpl#getArray <em>Array</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class ArrayLengthAccessImpl extends ExpressionImpl implements ArrayLength
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getArray() {
 		return array;
 	}
@@ -99,6 +100,7 @@ public class ArrayLengthAccessImpl extends ExpressionImpl implements ArrayLength
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArray(Expression newArray) {
 		if (newArray != array) {
 			NotificationChain msgs = null;

@@ -24,12 +24,12 @@ import org.eclipse.modisco.java.TypeAccess;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.MethodRefParameter#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.MethodRefParameter#isVarargs <em>Varargs</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.MethodRefParameter#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage#getMethodRefParameter()
  * @model

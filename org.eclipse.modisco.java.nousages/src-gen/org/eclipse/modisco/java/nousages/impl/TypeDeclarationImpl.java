@@ -37,10 +37,10 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.impl.TypeDeclarationImpl#getTypeParameters <em>Type Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,6 +79,7 @@ public abstract class TypeDeclarationImpl extends AbstractTypeDeclarationImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TypeParameter> getTypeParameters() {
 		if (typeParameters == null) {
 			typeParameters = new EObjectContainmentEList<TypeParameter>(TypeParameter.class, this, JavaPackage.TYPE_DECLARATION__TYPE_PARAMETERS);

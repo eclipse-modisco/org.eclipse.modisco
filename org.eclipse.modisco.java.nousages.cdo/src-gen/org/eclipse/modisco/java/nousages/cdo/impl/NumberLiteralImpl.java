@@ -26,10 +26,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.NumberLiteralImpl#getTokenValue <em>Token Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -58,6 +58,7 @@ public class NumberLiteralImpl extends ExpressionImpl implements NumberLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTokenValue() {
 		return (String)eGet(JavaPackage.eINSTANCE.getNumberLiteral_TokenValue(), true);
 	}
@@ -67,6 +68,7 @@ public class NumberLiteralImpl extends ExpressionImpl implements NumberLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTokenValue(String newTokenValue) {
 		eSet(JavaPackage.eINSTANCE.getNumberLiteral_TokenValue(), newTokenValue);
 	}

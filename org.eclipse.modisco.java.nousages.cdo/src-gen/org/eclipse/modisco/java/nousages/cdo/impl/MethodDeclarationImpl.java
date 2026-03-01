@@ -30,13 +30,13 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <em><b>Method Declaration</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodDeclarationImpl#getExtraArrayDimensions <em>Extra Array Dimensions</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodDeclarationImpl#getReturnType <em>Return Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodDeclarationImpl#getRedefinedMethodDeclaration <em>Redefined Method Declaration</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.MethodDeclarationImpl#getRedefinitions <em>Redefinitions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getExtraArrayDimensions() {
 		return (Integer)eGet(JavaPackage.eINSTANCE.getMethodDeclaration_ExtraArrayDimensions(), true);
 	}
@@ -71,6 +72,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtraArrayDimensions(int newExtraArrayDimensions) {
 		eSet(JavaPackage.eINSTANCE.getMethodDeclaration_ExtraArrayDimensions(), newExtraArrayDimensions);
 	}
@@ -79,6 +81,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getReturnType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getMethodDeclaration_ReturnType(), true);
 	}
@@ -87,6 +90,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnType(TypeAccess newReturnType) {
 		eSet(JavaPackage.eINSTANCE.getMethodDeclaration_ReturnType(), newReturnType);
 	}
@@ -95,6 +99,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodDeclaration getRedefinedMethodDeclaration() {
 		return (MethodDeclaration)eGet(JavaPackage.eINSTANCE.getMethodDeclaration_RedefinedMethodDeclaration(), true);
 	}
@@ -103,6 +108,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRedefinedMethodDeclaration(
 			MethodDeclaration newRedefinedMethodDeclaration) {
 		eSet(JavaPackage.eINSTANCE.getMethodDeclaration_RedefinedMethodDeclaration(), newRedefinedMethodDeclaration);
@@ -113,6 +119,7 @@ public class MethodDeclarationImpl extends AbstractMethodDeclarationImpl
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<MethodDeclaration> getRedefinitions() {
 		return (EList<MethodDeclaration>)eGet(JavaPackage.eINSTANCE.getMethodDeclaration_Redefinitions(), true);
 	}

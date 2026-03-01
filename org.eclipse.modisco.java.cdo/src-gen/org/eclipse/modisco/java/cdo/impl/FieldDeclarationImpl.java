@@ -31,11 +31,11 @@ import org.eclipse.modisco.java.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.FieldDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.cdo.impl.FieldDeclarationImpl#getFragments <em>Fragments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +64,7 @@ public class FieldDeclarationImpl extends BodyDeclarationImpl implements FieldDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeAccess getType() {
 		return (TypeAccess)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), true);
 	}
@@ -73,6 +74,7 @@ public class FieldDeclarationImpl extends BodyDeclarationImpl implements FieldDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeAccess newType) {
 		eSet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Type(), newType);
 	}
@@ -83,6 +85,7 @@ public class FieldDeclarationImpl extends BodyDeclarationImpl implements FieldDe
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<VariableDeclarationFragment> getFragments() {
 		return (EList<VariableDeclarationFragment>)eGet(JavaPackage.eINSTANCE.getAbstractVariablesContainer_Fragments(), true);
 	}

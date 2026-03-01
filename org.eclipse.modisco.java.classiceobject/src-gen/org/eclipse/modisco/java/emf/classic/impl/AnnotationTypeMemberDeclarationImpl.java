@@ -41,12 +41,12 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnnotationTypeMemberDeclarationImpl#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnnotationTypeMemberDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.AnnotationTypeMemberDeclarationImpl#getUsages <em>Usages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

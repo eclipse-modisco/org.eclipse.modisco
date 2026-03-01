@@ -45,6 +45,7 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SingleVariableDeclarationImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SingleVariableDeclarationImpl#isVarargs <em>Varargs</em>}</li>
@@ -54,7 +55,6 @@ import org.eclipse.modisco.java.emf.classic.JavaPackage;
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SingleVariableDeclarationImpl#getCatchClause <em>Catch Clause</em>}</li>
  *   <li>{@link org.eclipse.modisco.java.emf.classic.impl.SingleVariableDeclarationImpl#getEnhancedForStatement <em>Enhanced For Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -254,7 +254,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 */
 	public AbstractMethodDeclaration getMethodDeclaration() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION) return null;
-		return (AbstractMethodDeclaration)eContainer();
+		return (AbstractMethodDeclaration)eInternalContainer();
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	public void setMethodDeclaration(AbstractMethodDeclaration newMethodDeclaration) {
 		if (newMethodDeclaration != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__METHOD_DECLARATION && newMethodDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newMethodDeclaration))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -295,7 +295,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 */
 	public CatchClause getCatchClause() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE) return null;
-		return (CatchClause)eContainer();
+		return (CatchClause)eInternalContainer();
 	}
 
 	/**
@@ -316,7 +316,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	public void setCatchClause(CatchClause newCatchClause) {
 		if (newCatchClause != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__CATCH_CLAUSE && newCatchClause != null)) {
 			if (EcoreUtil.isAncestor(this, newCatchClause))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -336,7 +336,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	 */
 	public EnhancedForStatement getEnhancedForStatement() {
 		if (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT) return null;
-		return (EnhancedForStatement)eContainer();
+		return (EnhancedForStatement)eInternalContainer();
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	public void setEnhancedForStatement(EnhancedForStatement newEnhancedForStatement) {
 		if (newEnhancedForStatement != eInternalContainer() || (eContainerFeatureID() != JavaPackage.SINGLE_VARIABLE_DECLARATION__ENHANCED_FOR_STATEMENT && newEnhancedForStatement != null)) {
 			if (EcoreUtil.isAncestor(this, newEnhancedForStatement))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString()); //$NON-NLS-1$
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
@@ -569,8 +569,8 @@ public class SingleVariableDeclarationImpl extends VariableDeclarationImpl imple
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (varargs: "); //$NON-NLS-1$
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (varargs: ");
 		result.append(varargs);
 		result.append(')');
 		return result.toString();

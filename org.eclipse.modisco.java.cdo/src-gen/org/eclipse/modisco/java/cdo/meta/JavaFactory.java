@@ -17,6 +17,149 @@
 package org.eclipse.modisco.java.cdo.meta;
 
 import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.modisco.java.Annotation;
+import org.eclipse.modisco.java.AnnotationMemberValuePair;
+import org.eclipse.modisco.java.AnnotationTypeDeclaration;
+import org.eclipse.modisco.java.AnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.AnonymousClassDeclaration;
+import org.eclipse.modisco.java.Archive;
+import org.eclipse.modisco.java.ArrayAccess;
+import org.eclipse.modisco.java.ArrayCreation;
+import org.eclipse.modisco.java.ArrayInitializer;
+import org.eclipse.modisco.java.ArrayLengthAccess;
+import org.eclipse.modisco.java.ArrayType;
+import org.eclipse.modisco.java.AssertStatement;
+import org.eclipse.modisco.java.Assignment;
+import org.eclipse.modisco.java.Block;
+import org.eclipse.modisco.java.BlockComment;
+import org.eclipse.modisco.java.BooleanLiteral;
+import org.eclipse.modisco.java.BreakStatement;
+import org.eclipse.modisco.java.CaseDefaultExpression;
+import org.eclipse.modisco.java.CastExpression;
+import org.eclipse.modisco.java.CatchClause;
+import org.eclipse.modisco.java.CharacterLiteral;
+import org.eclipse.modisco.java.ClassDeclaration;
+import org.eclipse.modisco.java.ClassFile;
+import org.eclipse.modisco.java.ClassInstanceCreation;
+import org.eclipse.modisco.java.CompilationUnit;
+import org.eclipse.modisco.java.ConditionalExpression;
+import org.eclipse.modisco.java.ConstructorDeclaration;
+import org.eclipse.modisco.java.ConstructorInvocation;
+import org.eclipse.modisco.java.ContinueStatement;
+import org.eclipse.modisco.java.CreationReference;
+import org.eclipse.modisco.java.DoStatement;
+import org.eclipse.modisco.java.EitherOrMultiPattern;
+import org.eclipse.modisco.java.EmptyStatement;
+import org.eclipse.modisco.java.EnhancedForStatement;
+import org.eclipse.modisco.java.EnumConstantDeclaration;
+import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExportsDirective;
+import org.eclipse.modisco.java.ExpressionMethodReference;
+import org.eclipse.modisco.java.ExpressionStatement;
+import org.eclipse.modisco.java.FieldAccess;
+import org.eclipse.modisco.java.FieldDeclaration;
+import org.eclipse.modisco.java.ForStatement;
+import org.eclipse.modisco.java.GuardedPattern;
+import org.eclipse.modisco.java.IfStatement;
+import org.eclipse.modisco.java.ImplicitTypeDeclaration;
+import org.eclipse.modisco.java.ImportDeclaration;
+import org.eclipse.modisco.java.InfixExpression;
+import org.eclipse.modisco.java.Initializer;
+import org.eclipse.modisco.java.InstanceofExpression;
+import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.IntersectionType;
+import org.eclipse.modisco.java.JavaDocRegion;
+import org.eclipse.modisco.java.JavaDocTextElement;
+import org.eclipse.modisco.java.Javadoc;
+import org.eclipse.modisco.java.LabeledStatement;
+import org.eclipse.modisco.java.LambdaExpression;
+import org.eclipse.modisco.java.LineComment;
+import org.eclipse.modisco.java.Manifest;
+import org.eclipse.modisco.java.ManifestAttribute;
+import org.eclipse.modisco.java.ManifestEntry;
+import org.eclipse.modisco.java.MemberRef;
+import org.eclipse.modisco.java.MethodDeclaration;
+import org.eclipse.modisco.java.MethodInvocation;
+import org.eclipse.modisco.java.MethodRef;
+import org.eclipse.modisco.java.MethodRefParameter;
+import org.eclipse.modisco.java.Model;
+import org.eclipse.modisco.java.Modifier;
+import org.eclipse.modisco.java.ModuleDeclaration;
+import org.eclipse.modisco.java.ModuleModifier;
+import org.eclipse.modisco.java.ModuleQualifiedName;
+import org.eclipse.modisco.java.NameQualifiedType;
+import org.eclipse.modisco.java.NullLiteral;
+import org.eclipse.modisco.java.NullPattern;
+import org.eclipse.modisco.java.NumberLiteral;
+import org.eclipse.modisco.java.OpensDirective;
+import org.eclipse.modisco.java.PackageAccess;
+import org.eclipse.modisco.java.ParameterizedType;
+import org.eclipse.modisco.java.ParenthesizedExpression;
+import org.eclipse.modisco.java.PatternInstanceofExpression;
+import org.eclipse.modisco.java.PostfixExpression;
+import org.eclipse.modisco.java.PrefixExpression;
+import org.eclipse.modisco.java.PrimitiveType;
+import org.eclipse.modisco.java.PrimitiveTypeBoolean;
+import org.eclipse.modisco.java.PrimitiveTypeByte;
+import org.eclipse.modisco.java.PrimitiveTypeChar;
+import org.eclipse.modisco.java.PrimitiveTypeDouble;
+import org.eclipse.modisco.java.PrimitiveTypeFloat;
+import org.eclipse.modisco.java.PrimitiveTypeInt;
+import org.eclipse.modisco.java.PrimitiveTypeLong;
+import org.eclipse.modisco.java.PrimitiveTypeShort;
+import org.eclipse.modisco.java.PrimitiveTypeVoid;
+import org.eclipse.modisco.java.ProvidesDirective;
+import org.eclipse.modisco.java.QualifiedType;
+import org.eclipse.modisco.java.RecordDeclaration;
+import org.eclipse.modisco.java.RecordPattern;
+import org.eclipse.modisco.java.RequiresDirective;
+import org.eclipse.modisco.java.ReturnStatement;
+import org.eclipse.modisco.java.SimpleType;
+import org.eclipse.modisco.java.SingleVariableAccess;
+import org.eclipse.modisco.java.SingleVariableDeclaration;
+import org.eclipse.modisco.java.StringLiteral;
+import org.eclipse.modisco.java.SuperConstructorInvocation;
+import org.eclipse.modisco.java.SuperFieldAccess;
+import org.eclipse.modisco.java.SuperMethodInvocation;
+import org.eclipse.modisco.java.SuperMethodReference;
+import org.eclipse.modisco.java.SwitchCase;
+import org.eclipse.modisco.java.SwitchExpression;
+import org.eclipse.modisco.java.SwitchStatement;
+import org.eclipse.modisco.java.SynchronizedStatement;
+import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.TagProperty;
+import org.eclipse.modisco.java.TextBlock;
+import org.eclipse.modisco.java.TextElement;
+import org.eclipse.modisco.java.ThisExpression;
+import org.eclipse.modisco.java.ThrowStatement;
+import org.eclipse.modisco.java.TryStatement;
+import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.TypeDeclarationStatement;
+import org.eclipse.modisco.java.TypeLiteral;
+import org.eclipse.modisco.java.TypeMethodReference;
+import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.TypePattern;
+import org.eclipse.modisco.java.UnionType;
+import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
+import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
+import org.eclipse.modisco.java.UnresolvedClassDeclaration;
+import org.eclipse.modisco.java.UnresolvedEnumDeclaration;
+import org.eclipse.modisco.java.UnresolvedInterfaceDeclaration;
+import org.eclipse.modisco.java.UnresolvedItem;
+import org.eclipse.modisco.java.UnresolvedItemAccess;
+import org.eclipse.modisco.java.UnresolvedLabeledStatement;
+import org.eclipse.modisco.java.UnresolvedMethodDeclaration;
+import org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration;
+import org.eclipse.modisco.java.UnresolvedType;
+import org.eclipse.modisco.java.UnresolvedTypeDeclaration;
+import org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment;
+import org.eclipse.modisco.java.UsesDirective;
+import org.eclipse.modisco.java.VariableDeclarationExpression;
+import org.eclipse.modisco.java.VariableDeclarationFragment;
+import org.eclipse.modisco.java.VariableDeclarationStatement;
+import org.eclipse.modisco.java.WhileStatement;
+import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.YieldStatement;
 import org.eclipse.modisco.java.*;
 
 /**
@@ -73,6 +216,42 @@ public interface JavaFactory extends
 	Modifier createModifier();
 
 	/**
+	 * Returns a new object of class '<em>Module Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Declaration</em>'.
+	 * @generated
+	 */
+	ModuleDeclaration createModuleDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Module Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Modifier</em>'.
+	 * @generated
+	 */
+	ModuleModifier createModuleModifier();
+
+	/**
+	 * Returns a new object of class '<em>Module Qualified Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Qualified Name</em>'.
+	 * @generated
+	 */
+	ModuleQualifiedName createModuleQualifiedName();
+
+	/**
+	 * Returns a new object of class '<em>Name Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Name Qualified Type</em>'.
+	 * @generated
+	 */
+	NameQualifiedType createNameQualifiedType();
+
+	/**
 	 * Returns a new object of class '<em>Package</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,6 +304,24 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	Javadoc createJavadoc();
+
+	/**
+	 * Returns a new object of class '<em>Doc Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Doc Region</em>'.
+	 * @generated
+	 */
+	JavaDocRegion createJavaDocRegion();
+
+	/**
+	 * Returns a new object of class '<em>Doc Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Doc Text Element</em>'.
+	 * @generated
+	 */
+	JavaDocTextElement createJavaDocTextElement();
 
 	/**
 	 * Returns a new object of class '<em>Line Comment</em>'. <!--
@@ -199,6 +396,24 @@ public interface JavaFactory extends
 	TagElement createTagElement();
 
 	/**
+	 * Returns a new object of class '<em>Tag Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tag Property</em>'.
+	 * @generated
+	 */
+	TagProperty createTagProperty();
+
+	/**
+	 * Returns a new object of class '<em>Text Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Block</em>'.
+	 * @generated
+	 */
+	TextBlock createTextBlock();
+
+	/**
 	 * Returns a new object of class '<em>Text Element</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -251,6 +466,24 @@ public interface JavaFactory extends
 	EnumDeclaration createEnumDeclaration();
 
 	/**
+	 * Returns a new object of class '<em>Exports Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exports Directive</em>'.
+	 * @generated
+	 */
+	ExportsDirective createExportsDirective();
+
+	/**
+	 * Returns a new object of class '<em>Expression Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Method Reference</em>'.
+	 * @generated
+	 */
+	ExpressionMethodReference createExpressionMethodReference();
+
+	/**
 	 * Returns a new object of class '<em>Interface Declaration</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -258,6 +491,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	InterfaceDeclaration createInterfaceDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Intersection Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Intersection Type</em>'.
+	 * @generated
+	 */
+	IntersectionType createIntersectionType();
 
 	/**
 	 * Returns a new object of class '<em>Parameterized Type</em>'. <!--
@@ -359,6 +601,51 @@ public interface JavaFactory extends
 	PrimitiveTypeVoid createPrimitiveTypeVoid();
 
 	/**
+	 * Returns a new object of class '<em>Provides Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Provides Directive</em>'.
+	 * @generated
+	 */
+	ProvidesDirective createProvidesDirective();
+
+	/**
+	 * Returns a new object of class '<em>Qualified Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Qualified Type</em>'.
+	 * @generated
+	 */
+	QualifiedType createQualifiedType();
+
+	/**
+	 * Returns a new object of class '<em>Record Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Record Declaration</em>'.
+	 * @generated
+	 */
+	RecordDeclaration createRecordDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Record Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Record Pattern</em>'.
+	 * @generated
+	 */
+	RecordPattern createRecordPattern();
+
+	/**
+	 * Returns a new object of class '<em>Requires Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requires Directive</em>'.
+	 * @generated
+	 */
+	RequiresDirective createRequiresDirective();
+
+	/**
 	 * Returns a new object of class '<em>Type Parameter</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -366,6 +653,24 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	TypeParameter createTypeParameter();
+
+	/**
+	 * Returns a new object of class '<em>Type Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Pattern</em>'.
+	 * @generated
+	 */
+	TypePattern createTypePattern();
+
+	/**
+	 * Returns a new object of class '<em>Union Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Union Type</em>'.
+	 * @generated
+	 */
+	UnionType createUnionType();
 
 	/**
 	 * Returns a new object of class '<em>Unresolved Annotation Declaration</em>'.
@@ -522,6 +827,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	UnresolvedVariableDeclarationFragment createUnresolvedVariableDeclarationFragment();
+
+	/**
+	 * Returns a new object of class '<em>Uses Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Uses Directive</em>'.
+	 * @generated
+	 */
+	UsesDirective createUsesDirective();
 
 	/**
 	 * Returns a new object of class '<em>Unresolved Single Variable Declaration</em>'.
@@ -712,6 +1026,24 @@ public interface JavaFactory extends
 	NullLiteral createNullLiteral();
 
 	/**
+	 * Returns a new object of class '<em>Null Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Null Pattern</em>'.
+	 * @generated
+	 */
+	NullPattern createNullPattern();
+
+	/**
+	 * Returns a new object of class '<em>Opens Directive</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Opens Directive</em>'.
+	 * @generated
+	 */
+	OpensDirective createOpensDirective();
+
+	/**
 	 * Returns a new object of class '<em>Parenthesized Expression</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -719,6 +1051,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	ParenthesizedExpression createParenthesizedExpression();
+
+	/**
+	 * Returns a new object of class '<em>Pattern Instanceof Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pattern Instanceof Expression</em>'.
+	 * @generated
+	 */
+	PatternInstanceofExpression createPatternInstanceofExpression();
 
 	/**
 	 * Returns a new object of class '<em>Postfix Expression</em>'. <!--
@@ -775,6 +1116,15 @@ public interface JavaFactory extends
 	SuperMethodInvocation createSuperMethodInvocation();
 
 	/**
+	 * Returns a new object of class '<em>Super Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Super Method Reference</em>'.
+	 * @generated
+	 */
+	SuperMethodReference createSuperMethodReference();
+
+	/**
 	 * Returns a new object of class '<em>This Expression</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -791,6 +1141,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	TypeLiteral createTypeLiteral();
+
+	/**
+	 * Returns a new object of class '<em>Type Method Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type Method Reference</em>'.
+	 * @generated
+	 */
+	TypeMethodReference createTypeMethodReference();
 
 	/**
 	 * Returns a new object of class '<em>Type Access</em>'.
@@ -837,6 +1196,15 @@ public interface JavaFactory extends
 	BreakStatement createBreakStatement();
 
 	/**
+	 * Returns a new object of class '<em>Case Default Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Case Default Expression</em>'.
+	 * @generated
+	 */
+	CaseDefaultExpression createCaseDefaultExpression();
+
+	/**
 	 * Returns a new object of class '<em>Catch Clause</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -864,6 +1232,15 @@ public interface JavaFactory extends
 	ContinueStatement createContinueStatement();
 
 	/**
+	 * Returns a new object of class '<em>Creation Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Creation Reference</em>'.
+	 * @generated
+	 */
+	CreationReference createCreationReference();
+
+	/**
 	 * Returns a new object of class '<em>Do Statement</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -871,6 +1248,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	DoStatement createDoStatement();
+
+	/**
+	 * Returns a new object of class '<em>Either Or Multi Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Either Or Multi Pattern</em>'.
+	 * @generated
+	 */
+	EitherOrMultiPattern createEitherOrMultiPattern();
 
 	/**
 	 * Returns a new object of class '<em>Empty Statement</em>'. <!--
@@ -909,6 +1295,15 @@ public interface JavaFactory extends
 	ForStatement createForStatement();
 
 	/**
+	 * Returns a new object of class '<em>Guarded Pattern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Guarded Pattern</em>'.
+	 * @generated
+	 */
+	GuardedPattern createGuardedPattern();
+
+	/**
 	 * Returns a new object of class '<em>If Statement</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -916,6 +1311,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	IfStatement createIfStatement();
+
+	/**
+	 * Returns a new object of class '<em>Implicit Type Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implicit Type Declaration</em>'.
+	 * @generated
+	 */
+	ImplicitTypeDeclaration createImplicitTypeDeclaration();
 
 	/**
 	 * Returns a new object of class '<em>Labeled Statement</em>'. <!--
@@ -927,6 +1331,15 @@ public interface JavaFactory extends
 	LabeledStatement createLabeledStatement();
 
 	/**
+	 * Returns a new object of class '<em>Lambda Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lambda Expression</em>'.
+	 * @generated
+	 */
+	LambdaExpression createLambdaExpression();
+
+	/**
 	 * Returns a new object of class '<em>Return Statement</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -934,6 +1347,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	ReturnStatement createReturnStatement();
+
+	/**
+	 * Returns a new object of class '<em>Simple Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Type</em>'.
+	 * @generated
+	 */
+	SimpleType createSimpleType();
 
 	/**
 	 * Returns a new object of class '<em>Super Constructor Invocation</em>'.
@@ -951,6 +1373,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	SwitchCase createSwitchCase();
+
+	/**
+	 * Returns a new object of class '<em>Switch Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Switch Expression</em>'.
+	 * @generated
+	 */
+	SwitchExpression createSwitchExpression();
 
 	/**
 	 * Returns a new object of class '<em>Switch Statement</em>'. <!--
@@ -1021,6 +1452,15 @@ public interface JavaFactory extends
 	 * @generated
 	 */
 	WhileStatement createWhileStatement();
+
+	/**
+	 * Returns a new object of class '<em>Yield Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Yield Statement</em>'.
+	 * @generated
+	 */
+	YieldStatement createYieldStatement();
 
 	/**
 	 * Returns the package supported by this factory.

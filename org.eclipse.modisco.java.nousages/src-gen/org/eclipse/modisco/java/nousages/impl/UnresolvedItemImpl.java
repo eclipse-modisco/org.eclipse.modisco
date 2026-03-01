@@ -25,16 +25,13 @@ import org.eclipse.modisco.java.nousages.meta.JavaPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Unresolved Item</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
- * 
+ *
  * @generated
  */
 public class UnresolvedItemImpl extends NamedElementImpl implements
 		UnresolvedItem {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected UnresolvedItemImpl() {
@@ -43,7 +40,6 @@ public class UnresolvedItemImpl extends NamedElementImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

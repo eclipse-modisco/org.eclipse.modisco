@@ -29,10 +29,10 @@ import org.eclipse.modisco.java.nousages.cdo.meta.JavaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.modisco.java.nousages.cdo.impl.BlockImpl#getStatements <em>Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,6 +62,7 @@ public class BlockImpl extends StatementImpl implements Block {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	@Override
 	public EList<Statement> getStatements() {
 		return (EList<Statement>)eGet(JavaPackage.eINSTANCE.getBlock_Statements(), true);
 	}
