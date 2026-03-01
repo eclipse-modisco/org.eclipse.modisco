@@ -17,9 +17,12 @@
 
 package org.eclipse.modisco.java.discoverer;
 
+import java.io.IOException;
+
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.modisco.infra.discovery.core.AbstractModelDiscoverer;
@@ -37,10 +40,16 @@ public class DiscoverJavaModelFromClassFile extends AbstractModelDiscoverer<ICla
 
 	private boolean fDiscoverExpressions;
 
+	/**
+	 * @since 1.6
+	 */
 	protected boolean isDiscoverExpressions() {
 		return this.fDiscoverExpressions;
 	}
 
+	/**
+	 * @since 1.6
+	 */
 	@Parameter(name = "DISCOVER_EXPRESSIONS", requiresInputValue = false, description = "Whether to discover the full expression AST. The standard behavior discovers just the class structure.")
 	public void setDiscoverExpressions(final boolean discoverExpressions) {
 		this.fDiscoverExpressions = discoverExpressions;
@@ -68,18 +77,37 @@ public class DiscoverJavaModelFromClassFile extends AbstractModelDiscoverer<ICla
 			return;
 		}
 		IProject project = javaProject.getProject();
-
+		String qualifiedTypeName = classFile.getParent().getElementName() + "." + classFile.getElementName();
+		if (qualifiedTypeName.endsWith(".class")) {					// SuffixConstants.SUFFIX_STRING_class
+			qualifiedTypeName = qualifiedTypeName.substring(0, qualifiedTypeName.length() - 6);
+		}
+		String qualifiedFileName = qualifiedTypeName.concat(JavaDiscoveryConstants.JAVA_MODEL_FILE_SUFFIX);
+		if (qualifiedFileName.contains("$")) {
+			getClass();		// XXX
+		}
 		setDefaultTargetURI(URI.createPlatformResourceURI(
-				project.getFullPath().append(classFile.getElementName()).toString()
-						.concat(JavaDiscoveryConstants.JAVA_MODEL_FILE_SUFFIX), true));
+				project.getFullPath().append(qualifiedFileName).toString(), true));
 
-		Model model = getEFactory().createModel();
+		JavaFactory eFactory = getEFactory();
+		Model model = eFactory.createModel();
 		createTargetModel().getContents().add(model);
-		IModelReader reader = getClassReader();
+	//	IModelReader reader = getClassReader();
+		LibraryReader reader = new LibraryReader(eFactory);
+		reader.setDiscoverExpressions(this.fDiscoverExpressions);
 		reader.readModel(classFile, model, monitor);
 		if (monitor.isCanceled()) {
 			return;
 		}
 		reader.terminate(monitor);
+	}
+
+	@Override
+	public void saveTargetModel() throws IOException {
+		super.saveTargetModel();
+	}
+
+	@Override
+	public void setResourceSet(ResourceSet resourceSet) {
+		super.setResourceSet(resourceSet);
 	}
 }

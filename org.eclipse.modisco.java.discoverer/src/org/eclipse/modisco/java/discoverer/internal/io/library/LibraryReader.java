@@ -103,6 +103,8 @@ public class LibraryReader implements IModelReader {
 	 */
 	private final boolean useSources;
 
+	private boolean discoverExpressions = false;
+
 	/**
 	 * Contructs a new {@code LibraryReader} with no options.
 	 *
@@ -133,11 +135,13 @@ public class LibraryReader implements IModelReader {
 				.toString()));
 	}
 
+	@Override
 	public void readModel(final Object source, final Model resultModel1,
 			final IProgressMonitor monitor) {
 		readModel(source, resultModel1, getBindingManager(), monitor);
 	}
 
+	@Override
 	public void readModel(final Object source, final Model resultModel1,
 			final BindingManager globalBindings1, final IProgressMonitor monitor) {
 
@@ -204,7 +208,7 @@ public class LibraryReader implements IModelReader {
 		try {
 			IType type = classFile.getType();
 			// we want only top level types
-			if (type != null && type.exists() && !type.isAnonymous() && !type.isLocal()
+			if (type != null && type.exists() /*&& !type.isAnonymous() && !type.isLocal()*/
 					&& !type.isMember()) {
 				String filePath = getPath(classFile);
 				visitClassFile(classFile, filePath);
@@ -230,7 +234,7 @@ public class LibraryReader implements IModelReader {
 			}
 		}
 
-		if (classFileHasSource) {
+		if (classFileHasSource || discoverExpressions) {
 			// source code retrieved, delegate model creation to a JavaReader
 			IModelReader javaReader = new JavaReader(this.factory, null, null);
 			javaReader.readModel(classFile, this.resultModel, this.globalBindings,
@@ -257,6 +261,7 @@ public class LibraryReader implements IModelReader {
 
 	}
 
+	@Override
 	public void terminate(final IProgressMonitor monitor) {
 		monitor.subTask(Messages.LibraryReader_BindingTask);
 		finalResolveBindings(this.resultModel);
@@ -367,5 +372,9 @@ public class LibraryReader implements IModelReader {
 			assert (true); // dummy code for "EmptyBlock" rule
 		}
 		return source;
+	}
+
+	public void setDiscoverExpressions(boolean discoverExpressions) {
+		this.discoverExpressions  = discoverExpressions;
 	}
 }

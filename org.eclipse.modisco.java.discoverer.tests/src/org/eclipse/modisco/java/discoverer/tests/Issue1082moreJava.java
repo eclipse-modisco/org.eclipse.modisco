@@ -11,12 +11,17 @@
 
 package org.eclipse.modisco.java.discoverer.tests;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.jdt.core.IClassFile;
 import org.eclipse.jdt.core.IClasspathAttribute;
 import org.eclipse.jdt.core.IClasspathEntry;
@@ -30,9 +35,9 @@ import org.eclipse.jdt.internal.core.JavaModel;
 import org.eclipse.jdt.internal.core.JavaProject;
 import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.common.tests.TestFileUtils;
-import org.eclipse.modisco.infra.discovery.core.exception.DiscoveryException;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromClassFile;
+import org.eclipse.modisco.java.discoverer.internal.io.java.JDTVisitor;
 import org.junit.Test;
 
 public class Issue1082moreJava
@@ -52,7 +57,8 @@ public class Issue1082moreJava
 	public void testMoreJava() throws Exception {
 		String targetProject = getTargetProjectName();
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(targetProject);
-		NullProgressMonitor monitor = new NullProgressMonitor();
+		NullProgressMonitor nullMonitor = new NullProgressMonitor();
+		NullProgressMonitor monitor = nullMonitor;
 		if (project.exists()) {
 			project.delete(true, true, monitor);
 		}
@@ -66,10 +72,37 @@ public class Issue1082moreJava
 		}
 		
 		IClasspathEntry[] classpathEntries = javaProject.getResolvedClasspath(false);			// XXX true
-		discoverClasspathEntries((JavaProject)javaProject, classpathEntries);
+
+		List<IClassFile> classFiles = new ArrayList<>();
+		gatherClassFiles(classFiles, (JavaProject)javaProject, classpathEntries);
+	
+//		DiscoverJavaModelFromClassFile discoverer = new DiscoverJavaModelFromClassFile();
+//		discoverer.setDiscoverExpressions(true);
+//		discoverer.setSerializeTarget(false);
+		ResourceSet resourceSet = new ResourceSetImpl();
+		List<DiscoverJavaModelFromClassFile> discoverers = new ArrayList<>();
+		for (IClassFile classFile : classFiles) {
+			DiscoverJavaModelFromClassFile discoverer = new DiscoverJavaModelFromClassFile();
+			discoverers.add(discoverer);
+			discoverer.setResourceSet(resourceSet);
+			discoverer.setDiscoverExpressions(true);
+			discoverer.setSerializeTarget(false);
+			discoverer.discoverElement(classFile, nullMonitor);
+		}
+	//	Resource resource = discoverer.getTargetModel();
+	//	System.out.println(iClassFile + " => " + resource.toString());
+		
+		
+		//	discoverClasspathEntries((JavaProject)javaProject, classpathEntries, resourceSet);
+		for (DiscoverJavaModelFromClassFile discoverer : discoverers) {
+			discoverer.setSerializeTarget(false);
+			discoverer.saveTargetModel();
+		}
+		
+		JDTVisitor.reportMappings();
 	}
 
-	protected void discoverClasspathEntries(JavaProject javaProject, IClasspathEntry[] classpathEntries) throws JavaModelException, DiscoveryException {
+	protected void gatherClassFiles(List<IClassFile> classFiles, JavaProject javaProject, IClasspathEntry[] classpathEntries) throws JavaModelException {
 		for (IClasspathEntry classpathEntry : classpathEntries) {
 			IClasspathAttribute[] extraAttributes = classpathEntry.getExtraAttributes();
 			IPackageFragmentRoot packageFragmentRoot = null;
@@ -82,23 +115,23 @@ public class Issue1082moreJava
 				packageFragmentRoot = javaProject.getPackageFragmentRoot0(path, extraAttributes);
 			}
 			IJavaElement[] children = packageFragmentRoot.getChildren();
-			discoverJavaElements(children);
+			gatherClassFiles(classFiles, children);
 		}
 	}
 
-	protected void discoverJavaElements(IJavaElement[] children) throws JavaModelException, DiscoveryException {
+	protected void gatherClassFiles(List<IClassFile> classFiles, IJavaElement[] children) throws JavaModelException {
 		for (IJavaElement iJavaElement : children) {
 			if (iJavaElement instanceof IPackageFragment) {
 				IPackageFragment iJavaElement2 = (IPackageFragment) iJavaElement;
-				System.out.println(iJavaElement2.toString());
+			//	System.out.println(iJavaElement2.toString());
 			//	result = traverse(iJavaElement2, stopOnFirstResult, state);
 			//	if (stopOnFirstResult && result!=null)
 			//		return result;
-				discoverJavaElements(iJavaElement2.getChildren());
+				gatherClassFiles(classFiles, iJavaElement2.getChildren());
 			}
 			else if (iJavaElement instanceof IClassFile){
-				System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
-				discoverClassFile((IClassFile)iJavaElement);
+		//		System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
+				classFiles.add((IClassFile)iJavaElement);
 			}
 			else {
 				System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
@@ -106,13 +139,16 @@ public class Issue1082moreJava
 		}
 	}
 
-	private void discoverClassFile(IClassFile iClassFile) throws DiscoveryException {
+/*	private void discoverClassFile(IClassFile iClassFile, ResourceSet resourceSet) throws DiscoveryException {
 	//	CompilationUnit ast = SharedASTProviderCore.getAST(iClassFile, SharedASTProviderCore.WAIT_YES, null);
 	//	CompilationUnit ast = CoreASTProvider.getAST(iClassFile, null);
-		DiscoverJavaModelFromClassFile discover = new DiscoverJavaModelFromClassFile();
-		discover.setDiscoverExpressions(true);
-		discover.discoverElement(iClassFile, new NullProgressMonitor());
-		Resource resource = discover.getTargetModel();
-		System.out.println(iClassFile + " => " + resource.toString());
-	}
+		DiscoverJavaModelFromClassFile discoverer = new DiscoverJavaModelFromClassFile();
+		discoverers.add(discoverer);
+		discoverer.setResourceSet(resourceSet);
+		discoverer.setDiscoverExpressions(true);
+		discoverer.setSerializeTarget(false);
+		discoverer.discoverElement(iClassFile, new NullProgressMonitor());
+		Resource resource = discoverer.getTargetModel();
+	//	System.out.println(iClassFile + " => " + resource.toString());
+	} */
 }

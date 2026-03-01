@@ -22,13 +22,9 @@ package org.eclipse.modisco.java.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.modisco.java.AnnotationMemberValuePair;
-import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.NamespaceAccess;
 import org.eclipse.modisco.java.Type;
 import org.eclipse.modisco.java.TypeAccess;
@@ -137,6 +133,10 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 */
 	@Override
 	public void setType(Type newType) {
+		String typeName = newType != null ? newType.getName() : "";
+		if ("Accessible".equals(typeName)) {
+			System.out.println("setType " + eClass().getName() + "@" + Integer.toHexString(hashCode()));
+		}
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
@@ -148,6 +148,15 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.TYPE_ACCESS__TYPE, newType, newType));
+	}
+
+	@Override
+	protected void eBasicSetContainer(InternalEObject newContainer, int newContainerFeatureID) {
+		String typeName = getType() != null ? getType().getName() : "";
+		if ("Accessible".equals(typeName)) {
+			System.out.println("eBasicSetContainer " + eClass().getName() + "@" + Integer.toHexString(hashCode()) + " " + newContainer);
+		}
+		super.eBasicSetContainer(newContainer, newContainerFeatureID);
 	}
 
 	/**

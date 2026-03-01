@@ -23,10 +23,15 @@ package org.eclipse.modisco.java.discoverer.internal.io.java;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
@@ -660,6 +665,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.CastExpression node) {
 		CastExpression element = this.factory.createCastExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -682,6 +688,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.CatchClause node) {
 		CatchClause element = this.factory.createCatchClause();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -706,6 +713,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.CharacterLiteral node) {
 		CharacterLiteral element = this.factory.createCharacterLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -721,6 +729,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ClassInstanceCreation node) {
 		ClassInstanceCreation element = this.factory.createClassInstanceCreation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -785,6 +794,7 @@ public class JDTVisitor extends ASTVisitor {
 		this.cuNode = node;
 		if (node.types().size() > 0) {	// Bug 397384 ignore empty files, Bug 332068 ignore package-info.java
 			CompilationUnit element = this.factory.createCompilationUnit();
+			debug(element, node);
 			this.binding.put(node, element);
 	
 			if (!this.isINCREMENTALDISCOVERING) {
@@ -914,6 +924,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ConditionalExpression node) {
 		ConditionalExpression element = this.factory.createConditionalExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -940,6 +951,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ConstructorInvocation node) {
 		ConstructorInvocation element = this.factory.createConstructorInvocation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -973,6 +985,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ContinueStatement node) {
 		ContinueStatement element = this.factory.createContinueStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -996,6 +1009,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.DoStatement node) {
 		DoStatement element = this.factory.createDoStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1017,6 +1031,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.EmptyStatement node) {
 		EmptyStatement element = this.factory.createEmptyStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1030,6 +1045,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.EnhancedForStatement node) {
 		EnhancedForStatement element = this.factory.createEnhancedForStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1069,6 +1085,7 @@ public class JDTVisitor extends ASTVisitor {
 		if (element == null) {
 			element = this.factory.createEnumConstantDeclaration();
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1111,6 +1128,7 @@ public class JDTVisitor extends ASTVisitor {
 		if (element == null) {
 			element = this.factory.createEnumDeclaration();
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1152,6 +1170,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ExpressionStatement node) {
 		ExpressionStatement element = this.factory.createExpressionStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1175,6 +1194,7 @@ public class JDTVisitor extends ASTVisitor {
 			return true;
 		}
 		FieldAccess element = this.factory.createFieldAccess();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1206,6 +1226,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.FieldDeclaration node) {
 		FieldDeclaration element = this.factory.createFieldDeclaration();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1233,6 +1254,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ForStatement node) {
 		ForStatement element = this.factory.createForStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1267,6 +1289,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.IfStatement node) {
 		IfStatement element = this.factory.createIfStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1292,6 +1315,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ImportDeclaration node) {
 		ImportDeclaration element = this.factory.createImportDeclaration();
+		debug(element, node);
 		this.binding.put(node, element);
 
 		// we do not visit the name of imports
@@ -1321,6 +1345,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.InfixExpression node) {
 		InfixExpression element = this.factory.createInfixExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1357,6 +1382,7 @@ public class JDTVisitor extends ASTVisitor {
 		}
 
 		Initializer element = this.factory.createInitializer();
+		debug(element, node);
 		this.binding.put(node, element);
 
 		// localBindings may have been initialized if method is declared in
@@ -1401,6 +1427,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.InstanceofExpression node) {
 		InstanceofExpression element = this.factory.createInstanceofExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1424,6 +1451,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.Javadoc node) {
 		Javadoc element = this.factory.createJavadoc();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1444,6 +1472,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.LabeledStatement node) {
 		LabeledStatement element = this.factory.createLabeledStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 	//	SimpleName label = node.getLabel();
 	//	element.setName(label.getIdentifier());
@@ -1471,6 +1500,7 @@ public class JDTVisitor extends ASTVisitor {
 		// (https://bugs.eclipse.org/bugs/show_bug.cgi?format=multiple&id=84528)
 		// LineComment and BlockComment are managed on CompilationUnit
 		// @see org.eclipse.jdt.core.dom.CompilationUnit#getCommentList()
+		debug((EClass)null, node);
 		return true;
 	}
 
@@ -1482,6 +1512,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MarkerAnnotation node) {
 		Annotation element = this.factory.createAnnotation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1500,6 +1531,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MemberValuePair node) {
 		AnnotationMemberValuePair element = this.factory.createAnnotationMemberValuePair();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1526,6 +1558,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MemberRef node) {
 		MemberRef element = this.factory.createMemberRef();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1564,6 +1597,7 @@ public class JDTVisitor extends ASTVisitor {
 				element = this.factory.createMethodDeclaration();
 			}
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		// localBindings may have been initialized if method is declared in
 		// anonymous class declared in a method body
@@ -1700,6 +1734,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MethodInvocation node) {
 		MethodInvocation element = this.factory.createMethodInvocation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1740,6 +1775,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MethodRef node) {
 		MethodRef element = this.factory.createMethodRef();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1770,6 +1806,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.MethodRefParameter node) {
 		MethodRefParameter element = this.factory.createMethodRefParameter();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1794,6 +1831,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.NormalAnnotation node) {
 		Annotation element = this.factory.createAnnotation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1820,6 +1858,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.NullLiteral node) {
 		NullLiteral element = this.factory.createNullLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1833,6 +1872,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.NumberLiteral node) {
 		NumberLiteral element = this.factory.createNumberLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1854,6 +1894,7 @@ public class JDTVisitor extends ASTVisitor {
 			element = (Package) getGlobalBindings().getTarget(id);
 		}
 		this.currentPackage = element;
+		debug(element, node);
 		this.binding.put(node, element);
 		return false;
 	}
@@ -1912,6 +1953,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ParameterizedType node) {
+		debug((EClass)null, node);
 		// if an ParameterizedType like this one has already been visited,
 		// don't visit this one and use the other
 		Binding id = JDTDelegateBindingFactory.getInstance().getBindingForParameterizedType(node);
@@ -1937,6 +1979,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ParenthesizedExpression node) {
 		ParenthesizedExpression element = this.factory.createParenthesizedExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1955,6 +1998,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.PostfixExpression node) {
 		PostfixExpression element = this.factory.createPostfixExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1975,6 +2019,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.PrefixExpression node) {
 		PrefixExpression element = this.factory.createPrefixExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -1994,6 +2039,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.PrimitiveType node) {
+		debug((EClass)null, node);
 		return true;
 	}
 
@@ -2013,6 +2059,7 @@ public class JDTVisitor extends ASTVisitor {
 			ArrayLengthAccess element = this.factory.createArrayLengthAccess();
 			this.binding.put(node, element);
 		}
+		debug((EClass)null, node);
 		return true;
 	}
 
@@ -2046,6 +2093,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ReturnStatement node) {
 		ReturnStatement element = this.factory.createReturnStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2260,6 +2308,7 @@ public class JDTVisitor extends ASTVisitor {
 
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SimpleType node) {
+		debug((EClass)null, node);
 		return true;
 	}
 
@@ -2271,6 +2320,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SingleMemberAnnotation node) {
 		Annotation element = this.factory.createAnnotation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2325,6 +2375,7 @@ public class JDTVisitor extends ASTVisitor {
 		if (element == null) {
 			element = this.factory.createSingleVariableDeclaration();
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2381,6 +2432,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.StringLiteral node) {
 		StringLiteral element = this.factory.createStringLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2396,6 +2448,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SuperConstructorInvocation node) {
 		SuperConstructorInvocation element = this.factory.createSuperConstructorInvocation();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2434,6 +2487,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SuperFieldAccess node) {
 		SuperFieldAccess element = this.factory.createSuperFieldAccess();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2457,6 +2511,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SuperMethodInvocation node) {
 		SuperMethodInvocation element = this.factory.createSuperMethodInvocation();
+		debug(element, node);
 		this.binding.put(node, element);
 
 		return true;
@@ -2497,6 +2552,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SwitchCase node) {
 		SwitchCase element = this.factory.createSwitchCase();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2517,6 +2573,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SwitchStatement node) {
 		SwitchStatement element = this.factory.createSwitchStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2541,6 +2598,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SynchronizedStatement node) {
 		SynchronizedStatement element = this.factory.createSynchronizedStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2563,6 +2621,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TagElement node) {
 		TagElement element = this.factory.createTagElement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2593,6 +2652,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TextElement node) {
 		TextElement element = this.factory.createTextElement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2608,6 +2668,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ThisExpression node) {
 		ThisExpression element = this.factory.createThisExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2626,6 +2687,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ThrowStatement node) {
 		ThrowStatement element = this.factory.createThrowStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2644,6 +2706,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TryStatement node) {
 		TryStatement element = this.factory.createTryStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2687,6 +2750,7 @@ public class JDTVisitor extends ASTVisitor {
 				element = this.factory.createClassDeclaration();
 			}
 		}
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2743,6 +2807,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TypeDeclarationStatement node) {
 		TypeDeclarationStatement element = this.factory.createTypeDeclarationStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2760,6 +2825,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TypeLiteral node) {
 		TypeLiteral element = this.factory.createTypeLiteral();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2778,6 +2844,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TypeParameter node) {
 		TypeParameter element = this.factory.createTypeParameter();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2801,6 +2868,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.VariableDeclarationExpression node) {
 		VariableDeclarationExpression element = this.factory.createVariableDeclarationExpression();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2860,6 +2928,7 @@ public class JDTVisitor extends ASTVisitor {
 			element = this.factory.createVariableDeclarationFragment();
 		}
 		element.setProxy(false);
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2883,6 +2952,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.VariableDeclarationStatement node) {
 		VariableDeclarationStatement element = this.factory.createVariableDeclarationStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2931,6 +3001,7 @@ public class JDTVisitor extends ASTVisitor {
 	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.WhileStatement node) {
 		WhileStatement element = this.factory.createWhileStatement();
+		debug(element, node);
 		this.binding.put(node, element);
 		return true;
 	}
@@ -2954,6 +3025,7 @@ public class JDTVisitor extends ASTVisitor {
 	public boolean visit(final org.eclipse.jdt.core.dom.WildcardType node) {
 		// if a WildcardType like this one has already been visited,
 		// don't visit this one and use the other
+		debug((EClass)null, node);
 		Binding id = JDTDelegateBindingFactory.getInstance().getBindingForWildCardType(node);
 		if (getGlobalBindings().getTarget(id) != null) {
 			return false;
@@ -3208,7 +3280,8 @@ public class JDTVisitor extends ASTVisitor {
 		private List<Field> jOtherFields = new ArrayList<>();
 		private List<Method> jMethods = new ArrayList<>();
 		private List<Method> jOtherMethods = new ArrayList<>();
-		private List<EStructuralFeature> eStructuralFeatures = new ArrayList<>();
+		private List<EStructuralFeature> eStructuralFeatures = new ArrayList<>();	
+		private Set<String> filePaths = new HashSet<>();
 
 		public DebugClassMapping(Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass, EClass eClass) {
 			this.jClass = jClass;
@@ -3239,7 +3312,7 @@ public class JDTVisitor extends ASTVisitor {
 					}
 				}
 			}
-			System.out.println(toString());
+		//	System.out.println(toString());
 		}
 
 		private void analyzeEStructuralFeatures(EClass eClass) {
@@ -3274,6 +3347,10 @@ public class JDTVisitor extends ASTVisitor {
 			}
 		}
 
+		public Collection<String> getFilePaths() {
+			return filePaths;
+		}
+		
 		@Override
 		public String toString() {
 			StringBuilder s = new StringBuilder();
@@ -3303,27 +3380,65 @@ public class JDTVisitor extends ASTVisitor {
 		//	}
 			return s.toString();
 		}
+
+		public void addFilePath(String filePath) {
+			filePaths.add(filePath);
+		}
 	}
 	
+
+	public static void reportMappings() {
+		List<DebugClassMapping> classMappings = new ArrayList<>(jMap.values());	
+		Collections.sort(classMappings, new Comparator<DebugClassMapping>()
+		{
+			@Override
+			public int compare(DebugClassMapping o1, DebugClassMapping o2) {
+				int s1 = o1.getFilePaths().size();
+				int s2 = o2.getFilePaths().size();
+				return s1 - s2;
+			}
+		});
+		for (DebugClassMapping classMapping : classMappings) {
+			System.out.println(classMapping.jClass.getSimpleName() + "(" + classMapping.getFilePaths().size() + ")");
+		}
+	}
 	
-	private static void debug(ASTNode element, org.eclipse.jdt.core.dom.ASTNode node) {
+/*	private static void zzdebug(ASTNode element, org.eclipse.jdt.core.dom.ASTNode node) {
 		Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass = node.getClass();
 		DebugClassMapping debugMapping = jMap.get(jClass);
 		if (debugMapping == null) {
 			debugMapping = new DebugClassMapping(node.getClass(), element.eClass());
 			jMap.put(jClass, debugMapping);
 		}
-		
-	}
+		for (org.eclipse.jdt.core.dom.ASTNode aNode = node; aNode != null; aNode = aNode.getParent()) {
+			/*if (aNode instanceof org.eclipse.jdt.core.ITypeRoot) {
+				debugMapping.addType((org.eclipse.jdt.core.ITypeRoot) aNode);
+				return;
+			}
+			else* / if (aNode instanceof org.eclipse.jdt.core.dom.CompilationUnit) {
+				debugMapping.addType(((org.eclipse.jdt.core.dom.CompilationUnit) aNode));
+				return;
+			}
+		}
+		System.out.println("Missing root for " + node);
+	} */
 	
-	private static void debug(EClass eClass, org.eclipse.jdt.core.dom.ASTNode node) {
+	private static void debug(EClass eClass, org.eclipse.jdt.core.dom.ASTNode node, String currentFilePath) {
 		Class<? extends org.eclipse.jdt.core.dom.ASTNode> jClass = node.getClass();
 		DebugClassMapping debugMapping = jMap.get(jClass);
 		if (debugMapping == null) {
 			debugMapping = new DebugClassMapping(node.getClass(), eClass);
 			jMap.put(jClass, debugMapping);
 		}
-		
+		debugMapping.addFilePath(currentFilePath);
+	}
+	
+	private void debug(ASTNode element, org.eclipse.jdt.core.dom.ASTNode node) {
+		debug(element.eClass(), node, currentFilePath);
+	}
+	
+	private void debug(EClass eClass, org.eclipse.jdt.core.dom.ASTNode node) {
+		debug(eClass, node, currentFilePath);
 	}
 
 	@Override
