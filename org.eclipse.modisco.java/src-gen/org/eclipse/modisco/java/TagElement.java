@@ -40,7 +40,7 @@ import org.eclipse.modisco.java.ASTNode;
  * @model
  * @generated
  */
-public interface TagElement extends ASTNode {
+public interface TagElement extends AbstractTagElement {
 	/**
 	 * Returns the value of the '<em><b>Tag Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

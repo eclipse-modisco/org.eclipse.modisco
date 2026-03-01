@@ -32,5 +32,5 @@ import org.eclipse.modisco.java.Type;
  * @model
  * @generated
  */
-public interface PrimitiveType extends Type {
+public interface PrimitiveType extends AnnotatableType {
 } // PrimitiveType

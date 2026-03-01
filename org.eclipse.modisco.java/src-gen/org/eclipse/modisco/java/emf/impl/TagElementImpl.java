@@ -52,7 +52,7 @@ import org.eclipse.modisco.java.emf.JavaPackage;
  *
  * @generated
  */
-public class TagElementImpl extends ASTNodeImpl implements TagElement {
+public class TagElementImpl extends AbstractTagElementImpl implements TagElement {
 	/**
 	 * The default value of the '{@link #getTagName() <em>Tag Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

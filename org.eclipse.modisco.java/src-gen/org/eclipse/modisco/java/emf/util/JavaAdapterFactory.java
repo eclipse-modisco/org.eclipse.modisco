@@ -26,9 +26,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.modisco.java.ASTNode;
 import org.eclipse.modisco.java.AbstractMethodDeclaration;
 import org.eclipse.modisco.java.AbstractMethodInvocation;
+import org.eclipse.modisco.java.AbstractTagElement;
+import org.eclipse.modisco.java.AbstractTextElement;
 import org.eclipse.modisco.java.AbstractTypeDeclaration;
 import org.eclipse.modisco.java.AbstractTypeQualifiedExpression;
 import org.eclipse.modisco.java.AbstractVariablesContainer;
+import org.eclipse.modisco.java.AnnotatableType;
 import org.eclipse.modisco.java.Annotation;
 import org.eclipse.modisco.java.AnnotationMemberValuePair;
 import org.eclipse.modisco.java.AnnotationTypeDeclaration;
@@ -47,6 +50,7 @@ import org.eclipse.modisco.java.BlockComment;
 import org.eclipse.modisco.java.BodyDeclaration;
 import org.eclipse.modisco.java.BooleanLiteral;
 import org.eclipse.modisco.java.BreakStatement;
+import org.eclipse.modisco.java.CaseDefaultExpression;
 import org.eclipse.modisco.java.CastExpression;
 import org.eclipse.modisco.java.CatchClause;
 import org.eclipse.modisco.java.CharacterLiteral;
@@ -61,22 +65,29 @@ import org.eclipse.modisco.java.ConstructorInvocation;
 import org.eclipse.modisco.java.ContinueStatement;
 import org.eclipse.modisco.java.CreationReference;
 import org.eclipse.modisco.java.DoStatement;
+import org.eclipse.modisco.java.EitherOrMultiPattern;
 import org.eclipse.modisco.java.EmptyStatement;
 import org.eclipse.modisco.java.EnhancedForStatement;
 import org.eclipse.modisco.java.EnumConstantDeclaration;
 import org.eclipse.modisco.java.EnumDeclaration;
+import org.eclipse.modisco.java.ExportsDirective;
 import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.ExpressionMethodReference;
 import org.eclipse.modisco.java.ExpressionStatement;
 import org.eclipse.modisco.java.FieldAccess;
 import org.eclipse.modisco.java.FieldDeclaration;
 import org.eclipse.modisco.java.ForStatement;
+import org.eclipse.modisco.java.GuardedPattern;
 import org.eclipse.modisco.java.IfStatement;
+import org.eclipse.modisco.java.ImplicitTypeDeclaration;
 import org.eclipse.modisco.java.ImportDeclaration;
 import org.eclipse.modisco.java.InfixExpression;
 import org.eclipse.modisco.java.Initializer;
 import org.eclipse.modisco.java.InstanceofExpression;
 import org.eclipse.modisco.java.InterfaceDeclaration;
+import org.eclipse.modisco.java.IntersectionType;
+import org.eclipse.modisco.java.JavaDocRegion;
+import org.eclipse.modisco.java.JavaDocTextElement;
 import org.eclipse.modisco.java.Javadoc;
 import org.eclipse.modisco.java.LabeledStatement;
 import org.eclipse.modisco.java.LambdaExpression;
@@ -92,13 +103,24 @@ import org.eclipse.modisco.java.MethodRefParameter;
 import org.eclipse.modisco.java.MethodReference;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.Modifier;
+import org.eclipse.modisco.java.ModuleDeclaration;
+import org.eclipse.modisco.java.ModuleDirective;
+import org.eclipse.modisco.java.ModuleModifier;
+import org.eclipse.modisco.java.ModulePackageAccess;
+import org.eclipse.modisco.java.ModuleQualifiedName;
+import org.eclipse.modisco.java.Name;
+import org.eclipse.modisco.java.NameQualifiedType;
 import org.eclipse.modisco.java.NamedElement;
 import org.eclipse.modisco.java.NamespaceAccess;
 import org.eclipse.modisco.java.NullLiteral;
+import org.eclipse.modisco.java.NullPattern;
 import org.eclipse.modisco.java.NumberLiteral;
+import org.eclipse.modisco.java.OpensDirective;
 import org.eclipse.modisco.java.PackageAccess;
 import org.eclipse.modisco.java.ParameterizedType;
 import org.eclipse.modisco.java.ParenthesizedExpression;
+import org.eclipse.modisco.java.Pattern;
+import org.eclipse.modisco.java.PatternInstanceofExpression;
 import org.eclipse.modisco.java.PostfixExpression;
 import org.eclipse.modisco.java.PrefixExpression;
 import org.eclipse.modisco.java.PrimitiveType;
@@ -111,7 +133,13 @@ import org.eclipse.modisco.java.PrimitiveTypeInt;
 import org.eclipse.modisco.java.PrimitiveTypeLong;
 import org.eclipse.modisco.java.PrimitiveTypeShort;
 import org.eclipse.modisco.java.PrimitiveTypeVoid;
+import org.eclipse.modisco.java.ProvidesDirective;
+import org.eclipse.modisco.java.QualifiedType;
+import org.eclipse.modisco.java.RecordDeclaration;
+import org.eclipse.modisco.java.RecordPattern;
+import org.eclipse.modisco.java.RequiresDirective;
 import org.eclipse.modisco.java.ReturnStatement;
+import org.eclipse.modisco.java.SimpleType;
 import org.eclipse.modisco.java.SingleVariableAccess;
 import org.eclipse.modisco.java.SingleVariableDeclaration;
 import org.eclipse.modisco.java.Statement;
@@ -119,10 +147,14 @@ import org.eclipse.modisco.java.StringLiteral;
 import org.eclipse.modisco.java.SuperConstructorInvocation;
 import org.eclipse.modisco.java.SuperFieldAccess;
 import org.eclipse.modisco.java.SuperMethodInvocation;
+import org.eclipse.modisco.java.SuperMethodReference;
 import org.eclipse.modisco.java.SwitchCase;
+import org.eclipse.modisco.java.SwitchExpression;
 import org.eclipse.modisco.java.SwitchStatement;
 import org.eclipse.modisco.java.SynchronizedStatement;
 import org.eclipse.modisco.java.TagElement;
+import org.eclipse.modisco.java.TagProperty;
+import org.eclipse.modisco.java.TextBlock;
 import org.eclipse.modisco.java.TextElement;
 import org.eclipse.modisco.java.ThisExpression;
 import org.eclipse.modisco.java.ThrowStatement;
@@ -132,7 +164,9 @@ import org.eclipse.modisco.java.TypeAccess;
 import org.eclipse.modisco.java.TypeDeclaration;
 import org.eclipse.modisco.java.TypeDeclarationStatement;
 import org.eclipse.modisco.java.TypeLiteral;
+import org.eclipse.modisco.java.TypeMethodReference;
 import org.eclipse.modisco.java.TypeParameter;
+import org.eclipse.modisco.java.TypePattern;
 import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedAnnotationDeclaration;
 import org.eclipse.modisco.java.UnresolvedAnnotationTypeMemberDeclaration;
@@ -147,12 +181,15 @@ import org.eclipse.modisco.java.UnresolvedSingleVariableDeclaration;
 import org.eclipse.modisco.java.UnresolvedType;
 import org.eclipse.modisco.java.UnresolvedTypeDeclaration;
 import org.eclipse.modisco.java.UnresolvedVariableDeclarationFragment;
+import org.eclipse.modisco.java.UsesDirective;
 import org.eclipse.modisco.java.VariableDeclaration;
 import org.eclipse.modisco.java.VariableDeclarationExpression;
 import org.eclipse.modisco.java.VariableDeclarationFragment;
 import org.eclipse.modisco.java.VariableDeclarationStatement;
 import org.eclipse.modisco.java.WhileStatement;
 import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.WildcardType;
+import org.eclipse.modisco.java.YieldStatement;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.emf.JavaPackage;
 
@@ -221,6 +258,14 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractMethodInvocationAdapter();
 			}
 			@Override
+			public Adapter caseAbstractTagElement(AbstractTagElement object) {
+				return createAbstractTagElementAdapter();
+			}
+			@Override
+			public Adapter caseAbstractTextElement(AbstractTextElement object) {
+				return createAbstractTextElementAdapter();
+			}
+			@Override
 			public Adapter caseAbstractTypeDeclaration(AbstractTypeDeclaration object) {
 				return createAbstractTypeDeclarationAdapter();
 			}
@@ -231,6 +276,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAbstractVariablesContainer(AbstractVariablesContainer object) {
 				return createAbstractVariablesContainerAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatableType(AnnotatableType object) {
+				return createAnnotatableTypeAdapter();
 			}
 			@Override
 			public Adapter caseAnnotation(Annotation object) {
@@ -309,6 +358,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createBreakStatementAdapter();
 			}
 			@Override
+			public Adapter caseCaseDefaultExpression(CaseDefaultExpression object) {
+				return createCaseDefaultExpressionAdapter();
+			}
+			@Override
 			public Adapter caseCastExpression(CastExpression object) {
 				return createCastExpressionAdapter();
 			}
@@ -365,6 +418,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createDoStatementAdapter();
 			}
 			@Override
+			public Adapter caseEitherOrMultiPattern(EitherOrMultiPattern object) {
+				return createEitherOrMultiPatternAdapter();
+			}
+			@Override
 			public Adapter caseEmptyStatement(EmptyStatement object) {
 				return createEmptyStatementAdapter();
 			}
@@ -379,6 +436,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEnumDeclaration(EnumDeclaration object) {
 				return createEnumDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseExportsDirective(ExportsDirective object) {
+				return createExportsDirectiveAdapter();
 			}
 			@Override
 			public Adapter caseExpression(Expression object) {
@@ -405,8 +466,16 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createForStatementAdapter();
 			}
 			@Override
+			public Adapter caseGuardedPattern(GuardedPattern object) {
+				return createGuardedPatternAdapter();
+			}
+			@Override
 			public Adapter caseIfStatement(IfStatement object) {
 				return createIfStatementAdapter();
+			}
+			@Override
+			public Adapter caseImplicitTypeDeclaration(ImplicitTypeDeclaration object) {
+				return createImplicitTypeDeclarationAdapter();
 			}
 			@Override
 			public Adapter caseImportDeclaration(ImportDeclaration object) {
@@ -429,8 +498,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createInterfaceDeclarationAdapter();
 			}
 			@Override
+			public Adapter caseIntersectionType(IntersectionType object) {
+				return createIntersectionTypeAdapter();
+			}
+			@Override
 			public Adapter caseJavadoc(Javadoc object) {
 				return createJavadocAdapter();
+			}
+			@Override
+			public Adapter caseJavaDocRegion(JavaDocRegion object) {
+				return createJavaDocRegionAdapter();
+			}
+			@Override
+			public Adapter caseJavaDocTextElement(JavaDocTextElement object) {
+				return createJavaDocTextElementAdapter();
 			}
 			@Override
 			public Adapter caseLabeledStatement(LabeledStatement object) {
@@ -489,6 +570,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createModifierAdapter();
 			}
 			@Override
+			public Adapter caseModuleDeclaration(ModuleDeclaration object) {
+				return createModuleDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseModuleDirective(ModuleDirective object) {
+				return createModuleDirectiveAdapter();
+			}
+			@Override
+			public Adapter caseModuleModifier(ModuleModifier object) {
+				return createModuleModifierAdapter();
+			}
+			@Override
+			public Adapter caseModuleQualifiedName(ModuleQualifiedName object) {
+				return createModuleQualifiedNameAdapter();
+			}
+			@Override
+			public Adapter caseName(Name object) {
+				return createNameAdapter();
+			}
+			@Override
+			public Adapter caseModulePackageAccess(ModulePackageAccess object) {
+				return createModulePackageAccessAdapter();
+			}
+			@Override
+			public Adapter caseNameQualifiedType(NameQualifiedType object) {
+				return createNameQualifiedTypeAdapter();
+			}
+			@Override
 			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
 			}
@@ -505,6 +614,14 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createNullLiteralAdapter();
 			}
 			@Override
+			public Adapter caseNullPattern(NullPattern object) {
+				return createNullPatternAdapter();
+			}
+			@Override
+			public Adapter caseOpensDirective(OpensDirective object) {
+				return createOpensDirectiveAdapter();
+			}
+			@Override
 			public Adapter casePackage(org.eclipse.modisco.java.Package object) {
 				return createPackageAdapter();
 			}
@@ -519,6 +636,14 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseParenthesizedExpression(ParenthesizedExpression object) {
 				return createParenthesizedExpressionAdapter();
+			}
+			@Override
+			public Adapter casePattern(Pattern object) {
+				return createPatternAdapter();
+			}
+			@Override
+			public Adapter casePatternInstanceofExpression(PatternInstanceofExpression object) {
+				return createPatternInstanceofExpressionAdapter();
 			}
 			@Override
 			public Adapter casePostfixExpression(PostfixExpression object) {
@@ -569,8 +694,32 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createPrimitiveTypeVoidAdapter();
 			}
 			@Override
+			public Adapter caseProvidesDirective(ProvidesDirective object) {
+				return createProvidesDirectiveAdapter();
+			}
+			@Override
+			public Adapter caseQualifiedType(QualifiedType object) {
+				return createQualifiedTypeAdapter();
+			}
+			@Override
+			public Adapter caseRecordDeclaration(RecordDeclaration object) {
+				return createRecordDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseRecordPattern(RecordPattern object) {
+				return createRecordPatternAdapter();
+			}
+			@Override
+			public Adapter caseRequiresDirective(RequiresDirective object) {
+				return createRequiresDirectiveAdapter();
+			}
+			@Override
 			public Adapter caseReturnStatement(ReturnStatement object) {
 				return createReturnStatementAdapter();
+			}
+			@Override
+			public Adapter caseSimpleType(SimpleType object) {
+				return createSimpleTypeAdapter();
 			}
 			@Override
 			public Adapter caseSingleVariableAccess(SingleVariableAccess object) {
@@ -601,8 +750,16 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createSuperMethodInvocationAdapter();
 			}
 			@Override
+			public Adapter caseSuperMethodReference(SuperMethodReference object) {
+				return createSuperMethodReferenceAdapter();
+			}
+			@Override
 			public Adapter caseSwitchCase(SwitchCase object) {
 				return createSwitchCaseAdapter();
+			}
+			@Override
+			public Adapter caseSwitchExpression(SwitchExpression object) {
+				return createSwitchExpressionAdapter();
 			}
 			@Override
 			public Adapter caseSwitchStatement(SwitchStatement object) {
@@ -615,6 +772,14 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTagElement(TagElement object) {
 				return createTagElementAdapter();
+			}
+			@Override
+			public Adapter caseTagProperty(TagProperty object) {
+				return createTagPropertyAdapter();
+			}
+			@Override
+			public Adapter caseTextBlock(TextBlock object) {
+				return createTextBlockAdapter();
 			}
 			@Override
 			public Adapter caseTextElement(TextElement object) {
@@ -653,8 +818,16 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createTypeLiteralAdapter();
 			}
 			@Override
+			public Adapter caseTypeMethodReference(TypeMethodReference object) {
+				return createTypeMethodReferenceAdapter();
+			}
+			@Override
 			public Adapter caseTypeParameter(TypeParameter object) {
 				return createTypeParameterAdapter();
+			}
+			@Override
+			public Adapter caseTypePattern(TypePattern object) {
+				return createTypePatternAdapter();
 			}
 			@Override
 			public Adapter caseUnionType(UnionType object) {
@@ -713,6 +886,10 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createUnresolvedVariableDeclarationFragmentAdapter();
 			}
 			@Override
+			public Adapter caseUsesDirective(UsesDirective object) {
+				return createUsesDirectiveAdapter();
+			}
+			@Override
 			public Adapter caseVariableDeclaration(VariableDeclaration object) {
 				return createVariableDeclarationAdapter();
 			}
@@ -729,12 +906,16 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 				return createVariableDeclarationStatementAdapter();
 			}
 			@Override
-			public Adapter caseWildCardType(WildCardType object) {
-				return createWildCardTypeAdapter();
+			public Adapter caseWildcardType(WildcardType object) {
+				return createWildcardTypeAdapter();
 			}
 			@Override
 			public Adapter caseWhileStatement(WhileStatement object) {
 				return createWhileStatementAdapter();
+			}
+			@Override
+			public Adapter caseYieldStatement(YieldStatement object) {
+				return createYieldStatementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -823,6 +1004,104 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ModuleDeclaration <em>Module Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ModuleDeclaration
+	 * @generated
+	 */
+	public Adapter createModuleDeclarationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ModuleDirective <em>Module Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ModuleDirective
+	 * @generated
+	 */
+	public Adapter createModuleDirectiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ModuleModifier <em>Module Modifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ModuleModifier
+	 * @generated
+	 */
+	public Adapter createModuleModifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ModuleQualifiedName <em>Module Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ModuleQualifiedName
+	 * @generated
+	 */
+	public Adapter createModuleQualifiedNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Name <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.Name
+	 * @generated
+	 */
+	public Adapter createNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ModulePackageAccess <em>Module Package Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ModulePackageAccess
+	 * @generated
+	 */
+	public Adapter createModulePackageAccessAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NameQualifiedType <em>Name Qualified Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.NameQualifiedType
+	 * @generated
+	 */
+	public Adapter createNameQualifiedTypeAdapter() {
 		return null;
 	}
 
@@ -935,6 +1214,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJavadocAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.JavaDocRegion <em>Doc Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.JavaDocRegion
+	 * @generated
+	 */
+	public Adapter createJavaDocRegionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.JavaDocTextElement <em>Doc Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.JavaDocTextElement
+	 * @generated
+	 */
+	public Adapter createJavaDocTextElementAdapter() {
 		return null;
 	}
 
@@ -1065,6 +1372,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TagProperty <em>Tag Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.TagProperty
+	 * @generated
+	 */
+	public Adapter createTagPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TextBlock <em>Text Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.TextBlock
+	 * @generated
+	 */
+	public Adapter createTextBlockAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TextElement <em>Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1163,6 +1498,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ExportsDirective <em>Exports Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ExportsDirective
+	 * @generated
+	 */
+	public Adapter createExportsDirectiveAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.InterfaceDeclaration <em>Interface Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1173,6 +1522,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInterfaceDeclarationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.IntersectionType <em>Intersection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.IntersectionType
+	 * @generated
+	 */
+	public Adapter createIntersectionTypeAdapter() {
 		return null;
 	}
 
@@ -1331,6 +1694,76 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ProvidesDirective <em>Provides Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ProvidesDirective
+	 * @generated
+	 */
+	public Adapter createProvidesDirectiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.QualifiedType <em>Qualified Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.QualifiedType
+	 * @generated
+	 */
+	public Adapter createQualifiedTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.RecordDeclaration <em>Record Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.RecordDeclaration
+	 * @generated
+	 */
+	public Adapter createRecordDeclarationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.RecordPattern <em>Record Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.RecordPattern
+	 * @generated
+	 */
+	public Adapter createRecordPatternAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.RequiresDirective <em>Requires Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.RequiresDirective
+	 * @generated
+	 */
+	public Adapter createRequiresDirectiveAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1369,6 +1802,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTypeParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypePattern <em>Type Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.TypePattern
+	 * @generated
+	 */
+	public Adapter createTypePatternAdapter() {
 		return null;
 	}
 
@@ -1471,20 +1918,6 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.WildCardType <em>Wild Card Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.modisco.java.WildCardType
-	 * @generated
-	 */
-	public Adapter createWildCardTypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractMethodDeclaration <em>Abstract Method Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1513,6 +1946,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractTagElement <em>Abstract Tag Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.AbstractTagElement
+	 * @generated
+	 */
+	public Adapter createAbstractTagElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractTextElement <em>Abstract Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.AbstractTextElement
+	 * @generated
+	 */
+	public Adapter createAbstractTextElementAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AbstractVariablesContainer <em>Abstract Variables Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1523,6 +1984,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbstractVariablesContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.AnnotatableType <em>Annotatable Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.AnnotatableType
+	 * @generated
+	 */
+	public Adapter createAnnotatableTypeAdapter() {
 		return null;
 	}
 
@@ -1691,6 +2166,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUnresolvedVariableDeclarationFragmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.UsesDirective <em>Uses Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.UsesDirective
+	 * @generated
+	 */
+	public Adapter createUsesDirectiveAdapter() {
 		return null;
 	}
 
@@ -2045,6 +2534,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.NullPattern <em>Null Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.NullPattern
+	 * @generated
+	 */
+	public Adapter createNullPatternAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.OpensDirective <em>Opens Directive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.OpensDirective
+	 * @generated
+	 */
+	public Adapter createOpensDirectiveAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ParenthesizedExpression <em>Parenthesized Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2055,6 +2572,34 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParenthesizedExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Pattern <em>Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.Pattern
+	 * @generated
+	 */
+	public Adapter createPatternAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.PatternInstanceofExpression <em>Pattern Instanceof Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.PatternInstanceofExpression
+	 * @generated
+	 */
+	public Adapter createPatternInstanceofExpressionAdapter() {
 		return null;
 	}
 
@@ -2157,6 +2702,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SuperMethodReference <em>Super Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.SuperMethodReference
+	 * @generated
+	 */
+	public Adapter createSuperMethodReferenceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ThisExpression <em>This Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2181,6 +2740,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTypeLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.TypeMethodReference <em>Type Method Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.TypeMethodReference
+	 * @generated
+	 */
+	public Adapter createTypeMethodReferenceAdapter() {
 		return null;
 	}
 
@@ -2255,6 +2828,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CaseDefaultExpression <em>Case Default Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.CaseDefaultExpression
+	 * @generated
+	 */
+	public Adapter createCaseDefaultExpressionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.CatchClause <em>Catch Clause</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2325,6 +2912,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EitherOrMultiPattern <em>Either Or Multi Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.EitherOrMultiPattern
+	 * @generated
+	 */
+	public Adapter createEitherOrMultiPatternAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.EmptyStatement <em>Empty Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2381,6 +2982,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.GuardedPattern <em>Guarded Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.GuardedPattern
+	 * @generated
+	 */
+	public Adapter createGuardedPatternAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.IfStatement <em>If Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2391,6 +3006,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIfStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.ImplicitTypeDeclaration <em>Implicit Type Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.ImplicitTypeDeclaration
+	 * @generated
+	 */
+	public Adapter createImplicitTypeDeclarationAdapter() {
 		return null;
 	}
 
@@ -2437,6 +3066,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SimpleType <em>Simple Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.SimpleType
+	 * @generated
+	 */
+	public Adapter createSimpleTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.Statement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2475,6 +3118,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSwitchCaseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.SwitchExpression <em>Switch Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.SwitchExpression
+	 * @generated
+	 */
+	public Adapter createSwitchExpressionAdapter() {
 		return null;
 	}
 
@@ -2577,6 +3234,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.WildcardType <em>Wildcard Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.WildcardType
+	 * @generated
+	 */
+	public Adapter createWildcardTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.WhileStatement <em>While Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2587,6 +3258,20 @@ public class JavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWhileStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.modisco.java.YieldStatement <em>Yield Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.modisco.java.YieldStatement
+	 * @generated
+	 */
+	public Adapter createYieldStatementAdapter() {
 		return null;
 	}
 

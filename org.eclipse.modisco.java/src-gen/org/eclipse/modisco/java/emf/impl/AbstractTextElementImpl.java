@@ -1,43 +1,43 @@
 /**
  * *******************************************************************************
- * Copyright (c) 2009, 2026 Mia-Software and others.
+ * Copyright (c) 2009, 2018 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v20.html
  * 
  * Contributors:
- * 
  *     Sebastien Minguet (Mia-Software) - initial API and implementation
  *     Frederic Madiot (Mia-Software) - initial API and implementation
  *     Fabien Giquel (Mia-Software) - initial API and implementation
  *     Gabriel Barbier (Mia-Software) - initial API and implementation
  *     Erwan Breton (Sodifrance) - initial API and implementation
  *     Romain Dervaux (Mia-Software) - initial API and implementation
+ *     Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings
  * *******************************************************************************
- *
- * $Id$
  */
 package org.eclipse.modisco.java.emf.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.modisco.java.PrimitiveType;
+
+import org.eclipse.modisco.java.AbstractTextElement;
+
 import org.eclipse.modisco.java.emf.JavaPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Primitive Type</b></em>'.
+ * An implementation of the model object '<em><b>Abstract Text Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class PrimitiveTypeImpl extends AnnotatableTypeImpl implements PrimitiveType {
+public abstract class AbstractTextElementImpl extends ASTNodeImpl implements AbstractTextElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrimitiveTypeImpl() {
+	protected AbstractTextElementImpl() {
 		super();
 	}
 
@@ -48,7 +48,7 @@ public class PrimitiveTypeImpl extends AnnotatableTypeImpl implements PrimitiveT
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JavaPackage.eINSTANCE.getPrimitiveType();
+		return JavaPackage.eINSTANCE.getAbstractTextElement();
 	}
 
-} //PrimitiveTypeImpl
+} //AbstractTextElementImpl

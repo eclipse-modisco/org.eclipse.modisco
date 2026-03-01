@@ -81,6 +81,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractMethodInvocation/arguments"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractMethodInvocation/typeArguments"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="java.ecore#//AbstractTagElement"/>
+    <genClasses image="false" ecoreClass="java.ecore#//AbstractTextElement"/>
     <genClasses image="false" ecoreClass="java.ecore#//AbstractTypeDeclaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractTypeDeclaration/bodyDeclarations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractTypeDeclaration/commentsBeforeBody"/>
@@ -95,6 +97,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractVariablesContainer/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//AbstractVariablesContainer/fragments"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="java.ecore#//AnnotatableType"/>
     <genClasses ecoreClass="java.ecore#//Annotation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Annotation/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Annotation/values"/>
@@ -167,6 +170,7 @@
     <genClasses ecoreClass="java.ecore#//BreakStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//BreakStatement/label"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//CaseDefaultExpression"/>
     <genClasses ecoreClass="java.ecore#//CastExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//CastExpression/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//CastExpression/type"/>
@@ -222,6 +226,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//DoStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//DoStatement/body"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//EitherOrMultiPattern"/>
     <genClasses ecoreClass="java.ecore#//EmptyStatement"/>
     <genClasses ecoreClass="java.ecore#//EnhancedForStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//EnhancedForStatement/body"/>
@@ -235,6 +240,7 @@
     <genClasses ecoreClass="java.ecore#//EnumDeclaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//EnumDeclaration/enumConstants"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//ExportsDirective"/>
     <genClasses image="false" ecoreClass="java.ecore#//Expression"/>
     <genClasses ecoreClass="java.ecore#//ExpressionMethodReference">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ExpressionMethodReference/expression"/>
@@ -254,11 +260,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ForStatement/initializers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ForStatement/body"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//GuardedPattern"/>
     <genClasses ecoreClass="java.ecore#//IfStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//IfStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//IfStatement/thenStatement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//IfStatement/elseStatement"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//ImplicitTypeDeclaration"/>
     <genClasses ecoreClass="java.ecore#//ImportDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//ImportDeclaration/static"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//ImportDeclaration/importedElement"/>
@@ -277,9 +285,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//InstanceofExpression/leftOperand"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//InterfaceDeclaration"/>
+    <genClasses ecoreClass="java.ecore#//IntersectionType"/>
     <genClasses ecoreClass="java.ecore#//Javadoc">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Javadoc/tags"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//JavaDocRegion"/>
+    <genClasses ecoreClass="java.ecore#//JavaDocTextElement"/>
     <genClasses ecoreClass="java.ecore#//LabeledStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//LabeledStatement/body"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//LabeledStatement/usagesInBreakStatements"/>
@@ -349,6 +360,13 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference java.ecore#//Modifier/variableDeclarationStatement"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference java.ecore#//Modifier/variableDeclarationExpression"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//ModuleDeclaration"/>
+    <genClasses image="false" ecoreClass="java.ecore#//ModuleDirective"/>
+    <genClasses ecoreClass="java.ecore#//ModuleModifier"/>
+    <genClasses ecoreClass="java.ecore#//ModuleQualifiedName"/>
+    <genClasses image="false" ecoreClass="java.ecore#//Name"/>
+    <genClasses image="false" ecoreClass="java.ecore#//ModulePackageAccess"/>
+    <genClasses ecoreClass="java.ecore#//NameQualifiedType"/>
     <genClasses image="false" ecoreClass="java.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//NamedElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//NamedElement/proxy"/>
@@ -359,6 +377,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//NumberLiteral/tokenValue"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//NullLiteral"/>
+    <genClasses ecoreClass="java.ecore#//NullPattern"/>
+    <genClasses ecoreClass="java.ecore#//OpensDirective"/>
     <genClasses ecoreClass="java.ecore#//Package">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//Package/ownedElements"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference java.ecore#//Package/model"/>
@@ -377,6 +397,8 @@
     <genClasses ecoreClass="java.ecore#//ParenthesizedExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ParenthesizedExpression/expression"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="java.ecore#//Pattern"/>
+    <genClasses ecoreClass="java.ecore#//PatternInstanceofExpression"/>
     <genClasses ecoreClass="java.ecore#//PostfixExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//PostfixExpression/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//PostfixExpression/operand"/>
@@ -395,9 +417,15 @@
     <genClasses ecoreClass="java.ecore#//PrimitiveTypeInt"/>
     <genClasses ecoreClass="java.ecore#//PrimitiveTypeLong"/>
     <genClasses ecoreClass="java.ecore#//PrimitiveTypeVoid"/>
+    <genClasses ecoreClass="java.ecore#//ProvidesDirective"/>
+    <genClasses ecoreClass="java.ecore#//QualifiedType"/>
+    <genClasses ecoreClass="java.ecore#//RecordDeclaration"/>
+    <genClasses ecoreClass="java.ecore#//RecordPattern"/>
+    <genClasses ecoreClass="java.ecore#//RequiresDirective"/>
     <genClasses ecoreClass="java.ecore#//ReturnStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//ReturnStatement/expression"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//SimpleType"/>
     <genClasses ecoreClass="java.ecore#//SingleVariableAccess">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//SingleVariableAccess/variable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//SingleVariableAccess/qualifier"/>
@@ -422,10 +450,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//SuperFieldAccess/field"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//SuperMethodInvocation"/>
+    <genClasses ecoreClass="java.ecore#//SuperMethodReference"/>
     <genClasses ecoreClass="java.ecore#//SwitchCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//SwitchCase/default"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//SwitchCase/expression"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//SwitchExpression"/>
     <genClasses ecoreClass="java.ecore#//SwitchStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//SwitchStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//SwitchStatement/statements"/>
@@ -438,6 +468,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//TagElement/tagName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//TagElement/fragments"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//TagProperty"/>
+    <genClasses ecoreClass="java.ecore#//TextBlock"/>
     <genClasses ecoreClass="java.ecore#//TextElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//TextElement/text"/>
     </genClasses>
@@ -466,9 +498,11 @@
     <genClasses ecoreClass="java.ecore#//TypeLiteral">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//TypeLiteral/type"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//TypeMethodReference"/>
     <genClasses ecoreClass="java.ecore#//TypeParameter">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//TypeParameter/bounds"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//TypePattern"/>
     <genClasses ecoreClass="java.ecore#//UnionType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference java.ecore#//UnionType/types"/>
     </genClasses>
@@ -488,6 +522,7 @@
     <genClasses ecoreClass="java.ecore#//UnresolvedType"/>
     <genClasses ecoreClass="java.ecore#//UnresolvedTypeDeclaration"/>
     <genClasses ecoreClass="java.ecore#//UnresolvedVariableDeclarationFragment"/>
+    <genClasses ecoreClass="java.ecore#//UsesDirective"/>
     <genClasses image="false" ecoreClass="java.ecore#//VariableDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//VariableDeclaration/extraArrayDimensions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//VariableDeclaration/initializer"/>
@@ -505,13 +540,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//VariableDeclarationStatement/modifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//VariableDeclarationStatement/annotations"/>
     </genClasses>
-    <genClasses ecoreClass="java.ecore#//WildCardType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//WildCardType/upperBound"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WildCardType/bound"/>
+    <genClasses ecoreClass="java.ecore#//WildcardType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute java.ecore#//WildcardType/upperBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WildcardType/bound"/>
     </genClasses>
     <genClasses ecoreClass="java.ecore#//WhileStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WhileStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference java.ecore#//WhileStatement/body"/>
     </genClasses>
+    <genClasses ecoreClass="java.ecore#//YieldStatement"/>
   </genPackages>
 </genmodel:GenModel>

@@ -1,22 +1,20 @@
 /**
  * *******************************************************************************
- * Copyright (c) 2009, 2026 Mia-Software and others.
+ * Copyright (c) 2009, 2018 Mia-Software and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v20.html
  * 
  * Contributors:
- * 
  *     Sebastien Minguet (Mia-Software) - initial API and implementation
  *     Frederic Madiot (Mia-Software) - initial API and implementation
  *     Fabien Giquel (Mia-Software) - initial API and implementation
  *     Gabriel Barbier (Mia-Software) - initial API and implementation
  *     Erwan Breton (Sodifrance) - initial API and implementation
  *     Romain Dervaux (Mia-Software) - initial API and implementation
+ *     Fabien Giquel (Mia-Software) - Bug 533168 - (releng) OutOfMemory during quality postprocessing because large number of checkstyle warnings
  * *******************************************************************************
- *
- * $Id$
  */
 package org.eclipse.modisco.java.emf.impl;
 
@@ -27,25 +25,27 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.modisco.java.TypeAccess;
-import org.eclipse.modisco.java.WildCardType;
+import org.eclipse.modisco.java.WildcardType;
+
 import org.eclipse.modisco.java.emf.JavaPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Wild Card Type</b></em>'.
+ * An implementation of the model object '<em><b>Wildcard Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl#isUpperBound <em>Upper Bound</em>}</li>
- *   <li>{@link org.eclipse.modisco.java.emf.impl.WildCardTypeImpl#getBound <em>Bound</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.WildcardTypeImpl#isUpperBound <em>Upper Bound</em>}</li>
+ *   <li>{@link org.eclipse.modisco.java.emf.impl.WildcardTypeImpl#getBound <em>Bound</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WildCardTypeImpl extends TypeImpl implements WildCardType {
+public class WildcardTypeImpl extends AnnotatableTypeImpl implements WildcardType {
 	/**
 	 * The default value of the '{@link #isUpperBound() <em>Upper Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WildCardTypeImpl() {
+	protected WildcardTypeImpl() {
 		super();
 	}
 
@@ -92,7 +92,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JavaPackage.eINSTANCE.getWildCardType();
+		return JavaPackage.eINSTANCE.getWildcardType();
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 		boolean oldUpperBound = upperBound;
 		upperBound = newUpperBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.WILD_CARD_TYPE__UPPER_BOUND, oldUpperBound, upperBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.WILDCARD_TYPE__UPPER_BOUND, oldUpperBound, upperBound));
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 		TypeAccess oldBound = bound;
 		bound = newBound;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.WILD_CARD_TYPE__BOUND, oldBound, newBound);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.WILDCARD_TYPE__BOUND, oldBound, newBound);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -153,14 +153,14 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 		if (newBound != bound) {
 			NotificationChain msgs = null;
 			if (bound != null)
-				msgs = ((InternalEObject)bound).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.WILD_CARD_TYPE__BOUND, null, msgs);
+				msgs = ((InternalEObject)bound).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JavaPackage.WILDCARD_TYPE__BOUND, null, msgs);
 			if (newBound != null)
-				msgs = ((InternalEObject)newBound).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.WILD_CARD_TYPE__BOUND, null, msgs);
+				msgs = ((InternalEObject)newBound).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JavaPackage.WILDCARD_TYPE__BOUND, null, msgs);
 			msgs = basicSetBound(newBound, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.WILD_CARD_TYPE__BOUND, newBound, newBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, JavaPackage.WILDCARD_TYPE__BOUND, newBound, newBound));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JavaPackage.WILD_CARD_TYPE__BOUND:
+			case JavaPackage.WILDCARD_TYPE__BOUND:
 				return basicSetBound(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -185,9 +185,9 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case JavaPackage.WILD_CARD_TYPE__UPPER_BOUND:
+			case JavaPackage.WILDCARD_TYPE__UPPER_BOUND:
 				return isUpperBound();
-			case JavaPackage.WILD_CARD_TYPE__BOUND:
+			case JavaPackage.WILDCARD_TYPE__BOUND:
 				return getBound();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -201,10 +201,10 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case JavaPackage.WILD_CARD_TYPE__UPPER_BOUND:
+			case JavaPackage.WILDCARD_TYPE__UPPER_BOUND:
 				setUpperBound((Boolean)newValue);
 				return;
-			case JavaPackage.WILD_CARD_TYPE__BOUND:
+			case JavaPackage.WILDCARD_TYPE__BOUND:
 				setBound((TypeAccess)newValue);
 				return;
 		}
@@ -219,10 +219,10 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case JavaPackage.WILD_CARD_TYPE__UPPER_BOUND:
+			case JavaPackage.WILDCARD_TYPE__UPPER_BOUND:
 				setUpperBound(UPPER_BOUND_EDEFAULT);
 				return;
-			case JavaPackage.WILD_CARD_TYPE__BOUND:
+			case JavaPackage.WILDCARD_TYPE__BOUND:
 				setBound((TypeAccess)null);
 				return;
 		}
@@ -237,9 +237,9 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case JavaPackage.WILD_CARD_TYPE__UPPER_BOUND:
+			case JavaPackage.WILDCARD_TYPE__UPPER_BOUND:
 				return upperBound != UPPER_BOUND_EDEFAULT;
-			case JavaPackage.WILD_CARD_TYPE__BOUND:
+			case JavaPackage.WILDCARD_TYPE__BOUND:
 				return bound != null;
 		}
 		return super.eIsSet(featureID);
@@ -261,4 +261,4 @@ public class WildCardTypeImpl extends TypeImpl implements WildCardType {
 		return result.toString();
 	}
 
-} //WildCardTypeImpl
+} //WildcardTypeImpl
