@@ -377,7 +377,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LambdaExpression" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false" lowerBound="1"
-        eType="#//Expression" containment="true"/>
+        eType="#//ASTNode" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//VariableDeclaration" containment="true"/>
   </eClassifiers>

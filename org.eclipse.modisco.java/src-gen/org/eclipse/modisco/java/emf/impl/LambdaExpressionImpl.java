@@ -28,9 +28,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.modisco.java.Expression;
+import org.eclipse.modisco.java.ASTNode;
+import org.eclipse.modisco.java.Block;
 import org.eclipse.modisco.java.LambdaExpression;
-import org.eclipse.modisco.java.SingleVariableDeclaration;
 import org.eclipse.modisco.java.VariableDeclaration;
 import org.eclipse.modisco.java.emf.JavaPackage;
 
@@ -57,7 +57,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression body;
+	protected ASTNode body;
 
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
@@ -94,7 +94,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * @generated
 	 */
 	@Override
-	public Expression getBody() {
+	public ASTNode getBody() {
 		return body;
 	}
 
@@ -103,8 +103,8 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBody(Expression newBody, NotificationChain msgs) {
-		Expression oldBody = body;
+	public NotificationChain basicSetBody(ASTNode newBody, NotificationChain msgs) {
+		ASTNode oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JavaPackage.LAMBDA_EXPRESSION__BODY, oldBody, newBody);
@@ -119,7 +119,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * @generated
 	 */
 	@Override
-	public void setBody(Expression newBody) {
+	public void setBody(ASTNode newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
@@ -188,7 +188,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case JavaPackage.LAMBDA_EXPRESSION__BODY:
-				setBody((Expression)newValue);
+				setBody((ASTNode)newValue);
 				return;
 			case JavaPackage.LAMBDA_EXPRESSION__PARAMETERS:
 				getParameters().clear();
@@ -207,7 +207,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case JavaPackage.LAMBDA_EXPRESSION__BODY:
-				setBody((Expression)null);
+				setBody((ASTNode)null);
 				return;
 			case JavaPackage.LAMBDA_EXPRESSION__PARAMETERS:
 				getParameters().clear();

@@ -1660,7 +1660,7 @@ public class JDTVisitor extends ASTVisitor {
 		}
 	
 		if (this.binding.get(node.getBody()) != null) {
-			element.setBody((Expression) this.binding.get(node.getBody()));
+			element.setBody(/*(Block)*/ this.binding.get(node.getBody()));
 		}	
 		
 		getLocalBindings().resolveBindings();

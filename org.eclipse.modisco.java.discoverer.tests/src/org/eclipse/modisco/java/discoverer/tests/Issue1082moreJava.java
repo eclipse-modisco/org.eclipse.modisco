@@ -136,9 +136,9 @@ public class Issue1082moreJava
 			}
 			else if (iJavaElement instanceof IClassFile){
 		//		System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
-				if ("SashFactory.class".equals(iJavaElement.getElementName())) {
+		//		if ("SashFactory.class".equals(iJavaElement.getElementName())) {
 					classFiles.add((IClassFile)iJavaElement);
-				}
+		//		}
 			}
 			else {
 				System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());

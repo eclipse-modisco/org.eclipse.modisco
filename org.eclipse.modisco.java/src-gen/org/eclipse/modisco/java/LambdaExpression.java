@@ -43,12 +43,12 @@ public interface LambdaExpression extends Expression {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
-	 * @see #setBody(Expression)
+	 * @see #setBody(ASTNode)
 	 * @see org.eclipse.modisco.java.emf.JavaPackage#getLambdaExpression_Body()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	Expression getBody();
+	ASTNode getBody();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.modisco.java.LambdaExpression#getBody <em>Body</em>}' containment reference.
@@ -58,7 +58,7 @@ public interface LambdaExpression extends Expression {
 	 * @see #getBody()
 	 * @generated
 	 */
-	void setBody(Expression value);
+	void setBody(ASTNode value);
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
