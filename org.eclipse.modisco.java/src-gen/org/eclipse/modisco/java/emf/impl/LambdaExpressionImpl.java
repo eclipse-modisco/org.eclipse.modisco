@@ -22,21 +22,16 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.modisco.java.Expression;
 import org.eclipse.modisco.java.LambdaExpression;
 import org.eclipse.modisco.java.SingleVariableDeclaration;
-
+import org.eclipse.modisco.java.VariableDeclaration;
 import org.eclipse.modisco.java.emf.JavaPackage;
 
 /**
@@ -72,7 +67,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SingleVariableDeclaration> parameters;
+	protected EList<VariableDeclaration> parameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,9 +139,9 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 	 * @generated
 	 */
 	@Override
-	public EList<SingleVariableDeclaration> getParameters() {
+	public EList<VariableDeclaration> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentEList<SingleVariableDeclaration>(SingleVariableDeclaration.class, this, JavaPackage.LAMBDA_EXPRESSION__PARAMETERS);
+			parameters = new EObjectContainmentEList<VariableDeclaration>(VariableDeclaration.class, this, JavaPackage.LAMBDA_EXPRESSION__PARAMETERS);
 		}
 		return parameters;
 	}
@@ -197,7 +192,7 @@ public class LambdaExpressionImpl extends ExpressionImpl implements LambdaExpres
 				return;
 			case JavaPackage.LAMBDA_EXPRESSION__PARAMETERS:
 				getParameters().clear();
-				getParameters().addAll((Collection<? extends SingleVariableDeclaration>)newValue);
+				getParameters().addAll((Collection<? extends VariableDeclaration>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

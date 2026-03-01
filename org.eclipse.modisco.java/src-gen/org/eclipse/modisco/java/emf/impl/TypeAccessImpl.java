@@ -133,10 +133,6 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	 */
 	@Override
 	public void setType(Type newType) {
-		String typeName = newType != null ? newType.getName() : "";
-		if ("Accessible".equals(typeName)) {
-			System.out.println("setType " + eClass().getName() + "@" + Integer.toHexString(hashCode()));
-		}
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
@@ -151,12 +147,12 @@ public class TypeAccessImpl extends ExpressionImpl implements TypeAccess {
 	}
 
 	@Override
-	protected void eBasicSetContainer(InternalEObject newContainer, int newContainerFeatureID) {
+	protected void eBasicSetContainer(InternalEObject newContainer) {
 		String typeName = getType() != null ? getType().getName() : "";
-		if ("Accessible".equals(typeName)) {
-			System.out.println("eBasicSetContainer " + eClass().getName() + "@" + Integer.toHexString(hashCode()) + " " + newContainer);
-		}
-		super.eBasicSetContainer(newContainer, newContainerFeatureID);
+	//	if ("SelectionListener".equals(typeName)) {
+	//		System.out.println("eBasicSetContainer " + eClass().getName() + "@" + Integer.toHexString(hashCode()) + " " + newContainer);
+	//	}
+		super.eBasicSetContainer(newContainer);
 	}
 
 	/**

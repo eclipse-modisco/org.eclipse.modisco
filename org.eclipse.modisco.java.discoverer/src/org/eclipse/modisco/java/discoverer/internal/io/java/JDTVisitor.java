@@ -32,6 +32,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
@@ -47,7 +48,12 @@ import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.ITypeRoot;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.dom.ASTVisitor;
-import org.eclipse.jdt.core.dom.CaseDefaultExpression;
+import org.eclipse.jdt.core.dom.IBinding;
+import org.eclipse.jdt.core.dom.IExtendedModifier;
+import org.eclipse.jdt.core.dom.ITypeBinding;
+import org.eclipse.jdt.core.dom.IVariableBinding;
+import org.eclipse.jdt.core.dom.QualifiedName;
+/*import org.eclipse.jdt.core.dom.CaseDefaultExpression;
 import org.eclipse.jdt.core.dom.CreationReference;
 import org.eclipse.jdt.core.dom.Dimension;
 import org.eclipse.jdt.core.dom.EitherOrMultiPattern;
@@ -85,7 +91,7 @@ import org.eclipse.jdt.core.dom.TypeMethodReference;
 import org.eclipse.jdt.core.dom.TypePattern;
 import org.eclipse.jdt.core.dom.UnionType;
 import org.eclipse.jdt.core.dom.UsesDirective;
-import org.eclipse.jdt.core.dom.YieldStatement;
+import org.eclipse.jdt.core.dom.YieldStatement; */
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.java.*;
 import org.eclipse.modisco.java.Package;
@@ -136,6 +142,7 @@ public class JDTVisitor extends ASTVisitor {
 	 * The {@link BindingManager} dedicated to local references.
 	 */
 	private BindingManager localBindings = null;
+	private Stack<BindingManager> localBindingsStack = new Stack<>();
 
 	/**
 	 * The {@link BindingManager} dedicated to global references.
@@ -651,7 +658,7 @@ public class JDTVisitor extends ASTVisitor {
 		BreakStatement element = (BreakStatement) this.binding.get(node);
 		initializeNode(element, node);
 
-		SimpleName nodeLabel = node.getLabel();
+		org.eclipse.jdt.core.dom.SimpleName nodeLabel = node.getLabel();
 		if (nodeLabel != null) {
 			org.eclipse.jdt.core.dom.LabeledStatement labeledNode = JDTVisitorUtils.resolveLabel(node, nodeLabel.getIdentifier());
 			if (labeledNode != null ) {
@@ -660,6 +667,18 @@ public class JDTVisitor extends ASTVisitor {
 			}
 		}
 		// impossible case of unresolved label treated as label-less
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.CaseDefaultExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.CaseDefaultExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -995,7 +1014,7 @@ public class JDTVisitor extends ASTVisitor {
 		ContinueStatement element = (ContinueStatement) this.binding.get(node);
 		initializeNode(element, node);
 
-		SimpleName nodeLabel = node.getLabel();
+		org.eclipse.jdt.core.dom.SimpleName nodeLabel = node.getLabel();
 		if (nodeLabel != null) {
 			org.eclipse.jdt.core.dom.LabeledStatement labeledNode = JDTVisitorUtils.resolveLabel(node, nodeLabel.getIdentifier());
 			if (labeledNode != null ) {
@@ -1004,6 +1023,30 @@ public class JDTVisitor extends ASTVisitor {
 			}
 		}
 		// impossible case of unresolved label treated as label-less
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.CreationReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.CreationReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.Dimension node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.Dimension node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1026,6 +1069,18 @@ public class JDTVisitor extends ASTVisitor {
 		if (this.binding.get(node.getBody()) != null) {
 			element.setBody((Statement) this.binding.get(node.getBody()));
 		}
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.EitherOrMultiPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.EitherOrMultiPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1168,6 +1223,30 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ExportsDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ExportsDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ExpressionMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ExpressionMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.ExpressionStatement node) {
 		ExpressionStatement element = this.factory.createExpressionStatement();
 		debug(element, node);
@@ -1287,6 +1366,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.GuardedPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.GuardedPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.IfStatement node) {
 		IfStatement element = this.factory.createIfStatement();
 		debug(element, node);
@@ -1310,6 +1401,18 @@ public class JDTVisitor extends ASTVisitor {
 		if (this.binding.get(node.getElseStatement()) != null) {
 			element.setElseStatement((Statement) this.binding.get(node.getElseStatement()));
 		}
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ImplicitTypeDeclaration implicitTypeDeclaration) {
+		debug((EClass)null, implicitTypeDeclaration);		// TODO Auto-generated method stub
+		return super.visit(implicitTypeDeclaration);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ImplicitTypeDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1449,6 +1552,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.IntersectionType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.IntersectionType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.Javadoc node) {
 		Javadoc element = this.factory.createJavadoc();
 		debug(element, node);
@@ -1467,6 +1582,30 @@ public class JDTVisitor extends ASTVisitor {
 				element.getTags().add(itElement);
 			}
 		}
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.JavaDocRegion node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.JavaDocRegion node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.JavaDocTextElement node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.JavaDocTextElement node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1492,6 +1631,41 @@ public class JDTVisitor extends ASTVisitor {
 		}
 
 	//	JDTVisitorUtils.manageBindingDeclaration(element, node.getLabel(), this);			// XXX surely the label is the definition?
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.LambdaExpression node) {
+		LambdaExpression element = this.factory.createLambdaExpression();
+		debug(element, node);
+		this.binding.put(node, element);
+		localBindingsStack.push(localBindings);
+		setLocalBindings(new BindingManager(this.factory));
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.LambdaExpression node) {
+		LambdaExpression element = (LambdaExpression) this.binding.get(node);
+		initializeNode(element, node);
+	
+	//	if (this.isINCREMENTALDISCOVERING) {
+		for (Iterator<?> i = node.parameters().iterator(); i.hasNext();) {
+			VariableDeclaration itElement = (VariableDeclaration) this.binding.get(i.next());
+			if (itElement != null) {
+				itElement.setProxy(false);
+//XXX				itElement.setMethodDeclaration(element);
+				element.getParameters().add(itElement);
+			}
+		}
+	
+		if (this.binding.get(node.getBody()) != null) {
+			element.setBody((Expression) this.binding.get(node.getBody()));
+		}	
+		
+		getLocalBindings().resolveBindings();
+		setLocalBindings(this.localBindingsStack.pop());
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1829,6 +2003,66 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.Modifier node) {
+		debug(JavaPackage.eINSTANCE.getModifier(), node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.Modifier node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ModuleDeclaration node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ModuleDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ModuleModifier node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ModuleModifier node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ModuleQualifiedName node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ModuleQualifiedName node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.NameQualifiedType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.NameQualifiedType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.NormalAnnotation node) {
 		Annotation element = this.factory.createAnnotation();
 		debug(element, node);
@@ -1870,6 +2104,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.NullPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.NullPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.NumberLiteral node) {
 		NumberLiteral element = this.factory.createNumberLiteral();
 		debug(element, node);
@@ -1882,6 +2128,18 @@ public class JDTVisitor extends ASTVisitor {
 		NumberLiteral element = (NumberLiteral) this.binding.get(node);
 		initializeNode(element, node);
 		element.setTokenValue(node.getToken());
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.OpensDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.OpensDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -1996,6 +2254,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.PatternInstanceofExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.PatternInstanceofExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.PostfixExpression node) {
 		PostfixExpression element = this.factory.createPostfixExpression();
 		debug(element, node);
@@ -2054,6 +2324,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.ProvidesDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.ProvidesDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.QualifiedName node) {
 		if (isArrayLengthAccess(node)) {
 			ArrayLengthAccess element = this.factory.createArrayLengthAccess();
@@ -2088,6 +2370,54 @@ public class JDTVisitor extends ASTVisitor {
 
 			this.binding.put(node, nameAccess);
 		}
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.QualifiedType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.QualifiedType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.RecordDeclaration node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.RecordDeclaration node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.RecordPattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.RecordPattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.RequiresDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.RequiresDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -2550,6 +2880,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.SuperMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.SuperMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.SwitchCase node) {
 		SwitchCase element = this.factory.createSwitchCase();
 		debug(element, node);
@@ -2619,6 +2961,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.SwitchExpression node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.SwitchExpression node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TagElement node) {
 		TagElement element = this.factory.createTagElement();
 		debug(element, node);
@@ -2630,7 +2984,7 @@ public class JDTVisitor extends ASTVisitor {
 	public void endVisit(final org.eclipse.jdt.core.dom.TagElement node) {
 		TagElement element = (TagElement) this.binding.get(node);
 		initializeNode(element, node);
-
+	
 		for (Iterator<?> iterator = node.fragments().iterator(); iterator.hasNext();) {
 			ASTNode itElement = this.binding.get(iterator.next());
 			if (itElement != null) {
@@ -2645,8 +2999,32 @@ public class JDTVisitor extends ASTVisitor {
 				}
 			}
 		}
-
+	
 		element.setTagName(node.getTagName());
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.TagProperty node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.TagProperty node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.TextBlock node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.TextBlock node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -2842,6 +3220,18 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.TypeMethodReference node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.TypeMethodReference node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
 	public boolean visit(final org.eclipse.jdt.core.dom.TypeParameter node) {
 		TypeParameter element = this.factory.createTypeParameter();
 		debug(element, node);
@@ -2863,6 +3253,42 @@ public class JDTVisitor extends ASTVisitor {
 		}
 
 		JDTVisitorUtils.manageBindingDeclaration(element, node.getName(), this);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.TypePattern node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.UnionType node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.UnionType node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.UsesDirective node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.UsesDirective node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.TypePattern node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	@Override
@@ -3041,6 +3467,18 @@ public class JDTVisitor extends ASTVisitor {
 		typAcc.setType(type);
 
 		this.binding.put(node, typAcc);
+	}
+
+	@Override
+	public boolean visit(org.eclipse.jdt.core.dom.YieldStatement node) {
+		debug((EClass)null, node);		// TODO Auto-generated method stub
+		return super.visit(node);
+	}
+
+	@Override
+	public void endVisit(org.eclipse.jdt.core.dom.YieldStatement node) {
+		// TODO Auto-generated method stub
+		super.endVisit(node);
 	}
 
 	/**
@@ -3243,6 +3681,9 @@ public class JDTVisitor extends ASTVisitor {
 	}
 
 	public BindingManager getLocalBindings() {
+		if (this.localBindings == null) {
+			getClass();		// XXX
+		}
 		return this.localBindings;
 	}
 
@@ -3439,414 +3880,6 @@ public class JDTVisitor extends ASTVisitor {
 	
 	private void debug(EClass eClass, org.eclipse.jdt.core.dom.ASTNode node) {
 		debug(eClass, node, currentFilePath);
-	}
-
-	@Override
-	public boolean visit(CaseDefaultExpression node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(CreationReference node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(Dimension node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ExportsDirective node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ExpressionMethodReference node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(GuardedPattern node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(IntersectionType node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(JavaDocRegion node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(JavaDocTextElement node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(LambdaExpression node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(org.eclipse.jdt.core.dom.Modifier node) {
-		debug(JavaPackage.eINSTANCE.getModifier(), node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ModuleDeclaration node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ModuleModifier node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(NameQualifiedType node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(NullPattern node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(OpensDirective node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(PatternInstanceofExpression node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ProvidesDirective node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(QualifiedType node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ModuleQualifiedName node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(RequiresDirective node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(RecordDeclaration node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(RecordPattern node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(EitherOrMultiPattern node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(SuperMethodReference node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(SwitchExpression node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(TagProperty node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(TextBlock node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(TypeMethodReference node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(TypePattern node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(UnionType node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(UsesDirective node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(YieldStatement node) {
-		debug((EClass)null, node);		// TODO Auto-generated method stub
-		return super.visit(node);
-	}
-
-	@Override
-	public boolean visit(ImplicitTypeDeclaration implicitTypeDeclaration) {
-		debug((EClass)null, implicitTypeDeclaration);		// TODO Auto-generated method stub
-		return super.visit(implicitTypeDeclaration);
-	}
-
-	@Override
-	public void endVisit(CaseDefaultExpression node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(CreationReference node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ExportsDirective node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ExpressionMethodReference node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(Dimension node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(GuardedPattern node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(JavaDocRegion node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(JavaDocTextElement node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(LambdaExpression node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(org.eclipse.jdt.core.dom.Modifier node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ModuleDeclaration node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ModuleModifier node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(NameQualifiedType node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(NullPattern node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(OpensDirective node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(PatternInstanceofExpression node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ProvidesDirective node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(QualifiedType node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ModuleQualifiedName node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(RequiresDirective node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(RecordDeclaration node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(RecordPattern node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(EitherOrMultiPattern node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(SuperMethodReference node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(SwitchExpression node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(TagProperty node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(TextBlock node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(TypeMethodReference node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(TypePattern node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(UnionType node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(UsesDirective node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(IntersectionType node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(YieldStatement node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
-	}
-
-	@Override
-	public void endVisit(ImplicitTypeDeclaration node) {
-		// TODO Auto-generated method stub
-		super.endVisit(node);
 	}
 
 }

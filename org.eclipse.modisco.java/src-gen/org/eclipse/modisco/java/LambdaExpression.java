@@ -62,7 +62,7 @@ public interface LambdaExpression extends Expression {
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.modisco.java.SingleVariableDeclaration}.
+	 * The list contents are of type {@link org.eclipse.modisco.java.VariableDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
@@ -70,6 +70,6 @@ public interface LambdaExpression extends Expression {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SingleVariableDeclaration> getParameters();
+	EList<VariableDeclaration> getParameters();
 
 } // LambdaExpression

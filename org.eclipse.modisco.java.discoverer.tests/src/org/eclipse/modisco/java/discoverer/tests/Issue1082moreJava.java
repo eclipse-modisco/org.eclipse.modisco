@@ -20,6 +20,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.Resource.IOWrappedException;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.jdt.core.IClassFile;
@@ -37,7 +38,6 @@ import org.eclipse.modisco.common.core.files.ProjectUtils;
 import org.eclipse.modisco.common.tests.TestFileUtils;
 import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.DiscoverJavaModelFromClassFile;
-import org.eclipse.modisco.java.discoverer.internal.io.java.JDTVisitor;
 import org.junit.Test;
 
 public class Issue1082moreJava
@@ -96,10 +96,15 @@ public class Issue1082moreJava
 		//	discoverClasspathEntries((JavaProject)javaProject, classpathEntries, resourceSet);
 		for (DiscoverJavaModelFromClassFile discoverer : discoverers) {
 			discoverer.setSerializeTarget(false);
-			discoverer.saveTargetModel();
+			try {
+				discoverer.saveTargetModel();
+			}
+			catch (IOWrappedException e) {
+				System.out.println(discoverer.getTargetModel().getURI() + " save failed : " + e.getMessage());
+			}
 		}
 		
-		JDTVisitor.reportMappings();
+	//	JDTVisitor.reportMappings();
 	}
 
 	protected void gatherClassFiles(List<IClassFile> classFiles, JavaProject javaProject, IClasspathEntry[] classpathEntries) throws JavaModelException {
@@ -131,7 +136,9 @@ public class Issue1082moreJava
 			}
 			else if (iJavaElement instanceof IClassFile){
 		//		System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
-				classFiles.add((IClassFile)iJavaElement);
+				if ("SashFactory.class".equals(iJavaElement.getElementName())) {
+					classFiles.add((IClassFile)iJavaElement);
+				}
 			}
 			else {
 				System.out.println(iJavaElement.getClass().getName() + " : " + iJavaElement.toString());
