@@ -969,7 +969,6 @@ public class ClassFileParser {
 		ParameterizedType parameterizedType = (ParameterizedType) getGlobalBindings().getTarget(id);
 		if (parameterizedType == null) {
 			parameterizedType = getFactory().createParameterizedType();
-			parameterizedType.setName(id.toString());
 
 			parameterizedType.setType(getRefOnType(Signature.getTypeErasure(qualifiedName)));
 
@@ -977,8 +976,7 @@ public class ClassFileParser {
 			for (String typeArgumentsSignature : typeArgumentsSignatures) {
 				parameterizedType.getTypeArguments().add(getRefOnType(typeArgumentsSignature));
 			}
-			this.model.getOrphanTypes().add(parameterizedType);
-			getGlobalBindings().addTarget(id, parameterizedType);
+			JDTVisitorUtils.installOrphanType(model, getGlobalBindings(), id.toString(), parameterizedType);
 		}
 		type.setType(parameterizedType);
 	}
@@ -1010,10 +1008,7 @@ public class ClassFileParser {
 				wildCardType.setBound(getRefOnType(boundSignature));
 			}
 			wildCardType.setUpperBound(isUpperBound);
-			wildCardType.setName(id.toString());
-
-			this.model.getOrphanTypes().add(wildCardType);
-			getGlobalBindings().addTarget(id, wildCardType);
+			JDTVisitorUtils.installOrphanType(model, getGlobalBindings(), id.toString(), wildCardType);
 		}
 		type.setType(wildCardType);
 	}
@@ -1027,15 +1022,12 @@ public class ClassFileParser {
 				.getBindingForPrimitiveType(qualifiedName, this);
 		PrimitiveType primitiveType = (PrimitiveType) getGlobalBindings().getTarget(id.toString());
 		if (primitiveType == null) {
-			ClassFileParserUtils.initializePrimitiveTypes(getFactory(), this.model,
-					getGlobalBindings());
+			JDTVisitorUtils.initializePrimitiveTypes(getFactory(), this.model, getGlobalBindings());
 			primitiveType = (PrimitiveType) getGlobalBindings().getTarget(id.toString());
 		}
 		if (primitiveType == null) { // should never happen
 			primitiveType = getFactory().createPrimitiveType();
-			primitiveType.setName(id.toString());
-			this.model.getOrphanTypes().add(primitiveType);
-			getGlobalBindings().addTarget(id, primitiveType);
+			JDTVisitorUtils.installOrphanType(model, getGlobalBindings(), id.toString(), primitiveType);
 
 		}
 		type.setType(primitiveType);
@@ -1053,12 +1045,8 @@ public class ClassFileParser {
 		if (arrayType == null) {
 			arrayType = getFactory().createArrayType();
 			arrayType.setDimensions(Signature.getArrayCount(qualifiedName));
-			arrayType.setName(id.toString());
-
 			arrayType.setElementType(getRefOnType(Signature.getElementType(qualifiedName)));
-
-			this.model.getOrphanTypes().add(arrayType);
-			getGlobalBindings().addTarget(id, arrayType);
+			JDTVisitorUtils.installOrphanType(model, getGlobalBindings(), id.toString(), arrayType);
 		}
 		typAcc.setType(arrayType);
 	}

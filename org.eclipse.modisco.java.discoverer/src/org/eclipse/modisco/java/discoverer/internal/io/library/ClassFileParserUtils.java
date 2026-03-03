@@ -16,6 +16,7 @@ import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.NamedElement;
 import org.eclipse.modisco.java.Type;
 import org.eclipse.modisco.java.TypeAccess;
+import org.eclipse.modisco.java.discoverer.internal.io.java.JDTVisitorUtils;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.Binding;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.PendingElement;
@@ -94,80 +95,10 @@ public final class ClassFileParserUtils {
 	 * @param globalBindings
 	 *            the global {@code BindingManager}
 	 */
+	@Deprecated /* @deprecated use JDTVisitorUtils.initializePrimitiveTypes */
 	public static void initializePrimitiveTypes(final JavaFactory factory, final Model model,
 			final BindingManager globalBindings) {
-		org.eclipse.modisco.java.PrimitiveType primitiveType;
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeInt();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeLong();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeFloat();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeDouble();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeBoolean();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeVoid();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeChar();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeShort();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeByte();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString(),
-					primitiveType);
-		}
+		JDTVisitorUtils.initializePrimitiveTypes(factory, model,globalBindings);
 	}
 
 	/**

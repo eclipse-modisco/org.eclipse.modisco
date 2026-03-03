@@ -33,6 +33,7 @@ import org.eclipse.modisco.java.Model;
 import org.eclipse.modisco.java.discoverer.internal.IModelReader;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
 import org.eclipse.modisco.java.discoverer.internal.Messages;
+import org.eclipse.modisco.java.discoverer.internal.io.java.JDTVisitorUtils;
 import org.eclipse.modisco.java.discoverer.internal.io.java.JavaReader;
 import org.eclipse.modisco.java.discoverer.internal.io.java.MethodRedefinitionManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
@@ -151,8 +152,7 @@ public class LibraryReader implements IModelReader {
 
 		this.resultModel = resultModel1;
 		this.globalBindings = globalBindings1;
-		ClassFileParserUtils.initializePrimitiveTypes(this.factory, resultModel1,
-				this.globalBindings);
+		JDTVisitorUtils.initializePrimitiveTypes(this.factory, resultModel1, this.globalBindings);
 		try {
 
 			if (source instanceof IPackageFragmentRoot) {

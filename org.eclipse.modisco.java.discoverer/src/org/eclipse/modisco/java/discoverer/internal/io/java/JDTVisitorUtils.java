@@ -389,77 +389,49 @@ public final class JDTVisitorUtils {
 	public static void initializePrimitiveTypes(final JavaFactory factory, final Model model,
 			final BindingManager globalBindings) {
 		org.eclipse.modisco.java.PrimitiveType primitiveType;
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeInt();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.INT.toString(),
-					primitiveType);
+		String typeName = org.eclipse.jdt.core.dom.PrimitiveType.INT.toString();
+		if (globalBindings.getTarget(typeName) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeInt());
 		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString();
+		if (globalBindings.getTarget(typeName) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeLong());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString();
+		if (globalBindings.getTarget(typeName) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeFloat());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString();
+		if (globalBindings.getTarget(typeName) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeDouble());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString();
+		if (globalBindings.getTarget(typeName) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeBoolean());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString();
+		if (globalBindings.getTarget(typeName.toString()) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeVoid());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString();
+		if (globalBindings.getTarget(typeName.toString()) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeChar());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString();
+		if (globalBindings.getTarget(typeName.toString()) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeShort());
+		}
+		typeName = org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString();
+		if (globalBindings.getTarget(typeName.toString()) == null) {
+			installOrphanType(model, globalBindings, typeName, factory.createPrimitiveTypeByte());
+		}
+	}
 
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeLong();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.LONG.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeFloat();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.FLOAT.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeDouble();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.DOUBLE.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeBoolean();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.BOOLEAN.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeVoid();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.VOID.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeChar();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.CHAR.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeShort();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.SHORT.toString(),
-					primitiveType);
-		}
-
-		if (globalBindings.getTarget(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString()) == null) {
-			primitiveType = factory.createPrimitiveTypeByte();
-			primitiveType.setName(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString());
-			model.getOrphanTypes().add(primitiveType);
-			globalBindings.addTarget(org.eclipse.jdt.core.dom.PrimitiveType.BYTE.toString(),
-					primitiveType);
-		}
+	public static void installOrphanType(final Model model, final BindingManager globalBindings,
+			String typeName, org.eclipse.modisco.java.Type primitiveType) {
+		primitiveType.setName(typeName);
+		model.getOrphanTypes().add(primitiveType);
+		globalBindings.addTarget(typeName, primitiveType);
 	}
 
 	/**
