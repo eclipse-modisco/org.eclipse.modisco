@@ -54,7 +54,7 @@ BUILD_TYPE=${env.BUILD_TYPE}
 			steps {
 				wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
 					sh '''
-						if [[ $BUILD_TYPE == 'milestone' ]]; then
+						if [[ $BUILD_TYPE == 'zzmilestone' ]]; then
 							targetPhase='deploy'
 						else
 							targetPhase='verify'
