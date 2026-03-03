@@ -2765,8 +2765,7 @@ public class JDTVisitor extends ASTVisitor {
 				deepRemove(element.getType());
 				element.setType(null);
 			}
-			element.setType(JDTVisitorUtils.completeTypeAccess2(this.binding.get(node.getType()),
-					this));
+			element.setType(JDTVisitorUtils.completeTypeAccess(this.binding.get(node.getType()), this));
 		}
 
 		element.setName(node.getName().getIdentifier());
@@ -3331,6 +3330,17 @@ public class JDTVisitor extends ASTVisitor {
 
 	@Override
 	public void endVisit(org.eclipse.jdt.core.dom.UnionType node) {
+	//	if (!(node.getParent() instanceof org.eclipse.jdt.core.dom.ArrayType)) {
+
+			UnionType type = JDTVisitorUtils.manageBindingRef(node, this);
+
+			// create a TypeAccess for this ArrayType
+			TypeAccess typAcc = this.factory.createTypeAccess();
+			typAcc.setType(type);
+
+			debug(typAcc, node);
+			this.binding.put(node, typAcc);
+	//	}
 		UnionType element = (UnionType) this.binding.get(node);
 		initializeNode(element, node);
 		super.endVisit(node);

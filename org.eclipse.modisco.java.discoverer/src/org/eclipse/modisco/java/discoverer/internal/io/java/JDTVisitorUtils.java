@@ -17,7 +17,9 @@
 
 package org.eclipse.modisco.java.discoverer.internal.io.java;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -49,6 +51,7 @@ import org.eclipse.modisco.java.UnionType;
 import org.eclipse.modisco.java.UnresolvedItemAccess;
 import org.eclipse.modisco.java.WildCardType;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
+import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BijectiveMap;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.Binding;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.BindingManager;
 import org.eclipse.modisco.java.discoverer.internal.io.java.binding.JDTDelegateBindingFactory;
@@ -254,6 +257,43 @@ public final class JDTVisitorUtils {
 			visitor.getGlobalBindings().addTarget(id, arrayType);
 		}
 		return arrayType;
+	}
+
+	/**
+	 * Resolves this JDT ArrayType <code>type</code> and creates the
+	 * corresponding MoDisco {@link ArrayType} object (or returns a similar
+	 * ArrayType if any).
+	 *
+	 * @param type
+	 *            the JDT ArrayType node.
+	 * @param visitor
+	 *            the JDTVisitor.
+	 * @return the MoDisco ArrayType object.
+	 */
+	public static UnionType manageBindingRef(final org.eclipse.jdt.core.dom.UnionType type,
+			final JDTVisitor visitor) {
+		Binding id = JDTDelegateBindingFactory.getInstance().getBindingForUnionType(type);
+		UnionType unionType = (UnionType) visitor.getGlobalBindings().getTarget(id);
+		if (unionType == null) {
+			unionType = visitor.getFactory().createUnionType();
+		//	unionType.setDimensions(type.getDimensions());
+			unionType.setName(id.toString());
+			List<Type> elementTypes = new ArrayList<>();
+			BijectiveMap<org.eclipse.jdt.core.dom.ASTNode, ASTNode> bijectiveMap = visitor.getBijectiveMap();
+			for (Object elementType : type.types()) {
+				if (bijectiveMap.get(elementType) != null) {
+					TypeAccess completeTypeAccess = completeTypeAccess(bijectiveMap.get(elementType), visitor);
+				}
+				
+			}
+			unionType.getTypes().clear();
+			// XXX sort
+			unionType.getTypes().addAll(elementTypes);
+
+			visitor.getJdtModel().getOrphanTypes().add(unionType);
+			visitor.getGlobalBindings().addTarget(id, unionType);
+		}
+		return unionType;
 	}
 
 	/**
@@ -493,6 +533,8 @@ public final class JDTVisitorUtils {
 	 */
 	public static TypeAccess completeTypeAccess(final ASTNode node, final JDTVisitor visitor) {
 		if (node instanceof TypeAccess) {
+			return (TypeAccess) node;
+		} else if (node instanceof UnionType) {			// XXX
 			return (TypeAccess) node;
 		} else if (node instanceof PackageAccess) {
 			// in some case, it could be a PackageAccess (see bug 328143)

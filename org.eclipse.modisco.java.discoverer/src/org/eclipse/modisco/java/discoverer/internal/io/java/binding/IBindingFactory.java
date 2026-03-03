@@ -23,6 +23,7 @@ import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.ParameterizedType;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
+import org.eclipse.jdt.core.dom.UnionType;
 import org.eclipse.jdt.core.dom.WildcardType;
 
 /**
@@ -81,6 +82,16 @@ public interface IBindingFactory {
 	 * @return the MoDisco {@code Binding}.
 	 */
 	Binding getBindingForArrayType(ArrayType type);
+
+	/**
+	 * Returns the MoDisco {@link Binding} corresponding to the JDT UnionType
+	 * {@code type}.
+	 *
+	 * @param type
+	 *            the JDT UnionType object.
+	 * @return the MoDisco {@code Binding}.
+	 */
+	Binding getBindingForUnionType(UnionType type);
 
 	/**
 	 * Returns the MoDisco {@link Binding} corresponding to a constructor call

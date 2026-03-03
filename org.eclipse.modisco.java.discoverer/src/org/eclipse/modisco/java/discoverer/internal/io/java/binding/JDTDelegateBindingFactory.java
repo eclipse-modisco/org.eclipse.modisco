@@ -29,6 +29,7 @@ import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.ParameterizedType;
 import org.eclipse.jdt.core.dom.PrimitiveType;
 import org.eclipse.jdt.core.dom.SuperConstructorInvocation;
+import org.eclipse.jdt.core.dom.UnionType;
 import org.eclipse.jdt.core.dom.WildcardType;
 import org.eclipse.modisco.common.core.Logger;
 import org.eclipse.modisco.java.discoverer.internal.JavaActivator;
@@ -68,6 +69,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		this.logJDTBindingsIssues = newValue;
 	}
 
+	@Override
 	public Binding getBindingForName(final Name name) {
 		Binding result = getBinding(name.resolveBinding());
 		if (result == null) {
@@ -78,11 +80,13 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForPrimitiveType(final PrimitiveType type) {
 		Binding result = new Binding(type.getPrimitiveTypeCode().toString());
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForParameterizedType(final ParameterizedType type) {
 		Binding result = null;
 		ITypeBinding binding = type.resolveBinding();
@@ -107,6 +111,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForWildCardType(final WildcardType type) {
 		Binding result = null;
 		ITypeBinding binding = type.resolveBinding();
@@ -123,6 +128,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForArrayType(final ArrayType type) {
 		Binding result = null;
 		ITypeBinding binding = type.resolveBinding();
@@ -140,6 +146,25 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
+	public Binding getBindingForUnionType(final UnionType type) {
+		Binding result = null;
+		ITypeBinding binding = type.resolveBinding();
+		if (binding == null) {
+			if (this.logJDTBindingsIssues) {
+				Logger.logWarning("*** WARNING : binding '" //$NON-NLS-1$
+						+ type.toString() + "' unresolved.", JavaActivator //$NON-NLS-1$
+						.getDefault());
+			}
+			result = new UnresolvedBinding(type.toString());
+		} else {
+			result = new ClassBinding();
+			result.setName(binding.getQualifiedName());
+		}
+		return result;
+	}
+
+	@Override
 	public Binding getBindingForClassInstanceCreation(final ClassInstanceCreation constructorCall) {
 		Binding result = null;
 		IMethodBinding binding = constructorCall.resolveConstructorBinding();
@@ -157,6 +182,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForConstructorInvocation(final ConstructorInvocation constructorCall) {
 		Binding result = null;
 		IMethodBinding binding = constructorCall.resolveConstructorBinding();
@@ -173,6 +199,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public Binding getBindingForSuperConstructorInvocation(
 			final SuperConstructorInvocation constructorCall) {
 		Binding result = null;
@@ -333,6 +360,7 @@ public final class JDTDelegateBindingFactory implements IBindingFactory {
 		return result;
 	}
 
+	@Override
 	public boolean isLocal(final Name name) {
 		return isLocalVariable(name) || isLocalMethod(name);
 	}
