@@ -166,6 +166,25 @@ public class JavaJUnitEMF extends AbstractDiscoverTest {
 	}
 
 	@Test
+	public void types() {
+		ClassDeclaration classDecl = (ClassDeclaration) JavaUtil
+				.getNamedElementByQualifiedName(getModel(), "types.Types"); //$NON-NLS-1$
+		Iterator<BodyDeclaration> bodyDeclarations = classDecl
+				.getBodyDeclarations().iterator();
+		while (bodyDeclarations.hasNext()) {
+			BodyDeclaration bodyDeclaration = bodyDeclarations.next();
+			if (bodyDeclaration.getName().equals("m1")) { //$NON-NLS-1$
+				MethodDeclaration methodDeclaration = (MethodDeclaration) bodyDeclaration;
+				SingleVariableDeclaration singleVariableDeclaration = methodDeclaration
+						.getParameters().get(0);
+				Assert.assertTrue("The parameter must be a varargs.", //$NON-NLS-1$
+						singleVariableDeclaration.isVarargs());
+			}
+		}
+
+	}
+
+	@Test
 	public void validation() {
 		int nbError = JavaValidation.validate(getResource(), System.out);
 		Assert.assertEquals("Validation", 0, nbError); //$NON-NLS-1$
